@@ -1,0 +1,8571 @@
+{
+  "algorithm": "Write x=c+B t; span the coefficient forms of variables occurring in normalized CNF; enumerate all 2^r quotient values and lift one representative per equal-CNF fiber.",
+  "all_checks_passed": true,
+  "budget_control": {
+    "checks_passed": true,
+    "exhaustive_requested": false,
+    "family": "budget_must_preserve_unknown",
+    "max_cells": 3,
+    "solver": {
+      "affine_consistent": true,
+      "affine_dimension": 5,
+      "checked_cells": 3,
+      "effective_rank": 5,
+      "exhaustive": false,
+      "model_count": null,
+      "n_variables": 6,
+      "quotient_cells": 32,
+      "rejecting_cells": 3,
+      "requested_exhaustive": false,
+      "satisfying_cells": 0,
+      "status": "UNKNOWN"
+    }
+  },
+  "claim_type": "Exact affine-quotient enumeration with a small observed-rank regime and a proved superpolynomial family for this algorithm.",
+  "enumeration_barrier_cases": [
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": true,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": {
+        "assignments_checked": 16,
+        "first_model_mask": null,
+        "model_count": 0
+      },
+      "k": 4,
+      "predicted_checked_cells": 8,
+      "raw_cnf_clauses": 7,
+      "raw_cnf_literal_occurrences": 16,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 3,
+        "checked_cells": 8,
+        "effective_rank": 3,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 4,
+        "quotient_cells": 8,
+        "rejecting_cells": 8,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": true,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": {
+        "assignments_checked": 64,
+        "first_model_mask": null,
+        "model_count": 0
+      },
+      "k": 6,
+      "predicted_checked_cells": 32,
+      "raw_cnf_clauses": 16,
+      "raw_cnf_literal_occurrences": 36,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 5,
+        "checked_cells": 32,
+        "effective_rank": 5,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 6,
+        "quotient_cells": 32,
+        "rejecting_cells": 32,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": null,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": {
+        "assignments_checked": 256,
+        "first_model_mask": null,
+        "model_count": 0
+      },
+      "k": 8,
+      "predicted_checked_cells": 128,
+      "raw_cnf_clauses": 29,
+      "raw_cnf_literal_occurrences": 64,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 7,
+        "checked_cells": 128,
+        "effective_rank": 7,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 8,
+        "quotient_cells": 128,
+        "rejecting_cells": 128,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": null,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": null,
+      "k": 10,
+      "predicted_checked_cells": 512,
+      "raw_cnf_clauses": 46,
+      "raw_cnf_literal_occurrences": 100,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 9,
+        "checked_cells": 512,
+        "effective_rank": 9,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 10,
+        "quotient_cells": 512,
+        "rejecting_cells": 512,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": null,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": null,
+      "k": 12,
+      "predicted_checked_cells": 2048,
+      "raw_cnf_clauses": 67,
+      "raw_cnf_literal_occurrences": 144,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 11,
+        "checked_cells": 2048,
+        "effective_rank": 11,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 12,
+        "quotient_cells": 2048,
+        "rejecting_cells": 2048,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": null,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": null,
+      "k": 14,
+      "predicted_checked_cells": 8192,
+      "raw_cnf_clauses": 92,
+      "raw_cnf_literal_occurrences": 196,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 13,
+        "checked_cells": 8192,
+        "effective_rank": 13,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 14,
+        "quotient_cells": 8192,
+        "rejecting_cells": 8192,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    },
+    {
+      "checks_passed": true,
+      "claim_scope": "Exact candidate count for this quotient enumerator. The family has an elementary contradiction and is not a lower bound for all SAT algorithms.",
+      "exhaustive_requested": false,
+      "family": "exactly_one_with_even_parity",
+      "full_certificate_checked": null,
+      "full_certificate_serialized": false,
+      "has_empty_or_unit_clause": false,
+      "independent_oracle": null,
+      "k": 16,
+      "predicted_checked_cells": 32768,
+      "raw_cnf_clauses": 121,
+      "raw_cnf_literal_occurrences": 256,
+      "raw_xor_equations": 1,
+      "search_mode": "decision; stop at the first model if one is found",
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 15,
+        "checked_cells": 32768,
+        "effective_rank": 15,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 16,
+        "quotient_cells": 32768,
+        "rejecting_cells": 32768,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      }
+    }
+  ],
+  "experiment": "mixed_constraints",
+  "independent_oracle": {
+    "all_case_coverage": {
+      "affine_consistent": 128,
+      "affine_inconsistent": 8,
+      "cases": 136,
+      "consistent_xor_but_mixed_unsat": 28,
+      "positive_observation_rank": 79,
+      "positive_rank_equal_dimension": 60,
+      "positive_rank_less_than_dimension": 19,
+      "rank_equal_dimension": 97,
+      "rank_less_than_dimension": 31,
+      "sat": 100,
+      "unsat": 36
+    },
+    "cases": [
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 0,
+        "name": "empty_true",
+        "oracle": {
+          "assignments_checked": 1,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 0,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 0,
+        "name": "empty_clause_on_empty_scope",
+        "oracle": {
+          "assignments_checked": 1,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          []
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 0,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 1,
+        "name": "affine_contradiction",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            0,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 1,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "fixed_variables_sat",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "fixed_variables_unsat",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "duplicate_and_tautological_clauses",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 4,
+          "model_count": 3
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 3,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 3
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "unused_free_variables",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 2,
+          "model_count": 8
+        },
+        "raw_cnf": [
+          [
+            1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 8,
+          "n_variables": 4,
+          "quotient_cells": 2,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "empty_clause_with_other_constraints",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            2
+          ],
+          []
+        ],
+        "raw_xor_rows": [
+          [
+            5,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 1,
+        "name": "random_000",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1
+          ],
+          []
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_001",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 7,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1
+          ],
+          [
+            3,
+            1,
+            -2
+          ],
+          [
+            1,
+            1,
+            -3
+          ],
+          [
+            1,
+            -2,
+            -2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            3
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 7
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_002",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 0,
+          "model_count": 4
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_003",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 2,
+          "model_count": 3
+        },
+        "raw_cnf": [
+          [
+            -2,
+            2,
+            2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            -1
+          ],
+          [
+            2,
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 3,
+          "n_variables": 2,
+          "quotient_cells": 4,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_004",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 40,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -6,
+            2,
+            4,
+            -5
+          ],
+          [
+            2,
+            -5,
+            -5,
+            1
+          ],
+          [
+            -4,
+            4,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            25,
+            1
+          ],
+          [
+            56,
+            0
+          ],
+          [
+            22,
+            0
+          ],
+          [
+            46,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            62,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 6,
+          "quotient_cells": 2,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 7
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_005",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 60,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            5,
+            1,
+            -1
+          ],
+          [
+            4,
+            -5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            7,
+            1
+          ],
+          [
+            15,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            59,
+            1
+          ],
+          [
+            23,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            39,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 60
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_006",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 16,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            5,
+            -5,
+            3,
+            2
+          ],
+          [
+            -6,
+            -3
+          ],
+          [
+            -4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            28,
+            1
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            63,
+            1
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            56,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 16
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_007",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 25,
+          "model_count": 6
+        },
+        "raw_cnf": [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            -4,
+            2,
+            5
+          ],
+          [
+            4,
+            -1,
+            3,
+            -4
+          ],
+          [
+            1
+          ],
+          [
+            5,
+            1,
+            -4
+          ],
+          [
+            5,
+            -5,
+            4,
+            -5
+          ],
+          [
+            1,
+            3,
+            -1
+          ],
+          [
+            5
+          ],
+          [
+            3,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 5,
+          "checked_cells": 16,
+          "effective_rank": 4,
+          "exhaustive": true,
+          "model_count": 6,
+          "n_variables": 5,
+          "quotient_cells": 16,
+          "rejecting_cells": 13,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 19
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 5,
+        "name": "random_008",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -2
+          ],
+          [
+            -5,
+            1,
+            -5,
+            -2
+          ],
+          [
+            1,
+            3,
+            1,
+            3
+          ],
+          [
+            -2,
+            2
+          ],
+          [
+            3,
+            4,
+            -5
+          ],
+          [
+            -3,
+            -3,
+            -1,
+            5
+          ],
+          [
+            4,
+            -1
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            23,
+            0
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            29,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 5,
+          "quotient_cells": 4,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_009",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 2,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            2,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -2,
+            -2,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            1,
+            -2,
+            2
+          ],
+          [
+            1,
+            -1,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 2,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 2
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_010",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1,
+            -1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_011",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 0,
+          "model_count": 16
+        },
+        "raw_cnf": [
+          [
+            -2,
+            2,
+            -4
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            -5,
+            2
+          ],
+          [
+            -5
+          ],
+          [
+            -2,
+            2,
+            -4
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 5,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 16,
+          "n_variables": 5,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 1,
+        "name": "random_012",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            1,
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_013",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 0,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            6,
+            1,
+            -5,
+            5
+          ],
+          [
+            -4,
+            6,
+            6,
+            -3
+          ],
+          [
+            2,
+            -5
+          ],
+          [
+            -1,
+            -3,
+            -4,
+            2
+          ],
+          [
+            -5,
+            4
+          ],
+          [
+            -5,
+            2
+          ],
+          [
+            -1,
+            -5,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            51,
+            0
+          ],
+          [
+            39,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 16,
+          "effective_rank": 4,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 6,
+          "quotient_cells": 16,
+          "rejecting_cells": 12,
+          "requested_exhaustive": true,
+          "satisfying_cells": 4,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_014",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            -2
+          ],
+          [
+            -2
+          ],
+          [
+            1,
+            1,
+            -2,
+            -2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_015",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 33,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            3,
+            -3
+          ],
+          [
+            1
+          ],
+          [
+            -5,
+            6,
+            -4
+          ],
+          [
+            -1,
+            3,
+            3,
+            -3
+          ],
+          [
+            -4,
+            6,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            30,
+            0
+          ],
+          [
+            35,
+            0
+          ],
+          [
+            38,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 6,
+          "quotient_cells": 8,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 4,
+          "status": "SAT"
+        },
+        "witness_mask": 11
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_016",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 52,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -2,
+            -7,
+            -3,
+            3
+          ],
+          [
+            -7
+          ],
+          [
+            6,
+            4,
+            7
+          ],
+          [
+            6,
+            7,
+            -5
+          ],
+          [
+            -1
+          ],
+          [
+            -2
+          ],
+          [
+            -2,
+            4,
+            -1,
+            -6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            77,
+            1
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            91,
+            1
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            72,
+            0
+          ],
+          [
+            44,
+            0
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            117,
+            1
+          ],
+          [
+            82,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 7,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 52
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_017",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_018",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_019",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 15,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            4,
+            -3,
+            -5
+          ],
+          [
+            2
+          ],
+          [
+            1,
+            -6,
+            1,
+            -4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            -2,
+            -4,
+            6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            51,
+            0
+          ],
+          [
+            44,
+            0
+          ],
+          [
+            19,
+            0
+          ],
+          [
+            58,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 15
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_020",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -2,
+            -1
+          ],
+          [
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_021",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            1,
+            1,
+            -3,
+            -1
+          ],
+          [
+            -3,
+            -1,
+            -1,
+            3
+          ],
+          [
+            3,
+            -1,
+            -3,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_022",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_023",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            -2,
+            2
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -2,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            -2,
+            2,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_024",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 0,
+          "model_count": 8
+        },
+        "raw_cnf": [
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 8,
+          "n_variables": 4,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_025",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 6,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 3,
+          "quotient_cells": 8,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 4,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_026",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 8,
+          "model_count": 5
+        },
+        "raw_cnf": [
+          [
+            4,
+            3,
+            1
+          ],
+          [
+            -2,
+            -2,
+            -5
+          ],
+          [
+            -3,
+            4,
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            24,
+            1
+          ],
+          [
+            28,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 5,
+          "n_variables": 5,
+          "quotient_cells": 8,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 5,
+          "status": "SAT"
+        },
+        "witness_mask": 8
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_027",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -3
+          ],
+          [
+            -1,
+            -2,
+            -1,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            12,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 4,
+          "quotient_cells": 8,
+          "rejecting_cells": 7,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_028",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 4,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -2
+          ],
+          [
+            -4,
+            -1,
+            1,
+            2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            12,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 4,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 4
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_029",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -3,
+            1
+          ],
+          [
+            -2,
+            2
+          ],
+          [
+            -3,
+            -2,
+            2,
+            -2
+          ],
+          [
+            -1
+          ],
+          [
+            -2,
+            3,
+            1
+          ],
+          [
+            -2,
+            -2,
+            1,
+            -3
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            3,
+            2,
+            -3,
+            -1
+          ],
+          []
+        ],
+        "raw_xor_rows": [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_030",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 8,
+          "model_count": 5
+        },
+        "raw_cnf": [
+          [
+            3,
+            1,
+            -2,
+            -2
+          ],
+          [
+            4,
+            1,
+            2,
+            1
+          ],
+          [
+            4,
+            -2,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            13,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 5,
+          "n_variables": 4,
+          "quotient_cells": 8,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 5,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_031",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 53,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            17,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            57,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 6,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 53
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_032",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 4,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -2,
+            3,
+            -2
+          ],
+          [
+            -2
+          ],
+          [
+            -3,
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            -3,
+            3
+          ],
+          [
+            -1
+          ],
+          [
+            -3,
+            2,
+            -1,
+            3
+          ],
+          [
+            -1,
+            3,
+            1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 4
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 4,
+        "name": "random_033",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            3
+          ],
+          [
+            -4,
+            1
+          ],
+          [
+            -3,
+            3,
+            2,
+            1
+          ],
+          [
+            1,
+            -4,
+            2,
+            1
+          ],
+          [
+            -4,
+            4,
+            1
+          ],
+          [
+            -3,
+            3
+          ],
+          [
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            4,
+            1
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 4,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_034",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 13,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            3,
+            -1,
+            5,
+            -2
+          ],
+          [
+            -5,
+            6,
+            3
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            41,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            56,
+            1
+          ],
+          [
+            44,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 6,
+          "quotient_cells": 2,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 13
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_035",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 4,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            6,
+            -6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            9,
+            0
+          ],
+          [
+            51,
+            0
+          ],
+          [
+            53,
+            1
+          ],
+          [
+            51,
+            0
+          ],
+          [
+            59,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 4
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_036",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 0,
+          "model_count": 12
+        },
+        "raw_cnf": [
+          [
+            -2,
+            2,
+            -3
+          ],
+          [
+            -3,
+            -4
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 12,
+          "n_variables": 4,
+          "quotient_cells": 4,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_037",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_038",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_039",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            3,
+            -1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            -3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_040",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 10,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            1,
+            4,
+            3
+          ],
+          [
+            2
+          ],
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            13,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 4,
+          "quotient_cells": 8,
+          "rejecting_cells": 6,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 10
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_041",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 8,
+          "model_count": 12
+        },
+        "raw_cnf": [
+          [
+            4,
+            -1,
+            4,
+            -5
+          ],
+          [
+            -5,
+            4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            25,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 12,
+          "n_variables": 5,
+          "quotient_cells": 4,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_042",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 9,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            4
+          ],
+          [
+            -2,
+            3,
+            1
+          ],
+          [
+            -4,
+            -3
+          ],
+          [
+            -4,
+            4
+          ],
+          [
+            -4,
+            -1,
+            -3,
+            -4
+          ],
+          [
+            -2,
+            4
+          ],
+          [
+            4,
+            -4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            9,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            11,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 4,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 9
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_043",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 24,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -6,
+            -6
+          ],
+          [
+            -2
+          ],
+          [
+            5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            25,
+            0
+          ],
+          [
+            31,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 6,
+          "quotient_cells": 8,
+          "rejecting_cells": 7,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 17
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 7,
+        "name": "random_044",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            4,
+            7,
+            3,
+            5
+          ],
+          [
+            -3
+          ],
+          [
+            -1,
+            -5,
+            -7,
+            7
+          ],
+          [
+            -2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            -7,
+            1
+          ],
+          [
+            4,
+            7,
+            3,
+            5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            32,
+            0
+          ],
+          [
+            116,
+            1
+          ],
+          [
+            41,
+            1
+          ],
+          [
+            45,
+            1
+          ],
+          [
+            73,
+            0
+          ],
+          [
+            126,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            44,
+            1
+          ],
+          [
+            32,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 7,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 1,
+        "name": "random_045",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 1,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_046",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 1,
+          "model_count": 2
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_047",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 53,
+          "model_count": 3
+        },
+        "raw_cnf": [
+          [
+            1,
+            2,
+            1,
+            -3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            -1,
+            5,
+            -2,
+            -6
+          ],
+          [
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            62,
+            1
+          ],
+          [
+            27,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 16,
+          "effective_rank": 4,
+          "exhaustive": true,
+          "model_count": 3,
+          "n_variables": 6,
+          "quotient_cells": 16,
+          "rejecting_cells": 13,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 45
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_048",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 0,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            -1,
+            1,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_049",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -1,
+            2
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -4,
+            1,
+            -2,
+            3
+          ],
+          [
+            -1
+          ],
+          [
+            -4
+          ],
+          [
+            -3,
+            4
+          ],
+          [
+            -2,
+            -1,
+            -1
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            13,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 4,
+          "quotient_cells": 8,
+          "rejecting_cells": 6,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_050",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_051",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            3,
+            -2
+          ],
+          [
+            -3,
+            -3,
+            -1
+          ],
+          [
+            -3,
+            2,
+            3
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_052",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 31,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            2
+          ],
+          [
+            -7,
+            3,
+            7
+          ],
+          [
+            -7,
+            4
+          ],
+          [
+            -6,
+            -3,
+            -4
+          ],
+          [
+            -7,
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            4,
+            3,
+            -5,
+            -2
+          ],
+          [
+            -7,
+            -5,
+            4,
+            6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            63,
+            1
+          ],
+          [
+            81,
+            0
+          ],
+          [
+            76,
+            0
+          ],
+          [
+            104,
+            1
+          ],
+          [
+            126,
+            0
+          ],
+          [
+            71,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 7,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 31
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_053",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 6,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            3,
+            -2,
+            -1
+          ],
+          [
+            -2,
+            2,
+            3,
+            -2
+          ],
+          [
+            3,
+            -3,
+            2,
+            -3
+          ],
+          [
+            -2,
+            3,
+            3
+          ],
+          [
+            2,
+            -1,
+            -2,
+            1
+          ],
+          [
+            -1,
+            -1,
+            2
+          ],
+          [
+            -2,
+            -1,
+            3
+          ],
+          [
+            -1,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            2,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 6
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_054",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 23,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -5,
+            1
+          ],
+          [
+            2,
+            -4,
+            4,
+            3
+          ],
+          [
+            -5,
+            1,
+            3
+          ],
+          [
+            2,
+            2,
+            -5,
+            -2
+          ],
+          [
+            -1,
+            1,
+            4
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            5,
+            -3
+          ],
+          [
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            25,
+            0
+          ],
+          [
+            31,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 8,
+          "rejecting_cells": 7,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 23
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_055",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 2,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            2,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            -2,
+            -2,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            -1,
+            1,
+            2,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 2
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 4,
+        "name": "random_056",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -4
+          ],
+          [
+            -2,
+            3,
+            -3,
+            1
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            11,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 4,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_057",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 4,
+          "model_count": 12
+        },
+        "raw_cnf": [
+          [
+            2,
+            -4,
+            -3,
+            3
+          ],
+          [
+            1,
+            -2,
+            2
+          ],
+          [
+            3,
+            -2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            -3,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 12,
+          "n_variables": 5,
+          "quotient_cells": 4,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 3
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_058",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 74,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -3,
+            4
+          ],
+          [
+            -1
+          ],
+          [
+            7,
+            -4
+          ],
+          [
+            -6,
+            7
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            88,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            111,
+            1
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            82,
+            0
+          ],
+          [
+            80,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 7,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 74
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_059",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 26,
+          "model_count": 3
+        },
+        "raw_cnf": [
+          [
+            2,
+            -2
+          ],
+          [
+            -1,
+            -2,
+            -1,
+            -2
+          ],
+          [
+            -3,
+            -6
+          ],
+          [
+            2,
+            3,
+            4,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            3,
+            -6,
+            1,
+            4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            58,
+            1
+          ],
+          [
+            54,
+            0
+          ],
+          [
+            53,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 3,
+          "n_variables": 6,
+          "quotient_cells": 8,
+          "rejecting_cells": 5,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 21
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_060",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_061",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 16,
+          "model_count": 16
+        },
+        "raw_cnf": [
+          [
+            -4,
+            1,
+            -2
+          ],
+          [
+            -6,
+            -7,
+            4
+          ],
+          [
+            -7,
+            5
+          ],
+          [
+            -1,
+            -4,
+            7
+          ],
+          [
+            -6,
+            5
+          ],
+          [
+            -7,
+            2,
+            1,
+            6
+          ],
+          [
+            -6,
+            -4,
+            -5,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            83,
+            1
+          ],
+          [
+            64,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 5,
+          "checked_cells": 16,
+          "effective_rank": 4,
+          "exhaustive": true,
+          "model_count": 16,
+          "n_variables": 7,
+          "quotient_cells": 16,
+          "rejecting_cells": 8,
+          "requested_exhaustive": true,
+          "satisfying_cells": 8,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_062",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            2,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            3,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -3
+          ],
+          [
+            -2,
+            -2,
+            1,
+            -3
+          ],
+          [
+            -1,
+            -2,
+            -3,
+            -2
+          ],
+          [
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            2,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_063",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            2,
+            -1
+          ],
+          [
+            3,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_064",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 23,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            2,
+            -1,
+            1,
+            -4
+          ],
+          [
+            2,
+            -1,
+            4,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            0
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 5,
+          "quotient_cells": 2,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 23
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_065",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 24,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -3
+          ],
+          [
+            -1,
+            -2,
+            2
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            67,
+            0
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            68,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 7,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 24
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_066",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 2,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 2,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 2
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_067",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            -3
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_068",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 4,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            -2,
+            -3,
+            3
+          ],
+          [
+            -1,
+            1,
+            -3,
+            -2
+          ],
+          [
+            3
+          ],
+          [
+            2,
+            2,
+            3,
+            2
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 4
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_069",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            2,
+            -1,
+            1
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            2,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_070",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 3,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            2,
+            -2,
+            -2
+          ],
+          [
+            -3,
+            -3,
+            -3
+          ],
+          [
+            3,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 3
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 6,
+        "name": "random_071",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            28,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            63,
+            0
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_072",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 48,
+          "model_count": 6
+        },
+        "raw_cnf": [
+          [
+            5
+          ],
+          [
+            -6,
+            -2,
+            -5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            -4,
+            -1
+          ],
+          [
+            -2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            6,
+            -6,
+            6
+          ],
+          [
+            3,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 6,
+          "checked_cells": 32,
+          "effective_rank": 5,
+          "exhaustive": true,
+          "model_count": 6,
+          "n_variables": 6,
+          "quotient_cells": 32,
+          "rejecting_cells": 29,
+          "requested_exhaustive": true,
+          "satisfying_cells": 3,
+          "status": "SAT"
+        },
+        "witness_mask": 48
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_073",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -3
+          ],
+          [
+            -1,
+            3,
+            -1,
+            -1
+          ],
+          [
+            -3,
+            2,
+            1,
+            -3
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -1,
+            -1,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 4,
+        "name": "random_074",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            -2
+          ],
+          [
+            4,
+            3,
+            2,
+            -4
+          ],
+          [
+            4,
+            4,
+            2,
+            4
+          ],
+          [
+            -3,
+            1,
+            1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            14,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 4,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_075",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 28,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -6,
+            1,
+            -5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            4,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            27,
+            0
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            58,
+            0
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 28
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_076",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 31,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -3
+          ],
+          [
+            4,
+            -1
+          ],
+          [
+            1,
+            -2,
+            -2
+          ],
+          [
+            2,
+            -2,
+            5,
+            4
+          ],
+          [
+            2,
+            2,
+            -1,
+            -1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            31,
+            1
+          ],
+          [
+            27,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 8,
+          "rejecting_cells": 7,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 31
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_077",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 2,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -3,
+            -3,
+            -2
+          ],
+          [
+            3,
+            2,
+            -3
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            -3,
+            1,
+            2
+          ],
+          [
+            -3,
+            -2
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            -3,
+            -3,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 2
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_078",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 0,
+          "model_count": 8
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            19,
+            0
+          ],
+          [
+            9,
+            0
+          ],
+          [
+            55,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 8,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_079",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 5,
+          "model_count": 1
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 5
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_080",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 22,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            -6,
+            3
+          ],
+          [
+            4,
+            2,
+            -2
+          ],
+          [
+            -3,
+            -6
+          ],
+          [
+            4,
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            -7
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            2,
+            -6,
+            5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            86,
+            1
+          ],
+          [
+            28,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 5,
+          "checked_cells": 16,
+          "effective_rank": 4,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 7,
+          "quotient_cells": 16,
+          "rejecting_cells": 14,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 22
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_081",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 0,
+          "model_count": 16
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 4,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 16,
+          "n_variables": 4,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_082",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -1,
+            3,
+            -1,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -2,
+            -2,
+            1,
+            -3
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -2,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -3,
+            -1,
+            3,
+            -2
+          ],
+          [
+            -1,
+            3,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 3,
+          "quotient_cells": 8,
+          "rejecting_cells": 6,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_083",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 64,
+          "model_count": 16
+        },
+        "raw_cnf": [
+          [
+            -4
+          ],
+          [
+            -5,
+            4,
+            -6,
+            -2
+          ],
+          [
+            3,
+            -1,
+            -3,
+            -4
+          ],
+          [
+            -7,
+            7
+          ],
+          [
+            -6
+          ],
+          [
+            -3,
+            7,
+            -3,
+            -2
+          ],
+          [
+            7
+          ],
+          [
+            -6,
+            4,
+            4,
+            7
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 7,
+          "checked_cells": 64,
+          "effective_rank": 6,
+          "exhaustive": true,
+          "model_count": 16,
+          "n_variables": 7,
+          "quotient_cells": 64,
+          "rejecting_cells": 56,
+          "requested_exhaustive": true,
+          "satisfying_cells": 8,
+          "status": "SAT"
+        },
+        "witness_mask": 64
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_084",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 48,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            2,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            81,
+            1
+          ],
+          [
+            31,
+            1
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            46,
+            1
+          ],
+          [
+            76,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 7,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 33
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_085",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_086",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -1,
+            2,
+            -2,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            -2,
+            -1,
+            -2
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 5,
+        "name": "random_087",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -5,
+            3,
+            -3,
+            -1
+          ],
+          [
+            3,
+            1,
+            5,
+            -1
+          ],
+          [
+            -4,
+            1
+          ],
+          []
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            28,
+            1
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            26,
+            0
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 5,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_088",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 31,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            3,
+            -4,
+            -1,
+            -5
+          ],
+          [
+            1,
+            -2,
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            -4,
+            -1,
+            -5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            30,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 31
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 7,
+        "name": "random_089",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -4,
+            4
+          ],
+          [
+            -2,
+            7,
+            -5
+          ],
+          [
+            -6
+          ],
+          [
+            3,
+            6,
+            3,
+            6
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            71,
+            0
+          ],
+          [
+            13,
+            0
+          ],
+          [
+            72,
+            1
+          ],
+          [
+            73,
+            1
+          ],
+          [
+            32,
+            1
+          ],
+          [
+            94,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            117,
+            0
+          ],
+          [
+            48,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 7,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_090",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 36,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            2,
+            -2
+          ],
+          [
+            -7
+          ],
+          [
+            6
+          ],
+          [
+            -7,
+            -7
+          ],
+          [
+            -3,
+            -5,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            7,
+            1
+          ],
+          [
+            47,
+            0
+          ],
+          [
+            115,
+            1
+          ],
+          [
+            11,
+            0
+          ],
+          [
+            109,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 7,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 36
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_091",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_092",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -1,
+            2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 2,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_093",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 33,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            -4,
+            -4
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            57,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            1
+          ],
+          [
+            32,
+            1
+          ],
+          [
+            37,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 6,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 33
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_094",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 24,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            -1,
+            -3,
+            -1,
+            -4
+          ],
+          [
+            5
+          ],
+          [
+            -3,
+            -4
+          ],
+          [
+            5,
+            5,
+            -5
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            9,
+            1
+          ],
+          [
+            30,
+            0
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 24
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_095",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 6,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            3,
+            -1,
+            3,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            29,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 6
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_096",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 12,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            -5,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            21,
+            1
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 5,
+          "quotient_cells": 2,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 6
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_097",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 14,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            -5,
+            -3,
+            5
+          ],
+          [
+            3,
+            -5,
+            3
+          ],
+          [
+            2,
+            1,
+            -5
+          ],
+          [
+            -1,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            21,
+            1
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 14
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_098",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 3,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -4,
+            7,
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            106,
+            1
+          ],
+          [
+            102,
+            1
+          ],
+          [
+            121,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            109,
+            1
+          ],
+          [
+            33,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 7,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 3
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_099",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_100",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 3,
+        "name": "random_101",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": 1,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 3,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_102",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -2
+          ],
+          [
+            -3,
+            -3
+          ],
+          [
+            3
+          ],
+          [
+            -1,
+            2,
+            -1,
+            3
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            4,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 4,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_103",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            -2,
+            -2
+          ],
+          [
+            -1,
+            -2,
+            2
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            2,
+            2,
+            2
+          ],
+          [
+            -1
+          ],
+          [
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 2,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 6,
+        "name": "random_104",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            2
+          ],
+          [
+            -1,
+            -2,
+            -3
+          ],
+          [
+            -2
+          ],
+          [
+            6,
+            4,
+            4,
+            -2
+          ],
+          [
+            -3,
+            -4
+          ],
+          [
+            6,
+            -6
+          ],
+          [
+            3,
+            2,
+            -6,
+            -6
+          ],
+          [
+            5,
+            -3,
+            -1,
+            5
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 6,
+          "checked_cells": 64,
+          "effective_rank": 6,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 6,
+          "quotient_cells": 64,
+          "rejecting_cells": 64,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 7,
+        "name": "random_105",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": 106,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            3,
+            6,
+            -3
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            -2,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            5,
+            -5
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            20,
+            0
+          ],
+          [
+            90,
+            1
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            61,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 7,
+          "quotient_cells": 4,
+          "rejecting_cells": 3,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 35
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_106",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 1,
+          "model_count": 4
+        },
+        "raw_cnf": [
+          [
+            3,
+            -3,
+            3,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            3,
+            -1,
+            -2
+          ],
+          [
+            3,
+            -1,
+            1,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            7,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 4,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_107",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 10,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -5,
+            -1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            3,
+            1
+          ],
+          [
+            26,
+            0
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            24,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 10
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 7,
+        "name": "random_108",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            4,
+            5,
+            4
+          ],
+          [
+            2,
+            -4,
+            -2,
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            121,
+            1
+          ],
+          [
+            108,
+            1
+          ],
+          [
+            94,
+            0
+          ],
+          [
+            29,
+            0
+          ],
+          [
+            30,
+            0
+          ],
+          [
+            69,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 7,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_109",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_110",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 6,
+        "name": "random_111",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            53,
+            1
+          ],
+          [
+            32,
+            1
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            36,
+            0
+          ],
+          [
+            37,
+            1
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            61,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 6,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_112",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 6,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            2,
+            -2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            10,
+            1
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            45,
+            1
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            49,
+            0
+          ],
+          [
+            19,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 6
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 4,
+        "name": "random_113",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            -1
+          ],
+          [
+            -2
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            -2
+          ],
+          [
+            1,
+            -4
+          ],
+          [
+            4,
+            -4,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            15,
+            0
+          ],
+          [
+            9,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 4,
+          "quotient_cells": 4,
+          "rejecting_cells": 4,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_114",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 20,
+          "model_count": 4
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            21,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            17,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 4,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 20
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 5,
+        "name": "random_115",
+        "oracle": {
+          "assignments_checked": 32,
+          "first_model_mask": 30,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            4,
+            4,
+            -2
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            2,
+            -5
+          ],
+          [
+            4,
+            -4,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            22,
+            1
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            27,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 5,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 30
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 7,
+        "name": "random_116",
+        "oracle": {
+          "assignments_checked": 128,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            2,
+            4
+          ],
+          [
+            7,
+            3,
+            -7,
+            7
+          ],
+          [
+            7
+          ],
+          [
+            7,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -7,
+            7
+          ],
+          []
+        ],
+        "raw_xor_rows": [
+          [
+            61,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            20,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 7,
+          "quotient_cells": 8,
+          "rejecting_cells": 8,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 2,
+        "name": "random_117",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": 0,
+          "model_count": 2
+        },
+        "raw_cnf": [
+          [
+            1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 4,
+          "effective_rank": 2,
+          "exhaustive": true,
+          "model_count": 2,
+          "n_variables": 2,
+          "quotient_cells": 4,
+          "rejecting_cells": 2,
+          "requested_exhaustive": true,
+          "satisfying_cells": 2,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_118",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 4,
+        "name": "random_119",
+        "oracle": {
+          "assignments_checked": 16,
+          "first_model_mask": 3,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            -3,
+            -1
+          ],
+          [
+            3,
+            -3,
+            -4,
+            -2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            15,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 4,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 3
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 6,
+        "name": "random_120",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": 13,
+          "model_count": 1
+        },
+        "raw_cnf": [],
+        "raw_xor_rows": [
+          [
+            33,
+            1
+          ],
+          [
+            63,
+            1
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            53,
+            0
+          ],
+          [
+            62,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 13
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_121",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 1,
+          "checked_cells": 2,
+          "effective_rank": 1,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 2,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_122",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            -3
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            4,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 2,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 2,
+        "name": "random_123",
+        "oracle": {
+          "assignments_checked": 4,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            1,
+            -2,
+            2,
+            -1
+          ],
+          [
+            2,
+            2,
+            -1
+          ],
+          [
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": false,
+          "affine_dimension": null,
+          "checked_cells": 0,
+          "effective_rank": null,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 2,
+          "quotient_cells": 0,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_124",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 0,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 0
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 6,
+        "name": "random_125",
+        "oracle": {
+          "assignments_checked": 64,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            4
+          ],
+          [
+            5,
+            3,
+            3
+          ],
+          [
+            4,
+            -2
+          ],
+          [
+            2
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            43,
+            0
+          ],
+          [
+            13,
+            0
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            55,
+            1
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 6,
+          "quotient_cells": 1,
+          "rejecting_cells": 1,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": true,
+        "n": 3,
+        "name": "random_126",
+        "oracle": {
+          "assignments_checked": 8,
+          "first_model_mask": null,
+          "model_count": 0
+        },
+        "raw_cnf": [
+          [
+            3
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            -1
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -3,
+            1,
+            -3,
+            2
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "raw_xor_rows": [],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 3,
+          "checked_cells": 8,
+          "effective_rank": 3,
+          "exhaustive": true,
+          "model_count": 0,
+          "n_variables": 3,
+          "quotient_cells": 8,
+          "rejecting_cells": 8,
+          "requested_exhaustive": true,
+          "satisfying_cells": 0,
+          "status": "UNSAT"
+        },
+        "witness_mask": null
+      },
+      {
+        "checks_passed": true,
+        "full_certificate_checked": null,
+        "n": 1,
+        "name": "random_127",
+        "oracle": {
+          "assignments_checked": 2,
+          "first_model_mask": 1,
+          "model_count": 1
+        },
+        "raw_cnf": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "raw_xor_rows": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "solver": {
+          "affine_consistent": true,
+          "affine_dimension": 0,
+          "checked_cells": 1,
+          "effective_rank": 0,
+          "exhaustive": true,
+          "model_count": 1,
+          "n_variables": 1,
+          "quotient_cells": 1,
+          "rejecting_cells": 0,
+          "requested_exhaustive": true,
+          "satisfying_cells": 1,
+          "status": "SAT"
+        },
+        "witness_mask": 1
+      }
+    ],
+    "checks_passed": true,
+    "curated_cases": 8,
+    "full_original_assignments_checked": 4466,
+    "max_variables": 7,
+    "random_cases": 128,
+    "random_coverage": {
+      "affine_consistent": 121,
+      "affine_inconsistent": 7,
+      "cases": 128,
+      "consistent_xor_but_mixed_unsat": 25,
+      "positive_observation_rank": 76,
+      "positive_rank_equal_dimension": 58,
+      "positive_rank_less_than_dimension": 18,
+      "rank_equal_dimension": 91,
+      "rank_less_than_dimension": 30,
+      "sat": 96,
+      "unsat": 32
+    },
+    "random_generation": "Two of every three cases derive XOR right-hand sides from a planted assignment; one of those also plants satisfied CNF clauses. The remaining cases use arbitrary right-hand sides.",
+    "random_planted_consistent_xor_cases": 85,
+    "sat_cases": 100,
+    "seed": 20261103,
+    "unsat_cases": 36
+  },
+  "low_rank_cases": [
+    {
+      "checks_passed": true,
+      "cnf_occurring_variables": 33,
+      "copy_triples": 10,
+      "exhaustive_requested": true,
+      "family": "many_free_bits_few_observed_forms",
+      "full_affine_assignments": 17179869184,
+      "independent_oracle": null,
+      "n": 64,
+      "predicted_model_count": 6442450944,
+      "raw_cnf_clauses": 44,
+      "raw_cnf_literal_occurrences": 99,
+      "raw_xor_equations": 30,
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 34,
+        "checked_cells": 8,
+        "effective_rank": 3,
+        "exhaustive": true,
+        "model_count": 6442450944,
+        "n_variables": 64,
+        "quotient_cells": 8,
+        "rejecting_cells": 5,
+        "requested_exhaustive": true,
+        "satisfying_cells": 3,
+        "status": "SAT"
+      },
+      "unobserved_free_bits": 31,
+      "validation": "Exact quotient enumeration plus the copy-equation and exactly-one counting argument; full original enumeration only when n <= 10.",
+      "witness_checked_in_raw_input": true,
+      "witness_mask": 1227133513
+    },
+    {
+      "checks_passed": true,
+      "cnf_occurring_variables": 66,
+      "copy_triples": 21,
+      "exhaustive_requested": true,
+      "family": "many_free_bits_few_observed_forms",
+      "full_affine_assignments": 36893488147419103232,
+      "independent_oracle": null,
+      "n": 128,
+      "predicted_model_count": 13835058055282163712,
+      "raw_cnf_clauses": 88,
+      "raw_cnf_literal_occurrences": 198,
+      "raw_xor_equations": 63,
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 65,
+        "checked_cells": 8,
+        "effective_rank": 3,
+        "exhaustive": true,
+        "model_count": 13835058055282163712,
+        "n_variables": 128,
+        "quotient_cells": 8,
+        "rejecting_cells": 5,
+        "requested_exhaustive": true,
+        "satisfying_cells": 3,
+        "status": "SAT"
+      },
+      "unobserved_free_bits": 62,
+      "validation": "Exact quotient enumeration plus the copy-equation and exactly-one counting argument; full original enumeration only when n <= 10.",
+      "witness_checked_in_raw_input": true,
+      "witness_mask": 10540996613548315209
+    },
+    {
+      "checks_passed": true,
+      "cnf_occurring_variables": 129,
+      "copy_triples": 42,
+      "exhaustive_requested": true,
+      "family": "many_free_bits_few_observed_forms",
+      "full_affine_assignments": 1361129467683753853853498429727072845824,
+      "independent_oracle": null,
+      "n": 256,
+      "predicted_model_count": 510423550381407695195061911147652317184,
+      "raw_cnf_clauses": 172,
+      "raw_cnf_literal_occurrences": 387,
+      "raw_xor_equations": 126,
+      "solver": {
+        "affine_consistent": true,
+        "affine_dimension": 130,
+        "checked_cells": 8,
+        "effective_rank": 3,
+        "exhaustive": true,
+        "model_count": 510423550381407695195061911147652317184,
+        "n_variables": 256,
+        "quotient_cells": 8,
+        "rejecting_cells": 5,
+        "requested_exhaustive": true,
+        "satisfying_cells": 3,
+        "status": "SAT"
+      },
+      "unobserved_free_bits": 127,
+      "validation": "Exact quotient enumeration plus the copy-equation and exactly-one counting argument; full original enumeration only when n <= 10.",
+      "witness_checked_in_raw_input": true,
+      "witness_mask": 97223533405982418132392744980505203273
+    }
+  ],
+  "not_claimed": [
+    "A polynomial-time algorithm for arbitrary SAT or a resolution of P versus NP.",
+    "A lower bound for all algorithms, all preprocessing, or all constraint representations.",
+    "That the exactly-one/even-parity family is intrinsically difficult; its contradiction is immediate from its structure.",
+    "A polynomial-size UNSAT certificate or polynomial-time certificate check at unrestricted rank.",
+    "Full original-variable enumeration in the large low-rank cases."
+  ],
+  "rank_scope": "r is the rank of syntactically observed coordinate forms after original-CNF tautology and duplicate removal. It is not a minimum residual nonlinear dimension.",
+  "resource_scope": "Preprocessing and representative evaluation have polynomial bit cost; enumeration contributes 2^r. All variables are explicitly scoped. Unbounded integers and exponentially many certificate cells are not assigned unit cost.",
+  "schema_version": 1,
+  "status": "verified"
+}

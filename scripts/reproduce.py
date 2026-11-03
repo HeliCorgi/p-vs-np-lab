@@ -21,7 +21,10 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = ROOT / "experiments" / "baseline"
-NEW_REPORTS = ("projection_barrier.json", "parity_projection.json", "affine_projection.json")
+NEW_REPORTS = (
+    "projection_barrier.json", "parity_projection.json", "affine_projection.json",
+    "mixed_constraints.json", "three_sat_bridge.json",
+)
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
     "transparent-gluing/transparent_gluing_results.json",
@@ -95,6 +98,7 @@ def source_hashes() -> dict[str, str]:
         "experiments/baseline/PACKAGE_MANIFEST.json",
         "experiments/baseline/upstream/SOURCE_MANIFEST.json",
     ))
+    sources.update((ROOT / "examples").glob("*.json"))
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sorted(sources)}
 
@@ -118,7 +122,8 @@ def main() -> None:
     if not tests.wasSuccessful() or not tests.testsRun:
         raise RuntimeError("Unit tests failed or no tests were discovered")
 
-    for name in ("projection_barrier", "parity_projection", "affine_projection"):
+    for name in ("projection_barrier", "parity_projection", "affine_projection",
+                 "mixed_constraints", "three_sat_bridge"):
         run_component(ROOT / "experiments" / f"{name}.py", out, out / f"{name}.log")
     run_component(BASELINE / "run_all.py", out / "baseline", out / "baseline.log")
 
@@ -135,10 +140,13 @@ def main() -> None:
     star = read_json(out / NEW_REPORTS[0])
     parity = read_json(out / NEW_REPORTS[1])
     affine = read_json(out / NEW_REPORTS[2])
+    mixed = read_json(out / NEW_REPORTS[3])
+    bridge = read_json(out / NEW_REPORTS[4])
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
-            or not all(c["checks_passed"] for c in affine["cases"])):
+            or not all(c["checks_passed"] for c in affine["cases"])
+            or not mixed["all_checks_passed"] or not bridge["all_checks_passed"]):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -159,6 +167,14 @@ def main() -> None:
         "parity_cases": len(parity["cases"]),
         "parity_max_n": max(c["n"] for c in parity["cases"]),
         "affine_cases": len(affine["cases"]),
+        "mixed_low_rank_cases": len(mixed["low_rank_cases"]),
+        "mixed_enumeration_barrier_cases": len(mixed["enumeration_barrier_cases"]),
+        "mixed_independent_oracle_cases": len(mixed["independent_oracle"]["cases"]),
+        "mixed_original_assignments_checked": mixed["independent_oracle"]["full_original_assignments_checked"],
+        "mixed_largest_barrier_cells": max(c["solver"]["checked_cells"] for c in mixed["enumeration_barrier_cases"]),
+        "three_sat_bridge_checks_passed": bridge["all_checks_passed"],
+        "mixed_algorithm_general_polynomial_time": False,
+        "mixed_time_bound": "poly(N) + 2^r poly(N), where r is observed affine coefficient rank.",
         "lean_scope": "Not run by this Python command. Run lake build Formal; CI has a separate kernel-check job.",
         "p_vs_np": "No resolution or general algorithmic lower bound claimed.",
         "source_sha256": source_hashes(),

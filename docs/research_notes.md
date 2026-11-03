@@ -2,6 +2,11 @@
 
 2026-11-04 JST
 
+This is the first research record. The proposed mixed-constraint extension has
+since been implemented; see [the solution criteria](solution_criteria.md),
+[the reverse-engineering record](reverse_engineering.md), and
+[the mixed experiments](mixed_constraints.md) for the second stage.
+
 ## Question and result
 
 The starting question is whether small pieces of a constraint problem can be

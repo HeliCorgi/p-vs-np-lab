@@ -7,7 +7,59 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
-## 今回わかったこと
+## 第2段階：解決条件から逆算した混合ソルバー
+
+まず [何を示せばP vs NPの解決になるか](docs/solution_criteria.md) を固定しました。P=NPへの今回の経路は、一般3SATを含む入力すべてに対する、一様・決定的な正しい判定と、総ビット計算時間の固定多項式上界です。
+
+| 追加物 | 到達点 |
+|---|---|
+| [3SAT→二項CNF＋XORの還元](docs/two_cnf_xor_reduction.md) | 2-SAT型の節と、互いに素な3変数XORの混合でも一般3SATが入ることを明示。式全体の充足可能性を保つ論理をLeanで証明 |
+| [混合ソルバー](docs/mixed_solver.md) | 任意の有限XOR＋CNFを正確に判定し、SAT証人を復元。必要なら全セルを含むUNSAT証明書を出力 |
+| [構造化実験と反例族](docs/mixed_constraints.md) | 256変数でも8セルで扱える例と、判定モードで指数個を列挙する例の両方を確認 |
+| [解決条件からの逆算](docs/reverse_engineering.md) | 一般SATへの適用範囲、正当性、最悪計算量を別々の証明義務として整理 |
+
+### 一般3SATへ戻れる接続
+
+各節にfreshな補助変数 `u,v,w` を用意すると、
+
+\[
+a\lor b\lor c\quad\Longleftrightarrow\quad
+\exists u,v,w:\ (a\lor u)\land(b\lor v)\land(c\lor w)
+\land(u\oplus v\oplus w=0).
+\]
+
+全リテラルが偽なら補助変数が全部1に強制され、偶数パリティと矛盾します。どれかが真なら対応する補助変数を0、残りを1にできます。元の `n` 変数・`m` 個の3リテラル節は、`n+3m` 変数・`3m` 個の二項節・`m` 本のXORへ写ります。
+
+**この限定された混合クラスを一般に多項式時間で解ければP=NP**です。各片が容易なことだけでは混合も容易とは言えません。これは充足可能性を保存する還元で、モデル数は保存しません。[還元コード](src/pnp_lab/reductions.py) と [Leanの式全体の同値定理](Formal/ThreeSatBridge.lean) を追加しました。初等的な構成であり、新規性は主張しません。
+
+### 候補の計算量と、確認できた限界
+
+XORを消去して `x=x0+B t` と書きます。自由次元を `d`、CNFが観測する係数形式の階数を `r` とすると、各同値類から1代表を持ち上げて `2^r` 個だけ調べれば正確に判定できます。上界は `poly(N)+2^r poly(N)`。`N` は入力のビット長で、長整数の演算費用も含めます。
+
+| 入力族 | 自由次元d | 観測階数r | 検査した代表元 |
+|---|---:|---:|---:|
+| 64変数、少数の形式のコピーと未観測方向 | 34 | 3 | 8 |
+| 128変数、同じ構造 | 65 | 3 | 8 |
+| 256変数、同じ構造 | 130 | 3 | 8 |
+| 16変数、exactly-one CNF＋偶数パリティ | 15 | 15 | 32,768 |
+
+最初の3例はモデル数も検査する完全列挙です。最後は **SATの証人があれば停止する判定モード**ですが、矛盾するため全代表元を調べます。一般のk変数の同族で必ず `2^(k-1)` 個を調べ、通常の符号化で入力長は `Θ(k² log k)`。したがって、**このアルゴリズムには超多項式の最悪例があり、一般多項式時間という主張は成立しません**。容易に認識できるこの族は、別アルゴリズムやP≠NPの下界ではありません。
+
+上の3SAT還元でも、元変数がすべて出現する場合 `r=d=n+2m` です。適用範囲を確保する還元であって、この列挙法を高速化する変換ではありません。次の課題は、残る非線形制約の処理を変え、その総費用を証明することです。
+
+### ソルバーを動かす
+
+```bash
+python scripts/solve_mixed.py examples/mixed_sat.json --count-models
+python scripts/solve_mixed.py examples/mixed_unsat.json --verify-certificate
+python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
+```
+
+最後は `UNKNOWN` と終了コード2を返します。予算切れをUNSATにしません。SAT/UNSAT確定は終了コード0、入力・引数エラーは1。通常は最初のSAT証人で停止し、暗黙の上限は設けません。`--count-models` は全セルを調べます。UNSAT証明書は指数サイズになり得るので、`--certificate` / `--verify-certificate` の明示指定です。
+
+[QuotientSearch.lean](Formal/QuotientSearch.lean) は、正しい代表元の被覆と持ち上げを仮定した判定の論理を証明します。Pythonの線形消去や、元のCNFが各同値類で一定になるという橋渡しまで形式化したわけではありません。3SAT還元の定理も、Turing機械の符号化・実行費用まで形式化したものではありません。
+
+## 最初の研究で確認したこと
 
 「小さい部品の境界関係が短く書けるなら、それを繰り返し合成して一般SATを解けないか」を出発点にしました。内部変数を消去した後の表現サイズが最初の障害です。
 
@@ -37,7 +89,7 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要8定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要16定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -65,8 +117,8 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 22件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
-- 星グラフ4ケース、パリティ10ケース、GF(2)7ケース。
+- 43件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 旧実験28ファイルのハッシュ確認と再実行。上流11ファイルはさらに上流manifestで照合します。
 - 新しい決定的なJSONと、コミット済み `results/*.json` の一致確認。
 - 旧結果5ファイルの数学的内容の一致確認。時刻・Python環境・計測時間だけは比較対象から除き、状態数・式・証人・判定結果を比較します。
@@ -84,7 +136,9 @@ CIはPythonとLeanを別jobで実行します。Pythonの成功だけを形式�
 
 | 場所 | 内容 |
 |---|---|
-| [`docs/research_notes.md`](docs/research_notes.md) | 結論、主張の種類、未達成事項、次に測るもの |
+| [`docs/solution_criteria.md`](docs/solution_criteria.md) | P=NP／P≠NPの厳密な証明条件 |
+| [`docs/reverse_engineering.md`](docs/reverse_engineering.md) | 現在の算法・一般SATへの還元・計算量の不足箇所 |
+| [`docs/research_notes.md`](docs/research_notes.md) | 第1段階の研究記録 |
 | [`docs/projection_barrier.md`](docs/projection_barrier.md) | 星グラフの一般qの証明と厳密な範囲 |
 | [`docs/parity_projection.md`](docs/parity_projection.md) | 既知のCNF指数下界と有限検証 |
 | [`docs/affine_projection.md`](docs/affine_projection.md) | 効率的な射影が閉じるGF(2)の対照 |

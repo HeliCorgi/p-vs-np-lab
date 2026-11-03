@@ -1,0 +1,1591 @@
+{
+  "all_checks_passed": true,
+  "claim_type": "Elementary decision-preserving and projection-preserving reduction; no novelty claim and no general-SAT speedup claimed.",
+  "clause_identity": "(a OR b OR c) iff exists fresh u,v,w: (a OR u) AND (b OR v) AND (c OR w) AND (u XOR v XOR w = 0).",
+  "experiment": "three_sat_bridge",
+  "formula_cases": [
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 5,
+        "checked_cells": 32,
+        "effective_rank": 5,
+        "exhaustive": true,
+        "model_count": 13,
+        "n_variables": 6,
+        "quotient_cells": 32,
+        "rejecting_cells": 19,
+        "requested_exhaustive": true,
+        "satisfying_cells": 13,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 5,
+        "checked_cells": 8,
+        "effective_rank": 5,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 6,
+        "quotient_cells": 32,
+        "rejecting_cells": 7,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 7,
+      "full_target_oracle": {
+        "assignments_checked": 64,
+        "extensions_by_source_mask": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          4
+        ],
+        "target_model_count": 13
+      },
+      "name": "positive_single_clause",
+      "predicted_extensions_by_source_mask": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        4
+      ],
+      "predicted_target_model_count": 13,
+      "projected_source_witness_mask": 7,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 1,
+        "predicted_affine_dimension": 5,
+        "predicted_observation_rank": 5,
+        "source_clauses": 1,
+        "source_observed_variables": 3,
+        "source_variables": 3,
+        "target_binary_clauses": 3,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 1,
+        "target_variables": 6
+      },
+      "source_assignments_checked": 8,
+      "source_cnf": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "source_model_count": 7,
+      "source_model_masks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_models_lifted_and_checked": 7,
+      "source_nonmodels_rejected_by_lift": 1,
+      "source_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          56,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 7,
+        "checked_cells": 128,
+        "effective_rank": 7,
+        "exhaustive": true,
+        "model_count": 12,
+        "n_variables": 9,
+        "quotient_cells": 128,
+        "rejecting_cells": 116,
+        "requested_exhaustive": true,
+        "satisfying_cells": 12,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 7,
+        "checked_cells": 49,
+        "effective_rank": 7,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 9,
+        "quotient_cells": 128,
+        "rejecting_cells": 48,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 232,
+      "full_target_oracle": {
+        "assignments_checked": 512,
+        "extensions_by_source_mask": [
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "target_model_count": 12
+      },
+      "name": "signed_shared_variables",
+      "predicted_extensions_by_source_mask": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "predicted_target_model_count": 12,
+      "projected_source_witness_mask": 0,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 2,
+        "predicted_affine_dimension": 7,
+        "predicted_observation_rank": 7,
+        "source_clauses": 2,
+        "source_observed_variables": 3,
+        "source_variables": 3,
+        "target_binary_clauses": 6,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 2,
+        "target_variables": 9
+      },
+      "source_assignments_checked": 8,
+      "source_cnf": [
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          2,
+          -3
+        ]
+      ],
+      "source_model_count": 6,
+      "source_model_masks": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "source_models_lifted_and_checked": 6,
+      "source_nonmodels_rejected_by_lift": 2,
+      "source_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          4
+        ],
+        [
+          -2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          -1,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          -3,
+          9
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          56,
+          0
+        ],
+        [
+          448,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 64,
+        "effective_rank": 6,
+        "exhaustive": true,
+        "model_count": 5,
+        "n_variables": 8,
+        "quotient_cells": 64,
+        "rejecting_cells": 59,
+        "requested_exhaustive": true,
+        "satisfying_cells": 5,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 28,
+        "effective_rank": 6,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 8,
+        "quotient_cells": 64,
+        "rejecting_cells": 27,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 119,
+      "full_target_oracle": {
+        "assignments_checked": 256,
+        "extensions_by_source_mask": [
+          1,
+          0,
+          0,
+          4
+        ],
+        "target_model_count": 5
+      },
+      "name": "signed_repeated_occurrences",
+      "predicted_extensions_by_source_mask": [
+        1,
+        0,
+        0,
+        4
+      ],
+      "predicted_target_model_count": 5,
+      "projected_source_witness_mask": 3,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 2,
+        "predicted_affine_dimension": 6,
+        "predicted_observation_rank": 6,
+        "source_clauses": 2,
+        "source_observed_variables": 2,
+        "source_variables": 2,
+        "target_binary_clauses": 6,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 2,
+        "target_variables": 8
+      },
+      "source_assignments_checked": 4,
+      "source_cnf": [
+        [
+          1,
+          1,
+          -2
+        ],
+        [
+          -1,
+          2,
+          2
+        ]
+      ],
+      "source_model_count": 2,
+      "source_model_masks": [
+        0,
+        3
+      ],
+      "source_models_lifted_and_checked": 2,
+      "source_nonmodels_rejected_by_lift": 2,
+      "source_variables": [
+        "a",
+        "b"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -2,
+          5
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          28,
+          0
+        ],
+        [
+          224,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 64,
+        "effective_rank": 6,
+        "exhaustive": true,
+        "model_count": 8,
+        "n_variables": 8,
+        "quotient_cells": 64,
+        "rejecting_cells": 56,
+        "requested_exhaustive": true,
+        "satisfying_cells": 8,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 20,
+        "effective_rank": 6,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 8,
+        "quotient_cells": 64,
+        "rejecting_cells": 19,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 99,
+      "full_target_oracle": {
+        "assignments_checked": 256,
+        "extensions_by_source_mask": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "target_model_count": 8
+      },
+      "name": "short_clause_padding",
+      "predicted_extensions_by_source_mask": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "predicted_target_model_count": 8,
+      "projected_source_witness_mask": 3,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 2,
+        "predicted_affine_dimension": 6,
+        "predicted_observation_rank": 6,
+        "source_clauses": 2,
+        "source_observed_variables": 2,
+        "source_variables": 2,
+        "target_binary_clauses": 6,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 2,
+        "target_variables": 8
+      },
+      "source_assignments_checked": 4,
+      "source_cnf": [
+        [
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "source_model_count": 1,
+      "source_model_masks": [
+        3
+      ],
+      "source_models_lifted_and_checked": 1,
+      "source_nonmodels_rejected_by_lift": 3,
+      "source_variables": [
+        "a",
+        "b"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          28,
+          0
+        ],
+        [
+          224,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": true,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 5,
+        "checked_cells": 32,
+        "effective_rank": 5,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 7,
+        "quotient_cells": 32,
+        "rejecting_cells": 32,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 5,
+        "checked_cells": 32,
+        "effective_rank": 5,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 7,
+        "quotient_cells": 32,
+        "rejecting_cells": 32,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision_witness_mask": null,
+      "full_target_oracle": {
+        "assignments_checked": 128,
+        "extensions_by_source_mask": [
+          0,
+          0
+        ],
+        "target_model_count": 0
+      },
+      "name": "unit_contradiction",
+      "predicted_extensions_by_source_mask": [
+        0,
+        0
+      ],
+      "predicted_target_model_count": 0,
+      "projected_source_witness_mask": null,
+      "separate_counting_pass": false,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 2,
+        "predicted_affine_dimension": 5,
+        "predicted_observation_rank": 5,
+        "source_clauses": 2,
+        "source_observed_variables": 1,
+        "source_variables": 1,
+        "target_binary_clauses": 6,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 2,
+        "target_variables": 7
+      },
+      "source_assignments_checked": 2,
+      "source_cnf": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "source_model_count": 0,
+      "source_model_masks": [],
+      "source_models_lifted_and_checked": 0,
+      "source_nonmodels_rejected_by_lift": 2,
+      "source_variables": [
+        "a"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -1,
+          5
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          -1,
+          7
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          14,
+          0
+        ],
+        [
+          112,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": true,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 10,
+        "checked_cells": 1024,
+        "effective_rank": 10,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 14,
+        "quotient_cells": 1024,
+        "rejecting_cells": 1024,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 10,
+        "checked_cells": 1024,
+        "effective_rank": 10,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 14,
+        "quotient_cells": 1024,
+        "rejecting_cells": 1024,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision_witness_mask": null,
+      "full_target_oracle": null,
+      "name": "four_clause_unsat",
+      "predicted_extensions_by_source_mask": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_target_model_count": 0,
+      "projected_source_witness_mask": null,
+      "separate_counting_pass": false,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 4,
+        "predicted_affine_dimension": 10,
+        "predicted_observation_rank": 10,
+        "source_clauses": 4,
+        "source_observed_variables": 2,
+        "source_variables": 2,
+        "target_binary_clauses": 12,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 4,
+        "target_variables": 14
+      },
+      "source_assignments_checked": 4,
+      "source_cnf": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          -2,
+          -2
+        ],
+        [
+          -1,
+          2,
+          2
+        ],
+        [
+          -1,
+          -2,
+          -2
+        ]
+      ],
+      "source_model_count": 0,
+      "source_model_masks": [],
+      "source_models_lifted_and_checked": 0,
+      "source_nonmodels_rejected_by_lift": 4,
+      "source_variables": [
+        "a",
+        "b"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          -2,
+          7
+        ],
+        [
+          -2,
+          8
+        ],
+        [
+          -1,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          -1,
+          12
+        ],
+        [
+          -2,
+          13
+        ],
+        [
+          -2,
+          14
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          28,
+          0
+        ],
+        [
+          224,
+          0
+        ],
+        [
+          1792,
+          0
+        ],
+        [
+          14336,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ],
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 12,
+        "checked_cells": 4096,
+        "effective_rank": 12,
+        "exhaustive": true,
+        "model_count": 54,
+        "n_variables": 16,
+        "quotient_cells": 4096,
+        "rejecting_cells": 4042,
+        "requested_exhaustive": true,
+        "satisfying_cells": 54,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 12,
+        "checked_cells": 405,
+        "effective_rank": 12,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 16,
+        "quotient_cells": 4096,
+        "rejecting_cells": 404,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 3764,
+      "full_target_oracle": null,
+      "name": "coupled_four_variables",
+      "predicted_extensions_by_source_mask": [
+        0,
+        8,
+        2,
+        0,
+        8,
+        16,
+        4,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        8,
+        0,
+        4
+      ],
+      "predicted_target_model_count": 54,
+      "projected_source_witness_mask": 4,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 4,
+        "predicted_affine_dimension": 12,
+        "predicted_observation_rank": 12,
+        "source_clauses": 4,
+        "source_observed_variables": 4,
+        "source_variables": 4,
+        "target_binary_clauses": 12,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 4,
+        "target_variables": 16
+      },
+      "source_assignments_checked": 16,
+      "source_cnf": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          4
+        ],
+        [
+          1,
+          -3,
+          -4
+        ],
+        [
+          -2,
+          3,
+          -4
+        ]
+      ],
+      "source_model_count": 8,
+      "source_model_masks": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        9,
+        13,
+        15
+      ],
+      "source_models_lifted_and_checked": 8,
+      "source_nonmodels_rejected_by_lift": 8,
+      "source_variables": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          -2,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          -3,
+          12
+        ],
+        [
+          -4,
+          13
+        ],
+        [
+          -2,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          -4,
+          16
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          112,
+          0
+        ],
+        [
+          896,
+          0
+        ],
+        [
+          7168,
+          0
+        ],
+        [
+          57344,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 32,
+        "effective_rank": 5,
+        "exhaustive": true,
+        "model_count": 26,
+        "n_variables": 7,
+        "quotient_cells": 32,
+        "rejecting_cells": 19,
+        "requested_exhaustive": true,
+        "satisfying_cells": 13,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 6,
+        "checked_cells": 6,
+        "effective_rank": 5,
+        "exhaustive": false,
+        "model_count": null,
+        "n_variables": 7,
+        "quotient_cells": 32,
+        "rejecting_cells": 5,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 5,
+      "full_target_oracle": {
+        "assignments_checked": 128,
+        "extensions_by_source_mask": [
+          1,
+          2,
+          0,
+          1,
+          2,
+          4,
+          1,
+          2,
+          1,
+          2,
+          0,
+          1,
+          2,
+          4,
+          1,
+          2
+        ],
+        "target_model_count": 26
+      },
+      "name": "unused_original_variable",
+      "predicted_extensions_by_source_mask": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        4,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1,
+        2,
+        4,
+        1,
+        2
+      ],
+      "predicted_target_model_count": 26,
+      "projected_source_witness_mask": 5,
+      "separate_counting_pass": true,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 1,
+        "predicted_affine_dimension": 6,
+        "predicted_observation_rank": 5,
+        "source_clauses": 1,
+        "source_observed_variables": 3,
+        "source_variables": 4,
+        "target_binary_clauses": 3,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 1,
+        "target_variables": 7
+      },
+      "source_assignments_checked": 16,
+      "source_cnf": [
+        [
+          1,
+          -2,
+          3
+        ]
+      ],
+      "source_model_count": 14,
+      "source_model_masks": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_models_lifted_and_checked": 14,
+      "source_nonmodels_rejected_by_lift": 2,
+      "source_variables": [
+        "a",
+        "b",
+        "c",
+        "unused"
+      ],
+      "target_binary_cnf": [
+        [
+          1,
+          5
+        ],
+        [
+          -2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "target_xor_rows": [
+        [
+          112,
+          0
+        ]
+      ],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": true,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 0,
+        "checked_cells": 1,
+        "effective_rank": 0,
+        "exhaustive": true,
+        "model_count": 1,
+        "n_variables": 0,
+        "quotient_cells": 1,
+        "rejecting_cells": 0,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 0,
+        "checked_cells": 1,
+        "effective_rank": 0,
+        "exhaustive": true,
+        "model_count": 1,
+        "n_variables": 0,
+        "quotient_cells": 1,
+        "rejecting_cells": 0,
+        "requested_exhaustive": false,
+        "satisfying_cells": 1,
+        "status": "SAT"
+      },
+      "decision_witness_mask": 0,
+      "full_target_oracle": {
+        "assignments_checked": 1,
+        "extensions_by_source_mask": [
+          1
+        ],
+        "target_model_count": 1
+      },
+      "name": "empty_formula",
+      "predicted_extensions_by_source_mask": [
+        1
+      ],
+      "predicted_target_model_count": 1,
+      "projected_source_witness_mask": 0,
+      "separate_counting_pass": false,
+      "shape": {
+        "empty_source_clauses": 0,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 0,
+        "predicted_affine_dimension": 0,
+        "predicted_observation_rank": 0,
+        "source_clauses": 0,
+        "source_observed_variables": 0,
+        "source_variables": 0,
+        "target_binary_clauses": 0,
+        "target_empty_clauses": 0,
+        "target_ternary_xor_equations": 0,
+        "target_variables": 0
+      },
+      "source_assignments_checked": 1,
+      "source_cnf": [],
+      "source_model_count": 1,
+      "source_model_masks": [
+        0
+      ],
+      "source_models_lifted_and_checked": 1,
+      "source_nonmodels_rejected_by_lift": 0,
+      "source_variables": [],
+      "target_binary_cnf": [],
+      "target_xor_rows": [],
+      "xor_part_alone_satisfiable": true
+    },
+    {
+      "auxiliary_triples_zero_based": [
+        null
+      ],
+      "both_parts_individually_sat_but_mixed_unsat": false,
+      "checks_passed": true,
+      "cnf_part_alone_satisfiable": false,
+      "complete_counting": {
+        "affine_consistent": true,
+        "affine_dimension": 0,
+        "checked_cells": 1,
+        "effective_rank": 0,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 0,
+        "quotient_cells": 1,
+        "rejecting_cells": 1,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision": {
+        "affine_consistent": true,
+        "affine_dimension": 0,
+        "checked_cells": 1,
+        "effective_rank": 0,
+        "exhaustive": true,
+        "model_count": 0,
+        "n_variables": 0,
+        "quotient_cells": 1,
+        "rejecting_cells": 1,
+        "requested_exhaustive": false,
+        "satisfying_cells": 0,
+        "status": "UNSAT"
+      },
+      "decision_witness_mask": null,
+      "full_target_oracle": {
+        "assignments_checked": 1,
+        "extensions_by_source_mask": [
+          0
+        ],
+        "target_model_count": 0
+      },
+      "name": "empty_clause",
+      "predicted_extensions_by_source_mask": [
+        0
+      ],
+      "predicted_target_model_count": 0,
+      "projected_source_witness_mask": null,
+      "separate_counting_pass": false,
+      "shape": {
+        "empty_source_clauses": 1,
+        "helpers_are_fresh_and_disjoint": true,
+        "nonempty_source_clauses": 0,
+        "predicted_affine_dimension": 0,
+        "predicted_observation_rank": 0,
+        "source_clauses": 1,
+        "source_observed_variables": 0,
+        "source_variables": 0,
+        "target_binary_clauses": 0,
+        "target_empty_clauses": 1,
+        "target_ternary_xor_equations": 0,
+        "target_variables": 0
+      },
+      "source_assignments_checked": 1,
+      "source_cnf": [
+        []
+      ],
+      "source_model_count": 0,
+      "source_model_masks": [],
+      "source_models_lifted_and_checked": 0,
+      "source_nonmodels_rejected_by_lift": 1,
+      "source_variables": [],
+      "target_binary_cnf": [
+        []
+      ],
+      "target_xor_rows": [],
+      "xor_part_alone_satisfiable": true
+    }
+  ],
+  "local_truth_summary": {
+    "checks_passed": true,
+    "complete_assignments_checked": 64,
+    "helper_assignments_per_input": 8,
+    "literal_truth_inputs": 8,
+    "source_model_count": 7,
+    "target_model_count": 13
+  },
+  "local_truth_table": [
+    {
+      "checks_passed": true,
+      "extension_count": 0,
+      "literal_truth_values": [
+        0,
+        0,
+        0
+      ],
+      "predicted_extension_count": 0,
+      "true_occurrences": 0,
+      "valid_helper_assignments": []
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 1,
+      "literal_truth_values": [
+        0,
+        0,
+        1
+      ],
+      "predicted_extension_count": 1,
+      "true_occurrences": 1,
+      "valid_helper_assignments": [
+        [
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 1,
+      "literal_truth_values": [
+        0,
+        1,
+        0
+      ],
+      "predicted_extension_count": 1,
+      "true_occurrences": 1,
+      "valid_helper_assignments": [
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 2,
+      "literal_truth_values": [
+        0,
+        1,
+        1
+      ],
+      "predicted_extension_count": 2,
+      "true_occurrences": 2,
+      "valid_helper_assignments": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 1,
+      "literal_truth_values": [
+        1,
+        0,
+        0
+      ],
+      "predicted_extension_count": 1,
+      "true_occurrences": 1,
+      "valid_helper_assignments": [
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 2,
+      "literal_truth_values": [
+        1,
+        0,
+        1
+      ],
+      "predicted_extension_count": 2,
+      "true_occurrences": 2,
+      "valid_helper_assignments": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 2,
+      "literal_truth_values": [
+        1,
+        1,
+        0
+      ],
+      "predicted_extension_count": 2,
+      "true_occurrences": 2,
+      "valid_helper_assignments": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "checks_passed": true,
+      "extension_count": 4,
+      "literal_truth_values": [
+        1,
+        1,
+        1
+      ],
+      "predicted_extension_count": 4,
+      "true_occurrences": 3,
+      "valid_helper_assignments": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "model_count_warning": "Not parsimonious. A source assignment with s true occurrences in a padded clause has 2^(s-1) helper extensions when s>0, and zero when s=0. Multiply over independent helper triples.",
+  "not_claimed": [
+    "A novel NP-completeness result or a novel clause gadget.",
+    "A polynomial-time algorithm for general SAT or P versus NP resolution.",
+    "Preservation of model counts or of a uniform distribution on models.",
+    "A lower bound for other solvers or a proof that the example is intrinsically difficult.",
+    "End-to-end Lean verification of the Python reduction, solver, encoding, or complexity analysis."
+  ],
+  "padding": "Width-one and width-two clauses repeat the final literal to obtain three occurrences. Empty clauses remain empty and receive no helpers.",
+  "rank_identity": "With n original variables, m nonempty clauses, and p distinct observed original variables: target variable count n+3m, affine dimension n+2m, observed rank p+2m. When p=n, r=d and quotient compression removes no direction.",
+  "schema_version": 1,
+  "status": "verified",
+  "summary": {
+    "formula_cases": 10,
+    "full_target_assignments_checked": 1346,
+    "highlighted_unsat_original_assignments": 4,
+    "highlighted_unsat_target_decision_cells": 1024,
+    "max_affine_dimension": 12,
+    "sat_cases": 7,
+    "source_assignments_checked": 64,
+    "source_models_lifted_and_checked": 39,
+    "unsat_cases": 3
+  }
+}
