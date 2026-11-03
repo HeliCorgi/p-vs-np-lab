@@ -1,5 +1,12 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Current target: three options of weight two
+
+The [support threshold](support_threshold.md) reduces every 3SAT instance to a zero-target XOR selection with at most three options per group, each option touching at most two coordinates, and exactly two groups incident to each coordinate. The binary-choice and unit-weight edges have polynomial solvers. The [explicit frontier](affine_frontier.md) decides general supports, but it does not yield the missing general polynomial bound. Its all-orders grid obstruction concerns the earlier five-option bridge, not this smaller encoding.
+
+A concrete normal form for the remaining case: translate any three-point support `{a,b,c}` by `a`. Choose selector bits `y,z` for the contributions `b XOR a` and `c XOR a`, forbidding only `y=z=1`. The target shifts by the XOR of the anchors. Binary supports need one unrestricted selector; singletons contribute constants; an empty support is immediately impossible. This gives linear equations plus disjoint forbidden pairs. It is an exact decision equivalence, not yet a polynomial algorithm. Symbolic methods that avoid storing every reachable sum must still prove polynomial bit cost for construction, composition, and the final feasibility query.
+
+
 This note connects [the exact P versus NP criterion](solution_criteria.md) to
 the implemented [mixed solver](mixed_solver.md). It separates three results:
 an explicit reduction covers an NP-complete mixed constraint language; the

@@ -7,11 +7,15 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from pnp_lab.frontier_sat import decide_three_cnf
+from pnp_lab.ternary_support import three_cnf_to_weight_two_supports
+from pnp_lab.support_solver import decide_xor_choices
 
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('input', help='JSON file with variables, clauses, and optional group_order; - for stdin')
+    p.add_argument('--encoding', choices=('blocks', 'sparse'), default='blocks',
+                   help='Five-state blocks or three-option, weight-two XOR supports')
     p.add_argument('--max-transitions', type=int, help='Residual prefix-option attempts; preprocessing is separate')
     a = p.parse_args()
     try:
@@ -21,8 +25,18 @@ def main() -> int:
                 or not all(isinstance(c, list) for c in obj['clauses'])
                 or ('group_order' in obj and not isinstance(obj['group_order'], list))):
             raise ValueError('Expected arrays variables and clauses, with an optional group_order array.')
-        result = decide_three_cnf(obj['variables'], obj['clauses'], group_order=obj.get('group_order'),
-                                  max_transitions=a.max_transitions)
+        if a.encoding == 'blocks':
+            result = decide_three_cnf(obj['variables'], obj['clauses'], group_order=obj.get('group_order'),
+                                      max_transitions=a.max_transitions)
+        else:
+            if 'group_order' in obj:
+                raise ValueError('group_order addresses groups in the blocks encoding only.')
+            red = three_cnf_to_weight_two_supports(obj['variables'], obj['clauses'])
+            result = decide_xor_choices(red.supports, red.rhs, max_transitions=a.max_transitions)
+            model = red.project_witness(result['witness']) if result['status'] == 'SAT' else None
+            result.update(source_witness_mask=model, source_witness=(None if model is None else
+                          {v: bool(model & (1 << i)) for i, v in enumerate(red.original_variables)}))
+        result['encoding'] = a.encoding
     except (ValueError, OSError, TypeError) as err:
         print(f'Input error: {err}', file=sys.stderr)
         return 1

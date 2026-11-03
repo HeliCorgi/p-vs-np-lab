@@ -1,0 +1,203 @@
+{
+  "all_checks_passed": true,
+  "binary_even_span_controls": [
+    {
+      "flipped_status": "UNSAT",
+      "groups": 4,
+      "rank": 3,
+      "sat_status": "SAT",
+      "transitions_per_run": 0
+    },
+    {
+      "flipped_status": "UNSAT",
+      "groups": 16,
+      "rank": 15,
+      "sat_status": "SAT",
+      "transitions_per_run": 0
+    },
+    {
+      "flipped_status": "UNSAT",
+      "groups": 64,
+      "rank": 63,
+      "sat_status": "SAT",
+      "transitions_per_run": 0
+    },
+    {
+      "flipped_status": "UNSAT",
+      "groups": 256,
+      "rank": 255,
+      "sat_status": "SAT",
+      "transitions_per_run": 0
+    }
+  ],
+  "one_clause_target_oracle": {
+    "distinct_projected_source_models": 7,
+    "tuples_checked": 648,
+    "zero_xor_tuples": 12
+  },
+  "schema_version": 1,
+  "scope": "Finite controls for the <=2-choice Gaussian case, the <=3-choice decision reduction and its <=2-Hamming-weight variant. Both encodings are checked separately against the same source oracle; source model counts are not preserved. The all-input claims use the mathematical proof.",
+  "seed": 3081062,
+  "summary": {
+    "controls": 7,
+    "images_requiring_transitions": 39,
+    "max_support_cardinality": 3,
+    "max_transitions_observed": 598,
+    "oracle_cases": 67,
+    "sat_cases": 60,
+    "seeded_cases": 60,
+    "source_assignments_checked": 752,
+    "source_models_lifted": 463,
+    "unsat_cases": 7,
+    "weight_two_images_requiring_transitions": 39,
+    "weight_two_max_mask_weight": 2,
+    "weight_two_max_transitions": 598,
+    "weight_two_models_lifted": 463
+  },
+  "ternary_controls": [
+    {
+      "coordinates": 0,
+      "decision": "SAT",
+      "groups": 0,
+      "peak_states": 1,
+      "source_cnf": [],
+      "source_variables": 0,
+      "source_witness_mask": 0,
+      "transitions": 0,
+      "weight_two_coordinates": 0,
+      "weight_two_groups": 0,
+      "weight_two_transitions": 0,
+      "weight_two_witness_mask": 0
+    },
+    {
+      "coordinates": 0,
+      "decision": "UNSAT",
+      "groups": 1,
+      "peak_states": 0,
+      "source_cnf": [
+        []
+      ],
+      "source_variables": 0,
+      "source_witness_mask": null,
+      "transitions": 0,
+      "weight_two_coordinates": 0,
+      "weight_two_groups": 1,
+      "weight_two_transitions": 0,
+      "weight_two_witness_mask": null
+    },
+    {
+      "coordinates": 0,
+      "decision": "SAT",
+      "groups": 2,
+      "peak_states": 1,
+      "source_cnf": [],
+      "source_variables": 2,
+      "source_witness_mask": 0,
+      "transitions": 0,
+      "weight_two_coordinates": 0,
+      "weight_two_groups": 0,
+      "weight_two_transitions": 0,
+      "weight_two_witness_mask": 0
+    },
+    {
+      "coordinates": 4,
+      "decision": "UNSAT",
+      "groups": 5,
+      "peak_states": 1,
+      "source_cnf": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "source_variables": 1,
+      "source_witness_mask": null,
+      "transitions": 6,
+      "weight_two_coordinates": 6,
+      "weight_two_groups": 6,
+      "weight_two_transitions": 6,
+      "weight_two_witness_mask": null
+    },
+    {
+      "coordinates": 12,
+      "decision": "SAT",
+      "groups": 11,
+      "peak_states": 21,
+      "source_cnf": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "source_variables": 3,
+      "source_witness_mask": 1,
+      "transitions": 244,
+      "weight_two_coordinates": 18,
+      "weight_two_groups": 14,
+      "weight_two_transitions": 244,
+      "weight_two_witness_mask": 5
+    },
+    {
+      "coordinates": 12,
+      "decision": "UNSAT",
+      "groups": 9,
+      "peak_states": 15,
+      "source_cnf": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "source_variables": 1,
+      "source_witness_mask": null,
+      "transitions": 129,
+      "weight_two_coordinates": 18,
+      "weight_two_groups": 14,
+      "weight_two_transitions": 129,
+      "weight_two_witness_mask": null
+    },
+    {
+      "coordinates": 16,
+      "decision": "SAT",
+      "groups": 15,
+      "peak_states": 21,
+      "source_cnf": [
+        [
+          -1,
+          -2,
+          -2
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          2,
+          -2,
+          1
+        ]
+      ],
+      "source_variables": 4,
+      "source_witness_mask": 2,
+      "transitions": 196,
+      "weight_two_coordinates": 23,
+      "weight_two_groups": 19,
+      "weight_two_transitions": 197,
+      "weight_two_witness_mask": 2
+    }
+  ]
+}
