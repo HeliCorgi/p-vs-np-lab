@@ -1,7 +1,88 @@
 {
+  "schema_version": 1,
   "run_id": 41714504846,
   "head_sha": "e6e39e72076ae10274ffc37346d5c307433c0cbf",
-  "status": "awaiting_completion",
+  "status": "completed",
+  "conclusion": "failure",
   "run_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/41714504846",
-  "scope": "Completion-event handoff only. Inspect the run steps and axiom output before updating the theorem audit."
+  "job_id": 126190866969,
+  "started_at": "2026-11-03T20:39:02Z",
+  "completed_at": "2026-11-03T23:16:38Z",
+  "elapsed_seconds": 9456,
+  "steps": [
+    {
+      "number": 1,
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:39:02Z",
+      "completed_at": "2026-11-03T20:39:03Z"
+    },
+    {
+      "number": 2,
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:39:03Z",
+      "completed_at": "2026-11-03T20:39:06Z"
+    },
+    {
+      "number": 3,
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:39:06Z",
+      "completed_at": "2026-11-03T20:42:14Z"
+    },
+    {
+      "number": 4,
+      "name": "Prepare unchanged source closure in an isolated harness",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:14Z",
+      "completed_at": "2026-11-03T20:42:15Z"
+    },
+    {
+      "number": 5,
+      "name": "Install pinned Lean and retrieve Mathlib cache",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:15Z",
+      "completed_at": "2026-11-03T20:47:43Z"
+    },
+    {
+      "number": 6,
+      "name": "Build only the exact counting endpoint",
+      "status": "in_progress",
+      "conclusion": null,
+      "started_at": "2026-11-03T20:47:43Z",
+      "completed_at": null
+    },
+    {
+      "number": 7,
+      "name": "Query and audit transitive endpoint axioms",
+      "status": "pending",
+      "conclusion": null,
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "number": 13,
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "pending",
+      "conclusion": null,
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "number": 14,
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "pending",
+      "conclusion": null,
+      "started_at": null,
+      "completed_at": null
+    }
+  ],
+  "log_request": "HTTP 404 BlobNotFound at 23:21:56Z and 23:25:30Z, 2026-11-03",
+  "scope": "GitHub run/job metadata, not a proof certificate. The terminal job retains nonterminal step metadata. No specific compiler error or infrastructure diagnosis is established by these observations."
 }
