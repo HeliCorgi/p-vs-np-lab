@@ -24,6 +24,7 @@ BASELINE = ROOT / "experiments" / "baseline"
 NEW_REPORTS = (
     "projection_barrier.json", "parity_projection.json", "affine_projection.json",
     "mixed_constraints.json", "three_sat_bridge.json",
+    "parity_cuts.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -123,7 +124,7 @@ def main() -> None:
         raise RuntimeError("Unit tests failed or no tests were discovered")
 
     for name in ("projection_barrier", "parity_projection", "affine_projection",
-                 "mixed_constraints", "three_sat_bridge"):
+                 "mixed_constraints", "three_sat_bridge", "parity_cuts"):
         run_component(ROOT / "experiments" / f"{name}.py", out, out / f"{name}.log")
     run_component(BASELINE / "run_all.py", out / "baseline", out / "baseline.log")
 
@@ -142,11 +143,13 @@ def main() -> None:
     affine = read_json(out / NEW_REPORTS[2])
     mixed = read_json(out / NEW_REPORTS[3])
     bridge = read_json(out / NEW_REPORTS[4])
+    cuts = read_json(out / NEW_REPORTS[5])
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
             or not all(c["checks_passed"] for c in affine["cases"])
-            or not mixed["all_checks_passed"] or not bridge["all_checks_passed"]):
+            or not mixed["all_checks_passed"] or not bridge["all_checks_passed"]
+            or not cuts["all_checks_passed"]):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -173,6 +176,12 @@ def main() -> None:
         "mixed_original_assignments_checked": mixed["independent_oracle"]["full_original_assignments_checked"],
         "mixed_largest_barrier_cells": max(c["solver"]["checked_cells"] for c in mixed["enumeration_barrier_cases"]),
         "three_sat_bridge_checks_passed": bridge["all_checks_passed"],
+        "parity_cut_checks_passed": cuts["all_checks_passed"],
+        "parity_cut_independent_oracle_cases": cuts["summary"]["oracle_cases"],
+        "parity_cut_original_assignments_checked": cuts["summary"]["oracle_original_assignments_checked"],
+        "parity_cut_largest_zero_cell_exactly_one": cuts["summary"]["largest_exactly_one_variables"],
+        "parity_cut_largest_full_hull_dimension_certified": cuts["summary"]["largest_full_hull_dimension_certified"],
+        "parity_cut_algorithm_general_polynomial_time": False,
         "mixed_algorithm_general_polynomial_time": False,
         "mixed_time_bound": "poly(N) + 2^r poly(N), where r is observed affine coefficient rank.",
         "lean_scope": "Not run by this Python command. Run lake build Formal; CI has a separate kernel-check job.",

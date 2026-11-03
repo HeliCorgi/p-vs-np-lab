@@ -55,6 +55,33 @@ class MixedCliTests(unittest.TestCase):
         self.assertEqual(process.returncode, 1)
         self.assertEqual(json.loads(process.stderr)["status"], "ERROR")
 
+    def test_parity_cuts_refute_before_cell_budget(self):
+        process = self.run_cli(ROOT / "examples/mixed_unsat.json", "--parity-cuts",
+                               "--max-cells", 0, "--verify-certificate")
+        self.assertEqual(process.returncode, 0, process.stderr)
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "UNSAT")
+        self.assertEqual(result["checked_cells"], 0)
+        self.assertEqual(result["reason"], "certified_linear_contradiction")
+        self.assertTrue(result["preprocessing"]["certificate_checked"])
+        self.assertEqual(result["certificate"]["kind"], "parity-cuts-unsat-v1")
+
+    def test_parity_cuts_preserve_models_and_validate_budget(self):
+        process = self.run_cli(ROOT / "examples/mixed_sat.json", "--parity-cuts", "--count-models")
+        self.assertEqual(process.returncode, 0, process.stderr)
+        self.assertEqual(json.loads(process.stdout)["model_count"], 4)
+        invalid = self.run_cli(ROOT / "examples/mixed_unsat.json", "--parity-cuts", "--max-cells", -1)
+        self.assertEqual(invalid.returncode, 1, invalid.stderr)
+        self.assertEqual(json.loads(invalid.stderr)["status"], "ERROR")
+
+    def test_parity_cuts_do_not_convert_unfinished_search_to_unsat(self):
+        process = self.run_cli(ROOT / "examples/mixed_sat.json", "--parity-cuts", "--max-cells", 0)
+        self.assertEqual(process.returncode, 2, process.stderr)
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "UNKNOWN")
+        self.assertIsNone(result["certificate"])
+        self.assertIsNone(result["model_count"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -131,7 +131,7 @@ implemented quotient search needs only `2^r poly(N)` bit time as an upper
 bound. Its `effective_rank` is this observation rank, not a minimum semantic
 measure of nonlinearity.
 
-For the current all-cell search, a general polynomial bound is already ruled
+For the baseline all-cell search, a general polynomial bound is already ruled
 out: exactly-one CNF on `k` variables together with even XOR parity has
 `d=r=k-1`, is UNSAT, and forces exactly `2^(k-1)` cell visits in unbudgeted
 **decision mode** as well as in exhaustive mode. The input has polynomial
@@ -140,6 +140,15 @@ for this implementation. The [all-size argument](reverse_engineering.md) does
 not lower-bound other SAT algorithms; the family's contradiction itself is
 easy to recognize. Improving finite performance or formally proving this
 same enumerator correct cannot remove its known worst-case enumeration.
+
+The subsequent [certified parity-cut preprocessor](parity_cuts.md) does change
+that algorithm: it refutes the exactly-one/even family without enumerating
+cells. It still has superpolynomial worst cases, including exactly-two CNF
+with odd parity and odd-cycle formulas passed through the 3SAT bridge. The
+bridge CNF alone has full affine hull, so even a complete extractor of
+unconditional affine consequences from that CNF cannot strengthen it. This is
+a rigorously specified inference-method limitation, not a lower bound against
+joint CNF+XOR reasoning or against every SAT algorithm.
 
 ## 3. SAT, UNSAT, and certificates
 

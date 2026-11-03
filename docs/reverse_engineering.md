@@ -8,6 +8,17 @@ an observation-rank upper bound; and a specific family forces this enumerator
 to take superpolynomial time. None is a resolution of P versus NP, and no
 novelty claim is made for these elementary constructions.
 
+**Stage 3 follow-up:** [certified parity cuts](parity_cuts.md) now add sound
+CNF-implied XOR equations before this baseline search. They remove the
+exactly-one/even obstruction below but leave explicit exact-two and
+bridge-encoded odd-cycle obstructions. A stronger Lean-checked theorem shows
+that the bridge CNF alone entails no nontrivial affine equation at all.
+Consequently the next unresolved step requires reasoning jointly with the
+existing XOR constraints, conditional consequences, or a different treatment
+of the nonlinear residual; merely making CNF-only affine extraction more
+complete cannot solve this bridge family. The baseline analysis below remains
+an analysis of `solve_mixed`, not the new preprocessing wrapper.
+
 ## 1. Coverage already reaches 2-CNF plus three-variable XOR
 
 The implementation's decision problem is

@@ -7,7 +7,45 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
-## 第2段階：解決条件から逆算した混合ソルバー
+## 第3段階：証明書付きのパリティ推論と、その方式全体の限界
+
+[今回の研究ノート](docs/parity_cuts.md)では、CNFから正当なXOR方程式を導いてから線形消去する前処理を追加しました。「少なくとも一つ真」という節と、すべての対について「同時に真にはならない」という二項節があれば、ちょうど一つ真なので、そのリテラルのXORは1です。否定リテラルの符号も式の右辺へ正しく移します。
+
+元のCNFを残し、含意される方程式だけを追加するため、SAT/UNSATと元のモデル数を保存します。各推論は元の節番号を持つ証明書を出し、線形矛盾は入力行・導出行のどれをXORすると `0=1` になるかで示します。独立チェッカーは推論の発見器やGaussian消去を呼ばずに、この短い矛盾証明を検査します。
+
+| 入力 | 前処理を加えた結果 | 範囲 |
+|---|---|---|
+| 256変数のexactly-one CNF＋偶数パリティ | 0セルでUNSAT、証明書検査成功 | 前処理の費用はかかります。旧算法の `2^255` セルは一般式からの予測で、全列挙していません |
+| 64個の3変数exactly-oneブロック＋逆の全体パリティ | 192変数で0セル。65本の行を組み合わせた矛盾 | 各ブロック単独では矛盾せず、全体のXORで検出 |
+| 16変数のexactly-two CNF＋奇数パリティ | 32,768セルを実際に列挙してUNSAT | 新しい規則は発火せず、最悪時間は依然として超多項式 |
+| 3変数の奇数サイクルを直接記述 | 0セルでUNSAT | 二項節からXORを導いて矛盾 |
+| 同じサイクルを第2段階の3SAT変換で記述 | 21変数・32,768セルを実際に列挙 | 等充足な符号化でも推論の効き方が変わる |
+
+### パターン認識の改善だけでは越えられない境界
+
+空節を含まない3SAT入力を変換したとき、CNF部分は
+
+\[
+ F(o,h)=\bigwedge_i\bigl(\ell_i(o)\lor h_i\bigr)
+\]
+
+という形で、各補助変数は正のリテラルとして一つの節だけに出ます。このCNFのモデル集合のaffine hullは全空間です。したがって、**このCNF単独から含意されるXOR方程式は恒真式 `0=0` だけ**です。
+
+証明は各座標について「その一ビットだけが違う二つのCNFモデル」を作ることです。元変数は全補助変数を1にして反転できます。補助変数は相手の元リテラルを真にしてから反転できます。全モデルで一定のXOR式は、どの座標の係数も1にできません。
+
+これは今回のexactly-one検出器だけの限界ではありません。**CNFだけからXORの帰結を完全に抽出できても、この変換先を強化できません。** 元のXORも前提にする共同推論や、分岐条件の下での推論は、この定理の対象外です。P≠NPの証明ではありません。
+
+[`Formal/ExactlyOneParity.lean`](Formal/ExactlyOneParity.lean) は任意長・符号付きの推論とモデル保存を、[`Formal/BridgeAffineBarrier.lean`](Formal/BridgeAffineBarrier.lean) は任意の有限XOR行に対する上の不可能性を証明します。[座標証明書のチェッカー](src/pnp_lab/affine_hull.py)では、707変数の変換先まで全モデルを列挙せずに確認しています。[実験結果](results/parity_cuts.json)には、小さい完全な証明書も保存しました。
+
+```bash
+python scripts/solve_mixed.py examples/mixed_unsat.json --parity-cuts --max-cells 0 --verify-certificate
+python scripts/solve_mixed.py examples/exact_two_unsat.json --parity-cuts --verify-certificate
+python scripts/solve_mixed.py examples/bridge_triangle_unsat.json --parity-cuts --max-cells 32
+```
+
+`--max-cells` は代表元の列挙予算です。最初の例は前処理だけでUNSATが確定し、最後の例は予算切れの `UNKNOWN` になります。推論の認識・短い証明の検査は入力サイズの多項式で済みますが、残る探索と、その列挙証明書は指数サイズになり得ます。
+
+## 第2段階：解決条件から逆算した、前処理なしの混合ソルバー
 
 まず [何を示せばP vs NPの解決になるか](docs/solution_criteria.md) を固定しました。P=NPへの今回の経路は、一般3SATを含む入力すべてに対する、一様・決定的な正しい判定と、総ビット計算時間の固定多項式上界です。
 
@@ -45,7 +83,7 @@ XORを消去して `x=x0+B t` と書きます。自由次元を `d`、CNFが観�
 
 最初の3例はモデル数も検査する完全列挙です。最後は **SATの証人があれば停止する判定モード**ですが、矛盾するため全代表元を調べます。一般のk変数の同族で必ず `2^(k-1)` 個を調べ、通常の符号化で入力長は `Θ(k² log k)`。したがって、**このアルゴリズムには超多項式の最悪例があり、一般多項式時間という主張は成立しません**。容易に認識できるこの族は、別アルゴリズムやP≠NPの下界ではありません。
 
-上の3SAT還元でも、元変数がすべて出現する場合 `r=d=n+2m` です。適用範囲を確保する還元であって、この列挙法を高速化する変換ではありません。次の課題は、残る非線形制約の処理を変え、その総費用を証明することです。
+上の3SAT還元でも、元変数がすべて出現する場合 `r=d=n+2m` です。適用範囲を確保する還元であって、この列挙法を高速化する変換ではありません。この段階で残った非線形制約の処理を、第3段階の前処理で拡張しています。
 
 ### ソルバーを動かす
 
@@ -89,7 +127,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要16定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要25定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -117,8 +155,9 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 43件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 60件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
+- 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 旧実験28ファイルのハッシュ確認と再実行。上流11ファイルはさらに上流manifestで照合します。
 - 新しい決定的なJSONと、コミット済み `results/*.json` の一致確認。
 - 旧結果5ファイルの数学的内容の一致確認。時刻・Python環境・計測時間だけは比較対象から除き、状態数・式・証人・判定結果を比較します。
@@ -139,6 +178,9 @@ CIはPythonとLeanを別jobで実行します。Pythonの成功だけを形式�
 | [`docs/solution_criteria.md`](docs/solution_criteria.md) | P=NP／P≠NPの厳密な証明条件 |
 | [`docs/reverse_engineering.md`](docs/reverse_engineering.md) | 現在の算法・一般SATへの還元・計算量の不足箇所 |
 | [`docs/research_notes.md`](docs/research_notes.md) | 第1段階の研究記録 |
+| [`docs/parity_cuts.md`](docs/parity_cuts.md) | 第3段階の推論、証明書、全サイズの限界、先行研究 |
+| [`src/pnp_lab/parity_cuts.py`](src/pnp_lab/parity_cuts.py) | 推論の生成・独立検査・混合ソルバーへの接続 |
+| [`src/pnp_lab/affine_hull.py`](src/pnp_lab/affine_hull.py) | CNFのfull-hull証明書の生成と独立検査 |
 | [`docs/projection_barrier.md`](docs/projection_barrier.md) | 星グラフの一般qの証明と厳密な範囲 |
 | [`docs/parity_projection.md`](docs/parity_projection.md) | 既知のCNF指数下界と有限検証 |
 | [`docs/affine_projection.md`](docs/affine_projection.md) | 効率的な射影が閉じるGF(2)の対照 |

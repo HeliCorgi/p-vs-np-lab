@@ -1,0 +1,149 @@
+{
+  "variables": [
+    "x1",
+    "x2",
+    "x3",
+    "__pnp_clause_0_helper_0",
+    "__pnp_clause_0_helper_1",
+    "__pnp_clause_0_helper_2",
+    "__pnp_clause_1_helper_0",
+    "__pnp_clause_1_helper_1",
+    "__pnp_clause_1_helper_2",
+    "__pnp_clause_2_helper_0",
+    "__pnp_clause_2_helper_1",
+    "__pnp_clause_2_helper_2",
+    "__pnp_clause_3_helper_0",
+    "__pnp_clause_3_helper_1",
+    "__pnp_clause_3_helper_2",
+    "__pnp_clause_4_helper_0",
+    "__pnp_clause_4_helper_1",
+    "__pnp_clause_4_helper_2",
+    "__pnp_clause_5_helper_0",
+    "__pnp_clause_5_helper_1",
+    "__pnp_clause_5_helper_2"
+  ],
+  "xor": [
+    {
+      "terms": [
+        "__pnp_clause_0_helper_0",
+        "__pnp_clause_0_helper_1",
+        "__pnp_clause_0_helper_2"
+      ],
+      "rhs": 0
+    },
+    {
+      "terms": [
+        "__pnp_clause_1_helper_0",
+        "__pnp_clause_1_helper_1",
+        "__pnp_clause_1_helper_2"
+      ],
+      "rhs": 0
+    },
+    {
+      "terms": [
+        "__pnp_clause_2_helper_0",
+        "__pnp_clause_2_helper_1",
+        "__pnp_clause_2_helper_2"
+      ],
+      "rhs": 0
+    },
+    {
+      "terms": [
+        "__pnp_clause_3_helper_0",
+        "__pnp_clause_3_helper_1",
+        "__pnp_clause_3_helper_2"
+      ],
+      "rhs": 0
+    },
+    {
+      "terms": [
+        "__pnp_clause_4_helper_0",
+        "__pnp_clause_4_helper_1",
+        "__pnp_clause_4_helper_2"
+      ],
+      "rhs": 0
+    },
+    {
+      "terms": [
+        "__pnp_clause_5_helper_0",
+        "__pnp_clause_5_helper_1",
+        "__pnp_clause_5_helper_2"
+      ],
+      "rhs": 0
+    }
+  ],
+  "cnf": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      -1,
+      7
+    ],
+    [
+      -2,
+      8
+    ],
+    [
+      -2,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      -2,
+      13
+    ],
+    [
+      -3,
+      14
+    ],
+    [
+      -3,
+      15
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      1,
+      17
+    ],
+    [
+      1,
+      18
+    ],
+    [
+      -3,
+      19
+    ],
+    [
+      -1,
+      20
+    ],
+    [
+      -1,
+      21
+    ]
+  ]
+}
