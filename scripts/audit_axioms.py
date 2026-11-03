@@ -37,6 +37,9 @@ THEOREMS = {
     "BoundaryLab.BridgeAffineBarrier.coordinate_separation_forces_trivial_row",
     "BoundaryLab.BridgeAffineBarrier.bridge_coordinate_separation",
     "BoundaryLab.BridgeAffineBarrier.bridge_has_no_nontrivial_affine_equation",
+    "BoundaryLab.JointXorClause.joint_clause_of_forced_parity_conflict",
+    "BoundaryLab.JointXorClause.strengthen_preserves_models",
+    "BoundaryLab.JointXorClause.strengthen_preserves_sat",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

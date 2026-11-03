@@ -27,3 +27,7 @@ import Formal
 #print axioms BoundaryLab.BridgeAffineBarrier.coordinate_separation_forces_trivial_row
 #print axioms BoundaryLab.BridgeAffineBarrier.bridge_coordinate_separation
 #print axioms BoundaryLab.BridgeAffineBarrier.bridge_has_no_nontrivial_affine_equation
+
+#print axioms BoundaryLab.JointXorClause.joint_clause_of_forced_parity_conflict
+#print axioms BoundaryLab.JointXorClause.strengthen_preserves_models
+#print axioms BoundaryLab.JointXorClause.strengthen_preserves_sat

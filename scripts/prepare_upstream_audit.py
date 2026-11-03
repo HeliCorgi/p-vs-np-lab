@@ -22,6 +22,19 @@ TARGET = "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.Final"
 THEOREM = "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat"
 EXTERNAL_ROOTS = {"Mathlib", "Init", "Std", "Lean", "Lake", "Aesop", "Batteries",
                   "Qq", "ProofWidgets", "Plausible", "LeanSearchClient", "ImportGraph"}
+# Checked against mathlib's own manifest at MATHLIB_COMMIT, as well as the
+# pinned OAI manifest. Keep the exact dependency closure, not unrelated projects.
+DEPENDENCY_REVISIONS = {
+    "mathlib": MATHLIB_COMMIT,
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+}
 
 
 def uncommented_lines(text):
@@ -109,6 +122,14 @@ def prepare(source, out):
         '  fixedToolchain := true\n  leanOptions := #[⟨`autoImplicit, false⟩]\n'
         'require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "'
         + MATHLIB_COMMIT + '"\nlean_lib OAI\n')
+    upstream_manifest = json.loads((source / "lake-manifest.json").read_text())
+    packages = [p for p in upstream_manifest["packages"] if p["name"] in DEPENDENCY_REVISIONS]
+    if {p["name"]: p["rev"] for p in packages} != DEPENDENCY_REVISIONS:
+        raise ValueError("Unexpected upstream Mathlib dependency revisions")
+    lake_manifest = {"version": upstream_manifest["version"], "packagesDir": ".lake/packages",
+                     "packages": packages, "name": "PnpUpstreamAudit", "lakeDir": ".lake",
+                     "fixedToolchain": True}
+    (out / "lake-manifest.json").write_text(json.dumps(lake_manifest, indent=2) + "\n")
     (out / "Audit.lean").write_text("import " + TARGET + "\n#check " + THEOREM
                                     + "\n#print axioms " + THEOREM + "\n")
     (out / "UPSTREAM_LICENSE").write_bytes((source.parent / "LICENSE").read_bytes())
@@ -116,6 +137,7 @@ def prepare(source, out):
         "schema_version": 1, "repository": "openai/math", "commit": head,
         "target_module": TARGET, "target_theorem": THEOREM, "toolchain": TOOLCHAIN,
         "mathlib_commit": MATHLIB_COMMIT,
+        "dependency_revisions": DEPENDENCY_REVISIONS,
         "harness_scope": "Unmodified transitive OAI sources; isolated Mathlib-pinned Lake configuration. Not the full upstream monorepo or comparator.",
         "kernel_build_status": "not_run_by_preparation", "comparator_status": "not_run",
         "module_count": len(records), "source_bytes": sum(r["bytes"] for r in records),
