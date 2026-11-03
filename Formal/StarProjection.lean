@@ -26,6 +26,15 @@ abbrev Color := Fin 5
 abbrev Port := Fin 5
 abbrev Pair := Fin 10
 
+/- Lean 4.19 supplies bounded natural-number existential decisions, but does
+   not register the corresponding `Fin` wrapper.  This constructive adapter
+   preserves kernel evaluation of the finite checks below. -/
+private instance decidableExistsFin {n : Nat} (P : Fin n → Prop)
+    [DecidablePred P] : Decidable (∃ i : Fin n, P i) :=
+  decidable_of_iff (∃ m : Nat, ∃ h : m < n, P ⟨m, h⟩)
+    ⟨fun ⟨m, h, hp⟩ => ⟨⟨m, h⟩, hp⟩,
+      fun ⟨i, hp⟩ => ⟨i.val, i.isLt, hp⟩⟩
+
 /-- The five boundary colors; the hidden center is not a field. -/
 structure Boundary where
   c0 : Color
