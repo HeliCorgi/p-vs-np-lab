@@ -1,0 +1,7 @@
+{
+  "version": "1.1.0",
+  "packagesDir": ".lake/packages",
+  "packages": [],
+  "name": "p_vs_np_lab",
+  "lakeDir": ".lake"
+}
