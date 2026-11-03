@@ -16,3 +16,9 @@ import Formal
 #print axioms BoundaryLab.ThreeSatBridge.clause_iff_gadget
 #print axioms BoundaryLab.ThreeSatBridge.clauses_iff_independent_helpers
 #print axioms BoundaryLab.ThreeSatBridge.formula_sat_iff
+
+#print axioms BoundaryLab.ExactlyOneParity.cover_exclusions_imply_parity
+#print axioms BoundaryLab.ExactlyOneParity.parity_of_evaluated_literals
+#print axioms BoundaryLab.ExactlyOneParity.signed_exactly_one_implies_parity
+#print axioms BoundaryLab.ExactlyOneParity.strengthen_preserves_models
+#print axioms BoundaryLab.ExactlyOneParity.strengthen_preserves_sat

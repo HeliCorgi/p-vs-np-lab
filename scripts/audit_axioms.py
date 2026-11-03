@@ -28,6 +28,11 @@ THEOREMS = {
     "BoundaryLab.ThreeSatBridge.clause_iff_gadget",
     "BoundaryLab.ThreeSatBridge.clauses_iff_independent_helpers",
     "BoundaryLab.ThreeSatBridge.formula_sat_iff",
+    "BoundaryLab.ExactlyOneParity.cover_exclusions_imply_parity",
+    "BoundaryLab.ExactlyOneParity.parity_of_evaluated_literals",
+    "BoundaryLab.ExactlyOneParity.signed_exactly_one_implies_parity",
+    "BoundaryLab.ExactlyOneParity.strengthen_preserves_models",
+    "BoundaryLab.ExactlyOneParity.strengthen_preserves_sat",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

@@ -2,3 +2,4 @@ import Formal.StarProjection
 import Formal.BoundaryComposition
 import Formal.QuotientSearch
 import Formal.ThreeSatBridge
+import Formal.ExactlyOneParity
