@@ -13,7 +13,7 @@
   "parity_max_n": 12,
   "schema_version": 1,
   "source_sha256": {
-    "Formal.lean": "b97c26140a5e8d9af9a0a71f987d1a6c55e7981e6f8a555f204d4f95e3275b02",
+    "Formal.lean": "351412c768021adc9b369f3ffb9cdfc64775f798ae565b77501161c2145eeee3",
     "Formal/BoundaryComposition.lean": "98d16972fe74a669f0d630090310fa5566fc730450ce56d5707ed450e64de8f7",
     "Formal/QuotientSearch.lean": "f70e569084eea41ed1feb53525286b0dfb98a2469031f1a0f9f80a4646665971",
     "Formal/StarProjection.lean": "fa790a036036a0288722d778d1912122fd3852a52ea9462a9085c5f71040c8b1",
@@ -31,15 +31,16 @@
     "lakefile.lean": "b40cd1dd73140f00d383508923f075418b159242011411b6853771429f307170",
     "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
     "pyproject.toml": "757482e558ace084bdae34d86a176f55341566d4072e4c7d8774ea469d64b91d",
-    "scripts/PrintAxioms.lean": "b7cce55a4e60a4afe0de0e0bbf0d5124ac92fc85d5061b5df0e5f79b397dea43",
-    "scripts/audit_axioms.py": "b65b25ae1d04e93e1b1d5286fe528cb52ae095622d865768ac5018c1b7a2661f",
+    "scripts/PrintAxioms.lean": "4ce6ec88e3b6b26e2a57986e1e65a8c3b9ca9e1765cc976e43304d3b3368a80a",
+    "scripts/audit_axioms.py": "1113cac0b2bfc606cb3a8831c7bd5339bd6333d4c885a3c464b2ec959a0bddfb",
     "scripts/reproduce.py": "437e9648ebcd3d7a1864fe3c8819e7e893cb615e05ab5fe54098c22a15da2ec7",
     "src/pnp_lab/__init__.py": "f1e89496db119d2b990b18647f581a173f56b9a3afc266dbe6d9e7d2b0a6b9e7",
     "src/pnp_lab/affine.py": "c985e3e469c9a0b9c7fa135c8b7538bd869db1ebe02452c58a9d0f9fa0c2591c",
     "src/pnp_lab/relations.py": "3f9b3e4097ea3617691626409f964d520c823669bb4c3eace21f2be53be6b2b4",
     "tests/test_affine.py": "8fd74dcb6732b3d14dae42965893ef7a1947deb1349f56cb56f0294d45f96d63",
     "tests/test_parity_projection.py": "f4226724deb24ac04ebf3146c5ce58228d57a82cef203d233f8b891808a79511",
-    "tests/test_relations.py": "eface02cc894278df02b3ed5c3f4d5620762a7e6e5c0a582cd8686fe4fd0717e"
+    "tests/test_relations.py": "eface02cc894278df02b3ed5c3f4d5620762a7e6e5c0a582cd8686fe4fd0717e",
+    "Formal/ThreeSatBridge.lean": "7e41d1c274d1c50ac4483783dc4c7e31057cabc9a36c58a98213d16846bbe4d9"
   },
   "star_cases": 4,
   "star_widths": {

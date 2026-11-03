@@ -25,6 +25,9 @@ THEOREMS = {
     "BoundaryLab.Quotient.quotient_unsat_iff",
     "BoundaryLab.Quotient.finite_scan_exact",
     "BoundaryLab.Quotient.bitVectors_length",
+    "BoundaryLab.ThreeSatBridge.clause_iff_gadget",
+    "BoundaryLab.ThreeSatBridge.clauses_iff_independent_helpers",
+    "BoundaryLab.ThreeSatBridge.formula_sat_iff",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

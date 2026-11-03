@@ -13,3 +13,6 @@ import Formal
 #print axioms BoundaryLab.Quotient.quotient_unsat_iff
 #print axioms BoundaryLab.Quotient.finite_scan_exact
 #print axioms BoundaryLab.Quotient.bitVectors_length
+#print axioms BoundaryLab.ThreeSatBridge.clause_iff_gadget
+#print axioms BoundaryLab.ThreeSatBridge.clauses_iff_independent_helpers
+#print axioms BoundaryLab.ThreeSatBridge.formula_sat_iff
