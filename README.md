@@ -7,7 +7,70 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
-## 第3段階：証明書付きのパリティ推論と、その方式全体の限界
+## 第4段階：先行研究を調べ、共同推論と署名による計数へ進む
+
+### openai/mathに見つかったETH反証の主張
+
+指定された [`openai/math`](https://github.com/openai/math) をコミット `4eaee87548250b2682affda7d05d947c05554bae` に固定して調べました。family 378 は **固定幅CNFの厳密なモデル数を劣指数時間で数える**という、ETHに直接関係する主張です。[先行研究調査](docs/prior_work.md)、[形式化の意味の監査](docs/eth_formal_audit.md)、[再利用したものとしなかったもの](docs/openai_math_reuse.md)を分けて記録しています。
+
+Leanの対象定理が述べる上界は、入力符号長を `L`、変数数を `n`、固定した節幅を `k` として
+
+\[
+(L+1)^{O_k(1)}\,2^{O_k(n(\log\log n)^2/\sqrt{\log n})}.
+\]
+
+これは論文の最も鋭い上界より弱い形式化です。正しければETHに反しますが、この上界から多項式時間は出ません。**ETHの反証とP=NPの証明は別の到達点です。** 上界が多項式より大きいことも、算法の実時間が超多項式である証明にはなりません。
+
+[独立した検討会の案内](https://ethdiscussion.blog/2026/10/26/eth-refutation-examination-and-discussion/)は、主催者の参加を認証と受け取らないよう明記しています。本研究室でも、定理の量化・有限機械・実行時間・入力符号化を読む作業と、カーネルで再ビルドする作業を区別しました。[固定版の再ビルドworkflow](.github/workflows/upstream-math.yml)と[監査実行記録](results/upstream_math_audit.json)に、実行できた範囲を記します。完全なComparator再検証や論文全体の独立検証を済ませたとは主張しません。
+
+35分上限で行った再ビルドは途中でキャンセルされ、終端定理とその公理依存の検査には届きませんでした。取得したログにLeanの証明エラーはありませんが、これを検証成功とは扱いません。上流ソースを変更せず、180分上限の再実行を用意しました。最新の実行状態は上の監査記録に記載します。
+
+[必要部分15ファイル](third_party/openai_math/README.md)をApache-2.0ライセンスと出典・ハッシュ付きで収録しました。上流のLean 4.34.1と本研究室のLean 4.19.0を別々に検査します。
+
+### CNFとXORの共同推論で、前回の符号化障壁を越える
+
+XOR行の各変数に二項節 `pivot OR partner` があるとき、すべてのpartnerを偽にするとpivot側の値が強制されます。その値がXORと矛盾するなら、**partnerの論理和が帰結**します。否定リテラル、共有変数、重複したpartnerを許す意味論を [`Formal/JointXorClause.lean`](Formal/JointXorClause.lean) で証明しました。実装は幅3以下の入力XOR行と入力の二項節だけを1回調べるため、この発見処理は多項式時間です。
+
+これにより3SAT橋渡しの元の節が回復し、その後のパリティ推論で奇数サイクルを反証できます。[実験と全サイズの議論](docs/joint_reasoning.md)は、前回のCNF単独のfull-hull定理と矛盾しません。今回は既存のXORも前提に使っています。
+
+| 入力 | 第4段階の結果 | 残る範囲・費用 |
+|---|---|---|
+| 三角形を橋渡し変換した21変数の入力 | 6個の節を導出し、0セルでUNSAT。合成証明書を独立検査 | 前回は32,768セルを実際に列挙 |
+| 長さ101の奇数サイクルを変換した707変数の入力 | 0セルでUNSAT、証明書検査 | 前処理の費用は計上。旧方式の `2^505` セルは式からの予測 |
+| 16変数のexactly-two CNF＋奇数パリティ | 32,768セルを実際に列挙してUNSAT | 二項の前提がなく、新規則が発火しない。全サイズでこの方式の超多項式例 |
+
+```bash
+python scripts/solve_mixed.py examples/bridge_triangle_unsat.json --joint --max-cells 0 --verify-certificate
+python scripts/solve_mixed.py examples/exact_two_unsat.json --joint --max-cells 0
+```
+
+前者は証明書付きUNSAT、後者は `UNKNOWN` です。`--joint` は共同推論の後に従来のパリティ推論を含みます。既知のXOR学習・混合ソルバー研究との関係を[先行研究ノート](docs/prior_work.md)に記し、新規性や一般多項式時間は主張しません。
+
+### 上流の有限な恒等式を、実際に動く計数法として取り出す
+
+上流論文の「測定値を固定して和を分離する」部分を、GF(2)のブロック署名に特殊化しました。各ブロックのCNFを満たし、XORへの寄与が `s` になる割当数を `T_g(s)` とすると、
+
+\[
+\#F=\sum_{s_1\oplus\cdots\oplus s_g=b}\prod_iT_i(s_i).
+\]
+
+[`count_by_signatures`](src/pnp_lab/signatures.py) は多重度を保った畳み込みで厳密に計数し、元変数上の証人を返します。**256個の3変数exactly-oneブロック、計768変数**では、2,048個の局所割当と256回の表の積を調べて `3^256` 個のモデルを数えました。2ビットの署名では4状態の合成も確認しています。
+
+一般のCNFを任意に分割できるとは仮定しません。グループをまたぐCNF節は明示的に拒否します。また恒等測定 `s=u` では、幅 `b` のブロックに `2^b` 個の表要素が必要です。幅14で16,384要素を実測し、すべての幅に対する理由も[計数ノート](docs/signature_counting.md)に記しました。整数のビット演算費用も別途かかり、上流の劣指数算法全体を実装したものではありません。
+
+[上流パラメータの厳密な計算](results/upstream_parameters.json)では、大入力用スケジュールの一つの必要条件が最初に成立するのが `n=2^521283+1` であることと、その後いったん不成立へ戻る非単調性を確認しました。これは完全な切替閾値でも、上流定理の反例でもありません。
+
+### 解決条件をさらに絞る：最大5変数のブロックでも一般3SATが入る
+
+[一定サイズのブロックへの還元](docs/constant_block_bridge.md)を追加しました。まず各非空節を最後のリテラルの反復で3出現にそろえてから、各出現に別々のコピーを割り当て、同じ元変数のコピーを含意の輪で同じ値に拘束します。それから3SAT→CNF＋XORの橋渡しを使い、各コピーとその補助変数を一つのグループにします。
+
+空でない節からなる `m` 節の入力では、**ちょうど `3m` グループ、高々 `4m` 本のXORと `15m` 変数、各グループ最大5変数**です。CNFはグループ内に収まり、XORは互いに素な3変数の式です。各局所表の作成は最大32割当の検査で済み、異なる署名は高々5個です。それでも、このクラスは一般3SATから多項式時間で還元でき、SAT判定としてNP完全です。モデル数を保つ還元ではありません。
+
+したがって、局所ブロックの小ささは確保できました。**この構造での全体の合成を、一様かつ常に多項式時間で処理できること**が、P=NPへ届く具体的な残りの証明義務です。NP完全性だけから超多項式下界を主張してはいません。現行の表を列挙する実装には別途、指数個の合成状態を残す例があり、その例自体は成分分解などで改善できる容易な入力です。
+
+## 第3段階の記録：証明書付きのパリティ推論と、その方式全体の限界
+
+以下の探索結果は `--parity-cuts` 単独の記録です。橋渡し変換された奇数サイクルについては、上の第4段階の `--joint` が改善しています。
 
 [今回の研究ノート](docs/parity_cuts.md)では、CNFから正当なXOR方程式を導いてから線形消去する前処理を追加しました。「少なくとも一つ真」という節と、すべての対について「同時に真にはならない」という二項節があれば、ちょうど一つ真なので、そのリテラルのXORは1です。否定リテラルの符号も式の右辺へ正しく移します。
 
@@ -127,7 +190,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要25定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要28定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -155,9 +218,12 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 60件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 93件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
+- 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。
+- 最大5変数のブロックへの還元を50入力・344個の元割当で照合し、262個の元モデルの持ち上げを検査。独立な節の族について、局所表が定数サイズでも現行の合成表が指数的に増えることを確認。
+- openai/mathの15ファイルのハッシュ・出典照合と、上流スケジュールの整数計算。これは上流の定理のカーネル検証とは別です。
 - 旧実験28ファイルのハッシュ確認と再実行。上流11ファイルはさらに上流manifestで照合します。
 - 新しい決定的なJSONと、コミット済み `results/*.json` の一致確認。
 - 旧結果5ファイルの数学的内容の一致確認。時刻・Python環境・計測時間だけは比較対象から除き、状態数・式・証人・判定結果を比較します。
@@ -178,6 +244,12 @@ CIはPythonとLeanを別jobで実行します。Pythonの成功だけを形式�
 | [`docs/solution_criteria.md`](docs/solution_criteria.md) | P=NP／P≠NPの厳密な証明条件 |
 | [`docs/reverse_engineering.md`](docs/reverse_engineering.md) | 現在の算法・一般SATへの還元・計算量の不足箇所 |
 | [`docs/research_notes.md`](docs/research_notes.md) | 第1段階の研究記録 |
+| [`docs/prior_work.md`](docs/prior_work.md) | ETHの最近の主張、CNF-XOR学習、証明ログの先行研究 |
+| [`docs/eth_formal_audit.md`](docs/eth_formal_audit.md) | 上流終端定理の量化、機械モデル、符号化、有限フォールバックの監査 |
+| [`docs/joint_reasoning.md`](docs/joint_reasoning.md) | CNFとXORの共同推論、証明書、改善と残る反例 |
+| [`docs/signature_counting.md`](docs/signature_counting.md) | 署名による厳密計数の恒等式、実装、費用 |
+| [`docs/constant_block_bridge.md`](docs/constant_block_bridge.md) | 最大5変数・5署名の局所ブロックによる一般3SATの表現と、残る合成問題 |
+| [`third_party/openai_math/README.md`](third_party/openai_math/README.md) | 再利用元の固定版、ライセンス、出典manifest |
 | [`docs/parity_cuts.md`](docs/parity_cuts.md) | 第3段階の推論、証明書、全サイズの限界、先行研究 |
 | [`src/pnp_lab/parity_cuts.py`](src/pnp_lab/parity_cuts.py) | 推論の生成・独立検査・混合ソルバーへの接続 |
 | [`src/pnp_lab/affine_hull.py`](src/pnp_lab/affine_hull.py) | CNFのfull-hull証明書の生成と独立検査 |

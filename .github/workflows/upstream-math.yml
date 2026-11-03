@@ -15,7 +15,9 @@ jobs:
   eth_endpoint:
     name: Rebuild the pinned ETH endpoint
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    # The first completed attempt hit the 35-minute job budget before the endpoint.
+    # The dependency closure contains 2,569 OAI modules; allow a full bounded replay.
+    timeout-minutes: 180
     env:
       LEAN_NUM_THREADS: '2'
     steps:
@@ -40,7 +42,7 @@ jobs:
           use-mathlib-cache: 'true'
           use-github-cache: 'false'
       - name: Build only the exact counting endpoint
-        timeout-minutes: 27
+        timeout-minutes: 160
         working-directory: upstream-audit
         run: |
           set -o pipefail

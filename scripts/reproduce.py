@@ -25,6 +25,8 @@ NEW_REPORTS = (
     "projection_barrier.json", "parity_projection.json", "affine_projection.json",
     "mixed_constraints.json", "three_sat_bridge.json",
     "parity_cuts.json",
+    "joint_reasoning.json", "signature_counting.json", "upstream_parameters.json",
+    "constant_block_bridge.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -100,6 +102,10 @@ def source_hashes() -> dict[str, str]:
         "experiments/baseline/upstream/SOURCE_MANIFEST.json",
     ))
     sources.update((ROOT / "examples").glob("*.json"))
+    sources.add(ROOT / "third_party/openai_math/manifest.json")
+    manifest = read_json(ROOT / "third_party/openai_math/manifest.json")
+    sources.update(ROOT / "third_party/openai_math" / item["path"] for item in manifest["files"])
+    sources.update((ROOT / ".github/workflows").glob("*.yml"))
     return {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in sorted(sources)}
 
@@ -118,13 +124,17 @@ def main() -> None:
     snapshot_count = verify_baseline_snapshot()
     sys.path.insert(0, str(ROOT / "src"))
     sys.path.insert(0, str(ROOT))
+    from scripts.verify_openai_math_snapshot import verify_snapshot
+    math_snapshot = verify_snapshot()
     suite = unittest.defaultTestLoader.discover(str(ROOT / "tests"))
     tests = unittest.TextTestRunner(verbosity=2).run(suite)
     if not tests.wasSuccessful() or not tests.testsRun:
         raise RuntimeError("Unit tests failed or no tests were discovered")
 
     for name in ("projection_barrier", "parity_projection", "affine_projection",
-                 "mixed_constraints", "three_sat_bridge", "parity_cuts"):
+                 "mixed_constraints", "three_sat_bridge", "parity_cuts",
+                 "joint_reasoning", "signature_counting", "upstream_parameters",
+                 "constant_block_bridge"):
         run_component(ROOT / "experiments" / f"{name}.py", out, out / f"{name}.log")
     run_component(BASELINE / "run_all.py", out / "baseline", out / "baseline.log")
 
@@ -144,12 +154,18 @@ def main() -> None:
     mixed = read_json(out / NEW_REPORTS[3])
     bridge = read_json(out / NEW_REPORTS[4])
     cuts = read_json(out / NEW_REPORTS[5])
+    joint = read_json(out / NEW_REPORTS[6])
+    signatures = read_json(out / NEW_REPORTS[7])
+    parameters = read_json(out / NEW_REPORTS[8])
+    block_bridge = read_json(out / NEW_REPORTS[9])
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
             or not all(c["checks_passed"] for c in affine["cases"])
             or not mixed["all_checks_passed"] or not bridge["all_checks_passed"]
-            or not cuts["all_checks_passed"]):
+            or not cuts["all_checks_passed"] or not joint["all_checks_passed"]
+            or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
+            or not block_bridge["all_checks_passed"]):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -182,6 +198,19 @@ def main() -> None:
         "parity_cut_largest_zero_cell_exactly_one": cuts["summary"]["largest_exactly_one_variables"],
         "parity_cut_largest_full_hull_dimension_certified": cuts["summary"]["largest_full_hull_dimension_certified"],
         "parity_cut_algorithm_general_polynomial_time": False,
+        "joint_checks_passed": joint["all_checks_passed"],
+        "joint_summary": joint["summary"],
+        "joint_algorithm_general_polynomial_time": False,
+        "signature_counting_checks_passed": signatures["all_checks_passed"],
+        "signature_counting_summary": signatures["summary"],
+        "signature_algorithm_general_polynomial_time": False,
+        "constant_block_bridge_checks_passed": block_bridge["all_checks_passed"],
+        "constant_block_bridge_summary": block_bridge["summary"],
+        "constant_block_bridge_general_polynomial_solver": False,
+        "openai_math_snapshot": math_snapshot,
+        "upstream_schedule_first_possible": parameters["first_possible"],
+        "upstream_schedule_total_cutoff_computed": parameters["total_algorithm_cutoff_computed"],
+        "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
         "mixed_algorithm_general_polynomial_time": False,
         "mixed_time_bound": "poly(N) + 2^r poly(N), where r is observed affine coefficient rank.",
         "lean_scope": "Not run by this Python command. Run lake build Formal; CI has a separate kernel-check job.",

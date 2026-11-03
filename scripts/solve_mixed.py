@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from pnp_lab.affine import AffineRelation
 from pnp_lab.mixed import check_sat_witness, check_unsat_certificate, solve_mixed
 from pnp_lab.parity_cuts import check_parity_cut_unsat_certificate, solve_with_parity_cuts
+from pnp_lab.joint import check_joint_unsat_certificate, solve_with_joint_reasoning
 
 
 class SolverArgumentParser(argparse.ArgumentParser):
@@ -57,8 +58,11 @@ def main() -> int:
     parser.add_argument("--count-models", action="store_true")
     parser.add_argument("--max-cells", type=int)
     parser.add_argument("--trace", action="store_true")
-    parser.add_argument("--parity-cuts", action="store_true",
+    preprocessing = parser.add_mutually_exclusive_group()
+    preprocessing.add_argument("--parity-cuts", action="store_true",
                         help="Add independently checked exactly-one parity consequences before search.")
+    preprocessing.add_argument("--joint", action="store_true",
+                        help="Add checked XOR+binary-CNF consequences, then parity cuts, before search.")
     parser.add_argument("--certificate", action="store_true",
                         help="Include an UNSAT certificate; its size may be exponential.")
     parser.add_argument("--verify-certificate", action="store_true",
@@ -67,7 +71,8 @@ def main() -> int:
     try:
         args = parser.parse_args()
         affine, cnf = load_problem(args.input)
-        solver = solve_with_parity_cuts if args.parity_cuts else solve_mixed
+        solver = (solve_with_joint_reasoning if args.joint else
+                  solve_with_parity_cuts if args.parity_cuts else solve_mixed)
         result = solver(
             affine, cnf, exhaustive=args.count_models, max_cells=args.max_cells,
             include_trace=args.trace,
@@ -77,7 +82,8 @@ def main() -> int:
             if not check_sat_witness(affine, cnf, result["witness_mask"]):
                 raise RuntimeError("Returned SAT witness failed direct evaluation.")
         if result["status"] == "UNSAT" and args.verify_certificate:
-            checker = check_parity_cut_unsat_certificate if args.parity_cuts else check_unsat_certificate
+            checker = (check_joint_unsat_certificate if args.joint else
+                       check_parity_cut_unsat_certificate if args.parity_cuts else check_unsat_certificate)
             if not checker(affine, cnf, result["certificate"]):
                 raise RuntimeError("Returned UNSAT certificate failed verification.")
         text = json.dumps(result, indent=2, sort_keys=True, ensure_ascii=False) + "\n"

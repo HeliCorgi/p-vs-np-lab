@@ -1,0 +1,89 @@
+{
+  "attempts": [
+    {
+      "conclusion": "failure",
+      "harness_commit": "0225c595dfc71b4c9bcab630cb507ce4cbf9ae2d",
+      "job_id": 126166219504,
+      "reason": "lean-action required lake-manifest.json, which the first isolated harness did not generate. Source closure extraction succeeded; proof build did not start.",
+      "run_id": 41707395282,
+      "run_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/41707395282",
+      "stage": "harness_setup",
+      "upstream_proof_rejected": false
+    },
+    {
+      "axiom_query": "skipped",
+      "cancellation_observed_at_utc": "2026-11-03T20:35:21Z",
+      "conclusion": "cancelled",
+      "configured_build_step_limit_minutes": 27,
+      "configured_job_limit_minutes": 35,
+      "dependency_preparation": "success",
+      "harness_commit": "02efa426eb045d32a688470c1985d759ffcc225c",
+      "job_id": 126169881785,
+      "job_log_sha256": "ac42aecd466e16f9a23552bf1e89e683114fa3c1087e00e4ac5f546ce58fb575",
+      "last_completed_oai_module": "OAI.Algorithms.SubexponentialSAT.SubexpFullShapeCapture",
+      "last_lake_progress": {
+        "completed": 9377,
+        "scope": "Lake job counter includes cached dependencies; not 9,377 freshly checked OAI modules.",
+        "total": 10382
+      },
+      "reason": "The job was cancelled at the configured 35-minute job limit. Its final message is \"The operation was canceled.\" The endpoint build and axiom query did not finish; no Lean proof error was reported in the retrieved log.",
+      "reason_scope": "The timing is consistent with the configured limit; the API reports cancelled, not a separately classified timeout.",
+      "run_id": 41708435503,
+      "run_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/41708435503",
+      "source_closure_preparation": "success",
+      "stage": "kernel_build_incomplete",
+      "successful_oai_build_lines": 455,
+      "upstream_proof_rejected": false
+    }
+  ],
+  "comparator_status": "not_run",
+  "endpoint_axioms_observed": null,
+  "harness": {
+    "commit": "02efa426eb045d32a688470c1985d759ffcc225c",
+    "preparation_script": "scripts/prepare_upstream_audit.py",
+    "preparation_script_sha256": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
+    "repository": "HeliCorgi/p-vs-np-lab",
+    "scope": "Unmodified transitive OAI source closure in an isolated Lake package, with exact upstream Lean and Mathlib dependency revisions. The full monorepo bootstrap is not run.",
+    "workflow": ".github/workflows/upstream-math.yml"
+  },
+  "independent_second_kernel_status": "not_run",
+  "kernel_build_status": "incomplete_cancelled",
+  "last_observed_at_utc": "2026-11-03T20:35:24Z",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "p_vs_np": "No resolution claimed.",
+  "paper_statement_correspondence": "Selected quantifiers, machine/input semantics, and proof connections inspected; no complete independent proof review claimed.",
+  "prepared_retry": {
+    "configured_build_step_limit_minutes": 160,
+    "configured_job_limit_minutes": 180,
+    "proof_sources_changed": false,
+    "status": "will_start_when_updated_workflow_is_pushed_to_research_branch"
+  },
+  "record_kind": "external_proof_audit_execution_record",
+  "reproduction_scope": "This is a dated external CI observation. scripts/reproduce.py verifies local experiments and the compact source snapshot; it does not regenerate this record or verify the external theorem.",
+  "schema_version": 1,
+  "separate_lab_formal_result": {
+    "audited_theorems": 28,
+    "commit": "02efa426eb045d32a688470c1985d759ffcc225c",
+    "conclusion": "success",
+    "modules": 7,
+    "new_joint_theorem_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "run_id": 41708435505,
+    "run_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/41708435505",
+    "scope": "The lab semantic lemmas only; not the upstream ETH endpoint or an end-to-end verification of the Python code."
+  },
+  "source_closure": {
+    "oai_modules": 2569,
+    "proof_sources_modified": false,
+    "unchanged_source_bytes": 24064778
+  },
+  "target_module": "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.Final",
+  "target_theorem": "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "transitive_axiom_audit_status": "not_run_build_incomplete",
+  "upstream_commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "upstream_repository": "openai/math",
+  "upstream_theorem_certified_here": false
+}

@@ -1,0 +1,6 @@
+# EXCERPT / MODIFIED FILE: selected by p-vs-np-lab.
+# Upstream openai/math @ 4eaee87548250b2682affda7d05d947c05554bae; Apache-2.0.
+# Original declarations entry retained below; see ../manifest.json.
+    - comparator_config: ComparatorChallenges/SubexponentialSAT.json
+      declaration: OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat
+      file: OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean

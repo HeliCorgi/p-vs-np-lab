@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/openai/math",
+  "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "commit_committer_date": "2026-10-30T00:35:35Z",
+  "root_tree_git_sha1": "71e8eaa37259d11418fe4ee382a0f82b91ea973e",
+  "snapshot_created_utc_date": "2026-11-03",
+  "license": {
+    "spdx": "Apache-2.0",
+    "upstream_path": "LICENSE",
+    "upstream_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "lean_license_has_identical_blob": true,
+    "selected_sat_subtree_has_no_nested_license_or_notice": true
+  },
+  "coverage": {
+    "catalogue_family_headings_counted": 373,
+    "manuscript_count_reported_by_upstream_readme": 721,
+    "sat_subtree_git_sha1": "959444ea69d08eecc94480ece6621be36947dd09",
+    "sat_subtree_recursive_truncated": false,
+    "sat_lean_files": 3977,
+    "sat_lean_source_bytes": 35509858,
+    "sat_lean_file_groups": {
+      "root": 1258,
+      "SqrtLog": 2004,
+      "SqrtLogSpace": 327,
+      "Subexp": 388
+    },
+    "reasoning_summary_pdf_files": 10,
+    "reasoning_summary_family_378_present": false,
+    "source_inventory_scope": "Root tree, full catalogue, lean root, complete SAT subtree, selected paper folder and files; not a full recursive inventory of unrelated Lean families.",
+    "catalogue_distinct_preprint_directories_counted": 721,
+    "preprints_root_tree_git_sha1": "3f56f68a176b4494c346091ea0a319651bc217ec",
+    "preprints_root_directories_counted": 751,
+    "preprints_directories_not_linked_from_current_catalogue": 30
+  },
+  "verification": {
+    "source_content_hashes": "All unchanged copies matched their pinned upstream Git blob SHA-1; all snapshot files have raw-byte SHA-256 and byte counts.",
+    "upstream_theorem_local_kernel_rebuild": "Not performed by the source-snapshot task; consult the separate audit workflow results.",
+    "snapshot_is_complete_lean_project": false
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "upstream_path": "LICENSE",
+      "upstream_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "snapshot_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.upstream.md",
+      "upstream_path": "README.md",
+      "upstream_git_blob_sha1": "cc5b0a03bca6c742f045d683b6647a6f44ef2cae",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/README.md",
+      "sha256": "6cb7f0e387b67c051227c6ba27aca87ee82d9dd2530b6452b86b8681a2e2743a",
+      "bytes": 4417,
+      "snapshot_git_blob_sha1": "cc5b0a03bca6c742f045d683b6647a6f44ef2cae"
+    },
+    {
+      "path": "lean/docs/378.md",
+      "upstream_path": "lean/docs/378.md",
+      "upstream_git_blob_sha1": "223bbe187394bffca8a2c7ba1656538bfba26e3b",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/378.md",
+      "sha256": "a2f7b390d6308997350b903be02c40a1227ebd2b9376982da528574500531f79",
+      "bytes": 1090,
+      "snapshot_git_blob_sha1": "223bbe187394bffca8a2c7ba1656538bfba26e3b"
+    },
+    {
+      "path": "lean/docs/102.md",
+      "upstream_path": "lean/docs/102.md",
+      "upstream_git_blob_sha1": "6d70843b135770e41906c99f37f2fe3859067089",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/102.md",
+      "sha256": "c3e96a746042bf5aeb2f0ef8cdc8e27360785a7da8ac37ed69d6fd8c132f572f",
+      "bytes": 3958,
+      "snapshot_git_blob_sha1": "6d70843b135770e41906c99f37f2fe3859067089"
+    },
+    {
+      "path": "lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "upstream_path": "lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "upstream_git_blob_sha1": "a8d5ff3a3e80323675b1f2d1ea611560b783e9ca",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "sha256": "4183b2057cff350d66848215ff7167196dfc20e1891b598fdddea59077a76685",
+      "bytes": 7833,
+      "snapshot_git_blob_sha1": "a8d5ff3a3e80323675b1f2d1ea611560b783e9ca"
+    },
+    {
+      "path": "lean/ComparatorChallenges/SubexponentialSAT.json",
+      "upstream_path": "lean/ComparatorChallenges/SubexponentialSAT.json",
+      "upstream_git_blob_sha1": "d4cc9e7074e900c1aa6371151cfd234c121a0b82",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/ComparatorChallenges/SubexponentialSAT.json",
+      "sha256": "debbfdc9c01104d2369be80da5180978275106df8b685f693fba7ce7da7c5b19",
+      "bytes": 364,
+      "snapshot_git_blob_sha1": "d4cc9e7074e900c1aa6371151cfd234c121a0b82"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "upstream_path": "lean/lean-toolchain",
+      "upstream_git_blob_sha1": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/lean-toolchain",
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "bytes": 25,
+      "snapshot_git_blob_sha1": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/Main.lean",
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/Main.lean",
+      "upstream_git_blob_sha1": "607d4b32d307a43046405499822c83d293043cfd",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/Main.lean",
+      "sha256": "cbd4cebf71f1d3239c21241f946d05e8de802dbb9c138713f8e7182d868b2d1c",
+      "bytes": 590,
+      "snapshot_git_blob_sha1": "607d4b32d307a43046405499822c83d293043cfd"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "upstream_git_blob_sha1": "a69635a2492e06a26f2e33d4251edd1e21ba3332",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "sha256": "040360a8465957622d934e5f1bb4f2cce8dab950e78f52033fbf70da493184f5",
+      "bytes": 11701,
+      "snapshot_git_blob_sha1": "a69635a2492e06a26f2e33d4251edd1e21ba3332"
+    },
+    {
+      "path": "paper/README.upstream.md",
+      "upstream_path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/README.md",
+      "upstream_git_blob_sha1": "4fed045323c329be85bc53cf46dfaa6efbf3759f",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/README.md",
+      "sha256": "a40b8829123b44bd9cfb589e5afa856b0018dc8cb36de36fa79e4315a03fe506",
+      "bytes": 551,
+      "snapshot_git_blob_sha1": "4fed045323c329be85bc53cf46dfaa6efbf3759f"
+    },
+    {
+      "path": "paper/measurement-separation-excerpt.tex",
+      "upstream_path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "upstream_git_blob_sha1": "f7af85e623b58e0ca9f4b9416916d442defa963a",
+      "transformation": "Excerpt with provenance comments; original source lines retained verbatim.",
+      "source_lines": [
+        1706,
+        1884
+      ],
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "sha256": "896d4c2f8e8f64695e7d38c8df0be2e897d61a718cb13a1b33a0a9ae2094446c",
+      "bytes": 8268,
+      "snapshot_git_blob_sha1": "f1e3e90f4d0bf78293ab266de29b748094aee5a7"
+    },
+    {
+      "path": "lean/formalization-378-excerpt.yaml",
+      "upstream_path": "lean/formalization.yaml",
+      "upstream_git_blob_sha1": "372bcd714cd3a186a9139ac8e0f3318961fb2df1",
+      "transformation": "One catalogue declaration entry, with provenance comments; not the complete upstream manifest.",
+      "source_lines": [
+        1683,
+        1685
+      ],
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/formalization.yaml",
+      "sha256": "47c1d7ed2aa4da0eeebbb5d4f6e5bb2d395620db8738c9915cecde367116d382",
+      "bytes": 422,
+      "snapshot_git_blob_sha1": "0f59c3deaa05c6ad5a96ebf6fe6b2a212715464d"
+    },
+    {
+      "path": "lean/README.md",
+      "upstream_path": "lean/README.md",
+      "upstream_git_blob_sha1": "f1ab618366051a4b3683b14ed2a0ac4bb7c620fb",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/README.md",
+      "sha256": "292ff9d539f494158dfbf68d989ba85a82782a4343b2fe43088f8fa62525bf1b",
+      "bytes": 650,
+      "snapshot_git_blob_sha1": "f1ab618366051a4b3683b14ed2a0ac4bb7c620fb"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Asymptotics.lean",
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Asymptotics.lean",
+      "upstream_git_blob_sha1": "da9003ffd1a9b8fcc82147b4152414b264d26d54",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Asymptotics.lean",
+      "sha256": "46db81509ce6ae092122c134e97ebda80fc327fd6d0ed0b1a6ef42e779b5ce6c",
+      "bytes": 13965,
+      "snapshot_git_blob_sha1": "da9003ffd1a9b8fcc82147b4152414b264d26d54"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/NativeLargeEntry.lean",
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/NativeLargeEntry.lean",
+      "upstream_git_blob_sha1": "7b913fbf641fddfa4eedbaef7c0e173aed42437c",
+      "transformation": null,
+      "source_lines": null,
+      "upstream_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/NativeLargeEntry.lean",
+      "sha256": "14c73b43c00cb0bd8a7c407e94b78662bd80a92eb8ccff0cdde6130331b9e45b",
+      "bytes": 7119,
+      "snapshot_git_blob_sha1": "7b913fbf641fddfa4eedbaef7c0e173aed42437c"
+    }
+  ]
+}

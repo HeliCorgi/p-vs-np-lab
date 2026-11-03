@@ -1,0 +1,185 @@
+% EXCERPT / MODIFIED FILE: selected by p-vs-np-lab; no mathematical text changed.
+% Upstream: openai/math @ 4eaee87548250b2682affda7d05d947c05554bae
+% Source: preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex
+% Original lines 1706-1884 inclusive; Apache-2.0; see ../LICENSE and ../manifest.json.
+% This fragment requires the original manuscript's LaTeX preamble and references.
+
+\subsection{The required rows, partitions, and measurements}
+\label{subsec:layout-interface}
+We use the same design as in Section~\ref{subsec:preview-separation},
+with a group assignment for each factor in place of each clause.
+The final condition below records the coefficient bound needed for
+exact arithmetic. Here $\widetilde\xi$ denotes extension by zero
+from a group to all $n$ coordinates.
+
+\begin{definition}\label{def:layout}
+For the factor scopes $(I_f)_{f\in\mathcal F}$, let $r\ge2$, $D\ge1$,
+and $1\le R<Q$ be integers, and let $0<\tau\le1/2$.
+We require the following data and properties.
+\begin{enumerate}
+\item For each $t\in[Q]$, a partition
+$[n]=S_{t,1}\sqcup\cdots\sqcup S_{t,r}$, allowing empty parts,
+with $|S_{t,g}|\le2n/r$.
+\item For every factor $f\in\mathcal F$, a sequence
+$\sigma_f\in[r]^Q$. The value $\sigma_f(t)$ assigns factor $f$
+to a group at point $t$.
+\item For every $t\in[Q]$ and $g\in[r]$, an integer matrix
+$C_{t,g}\in\mathbb Z^{[c_{t,g}]\times S_{t,g}}$, where
+$c_{t,g}$ is a nonnegative integer. Each row has sum of absolute
+values at most $D$, and
+\[
+ \sum_{g=1}^r c_{t,g}\le2\tau n.
+\]
+For an assignment $x$, the entries of
+$C_{t,g}(x|_{S_{t,g}})$ are the measurements on group $g$.
+\item For every $f\in\mathcal F$ and $v\in I_f$, a row
+$\vec{P}_{f,v}(T)\in\mathbb Q[T]^{1\times n}$ with
+$\vec{P}_{f,v}(0)=\delta_v$ and $\deg \vec{P}_{f,v}\le R$.
+For every $t\in[Q]$, $g\in[r]\setminus\{\sigma_f(t)\}$, and
+$\xi\in\mathbb Q^{S_{t,g}}$, require
+\[
+ C_{t,g}\xi=\vec{0}\quad\Longrightarrow\quad
+ \langle \vec{P}_{f,v}(t), \widetilde\xi\rangle=0,
+\]
+where $\widetilde\xi\in\mathbb Q^n$ is the extension of $\xi$ by zero.
+\item With $d_{\mathrm{den}}=(R-1)!Q!$, every coefficient of
+$d_{\mathrm{den}} \vec{P}_{f,v}$ is an integer with
+$O(Q\log Q+\log D)$ bits, with an absolute implied constant.
+\end{enumerate}
+\end{definition}
+
+To interpret the kernel condition, fix $t$, $f$, and $v\in I_f$,
+and put $g=\sigma_f(t)$. Write $x_h=x|_{S_{t,h}}$.
+If $x,x'\in\mathbb Q^n$ agree outside $S_{t,h}$ for some $h\ne g$
+and satisfy $C_{t,h}x_h=C_{t,h}x'_h$, then
+$x'_h-x_h\in\ker C_{t,h}$. The condition gives
+\[
+ \langle \vec{P}_{f,v}(t), x'\rangle=\langle \vec{P}_{f,v}(t), x\rangle.
+\]
+Applying this one group at a time shows that the tuple
+$(\langle \vec{P}_{f,v}(t), x\rangle)_{v\in I_f}$ is determined by $x_g$ and
+$(C_{t,h}x_h)_{h\ne g}$. Fixing all the measurement vectors therefore
+makes the entire factor a function of $x_g$. This applies to every
+polynomial factor $\Phi_f$, including factors with coefficients in
+$\mathcal A$.
+
+Each measurement of a Boolean vector lies in $[-D,D]\cap\mathbb Z$.
+We bound the sum of absolute values of the matrix entries because
+the construction can place the same Boolean coordinate in several
+auxiliary positions. After those positions are identified, entries
+of $C_{t,g}$ need not belong to $\{0,1,-1\}$. A rank bound alone
+would not control the number of possible measurements: the single
+row $(1,2,4,\ldots,2^{n-1})$ distinguishes all $2^n$ Boolean vectors.
+
+\subsection{Separating the sum by fixing measurements}
+\label{subsec:measurement-factorization}
+Fixing the measurements makes every factor depend on only its assigned
+group. The following lemma states the resulting calculation over a
+commutative ring, so it applies equally to rational-valued factors and
+to factors in $\mathcal A$. The restrictions $x_i=1$ will be needed
+for Taylor coefficients and are local to individual groups.
+
+\begin{lemma}\label{lem:measurement-separation}
+Let $[n]=S_1\sqcup\cdots\sqcup S_r$ be a partition, allowing empty parts.
+For each $g\in[r]$, let $C_g$ be an integer matrix with $c_g$ rows
+and columns indexed by $S_g$. Suppose each row has sum of absolute
+values at most an integer $D\ge0$, and write $c=\sum_g c_g$.
+Let $\mathcal A$ be a commutative ring with identity, and let
+$A_g:\mathbb Q^n\to\mathcal A$ satisfy
+\[
+ A_g(x+\xi)=A_g(x)
+ \qquad
+ (x\in\mathbb Q^n,\ \xi\in\ker C_h,\ h\ne g),
+\]
+where $\xi$ is extended by zero outside $S_h$.
+For any $E\subseteq[n]$, the sum
+\[
+ Z_E=\sum_{\substack{x\in\{0,1\}^n\\x_i=1\ (i\in E)}}
+           \prod_{g=1}^r A_g(x)
+\]
+can be evaluated by examining at most
+\[
+ 2(2D+1)^c\sum_{g=1}^r2^{|S_g|}
+\]
+Boolean vectors, with at most one $A_g$ evaluation,
+$\poly(n,r,c,\log(D+2))$ additional bit operations, and $O(1)$ ring
+operations per vector. Apart from the evaluators' own storage and
+$O(1)$ ring elements, the procedure uses $\poly(n,r,c,\log(D+2))$
+bits of space.
+\end{lemma}
+\begin{proof}
+For $y_g\in\mathbb Z^{c_g}$, define
+\[
+ \mathcal X_g(y_g)=\{u\in\{0,1\}^{S_g}:C_gu=y_g\},
+ \qquad
+ \mathcal Y=\prod_{g=1}^r\{-D,\ldots,D\}^{c_g}.
+\]
+Every tuple of measurements of a Boolean assignment belongs to
+$\mathcal Y$, and $|\mathcal Y|=(2D+1)^c$.
+We first identify the contribution of a fixed measurement tuple
+$\vec y=(y_1,\ldots,y_r)$. If every $\mathcal X_g(y_g)$ is nonempty,
+let $\bar x_g\in\mathcal X_g(y_g)$ be a representative for each $g$,
+and put
+\[
+ \mathcal X_{g,E}(y_g)=
+ \{u\in\mathcal X_g(y_g):u_i=1\text{ for all }i\in E\cap S_g\}.
+\]
+If $x_h\in\mathcal X_h(y_h)$ for every $h$, then
+$x_h-\bar x_h\in\ker C_h$. Applying the invariance hypothesis
+successively for $h\ne g$ gives
+\[
+ A_g\Bigl(\sum_{h=1}^r x_h\Bigr)
+ =A_g\Bigl(x_g+\sum_{h\ne g}\bar x_h\Bigr).
+\]
+The assignments with measurement tuple $\vec y$ and fixed bits indexed
+by $E$ form $\prod_g\mathcal X_{g,E}(y_g)$. Define
+\begin{equation}\label{eq:group-sum}
+ \Sigma_g(\vec y)=\sum_{x_g\in\mathcal X_{g,E}(y_g)}
+       A_g\Bigl(x_g+\sum_{h\ne g}\bar x_h\Bigr).
+\end{equation}
+Distributivity shows that these assignments contribute
+$\prod_g\Sigma_g(\vec y)$ to $Z_E$. If $\mathcal X_{g,E}(y_g)$ is empty,
+then $\Sigma_g(\vec y)=0$. The representatives $\bar x_g$ themselves
+need not satisfy the fixed-bit conditions indexed by $E$.
+Every Boolean assignment has a unique measurement tuple, so
+\[
+ Z_E=\sum_{\vec y\in\mathcal Y}\prod_{g=1}^r\Sigma_g(\vec y),
+\]
+where the product is taken to be zero if any $\mathcal X_g(y_g)$
+is empty.
+
+The algorithm evaluates this identity one measurement tuple at a
+time, starting with $Z=0_{\mathcal A}$. For each $\vec y\in\mathcal Y$,
+a first scan of each $\{0,1\}^{S_g}$ finds a representative
+$\bar x_g\in\mathcal X_g(y_g)$; if any such set is empty, the
+algorithm skips this tuple. Otherwise it initializes
+$p=1_{\mathcal A}$. To compute $\Sigma_g(\vec y)$, it initializes
+$s=0_{\mathcal A}$ and scans $u\in\{0,1\}^{S_g}$ again. Whenever
+\[
+ C_gu=y_g,\qquad u_i=1\quad(i\in E\cap S_g),
+\]
+the algorithm performs the update
+\[
+ s\leftarrow s+A_g\Bigl(u+\sum_{h\ne g}\bar x_h\Bigr).
+\]
+At the end of this scan, $s=\Sigma_g(\vec y)$, and the algorithm sets
+$p\leftarrow ps$. After all groups, it sets $Z\leftarrow Z+p$.
+After all tuples $\vec y$ have been processed, $Z=Z_E$.
+
+For each $\vec y$, the scan finding the representatives and the scan
+computing the $\Sigma_g(\vec y)$ each examine at most
+$\sum_g2^{|S_g|}$ Boolean vectors. This gives the stated bound.
+Checking a vector's measurements and fixed bits uses
+$\poly(n,r,c,\log(D+2))$ bit operations: each matrix row has sum of
+absolute values at most $D$, so its partial sums have
+$O(\log(D+2))$ bits. There is at most one factor evaluation per vector.
+The retained state is $\vec y$, $(\bar x_1,\ldots,\bar x_r)$, $g$, $u$,
+$s$, $p$, and $Z$. The tuple $\vec y$ contains $c$ integers in $[-D,D]$,
+the representatives contain $n$ bits in total, and $s,p,Z\in\mathcal A$.
+\end{proof}
+
+To evaluate \eqref{eq:general-count-polynomial} at a fixed $t$, group
+the transformed factors by $\sigma_f(t)$ and apply the lemma in
+$\mathcal A$ with $E=\varnothing$. Definition~\ref{def:layout}
+gives its invariance hypothesis, so the sum is $H(t)$. As in the overview, the two exponential costs
+are the measurement choices and the Boolean assignments in one group.

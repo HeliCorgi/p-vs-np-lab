@@ -150,6 +150,28 @@ unconditional affine consequences from that CNF cannot strengthen it. This is
 a rigorously specified inference-method limitation, not a lower bound against
 joint CNF+XOR reasoning or against every SAT algorithm.
 
+The [stage 4 joint inference](joint_reasoning.md) does use both fragments and
+removes that encoded odd-cycle obstruction, with checked certificates. The
+exactly-two obstruction remains for the implemented rule set. The separate
+[signature counter](signature_counting.md) handles group-local CNF joined by
+cross-group XOR, but its table sizes and construction can still be exponential.
+Neither development supplies the universal polynomial bound required above.
+
+The [constant-block reduction](constant_block_bridge.md) makes the remaining
+target more specific: general 3SAT is already expressible with group-local
+2-CNF on groups of at most five variables, coupled by disjoint ternary XOR
+rows. Polynomial local table construction alone is therefore insufficient.
+A uniform polynomial algorithm for the whole resulting mixed instance would
+meet the `P = NP` criterion; this reduction does not prove it impossible.
+
+The [October 2026 ETH release and review](prior_work.md) also leave the target
+unchanged. A uniform `2^{o(n)} poly(N)` SAT algorithm would refute ETH. This
+form alone does not give a polynomial bound. To obtain one from such an
+estimate, the exponent must be `O(log N)`, with all remaining factors and
+preprocessing costs polynomial in `N`. Conversely, a displayed subexponential
+upper bound is not a superpolynomial lower bound on the actual algorithm and
+cannot prove `P != NP`.
+
 ## 3. SAT, UNSAT, and certificates
 
 A SAT certificate is a satisfying assignment. Checking it answers the question

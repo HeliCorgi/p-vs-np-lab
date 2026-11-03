@@ -19,6 +19,40 @@ of the nonlinear residual; merely making CNF-only affine extraction more
 complete cannot solve this bridge family. The baseline analysis below remains
 an analysis of `solve_mixed`, not the new preprocessing wrapper.
 
+**Stage 4 follow-up:** [joint XOR-plus-binary-clause inference](joint_reasoning.md)
+now recovers the bridge's source clauses and refutes the encoded odd-cycle
+family before enumeration. Its fixed width-three, one-pass discovery and
+independent certificates do not make the entire solver polynomial: exactly-two
+plus odd parity and the documented connected ternary Tseitin family still
+force exponential enumeration in this implementation. These are obstructions
+for the stated rules, not for unrestricted joint reasoning or other solvers.
+
+The separate [group-signature counter](signature_counting.md) reuses the finite
+measurement/fiber identity inspected in `openai/math`. Its total cost includes
+local truth-table construction and signature convolution. A polynomial route
+would require an efficiently found valid decomposition for **every** input
+and polynomial bounds on both these costs, including all intermediate tables
+and integer bit operations. The identity map shows that explicit signatures
+can retain all `2^b` local assignments. Recognizing favorable examples alone
+does not prove that every 3SAT input admits favorable structure.
+
+The [constant-block bridge](constant_block_bridge.md) sharpens this obligation:
+general 3SAT reduces to group-local binary CNF with groups of size at most
+five and mutually disjoint ternary XOR rows. Consequently local construction
+can be bounded by 32 assignment visits per group; NP-complete coverage remains
+in the global combination of those small tables. A uniform polynomial join
+algorithm for all instances in this restricted image would already yield
+`P = NP`. This is a reduction criterion, not a proof that polynomial joining
+is impossible. The current counter still has an exponential-state example
+even on easily factored disjoint clauses, so its stored-state growth must not
+be attributed to every algorithm for that family.
+
+[The current ETH releases](prior_work.md) supply a separate claimed
+subexponential upper bound, not a polynomial one. The upstream theorem's
+machine/input semantics and our actual verification scope are recorded in
+[the formal audit](eth_formal_audit.md); a successful build of a formal
+statement would not automatically certify a sharper paper statement.
+
 ## 1. Coverage already reaches 2-CNF plus three-variable XOR
 
 The implementation's decision problem is

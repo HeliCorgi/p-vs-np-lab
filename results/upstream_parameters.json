@@ -1,0 +1,249 @@
+{
+  "all_checks_passed": true,
+  "asymptotic_scope": "The published subexponential upper bound does not supply a polynomial upper bound. It is not by itself a superpolynomial lower bound on the algorithm.",
+  "claim_scope": "This is one necessary schedule condition, not the complete upstream cutoff or an executable implementation of the claimed theorem. A finite but enormous fallback is compatible with a uniform asymptotic theorem.",
+  "condition": "schedule >= 2 iff lambda >= 4*nu^4",
+  "definitions": {
+    "domain": "n >= 20",
+    "lambda": "ceil(log2(n))",
+    "nu": "ceil(log2(lambda))",
+    "schedule": "floor(sqrt(lambda)) // nu^2"
+  },
+  "eventual_schedule_gate": {
+    "all_size_reason": "nu=20 succeeds from lambda=640000; for nu>=21, the power-of-two lower boundary dominates 4*nu^4 by the stated base and ratio inequality.",
+    "lambda": 640000,
+    "n_decimal_digits": 192659,
+    "n_symbolic": "2^639999 + 1"
+  },
+  "first_possible": {
+    "all_smaller_lambdas_checked": 521279,
+    "lambda": 521284,
+    "n_decimal_digits": 156922,
+    "n_symbolic": "2^521283 + 1",
+    "nu": 19
+  },
+  "intervals_before_first_success": [
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 5,
+      "lambda_required": 324,
+      "lambda_upper": 8,
+      "nu": 3
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 9,
+      "lambda_required": 1024,
+      "lambda_upper": 16,
+      "nu": 4
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 17,
+      "lambda_required": 2500,
+      "lambda_upper": 32,
+      "nu": 5
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 33,
+      "lambda_required": 5184,
+      "lambda_upper": 64,
+      "nu": 6
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 65,
+      "lambda_required": 9604,
+      "lambda_upper": 128,
+      "nu": 7
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 129,
+      "lambda_required": 16384,
+      "lambda_upper": 256,
+      "nu": 8
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 257,
+      "lambda_required": 26244,
+      "lambda_upper": 512,
+      "nu": 9
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 513,
+      "lambda_required": 40000,
+      "lambda_upper": 1024,
+      "nu": 10
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 1025,
+      "lambda_required": 58564,
+      "lambda_upper": 2048,
+      "nu": 11
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 2049,
+      "lambda_required": 82944,
+      "lambda_upper": 4096,
+      "nu": 12
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 4097,
+      "lambda_required": 114244,
+      "lambda_upper": 8192,
+      "nu": 13
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 8193,
+      "lambda_required": 153664,
+      "lambda_upper": 16384,
+      "nu": 14
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 16385,
+      "lambda_required": 202500,
+      "lambda_upper": 32768,
+      "nu": 15
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 32769,
+      "lambda_required": 262144,
+      "lambda_upper": 65536,
+      "nu": 16
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 65537,
+      "lambda_required": 334084,
+      "lambda_upper": 131072,
+      "nu": 17
+    },
+    {
+      "interval_has_solution": false,
+      "lambda_lower": 131073,
+      "lambda_required": 419904,
+      "lambda_upper": 262144,
+      "nu": 18
+    },
+    {
+      "interval_has_solution": true,
+      "lambda_lower": 262145,
+      "lambda_required": 521284,
+      "lambda_upper": 524288,
+      "nu": 19
+    }
+  ],
+  "nonmonotone_drop": {
+    "lambda_after": 524289,
+    "lambda_before": 524288,
+    "schedule_after": 1,
+    "schedule_before": 2
+  },
+  "samples": [
+    {
+      "first_n_with_this_lambda": "2^4 + 1",
+      "lambda": 5,
+      "nu": 3,
+      "schedule": 0
+    },
+    {
+      "first_n_with_this_lambda": "2^9 + 1",
+      "lambda": 10,
+      "nu": 4,
+      "schedule": 0
+    },
+    {
+      "first_n_with_this_lambda": "2^99 + 1",
+      "lambda": 100,
+      "nu": 7,
+      "schedule": 0
+    },
+    {
+      "first_n_with_this_lambda": "2^999 + 1",
+      "lambda": 1000,
+      "nu": 10,
+      "schedule": 0
+    },
+    {
+      "first_n_with_this_lambda": "2^9999 + 1",
+      "lambda": 10000,
+      "nu": 14,
+      "schedule": 0
+    },
+    {
+      "first_n_with_this_lambda": "2^99999 + 1",
+      "lambda": 100000,
+      "nu": 17,
+      "schedule": 1
+    },
+    {
+      "first_n_with_this_lambda": "2^499999 + 1",
+      "lambda": 500000,
+      "nu": 19,
+      "schedule": 1
+    },
+    {
+      "first_n_with_this_lambda": "2^521282 + 1",
+      "lambda": 521283,
+      "nu": 19,
+      "schedule": 1
+    },
+    {
+      "first_n_with_this_lambda": "2^521283 + 1",
+      "lambda": 521284,
+      "nu": 19,
+      "schedule": 2
+    },
+    {
+      "first_n_with_this_lambda": "2^524287 + 1",
+      "lambda": 524288,
+      "nu": 19,
+      "schedule": 2
+    },
+    {
+      "first_n_with_this_lambda": "2^524288 + 1",
+      "lambda": 524289,
+      "nu": 20,
+      "schedule": 1
+    },
+    {
+      "first_n_with_this_lambda": "2^639998 + 1",
+      "lambda": 639999,
+      "nu": 20,
+      "schedule": 1
+    },
+    {
+      "first_n_with_this_lambda": "2^639999 + 1",
+      "lambda": 640000,
+      "nu": 20,
+      "schedule": 2
+    },
+    {
+      "first_n_with_this_lambda": "2^1048575 + 1",
+      "lambda": 1048576,
+      "nu": 20,
+      "schedule": 2
+    },
+    {
+      "first_n_with_this_lambda": "2^1048576 + 1",
+      "lambda": 1048577,
+      "nu": 21,
+      "schedule": 2
+    }
+  ],
+  "schema_version": 1,
+  "source": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Asymptotics.lean",
+  "total_algorithm_cutoff_computed": false,
+  "upstream_commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "upstream_repository": "openai/math"
+}

@@ -1,0 +1,3305 @@
+{
+  "all_checks_passed": true,
+  "bounds_for_m_nonempty_source_clauses": {
+    "groups": "3m",
+    "maximum_group_size": 5,
+    "target_variables_at_most": "15m",
+    "target_xor_rows_at_most": "4m"
+  },
+  "construction": "Pad each nonempty source clause to three literal occurrences; give each occurrence a fresh copy; for t>=2 copies of a variable add t padded implication-cycle clauses (-copy_i,copy_next,copy_next); apply the existing 3-CNF bridge; group each copy with all its helpers.",
+  "constructor": "pnp_lab.block_bridge.three_cnf_to_constant_blocks",
+  "control_cases": [
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "empty_scope_true",
+      "original_cnf": [],
+      "original_variables": [],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 0,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 1,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "unused_scope_true",
+      "original_cnf": [],
+      "original_variables": [
+        "unused"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 1,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "empty_scope_false",
+      "original_cnf": [
+        []
+      ],
+      "original_variables": [],
+      "projected_source_witness_mask": null,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 1,
+        "groups": 0,
+        "has_empty_source_clause": true,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 1,
+        "source_variables": 0,
+        "target_cnf_clauses": 1,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 1,
+      "source_model_count": 0,
+      "source_models_lifted_and_checked": 0,
+      "target_model_count": 0,
+      "target_status": "UNSAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "empty_clause_with_scope",
+      "original_cnf": [
+        [
+          1
+        ],
+        []
+      ],
+      "original_variables": [
+        "x",
+        "unused"
+      ],
+      "projected_source_witness_mask": null,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 1,
+        "groups": 0,
+        "has_empty_source_clause": true,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 2,
+        "source_variables": 2,
+        "target_cnf_clauses": 1,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 0,
+      "source_models_lifted_and_checked": 0,
+      "target_model_count": 0,
+      "target_status": "UNSAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10
+      ],
+      "join_products": 95,
+      "name": "positive_unit",
+      "original_cnf": [
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 32,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "negative_unit",
+      "original_cnf": [
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 254,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10,
+        8,
+        8,
+        8
+      ],
+      "join_products": 2070,
+      "name": "opposed_units",
+      "original_cnf": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x"
+      ],
+      "projected_source_witness_mask": null,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 1,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 0,
+      "source_models_lifted_and_checked": 0,
+      "target_model_count": 0,
+      "target_status": "UNSAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        2,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        8,
+        8
+      ],
+      "join_products": 42,
+      "name": "signed_binary",
+      "original_cnf": [
+        [
+          1,
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x",
+        "y",
+        "unused"
+      ],
+      "projected_source_witness_mask": 3,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 3,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 6,
+      "source_models_lifted_and_checked": 6,
+      "target_model_count": 10,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        5,
+        5,
+        2
+      ],
+      "group_sizes": [
+        5,
+        5,
+        2
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        3
+      ],
+      "join_products": 46,
+      "name": "repeated_literal",
+      "original_cnf": [
+        [
+          1,
+          1,
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x",
+        "y"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 3,
+      "source_models_lifted_and_checked": 3,
+      "target_model_count": 25,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        5,
+        5,
+        2
+      ],
+      "group_sizes": [
+        5,
+        5,
+        2
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        8,
+        3
+      ],
+      "join_products": 46,
+      "name": "tautological_source",
+      "original_cnf": [
+        [
+          1,
+          -1,
+          2
+        ]
+      ],
+      "original_variables": [
+        "x",
+        "y"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 15,
+      "target_status": "SAT"
+    }
+  ],
+  "disjoint_family_formulas": {
+    "group_size": 2,
+    "join_products": "10(2^m-1)",
+    "local_assignment_visits": "12m",
+    "retained_dp_states": "2^m",
+    "source_models": "7^m",
+    "target_models": "13^m"
+  },
+  "disjoint_positive_triples": [
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "dp_states_peak": 2,
+      "group_assignments_tested": 12,
+      "join_products": 10,
+      "join_products_by_group": [
+        2,
+        4,
+        4
+      ],
+      "m": 1,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 7,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 1,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 3,
+        "target_cnf_clauses": 3,
+        "target_variables": 6,
+        "target_xor_rows": 1
+      },
+      "source_model_count_by_independent_clause_product": 7,
+      "target_model_count": 13
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "dp_states_peak": 4,
+      "group_assignments_tested": 24,
+      "join_products": 30,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8
+      ],
+      "m": 2,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 63,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 2,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 6,
+        "target_cnf_clauses": 6,
+        "target_variables": 12,
+        "target_xor_rows": 2
+      },
+      "source_model_count_by_independent_clause_product": 49,
+      "target_model_count": 169
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8
+      ],
+      "dp_states_peak": 8,
+      "group_assignments_tested": 36,
+      "join_products": 70,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16
+      ],
+      "m": 3,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 511,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 9,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 9,
+        "source_clauses": 3,
+        "source_variables": 9,
+        "target_cnf_clauses": 9,
+        "target_variables": 18,
+        "target_xor_rows": 3
+      },
+      "source_model_count_by_independent_clause_product": 343,
+      "target_model_count": 2197
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16
+      ],
+      "dp_states_peak": 16,
+      "group_assignments_tested": 48,
+      "join_products": 150,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32
+      ],
+      "m": 4,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 4095,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 12,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 12,
+        "source_clauses": 4,
+        "source_variables": 12,
+        "target_cnf_clauses": 12,
+        "target_variables": 24,
+        "target_xor_rows": 4
+      },
+      "source_model_count_by_independent_clause_product": 2401,
+      "target_model_count": 28561
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32
+      ],
+      "dp_states_peak": 32,
+      "group_assignments_tested": 60,
+      "join_products": 310,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64
+      ],
+      "m": 5,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 32767,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 5,
+        "groups": 15,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 15,
+        "source_clauses": 5,
+        "source_variables": 15,
+        "target_cnf_clauses": 15,
+        "target_variables": 30,
+        "target_xor_rows": 5
+      },
+      "source_model_count_by_independent_clause_product": 16807,
+      "target_model_count": 371293
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64
+      ],
+      "dp_states_peak": 64,
+      "group_assignments_tested": 72,
+      "join_products": 630,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128
+      ],
+      "m": 6,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 262143,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 6,
+        "groups": 18,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 18,
+        "source_clauses": 6,
+        "source_variables": 18,
+        "target_cnf_clauses": 18,
+        "target_variables": 36,
+        "target_xor_rows": 6
+      },
+      "source_model_count_by_independent_clause_product": 117649,
+      "target_model_count": 4826809
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128
+      ],
+      "dp_states_peak": 128,
+      "group_assignments_tested": 84,
+      "join_products": 1270,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256
+      ],
+      "m": 7,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 2097151,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 7,
+        "groups": 21,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 21,
+        "source_clauses": 7,
+        "source_variables": 21,
+        "target_cnf_clauses": 21,
+        "target_variables": 42,
+        "target_xor_rows": 7
+      },
+      "source_model_count_by_independent_clause_product": 823543,
+      "target_model_count": 62748517
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256
+      ],
+      "dp_states_peak": 256,
+      "group_assignments_tested": 96,
+      "join_products": 2550,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512
+      ],
+      "m": 8,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 16777215,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 24,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 24,
+        "source_clauses": 8,
+        "source_variables": 24,
+        "target_cnf_clauses": 24,
+        "target_variables": 48,
+        "target_xor_rows": 8
+      },
+      "source_model_count_by_independent_clause_product": 5764801,
+      "target_model_count": 815730721
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512
+      ],
+      "dp_states_peak": 512,
+      "group_assignments_tested": 108,
+      "join_products": 5110,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "m": 9,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 134217727,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 9,
+        "groups": 27,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 27,
+        "source_clauses": 9,
+        "source_variables": 27,
+        "target_cnf_clauses": 27,
+        "target_variables": 54,
+        "target_xor_rows": 9
+      },
+      "source_model_count_by_independent_clause_product": 40353607,
+      "target_model_count": 10604499373
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024
+      ],
+      "dp_states_peak": 1024,
+      "group_assignments_tested": 120,
+      "join_products": 10230,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024,
+        2048,
+        2048
+      ],
+      "m": 10,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 1073741823,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 10,
+        "groups": 30,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 30,
+        "source_clauses": 10,
+        "source_variables": 30,
+        "target_cnf_clauses": 30,
+        "target_variables": 60,
+        "target_xor_rows": 10
+      },
+      "source_model_count_by_independent_clause_product": 282475249,
+      "target_model_count": 137858491849
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024,
+        2048,
+        2048,
+        2048
+      ],
+      "dp_states_peak": 2048,
+      "group_assignments_tested": 132,
+      "join_products": 20470,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024,
+        2048,
+        2048,
+        2048,
+        4096,
+        4096
+      ],
+      "m": 11,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 8589934591,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 11,
+        "groups": 33,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 33,
+        "source_clauses": 11,
+        "source_variables": 33,
+        "target_cnf_clauses": 33,
+        "target_variables": 66,
+        "target_xor_rows": 11
+      },
+      "source_model_count_by_independent_clause_product": 1977326743,
+      "target_model_count": 1792160394037
+    },
+    {
+      "checks_passed": true,
+      "dp_state_counts": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024,
+        2048,
+        2048,
+        2048,
+        4096,
+        4096,
+        4096
+      ],
+      "dp_states_peak": 4096,
+      "group_assignments_tested": 144,
+      "join_products": 40950,
+      "join_products_by_group": [
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        16,
+        16,
+        16,
+        32,
+        32,
+        32,
+        64,
+        64,
+        64,
+        128,
+        128,
+        128,
+        256,
+        256,
+        256,
+        512,
+        512,
+        512,
+        1024,
+        1024,
+        1024,
+        2048,
+        2048,
+        2048,
+        4096,
+        4096,
+        4096,
+        8192,
+        8192
+      ],
+      "m": 12,
+      "max_group_signature_count": 2,
+      "projected_source_witness_mask": 68719476735,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 12,
+        "groups": 36,
+        "has_empty_source_clause": false,
+        "max_group_size": 2,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 36,
+        "source_clauses": 12,
+        "source_variables": 36,
+        "target_cnf_clauses": 36,
+        "target_variables": 72,
+        "target_xor_rows": 12
+      },
+      "source_model_count_by_independent_clause_product": 13841287201,
+      "target_model_count": 23298085122481
+    }
+  ],
+  "empty_clause_policy": "After complete input validation, any empty source clause gives an empty-scope target with one empty CNF clause and no groups.",
+  "experiment": "constant_block_bridge",
+  "independent_one_clause_target_oracle": {
+    "checks_passed": true,
+    "projected_source_models": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "source_assignments_checked": 8,
+    "source_model_count": 7,
+    "target_assignments_checked": 64,
+    "target_model_count": 13
+  },
+  "interpretation": "The disjoint-clause family is easy. Its exponential state growth is specific to the current counter, which retains completed XOR rows. Retiring completed rows or factoring disconnected components can remove this example's blowup. This is not an intrinsic SAT lower bound, and constant local tables alone do not bound global joining work.",
+  "local_support_identity": "A copy in an equality cycle has exactly five local signatures and ten local CNF models for a positive source occurrence or eight for a negative occurrence. A singleton copy has two signatures and three local models.",
+  "preservation": "Satisfiability with constructive lift/project maps. Counts are not preserved. Unused source variables are metadata only and project to False.",
+  "random_oracle_cases": [
+    {
+      "checks_passed": true,
+      "dp_states_peak": 254,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10,
+        8,
+        8,
+        8
+      ],
+      "join_products": 2070,
+      "name": "seeded_00",
+      "original_cnf": [
+        [
+          1,
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": null,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 1,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 0,
+      "source_models_lifted_and_checked": 0,
+      "target_model_count": 0,
+      "target_status": "UNSAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 256,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "join_products": 2010,
+      "name": "seeded_01",
+      "original_cnf": [
+        [
+          -2
+        ],
+        [
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 2,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 16,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_02",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 3,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 8,
+      "source_models_lifted_and_checked": 8,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_03",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_04",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 2,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 256,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "join_products": 1810,
+      "name": "seeded_05",
+      "original_cnf": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 1,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 1024,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_06",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 2,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 254,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8,
+        10,
+        10,
+        10
+      ],
+      "join_products": 1730,
+      "name": "seeded_07",
+      "original_cnf": [
+        [
+          -1
+        ],
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": null,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 1,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 0,
+      "source_models_lifted_and_checked": 0,
+      "target_model_count": 0,
+      "target_status": "UNSAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10
+      ],
+      "join_products": 95,
+      "name": "seeded_08",
+      "original_cnf": [
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 32,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_09",
+      "original_cnf": [
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 4,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 8,
+      "source_models_lifted_and_checked": 8,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_10",
+      "original_cnf": [
+        [
+          -2,
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_11",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 3,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 8,
+      "source_models_lifted_and_checked": 8,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        2,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        10,
+        10
+      ],
+      "join_products": 42,
+      "name": "seeded_12",
+      "original_cnf": [
+        [
+          -3,
+          1,
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 4,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 12,
+      "source_models_lifted_and_checked": 12,
+      "target_model_count": 25,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_13",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 2,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        2,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        8,
+        8
+      ],
+      "join_products": 42,
+      "name": "seeded_14",
+      "original_cnf": [
+        [
+          -1,
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 2,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 3,
+      "source_models_lifted_and_checked": 3,
+      "target_model_count": 10,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 128,
+      "group_assignments_tested": 164,
+      "group_signature_counts": [
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        10,
+        10,
+        8,
+        8,
+        8
+      ],
+      "join_products": 802,
+      "name": "seeded_15",
+      "original_cnf": [
+        [
+          -3,
+          1
+        ],
+        [
+          -2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 7,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 4,
+        "target_cnf_clauses": 21,
+        "target_variables": 27,
+        "target_xor_rows": 7
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 6,
+      "source_models_lifted_and_checked": 6,
+      "target_model_count": 100,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_16",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_17",
+      "original_cnf": [
+        [
+          -3
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 3,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_18",
+      "original_cnf": [
+        [
+          1,
+          1,
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 17,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_19",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10
+      ],
+      "join_products": 95,
+      "name": "seeded_20",
+      "original_cnf": [
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 32,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 128,
+      "group_assignments_tested": 164,
+      "group_signature_counts": [
+        5,
+        5,
+        2,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        2,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        8,
+        3,
+        10,
+        10,
+        10
+      ],
+      "join_products": 806,
+      "name": "seeded_21",
+      "original_cnf": [
+        [
+          2,
+          -2,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 10,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 7,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 4,
+        "target_cnf_clauses": 21,
+        "target_variables": 27,
+        "target_xor_rows": 7
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 8,
+      "source_models_lifted_and_checked": 8,
+      "target_model_count": 480,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 256,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "join_products": 1810,
+      "name": "seeded_22",
+      "original_cnf": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 1,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 1024,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 128,
+      "group_assignments_tested": 164,
+      "group_signature_counts": [
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        8,
+        10,
+        10,
+        10,
+        10
+      ],
+      "join_products": 892,
+      "name": "seeded_23",
+      "original_cnf": [
+        [
+          -1,
+          -2,
+          2
+        ],
+        [
+          2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 2,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 7,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 3,
+        "target_cnf_clauses": 21,
+        "target_variables": 27,
+        "target_xor_rows": 7
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 384,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_24",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 3,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 8,
+      "source_models_lifted_and_checked": 8,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_25",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 2,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        2,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        10,
+        10
+      ],
+      "join_products": 42,
+      "name": "seeded_26",
+      "original_cnf": [
+        [
+          -2,
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 1,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 2,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 3,
+      "source_models_lifted_and_checked": 3,
+      "target_model_count": 25,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 128,
+      "group_assignments_tested": 164,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        2,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        2,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        10,
+        10,
+        10,
+        8,
+        3,
+        10
+      ],
+      "join_products": 1080,
+      "name": "seeded_27",
+      "original_cnf": [
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          -3,
+          -2,
+          1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 5,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 7,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 3,
+        "target_cnf_clauses": 21,
+        "target_variables": 27,
+        "target_xor_rows": 7
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 5,
+      "source_models_lifted_and_checked": 5,
+      "target_model_count": 484,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_28",
+      "original_cnf": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_29",
+      "original_cnf": [],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 1,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_30",
+      "original_cnf": [
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_31",
+      "original_cnf": [
+        [
+          -1,
+          -1,
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 1,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 2,
+      "source_model_count": 1,
+      "source_models_lifted_and_checked": 1,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 16,
+      "group_assignments_tested": 96,
+      "group_signature_counts": [
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        8,
+        8
+      ],
+      "join_products": 95,
+      "name": "seeded_32",
+      "original_cnf": [
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 4,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 3,
+        "target_cnf_clauses": 12,
+        "target_variables": 15,
+        "target_xor_rows": 4
+      },
+      "source_assignments_checked": 8,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 4,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 256,
+      "group_assignments_tested": 192,
+      "group_signature_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_sizes": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        8,
+        10,
+        10,
+        8,
+        8,
+        8
+      ],
+      "join_products": 1615,
+      "name": "seeded_33",
+      "original_cnf": [
+        [
+          -2,
+          2
+        ],
+        [
+          -1
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 2,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 8,
+        "groups": 6,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 6,
+        "source_clauses": 2,
+        "source_variables": 2,
+        "target_cnf_clauses": 24,
+        "target_variables": 30,
+        "target_xor_rows": 8
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 2,
+      "source_models_lifted_and_checked": 2,
+      "target_model_count": 68,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 8,
+      "group_assignments_tested": 68,
+      "group_signature_counts": [
+        2,
+        5,
+        5
+      ],
+      "group_sizes": [
+        2,
+        5,
+        5
+      ],
+      "group_valid_assignment_counts": [
+        3,
+        10,
+        10
+      ],
+      "join_products": 42,
+      "name": "seeded_34",
+      "original_cnf": [
+        [
+          4,
+          2
+        ]
+      ],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 10,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 3,
+        "groups": 3,
+        "has_empty_source_clause": false,
+        "max_group_size": 5,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 3,
+        "source_clauses": 1,
+        "source_variables": 4,
+        "target_cnf_clauses": 9,
+        "target_variables": 12,
+        "target_xor_rows": 3
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 12,
+      "source_models_lifted_and_checked": 12,
+      "target_model_count": 25,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_35",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_36",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_37",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 2,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 4,
+      "source_model_count": 4,
+      "source_models_lifted_and_checked": 4,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_38",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    },
+    {
+      "checks_passed": true,
+      "dp_states_peak": 1,
+      "group_assignments_tested": 0,
+      "group_signature_counts": [],
+      "group_sizes": [],
+      "group_valid_assignment_counts": [],
+      "join_products": 0,
+      "name": "seeded_39",
+      "original_cnf": [],
+      "original_variables": [
+        "x0",
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "projected_source_witness_mask": 0,
+      "shape": {
+        "all_target_cnf_group_local": true,
+        "expanded_clauses": 0,
+        "groups": 0,
+        "has_empty_source_clause": false,
+        "max_group_size": 0,
+        "native_xor_triples_pairwise_disjoint": true,
+        "occurrence_copies": 0,
+        "source_clauses": 0,
+        "source_variables": 4,
+        "target_cnf_clauses": 0,
+        "target_variables": 0,
+        "target_xor_rows": 0
+      },
+      "source_assignments_checked": 16,
+      "source_model_count": 16,
+      "source_models_lifted_and_checked": 16,
+      "target_model_count": 1,
+      "target_status": "SAT"
+    }
+  ],
+  "random_seed": 681247,
+  "schema_version": 1,
+  "status": "verified",
+  "summary": {
+    "control_cases": 10,
+    "direct_target_assignments_checked": 64,
+    "disjoint_family_cases": 12,
+    "largest_disjoint_dp_states": 4096,
+    "largest_disjoint_join_products": 40950,
+    "largest_disjoint_local_assignment_visits": 144,
+    "largest_disjoint_m": 12,
+    "max_group_size": 5,
+    "max_local_signature_count": 5,
+    "random_oracle_cases": 40,
+    "small_oracle_sat_cases": 45,
+    "small_oracle_unsat_cases": 5,
+    "source_assignments_checked": 344,
+    "source_models_lifted_and_checked": 262
+  }
+}

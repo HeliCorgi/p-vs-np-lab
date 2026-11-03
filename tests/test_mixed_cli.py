@@ -82,6 +82,28 @@ class MixedCliTests(unittest.TestCase):
         self.assertIsNone(result["certificate"])
         self.assertIsNone(result["model_count"])
 
+    def test_joint_reasoning_verifies_bridge_proof_at_zero_budget(self):
+        process = self.run_cli(ROOT / "examples/bridge_triangle_unsat.json", "--joint",
+                               "--max-cells", 0, "--verify-certificate")
+        self.assertEqual(process.returncode, 0, process.stderr)
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "UNSAT")
+        self.assertEqual(result["checked_cells"], 0)
+        self.assertEqual(result["joint_preprocessing"]["derived_clause_count"], 6)
+        self.assertEqual(result["certificate"]["kind"], "joint-xor-cnf-unsat-v1")
+
+    def test_joint_budget_and_preprocessing_flag_selection(self):
+        process = self.run_cli(ROOT / "examples/exact_two_unsat.json", "--joint",
+                               "--max-cells", 0, "--verify-certificate")
+        self.assertEqual(process.returncode, 2, process.stderr)
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "UNKNOWN")
+        self.assertIsNone(result["model_count"])
+        self.assertIsNone(result["certificate"])
+        invalid = self.run_cli(ROOT / "examples/mixed_sat.json", "--joint", "--parity-cuts")
+        self.assertEqual(invalid.returncode, 1, invalid.stderr)
+        self.assertEqual(json.loads(invalid.stderr)["status"], "ERROR")
+
 
 if __name__ == "__main__":
     unittest.main()
