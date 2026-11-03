@@ -1,0 +1,66 @@
+name: Pinned upstream math audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/phase4-upstream]
+    paths:
+      - .github/workflows/upstream-math.yml
+      - scripts/prepare_upstream_audit.py
+
+permissions:
+  contents: read
+
+jobs:
+  eth_endpoint:
+    name: Rebuild the pinned ETH endpoint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      LEAN_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: openai/math
+          ref: 4eaee87548250b2682affda7d05d947c05554bae
+          path: upstream
+          sparse-checkout: lean
+          persist-credentials: false
+      - name: Prepare unchanged source closure in an isolated harness
+        run: python3 scripts/prepare_upstream_audit.py --upstream-dir upstream/lean --out-dir upstream-audit
+      - name: Install pinned Lean and retrieve Mathlib cache
+        uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
+        with:
+          lake-package-directory: upstream-audit
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'true'
+          use-github-cache: 'false'
+      - name: Build only the exact counting endpoint
+        timeout-minutes: 27
+        working-directory: upstream-audit
+        run: |
+          set -o pipefail
+          lake build +OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.Final 2>&1 | tee build.log
+      - name: Query and audit transitive endpoint axioms
+        working-directory: upstream-audit
+        run: |
+          set -o pipefail
+          lake env lean Audit.lean 2>&1 | tee endpoint-audit.log
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path('endpoint-audit.log').read_text()
+          theorem = 'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat'
+          pattern = "'" + re.escape(theorem) + r"' (?:does not depend on any axioms|depends on axioms:\s*\[([^\]]*)\])"
+          match = re.search(pattern, text)
+          if not match:
+              raise SystemExit('FAIL: no endpoint axiom output')
+          axioms = {x.strip() for x in (match.group(1) or '').split(',') if x.strip()}
+          if axioms - {'propext', 'Classical.choice', 'Quot.sound'}:
+              raise SystemExit('FAIL: nonstandard endpoint axioms: ' + repr(axioms))
+          print('PASS pinned endpoint build and transitive axiom audit; comparator was not run')
+          PY
