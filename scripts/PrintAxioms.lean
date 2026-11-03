@@ -31,3 +31,8 @@ import Formal
 #print axioms BoundaryLab.JointXorClause.joint_clause_of_forced_parity_conflict
 #print axioms BoundaryLab.JointXorClause.strengthen_preserves_models
 #print axioms BoundaryLab.JointXorClause.strengthen_preserves_sat
+
+#print axioms BoundaryLab.AffineFrontier.reach_iff_recorded_choices
+#print axioms BoundaryLab.AffineFrontier.pruned_iff_reach
+#print axioms BoundaryLab.AffineFrontier.suffix_observation_forced
+#print axioms BoundaryLab.AffineFrontier.absorb_exact_image

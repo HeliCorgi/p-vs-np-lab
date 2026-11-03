@@ -26,7 +26,7 @@ NEW_REPORTS = (
     "mixed_constraints.json", "three_sat_bridge.json",
     "parity_cuts.json",
     "joint_reasoning.json", "signature_counting.json", "upstream_parameters.json",
-    "constant_block_bridge.json",
+    "constant_block_bridge.json", "affine_frontier.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -134,7 +134,7 @@ def main() -> None:
     for name in ("projection_barrier", "parity_projection", "affine_projection",
                  "mixed_constraints", "three_sat_bridge", "parity_cuts",
                  "joint_reasoning", "signature_counting", "upstream_parameters",
-                 "constant_block_bridge"):
+                 "constant_block_bridge", "affine_frontier"):
         run_component(ROOT / "experiments" / f"{name}.py", out, out / f"{name}.log")
     run_component(BASELINE / "run_all.py", out / "baseline", out / "baseline.log")
 
@@ -158,6 +158,7 @@ def main() -> None:
     signatures = read_json(out / NEW_REPORTS[7])
     parameters = read_json(out / NEW_REPORTS[8])
     block_bridge = read_json(out / NEW_REPORTS[9])
+    frontier = read_json(out / NEW_REPORTS[10])
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -165,7 +166,7 @@ def main() -> None:
             or not mixed["all_checks_passed"] or not bridge["all_checks_passed"]
             or not cuts["all_checks_passed"] or not joint["all_checks_passed"]
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
-            or not block_bridge["all_checks_passed"]):
+            or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -207,6 +208,8 @@ def main() -> None:
         "constant_block_bridge_checks_passed": block_bridge["all_checks_passed"],
         "constant_block_bridge_summary": block_bridge["summary"],
         "constant_block_bridge_general_polynomial_solver": False,
+        "frontier_summary": frontier["summary"],
+        "frontier_general_polynomial_solver": False,
         "openai_math_snapshot": math_snapshot,
         "upstream_schedule_first_possible": parameters["first_possible"],
         "upstream_schedule_total_cutoff_computed": parameters["total_algorithm_cutoff_computed"],

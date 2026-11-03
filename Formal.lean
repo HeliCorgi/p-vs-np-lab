@@ -5,3 +5,4 @@ import Formal.ThreeSatBridge
 import Formal.ExactlyOneParity
 import Formal.BridgeAffineBarrier
 import Formal.JointXorClause
+import Formal.AffineFrontier

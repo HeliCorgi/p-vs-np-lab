@@ -7,6 +7,23 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第5段階：個数を数えずにSATを判定する
+
+[判定の数学と全順序での限界](docs/affine_frontier.md)・[3-CNFから証人を返す実装](src/pnp_lab/frontier_sat.py)・[実験結果](results/affine_frontier.json)。候補のXOR和が目標を取れるかだけを調べます。ある局所表がアフィン部分空間の平行移動をちょうど埋める場合、そのブロックは線形代数で吸収できます。残るブロックでは、後続の候補のアフィン包に照らして完成不能な途中状態を除きます。SATなら元の符号付き節に戻して証人を検査し、指定予算で未決着なら `UNKNOWN` と返します。
+
+- 独立な正の3節128個では、384グループすべてを吸収し、残余遷移0回でSAT。表作成と線形代数の費用は別途かかります。
+- 同じ長さ9の奇数サイクルで、処理順の変更により遷移が745,225回から16,015回へ減少。長さ31も辺ごとの順なら60,895回でUNSAT。
+- 一方、正の2節を並べた偶数辺長 `h` の正方格子では、どの固定順序でも、実際に解へ延長できる異なる途中和が少なくとも `2^(h/9)` 個ある層が生まれます。この入力自体は全真で充足します。よい順序を選ぶことだけでは、この全状態を保持する実装の多項式時間性は証明できません。
+
+```bash
+python scripts/solve_three_cnf.py examples/three_cnf_odd_cycle.json
+python scripts/solve_three_cnf.py examples/three_cnf_odd_cycle.json --max-transitions 0
+```
+
+上はUNSAT、下はUNKNOWNです。JSONの `variables` は変数名、`clauses` は1始まりの符号付きリテラル列です。`group_order` で還元後のグループの順列を指定できます。
+
+[Leanでの4定理](Formal/AffineFrontier.lean)は、元の候補による証人、必要条件で枝を除いても到達可能性を保つこと、後続の署名をまとめる際の必要条件、正確なアフィン集合の吸収を扱います。行消去の実装・格子下界・計算時間は、このLeanモジュールの定理には含まれていません。
+
 ## 第4段階：先行研究を調べ、共同推論と署名による計数へ進む
 
 ### openai/mathに見つかったETH反証の主張
@@ -23,7 +40,7 @@ Leanの対象定理が述べる上界は、入力符号長を `L`、変数数を
 
 [独立した検討会の案内](https://ethdiscussion.blog/2026/10/26/eth-refutation-examination-and-discussion/)は、主催者の参加を認証と受け取らないよう明記しています。本研究室でも、定理の量化・有限機械・実行時間・入力符号化を読む作業と、カーネルで再ビルドする作業を区別しました。[固定版の再ビルドworkflow](.github/workflows/upstream-math.yml)と[監査実行記録](results/upstream_math_audit.json)に、実行できた範囲を記します。完全なComparator再検証や論文全体の独立検証を済ませたとは主張しません。
 
-35分上限で行った再ビルドは途中でキャンセルされ、終端定理とその公理依存の検査には届きませんでした。取得したログにLeanの証明エラーはありませんが、これを検証成功とは扱いません。上流ソースを変更せず、180分上限の再実行を用意しました。最新の実行状態は上の監査記録に記載します。
+35分上限で行った再ビルドは途中でキャンセルされ、終端定理とその公理依存の検査には届きませんでした。取得したログにLeanの証明エラーはありませんが、これを検証成功とは扱いません。上流ソースを変えずに行った[180分上限の再実行](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/41714504846)は157分36秒でfailureになりました。ビルド完了・公理検査の記録はなく、ジョブログは取得できませんでした。特定の証明エラーや時間切れとは判定できません。[終了時のステップ記録](results/upstream_replay_event_41714504846.json)も保存しています。
 
 [必要部分15ファイル](third_party/openai_math/README.md)をApache-2.0ライセンスと出典・ハッシュ付きで収録しました。上流のLean 4.34.1と本研究室のLean 4.19.0を別々に検査します。
 
@@ -190,7 +207,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要28定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要32定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -218,7 +235,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 93件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 106件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

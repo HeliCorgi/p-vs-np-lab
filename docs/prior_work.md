@@ -294,3 +294,7 @@ of the same algorithm; it should not be promoted to a statement about all
 SAT solvers. The next theorem needed for `P = NP` would still be a uniform
 polynomial bound covering all instances and every step of the algorithm,
 including the search for its structural decomposition.
+
+## Ordered frontiers and linear codes
+
+The phase-five bound uses the dimension of the intersection of the prefix and suffix difference spans. Its rank expression is the connectivity function of the represented difference vectors in the convention `r(P)+r(S)-r(P+S)`; vectors from one group must stay together here. Navin Kashyap, [*Matroid Pathwidth and Code Trellis Complexity*](https://doi.org/10.1137/070691152), relates matroid pathwidth to the minimum trellis state complexity of linear codes. Those ordering results concern linear codes; they do not directly prove lower bounds on the reachable nonlinear supports in this project. The [grid proof](affine_frontier.md) instead constructs mutually distinguishable prefix sums with actual suffix completions in the lab's own 3SAT image.

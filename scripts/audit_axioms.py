@@ -40,6 +40,10 @@ THEOREMS = {
     "BoundaryLab.JointXorClause.joint_clause_of_forced_parity_conflict",
     "BoundaryLab.JointXorClause.strengthen_preserves_models",
     "BoundaryLab.JointXorClause.strengthen_preserves_sat",
+    "BoundaryLab.AffineFrontier.reach_iff_recorded_choices",
+    "BoundaryLab.AffineFrontier.pruned_iff_reach",
+    "BoundaryLab.AffineFrontier.suffix_observation_forced",
+    "BoundaryLab.AffineFrontier.absorb_exact_image",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
