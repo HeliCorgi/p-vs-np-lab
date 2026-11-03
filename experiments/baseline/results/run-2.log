@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "canonical_universe_count": 855,
+  "target_state_count": 12,
+  "derived_common_pairwise_fact_count": 13,
+  "pairwise_only_state_count": 21,
+  "two_literal_syntactic_candidates_considered": 861,
+  "valid_nontrivial_two_literal_clause_count": 5,
+  "minimum_clause_count": 4,
+  "minimum_syntactic_cover_count": 1,
+  "exhaustive_cover_checks": [
+    {
+      "size": 0,
+      "subsets_checked": 1,
+      "cover_count": 0
+    },
+    {
+      "size": 1,
+      "subsets_checked": 5,
+      "cover_count": 0
+    },
+    {
+      "size": 2,
+      "subsets_checked": 10,
+      "cover_count": 0
+    },
+    {
+      "size": 3,
+      "subsets_checked": 10,
+      "cover_count": 0
+    },
+    {
+      "size": 4,
+      "subsets_checked": 5,
+      "cover_count": 1
+    }
+  ]
+}

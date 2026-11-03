@@ -1,0 +1,83 @@
+{
+  "repository": "HeliCorgi/hadwiger-nelson-lab",
+  "commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
+  "files": [
+    {
+      "path": "tools/check_separator_left_proof_tree.py",
+      "git_blob_sha": "9ed2d8f0aa7a22fa3f659fcbf53e010b43fd69e2",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/tools/check_separator_left_proof_tree.py",
+      "sha256": "000343f2b3bb70a8af9701f4ecd4f4f1cb2c064f281d15ec64f4c0e4a510defe",
+      "byte_length": 10465
+    },
+    {
+      "path": "results/separator-left-compression/analysis.json",
+      "git_blob_sha": "b44172c1ccf96d1fb731dce4b3251db8ecea199c",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-compression/analysis.json",
+      "sha256": "1bb57fe93cbe30b5f0f17fe2026524701f85eed0c52f3a8fc1ac5af87ed20014",
+      "byte_length": 50846
+    },
+    {
+      "path": "results/separator-left-q0-side-relation/analysis.json",
+      "git_blob_sha": "a3487e70070fd6b32845f4f504aa4e763bbebfbf",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q0-side-relation/analysis.json",
+      "sha256": "a89be1dc20f08d3cc5f38d96dd20828f2699897074587f30ed52f5884cd57f3b",
+      "byte_length": 9403
+    },
+    {
+      "path": "results/separator-left-q0-q10-compression/analysis.json",
+      "git_blob_sha": "332a749d3d6d3abec7d54874c142077d4d5b560b",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q0-q10-compression/analysis.json",
+      "sha256": "b27da53f9becd89d235c60b10588ade331589372bf359a8d07bcd446ea6ee844",
+      "byte_length": 11901
+    },
+    {
+      "path": "results/separator-left-q18-q256-compression/analysis.json",
+      "git_blob_sha": "93ca7fcdbcfe1bea052f99f561c2f4e97afe8c31",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q18-q256-compression/analysis.json",
+      "sha256": "e373d1146875cc5ad86c8d5d3fff99b7133d8ba7511451ae358848f591523556",
+      "byte_length": 4428
+    },
+    {
+      "path": "results/separator-left-q5-q6-palette-proof/analysis.json",
+      "git_blob_sha": "5e852bfa585b77567a7ecf09bedfa734f33b37b3",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q5-q6-palette-proof/analysis.json",
+      "sha256": "a76388f2d48a4406d2c7643c7fafb30ec057b17f1ea40995f3bf91d9157e059f",
+      "byte_length": 2565
+    },
+    {
+      "path": "results/separator-left-q5-q6-conditional-basis/analysis.json",
+      "git_blob_sha": "30bc02f880606ef82e657d23269e705d4f46d66e",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q5-q6-conditional-basis/analysis.json",
+      "sha256": "195e795afcb36ba19780e37d460930b2e635215264284742fafbe1291a8463c6",
+      "byte_length": 6477
+    },
+    {
+      "path": "results/separator-left-q8-q9-via-q104/analysis.json",
+      "git_blob_sha": "8e70f70b31fb900a02326bd0695ffabdb4d700d3",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q8-q9-via-q104/analysis.json",
+      "sha256": "3bc68d2bc84b98e3e65b4c8cc017c7ac6e5750e2fdafd850d0565b0e19101104",
+      "byte_length": 3439
+    },
+    {
+      "path": "results/separator-left-q8-q9-relation-cnf/analysis.json",
+      "git_blob_sha": "72b91735555da0a1d2ff62f76fb33eb4723aa266",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q8-q9-relation-cnf/analysis.json",
+      "sha256": "33f991f66d93d05f95fba359ad2d3a45e717638b57ae38672935223676b8a132",
+      "byte_length": 2744
+    },
+    {
+      "path": "results/separator-left-proof-tree-check/VERIFICATION.json",
+      "git_blob_sha": "15729bfdf2efbe534ddc3487f48852c53255c93a",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-proof-tree-check/VERIFICATION.json",
+      "sha256": "f4106dbdb83d16ebe65fce2cf678e265f92ade65cd69995034a5ede82c840795",
+      "byte_length": 1794
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "ba1e456656d146c0242b577d710da50e0c7aad96",
+      "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/LICENSE",
+      "sha256": "708e6a88196465de5187b1b5b46bfa1a6b1306d90005b0a7e786162c2e078a7d",
+      "byte_length": 11339
+    }
+  ]
+}

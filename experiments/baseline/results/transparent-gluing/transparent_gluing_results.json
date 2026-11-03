@@ -1,0 +1,613 @@
+{
+  "status": "ABSTRACT-TRANSPARENT-GLUING-VERIFIED",
+  "colors": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "method": "Complete labeled assignment enumeration with itertools.product; no pruning, SAT solver, or third-party package.",
+  "scope": "Four explicit abstract finite graphs and their proper 5-coloring relations. This is a separate control experiment, not verification of the upstream conditional quotient/P2 SAT leaves. No planar unit-distance realization, Hadwiger--Nelson bound, or P-versus-NP result is claimed.",
+  "boundary_relation_definition": "A boundary coloring belongs to R_G(S) iff it extends to a proper 5-coloring of all of G.",
+  "transparent_gluing_condition": {
+    "shared_vertices": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "shared_terminal_skeleton": "K4 minus C--D",
+    "internal_vertices_disjoint": true,
+    "cross_edges_between_internals": false,
+    "identity": "R_(G1 union_S G2)(S) = R_G1(S) intersection R_G2(S)",
+    "count_identity": "For each fixed labeled boundary, independent internal extension counts multiply.",
+    "negative_control": "The x--y edge violates internal independence and removes boundary state 0123."
+  },
+  "proof_explanation": [
+    "The skeleton forces A,B,C pairwise different and D different from A,B, giving 0122 or 0123.",
+    "A universal tip can use any of the 5-d colors absent from its four terminal neighbors.",
+    "Independent tips can reuse their colors: two tips give (5-d)^2 extensions.",
+    "Coupled tips must differ: two coupled tips give (5-d)*(5-d-1) extensions.",
+    "Thus both uncoupled cases preserve feasibility, while coupling removes exactly the d=4 state."
+  ],
+  "abstract_outer_naming_correspondence": {
+    "expanded_order": [
+      "B",
+      "A",
+      "C",
+      "C",
+      "B",
+      "D"
+    ],
+    "canonical_states": [
+      "012202",
+      "012203"
+    ],
+    "scope": "A renaming identity for this toy skeleton only; not a verification of any upstream graph or solver leaf."
+  },
+  "cases": [
+    {
+      "case": "k4_minus_edge",
+      "vertices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "ports_in_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ]
+      ],
+      "vertex_count": 4,
+      "edge_count": 5,
+      "tip_count": 0,
+      "tips_coupled_by_an_edge": false,
+      "total_labeled_assignments_examined": 625,
+      "expected_assignments_examined": 625,
+      "total_assignment_formula": "5^4",
+      "proper_labeled_colorings": 180,
+      "rejected_labeled_assignments": 445,
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 1,
+        "0123": 1
+      },
+      "all_canonical_boundary_extension_counts": {
+        "0000": 0,
+        "0001": 0,
+        "0010": 0,
+        "0011": 0,
+        "0012": 0,
+        "0100": 0,
+        "0101": 0,
+        "0102": 0,
+        "0110": 0,
+        "0111": 0,
+        "0112": 0,
+        "0120": 0,
+        "0121": 0,
+        "0122": 1,
+        "0123": 1
+      },
+      "extension_count_convention": "Counts are internal extensions of one fixed labeled boundary assignment. Every relabeling in each canonical boundary class was enumerated and checked to have the same count. Zero-extension boundary classes are retained.",
+      "analytic_count_rows": [
+        {
+          "canonical_boundary": "0122",
+          "used_colors_d": 3,
+          "unused_colors": 2,
+          "labeled_boundary_count": 60,
+          "labeled_boundary_count_formula": "(5)_3",
+          "extensions_per_fixed_labeled_boundary": 1,
+          "analytic_extension_formula": "(5-d)^0",
+          "analytic_extension_count": 1,
+          "contribution_to_proper_total": 60
+        },
+        {
+          "canonical_boundary": "0123",
+          "used_colors_d": 4,
+          "unused_colors": 1,
+          "labeled_boundary_count": 120,
+          "labeled_boundary_count_formula": "(5)_4",
+          "extensions_per_fixed_labeled_boundary": 1,
+          "analytic_extension_formula": "(5-d)^0",
+          "analytic_extension_count": 1,
+          "contribution_to_proper_total": 120
+        }
+      ],
+      "analytic_total_formula": "60*1 + 120*1",
+      "analytic_proper_total": 180,
+      "expected_proper_total": 180,
+      "checks": {
+        "visited_all_labeled_assignments": true,
+        "all_boundary_assignments_accounted_for": true,
+        "color_renaming_preserves_extension_count": true,
+        "skeleton_boundary_language": true,
+        "invalid_skeleton_boundaries_have_no_extensions": true,
+        "fixed_boundary_extension_counts_match_expected": true,
+        "canonical_port_relation_matches_expected": true,
+        "formula_matches_extensions_0122": true,
+        "color_orbit_size_matches_falling_factorial_0122": true,
+        "formula_matches_extensions_0123": true,
+        "color_orbit_size_matches_falling_factorial_0123": true,
+        "proper_total_equals_sum_over_raw_boundaries": true,
+        "proper_total_matches_analytic_formula": true,
+        "proper_total_matches_fixed_expected_value": true
+      },
+      "all_checks_passed": true
+    },
+    {
+      "case": "one_tip",
+      "vertices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "x"
+      ],
+      "ports_in_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "B",
+          "x"
+        ],
+        [
+          "C",
+          "x"
+        ],
+        [
+          "D",
+          "x"
+        ]
+      ],
+      "vertex_count": 5,
+      "edge_count": 9,
+      "tip_count": 1,
+      "tips_coupled_by_an_edge": false,
+      "total_labeled_assignments_examined": 3125,
+      "expected_assignments_examined": 3125,
+      "total_assignment_formula": "5^5",
+      "proper_labeled_colorings": 240,
+      "rejected_labeled_assignments": 2885,
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 2,
+        "0123": 1
+      },
+      "all_canonical_boundary_extension_counts": {
+        "0000": 0,
+        "0001": 0,
+        "0010": 0,
+        "0011": 0,
+        "0012": 0,
+        "0100": 0,
+        "0101": 0,
+        "0102": 0,
+        "0110": 0,
+        "0111": 0,
+        "0112": 0,
+        "0120": 0,
+        "0121": 0,
+        "0122": 2,
+        "0123": 1
+      },
+      "extension_count_convention": "Counts are internal extensions of one fixed labeled boundary assignment. Every relabeling in each canonical boundary class was enumerated and checked to have the same count. Zero-extension boundary classes are retained.",
+      "analytic_count_rows": [
+        {
+          "canonical_boundary": "0122",
+          "used_colors_d": 3,
+          "unused_colors": 2,
+          "labeled_boundary_count": 60,
+          "labeled_boundary_count_formula": "(5)_3",
+          "extensions_per_fixed_labeled_boundary": 2,
+          "analytic_extension_formula": "(5-d)^1",
+          "analytic_extension_count": 2,
+          "contribution_to_proper_total": 120
+        },
+        {
+          "canonical_boundary": "0123",
+          "used_colors_d": 4,
+          "unused_colors": 1,
+          "labeled_boundary_count": 120,
+          "labeled_boundary_count_formula": "(5)_4",
+          "extensions_per_fixed_labeled_boundary": 1,
+          "analytic_extension_formula": "(5-d)^1",
+          "analytic_extension_count": 1,
+          "contribution_to_proper_total": 120
+        }
+      ],
+      "analytic_total_formula": "60*2 + 120*1",
+      "analytic_proper_total": 240,
+      "expected_proper_total": 240,
+      "checks": {
+        "visited_all_labeled_assignments": true,
+        "all_boundary_assignments_accounted_for": true,
+        "color_renaming_preserves_extension_count": true,
+        "skeleton_boundary_language": true,
+        "invalid_skeleton_boundaries_have_no_extensions": true,
+        "fixed_boundary_extension_counts_match_expected": true,
+        "canonical_port_relation_matches_expected": true,
+        "formula_matches_extensions_0122": true,
+        "color_orbit_size_matches_falling_factorial_0122": true,
+        "formula_matches_extensions_0123": true,
+        "color_orbit_size_matches_falling_factorial_0123": true,
+        "proper_total_equals_sum_over_raw_boundaries": true,
+        "proper_total_matches_analytic_formula": true,
+        "proper_total_matches_fixed_expected_value": true
+      },
+      "all_checks_passed": true
+    },
+    {
+      "case": "two_uncoupled_tips",
+      "vertices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "x",
+        "y"
+      ],
+      "ports_in_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "B",
+          "x"
+        ],
+        [
+          "C",
+          "x"
+        ],
+        [
+          "D",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "B",
+          "y"
+        ],
+        [
+          "C",
+          "y"
+        ],
+        [
+          "D",
+          "y"
+        ]
+      ],
+      "vertex_count": 6,
+      "edge_count": 13,
+      "tip_count": 2,
+      "tips_coupled_by_an_edge": false,
+      "total_labeled_assignments_examined": 15625,
+      "expected_assignments_examined": 15625,
+      "total_assignment_formula": "5^6",
+      "proper_labeled_colorings": 360,
+      "rejected_labeled_assignments": 15265,
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 4,
+        "0123": 1
+      },
+      "all_canonical_boundary_extension_counts": {
+        "0000": 0,
+        "0001": 0,
+        "0010": 0,
+        "0011": 0,
+        "0012": 0,
+        "0100": 0,
+        "0101": 0,
+        "0102": 0,
+        "0110": 0,
+        "0111": 0,
+        "0112": 0,
+        "0120": 0,
+        "0121": 0,
+        "0122": 4,
+        "0123": 1
+      },
+      "extension_count_convention": "Counts are internal extensions of one fixed labeled boundary assignment. Every relabeling in each canonical boundary class was enumerated and checked to have the same count. Zero-extension boundary classes are retained.",
+      "analytic_count_rows": [
+        {
+          "canonical_boundary": "0122",
+          "used_colors_d": 3,
+          "unused_colors": 2,
+          "labeled_boundary_count": 60,
+          "labeled_boundary_count_formula": "(5)_3",
+          "extensions_per_fixed_labeled_boundary": 4,
+          "analytic_extension_formula": "(5-d)^2",
+          "analytic_extension_count": 4,
+          "contribution_to_proper_total": 240
+        },
+        {
+          "canonical_boundary": "0123",
+          "used_colors_d": 4,
+          "unused_colors": 1,
+          "labeled_boundary_count": 120,
+          "labeled_boundary_count_formula": "(5)_4",
+          "extensions_per_fixed_labeled_boundary": 1,
+          "analytic_extension_formula": "(5-d)^2",
+          "analytic_extension_count": 1,
+          "contribution_to_proper_total": 120
+        }
+      ],
+      "analytic_total_formula": "60*4 + 120*1",
+      "analytic_proper_total": 360,
+      "expected_proper_total": 360,
+      "checks": {
+        "visited_all_labeled_assignments": true,
+        "all_boundary_assignments_accounted_for": true,
+        "color_renaming_preserves_extension_count": true,
+        "skeleton_boundary_language": true,
+        "invalid_skeleton_boundaries_have_no_extensions": true,
+        "fixed_boundary_extension_counts_match_expected": true,
+        "canonical_port_relation_matches_expected": true,
+        "formula_matches_extensions_0122": true,
+        "color_orbit_size_matches_falling_factorial_0122": true,
+        "formula_matches_extensions_0123": true,
+        "color_orbit_size_matches_falling_factorial_0123": true,
+        "proper_total_equals_sum_over_raw_boundaries": true,
+        "proper_total_matches_analytic_formula": true,
+        "proper_total_matches_fixed_expected_value": true
+      },
+      "all_checks_passed": true
+    },
+    {
+      "case": "two_coupled_tips",
+      "vertices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "x",
+        "y"
+      ],
+      "ports_in_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "B",
+          "x"
+        ],
+        [
+          "C",
+          "x"
+        ],
+        [
+          "D",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "B",
+          "y"
+        ],
+        [
+          "C",
+          "y"
+        ],
+        [
+          "D",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "vertex_count": 6,
+      "edge_count": 14,
+      "tip_count": 2,
+      "tips_coupled_by_an_edge": true,
+      "total_labeled_assignments_examined": 15625,
+      "expected_assignments_examined": 15625,
+      "total_assignment_formula": "5^6",
+      "proper_labeled_colorings": 120,
+      "rejected_labeled_assignments": 15505,
+      "canonical_port_relation": [
+        "0122"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 2,
+        "0123": 0
+      },
+      "all_canonical_boundary_extension_counts": {
+        "0000": 0,
+        "0001": 0,
+        "0010": 0,
+        "0011": 0,
+        "0012": 0,
+        "0100": 0,
+        "0101": 0,
+        "0102": 0,
+        "0110": 0,
+        "0111": 0,
+        "0112": 0,
+        "0120": 0,
+        "0121": 0,
+        "0122": 2,
+        "0123": 0
+      },
+      "extension_count_convention": "Counts are internal extensions of one fixed labeled boundary assignment. Every relabeling in each canonical boundary class was enumerated and checked to have the same count. Zero-extension boundary classes are retained.",
+      "analytic_count_rows": [
+        {
+          "canonical_boundary": "0122",
+          "used_colors_d": 3,
+          "unused_colors": 2,
+          "labeled_boundary_count": 60,
+          "labeled_boundary_count_formula": "(5)_3",
+          "extensions_per_fixed_labeled_boundary": 2,
+          "analytic_extension_formula": "(5-d)*(5-d-1)",
+          "analytic_extension_count": 2,
+          "contribution_to_proper_total": 120
+        },
+        {
+          "canonical_boundary": "0123",
+          "used_colors_d": 4,
+          "unused_colors": 1,
+          "labeled_boundary_count": 120,
+          "labeled_boundary_count_formula": "(5)_4",
+          "extensions_per_fixed_labeled_boundary": 0,
+          "analytic_extension_formula": "(5-d)*(5-d-1)",
+          "analytic_extension_count": 0,
+          "contribution_to_proper_total": 0
+        }
+      ],
+      "analytic_total_formula": "60*2 + 120*0",
+      "analytic_proper_total": 120,
+      "expected_proper_total": 120,
+      "checks": {
+        "visited_all_labeled_assignments": true,
+        "all_boundary_assignments_accounted_for": true,
+        "color_renaming_preserves_extension_count": true,
+        "skeleton_boundary_language": true,
+        "invalid_skeleton_boundaries_have_no_extensions": true,
+        "fixed_boundary_extension_counts_match_expected": true,
+        "canonical_port_relation_matches_expected": true,
+        "formula_matches_extensions_0122": true,
+        "color_orbit_size_matches_falling_factorial_0122": true,
+        "formula_matches_extensions_0123": true,
+        "color_orbit_size_matches_falling_factorial_0123": true,
+        "proper_total_equals_sum_over_raw_boundaries": true,
+        "proper_total_matches_analytic_formula": true,
+        "proper_total_matches_fixed_expected_value": true
+      },
+      "all_checks_passed": true
+    }
+  ],
+  "cross_case_checks": {
+    "one_tip_preserves_every_labeled_boundary_feasibility": true,
+    "two_uncoupled_tips_preserve_every_labeled_boundary_feasibility": true,
+    "independent_internal_extension_counts_multiply": true,
+    "coupled_negative_control_removes_exactly_four_color_boundaries": true,
+    "abstract_six_position_renaming": true,
+    "total_enumeration_size": true
+  },
+  "total_assignments_examined": 35000,
+  "all_checks_passed": true
+}

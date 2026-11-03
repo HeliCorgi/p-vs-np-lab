@@ -1,0 +1,1459 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-11-03T17:35:13.805760+00:00",
+  "experiment": "SAT-to-stationarity via hold-or-increment maps",
+  "environment": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "dependencies": "Python standard library only"
+  },
+  "source_sha256": "62f8d65728f982baff6038e30c350fefcd044ad70102ea28c4c3226a674ac18f",
+  "provenance": {
+    "theory": {
+      "title": "Closed Timelike Curves Make Quantum and Classical Computing Equivalent",
+      "authors": [
+        "Scott Aaronson",
+        "John Watrous"
+      ],
+      "url": "https://arxiv.org/abs/0808.2669",
+      "use": "Motivation for distinguishing an ideal fixed-point resource from ordinary simulation; this script does not implement the paper's full PSPACE construction."
+    },
+    "existing_repository": {
+      "url": "https://github.com/HeliCorgi/spacetime-screening",
+      "commit": "f7a52ba2d25a3322ffd9ed250a265cc18853f105",
+      "v7_code": "https://github.com/HeliCorgi/spacetime-screening/blob/f7a52ba2d25a3322ffd9ed250a265cc18853f105/src/numerical/sa_deutsch_fixed_point_v7.py",
+      "v7_note": "https://github.com/HeliCorgi/spacetime-screening/blob/f7a52ba2d25a3322ffd9ed250a265cc18853f105/notes/sa-deutsch-fixed-point-v7.md",
+      "use": "Transfer of the idea of explicitly checking a proposed fixed-point construction and its scope. No source code, Gaussian/Fock dynamics, or physics is imported."
+    }
+  },
+  "map_definition": "T_F(x)=x when F(x)=true; otherwise T_F(x)=(x+1) mod 2**n.",
+  "compact_map_cost": "One CNF evaluation plus an n-bit increment; polynomial in the encoded formula and assignment lengths. Python integers and random bit access are not treated as unit-cost unbounded arithmetic.",
+  "important_distinctions": [
+    "A single-state fixed point and a stationary probability distribution are different objects.",
+    "Compact map description and one map evaluation do not enumerate the exponentially many states.",
+    "This program explicitly enumerates all transitions to verify each finite instance, so it pays exponential time and memory.",
+    "The unsatisfiable walk cycles forever from a point state. An invariant uniform distribution exists without the walk converging to it.",
+    "The three chosen formula families are easy. The unique-family 2**n-1 walk proves no lower bound for SAT or for other algorithms.",
+    "Ideal fixed-point selection is an added computational resource. Neither physical CTCs nor a polynomial-time classical fixed-point solver are implemented.",
+    "This is a new finite classical experiment, not a direct insertion of SAT into the reference repository's Gaussian/Fock toy model.",
+    "Wall times are single-run diagnostics, not asymptotic evidence or controlled performance benchmarks."
+  ],
+  "self_checks": {
+    "passed": true,
+    "checks": [
+      "Mixed functional graph with two cycles, one absorber, and a transient",
+      "Hand-written two-bit truth tables for all three families",
+      "Every reported case additionally checks analytic family counts, cycle measures, and independent pruning"
+    ]
+  },
+  "cases": [
+    {
+      "family": "unique_all_ones",
+      "n": 4,
+      "num_assignments": 16,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "num_clauses": 4,
+      "num_literals": 4,
+      "satisfying_assignments": 1,
+      "single_state_fixed_points": 1,
+      "recurrent_classes": 1,
+      "recurrent_states": 1,
+      "transient_states": 15,
+      "cycle_length_histogram": {
+        "1": 1
+      },
+      "max_steps_to_recurrence": 15,
+      "basin_size_histogram": {
+        "16": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 15,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              15
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 15,
+        "steps_to_fixed_point": 15,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 16,
+        "distinct_visited_states": 16,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "seconds": 3.1135999961406924e-05,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 16,
+        "formula_evaluations": 16,
+        "theoretical_fixed_width_target_bits": 64,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 1.7034999928000616e-05,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 5.6474999837519135e-05,
+      "checked": true
+    },
+    {
+      "family": "unsat_contradiction",
+      "n": 4,
+      "num_assignments": 16,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 2,
+      "satisfying_assignments": 0,
+      "single_state_fixed_points": 0,
+      "recurrent_classes": 1,
+      "recurrent_states": 16,
+      "transient_states": 0,
+      "cycle_length_histogram": {
+        "16": 1
+      },
+      "max_steps_to_recurrence": 0,
+      "basin_size_histogram": {
+        "16": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "0"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": false,
+        "classification": "Unique uniform stationary distribution on the full assignment cycle; no single-state fixed point.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 0,
+            "cycle_length": 16,
+            "first_cycle_states": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "mass_at_each_cycle_state": "1/16",
+            "satisfiability_expectation": "0"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "nontrivial_cycle",
+        "fixed_state": null,
+        "steps_to_fixed_point": null,
+        "steps_to_first_repeat": 16,
+        "cycle_period": 16,
+        "cycle_entry_step": 0,
+        "map_evaluations": 16,
+        "distinct_visited_states": 16,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "first_repeated_state": 0,
+        "seconds": 1.9289000192657113e-05,
+        "counting_convention": "Steps include the transition that first revisits a state."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 16,
+        "formula_evaluations": 16,
+        "theoretical_fixed_width_target_bits": 64,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 1.4322000424726866e-05,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 3.935899985663127e-05,
+      "checked": true
+    },
+    {
+      "family": "many_xor_first_two",
+      "n": 4,
+      "num_assignments": 16,
+      "cnf_dimacs_literals": [
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 4,
+      "satisfying_assignments": 8,
+      "single_state_fixed_points": 8,
+      "recurrent_classes": 8,
+      "recurrent_states": 8,
+      "transient_states": 8,
+      "cycle_length_histogram": {
+        "1": 8
+      },
+      "max_steps_to_recurrence": 2,
+      "basin_size_histogram": {
+        "1": 4,
+        "3": 4
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 1,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              1
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 2,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              2
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 5,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              5
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 6,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              6
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 1,
+        "steps_to_fixed_point": 1,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 2,
+        "distinct_visited_states": 2,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1
+        ],
+        "tail": [
+          0,
+          1
+        ],
+        "seconds": 8.963000254880171e-06,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 16,
+        "formula_evaluations": 16,
+        "theoretical_fixed_width_target_bits": 64,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 1.7536000086693093e-05,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.00016490799998791772,
+      "checked": true
+    },
+    {
+      "family": "unique_all_ones",
+      "n": 8,
+      "num_assignments": 256,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "num_clauses": 8,
+      "num_literals": 8,
+      "satisfying_assignments": 1,
+      "single_state_fixed_points": 1,
+      "recurrent_classes": 1,
+      "recurrent_states": 1,
+      "transient_states": 255,
+      "cycle_length_histogram": {
+        "1": 1
+      },
+      "max_steps_to_recurrence": 255,
+      "basin_size_histogram": {
+        "256": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 255,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              255
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 255,
+        "steps_to_fixed_point": 255,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 256,
+        "distinct_visited_states": 256,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "seconds": 0.00034478800034776214,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 256,
+        "formula_evaluations": 256,
+        "theoretical_fixed_width_target_bits": 2048,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.0002432559999760997,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.00011954000001423992,
+      "checked": true
+    },
+    {
+      "family": "unsat_contradiction",
+      "n": 8,
+      "num_assignments": 256,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 2,
+      "satisfying_assignments": 0,
+      "single_state_fixed_points": 0,
+      "recurrent_classes": 1,
+      "recurrent_states": 256,
+      "transient_states": 0,
+      "cycle_length_histogram": {
+        "256": 1
+      },
+      "max_steps_to_recurrence": 0,
+      "basin_size_histogram": {
+        "256": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "0"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": false,
+        "classification": "Unique uniform stationary distribution on the full assignment cycle; no single-state fixed point.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 0,
+            "cycle_length": 256,
+            "first_cycle_states": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "mass_at_each_cycle_state": "1/256",
+            "satisfiability_expectation": "0"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "nontrivial_cycle",
+        "fixed_state": null,
+        "steps_to_fixed_point": null,
+        "steps_to_first_repeat": 256,
+        "cycle_period": 256,
+        "cycle_entry_step": 0,
+        "map_evaluations": 256,
+        "distinct_visited_states": 256,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "first_repeated_state": 0,
+        "seconds": 0.0002569759999460075,
+        "counting_convention": "Steps include the transition that first revisits a state."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 256,
+        "formula_evaluations": 256,
+        "theoretical_fixed_width_target_bits": 2048,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.00019973000007666997,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.00015082600020832615,
+      "checked": true
+    },
+    {
+      "family": "many_xor_first_two",
+      "n": 8,
+      "num_assignments": 256,
+      "cnf_dimacs_literals": [
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 4,
+      "satisfying_assignments": 128,
+      "single_state_fixed_points": 128,
+      "recurrent_classes": 128,
+      "recurrent_states": 128,
+      "transient_states": 128,
+      "cycle_length_histogram": {
+        "1": 128
+      },
+      "max_steps_to_recurrence": 2,
+      "basin_size_histogram": {
+        "1": 64,
+        "3": 64
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 1,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              1
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 2,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              2
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 5,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              5
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 6,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              6
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 1,
+        "steps_to_fixed_point": 1,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 2,
+        "distinct_visited_states": 2,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1
+        ],
+        "tail": [
+          0,
+          1
+        ],
+        "seconds": 7.35100002202671e-06,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 256,
+        "formula_evaluations": 256,
+        "theoretical_fixed_width_target_bits": 2048,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.00024027099971135613,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.0005824760000905371,
+      "checked": true
+    },
+    {
+      "family": "unique_all_ones",
+      "n": 12,
+      "num_assignments": 4096,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ]
+      ],
+      "num_clauses": 12,
+      "num_literals": 12,
+      "satisfying_assignments": 1,
+      "single_state_fixed_points": 1,
+      "recurrent_classes": 1,
+      "recurrent_states": 1,
+      "transient_states": 4095,
+      "cycle_length_histogram": {
+        "1": 1
+      },
+      "max_steps_to_recurrence": 4095,
+      "basin_size_histogram": {
+        "4096": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 4095,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              4095
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 4095,
+        "steps_to_fixed_point": 4095,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 4096,
+        "distinct_visited_states": 4096,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          4084,
+          4085,
+          4086,
+          4087,
+          4088,
+          4089,
+          4090,
+          4091,
+          4092,
+          4093,
+          4094,
+          4095
+        ],
+        "seconds": 0.005602084000202012,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 4096,
+        "formula_evaluations": 4096,
+        "theoretical_fixed_width_target_bits": 49152,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.004377283000394527,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.0023817010001039307,
+      "checked": true
+    },
+    {
+      "family": "unsat_contradiction",
+      "n": 12,
+      "num_assignments": 4096,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 2,
+      "satisfying_assignments": 0,
+      "single_state_fixed_points": 0,
+      "recurrent_classes": 1,
+      "recurrent_states": 4096,
+      "transient_states": 0,
+      "cycle_length_histogram": {
+        "4096": 1
+      },
+      "max_steps_to_recurrence": 0,
+      "basin_size_histogram": {
+        "4096": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "0"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": false,
+        "classification": "Unique uniform stationary distribution on the full assignment cycle; no single-state fixed point.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 0,
+            "cycle_length": 4096,
+            "first_cycle_states": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "mass_at_each_cycle_state": "1/4096",
+            "satisfiability_expectation": "0"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "nontrivial_cycle",
+        "fixed_state": null,
+        "steps_to_fixed_point": null,
+        "steps_to_first_repeat": 4096,
+        "cycle_period": 4096,
+        "cycle_entry_step": 0,
+        "map_evaluations": 4096,
+        "distinct_visited_states": 4096,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          4084,
+          4085,
+          4086,
+          4087,
+          4088,
+          4089,
+          4090,
+          4091,
+          4092,
+          4093,
+          4094,
+          4095
+        ],
+        "first_repeated_state": 0,
+        "seconds": 0.004437003000020923,
+        "counting_convention": "Steps include the transition that first revisits a state."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 4096,
+        "formula_evaluations": 4096,
+        "theoretical_fixed_width_target_bits": 49152,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.004337113000019599,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.0027419939997344045,
+      "checked": true
+    },
+    {
+      "family": "many_xor_first_two",
+      "n": 12,
+      "num_assignments": 4096,
+      "cnf_dimacs_literals": [
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 4,
+      "satisfying_assignments": 2048,
+      "single_state_fixed_points": 2048,
+      "recurrent_classes": 2048,
+      "recurrent_states": 2048,
+      "transient_states": 2048,
+      "cycle_length_histogram": {
+        "1": 2048
+      },
+      "max_steps_to_recurrence": 2,
+      "basin_size_histogram": {
+        "1": 1024,
+        "3": 1024
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 1,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              1
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 2,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              2
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 5,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              5
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 6,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              6
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 1,
+        "steps_to_fixed_point": 1,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 2,
+        "distinct_visited_states": 2,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1
+        ],
+        "tail": [
+          0,
+          1
+        ],
+        "seconds": 9.483999747317284e-06,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 4096,
+        "formula_evaluations": 4096,
+        "theoretical_fixed_width_target_bits": 49152,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.0045155009997870366,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.00958784900012688,
+      "checked": true
+    },
+    {
+      "family": "unique_all_ones",
+      "n": 16,
+      "num_assignments": 65536,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ]
+      ],
+      "num_clauses": 16,
+      "num_literals": 16,
+      "satisfying_assignments": 1,
+      "single_state_fixed_points": 1,
+      "recurrent_classes": 1,
+      "recurrent_states": 1,
+      "transient_states": 65535,
+      "cycle_length_histogram": {
+        "1": 1
+      },
+      "max_steps_to_recurrence": 65535,
+      "basin_size_histogram": {
+        "65536": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 65535,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              65535
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 65535,
+        "steps_to_fixed_point": 65535,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 65536,
+        "distinct_visited_states": 65536,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          65524,
+          65525,
+          65526,
+          65527,
+          65528,
+          65529,
+          65530,
+          65531,
+          65532,
+          65533,
+          65534,
+          65535
+        ],
+        "seconds": 0.10301005100018301,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 65536,
+        "formula_evaluations": 65536,
+        "theoretical_fixed_width_target_bits": 1048576,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.07585865800001557,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.03639235800028473,
+      "checked": true
+    },
+    {
+      "family": "unsat_contradiction",
+      "n": 16,
+      "num_assignments": 65536,
+      "cnf_dimacs_literals": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 2,
+      "satisfying_assignments": 0,
+      "single_state_fixed_points": 0,
+      "recurrent_classes": 1,
+      "recurrent_states": 65536,
+      "transient_states": 0,
+      "cycle_length_histogram": {
+        "65536": 1
+      },
+      "max_steps_to_recurrence": 0,
+      "basin_size_histogram": {
+        "65536": 1
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "0"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": false,
+        "classification": "Unique uniform stationary distribution on the full assignment cycle; no single-state fixed point.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 0,
+            "cycle_length": 65536,
+            "first_cycle_states": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "mass_at_each_cycle_state": "1/65536",
+            "satisfiability_expectation": "0"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "nontrivial_cycle",
+        "fixed_state": null,
+        "steps_to_fixed_point": null,
+        "steps_to_first_repeat": 65536,
+        "cycle_period": 65536,
+        "cycle_entry_step": 0,
+        "map_evaluations": 65536,
+        "distinct_visited_states": 65536,
+        "prefix": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "tail": [
+          65524,
+          65525,
+          65526,
+          65527,
+          65528,
+          65529,
+          65530,
+          65531,
+          65532,
+          65533,
+          65534,
+          65535
+        ],
+        "first_repeated_state": 0,
+        "seconds": 0.0773381120002341,
+        "counting_convention": "Steps include the transition that first revisits a state."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 65536,
+        "formula_evaluations": 65536,
+        "theoretical_fixed_width_target_bits": 1048576,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.06451652700025079,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.05053234899969539,
+      "checked": true
+    },
+    {
+      "family": "many_xor_first_two",
+      "n": 16,
+      "num_assignments": 65536,
+      "cnf_dimacs_literals": [
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "num_clauses": 2,
+      "num_literals": 4,
+      "satisfying_assignments": 32768,
+      "single_state_fixed_points": 32768,
+      "recurrent_classes": 32768,
+      "recurrent_states": 32768,
+      "transient_states": 32768,
+      "cycle_length_histogram": {
+        "1": 32768
+      },
+      "max_steps_to_recurrence": 2,
+      "basin_size_histogram": {
+        "1": 16384,
+        "3": 16384
+      },
+      "stationarity": {
+        "definition": "mu(y) = sum_{x:T_F(x)=y} mu(x)",
+        "all_extreme_stationary_distributions_checked_exactly": true,
+        "check_method": "Integer incoming counts verify uniform mass on every recurrent cycle; independent indegree pruning confirms the complete recurrent-node set.",
+        "finite_graph_fact_used": "Every stationary distribution of a finite deterministic transition system is a convex combination of uniform measures on its directed cycles; transient nodes have zero stationary mass.",
+        "satisfiability_expectations_at_all_extreme_points": [
+          "1"
+        ],
+        "all_stationary_distributions_supported_on_satisfying_states": true,
+        "classification": "Convex combinations of point masses at satisfying assignments.",
+        "sample_extreme_distributions": [
+          {
+            "cycle_representative": 1,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              1
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 2,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              2
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 5,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              5
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          },
+          {
+            "cycle_representative": 6,
+            "cycle_length": 1,
+            "first_cycle_states": [
+              6
+            ],
+            "mass_at_each_cycle_state": "1",
+            "satisfiability_expectation": "1"
+          }
+        ],
+        "samples_only_note": "The displayed examples are truncated; the counts and exact checks cover every recurrent class."
+      },
+      "direct_compact_map_walk_from_zero": {
+        "start": 0,
+        "kind": "fixed_point",
+        "fixed_state": 1,
+        "steps_to_fixed_point": 1,
+        "steps_to_first_repeat": null,
+        "cycle_period": 1,
+        "map_evaluations": 2,
+        "distinct_visited_states": 2,
+        "fixed_state_satisfies": true,
+        "prefix": [
+          0,
+          1
+        ],
+        "tail": [
+          0,
+          1
+        ],
+        "seconds": 2.078099987556925e-05,
+        "counting_convention": "Steps exclude the final self-loop; the last map evaluation confirms absorption."
+      },
+      "explicit_transition_table": {
+        "enumerated": true,
+        "entries": 65536,
+        "formula_evaluations": 65536,
+        "theoretical_fixed_width_target_bits": 1048576,
+        "memory_note": "This is only the target array's packed n-bit lower-level representation size, not measured Python memory; Python objects and analysis arrays use more.",
+        "seconds": 0.07673131999990801,
+        "scope": "Exponential finite enumeration, separate from the compact formula and from one successor evaluation."
+      },
+      "analysis_seconds": 0.17433157100003882,
+      "checked": true
+    }
+  ]
+}

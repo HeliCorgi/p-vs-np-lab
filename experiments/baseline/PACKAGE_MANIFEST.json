@@ -1,0 +1,144 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 10740,
+      "sha256": "e39a8af40017ff62b8f73d7feae12a7587a55f3a0ce77f3e30ebb21479a392ac"
+    },
+    {
+      "path": "boundary_compression.py",
+      "bytes": 10187,
+      "sha256": "57af091e36ffde7ff366e76893e2a6cf8a212eeea8656de888b2a766dad54058"
+    },
+    {
+      "path": "fixedpoint_sat.py",
+      "bytes": 20119,
+      "sha256": "62f8d65728f982baff6038e30c350fefcd044ad70102ea28c4c3226a674ac18f"
+    },
+    {
+      "path": "results/RUN_SUMMARY.json",
+      "bytes": 655,
+      "sha256": "640ee1018247be3a9429a984cab4257ab2f1ef74e905dae034073338fe639df6"
+    },
+    {
+      "path": "results/boundary_compression.json",
+      "bytes": 8041,
+      "sha256": "6e260cfb25f9112cbd6152acc680124940efdcab1ce39757b62465e7139363da"
+    },
+    {
+      "path": "results/boundary_counts.csv",
+      "bytes": 234,
+      "sha256": "049f6b19cf013e22e7a8f234de0a27a21d88c46afb345076416bf630563f6b58"
+    },
+    {
+      "path": "results/fixedpoint/fixedpoint_sat_results.json",
+      "bytes": 46931,
+      "sha256": "2fb43bdccc9b5e71aead450a8f870cf79f80bcc27a76bf335999cb8a3da81457"
+    },
+    {
+      "path": "results/fixedpoint/fixedpoint_sat_summary.csv",
+      "bytes": 1864,
+      "sha256": "7d7fd33669e15ae72b50761f56c07e7eebb9c8db19fdded9b4773677001d43cf"
+    },
+    {
+      "path": "results/hn_existing_checker.json",
+      "bytes": 2862,
+      "sha256": "be5d210bed183f08009934bd7ad2ca974dce0681897e683b727d7f9ed737c36c"
+    },
+    {
+      "path": "results/run-1.log",
+      "bytes": 100,
+      "sha256": "0ab81ce51f16c6b607c56a92155f7c436afe22f335c644c95a651f6312159712"
+    },
+    {
+      "path": "results/run-2.log",
+      "bytes": 778,
+      "sha256": "7b0e938d95b46865ae8a5781e49b432f11fde387f1ac392b4332b99d93d883bc"
+    },
+    {
+      "path": "results/run-3.log",
+      "bytes": 1445,
+      "sha256": "43337c70803f670655cf4cd45a135035ed9d9b0daa74c21ed78aae0feda7ca13"
+    },
+    {
+      "path": "results/run-4.log",
+      "bytes": 614,
+      "sha256": "754cba19847dfd430740e0e6411f1958876b4fa77fcf854059a8e513d99a22ed"
+    },
+    {
+      "path": "results/transparent-gluing/transparent_gluing_results.json",
+      "bytes": 17225,
+      "sha256": "2dc5cea91166b8725710bd5b136b9939db3cab0767d210e9cbdcb5fc4ecce7ce"
+    },
+    {
+      "path": "run_all.py",
+      "bytes": 3543,
+      "sha256": "c8e3fc15c0b2b609a6fbf4da52d8f5bae968cfb1ffc29ca89f3d39743d34d89b"
+    },
+    {
+      "path": "transparent_gluing.py",
+      "bytes": 12851,
+      "sha256": "ea1f0b76502bccb7b46b9d2f1ef4caa81f3013ab47dd96f66301c1ca492dd29d"
+    },
+    {
+      "path": "upstream/SOURCE_MANIFEST.json",
+      "bytes": 4793,
+      "sha256": "29aa05926fcecb5214eadff866e944ecb68999b856e7e7af09cbca99fb59de13"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/LICENSE",
+      "bytes": 11339,
+      "sha256": "708e6a88196465de5187b1b5b46bfa1a6b1306d90005b0a7e786162c2e078a7d"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-compression/analysis.json",
+      "bytes": 50846,
+      "sha256": "1bb57fe93cbe30b5f0f17fe2026524701f85eed0c52f3a8fc1ac5af87ed20014"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-proof-tree-check/VERIFICATION.json",
+      "bytes": 1794,
+      "sha256": "f4106dbdb83d16ebe65fce2cf678e265f92ade65cd69995034a5ede82c840795"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q0-q10-compression/analysis.json",
+      "bytes": 11901,
+      "sha256": "b27da53f9becd89d235c60b10588ade331589372bf359a8d07bcd446ea6ee844"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q0-side-relation/analysis.json",
+      "bytes": 9403,
+      "sha256": "a89be1dc20f08d3cc5f38d96dd20828f2699897074587f30ed52f5884cd57f3b"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q18-q256-compression/analysis.json",
+      "bytes": 4428,
+      "sha256": "e373d1146875cc5ad86c8d5d3fff99b7133d8ba7511451ae358848f591523556"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q5-q6-conditional-basis/analysis.json",
+      "bytes": 6477,
+      "sha256": "195e795afcb36ba19780e37d460930b2e635215264284742fafbe1291a8463c6"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q5-q6-palette-proof/analysis.json",
+      "bytes": 2565,
+      "sha256": "a76388f2d48a4406d2c7643c7fafb30ec057b17f1ea40995f3bf91d9157e059f"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q8-q9-relation-cnf/analysis.json",
+      "bytes": 2744,
+      "sha256": "33f991f66d93d05f95fba359ad2d3a45e717638b57ae38672935223676b8a132"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/results/separator-left-q8-q9-via-q104/analysis.json",
+      "bytes": 3439,
+      "sha256": "3bc68d2bc84b98e3e65b4c8cc017c7ac6e5750e2fdafd850d0565b0e19101104"
+    },
+    {
+      "path": "upstream/hadwiger-nelson-lab/tools/check_separator_left_proof_tree.py",
+      "bytes": 10465,
+      "sha256": "000343f2b3bb70a8af9701f4ecd4f4f1cb2c064f281d15ec64f4c0e4a510defe"
+    }
+  ]
+}

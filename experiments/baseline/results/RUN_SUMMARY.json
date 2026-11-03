@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "python_version": "3.12.14",
+  "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
+  "upstream_files_hash_verified": 11,
+  "upstream_composition_checks": 19,
+  "upstream_composition_checks_passed": true,
+  "boundary_states_rechecked": 855,
+  "boundary_minimum_additional_clauses": 4,
+  "boundary_minimum_covers": 1,
+  "gluing_assignments_enumerated": 35000,
+  "gluing_checks_passed": true,
+  "fixedpoint_cases": 12,
+  "fixedpoint_self_checks_passed": true,
+  "fixedpoint_runs_completed_without_failed_assertions": true,
+  "scope": "Finite experiments and conditional saved-relation checks; no P-versus-NP resolution."
+}

@@ -1,0 +1,1634 @@
+{
+  "all_checks_passed": true,
+  "auxiliary_variable_qualification": "Retaining the existential center x keeps a representation using q binary disequality constraints. The width obstruction applies only after eliminating auxiliaries and restricting literals to terminal-pair equality/disequality.",
+  "cases": [
+    {
+      "all_checks_passed": true,
+      "allowed_canonical_states": [
+        "000",
+        "001",
+        "010",
+        "011"
+      ],
+      "boundary_allowed_labeled_assignments": 21,
+      "boundary_excluded_labeled_assignments": 6,
+      "boundary_labeled_assignments": 27,
+      "canonical_allowed_states": 4,
+      "canonical_boundary_states": 5,
+      "certificate": {
+        "all_disequality_literals_true_at_excluded_state": true,
+        "all_equality_literals_false_at_excluded_state": true,
+        "excluded_state": [
+          0,
+          1,
+          2
+        ],
+        "reasoning": [
+          "A CNF excluding allDistinct has a clause false at that state.",
+          "Every disequality is true there, so that false clause can contain only equality literals.",
+          "For each terminal pair, its witness is allowed and makes exactly that pair equality true.",
+          "A valid false-at-allDistinct clause must therefore include every pair equality.",
+          "The full disjunction is exact, proving both the lower and upper width bounds."
+        ],
+        "single_pair_witnesses": [
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              0,
+              1
+            ],
+            "canonical_boundary": "001",
+            "center_color": 2,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              0
+            ],
+            "canonical_boundary": "010",
+            "center_color": 2,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              1
+            ],
+            "canonical_boundary": "011",
+            "center_color": 2,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            }
+          }
+        ],
+        "type": "excluded-state-and-single-equality-witnesses",
+        "witness_count": 3
+      },
+      "checks": {
+        "all_center_extension_counts_equal_missing_color_count": true,
+        "all_disequalities_true_at_excluded_state": true,
+        "all_equalities_false_at_excluded_state": true,
+        "canonical_relation_excludes_only_all_distinct": true,
+        "exhaustive_false_at_all_distinct_clause_audit": true,
+        "join_projection_matches_direct_existential_enumeration": true,
+        "joined_star_count_matches_q_times_q_minus_one_power_q": true,
+        "joined_star_rows_match_direct_full_coloring_count": true,
+        "projected_relation_is_color_symmetric": true,
+        "projection_count_matches_q_power_q_minus_factorial_q": true,
+        "single_full_equality_clause_is_exact": true,
+        "single_pair_witness_0_1": true,
+        "single_pair_witness_0_2": true,
+        "single_pair_witness_1_2": true
+      },
+      "exact_auxiliary_free_cnf": [
+        [
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t1"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t2"
+          }
+        ]
+      ],
+      "excluded_canonical_state": "012",
+      "input_binary_disequality_constraints": [
+        [
+          "t0",
+          "x"
+        ],
+        [
+          "t1",
+          "x"
+        ],
+        [
+          "t2",
+          "x"
+        ]
+      ],
+      "input_constraint_count": 3,
+      "input_labeled_assignments_checked_directly": 81,
+      "input_proper_colorings": 24,
+      "internal_variables": [
+        "x"
+      ],
+      "minimum_required_clause_width": 3,
+      "ports_in_order": [
+        "t0",
+        "t1",
+        "t2"
+      ],
+      "q": 3,
+      "small_clause_exhaustion": {
+        "clause_space": "All subsets of terminal equality literals; exactly the normalized clauses false at allDistinct.",
+        "clauses_checked": 8,
+        "unique_valid_clause": "the disjunction of every terminal-pair equality",
+        "valid_clause_count": 1
+      },
+      "width_two_auxiliary_free_representation_possible": false
+    },
+    {
+      "all_checks_passed": true,
+      "allowed_canonical_states": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0012",
+        "0100",
+        "0101",
+        "0102",
+        "0110",
+        "0111",
+        "0112",
+        "0120",
+        "0121",
+        "0122"
+      ],
+      "boundary_allowed_labeled_assignments": 232,
+      "boundary_excluded_labeled_assignments": 24,
+      "boundary_labeled_assignments": 256,
+      "canonical_allowed_states": 14,
+      "canonical_boundary_states": 15,
+      "certificate": {
+        "all_disequality_literals_true_at_excluded_state": true,
+        "all_equality_literals_false_at_excluded_state": true,
+        "excluded_state": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reasoning": [
+          "A CNF excluding allDistinct has a clause false at that state.",
+          "Every disequality is true there, so that false clause can contain only equality literals.",
+          "For each terminal pair, its witness is allowed and makes exactly that pair equality true.",
+          "A valid false-at-allDistinct clause must therefore include every pair equality.",
+          "The full disjunction is exact, proving both the lower and upper width bounds."
+        ],
+        "single_pair_witnesses": [
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              0,
+              1,
+              2
+            ],
+            "canonical_boundary": "0012",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              0,
+              2
+            ],
+            "canonical_boundary": "0102",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              0
+            ],
+            "canonical_boundary": "0120",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              1,
+              2
+            ],
+            "canonical_boundary": "0112",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              1
+            ],
+            "canonical_boundary": "0121",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              2
+            ],
+            "canonical_boundary": "0122",
+            "center_color": 3,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            }
+          }
+        ],
+        "type": "excluded-state-and-single-equality-witnesses",
+        "witness_count": 6
+      },
+      "checks": {
+        "all_center_extension_counts_equal_missing_color_count": true,
+        "all_disequalities_true_at_excluded_state": true,
+        "all_equalities_false_at_excluded_state": true,
+        "canonical_relation_excludes_only_all_distinct": true,
+        "exhaustive_false_at_all_distinct_clause_audit": true,
+        "join_projection_matches_direct_existential_enumeration": true,
+        "joined_star_count_matches_q_times_q_minus_one_power_q": true,
+        "joined_star_rows_match_direct_full_coloring_count": true,
+        "projected_relation_is_color_symmetric": true,
+        "projection_count_matches_q_power_q_minus_factorial_q": true,
+        "single_full_equality_clause_is_exact": true,
+        "single_pair_witness_0_1": true,
+        "single_pair_witness_0_2": true,
+        "single_pair_witness_0_3": true,
+        "single_pair_witness_1_2": true,
+        "single_pair_witness_1_3": true,
+        "single_pair_witness_2_3": true
+      },
+      "exact_auxiliary_free_cnf": [
+        [
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t1"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t3"
+          }
+        ]
+      ],
+      "excluded_canonical_state": "0123",
+      "input_binary_disequality_constraints": [
+        [
+          "t0",
+          "x"
+        ],
+        [
+          "t1",
+          "x"
+        ],
+        [
+          "t2",
+          "x"
+        ],
+        [
+          "t3",
+          "x"
+        ]
+      ],
+      "input_constraint_count": 4,
+      "input_labeled_assignments_checked_directly": 1024,
+      "input_proper_colorings": 324,
+      "internal_variables": [
+        "x"
+      ],
+      "minimum_required_clause_width": 6,
+      "ports_in_order": [
+        "t0",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "q": 4,
+      "small_clause_exhaustion": {
+        "clause_space": "All subsets of terminal equality literals; exactly the normalized clauses false at allDistinct.",
+        "clauses_checked": 64,
+        "unique_valid_clause": "the disjunction of every terminal-pair equality",
+        "valid_clause_count": 1
+      },
+      "width_two_auxiliary_free_representation_possible": false
+    },
+    {
+      "all_checks_passed": true,
+      "allowed_canonical_states": [
+        "00000",
+        "00001",
+        "00010",
+        "00011",
+        "00012",
+        "00100",
+        "00101",
+        "00102",
+        "00110",
+        "00111",
+        "00112",
+        "00120",
+        "00121",
+        "00122",
+        "00123",
+        "01000",
+        "01001",
+        "01002",
+        "01010",
+        "01011",
+        "01012",
+        "01020",
+        "01021",
+        "01022",
+        "01023",
+        "01100",
+        "01101",
+        "01102",
+        "01110",
+        "01111",
+        "01112",
+        "01120",
+        "01121",
+        "01122",
+        "01123",
+        "01200",
+        "01201",
+        "01202",
+        "01203",
+        "01210",
+        "01211",
+        "01212",
+        "01213",
+        "01220",
+        "01221",
+        "01222",
+        "01223",
+        "01230",
+        "01231",
+        "01232",
+        "01233"
+      ],
+      "boundary_allowed_labeled_assignments": 3005,
+      "boundary_excluded_labeled_assignments": 120,
+      "boundary_labeled_assignments": 3125,
+      "canonical_allowed_states": 51,
+      "canonical_boundary_states": 52,
+      "certificate": {
+        "all_disequality_literals_true_at_excluded_state": true,
+        "all_equality_literals_false_at_excluded_state": true,
+        "excluded_state": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "reasoning": [
+          "A CNF excluding allDistinct has a clause false at that state.",
+          "Every disequality is true there, so that false clause can contain only equality literals.",
+          "For each terminal pair, its witness is allowed and makes exactly that pair equality true.",
+          "A valid false-at-allDistinct clause must therefore include every pair equality.",
+          "The full disjunction is exact, proving both the lower and upper width bounds."
+        ],
+        "single_pair_witnesses": [
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              0,
+              1,
+              2,
+              3
+            ],
+            "canonical_boundary": "00123",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              0,
+              2,
+              3
+            ],
+            "canonical_boundary": "01023",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              0,
+              3
+            ],
+            "canonical_boundary": "01203",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              0
+            ],
+            "canonical_boundary": "01230",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              1,
+              2,
+              3
+            ],
+            "canonical_boundary": "01123",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              1,
+              3
+            ],
+            "canonical_boundary": "01213",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              1
+            ],
+            "canonical_boundary": "01231",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              2,
+              3
+            ],
+            "canonical_boundary": "01223",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              2
+            ],
+            "canonical_boundary": "01232",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              3
+            ],
+            "canonical_boundary": "01233",
+            "center_color": 4,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t4"
+            }
+          }
+        ],
+        "type": "excluded-state-and-single-equality-witnesses",
+        "witness_count": 10
+      },
+      "checks": {
+        "all_center_extension_counts_equal_missing_color_count": true,
+        "all_disequalities_true_at_excluded_state": true,
+        "all_equalities_false_at_excluded_state": true,
+        "canonical_relation_excludes_only_all_distinct": true,
+        "join_projection_matches_direct_existential_enumeration": true,
+        "joined_star_count_matches_q_times_q_minus_one_power_q": true,
+        "joined_star_rows_match_direct_full_coloring_count": true,
+        "projected_relation_is_color_symmetric": true,
+        "projection_count_matches_q_power_q_minus_factorial_q": true,
+        "single_full_equality_clause_is_exact": true,
+        "single_pair_witness_0_1": true,
+        "single_pair_witness_0_2": true,
+        "single_pair_witness_0_3": true,
+        "single_pair_witness_0_4": true,
+        "single_pair_witness_1_2": true,
+        "single_pair_witness_1_3": true,
+        "single_pair_witness_1_4": true,
+        "single_pair_witness_2_3": true,
+        "single_pair_witness_2_4": true,
+        "single_pair_witness_3_4": true
+      },
+      "exact_auxiliary_free_cnf": [
+        [
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t1"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t3",
+            "right": "t4"
+          }
+        ]
+      ],
+      "excluded_canonical_state": "01234",
+      "input_binary_disequality_constraints": [
+        [
+          "t0",
+          "x"
+        ],
+        [
+          "t1",
+          "x"
+        ],
+        [
+          "t2",
+          "x"
+        ],
+        [
+          "t3",
+          "x"
+        ],
+        [
+          "t4",
+          "x"
+        ]
+      ],
+      "input_constraint_count": 5,
+      "input_labeled_assignments_checked_directly": 15625,
+      "input_proper_colorings": 5120,
+      "internal_variables": [
+        "x"
+      ],
+      "minimum_required_clause_width": 10,
+      "ports_in_order": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "q": 5,
+      "small_clause_exhaustion": null,
+      "width_two_auxiliary_free_representation_possible": false
+    },
+    {
+      "all_checks_passed": true,
+      "allowed_canonical_states": [
+        "000000",
+        "000001",
+        "000010",
+        "000011",
+        "000012",
+        "000100",
+        "000101",
+        "000102",
+        "000110",
+        "000111",
+        "000112",
+        "000120",
+        "000121",
+        "000122",
+        "000123",
+        "001000",
+        "001001",
+        "001002",
+        "001010",
+        "001011",
+        "001012",
+        "001020",
+        "001021",
+        "001022",
+        "001023",
+        "001100",
+        "001101",
+        "001102",
+        "001110",
+        "001111",
+        "001112",
+        "001120",
+        "001121",
+        "001122",
+        "001123",
+        "001200",
+        "001201",
+        "001202",
+        "001203",
+        "001210",
+        "001211",
+        "001212",
+        "001213",
+        "001220",
+        "001221",
+        "001222",
+        "001223",
+        "001230",
+        "001231",
+        "001232",
+        "001233",
+        "001234",
+        "010000",
+        "010001",
+        "010002",
+        "010010",
+        "010011",
+        "010012",
+        "010020",
+        "010021",
+        "010022",
+        "010023",
+        "010100",
+        "010101",
+        "010102",
+        "010110",
+        "010111",
+        "010112",
+        "010120",
+        "010121",
+        "010122",
+        "010123",
+        "010200",
+        "010201",
+        "010202",
+        "010203",
+        "010210",
+        "010211",
+        "010212",
+        "010213",
+        "010220",
+        "010221",
+        "010222",
+        "010223",
+        "010230",
+        "010231",
+        "010232",
+        "010233",
+        "010234",
+        "011000",
+        "011001",
+        "011002",
+        "011010",
+        "011011",
+        "011012",
+        "011020",
+        "011021",
+        "011022",
+        "011023",
+        "011100",
+        "011101",
+        "011102",
+        "011110",
+        "011111",
+        "011112",
+        "011120",
+        "011121",
+        "011122",
+        "011123",
+        "011200",
+        "011201",
+        "011202",
+        "011203",
+        "011210",
+        "011211",
+        "011212",
+        "011213",
+        "011220",
+        "011221",
+        "011222",
+        "011223",
+        "011230",
+        "011231",
+        "011232",
+        "011233",
+        "011234",
+        "012000",
+        "012001",
+        "012002",
+        "012003",
+        "012010",
+        "012011",
+        "012012",
+        "012013",
+        "012020",
+        "012021",
+        "012022",
+        "012023",
+        "012030",
+        "012031",
+        "012032",
+        "012033",
+        "012034",
+        "012100",
+        "012101",
+        "012102",
+        "012103",
+        "012110",
+        "012111",
+        "012112",
+        "012113",
+        "012120",
+        "012121",
+        "012122",
+        "012123",
+        "012130",
+        "012131",
+        "012132",
+        "012133",
+        "012134",
+        "012200",
+        "012201",
+        "012202",
+        "012203",
+        "012210",
+        "012211",
+        "012212",
+        "012213",
+        "012220",
+        "012221",
+        "012222",
+        "012223",
+        "012230",
+        "012231",
+        "012232",
+        "012233",
+        "012234",
+        "012300",
+        "012301",
+        "012302",
+        "012303",
+        "012304",
+        "012310",
+        "012311",
+        "012312",
+        "012313",
+        "012314",
+        "012320",
+        "012321",
+        "012322",
+        "012323",
+        "012324",
+        "012330",
+        "012331",
+        "012332",
+        "012333",
+        "012334",
+        "012340",
+        "012341",
+        "012342",
+        "012343",
+        "012344"
+      ],
+      "boundary_allowed_labeled_assignments": 45936,
+      "boundary_excluded_labeled_assignments": 720,
+      "boundary_labeled_assignments": 46656,
+      "canonical_allowed_states": 202,
+      "canonical_boundary_states": 203,
+      "certificate": {
+        "all_disequality_literals_true_at_excluded_state": true,
+        "all_equality_literals_false_at_excluded_state": true,
+        "excluded_state": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reasoning": [
+          "A CNF excluding allDistinct has a clause false at that state.",
+          "Every disequality is true there, so that false clause can contain only equality literals.",
+          "For each terminal pair, its witness is allowed and makes exactly that pair equality true.",
+          "A valid false-at-allDistinct clause must therefore include every pair equality.",
+          "The full disjunction is exact, proving both the lower and upper width bounds."
+        ],
+        "single_pair_witnesses": [
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "canonical_boundary": "001234",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t1"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              0,
+              2,
+              3,
+              4
+            ],
+            "canonical_boundary": "010234",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              0,
+              3,
+              4
+            ],
+            "canonical_boundary": "012034",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              0,
+              4
+            ],
+            "canonical_boundary": "012304",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "canonical_boundary": "012340",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t5"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t0",
+              "right": "t5"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              1,
+              2,
+              3,
+              4
+            ],
+            "canonical_boundary": "011234",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t2"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              1,
+              3,
+              4
+            ],
+            "canonical_boundary": "012134",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              1,
+              4
+            ],
+            "canonical_boundary": "012314",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              1
+            ],
+            "canonical_boundary": "012341",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t5"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t1",
+              "right": "t5"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              2,
+              3,
+              4
+            ],
+            "canonical_boundary": "012234",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t3"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              2,
+              4
+            ],
+            "canonical_boundary": "012324",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              2
+            ],
+            "canonical_boundary": "012342",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t5"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t2",
+              "right": "t5"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              3,
+              4
+            ],
+            "canonical_boundary": "012334",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t4"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t4"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              3
+            ],
+            "canonical_boundary": "012343",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t5"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t3",
+              "right": "t5"
+            }
+          },
+          {
+            "boundary_colors_in_port_order": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              4
+            ],
+            "canonical_boundary": "012344",
+            "center_color": 5,
+            "extends_to_input_star": true,
+            "falsifies_disjunction_of_all_other_equalities": true,
+            "only_true_terminal_equality": {
+              "kind": "eq",
+              "left": "t4",
+              "right": "t5"
+            },
+            "required_equality_literal": {
+              "kind": "eq",
+              "left": "t4",
+              "right": "t5"
+            }
+          }
+        ],
+        "type": "excluded-state-and-single-equality-witnesses",
+        "witness_count": 15
+      },
+      "checks": {
+        "all_center_extension_counts_equal_missing_color_count": true,
+        "all_disequalities_true_at_excluded_state": true,
+        "all_equalities_false_at_excluded_state": true,
+        "canonical_relation_excludes_only_all_distinct": true,
+        "join_projection_matches_direct_existential_enumeration": true,
+        "joined_star_count_matches_q_times_q_minus_one_power_q": true,
+        "joined_star_rows_match_direct_full_coloring_count": true,
+        "projected_relation_is_color_symmetric": true,
+        "projection_count_matches_q_power_q_minus_factorial_q": true,
+        "single_full_equality_clause_is_exact": true,
+        "single_pair_witness_0_1": true,
+        "single_pair_witness_0_2": true,
+        "single_pair_witness_0_3": true,
+        "single_pair_witness_0_4": true,
+        "single_pair_witness_0_5": true,
+        "single_pair_witness_1_2": true,
+        "single_pair_witness_1_3": true,
+        "single_pair_witness_1_4": true,
+        "single_pair_witness_1_5": true,
+        "single_pair_witness_2_3": true,
+        "single_pair_witness_2_4": true,
+        "single_pair_witness_2_5": true,
+        "single_pair_witness_3_4": true,
+        "single_pair_witness_3_5": true,
+        "single_pair_witness_4_5": true
+      },
+      "exact_auxiliary_free_cnf": [
+        [
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t1"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t0",
+            "right": "t5"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t2"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t1",
+            "right": "t5"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t3"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t2",
+            "right": "t5"
+          },
+          {
+            "kind": "eq",
+            "left": "t3",
+            "right": "t4"
+          },
+          {
+            "kind": "eq",
+            "left": "t3",
+            "right": "t5"
+          },
+          {
+            "kind": "eq",
+            "left": "t4",
+            "right": "t5"
+          }
+        ]
+      ],
+      "excluded_canonical_state": "012345",
+      "input_binary_disequality_constraints": [
+        [
+          "t0",
+          "x"
+        ],
+        [
+          "t1",
+          "x"
+        ],
+        [
+          "t2",
+          "x"
+        ],
+        [
+          "t3",
+          "x"
+        ],
+        [
+          "t4",
+          "x"
+        ],
+        [
+          "t5",
+          "x"
+        ]
+      ],
+      "input_constraint_count": 6,
+      "input_labeled_assignments_checked_directly": 279936,
+      "input_proper_colorings": 93750,
+      "internal_variables": [
+        "x"
+      ],
+      "minimum_required_clause_width": 15,
+      "ports_in_order": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "q": 6,
+      "small_clause_exhaustion": null,
+      "width_two_auxiliary_free_representation_possible": false
+    }
+  ],
+  "claim_scope": "An elementary, exact representational obstruction: for each checked palette q, this projection requires a clause of width q*(q-1)/2 in auxiliary-free CNF over terminal-pair color equality/disequality predicates. At fixed q=5 this rules out widths below ten, including width two. A bound uniform over the general q family fails when BOTH palette size and terminal count grow. No novelty claim, Boolean 2-SAT claim, algorithmic running-time lower bound, graph-coloring complexity separation, or P-versus-NP conclusion is made.",
+  "experiment": "projection_barrier",
+  "fixed_palette_limit": "This star family does not rule out every fixed clause width while the palette remains five colors and only the number of terminals grows. Its five-color example has an exact width-ten clause.",
+  "provenance": {
+    "canonicalization": "First-occurrence color renaming preserves terminal order; joins use labeled rows.",
+    "external_inputs": [],
+    "inputs": "Explicit q-terminal star family, q colors, center x adjacent to every terminal.",
+    "named_color_pinnings": "None in this experiment. Generic relations retain labels and reject asymmetric canonical summaries.",
+    "randomness": "none",
+    "source_sha256": {
+      "experiments/projection_barrier.py": "87675fae4325e3dba560c9189bfc7a341780b8292bbbe6902bf52a26e9c97020",
+      "src/pnp_lab/relations.py": "3f9b3e4097ea3617691626409f964d520c823669bb4c3eace21f2be53be6b2b4"
+    }
+  },
+  "schema_version": 1,
+  "status": "ELEMENTARY-PROJECTION-WIDTH-OBSTRUCTION-VERIFIED"
+}

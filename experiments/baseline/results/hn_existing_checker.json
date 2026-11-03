@@ -1,0 +1,111 @@
+{
+  "status": "PROOF-TREE-COMPOSITION-VERIFIED",
+  "checks": {
+    "q0_side_pairwise_language_exact": {
+      "ok": true,
+      "detail": {
+        "selected": [
+          "01230",
+          "01233",
+          "01234"
+        ]
+      }
+    },
+    "q0_side_basis_size_eight": {
+      "ok": true
+    },
+    "q0_side_single_residual_disequality": {
+      "ok": true,
+      "detail": {
+        "unexplained": [
+          [
+            18,
+            256
+          ]
+        ]
+      }
+    },
+    "q18_q256_palette_gate": {
+      "ok": true,
+      "detail": {
+        "intersection_count": 7
+      }
+    },
+    "q18_q256_only_all_five_state_rejected": {
+      "ok": true
+    },
+    "q256_is_full_degree5_gate": {
+      "ok": true
+    },
+    "q0_q10_interface_states": {
+      "ok": true,
+      "detail": {
+        "states": [
+          "01230",
+          "01233"
+        ]
+      }
+    },
+    "q0_q10_same_singleton_color": {
+      "ok": true
+    },
+    "q10_full_neighborhood_gate": {
+      "ok": true
+    },
+    "q5_q6_palette_leafs_crosschecked": {
+      "ok": true
+    },
+    "q5_q22_local_k4": {
+      "ok": true
+    },
+    "q22_is_full_neighborhood_gate": {
+      "ok": true
+    },
+    "q5_q6_conditional_basis": {
+      "ok": true
+    },
+    "q8_large_side_cnf_exact": {
+      "ok": true,
+      "detail": {
+        "selected_count": 12
+      }
+    },
+    "q8_large_side_cnf_minimum_unique": {
+      "ok": true
+    },
+    "q8_q9_q104_two_state_gate": {
+      "ok": true,
+      "detail": {
+        "states": [
+          "0112323",
+          "0112333"
+        ]
+      }
+    },
+    "q104_full_neighborhood_gate": {
+      "ok": true
+    },
+    "outer_two_states_realize_three_equalities": {
+      "ok": true,
+      "detail": {
+        "states": [
+          "012202",
+          "012203"
+        ]
+      }
+    },
+    "k4_minus_edge_gives_exactly_outer_two_states": {
+      "ok": true,
+      "detail": {
+        "states": [
+          "012202",
+          "012203"
+        ]
+      }
+    }
+  },
+  "all_checks_passed": true,
+  "trust_boundary": "This checker uses only Python standard-library logic and saved JSON evidence. It independently verifies the composition of the hierarchical human-readable proof tree, canonical-state formulas, palette-set deductions, and the final K4-minus-edge reduction. It does NOT re-solve the graph-coloring SAT instances that produced the leaf state tables/palette predicates. Those leaves remain supported by the separately recorded CaDiCaL195/Glucose4 cross-checks.",
+  "finite_conclusion_checked": "Given the saved, solver-crosschecked leaf lemmas, the left side of the six-vertex quotient separator permits exactly 012202 and 012203, via q5=q6, q0=q10, q8=q9 and the final K4-minus-one-edge relation.",
+  "geometric_scope": "Conditional quotient/P2 finite statement only; no new unit-distance or Hadwiger-Nelson lower-bound claim."
+}

@@ -1,0 +1,10 @@
+import Formal
+
+#print axioms BoundaryLab.Star5.star_iff_collision
+#print axioms BoundaryLab.Star5.valid_rejecting_clause_contains_all_equalities
+#print axioms BoundaryLab.Star5.every_exact_CNF_has_all_equalities_clause
+#print axioms BoundaryLab.Star5.star_iff_allEqualityClause
+#print axioms BoundaryLab.Star5.allEqualityClause_length
+#print axioms BoundaryLab.Star5.allEqualityClause_nodup
+#print axioms BoundaryLab.Composition.independent_interiors_compose
+#print axioms BoundaryLab.Composition.independent_interiors_with_boundary_constraint

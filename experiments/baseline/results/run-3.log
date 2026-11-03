@@ -1,0 +1,59 @@
+{
+  "status": "ABSTRACT-TRANSPARENT-GLUING-VERIFIED",
+  "all_checks_passed": true,
+  "total_assignments_examined": 35000,
+  "cases": [
+    {
+      "case": "k4_minus_edge",
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 1,
+        "0123": 1
+      },
+      "proper_labeled_colorings": 180,
+      "total_labeled_assignments_examined": 625
+    },
+    {
+      "case": "one_tip",
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 2,
+        "0123": 1
+      },
+      "proper_labeled_colorings": 240,
+      "total_labeled_assignments_examined": 3125
+    },
+    {
+      "case": "two_uncoupled_tips",
+      "canonical_port_relation": [
+        "0122",
+        "0123"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 4,
+        "0123": 1
+      },
+      "proper_labeled_colorings": 360,
+      "total_labeled_assignments_examined": 15625
+    },
+    {
+      "case": "two_coupled_tips",
+      "canonical_port_relation": [
+        "0122"
+      ],
+      "skeleton_boundary_extension_counts": {
+        "0122": 2,
+        "0123": 0
+      },
+      "proper_labeled_colorings": 120,
+      "total_labeled_assignments_examined": 15625
+    }
+  ],
+  "output": "/workspace/scratch/dbd9b8eb5ba4/pnp_experiments/results/transparent-gluing/transparent_gluing_results.json"
+}

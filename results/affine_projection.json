@@ -1,0 +1,181 @@
+{
+  "algorithm": "Reduce with hidden columns first, discard hidden-pivot equations, remap surviving constraints to the requested boundary order, then normalize.",
+  "cases": [
+    {
+      "boundary_variables": 4,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 16,
+      "hidden_variables": 3,
+      "independent_full_assignments_checked": 128,
+      "input_affine_equations": 4,
+      "input_max_equation_arity": 3,
+      "input_variables": 7,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 4,
+      "normalized_source_equations": 4,
+      "ordinary_boundary_cnf_minimum_clauses": 8,
+      "projected_coefficient_row_bits": 4,
+      "projected_constraint": {
+        "arity": 4,
+        "mask": 15,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 8,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 256,
+      "hidden_variables": 7,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 8,
+      "input_max_equation_arity": 3,
+      "input_variables": 15,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 8,
+      "normalized_source_equations": 8,
+      "ordinary_boundary_cnf_minimum_clauses": 128,
+      "projected_coefficient_row_bits": 8,
+      "projected_constraint": {
+        "arity": 8,
+        "mask": 255,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 16,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 0,
+      "hidden_variables": 15,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 16,
+      "input_max_equation_arity": 3,
+      "input_variables": 31,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 16,
+      "normalized_source_equations": 16,
+      "ordinary_boundary_cnf_minimum_clauses": 32768,
+      "projected_coefficient_row_bits": 16,
+      "projected_constraint": {
+        "arity": 16,
+        "mask": 65535,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 32,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 0,
+      "hidden_variables": 31,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 32,
+      "input_max_equation_arity": 3,
+      "input_variables": 63,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 32,
+      "normalized_source_equations": 32,
+      "ordinary_boundary_cnf_minimum_clauses": 2147483648,
+      "projected_coefficient_row_bits": 32,
+      "projected_constraint": {
+        "arity": 32,
+        "mask": 4294967295,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 64,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 0,
+      "hidden_variables": 63,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 64,
+      "input_max_equation_arity": 3,
+      "input_variables": 127,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 64,
+      "normalized_source_equations": 64,
+      "ordinary_boundary_cnf_minimum_clauses": 9223372036854775808,
+      "projected_coefficient_row_bits": 64,
+      "projected_constraint": {
+        "arity": 64,
+        "mask": 18446744073709551615,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 128,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 0,
+      "hidden_variables": 127,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 128,
+      "input_max_equation_arity": 3,
+      "input_variables": 255,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 128,
+      "normalized_source_equations": 128,
+      "ordinary_boundary_cnf_minimum_clauses": 170141183460469231731687303715884105728,
+      "projected_coefficient_row_bits": 128,
+      "projected_constraint": {
+        "arity": 128,
+        "mask": 340282366920938463463374607431768211455,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    },
+    {
+      "boundary_variables": 256,
+      "checks_passed": true,
+      "full_boundary_assignments_checked": 0,
+      "hidden_variables": 255,
+      "independent_full_assignments_checked": 0,
+      "input_affine_equations": 256,
+      "input_max_equation_arity": 3,
+      "input_variables": 511,
+      "large_n_validation": "Exact finite GF(2) row elimination and coefficient equality; no truth-table enumeration at n > 8.",
+      "n": 256,
+      "normalized_source_equations": 256,
+      "ordinary_boundary_cnf_minimum_clauses": 57896044618658097711785492504343953926634992332820282019728792003956564819968,
+      "projected_coefficient_row_bits": 256,
+      "projected_constraint": {
+        "arity": 256,
+        "mask": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+        "rhs": 0
+      },
+      "projected_equations": 1
+    }
+  ],
+  "claim_type": "Positive control in the known tractable GF(2) fragment.",
+  "experiment": "affine_projection",
+  "generic_semantic_tests": "tests/test_affine.py contains 120 fixed-seed random projection checks and 80 fixed-seed random join checks against independent brute-force semantics, including empty scopes and reordering.",
+  "not_claimed": [
+    "A solution of general SAT or P versus NP.",
+    "All relation languages are closed under efficient projection.",
+    "Large-n full truth-table or full auxiliary-assignment enumeration."
+  ],
+  "representation_contrast": "The same even-parity boundary relation needs 2^(n-1) ordinary CNF clauses without auxiliaries, but one native XOR equation.",
+  "resource_scope": "Dense row elimination has polynomial bit complexity. Python integers encode finite rows; their shifts, XORs, and popcounts are not treated as constant-cost operations on unbounded data. Intermediate rows can become denser than the original width-three equations.",
+  "schema_version": 1,
+  "semantics": "Rows are linear equations modulo two; join conjoins them on shared variable names; projection existentially removes the hidden variables.",
+  "sources": [
+    {
+      "authors": [
+        "Matthew Gwynne",
+        "Oliver Kullmann"
+      ],
+      "title": "On SAT representations of XOR constraints",
+      "url": "https://arxiv.org/abs/1309.3060",
+      "use": "Context for GF(2) systems, XOR representations, and the distinction between native constraints and CNF encodings."
+    },
+    {
+      "title": "CNF Encodings of Parity",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.MFCS.2022.47",
+      "use": "Known 2^(n-1) ordinary CNF representation lower bound used for comparison."
+    }
+  ],
+  "status": "verified"
+}

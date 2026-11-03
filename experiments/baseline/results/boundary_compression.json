@@ -1,0 +1,409 @@
+{
+  "status": "PASS",
+  "source_repository": "HeliCorgi/hadwiger-nelson-lab",
+  "source_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
+  "source_url": "https://github.com/HeliCorgi/hadwiger-nelson-lab/blob/c38a11a0b724856eec035483c8d391f08bc29ca8/results/separator-left-q8-q9-relation-cnf/analysis.json",
+  "source_sha256": "33f991f66d93d05f95fba359ad2d3a45e717638b57ae38672935223676b8a132",
+  "source_table_historical_upstream_sha": "d1e80998bda337d9fa721f2e96d203ae54e97fc8",
+  "ports": [
+    4,
+    5,
+    33,
+    62,
+    68,
+    78,
+    226
+  ],
+  "canonical_universe_count": 855,
+  "target_state_count": 12,
+  "target_states": [
+    "0112323",
+    "0112324",
+    "0112333",
+    "0112334",
+    "0112340",
+    "0112343",
+    "0112344",
+    "0123224",
+    "0123234",
+    "0123420",
+    "0123424",
+    "0123434"
+  ],
+  "derived_common_pairwise_fact_count": 13,
+  "derived_common_pairwise_facts": [
+    {
+      "qnodes": [
+        4,
+        5
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        4,
+        33
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        4,
+        62
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        4,
+        68
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        4,
+        78
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        5,
+        62
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        5,
+        68
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        5,
+        78
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        5,
+        226
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        33,
+        62
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        33,
+        226
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        62,
+        68
+      ],
+      "kind": "neq"
+    },
+    {
+      "qnodes": [
+        62,
+        226
+      ],
+      "kind": "neq"
+    }
+  ],
+  "pairwise_only_state_count": 21,
+  "pairwise_only_extra_states": [
+    "0112320",
+    "0112330",
+    "0123220",
+    "0123230",
+    "0123240",
+    "0123244",
+    "0123430",
+    "0123440",
+    "0123444"
+  ],
+  "two_literal_syntactic_candidates_considered": 861,
+  "valid_nontrivial_two_literal_clause_count": 5,
+  "candidate_clauses": [
+    {
+      "index": 0,
+      "literals": [
+        {
+          "qnodes": [
+            4,
+            226
+          ],
+          "kind": "neq"
+        },
+        {
+          "qnodes": [
+            33,
+            68
+          ],
+          "kind": "neq"
+        }
+      ],
+      "eliminates_states": [
+        "0123220",
+        "0123230",
+        "0123240"
+      ]
+    },
+    {
+      "index": 1,
+      "literals": [
+        {
+          "qnodes": [
+            4,
+            226
+          ],
+          "kind": "neq"
+        },
+        {
+          "qnodes": [
+            62,
+            78
+          ],
+          "kind": "neq"
+        }
+      ],
+      "eliminates_states": [
+        "0112320",
+        "0123230",
+        "0123430"
+      ]
+    },
+    {
+      "index": 2,
+      "literals": [
+        {
+          "qnodes": [
+            4,
+            226
+          ],
+          "kind": "neq"
+        },
+        {
+          "qnodes": [
+            68,
+            78
+          ],
+          "kind": "neq"
+        }
+      ],
+      "eliminates_states": [
+        "0112330",
+        "0123220",
+        "0123440"
+      ]
+    },
+    {
+      "index": 3,
+      "literals": [
+        {
+          "qnodes": [
+            5,
+            33
+          ],
+          "kind": "eq"
+        },
+        {
+          "qnodes": [
+            78,
+            226
+          ],
+          "kind": "neq"
+        }
+      ],
+      "eliminates_states": [
+        "0123244",
+        "0123444"
+      ]
+    },
+    {
+      "index": 4,
+      "literals": [
+        {
+          "qnodes": [
+            33,
+            68
+          ],
+          "kind": "neq"
+        },
+        {
+          "qnodes": [
+            78,
+            226
+          ],
+          "kind": "neq"
+        }
+      ],
+      "eliminates_states": [
+        "0123244"
+      ]
+    }
+  ],
+  "exhaustive_cover_checks": [
+    {
+      "size": 0,
+      "subsets_checked": 1,
+      "cover_count": 0
+    },
+    {
+      "size": 1,
+      "subsets_checked": 5,
+      "cover_count": 0
+    },
+    {
+      "size": 2,
+      "subsets_checked": 10,
+      "cover_count": 0
+    },
+    {
+      "size": 3,
+      "subsets_checked": 10,
+      "cover_count": 0
+    },
+    {
+      "size": 4,
+      "subsets_checked": 5,
+      "cover_count": 1
+    }
+  ],
+  "minimum_clause_count": 4,
+  "minimum_syntactic_cover_count": 1,
+  "minimum_covers": [
+    [
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "selected_clause_necessity_witnesses": [
+    {
+      "removed_candidate": 0,
+      "extra_states_become_allowed": [
+        "0123240"
+      ]
+    },
+    {
+      "removed_candidate": 1,
+      "extra_states_become_allowed": [
+        "0112320",
+        "0123430"
+      ]
+    },
+    {
+      "removed_candidate": 2,
+      "extra_states_become_allowed": [
+        "0112330",
+        "0123440"
+      ]
+    },
+    {
+      "removed_candidate": 3,
+      "extra_states_become_allowed": [
+        "0123244",
+        "0123444"
+      ]
+    }
+  ],
+  "unique_excluder_witnesses_among_all_valid_candidates": [
+    {
+      "extra_state": "0112320",
+      "only_candidate_that_excludes_it": 1
+    },
+    {
+      "extra_state": "0112330",
+      "only_candidate_that_excludes_it": 2
+    },
+    {
+      "extra_state": "0123240",
+      "only_candidate_that_excludes_it": 0
+    },
+    {
+      "extra_state": "0123430",
+      "only_candidate_that_excludes_it": 1
+    },
+    {
+      "extra_state": "0123440",
+      "only_candidate_that_excludes_it": 2
+    },
+    {
+      "extra_state": "0123444",
+      "only_candidate_that_excludes_it": 3
+    }
+  ],
+  "all_855_states_rechecked": true,
+  "saved_formula_language_matches": true,
+  "boundary_counts": [
+    {
+      "ports": 0,
+      "named_color_assignments": 1,
+      "canonical_partitions_at_most_5_colors": 1
+    },
+    {
+      "ports": 1,
+      "named_color_assignments": 5,
+      "canonical_partitions_at_most_5_colors": 1
+    },
+    {
+      "ports": 4,
+      "named_color_assignments": 625,
+      "canonical_partitions_at_most_5_colors": 15
+    },
+    {
+      "ports": 6,
+      "named_color_assignments": 15625,
+      "canonical_partitions_at_most_5_colors": 202
+    },
+    {
+      "ports": 7,
+      "named_color_assignments": 78125,
+      "canonical_partitions_at_most_5_colors": 855
+    },
+    {
+      "ports": 8,
+      "named_color_assignments": 390625,
+      "canonical_partitions_at_most_5_colors": 3845
+    },
+    {
+      "ports": 10,
+      "named_color_assignments": 9765625,
+      "canonical_partitions_at_most_5_colors": 86472
+    },
+    {
+      "ports": 12,
+      "named_color_assignments": 244140625,
+      "canonical_partitions_at_most_5_colors": 2079475
+    },
+    {
+      "ports": 16,
+      "named_color_assignments": 152587890625,
+      "canonical_partitions_at_most_5_colors": 1275163905
+    },
+    {
+      "ports": 20,
+      "named_color_assignments": 95367431640625,
+      "canonical_partitions_at_most_5_colors": 795019337135
+    }
+  ],
+  "claim_scope": "Minimum number of additional clauses after all pairwise consequences are fixed; each clause is an OR of at most two equality/disequality atoms on distinct port pairs. Not a minimum over arbitrary Boolean representations or algorithms.",
+  "trust_boundary": "The 12-state target table is imported solver-derived data. This run independently verifies its finite representation and minimum cover, but does not re-solve the large source graph, certify geometric realizability, or establish a new HN bound.",
+  "complexity_scope": "Boundary counts describe explicit enumeration before terminal constraints, not a lower bound for compressed representations or general SAT algorithms. Equality atoms are not independent Boolean variables, so two-literal clauses here do not by themselves make the problem ordinary 2-SAT."
+}

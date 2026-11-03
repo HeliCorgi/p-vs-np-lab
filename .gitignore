@@ -8,3 +8,5 @@ build/
 dist/
 reproduced/
 .publish/
+/results/baseline/
+/results/*.log
