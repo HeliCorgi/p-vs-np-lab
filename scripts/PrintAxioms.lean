@@ -8,3 +8,8 @@ import Formal
 #print axioms BoundaryLab.Star5.allEqualityClause_nodup
 #print axioms BoundaryLab.Composition.independent_interiors_compose
 #print axioms BoundaryLab.Composition.independent_interiors_with_boundary_constraint
+#print axioms BoundaryLab.Quotient.quotient_sat_iff
+#print axioms BoundaryLab.Quotient.lifted_witness_is_valid
+#print axioms BoundaryLab.Quotient.quotient_unsat_iff
+#print axioms BoundaryLab.Quotient.finite_scan_exact
+#print axioms BoundaryLab.Quotient.bitVectors_length

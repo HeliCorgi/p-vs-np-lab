@@ -1,2 +1,3 @@
 import Formal.StarProjection
 import Formal.BoundaryComposition
+import Formal.QuotientSearch

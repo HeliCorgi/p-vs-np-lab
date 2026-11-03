@@ -20,6 +20,11 @@ THEOREMS = {
     "BoundaryLab.Star5.allEqualityClause_nodup",
     "BoundaryLab.Composition.independent_interiors_compose",
     "BoundaryLab.Composition.independent_interiors_with_boundary_constraint",
+    "BoundaryLab.Quotient.quotient_sat_iff",
+    "BoundaryLab.Quotient.lifted_witness_is_valid",
+    "BoundaryLab.Quotient.quotient_unsat_iff",
+    "BoundaryLab.Quotient.finite_scan_exact",
+    "BoundaryLab.Quotient.bitVectors_length",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
