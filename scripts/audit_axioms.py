@@ -33,6 +33,10 @@ THEOREMS = {
     "BoundaryLab.ExactlyOneParity.signed_exactly_one_implies_parity",
     "BoundaryLab.ExactlyOneParity.strengthen_preserves_models",
     "BoundaryLab.ExactlyOneParity.strengthen_preserves_sat",
+    "BoundaryLab.BridgeAffineBarrier.row_flip_of_mem",
+    "BoundaryLab.BridgeAffineBarrier.coordinate_separation_forces_trivial_row",
+    "BoundaryLab.BridgeAffineBarrier.bridge_coordinate_separation",
+    "BoundaryLab.BridgeAffineBarrier.bridge_has_no_nontrivial_affine_equation",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

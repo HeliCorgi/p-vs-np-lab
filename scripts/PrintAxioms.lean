@@ -22,3 +22,8 @@ import Formal
 #print axioms BoundaryLab.ExactlyOneParity.signed_exactly_one_implies_parity
 #print axioms BoundaryLab.ExactlyOneParity.strengthen_preserves_models
 #print axioms BoundaryLab.ExactlyOneParity.strengthen_preserves_sat
+
+#print axioms BoundaryLab.BridgeAffineBarrier.row_flip_of_mem
+#print axioms BoundaryLab.BridgeAffineBarrier.coordinate_separation_forces_trivial_row
+#print axioms BoundaryLab.BridgeAffineBarrier.bridge_coordinate_separation
+#print axioms BoundaryLab.BridgeAffineBarrier.bridge_has_no_nontrivial_affine_equation
