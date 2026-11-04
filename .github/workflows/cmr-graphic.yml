@@ -1,0 +1,33 @@
+name: Pinned CMR graph realization
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/cmr-graphic.yml'
+      - 'src/pnp_lab/cmr_graphic.py'
+      - 'src/pnp_lab/graphic_support.py'
+      - 'src/pnp_lab/unit_matching.py'
+      - 'scripts/check_cmr_graphic.py'
+permissions:
+  contents: read
+jobs:
+  cmr:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: discopt/cmr
+          ref: 0c42a44deb8262a1f2a400add5d6be80e90eda3c
+          path: _cmr-src
+          persist-credentials: false
+      - name: Build only the pinned CMR 1.4.0 graph realization CLI
+        run: |
+          test "$(git -C _cmr-src rev-parse HEAD)" = 0c42a44deb8262a1f2a400add5d6be80e90eda3c
+          cmake -S _cmr-src -B _cmr-build -DCMAKE_BUILD_TYPE=Release -DTESTS=OFF -DGENERATORS=OFF -DGMP=OFF -DSHARED=OFF
+          cmake --build _cmr-build --target cmr_graphic --parallel 2
+      - name: Check CMR graph outputs and original witnesses in Python
+        run: python3 scripts/check_cmr_graphic.py --executable "$PWD/_cmr-build/cmr-graphic"
