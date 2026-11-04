@@ -1,0 +1,1291 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "certificate_check": {
+        "basis_indices": [],
+        "columns": 0,
+        "further_contraction_rank": 0,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 0,
+          "contracted_rank": 0,
+          "fixed_point": true
+        },
+        "rank": 0,
+        "verified": true
+      },
+      "columns": [],
+      "designated_clause_indices": [],
+      "name": "empty",
+      "occurrence_counts": {},
+      "source_clauses": 0,
+      "source_variables": 0,
+      "sparse_groups": 0
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          1,
+          4
+        ],
+        "columns": 5,
+        "further_contraction_rank": 196,
+        "kernel_basis": [
+          1,
+          6,
+          8
+        ],
+        "loops": 2,
+        "nullity": 3,
+        "presolve": {
+          "binary_groups": 132,
+          "contracted_rank": 132,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        0,
+        3,
+        3,
+        0,
+        4
+      ],
+      "designated_clause_indices": [
+        2,
+        5,
+        6,
+        9,
+        20
+      ],
+      "name": "boundary_loops_parallel_coloop",
+      "occurrence_counts": {
+        "2": 60,
+        "3": 4
+      },
+      "source_clauses": 44,
+      "source_variables": 64,
+      "sparse_groups": 308
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2
+        ],
+        "columns": 7,
+        "further_contraction_rank": 263,
+        "kernel_basis": [
+          11,
+          21,
+          38,
+          71
+        ],
+        "loops": 0,
+        "nullity": 4,
+        "presolve": {
+          "binary_groups": 174,
+          "contracted_rank": 174,
+          "fixed_point": true
+        },
+        "rank": 3,
+        "verified": true
+      },
+      "columns": [
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        4,
+        2,
+        5,
+        8,
+        14
+      ],
+      "name": "F7",
+      "occurrence_counts": {
+        "2": 72,
+        "3": 10
+      },
+      "source_clauses": 58,
+      "source_variables": 82,
+      "sparse_groups": 406
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "columns": 7,
+        "further_contraction_rank": 290,
+        "kernel_basis": [
+          30,
+          45,
+          71
+        ],
+        "loops": 0,
+        "nullity": 3,
+        "presolve": {
+          "binary_groups": 192,
+          "contracted_rank": 192,
+          "fixed_point": true
+        },
+        "rank": 4,
+        "verified": true
+      },
+      "columns": [
+        11,
+        13,
+        14,
+        1,
+        2,
+        4,
+        8
+      ],
+      "designated_clause_indices": [
+        6,
+        0,
+        1,
+        4,
+        5,
+        11,
+        17
+      ],
+      "name": "dual_F7",
+      "occurrence_counts": {
+        "2": 78,
+        "3": 12
+      },
+      "source_clauses": 64,
+      "source_variables": 90,
+      "sparse_groups": 448
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "columns": 8,
+        "further_contraction_rank": 305,
+        "kernel_basis": [
+          255
+        ],
+        "loops": 0,
+        "nullity": 1,
+        "presolve": {
+          "binary_groups": 204,
+          "contracted_rank": 204,
+          "fixed_point": true
+        },
+        "rank": 7,
+        "verified": true
+      },
+      "columns": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        127
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        17
+      ],
+      "name": "long_relator",
+      "occurrence_counts": {
+        "2": 84,
+        "3": 12
+      },
+      "source_clauses": 68,
+      "source_variables": 96,
+      "sparse_groups": 476
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "columns": 10,
+        "further_contraction_rank": 344,
+        "kernel_basis": [
+          19,
+          37,
+          73,
+          134,
+          266,
+          524
+        ],
+        "loops": 0,
+        "nullity": 6,
+        "presolve": {
+          "binary_groups": 228,
+          "contracted_rank": 228,
+          "fixed_point": true
+        },
+        "rank": 4,
+        "verified": true
+      },
+      "columns": [
+        3,
+        5,
+        9,
+        17,
+        6,
+        10,
+        18,
+        12,
+        20,
+        24
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        4,
+        7,
+        2,
+        5,
+        8,
+        11,
+        14,
+        17
+      ],
+      "name": "M_K5",
+      "occurrence_counts": {
+        "2": 96,
+        "3": 12
+      },
+      "source_clauses": 76,
+      "source_variables": 108,
+      "sparse_groups": 532
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "columns": 6,
+        "further_contraction_rank": 160,
+        "kernel_basis": [
+          7,
+          56
+        ],
+        "loops": 0,
+        "nullity": 2,
+        "presolve": {
+          "binary_groups": 108,
+          "contracted_rank": 108,
+          "fixed_point": true
+        },
+        "rank": 4,
+        "verified": true
+      },
+      "columns": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        12
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "name": "two_components",
+      "occurrence_counts": {
+        "2": 48,
+        "3": 4
+      },
+      "source_clauses": 36,
+      "source_variables": 52,
+      "sparse_groups": 252
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2
+        ],
+        "columns": 11,
+        "further_contraction_rank": 473,
+        "kernel_basis": [
+          9,
+          21,
+          38,
+          65,
+          132,
+          263,
+          519,
+          1031
+        ],
+        "loops": 0,
+        "nullity": 8,
+        "presolve": {
+          "binary_groups": 312,
+          "contracted_rank": 312,
+          "fixed_point": true
+        },
+        "rank": 3,
+        "verified": true
+      },
+      "columns": [
+        3,
+        7,
+        1,
+        3,
+        2,
+        6,
+        3,
+        1,
+        5,
+        5,
+        5
+      ],
+      "designated_clause_indices": [
+        0,
+        5,
+        3,
+        1,
+        4,
+        7,
+        9,
+        11,
+        17,
+        23,
+        29
+      ],
+      "name": "seeded_00",
+      "occurrence_counts": {
+        "2": 132,
+        "3": 16
+      },
+      "source_clauses": 104,
+      "source_variables": 148,
+      "sparse_groups": 728
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 2,
+        "further_contraction_rank": 53,
+        "kernel_basis": [
+          3
+        ],
+        "loops": 0,
+        "nullity": 1,
+        "presolve": {
+          "binary_groups": 36,
+          "contracted_rank": 36,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        3,
+        3
+      ],
+      "designated_clause_indices": [
+        0,
+        1
+      ],
+      "name": "seeded_01",
+      "occurrence_counts": {
+        "2": 18
+      },
+      "source_clauses": 12,
+      "source_variables": 18,
+      "sparse_groups": 84
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "columns": 4,
+        "further_contraction_rank": 68,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 48,
+          "contracted_rank": 48,
+          "fixed_point": true
+        },
+        "rank": 4,
+        "verified": true
+      },
+      "columns": [
+        30,
+        26,
+        12,
+        27
+      ],
+      "designated_clause_indices": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "name": "seeded_02",
+      "occurrence_counts": {
+        "2": 24
+      },
+      "source_clauses": 16,
+      "source_variables": 24,
+      "sparse_groups": 112
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2
+        ],
+        "columns": 5,
+        "further_contraction_rank": 123,
+        "kernel_basis": [
+          10,
+          18
+        ],
+        "loops": 0,
+        "nullity": 2,
+        "presolve": {
+          "binary_groups": 84,
+          "contracted_rank": 84,
+          "fixed_point": true
+        },
+        "rank": 3,
+        "verified": true
+      },
+      "columns": [
+        6,
+        5,
+        4,
+        5,
+        5
+      ],
+      "designated_clause_indices": [
+        4,
+        0,
+        8,
+        1,
+        3
+      ],
+      "name": "seeded_03",
+      "occurrence_counts": {
+        "2": 42
+      },
+      "source_clauses": 28,
+      "source_variables": 42,
+      "sparse_groups": 196
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          6
+        ],
+        "columns": 12,
+        "further_contraction_rank": 520,
+        "kernel_basis": [
+          4,
+          8,
+          18,
+          32,
+          192,
+          256,
+          515,
+          1024,
+          2050
+        ],
+        "loops": 5,
+        "nullity": 9,
+        "presolve": {
+          "binary_groups": 348,
+          "contracted_rank": 348,
+          "fixed_point": true
+        },
+        "rank": 3,
+        "verified": true
+      },
+      "columns": [
+        4,
+        6,
+        0,
+        0,
+        6,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        6
+      ],
+      "designated_clause_indices": [
+        24,
+        10,
+        2,
+        7,
+        11,
+        14,
+        17,
+        18,
+        21,
+        26,
+        29,
+        33
+      ],
+      "name": "seeded_04",
+      "occurrence_counts": {
+        "2": 156,
+        "3": 12
+      },
+      "source_clauses": 116,
+      "source_variables": 168,
+      "sparse_groups": 812
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        "columns": 11,
+        "further_contraction_rank": 546,
+        "kernel_basis": [
+          16,
+          47,
+          199,
+          325,
+          588,
+          1029
+        ],
+        "loops": 1,
+        "nullity": 6,
+        "presolve": {
+          "binary_groups": 360,
+          "contracted_rank": 360,
+          "fixed_point": true
+        },
+        "rank": 5,
+        "verified": true
+      },
+      "columns": [
+        7,
+        30,
+        5,
+        10,
+        0,
+        22,
+        1,
+        29,
+        3,
+        14,
+        2
+      ],
+      "designated_clause_indices": [
+        5,
+        6,
+        9,
+        12,
+        2,
+        13,
+        21,
+        22,
+        28,
+        34,
+        37
+      ],
+      "name": "seeded_05",
+      "occurrence_counts": {
+        "2": 144,
+        "3": 24
+      },
+      "source_clauses": 120,
+      "source_variables": 168,
+      "sparse_groups": 840
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          3
+        ],
+        "columns": 9,
+        "further_contraction_rank": 431,
+        "kernel_basis": [
+          2,
+          4,
+          16,
+          33,
+          64,
+          137,
+          256
+        ],
+        "loops": 5,
+        "nullity": 7,
+        "presolve": {
+          "binary_groups": 288,
+          "contracted_rank": 288,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        3,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        2,
+        0
+      ],
+      "designated_clause_indices": [
+        15,
+        2,
+        7,
+        23,
+        12,
+        16,
+        19,
+        24,
+        27
+      ],
+      "name": "seeded_06",
+      "occurrence_counts": {
+        "2": 126,
+        "3": 12
+      },
+      "source_clauses": 96,
+      "source_variables": 138,
+      "sparse_groups": 672
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 1,
+        "further_contraction_rank": 17,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 12,
+          "contracted_rank": 12,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        2
+      ],
+      "designated_clause_indices": [
+        0
+      ],
+      "name": "seeded_07",
+      "occurrence_counts": {
+        "2": 6
+      },
+      "source_clauses": 4,
+      "source_variables": 6,
+      "sparse_groups": 28
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 1,
+        "further_contraction_rank": 17,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 12,
+          "contracted_rank": 12,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        2
+      ],
+      "designated_clause_indices": [
+        0
+      ],
+      "name": "seeded_08",
+      "occurrence_counts": {
+        "2": 6
+      },
+      "source_clauses": 4,
+      "source_variables": 6,
+      "sparse_groups": 28
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1,
+          2
+        ],
+        "columns": 5,
+        "further_contraction_rank": 171,
+        "kernel_basis": [
+          13,
+          23
+        ],
+        "loops": 0,
+        "nullity": 2,
+        "presolve": {
+          "binary_groups": 114,
+          "contracted_rank": 114,
+          "fixed_point": true
+        },
+        "rank": 3,
+        "verified": true
+      },
+      "columns": [
+        25,
+        17,
+        28,
+        5,
+        20
+      ],
+      "designated_clause_indices": [
+        0,
+        4,
+        1,
+        2,
+        8
+      ],
+      "name": "seeded_09",
+      "occurrence_counts": {
+        "2": 48,
+        "3": 6
+      },
+      "source_clauses": 38,
+      "source_variables": 54,
+      "sparse_groups": 266
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1
+        ],
+        "columns": 2,
+        "further_contraction_rank": 34,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 24,
+          "contracted_rank": 24,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        3,
+        2
+      ],
+      "designated_clause_indices": [
+        0,
+        2
+      ],
+      "name": "seeded_10",
+      "occurrence_counts": {
+        "2": 12
+      },
+      "source_clauses": 8,
+      "source_variables": 12,
+      "sparse_groups": 56
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "columns": 11,
+        "further_contraction_rank": 443,
+        "kernel_basis": [
+          2,
+          12,
+          69,
+          129,
+          304,
+          565,
+          1029
+        ],
+        "loops": 1,
+        "nullity": 7,
+        "presolve": {
+          "binary_groups": 294,
+          "contracted_rank": 294,
+          "fixed_point": true
+        },
+        "rank": 4,
+        "verified": true
+      },
+      "columns": [
+        8,
+        0,
+        2,
+        2,
+        5,
+        4,
+        10,
+        8,
+        1,
+        11,
+        10
+      ],
+      "designated_clause_indices": [
+        7,
+        2,
+        5,
+        6,
+        12,
+        13,
+        9,
+        11,
+        14,
+        23,
+        26
+      ],
+      "name": "seeded_11",
+      "occurrence_counts": {
+        "2": 126,
+        "3": 14
+      },
+      "source_clauses": 98,
+      "source_variables": 140,
+      "sparse_groups": 686
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          1
+        ],
+        "columns": 2,
+        "further_contraction_rank": 34,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 24,
+          "contracted_rank": 24,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        5,
+        13
+      ],
+      "designated_clause_indices": [
+        0,
+        2
+      ],
+      "name": "seeded_12",
+      "occurrence_counts": {
+        "2": 12
+      },
+      "source_clauses": 8,
+      "source_variables": 12,
+      "sparse_groups": 56
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          2
+        ],
+        "columns": 4,
+        "further_contraction_rank": 133,
+        "kernel_basis": [
+          3,
+          8
+        ],
+        "loops": 1,
+        "nullity": 2,
+        "presolve": {
+          "binary_groups": 90,
+          "contracted_rank": 90,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        1,
+        1,
+        3,
+        0
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        11,
+        4
+      ],
+      "name": "seeded_13",
+      "occurrence_counts": {
+        "2": 42,
+        "3": 2
+      },
+      "source_clauses": 30,
+      "source_variables": 44,
+      "sparse_groups": 210
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 1,
+        "further_contraction_rank": 17,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 12,
+          "contracted_rank": 12,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        1
+      ],
+      "designated_clause_indices": [
+        0
+      ],
+      "name": "seeded_14",
+      "occurrence_counts": {
+        "2": 6
+      },
+      "source_clauses": 4,
+      "source_variables": 6,
+      "sparse_groups": 28
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 1,
+        "further_contraction_rank": 17,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 12,
+          "contracted_rank": 12,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        1
+      ],
+      "designated_clause_indices": [
+        0
+      ],
+      "name": "seeded_15",
+      "occurrence_counts": {
+        "2": 6
+      },
+      "source_clauses": 4,
+      "source_variables": 6,
+      "sparse_groups": 28
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0,
+          8
+        ],
+        "columns": 9,
+        "further_contraction_rank": 367,
+        "kernel_basis": [
+          3,
+          5,
+          9,
+          16,
+          33,
+          64,
+          128
+        ],
+        "loops": 3,
+        "nullity": 7,
+        "presolve": {
+          "binary_groups": 246,
+          "contracted_rank": 246,
+          "fixed_point": true
+        },
+        "rank": 2,
+        "verified": true
+      },
+      "columns": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        3,
+        5,
+        8,
+        12,
+        15,
+        20,
+        39
+      ],
+      "name": "seeded_16",
+      "occurrence_counts": {
+        "2": 114,
+        "3": 6
+      },
+      "source_clauses": 82,
+      "source_variables": 120,
+      "sparse_groups": 574
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 1,
+        "further_contraction_rank": 17,
+        "kernel_basis": [],
+        "loops": 0,
+        "nullity": 0,
+        "presolve": {
+          "binary_groups": 12,
+          "contracted_rank": 12,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        11
+      ],
+      "designated_clause_indices": [
+        0
+      ],
+      "name": "seeded_17",
+      "occurrence_counts": {
+        "2": 6
+      },
+      "source_clauses": 4,
+      "source_variables": 6,
+      "sparse_groups": 28
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          3
+        ],
+        "columns": 11,
+        "further_contraction_rank": 566,
+        "kernel_basis": [
+          1,
+          2,
+          4,
+          16,
+          32,
+          72,
+          136,
+          256,
+          520,
+          1024
+        ],
+        "loops": 7,
+        "nullity": 10,
+        "presolve": {
+          "binary_groups": 378,
+          "contracted_rank": 378,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "designated_clause_indices": [
+        2,
+        7,
+        12,
+        25,
+        17,
+        22,
+        26,
+        28,
+        31,
+        35,
+        38
+      ],
+      "name": "seeded_18",
+      "occurrence_counts": {
+        "2": 168,
+        "3": 14
+      },
+      "source_clauses": 126,
+      "source_variables": 182,
+      "sparse_groups": 882
+    },
+    {
+      "certificate_check": {
+        "basis_indices": [
+          0
+        ],
+        "columns": 5,
+        "further_contraction_rank": 188,
+        "kernel_basis": [
+          3,
+          5,
+          9,
+          16
+        ],
+        "loops": 1,
+        "nullity": 4,
+        "presolve": {
+          "binary_groups": 126,
+          "contracted_rank": 126,
+          "fixed_point": true
+        },
+        "rank": 1,
+        "verified": true
+      },
+      "columns": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "designated_clause_indices": [
+        0,
+        1,
+        3,
+        5,
+        8
+      ],
+      "name": "seeded_19",
+      "occurrence_counts": {
+        "2": 60,
+        "3": 2
+      },
+      "source_clauses": 42,
+      "source_variables": 62,
+      "sparse_groups": 294
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Matroid minors of difference systems after initial binary-group affine absorption. All constructed source formulas are positive and satisfiable. This is not a SAT lower bound or a new resolution of P vs NP.",
+  "seed": 417031,
+  "summary": {
+    "all_labelled_kernel_checks": true,
+    "all_post_affine_fixed_points": true,
+    "cases": 27,
+    "max_source_clauses": 126,
+    "max_target_columns": 12,
+    "max_target_rank": 7,
+    "named_targets": [
+      "empty",
+      "boundary_loops_parallel_coloop",
+      "F7",
+      "dual_F7",
+      "long_relator",
+      "M_K5",
+      "two_components"
+    ],
+    "random_cases": 20
+  }
+}

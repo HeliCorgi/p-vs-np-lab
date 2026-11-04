@@ -44,6 +44,9 @@ THEOREMS = {
     "BoundaryLab.AffineFrontier.pruned_iff_reach",
     "BoundaryLab.AffineFrontier.suffix_observation_forced",
     "BoundaryLab.AffineFrontier.absorb_exact_image",
+    "BoundaryLab.HoleFibers.three_pairs_escape",
+    "BoundaryLab.HoleFibers.two_pairs_blocked_iff_cross",
+    "BoundaryLab.HoleFibers.two_point_fiber_puncture",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

@@ -1,0 +1,611 @@
+{
+  "all_checks_passed": true,
+  "budget_controls": [
+    {
+      "binary_defects": 24,
+      "branches_total": 16777216,
+      "compatible_branches_identified": 8,
+      "defect_groups": 24,
+      "graph_edges_peak": 408,
+      "graph_vertices_peak": 140,
+      "groups": 56,
+      "matching_calls": 7,
+      "max_binary_rank": 21,
+      "min_binary_rank": 21,
+      "name": "UNSAT_source_before_last_matching_call",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "raw_branches_ruled_out": 16777208,
+      "reason": "matching_call_budget_exhausted",
+      "status": "UNKNOWN"
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 3,
+      "compatible_branches_identified": 0,
+      "defect_groups": 1,
+      "graph_edges_peak": 0,
+      "graph_vertices_peak": 0,
+      "groups": 1,
+      "matching_calls": 0,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "name": "outer_budget_before_last_affine_rejection",
+      "nonbinary_defects": 1,
+      "outer_branches_checked": 2,
+      "outer_branches_inconsistent": 2,
+      "outer_branches_total": 3,
+      "raw_branches_ruled_out": 2,
+      "reason": "outer_branch_budget_exhausted",
+      "status": "UNKNOWN"
+    }
+  ],
+  "cycles": [
+    {
+      "binary_defects": 12,
+      "branches_total": 4096,
+      "compatible_branches_identified": 8,
+      "defect_groups": 12,
+      "graph_edges_peak": 132,
+      "graph_vertices_peak": 72,
+      "groups": 30,
+      "matching_calls": 8,
+      "max_binary_rank": 9,
+      "min_binary_rank": 9,
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": null,
+      "raw_branches_ruled_out": 4088,
+      "reason": "all_branches_excluded",
+      "source_assignments_checked": 8,
+      "source_models": 0,
+      "source_variables": 3,
+      "status": "UNSAT"
+    },
+    {
+      "binary_defects": 16,
+      "branches_total": 65536,
+      "compatible_branches_identified": 16,
+      "defect_groups": 16,
+      "graph_edges_peak": 208,
+      "graph_vertices_peak": 96,
+      "groups": 40,
+      "matching_calls": 7,
+      "max_binary_rank": 12,
+      "min_binary_rank": 12,
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": 10,
+      "raw_branches_ruled_out": 65520,
+      "reason": "checked_original_witness",
+      "source_assignments_checked": 16,
+      "source_models": 2,
+      "source_variables": 4,
+      "status": "SAT"
+    },
+    {
+      "binary_defects": 20,
+      "branches_total": 1048576,
+      "compatible_branches_identified": 32,
+      "defect_groups": 20,
+      "graph_edges_peak": 300,
+      "graph_vertices_peak": 120,
+      "groups": 50,
+      "matching_calls": 32,
+      "max_binary_rank": 15,
+      "min_binary_rank": 15,
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": null,
+      "raw_branches_ruled_out": 1048544,
+      "reason": "all_branches_excluded",
+      "source_assignments_checked": 32,
+      "source_models": 0,
+      "source_variables": 5,
+      "status": "UNSAT"
+    },
+    {
+      "binary_defects": 28,
+      "branches_total": 268435456,
+      "compatible_branches_identified": 128,
+      "defect_groups": 28,
+      "graph_edges_peak": 532,
+      "graph_vertices_peak": 168,
+      "groups": 70,
+      "matching_calls": 128,
+      "max_binary_rank": 21,
+      "min_binary_rank": 21,
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": null,
+      "raw_branches_ruled_out": 268435328,
+      "reason": "all_branches_excluded",
+      "source_assignments_checked": 128,
+      "source_models": 0,
+      "source_variables": 7,
+      "status": "UNSAT"
+    }
+  ],
+  "dense_translations": [
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "centers": [
+        510,
+        509,
+        507,
+        503,
+        495,
+        479,
+        447,
+        383,
+        255,
+        510,
+        509,
+        507,
+        503,
+        495,
+        479,
+        447
+      ],
+      "checked_original_witness": [
+        511,
+        253,
+        507,
+        503,
+        495,
+        479,
+        511,
+        383,
+        255,
+        510,
+        505,
+        507,
+        487,
+        495,
+        479,
+        447
+      ],
+      "compatible_branches_identified": 1,
+      "defect_groups": 0,
+      "graph_edges_peak": 336,
+      "graph_vertices_peak": 70,
+      "groups": 16,
+      "m": 8,
+      "matching_calls": 1,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "nonbinary_defects": 0,
+      "original_min_weight": 7,
+      "original_supports": [
+        [
+          510,
+          511,
+          254
+        ],
+        [
+          509,
+          511,
+          253
+        ],
+        [
+          507,
+          511,
+          251
+        ],
+        [
+          503,
+          511,
+          247
+        ],
+        [
+          495,
+          511,
+          239
+        ],
+        [
+          479,
+          511,
+          223
+        ],
+        [
+          447,
+          511,
+          191
+        ],
+        [
+          383,
+          511,
+          127
+        ],
+        [
+          255,
+          254,
+          511
+        ],
+        [
+          510,
+          508,
+          254
+        ],
+        [
+          509,
+          505,
+          253
+        ],
+        [
+          507,
+          499,
+          251
+        ],
+        [
+          503,
+          487,
+          247
+        ],
+        [
+          495,
+          463,
+          239
+        ],
+        [
+          479,
+          415,
+          223
+        ],
+        [
+          447,
+          319,
+          191
+        ]
+      ],
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "raw_branches_ruled_out": 0,
+      "reason": "checked_original_witness",
+      "status": "SAT",
+      "target": 213,
+      "translated_rhs": 341,
+      "translated_witness": [
+        1,
+        256,
+        0,
+        0,
+        0,
+        0,
+        64,
+        0,
+        0,
+        0,
+        4,
+        0,
+        16,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "compatible_branches_identified": 1,
+      "defect_groups": 0,
+      "graph_edges_peak": 1184,
+      "graph_vertices_peak": 138,
+      "groups": 32,
+      "m": 16,
+      "matching_calls": 1,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "nonbinary_defects": 0,
+      "original_min_weight": 15,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "raw_branches_ruled_out": 0,
+      "reason": "checked_original_witness",
+      "status": "SAT",
+      "target": 54613
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "compatible_branches_identified": 1,
+      "defect_groups": 0,
+      "graph_edges_peak": 4416,
+      "graph_vertices_peak": 274,
+      "groups": 64,
+      "m": 32,
+      "matching_calls": 1,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "nonbinary_defects": 0,
+      "original_min_weight": 31,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "raw_branches_ruled_out": 0,
+      "reason": "checked_original_witness",
+      "status": "SAT",
+      "target": 3579139413
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "compatible_branches_identified": 1,
+      "defect_groups": 0,
+      "graph_edges_peak": 3,
+      "graph_vertices_peak": 4,
+      "groups": 1,
+      "matching_calls": 1,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "name": "missing_affine_corner",
+      "nonbinary_defects": 0,
+      "original_supports": [
+        [
+          124,
+          125,
+          126
+        ]
+      ],
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "raw_branches_ruled_out": 0,
+      "reason": "all_branches_excluded",
+      "status": "UNSAT",
+      "target": 127
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Calls are measured; branches_total is a BEFORE-pruning product, not measured work. KEPT means the target is in the affine hull, not necessarily satisfiable. Every recorded SAT choice was checked, and every original-source result was compared with all original assignments. None of these finite checks establishes polynomial time on the general class.",
+  "seed": 720019,
+  "source_controls": [
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "compatible_branches_identified": 0,
+      "defect_groups": 0,
+      "graph_edges_peak": 0,
+      "graph_vertices_peak": 0,
+      "groups": 0,
+      "matching_calls": 0,
+      "max_binary_rank": null,
+      "min_binary_rank": null,
+      "name": "none",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 0,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": 0,
+      "raw_branches_ruled_out": 0,
+      "reason": "empty_xor_witness",
+      "source_assignments_checked": 1,
+      "source_cnf": [],
+      "source_models": 1,
+      "source_variables": 0,
+      "status": "SAT"
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 0,
+      "compatible_branches_identified": 0,
+      "defect_groups": 0,
+      "graph_edges_peak": 0,
+      "graph_vertices_peak": 0,
+      "groups": 1,
+      "matching_calls": 0,
+      "max_binary_rank": null,
+      "min_binary_rank": null,
+      "name": "empty_clause",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 0,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 0,
+      "polynomial_hull": "REJECTED",
+      "projected_witness_mask": null,
+      "raw_branches_ruled_out": 0,
+      "reason": "empty_support",
+      "source_assignments_checked": 4,
+      "source_cnf": [
+        []
+      ],
+      "source_models": 0,
+      "source_variables": 2,
+      "status": "UNSAT"
+    },
+    {
+      "binary_defects": 0,
+      "branches_total": 1,
+      "compatible_branches_identified": 1,
+      "defect_groups": 0,
+      "graph_edges_peak": 11,
+      "graph_vertices_peak": 10,
+      "groups": 3,
+      "matching_calls": 1,
+      "max_binary_rank": 0,
+      "min_binary_rank": 0,
+      "name": "unused_scope",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": 1,
+      "raw_branches_ruled_out": 0,
+      "reason": "checked_original_witness",
+      "source_assignments_checked": 8,
+      "source_cnf": [
+        [
+          1
+        ]
+      ],
+      "source_models": 4,
+      "source_variables": 3,
+      "status": "SAT"
+    },
+    {
+      "binary_defects": 21,
+      "branches_total": 2097152,
+      "compatible_branches_identified": 8,
+      "defect_groups": 21,
+      "graph_edges_peak": 347,
+      "graph_vertices_peak": 124,
+      "groups": 49,
+      "matching_calls": 7,
+      "max_binary_rank": 18,
+      "min_binary_rank": 18,
+      "name": "one_nonconstant_model",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": 5,
+      "raw_branches_ruled_out": 2097144,
+      "reason": "checked_original_witness",
+      "source_assignments_checked": 8,
+      "source_cnf": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          -1,
+          2,
+          3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          3
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "source_models": 1,
+      "source_variables": 3,
+      "status": "SAT"
+    },
+    {
+      "binary_defects": 24,
+      "branches_total": 16777216,
+      "compatible_branches_identified": 8,
+      "defect_groups": 24,
+      "graph_edges_peak": 408,
+      "graph_vertices_peak": 140,
+      "groups": 56,
+      "matching_calls": 8,
+      "max_binary_rank": 21,
+      "min_binary_rank": 21,
+      "name": "no_model",
+      "nonbinary_defects": 0,
+      "outer_branches_checked": 1,
+      "outer_branches_inconsistent": 0,
+      "outer_branches_total": 1,
+      "polynomial_hull": "KEPT",
+      "projected_witness_mask": null,
+      "raw_branches_ruled_out": 16777208,
+      "reason": "all_branches_excluded",
+      "source_assignments_checked": 8,
+      "source_cnf": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          -1,
+          2,
+          3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          3
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          -1,
+          2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "source_models": 0,
+      "source_variables": 3,
+      "status": "UNSAT"
+    }
+  ],
+  "summary": {
+    "largest_matched_translated_groups": 64,
+    "odd_cycle_measured_max_calls": 128,
+    "odd_cycle_measured_max_variables": 7,
+    "odd_cycle_raw_bound_at_max": 268435456,
+    "seeded_cases": 72,
+    "source_assignments_checked": 1139,
+    "source_models_lifted": 235,
+    "source_oracle_cases": 81,
+    "source_sat": 54,
+    "source_unsat": 27,
+    "unknown_budget_controls": 2
+  }
+}

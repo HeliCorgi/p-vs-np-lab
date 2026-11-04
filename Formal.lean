@@ -6,3 +6,4 @@ import Formal.ExactlyOneParity
 import Formal.BridgeAffineBarrier
 import Formal.JointXorClause
 import Formal.AffineFrontier
+import Formal.HoleFibers

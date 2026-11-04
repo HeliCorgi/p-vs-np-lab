@@ -7,6 +7,25 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第7–8段階：グラフに直せる範囲と、表を列挙しない合成
+
+3候補のXOR選択を、入力全体で同じ線形座標変換と、グループごとのXOR平行移動で重み1に変換できれば、完全マッチングで解けます。[必要十分条件](docs/graphic_gauge.md)は、候補対の全差分がグラフの辺の依存関係を表すこと（グラフィック・マトロイド）です。[Pythonの認識器](src/pnp_lab/graphic_support.py)は木の候補を予算内で探索し、見つけた木は元の全差分で検査します。[任意のCMRバックエンド](src/pnp_lab/cmr_graphic.py)も用意し、[固定版CI](results/cmr_integration_audit.json)で実バイナリの5ケースを確認しました。非グラフィックという結果だけではSAT/UNSATは決まりません。
+
+**この座標変換だけでは全入力を覆えません。** [小さな反例の検査可能な証明書](examples/graphic_fano_minor.json)に加え、[任意の二進行列の列依存関係をマイナーとして埋め込む構成](docs/binary_minor_universality.md)を実装しました。アフィンな候補群をすべて消した後でも成立します。元の式は各節に異なる3変数があり、各変数の出現は2～3回で、全真が解です。これは表現上の障害です。
+
+**別の正確な合成法：線形空間から1点だけ除いた集合。** 3候補の局所表は、4点のアフィン平面から1点を除いたものです。二つの平面の方向が重なれば、穴が埋まるか、一つの穴だけを残して合成できます。[算法と証明](docs/hole_flats.md)は、その集合を要素列挙せずに保持し、必要なとき元の候補を復元します。256グループの例では、257次元のアフィン空間にただ1点だけ穴があることを確定し、到達可能な目標と唯一の到達不能な目標を区別しました。[実験記録](results/hole_flats.json)には、合成が効かず `UNKNOWN` になる実際の3SAT還元像も含みます。
+
+複数の空間が残ったときは、各穴が除く分解数を階数から正確に計算します。合計が全分解数より小さければ、[条件付きの数え上げ](src/pnp_lab/flat_cover.py)で指数個の分解を調べずにSAT証人を作れます。この十分条件が反例でどこまで届かないかも一般式で示しました。線形緩和が常に解を持ち、二つずつの合成が一度も発火せず、穴の除外数の和が厳密な上界判定に足りない入力だけでも、元の3SAT判定を表せます。
+
+[Leanの追加3定理](Formal/HoleFibers.lean)は、左右1点ずつの除外を3通りの分解が回避できることと、2通りの場合の欠損点の公式を扱います。最後の公式では、元の和の分解が指定の2通りで尽きること等を仮定しています。Pythonの全実装・線形代数の階数計算・マイナー普遍性まで形式検証したものではありません。
+
+[並進と分岐を使うマッチング法](docs/gauge_matching.md)は、長さ7の奇数サイクルの候補積268,435,456を、線形条件で128回のマッチング判定へ縮めました。この族では一般に `2^n` 回が残ります。[統合判定器](src/pnp_lab/support_solver.py)は使える特殊算法を試し、既定では未決着なら完全な探索へ進みます。探索を予算で打ち切れば `UNKNOWN` です。CMRの使用は明示指定です。
+
+```bash
+python scripts/solve_three_cnf.py examples/three_cnf_odd_cycle.json --encoding sparse --method auto
+python scripts/solve_three_cnf.py examples/three_cnf_odd_cycle.json --encoding sparse --method gauge --max-matching-calls 16
+```
+
 ## 第6段階：3候補・重み2のどこに一般SATが残るか
 
 [証明・実装の対応](docs/support_threshold.md)では、各グループからマスクを一つずつ選び、全体のXORが目標に一致するかを判定します。候補数は「一つのグループに何通りあるか」、重みは「一つの候補がいくつのビットを反転するか」です。
@@ -227,7 +246,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要32定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要35定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -255,7 +274,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 126件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 165件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

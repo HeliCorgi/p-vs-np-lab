@@ -1,0 +1,236 @@
+{
+  "all_checks_passed": true,
+  "hidden_graphic": {
+    "certificate": {
+      "basis_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "basis_vectors": [
+        2,
+        4,
+        10,
+        19,
+        35,
+        94
+      ]
+    },
+    "distinct_reachable_targets": 27,
+    "examples": [
+      {
+        "bounded_search_method": "star",
+        "bounded_search_status": "SAT",
+        "bounded_tree_trials": 1,
+        "matching_calls": 1,
+        "raw_target": 3592,
+        "reason": "verified_graphic_matching",
+        "status": "SAT",
+        "underlying_rhs_mask": 42,
+        "witness": [
+          520,
+          1048,
+          2072
+        ]
+      },
+      {
+        "bounded_search_method": "star",
+        "bounded_search_status": "UNSAT",
+        "bounded_tree_trials": 1,
+        "matching_calls": 1,
+        "raw_target": 3697,
+        "reason": "verified_graphic_matching",
+        "status": "UNSAT",
+        "underlying_rhs_mask": 127,
+        "witness": null
+      }
+    ],
+    "full_original_choice_tuples": 27,
+    "raw_group_diameters": [
+      2,
+      3,
+      6
+    ],
+    "raw_supports": [
+      [
+        522,
+        520,
+        526
+      ],
+      [
+        1042,
+        1048,
+        1025
+      ],
+      [
+        2107,
+        2072,
+        2118
+      ]
+    ],
+    "target_checks": {
+      "SAT": 27,
+      "UNSAT_by_matching": 37,
+      "UNSAT_outside_hull": 64
+    }
+  },
+  "minimally_unsat_signed_cube": {
+    "additional_contraction_rank": 27,
+    "binary_presolve": {
+      "binary_groups": 24,
+      "contracted_rank": 24,
+      "fixed_point": true
+    },
+    "models_after_each_single_clause_deletion": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "quotient_coordinates": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "raw_contraction_rank": 51,
+    "source_assignments_examined": 8,
+    "source_clauses": 8,
+    "source_models": 0,
+    "source_variables": 3
+  },
+  "packing": [
+    {
+      "binary_presolve": {
+        "binary_groups": 30,
+        "contracted_rank": 30,
+        "fixed_point": true
+      },
+      "gadgets": 3,
+      "max_source_occurrences": 3,
+      "projected_disjoint_groups_used": 30,
+      "raw_disjoint_groups_used": 51,
+      "source_all_true_witness_checked": true,
+      "source_clauses": 10,
+      "source_variables": 12,
+      "support_groups": 70,
+      "verified_projected_minors": 3,
+      "verified_raw_minors": 3
+    },
+    {
+      "binary_presolve": {
+        "binary_groups": 54,
+        "contracted_rank": 54,
+        "fixed_point": true
+      },
+      "gadgets": 5,
+      "max_source_occurrences": 5,
+      "projected_disjoint_groups_used": 50,
+      "raw_disjoint_groups_used": 85,
+      "source_all_true_witness_checked": true,
+      "source_clauses": 18,
+      "source_variables": 20,
+      "support_groups": 126,
+      "verified_projected_minors": 5,
+      "verified_raw_minors": 5
+    },
+    {
+      "binary_presolve": {
+        "binary_groups": 90,
+        "contracted_rank": 90,
+        "fixed_point": true
+      },
+      "gadgets": 8,
+      "max_source_occurrences": 5,
+      "projected_disjoint_groups_used": 80,
+      "raw_disjoint_groups_used": 136,
+      "source_all_true_witness_checked": true,
+      "source_clauses": 30,
+      "source_variables": 32,
+      "support_groups": 210,
+      "verified_projected_minors": 8,
+      "verified_raw_minors": 8
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Finite reproducible checks, not a general SAT lower bound. The proofs for arbitrary size are in docs/graphic_gauge.md.",
+  "sign_invariance": {
+    "named_fixture": {
+      "contraction_rank": 19,
+      "groups_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19
+      ],
+      "minor": "F7",
+      "minor_rank": 3,
+      "quotient_coordinates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "verified": true
+    },
+    "projected_minor_checks": 512,
+    "raw_minor_checks": 512,
+    "scope": "Source models checked separately; the minor only certifies nonrepresentability.",
+    "signings": 512,
+    "source_assignments_examined": 8192,
+    "summed_source_models": 5488
+  },
+  "summary": {
+    "hidden_matching_unsat": 37,
+    "hidden_targets_checked": 128,
+    "largest_connected_obstruction_packing": 8,
+    "minimally_unsat_cube_fano_checked": true,
+    "signings_with_raw_and_post_presolve_fano": 512
+  }
+}

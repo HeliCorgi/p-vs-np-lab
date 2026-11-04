@@ -1,0 +1,358 @@
+{
+  "actual_bridge_signings": {
+    "max_merges": 3,
+    "min_merges": 3,
+    "source_assignments_examined": 8192,
+    "statuses": {
+      "SAT": 256,
+      "UNKNOWN": 256
+    }
+  },
+  "all_checks_passed": true,
+  "high_rank_chains": [
+    {
+      "before_filling": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 3,
+        "full_merges": 0,
+        "input_groups": 2,
+        "max_flat_rank": 3,
+        "merges": 1,
+        "one_hole_merges": 1,
+        "pair_tests": 1,
+        "reason": "forced_hole",
+        "residual_groups": 2,
+        "split_nodes": 0,
+        "status": "UNSAT"
+      },
+      "filled_non_graphic": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 3,
+        "full_merges": 1,
+        "input_groups": 3,
+        "max_flat_rank": 3,
+        "merges": 2,
+        "one_hole_merges": 1,
+        "pair_tests": 2,
+        "reason": "checked_original_witness",
+        "residual_groups": 3,
+        "split_nodes": 2,
+        "status": "SAT"
+      },
+      "m": 2,
+      "rank": 3,
+      "represented_cardinality": "7"
+    },
+    {
+      "before_filling": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 9,
+        "full_merges": 0,
+        "input_groups": 8,
+        "max_flat_rank": 9,
+        "merges": 7,
+        "one_hole_merges": 7,
+        "pair_tests": 7,
+        "reason": "forced_hole",
+        "residual_groups": 8,
+        "split_nodes": 0,
+        "status": "UNSAT"
+      },
+      "filled_non_graphic": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 9,
+        "full_merges": 1,
+        "input_groups": 9,
+        "max_flat_rank": 9,
+        "merges": 8,
+        "one_hole_merges": 7,
+        "pair_tests": 8,
+        "reason": "checked_original_witness",
+        "residual_groups": 9,
+        "split_nodes": 8,
+        "status": "SAT"
+      },
+      "m": 8,
+      "rank": 9,
+      "represented_cardinality": "511"
+    },
+    {
+      "before_filling": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 33,
+        "full_merges": 0,
+        "input_groups": 32,
+        "max_flat_rank": 33,
+        "merges": 31,
+        "one_hole_merges": 31,
+        "pair_tests": 31,
+        "reason": "forced_hole",
+        "residual_groups": 32,
+        "split_nodes": 0,
+        "status": "UNSAT"
+      },
+      "filled_non_graphic": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 33,
+        "full_merges": 1,
+        "input_groups": 33,
+        "max_flat_rank": 33,
+        "merges": 32,
+        "one_hole_merges": 31,
+        "pair_tests": 32,
+        "reason": "checked_original_witness",
+        "residual_groups": 33,
+        "split_nodes": 32,
+        "status": "SAT"
+      },
+      "m": 32,
+      "rank": 33,
+      "represented_cardinality": "8589934591"
+    },
+    {
+      "before_filling": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 129,
+        "full_merges": 0,
+        "input_groups": 128,
+        "max_flat_rank": 129,
+        "merges": 127,
+        "one_hole_merges": 127,
+        "pair_tests": 127,
+        "reason": "forced_hole",
+        "residual_groups": 128,
+        "split_nodes": 0,
+        "status": "UNSAT"
+      },
+      "filled_non_graphic": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 129,
+        "full_merges": 1,
+        "input_groups": 129,
+        "max_flat_rank": 129,
+        "merges": 128,
+        "one_hole_merges": 127,
+        "pair_tests": 128,
+        "reason": "checked_original_witness",
+        "residual_groups": 129,
+        "split_nodes": 128,
+        "status": "SAT"
+      },
+      "m": 128,
+      "rank": 129,
+      "represented_cardinality": "680564733841876926926749214863536422911"
+    },
+    {
+      "before_filling": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 257,
+        "full_merges": 0,
+        "input_groups": 256,
+        "max_flat_rank": 257,
+        "merges": 255,
+        "one_hole_merges": 255,
+        "pair_tests": 255,
+        "reason": "forced_hole",
+        "residual_groups": 256,
+        "split_nodes": 0,
+        "status": "UNSAT"
+      },
+      "filled_non_graphic": {
+        "affine_groups": 0,
+        "affine_rank": 0,
+        "decomposition_nullity": 0,
+        "final_flats": 1,
+        "final_hull_rank": 257,
+        "full_merges": 1,
+        "input_groups": 257,
+        "max_flat_rank": 257,
+        "merges": 256,
+        "one_hole_merges": 255,
+        "pair_tests": 256,
+        "reason": "checked_original_witness",
+        "residual_groups": 257,
+        "split_nodes": 256,
+        "status": "SAT"
+      },
+      "m": 256,
+      "rank": 257,
+      "represented_cardinality": "231584178474632390847141970017375815706539969331281128078915168015826259279871"
+    }
+  ],
+  "no_merge_cube": [
+    {
+      "affine_groups": 24,
+      "affine_rank": 24,
+      "copies": 1,
+      "decomposition_nullity": 19,
+      "final_flats": 32,
+      "final_hull_rank": 45,
+      "full_merges": 0,
+      "input_groups": 56,
+      "max_flat_rank": 2,
+      "merges": 0,
+      "one_hole_merges": 0,
+      "pair_tests": 496,
+      "reason": "dependent_flats_hit_hole",
+      "residual_groups": 32,
+      "split_nodes": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "affine_groups": 48,
+      "affine_rank": 48,
+      "copies": 2,
+      "decomposition_nullity": 38,
+      "final_flats": 64,
+      "final_hull_rank": 90,
+      "full_merges": 0,
+      "input_groups": 112,
+      "max_flat_rank": 2,
+      "merges": 0,
+      "one_hole_merges": 0,
+      "pair_tests": 2016,
+      "reason": "dependent_flats_hit_hole",
+      "residual_groups": 64,
+      "split_nodes": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "affine_groups": 120,
+      "affine_rank": 120,
+      "copies": 5,
+      "decomposition_nullity": 95,
+      "final_flats": 160,
+      "final_hull_rank": 225,
+      "full_merges": 0,
+      "input_groups": 280,
+      "max_flat_rank": 2,
+      "merges": 0,
+      "one_hole_merges": 0,
+      "pair_tests": 12720,
+      "reason": "dependent_flats_hit_hole",
+      "residual_groups": 160,
+      "split_nodes": 0,
+      "status": "UNKNOWN"
+    }
+  ],
+  "optional_cover": {
+    "additional_sat_witnesses": 7,
+    "cube_decompositions": 524288,
+    "cube_exclusions": 4194304,
+    "cube_status": "UNKNOWN",
+    "diagonal_decompositions": 4,
+    "diagonal_exclusions": 3,
+    "diagonal_targets": 16
+  },
+  "rank_three_fano": [
+    {
+      "full_merges": 1,
+      "rhs": 0,
+      "witness": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 1,
+      "witness": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 2,
+      "witness": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 3,
+      "witness": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 4,
+      "witness": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 5,
+      "witness": [
+        1,
+        4,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 6,
+      "witness": [
+        2,
+        4,
+        0
+      ]
+    },
+    {
+      "full_merges": 1,
+      "rhs": 7,
+      "witness": [
+        2,
+        4,
+        1
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Polynomial partial decision. UNKNOWN has no implication for satisfiability. Chain cardinalities follow from the all-size identity; large represented sets were never listed.",
+  "summary": {
+    "bridge_signings_sat": 256,
+    "bridge_signings_unknown": 256,
+    "fano_targets_decided": 8,
+    "largest_exact_one_hole_size": "231584178474632390847141970017375815706539969331281128078915168015826259279871",
+    "largest_symbolic_rank": 257,
+    "no_merge_unsat_controls": 3
+  }
+}

@@ -36,3 +36,7 @@ import Formal
 #print axioms BoundaryLab.AffineFrontier.pruned_iff_reach
 #print axioms BoundaryLab.AffineFrontier.suffix_observation_forced
 #print axioms BoundaryLab.AffineFrontier.absorb_exact_image
+
+#print axioms BoundaryLab.HoleFibers.three_pairs_escape
+#print axioms BoundaryLab.HoleFibers.two_pairs_blocked_iff_cross
+#print axioms BoundaryLab.HoleFibers.two_point_fiber_puncture

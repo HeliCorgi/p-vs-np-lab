@@ -1,5 +1,10 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Current obstruction and remaining algorithmic target
+
+A choice from a ternary support becomes an affine plane with one forbidden point. [Symbolic addition](hole_flats.md) can combine certain intersecting planes without materializing their sums, even when their differences are not graphic. [Graph realization](graphic_gauge.md) and [fixed-coordinate branching](gauge_matching.md) provide complementary solvers. Polynomial work on successfully recognized families does not bound the complete fallback. [Every labelled binary column matroid can occur as a minor](binary_minor_universality.md) after exact affine absorption on some sparse bridge image, so no proper minor-closed binary class covers every image. A remaining target is joint feasibility when the individual direction spaces have trivial pairwise intersections but collectively have dependencies: find a decomposition of the target that simultaneously avoids each forbidden point, or prove none exists. A polynomial all-input algorithm for these residual 3SAT images would suffice for P=NP.
+
+
 ## Current target: three options of weight two
 
 The [support threshold](support_threshold.md) reduces every 3SAT instance to a zero-target XOR selection with at most three options per group, each option touching at most two coordinates, and exactly two groups incident to each coordinate. The binary-choice and unit-weight edges have polynomial solvers. The [explicit frontier](affine_frontier.md) decides general supports, but it does not yield the missing general polynomial bound. Its all-orders grid obstruction concerns the earlier five-option bridge, not this smaller encoding.

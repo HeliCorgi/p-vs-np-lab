@@ -28,6 +28,7 @@ NEW_REPORTS = (
     "joint_reasoning.json", "signature_counting.json", "upstream_parameters.json",
     "constant_block_bridge.json", "affine_frontier.json",
     "ternary_support_threshold.json", "unit_support_matching.json",
+    "gauge_matching.json", "graphic_matching.json", "binary_minor_universality.json", "hole_flats.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -132,10 +133,8 @@ def main() -> None:
     if not tests.wasSuccessful() or not tests.testsRun:
         raise RuntimeError("Unit tests failed or no tests were discovered")
 
-    for name in ("projection_barrier", "parity_projection", "affine_projection",
-                 "mixed_constraints", "three_sat_bridge", "parity_cuts",
-                 "joint_reasoning", "signature_counting", "upstream_parameters",
-                 "constant_block_bridge", "affine_frontier", "ternary_support_threshold", "unit_support_matching"):
+    for report in NEW_REPORTS:
+        name = Path(report).stem
         run_component(ROOT / "experiments" / f"{name}.py", out, out / f"{name}.log")
     run_component(BASELINE / "run_all.py", out / "baseline", out / "baseline.log")
 
@@ -162,6 +161,8 @@ def main() -> None:
     frontier = read_json(out / NEW_REPORTS[10])
     threshold = read_json(out / NEW_REPORTS[11])
     matching = read_json(out / NEW_REPORTS[12])
+    phase7_8 = {name: read_json(out / (name + ".json"))
+                for name in ("gauge_matching", "graphic_matching", "binary_minor_universality", "hole_flats")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -170,7 +171,8 @@ def main() -> None:
             or not cuts["all_checks_passed"] or not joint["all_checks_passed"]
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
-            or not threshold["all_checks_passed"] or not matching["all_checks_passed"]):
+            or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
+            or not all(r["all_checks_passed"] for r in phase7_8.values())):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -217,6 +219,8 @@ def main() -> None:
         "ternary_support_threshold_summary": threshold["summary"],
         "unit_support_matching_summary": matching["summary"],
         "general_three_option_weight_two_polynomial_solver": False,
+        "phase7_8_summaries": {name: r["summary"] for name, r in phase7_8.items()},
+        "cmr_gate_scope": "Separate optional pinned executable workflow; Python replay does not build CMR.",
         "openai_math_snapshot": math_snapshot,
         "upstream_schedule_first_possible": parameters["first_possible"],
         "upstream_schedule_total_cutoff_computed": parameters["total_algorithm_cutoff_computed"],

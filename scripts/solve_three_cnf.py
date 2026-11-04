@@ -17,6 +17,12 @@ def main() -> int:
     p.add_argument('--encoding', choices=('blocks', 'sparse'), default='blocks',
                    help='Five-state blocks or three-option, weight-two XOR supports')
     p.add_argument('--max-transitions', type=int, help='Residual prefix-option attempts; preprocessing is separate')
+    p.add_argument('--method', choices=('auto','frontier','gauge','graphic','cmr','holes'), default='auto',
+                   help='Backend for --encoding sparse. Optional cmr uses a trusted local executable.')
+    p.add_argument('--max-matching-calls', type=int, help='Leaf matching budget for --method gauge')
+    p.add_argument('--max-outer-branches', type=int, help='Outer piece-combination budget for --method gauge')
+    p.add_argument('--max-tree-trials', type=int, default=3, help='Candidate trees for graphic recognition')
+    p.add_argument('--cmr-executable', default='cmr-graphic')
     a = p.parse_args()
     try:
         obj = json.loads(sys.stdin.read() if a.input == '-' else Path(a.input).read_text())
@@ -25,14 +31,21 @@ def main() -> int:
                 or not all(isinstance(c, list) for c in obj['clauses'])
                 or ('group_order' in obj and not isinstance(obj['group_order'], list))):
             raise ValueError('Expected arrays variables and clauses, with an optional group_order array.')
+        if a.method != 'gauge' and (a.max_matching_calls is not None or a.max_outer_branches is not None):
+            raise ValueError('Matching-call/outer-branch budgets require --method gauge.')
         if a.encoding == 'blocks':
+            if a.method != 'auto' or a.max_tree_trials != 3 or a.cmr_executable != 'cmr-graphic':
+                raise ValueError('Support method options require --encoding sparse.')
             result = decide_three_cnf(obj['variables'], obj['clauses'], group_order=obj.get('group_order'),
                                       max_transitions=a.max_transitions)
         else:
             if 'group_order' in obj:
                 raise ValueError('group_order addresses groups in the blocks encoding only.')
             red = three_cnf_to_weight_two_supports(obj['variables'], obj['clauses'])
-            result = decide_xor_choices(red.supports, red.rhs, max_transitions=a.max_transitions)
+            result = decide_xor_choices(red.supports, red.rhs, max_transitions=a.max_transitions,
+                                        method=a.method, max_matching_calls=a.max_matching_calls,
+                                        max_outer_branches=a.max_outer_branches,
+                                        max_tree_trials=a.max_tree_trials, cmr_executable=a.cmr_executable)
             model = red.project_witness(result['witness']) if result['status'] == 'SAT' else None
             result.update(source_witness_mask=model, source_witness=(None if model is None else
                           {v: bool(model & (1 << i)) for i, v in enumerate(red.original_variables)}))

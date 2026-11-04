@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "description": "Fano minor of the labelled pair-difference matroid, not a SAT/UNSAT certificate.",
+  "constructor": "three_cnf_to_weight_two_supports",
+  "source_variables": [
+    "x",
+    "a",
+    "b",
+    "c"
+  ],
+  "source_cnf": [
+    [1, 2, 3],
+    [1, 2, 4],
+    [1, 3, 4]
+  ],
+  "indexing": "Zero-based [group, option_a, option_b] in constructor order; not sorted or deduplicated by a solver.",
+  "contract": [
+    [0, 0, 1],
+    [1, 0, 1],
+    [2, 0, 1],
+    [3, 0, 1],
+    [4, 0, 1],
+    [5, 0, 1],
+    [6, 0, 1],
+    [7, 0, 1],
+    [8, 0, 1],
+    [9, 0, 1],
+    [9, 0, 2],
+    [10, 0, 1],
+    [10, 0, 2],
+    [11, 0, 1],
+    [11, 0, 2],
+    [13, 0, 2],
+    [16, 0, 2],
+    [14, 0, 2],
+    [19, 0, 2]
+  ],
+  "keep": [
+    [12, 0, 1],
+    [15, 0, 1],
+    [18, 0, 1],
+    [12, 1, 2],
+    [12, 0, 2],
+    [15, 0, 2],
+    [18, 0, 2]
+  ],
+  "expected_contracted_rank": 19,
+  "expected_minor_rank": 3,
+  "quotient_basis_keep_indices": [0, 1, 3],
+  "expected_quotient_coordinates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}
