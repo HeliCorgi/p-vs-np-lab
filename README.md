@@ -7,6 +7,27 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第15段階：全体を組み合わせて法を発見する。その方針の限界まで確認する
+
+前回残した「局所には特別な法がないのに、全体で初めて整数の矛盾が生じる」対象を実装しました。[整数の判定器](docs/integer_hull.md)は、元のBoolean節の局所表から整数等式・合同式を導き、全体で合成して矛盾する法を発見します。素数の候補一覧や素因数分解は使いません。最終証明書は、元の節に対する局所含意と整数の重み付き和だけで独立に検算できます。整数の緩和に解があっても、Booleanの解を得たことにはならないため `UNKNOWN` です。
+
+| 確認したこと | 結果と範囲 |
+|---|---|
+| [局所にはない整数障害](docs/global_integer_fixtures.md) | 局所では `a+x-b=c` と等値関係だけ、全体では `m x=q` となる族を構成。符号・変数名・節順を変えた入力から法4・5・7・8・9・25・49を発見。14入力の9,736局所表にはねじれがなく、省略もなし |
+| 素数体ごとに解くだけでは足りない例 | `4x=2`、`9x=3`、`49x=7` はすべての素数体で線形系が整合する一方、整数では矛盾。最大1,020変数・2,136節を法49の1,019項で反証。各体の解はBoolean割当とは限らず、従来のBoolean field bridgeも比較した4例を解けるため、既存法への全面的な優越は主張しない |
+| [条件を付けて矛盾を戻す](docs/integer_probe.md) | 根では整数式が0本の、二つのフローの選択を表す入力を検査。一つの値を仮定して反証→反対の値を学習→残りも反証。709変数・1,236節を含む3例で整数器の呼び出しは各3回。SAT側6例では元の充足割当を確認 |
+| [方法そのものが止まる入力](results/global_integer.json) | 別の証明でUNSATを確認した31変数・152節と、同じ支持構造のSAT式で、整数式はどちらも0本。一変数ずつ両値を試す計63呼び出しを各入力で完遂しても、学習単位は0本、結果は `UNKNOWN`。上限による停止ではない |
+| [全ての法に対する限界と先行研究](docs/global_integer_theory.md) | Hall型の既存例では局所の整数格子そのものが全空間になるため、任意の合成数の法を含めても情報を得られない。Lichter–Pagoの2025年論文／2026年1月更新版には、さらに強い整数・LP緩和の不完全性が既にある |
+
+**研究上の判断：整数器は検証可能な補助器として残し、法や局所幅を増やすこと自体を、一般SATを解く主軸から外します。** [次の対象](docs/reverse_engineering.md)は、局所のBoolean解の組合せについて、アフィン化で失われる相関や場合の被覆をどう保持するかです。既存の証明系との関係と総サイズの評価を先に確認します。今回もP vs NPの解決候補は得られていません。
+
+```bash
+python scripts/solve_conservation.py examples/phase15_global_prime_power.json --method integer | python scripts/solve_conservation.py examples/phase15_global_prime_power.json --check -
+python scripts/solve_conservation.py examples/phase15_guarded_flow.json --method integer-probe --integer-call-cap 3 | python scripts/solve_conservation.py examples/phase15_guarded_flow.json --check -
+```
+
+通常の `auto` に根の整数検査を追加しました。条件付きの反復は `--method integer-probe` で明示的に選びます。[Leanの追加4定理](Formal/IntegerCertificate.lean)は、任意の整数法での証明書の健全性と、片側・両側の条件付き反証を扱います。Python実装全体、発見の計算量、確率的な障壁まで形式検証したものではありません。
+
 ## 第14段階：Boolean節から3を法とする保存則を発見する
 
 前回の標的だった「元の変数名も、流れを表すグラフも知らずに、保存則を復元できるか」を検査しました。[局所表からの合同式の発見](docs/modular_hull.md)は、入力の節が許すBoolean割当から方程式を導き、重み付き和が矛盾するか調べます。3値の各変数がちょうど一つの状態を選び、局所関係がすべてアフィンであることを確認できた場合には、[真偽の判定と元の充足割当の構成](docs/trit_solver.md)まで行います。未知の入力で保存則が見つからなければ `UNKNOWN` です。
@@ -347,7 +368,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要62定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要66定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -375,7 +396,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 307件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 319件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例、整数格子の独立な小行列式オラクルと条件付き証明の改変検査を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

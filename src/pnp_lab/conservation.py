@@ -4,12 +4,16 @@ from .cyclic_four import solve_cyclic_four,check_cyclic_four
 from .trit_solver import solve_trit_affine
 from .mixed_modular import mixed_modular_refute,check_field_bridge
 from .modular_padding import peel,_replay,lift_after_peeling
+from .integer_hull import integer_hull_refute,check_integer_hull
+from .integer_probe import integer_probe_refute,check_integer_probe
 
 
 def _check_inner(n,cs,cert):
     k=cert['kind']
     if k=='boolean-modular-hull-v1':return check_modular_hull(n,cs,cert)
     if k=='boolean-field-bridge-v1':return check_field_bridge(n,cs,cert)
+    if k=='boolean-integer-hull-v1':return check_integer_hull(n,cs,cert)
+    if k=='boolean-integer-probe-v1':return check_integer_probe(n,cs,cert)
     if k=='boolean-cyclic-four-v1':
         return check_cyclic_four(n,cs,dict(status='UNSAT',witness=None,certificate=cert))
     return False
@@ -32,15 +36,18 @@ def check_conservation(n,clauses,report):
     except (TypeError,AttributeError,IndexError,KeyError,ValueError):return False
 
 
-def solve_conservation(n,clauses,*,method='auto',bridge_width=3,max_probes=None,max_short_rows=None):
+def solve_conservation(n,clauses,*,method='auto',bridge_width=3,max_probes=None,max_short_rows=None,
+                       max_integer_calls=32):
     cs=_input(n,clauses);attempts=[]
-    if method not in ('auto','trit','cyclic4','hull2','hull3','mixed'):raise ValueError('unknown conservation method')
+    if method not in ('auto','trit','cyclic4','hull2','hull3','mixed','integer','integer-probe'):raise ValueError('unknown conservation method')
     if type(bridge_width) is not int or not 0<=bridge_width<=4:raise ValueError('bad bridge width')
-    if any(v is not None and (type(v) is not int or v<0) for v in (max_probes,max_short_rows)):raise ValueError('invalid bridge budget')
+    if any(v is not None and (type(v) is not int or v<0) for v in (max_probes,max_short_rows,max_integer_calls)):raise ValueError('invalid inference budget')
     def attempt(name,rows,steps=()):
         if name=='trit':r=solve_trit_affine(n,rows)
         elif name=='cyclic4':r=solve_cyclic_four(n,rows)
         elif name in ('hull2','hull3'):r=modular_hull_refute(n,rows,prime=int(name[-1]))
+        elif name=='integer':r=integer_hull_refute(n,rows)
+        elif name=='integer-probe':r=integer_probe_refute(n,rows,max_calls=max_integer_calls)
         else:r=mixed_modular_refute(n,rows,bridge_width=bridge_width,max_probes=max_probes,max_short_rows=max_short_rows)
         attempts.append(dict(method=name,status=r['status'],removed=len(steps),stats=r['stats']))
         if r['status']=='UNKNOWN':return None
@@ -63,5 +70,6 @@ def solve_conservation(n,clauses,*,method='auto',bridge_width=3,max_probes=None,
         # A zero-step peel can still remove tautologies and shift row IDs.
         # Use the unmodified input when the certificate has no peel wrapper.
         r=attempt('mixed',raw if steps else cs,steps)
+        if r is None:r=attempt('integer',raw if steps else cs,steps)
     else:r=attempt(method,cs)
     return r if r is not None else dict(status='UNKNOWN',method=method,witness=None,certificate=None,attempts=attempts)

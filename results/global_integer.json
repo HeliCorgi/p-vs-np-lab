@@ -1,0 +1,3363 @@
+{
+  "all_checks_passed": true,
+  "carry_cycles": [
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 156,
+      "gates": 4,
+      "independent_field_hulls": [
+        {
+          "local_rows": 234,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 234,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15104,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 106,
+        "exact_rows": 128,
+        "global_operations": 325,
+        "integer_columns": 75,
+        "integer_feasible": true,
+        "integer_rank": 74,
+        "integer_rows": 128,
+        "integer_slack_columns": 0,
+        "local_assignments": 1152,
+        "local_models": 362,
+        "local_operations": 621,
+        "local_rows": 128,
+        "local_torsion_histogram": {
+          "[]": 165
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 2,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 165,
+        "scopes_examined": 165,
+        "scopes_profiled": 165,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 0,
+      "unsatisfiable": false,
+      "variables": 75,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": false,
+      "clauses": 156,
+      "gates": 4,
+      "independent_field_hulls": [
+        {
+          "local_rows": 234,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 234,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15104,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 74,
+        "congruence_rows": 0,
+        "discovered_modulus": 4,
+        "duplicate_rows": 110,
+        "exact_rows": 124,
+        "global_operations": 299,
+        "integer_columns": 75,
+        "integer_feasible": false,
+        "integer_rank": 73,
+        "integer_rows": 124,
+        "integer_slack_columns": 0,
+        "local_assignments": 1152,
+        "local_models": 362,
+        "local_operations": 603,
+        "local_rows": 124,
+        "local_torsion_histogram": {
+          "[]": 165
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 2,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "residual_rhs": 2,
+        "scope_complete": true,
+        "scopes_available": 165,
+        "scopes_examined": 165,
+        "scopes_profiled": 165,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 2,
+      "unsatisfiable": true,
+      "variables": 75,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 200,
+      "gates": 5,
+      "independent_field_hulls": [
+        {
+          "local_rows": 302,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 302,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15105,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 143,
+        "exact_rows": 159,
+        "global_operations": 446,
+        "integer_columns": 96,
+        "integer_feasible": true,
+        "integer_rank": 95,
+        "integer_rows": 159,
+        "integer_slack_columns": 0,
+        "local_assignments": 1492,
+        "local_models": 465,
+        "local_operations": 770,
+        "local_rows": 159,
+        "local_torsion_histogram": {
+          "[]": 212
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 212,
+        "scopes_examined": 212,
+        "scopes_profiled": 212,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 5,
+      "unsatisfiable": false,
+      "variables": 96,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": false,
+      "checked_original_boolean_word": false,
+      "clauses": 200,
+      "gates": 5,
+      "independent_field_hulls": [
+        {
+          "local_rows": 302,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 302,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15105,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 95,
+        "congruence_rows": 0,
+        "discovered_modulus": 5,
+        "duplicate_rows": 145,
+        "exact_rows": 157,
+        "global_operations": 435,
+        "integer_columns": 96,
+        "integer_feasible": false,
+        "integer_rank": 94,
+        "integer_rows": 157,
+        "integer_slack_columns": 0,
+        "local_assignments": 1492,
+        "local_models": 465,
+        "local_operations": 766,
+        "local_rows": 157,
+        "local_torsion_histogram": {
+          "[]": 212
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 3,
+        "max_scope_size": 5,
+        "residual_rhs": 4,
+        "scope_complete": true,
+        "scopes_available": 212,
+        "scopes_examined": 212,
+        "scopes_profiled": 212,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": false,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 1,
+      "unsatisfiable": true,
+      "variables": 96,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 288,
+      "gates": 7,
+      "independent_field_hulls": [
+        {
+          "local_rows": 438,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 438,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15107,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 203,
+        "exact_rows": 235,
+        "global_operations": 621,
+        "integer_columns": 138,
+        "integer_feasible": true,
+        "integer_rank": 137,
+        "integer_rows": 235,
+        "integer_slack_columns": 0,
+        "local_assignments": 2172,
+        "local_models": 671,
+        "local_operations": 1119,
+        "local_rows": 235,
+        "local_torsion_histogram": {
+          "[]": 306
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 3,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 306,
+        "scopes_examined": 306,
+        "scopes_profiled": 306,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 7,
+      "unsatisfiable": false,
+      "variables": 138,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": false,
+      "checked_original_boolean_word": false,
+      "clauses": 288,
+      "gates": 7,
+      "independent_field_hulls": [
+        {
+          "local_rows": 438,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 438,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15107,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 137,
+        "congruence_rows": 0,
+        "discovered_modulus": 7,
+        "duplicate_rows": 201,
+        "exact_rows": 237,
+        "global_operations": 645,
+        "integer_columns": 138,
+        "integer_feasible": false,
+        "integer_rank": 136,
+        "integer_rows": 237,
+        "integer_slack_columns": 0,
+        "local_assignments": 2172,
+        "local_models": 671,
+        "local_operations": 1138,
+        "local_rows": 237,
+        "local_torsion_histogram": {
+          "[]": 306
+        },
+        "max_coefficient_bits": 3,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 3,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "residual_rhs": 6,
+        "scope_complete": true,
+        "scopes_available": 306,
+        "scopes_examined": 306,
+        "scopes_profiled": 306,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": false,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 1,
+      "unsatisfiable": true,
+      "variables": 138,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 332,
+      "gates": 8,
+      "independent_field_hulls": [
+        {
+          "local_rows": 506,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 506,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15108,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 243,
+        "exact_rows": 263,
+        "global_operations": 720,
+        "integer_columns": 159,
+        "integer_feasible": true,
+        "integer_rank": 158,
+        "integer_rows": 263,
+        "integer_slack_columns": 0,
+        "local_assignments": 2512,
+        "local_models": 774,
+        "local_operations": 1296,
+        "local_rows": 263,
+        "local_torsion_histogram": {
+          "[]": 353
+        },
+        "max_coefficient_bits": 4,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 4,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 4,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 353,
+        "scopes_examined": 353,
+        "scopes_profiled": 353,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 0,
+      "unsatisfiable": false,
+      "variables": 159,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": false,
+      "clauses": 332,
+      "gates": 8,
+      "independent_field_hulls": [
+        {
+          "local_rows": 506,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 506,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15108,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 158,
+        "congruence_rows": 0,
+        "discovered_modulus": 8,
+        "duplicate_rows": 240,
+        "exact_rows": 266,
+        "global_operations": 733,
+        "integer_columns": 159,
+        "integer_feasible": false,
+        "integer_rank": 157,
+        "integer_rows": 266,
+        "integer_slack_columns": 0,
+        "local_assignments": 2512,
+        "local_models": 774,
+        "local_operations": 1315,
+        "local_rows": 266,
+        "local_torsion_histogram": {
+          "[]": 353
+        },
+        "max_coefficient_bits": 4,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 4,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 4,
+        "max_scope_size": 5,
+        "residual_rhs": 6,
+        "scope_complete": true,
+        "scopes_available": 353,
+        "scopes_examined": 353,
+        "scopes_profiled": 353,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 2,
+      "unsatisfiable": true,
+      "variables": 159,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 376,
+      "gates": 9,
+      "independent_field_hulls": [
+        {
+          "local_rows": 574,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 574,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15109,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 278,
+        "exact_rows": 296,
+        "global_operations": 841,
+        "integer_columns": 180,
+        "integer_feasible": true,
+        "integer_rank": 179,
+        "integer_rows": 296,
+        "integer_slack_columns": 0,
+        "local_assignments": 2852,
+        "local_models": 877,
+        "local_operations": 1450,
+        "local_rows": 296,
+        "local_torsion_histogram": {
+          "[]": 400
+        },
+        "max_coefficient_bits": 4,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 4,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 4,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 400,
+        "scopes_examined": 400,
+        "scopes_profiled": 400,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 9,
+      "unsatisfiable": false,
+      "variables": 180,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": false,
+      "clauses": 376,
+      "gates": 9,
+      "independent_field_hulls": [
+        {
+          "local_rows": 574,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 574,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15109,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 179,
+        "congruence_rows": 0,
+        "discovered_modulus": 9,
+        "duplicate_rows": 277,
+        "exact_rows": 297,
+        "global_operations": 838,
+        "integer_columns": 180,
+        "integer_feasible": false,
+        "integer_rank": 178,
+        "integer_rows": 297,
+        "integer_slack_columns": 0,
+        "local_assignments": 2852,
+        "local_models": 877,
+        "local_operations": 1456,
+        "local_rows": 297,
+        "local_torsion_histogram": {
+          "[]": 400
+        },
+        "max_coefficient_bits": 4,
+        "max_combination_bits": 3,
+        "max_diagonal_bits": 4,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "residual_rhs": 3,
+        "scope_complete": true,
+        "scopes_available": 400,
+        "scopes_examined": 400,
+        "scopes_profiled": 400,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 3,
+      "unsatisfiable": true,
+      "variables": 180,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 1080,
+      "gates": 25,
+      "independent_field_hulls": [
+        {
+          "local_rows": 1662,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 1662,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15125,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 770,
+        "exact_rows": 892,
+        "global_operations": 2659,
+        "integer_columns": 516,
+        "integer_feasible": true,
+        "integer_rank": 515,
+        "integer_rows": 892,
+        "integer_slack_columns": 0,
+        "local_assignments": 8292,
+        "local_models": 2525,
+        "local_operations": 4307,
+        "local_rows": 892,
+        "local_torsion_histogram": {
+          "[]": 1152
+        },
+        "max_coefficient_bits": 5,
+        "max_combination_bits": 5,
+        "max_diagonal_bits": 5,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 2,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 1152,
+        "scopes_examined": 1152,
+        "scopes_profiled": 1152,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 25,
+      "unsatisfiable": false,
+      "variables": 516,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": false,
+      "clauses": 1080,
+      "gates": 25,
+      "independent_field_hulls": [
+        {
+          "local_rows": 1662,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 1662,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15125,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 515,
+        "congruence_rows": 0,
+        "discovered_modulus": 25,
+        "duplicate_rows": 781,
+        "exact_rows": 881,
+        "global_operations": 2540,
+        "integer_columns": 516,
+        "integer_feasible": false,
+        "integer_rank": 514,
+        "integer_rows": 881,
+        "integer_slack_columns": 0,
+        "local_assignments": 8292,
+        "local_models": 2525,
+        "local_operations": 4326,
+        "local_rows": 881,
+        "local_torsion_histogram": {
+          "[]": 1152
+        },
+        "max_coefficient_bits": 5,
+        "max_combination_bits": 5,
+        "max_diagonal_bits": 5,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 5,
+        "max_scope_size": 5,
+        "residual_rhs": 5,
+        "scope_complete": true,
+        "scopes_available": 1152,
+        "scopes_examined": 1152,
+        "scopes_profiled": 1152,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 5,
+      "unsatisfiable": true,
+      "variables": 516,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": true,
+      "clauses": 2136,
+      "gates": 49,
+      "independent_field_hulls": [
+        {
+          "local_rows": 3294,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 3294,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer relaxation feasible",
+      "scramble_seed": 15149,
+      "stats": {
+        "budget_limited": false,
+        "congruence_rows": 0,
+        "discovered_modulus": null,
+        "duplicate_rows": 1511,
+        "exact_rows": 1783,
+        "global_operations": 5548,
+        "integer_columns": 1020,
+        "integer_feasible": true,
+        "integer_rank": 1019,
+        "integer_rows": 1783,
+        "integer_slack_columns": 0,
+        "local_assignments": 16452,
+        "local_models": 4997,
+        "local_operations": 8581,
+        "local_rows": 1783,
+        "local_torsion_histogram": {
+          "[]": 2280
+        },
+        "max_coefficient_bits": 6,
+        "max_combination_bits": 6,
+        "max_diagonal_bits": 6,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 6,
+        "max_scope_size": 5,
+        "scope_complete": true,
+        "scopes_available": 2280,
+        "scopes_examined": 2280,
+        "scopes_profiled": 2280,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNKNOWN",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 49,
+      "unsatisfiable": false,
+      "variables": 1020,
+      "wire_length": 10
+    },
+    {
+      "all_prime_linear_systems_feasible_by_criterion": true,
+      "checked_original_boolean_word": false,
+      "clauses": 2136,
+      "gates": 49,
+      "independent_field_hulls": [
+        {
+          "local_rows": 3294,
+          "prime": 2,
+          "status": "UNKNOWN"
+        },
+        {
+          "local_rows": 3294,
+          "prime": 3,
+          "status": "UNKNOWN"
+        }
+      ],
+      "reason": "integer divisibility contradiction",
+      "scramble_seed": 15149,
+      "stats": {
+        "budget_limited": false,
+        "certificate_terms": 1019,
+        "congruence_rows": 0,
+        "discovered_modulus": 49,
+        "duplicate_rows": 1531,
+        "exact_rows": 1763,
+        "global_operations": 5387,
+        "integer_columns": 1020,
+        "integer_feasible": false,
+        "integer_rank": 1018,
+        "integer_rows": 1763,
+        "integer_slack_columns": 0,
+        "local_assignments": 16452,
+        "local_models": 4997,
+        "local_operations": 8444,
+        "local_rows": 1763,
+        "local_torsion_histogram": {
+          "[]": 2280
+        },
+        "max_coefficient_bits": 6,
+        "max_combination_bits": 6,
+        "max_diagonal_bits": 6,
+        "max_local_law_bits": 2,
+        "max_rhs_bits": 6,
+        "max_scope_size": 5,
+        "residual_rhs": 7,
+        "scope_complete": true,
+        "scopes_available": 2280,
+        "scopes_examined": 2280,
+        "scopes_profiled": 2280,
+        "skipped_reasons": {},
+        "skipped_scopes": 0,
+        "stop_reason": null
+      },
+      "status": "UNSAT",
+      "tested_field_equations": [
+        {
+          "equations_feasible": true,
+          "prime": 2
+        },
+        {
+          "equations_feasible": true,
+          "prime": 3
+        },
+        {
+          "equations_feasible": true,
+          "prime": 5
+        },
+        {
+          "equations_feasible": true,
+          "prime": 7
+        },
+        {
+          "equations_feasible": true,
+          "prime": 11
+        }
+      ],
+      "total": 7,
+      "unsatisfiable": true,
+      "variables": 1020,
+      "wire_length": 10
+    }
+  ],
+  "local_information_blind_twins": {
+    "cases": [
+      {
+        "checked_original_boolean_word": false,
+        "clauses": 152,
+        "probe_reason": "no further forced value found",
+        "probe_stats": {
+          "budget_limited": false,
+          "certificate_moduli": [],
+          "inner_budget_limited": false,
+          "integer_calls": 63,
+          "learned_units": 0,
+          "private_eliminations": 0,
+          "root_status": "UNKNOWN",
+          "rounds": 1
+        },
+        "probe_status": "UNKNOWN",
+        "root_stats": {
+          "budget_limited": false,
+          "congruence_rows": 0,
+          "discovered_modulus": null,
+          "duplicate_rows": 0,
+          "exact_rows": 0,
+          "global_operations": 0,
+          "integer_columns": 0,
+          "integer_feasible": true,
+          "integer_rank": 0,
+          "integer_rows": 0,
+          "integer_slack_columns": 0,
+          "local_assignments": 1216,
+          "local_models": 1064,
+          "local_operations": 2496,
+          "local_rows": 0,
+          "local_torsion_histogram": {
+            "[]": 152
+          },
+          "max_coefficient_bits": 0,
+          "max_combination_bits": 0,
+          "max_diagonal_bits": 0,
+          "max_local_law_bits": 0,
+          "max_rhs_bits": 0,
+          "max_scope_size": 3,
+          "scope_complete": true,
+          "scopes_available": 152,
+          "scopes_examined": 152,
+          "scopes_profiled": 152,
+          "skipped_reasons": {},
+          "skipped_scopes": 0,
+          "stop_reason": null
+        },
+        "root_status": "UNKNOWN",
+        "truth": "checked_unsat",
+        "variables": 31
+      },
+      {
+        "checked_original_boolean_word": true,
+        "clauses": 152,
+        "probe_reason": "no further forced value found",
+        "probe_stats": {
+          "budget_limited": false,
+          "certificate_moduli": [],
+          "inner_budget_limited": false,
+          "integer_calls": 63,
+          "learned_units": 0,
+          "private_eliminations": 0,
+          "root_status": "UNKNOWN",
+          "rounds": 1
+        },
+        "probe_status": "UNKNOWN",
+        "root_stats": {
+          "budget_limited": false,
+          "congruence_rows": 0,
+          "discovered_modulus": null,
+          "duplicate_rows": 0,
+          "exact_rows": 0,
+          "global_operations": 0,
+          "integer_columns": 0,
+          "integer_feasible": true,
+          "integer_rank": 0,
+          "integer_rows": 0,
+          "integer_slack_columns": 0,
+          "local_assignments": 1216,
+          "local_models": 1064,
+          "local_operations": 2280,
+          "local_rows": 0,
+          "local_torsion_histogram": {
+            "[]": 152
+          },
+          "max_coefficient_bits": 0,
+          "max_combination_bits": 0,
+          "max_diagonal_bits": 0,
+          "max_local_law_bits": 0,
+          "max_rhs_bits": 0,
+          "max_scope_size": 3,
+          "scope_complete": true,
+          "scopes_available": 152,
+          "scopes_examined": 152,
+          "scopes_profiled": 152,
+          "skipped_reasons": {},
+          "skipped_scopes": 0,
+          "stop_reason": null
+        },
+        "root_status": "UNKNOWN",
+        "truth": "checked_sat",
+        "variables": 31
+      }
+    ],
+    "original_unsat_tree_checked": true,
+    "positive_witness_hex": "0x7fffffff",
+    "refutation_nodes": 957,
+    "same_unsigned_supports": true,
+    "source_report": "results/modular_barrier.json",
+    "tree_preorder_sha256": "5056520294f0d383d2e3c4b06766184f4a2ec6a37a70ff25d9be8e2213399b73"
+  },
+  "prior_boolean_bridge_controls": [
+    {
+      "gates": 4,
+      "stats": {
+        "budget_limited": false,
+        "final_ranks": {
+          "2": 73,
+          "3": 75
+        },
+        "local": {
+          "2": {
+            "budget_limited": false,
+            "local_assignments": 1152,
+            "local_rows": 234,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 165,
+            "scopes_examined": 165
+          },
+          "3": {
+            "budget_limited": false,
+            "local_assignments": 1152,
+            "local_rows": 234,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 165,
+            "scopes_examined": 165
+          }
+        },
+        "new_transfers": 2,
+        "rounds": 1,
+        "short_rows_checked": 129,
+        "signature_probes": 12,
+        "transfer_widths": {
+          "2->3:2": 2
+        }
+      },
+      "status": "UNSAT",
+      "total": 2
+    },
+    {
+      "gates": 5,
+      "stats": {
+        "budget_limited": false,
+        "final_ranks": {
+          "2": 95,
+          "3": 95
+        },
+        "local": {
+          "2": {
+            "budget_limited": false,
+            "local_assignments": 1492,
+            "local_rows": 302,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 212,
+            "scopes_examined": 212
+          },
+          "3": {
+            "budget_limited": false,
+            "local_assignments": 1492,
+            "local_rows": 302,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 212,
+            "scopes_examined": 212
+          }
+        },
+        "new_transfers": 1,
+        "rounds": 1,
+        "short_rows_checked": 1,
+        "signature_probes": 2,
+        "transfer_widths": {
+          "2->3:2": 1
+        }
+      },
+      "status": "UNSAT",
+      "total": 1
+    },
+    {
+      "gates": 7,
+      "stats": {
+        "budget_limited": false,
+        "final_ranks": {
+          "2": 137,
+          "3": 137
+        },
+        "local": {
+          "2": {
+            "budget_limited": false,
+            "local_assignments": 2172,
+            "local_rows": 438,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 306,
+            "scopes_examined": 306
+          },
+          "3": {
+            "budget_limited": false,
+            "local_assignments": 2172,
+            "local_rows": 438,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 306,
+            "scopes_examined": 306
+          }
+        },
+        "new_transfers": 1,
+        "rounds": 1,
+        "short_rows_checked": 1,
+        "signature_probes": 2,
+        "transfer_widths": {
+          "2->3:2": 1
+        }
+      },
+      "status": "UNSAT",
+      "total": 1
+    },
+    {
+      "gates": 9,
+      "stats": {
+        "budget_limited": false,
+        "final_ranks": {
+          "2": 179,
+          "3": 180
+        },
+        "local": {
+          "2": {
+            "budget_limited": false,
+            "local_assignments": 2852,
+            "local_rows": 574,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 400,
+            "scopes_examined": 400
+          },
+          "3": {
+            "budget_limited": false,
+            "local_assignments": 2852,
+            "local_rows": 574,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 400,
+            "scopes_examined": 400
+          }
+        },
+        "new_transfers": 3,
+        "rounds": 1,
+        "short_rows_checked": 3,
+        "signature_probes": 2,
+        "transfer_widths": {
+          "2->3:2": 3
+        }
+      },
+      "status": "UNSAT",
+      "total": 3
+    }
+  ],
+  "sample_refutation": {
+    "certificate": {
+      "kind": "boolean-integer-hull-v1",
+      "modulus": 4,
+      "residual_rhs": 2,
+      "terms": [
+        {
+          "clauses": [
+            56,
+            140
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            1,
+            12
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            6,
+            40
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            1,
+            35
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            79,
+            83
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            2,
+            59
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            113,
+            142
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            2,
+            66
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            3,
+            102
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            3,
+            29
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            16,
+            18
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            3,
+            47
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            12,
+            27
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            4,
+            45
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            23,
+            100
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            4,
+            66
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            44,
+            63
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            5,
+            26
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            33,
+            94
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            5,
+            47
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            30,
+            49
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            6,
+            36
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            107,
+            119
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            6,
+            39
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            39,
+            66
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            7,
+            38
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            74,
+            85
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            7,
+            71
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            106,
+            133
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            8,
+            11
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            5,
+            135
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            8,
+            42
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            46,
+            154
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            9,
+            41
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            31,
+            150
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            9,
+            58
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            13,
+            71
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            10,
+            34
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            25,
+            117
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            10,
+            72
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            67,
+            72
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            11,
+            34
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            80,
+            138
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            12,
+            25
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            22,
+            125
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            13,
+            52
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            54,
+            77
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            14,
+            62
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            84,
+            95
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            14,
+            65
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            64,
+            78
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            15,
+            30
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            134,
+            136
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            15,
+            63
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            29,
+            89
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            16,
+            21
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            35,
+            73
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            16,
+            48
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            15,
+            42
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            17,
+            42
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            0,
+            124
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            17,
+            45
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            53,
+            143
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            18,
+            23
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            10,
+            81
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            18,
+            27
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            38,
+            149
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            19,
+            43
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            87,
+            139
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            19,
+            61
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            2,
+            50
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            20,
+            59
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            76,
+            147
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            21,
+            64
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            8,
+            52
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            22,
+            32
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            69,
+            127
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            22,
+            71
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            1,
+            116
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            23,
+            43
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            152,
+            155
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            24,
+            50
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            34,
+            104
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            24,
+            74
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            45,
+            47
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            25,
+            72
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            59,
+            101
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            26,
+            62
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            97,
+            137
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            27,
+            60
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            41,
+            115
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            28,
+            31
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            91,
+            141
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            28,
+            64
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            61,
+            146
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            29,
+            33
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            60,
+            108
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            30,
+            49
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            20,
+            145
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            31,
+            46
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            82,
+            99
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            32,
+            52
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            17,
+            48
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            35,
+            46
+          ],
+          "weight": 2
+        },
+        {
+          "clauses": [
+            26,
+            144
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            36,
+            60
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            105,
+            120
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            37,
+            68
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            103,
+            130
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            37,
+            69
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            24,
+            88
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            38,
+            56
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            55,
+            121
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            39,
+            40
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            129,
+            153
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            44,
+            49
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            37,
+            51
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            44,
+            58
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            43,
+            90
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            48,
+            75
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            9,
+            11
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            50,
+            63
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            110,
+            148
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            51,
+            56
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            14,
+            126
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            51,
+            57
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            62,
+            122
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            53,
+            65
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            93,
+            112
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            53,
+            67
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            36,
+            75
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            54,
+            57
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            21,
+            118
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            55,
+            70
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            96,
+            132
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            55,
+            73
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            65,
+            151
+          ],
+          "coeff": [
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            69,
+            73
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            4,
+            7
+          ],
+          "coeff": [
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            70,
+            75
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            57,
+            86,
+            98,
+            131
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 2,
+          "scope": [
+            13,
+            20,
+            74
+          ],
+          "weight": 1
+        },
+        {
+          "clauses": [
+            92,
+            109,
+            114,
+            123
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "modulus": 0,
+          "rhs": 1,
+          "scope": [
+            33,
+            61,
+            64
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            28,
+            32,
+            70,
+            128
+          ],
+          "coeff": [
+            1,
+            -1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            34,
+            54,
+            67
+          ],
+          "weight": 3
+        },
+        {
+          "clauses": [
+            19,
+            58,
+            68,
+            111
+          ],
+          "coeff": [
+            1,
+            1,
+            -1
+          ],
+          "modulus": 0,
+          "rhs": 0,
+          "scope": [
+            40,
+            41,
+            68
+          ],
+          "weight": 1
+        }
+      ]
+    },
+    "clauses": [
+      [
+        45,
+        17
+      ],
+      [
+        23,
+        43
+      ],
+      [
+        20,
+        -59
+      ],
+      [
+        29,
+        -3
+      ],
+      [
+        -75,
+        -70
+      ],
+      [
+        -8,
+        42
+      ],
+      [
+        35,
+        -1
+      ],
+      [
+        70,
+        75
+      ],
+      [
+        -22,
+        -32
+      ],
+      [
+        50,
+        63
+      ],
+      [
+        18,
+        27
+      ],
+      [
+        -50,
+        -63
+      ],
+      [
+        45,
+        -4
+      ],
+      [
+        10,
+        34
+      ],
+      [
+        51,
+        -57
+      ],
+      [
+        42,
+        17
+      ],
+      [
+        47,
+        3
+      ],
+      [
+        35,
+        -46
+      ],
+      [
+        -47,
+        -3
+      ],
+      [
+        -41,
+        -40
+      ],
+      [
+        46,
+        -31
+      ],
+      [
+        70,
+        55
+      ],
+      [
+        52,
+        -13
+      ],
+      [
+        66,
+        -4
+      ],
+      [
+        -56,
+        -38
+      ],
+      [
+        72,
+        10
+      ],
+      [
+        -36,
+        60
+      ],
+      [
+        4,
+        -45
+      ],
+      [
+        34,
+        -54
+      ],
+      [
+        -16,
+        21
+      ],
+      [
+        -36,
+        -6
+      ],
+      [
+        58,
+        9
+      ],
+      [
+        -34,
+        67,
+        54
+      ],
+      [
+        5,
+        -47
+      ],
+      [
+        -74,
+        24
+      ],
+      [
+        16,
+        -48
+      ],
+      [
+        54,
+        -57
+      ],
+      [
+        -44,
+        58
+      ],
+      [
+        -19,
+        -43
+      ],
+      [
+        38,
+        -7
+      ],
+      [
+        1,
+        -35
+      ],
+      [
+        31,
+        -28
+      ],
+      [
+        -42,
+        -17
+      ],
+      [
+        48,
+        -75
+      ],
+      [
+        -5,
+        -26
+      ],
+      [
+        -72,
+        -25
+      ],
+      [
+        41,
+        9
+      ],
+      [
+        72,
+        25
+      ],
+      [
+        -35,
+        46
+      ],
+      [
+        36,
+        6
+      ],
+      [
+        59,
+        -20
+      ],
+      [
+        44,
+        -58
+      ],
+      [
+        32,
+        22
+      ],
+      [
+        23,
+        18
+      ],
+      [
+        -62,
+        -14
+      ],
+      [
+        39,
+        -40
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        74,
+        13
+      ],
+      [
+        -41,
+        68
+      ],
+      [
+        -62,
+        26
+      ],
+      [
+        30,
+        -49
+      ],
+      [
+        -29,
+        33
+      ],
+      [
+        53,
+        -65
+      ],
+      [
+        26,
+        5
+      ],
+      [
+        -15,
+        -30
+      ],
+      [
+        -69,
+        73
+      ],
+      [
+        7,
+        -38
+      ],
+      [
+        -11,
+        -34
+      ],
+      [
+        -40,
+        68
+      ],
+      [
+        -71,
+        22
+      ],
+      [
+        -54,
+        -67
+      ],
+      [
+        -10,
+        -34
+      ],
+      [
+        11,
+        34
+      ],
+      [
+        -16,
+        48
+      ],
+      [
+        -71,
+        -7
+      ],
+      [
+        -54,
+        57
+      ],
+      [
+        -21,
+        -64
+      ],
+      [
+        14,
+        62
+      ],
+      [
+        30,
+        15
+      ],
+      [
+        2,
+        -59
+      ],
+      [
+        12,
+        25
+      ],
+      [
+        -27,
+        -18
+      ],
+      [
+        52,
+        -32
+      ],
+      [
+        -2,
+        59
+      ],
+      [
+        14,
+        65
+      ],
+      [
+        71,
+        7
+      ],
+      [
+        -20,
+        -74,
+        -13
+      ],
+      [
+        19,
+        61
+      ],
+      [
+        56,
+        38
+      ],
+      [
+        -21,
+        16
+      ],
+      [
+        75,
+        -48
+      ],
+      [
+        -64,
+        -28
+      ],
+      [
+        -61,
+        -64
+      ],
+      [
+        67,
+        -53
+      ],
+      [
+        -5,
+        47
+      ],
+      [
+        -14,
+        -65
+      ],
+      [
+        -55,
+        73
+      ],
+      [
+        60,
+        -27
+      ],
+      [
+        20,
+        13
+      ],
+      [
+        32,
+        -52
+      ],
+      [
+        -66,
+        4
+      ],
+      [
+        62,
+        -26
+      ],
+      [
+        3,
+        -29
+      ],
+      [
+        69,
+        -37
+      ],
+      [
+        -24,
+        74
+      ],
+      [
+        -37,
+        -68
+      ],
+      [
+        -8,
+        11
+      ],
+      [
+        39,
+        -6
+      ],
+      [
+        49,
+        -30
+      ],
+      [
+        -33,
+        -61
+      ],
+      [
+        -56,
+        51
+      ],
+      [
+        41,
+        40,
+        -68
+      ],
+      [
+        53,
+        -67
+      ],
+      [
+        2,
+        -66
+      ],
+      [
+        -33,
+        -64
+      ],
+      [
+        -31,
+        28
+      ],
+      [
+        -23,
+        -43
+      ],
+      [
+        -10,
+        -72
+      ],
+      [
+        -55,
+        -70
+      ],
+      [
+        -39,
+        6
+      ],
+      [
+        37,
+        68
+      ],
+      [
+        -39,
+        40
+      ],
+      [
+        -53,
+        65
+      ],
+      [
+        33,
+        61,
+        64
+      ],
+      [
+        -17,
+        -45
+      ],
+      [
+        -52,
+        13
+      ],
+      [
+        57,
+        -51
+      ],
+      [
+        -22,
+        71
+      ],
+      [
+        -67,
+        34
+      ],
+      [
+        44,
+        49
+      ],
+      [
+        37,
+        -69
+      ],
+      [
+        20,
+        74
+      ],
+      [
+        -73,
+        55
+      ],
+      [
+        -11,
+        8
+      ],
+      [
+        -63,
+        -15
+      ],
+      [
+        -42,
+        8
+      ],
+      [
+        15,
+        63
+      ],
+      [
+        27,
+        -60
+      ],
+      [
+        -25,
+        -12
+      ],
+      [
+        -19,
+        -61
+      ],
+      [
+        -12,
+        -1
+      ],
+      [
+        64,
+        28
+      ],
+      [
+        -2,
+        66
+      ],
+      [
+        -18,
+        -23
+      ],
+      [
+        36,
+        -60
+      ],
+      [
+        31,
+        -46
+      ],
+      [
+        29,
+        -33
+      ],
+      [
+        21,
+        64
+      ],
+      [
+        -51,
+        56
+      ],
+      [
+        43,
+        19
+      ],
+      [
+        -9,
+        -58
+      ],
+      [
+        69,
+        -73
+      ],
+      [
+        -24,
+        -50
+      ],
+      [
+        -44,
+        -49
+      ],
+      [
+        -41,
+        -9
+      ],
+      [
+        50,
+        24
+      ]
+    ],
+    "construction": {
+      "gates": 4,
+      "scramble_seed": 15104,
+      "total": 2,
+      "wire_length": 10
+    },
+    "variables": 75
+  },
+  "schema_version": 1,
+  "scope": "Global integer obstructions from torsion-free local tables. Prime-field feasibility concerns field-valued assignments, not a common Boolean model. The prior mixed Boolean bridge also refutes its checked carry-cycle controls. A separately checked UNSAT/SAT pair gives zero root equations and no learned units after every one-bit integer probe, without a budget cap; this is not a complete SAT algorithm or a P versus NP result.",
+  "summary": {
+    "all_prime_consistent_unsat_controls": 5,
+    "blind_twin_inputs": 2,
+    "blind_twin_learned_units": 0,
+    "blind_twin_probe_calls": 126,
+    "blind_twin_root_rows": 0,
+    "carry_cycle_inputs": 14,
+    "checked_sat_siblings": 7,
+    "discovered_moduli": [
+      4,
+      5,
+      7,
+      8,
+      9,
+      25,
+      49
+    ],
+    "independent_field_runs": 28,
+    "integer_refutations": 7,
+    "largest_clauses": 2136,
+    "largest_modulus": 49,
+    "largest_proof_terms": 1019,
+    "largest_variables": 1020,
+    "local_torsion_free_scopes": 9736,
+    "max_coefficient_bits": 6,
+    "max_combination_bits": 6,
+    "max_rhs_bits": 6,
+    "prior_bridge_refutations": 4,
+    "raw_inputs": 16
+  }
+}
