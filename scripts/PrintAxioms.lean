@@ -66,3 +66,8 @@ import Formal
 #print axioms BoundaryLab.DerivedTransport.refutes_negation_entails
 #print axioms BoundaryLab.DerivedTransport.transports_model
 #print axioms BoundaryLab.DerivedTransport.justified_drop
+
+#print axioms BoundaryLab.ModularHull.local_table_sound
+#print axioms BoundaryLab.ModularHull.weighted_sum_sound
+#print axioms BoundaryLab.ModularHull.mod_three_refutes
+#print axioms BoundaryLab.ModularHull.boolean_bridge_sound

@@ -69,6 +69,10 @@ THEOREMS = {
     "BoundaryLab.DerivedTransport.refutes_negation_entails",
     "BoundaryLab.DerivedTransport.transports_model",
     "BoundaryLab.DerivedTransport.justified_drop",
+    "BoundaryLab.ModularHull.local_table_sound",
+    "BoundaryLab.ModularHull.weighted_sum_sound",
+    "BoundaryLab.ModularHull.mod_three_refutes",
+    "BoundaryLab.ModularHull.boolean_bridge_sound",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
