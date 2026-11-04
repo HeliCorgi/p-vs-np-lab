@@ -58,6 +58,12 @@ THEOREMS = {
     "BoundaryLab.DecisionPruning.thin_preserves",
     "BoundaryLab.DecisionPruning.split_preserves",
     "BoundaryLab.DecisionPruning.rounds_preserve",
+    "BoundaryLab.WitnessTransport.eval_pull",
+    "BoundaryLab.WitnessTransport.covered_holds",
+    "BoundaryLab.WitnessTransport.certificate_transports_model",
+    "BoundaryLab.WitnessTransport.lift_compose",
+    "BoundaryLab.WitnessTransport.certificate_compose",
+    "BoundaryLab.WitnessTransport.directed_drop",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

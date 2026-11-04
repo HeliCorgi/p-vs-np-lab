@@ -53,3 +53,10 @@ import Formal
 #print axioms BoundaryLab.DecisionPruning.thin_preserves
 #print axioms BoundaryLab.DecisionPruning.split_preserves
 #print axioms BoundaryLab.DecisionPruning.rounds_preserve
+
+#print axioms BoundaryLab.WitnessTransport.eval_pull
+#print axioms BoundaryLab.WitnessTransport.covered_holds
+#print axioms BoundaryLab.WitnessTransport.certificate_transports_model
+#print axioms BoundaryLab.WitnessTransport.lift_compose
+#print axioms BoundaryLab.WitnessTransport.certificate_compose
+#print axioms BoundaryLab.WitnessTransport.directed_drop
