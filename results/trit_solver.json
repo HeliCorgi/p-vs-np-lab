@@ -1,0 +1,161 @@
+{
+  "all_checks_passed": true,
+  "nonaffine_colorings": [
+    {
+      "K4": true,
+      "boolean_models": 0,
+      "reason": "nonaffine local trit relation",
+      "status": "UNKNOWN"
+    },
+    {
+      "K4": false,
+      "boolean_models": 6,
+      "reason": "nonaffine local trit relation",
+      "status": "UNKNOWN"
+    }
+  ],
+  "prisms": [
+    {
+      "clauses": 144,
+      "k": 3,
+      "solver_witness": "0x7b7e875",
+      "stats": {
+        "affine_rows": 6,
+        "blocks": 9,
+        "groups": 15,
+        "groups_checked": 15,
+        "local_trit_words": 189,
+        "rank": 5
+      },
+      "status": "SAT",
+      "unbalanced": false,
+      "variables": 27
+    },
+    {
+      "clauses": 144,
+      "k": 3,
+      "solver_witness": null,
+      "stats": {
+        "affine_rows": 6,
+        "blocks": 9,
+        "groups": 15,
+        "groups_checked": 15,
+        "local_trit_words": 189,
+        "proof_terms": 9,
+        "rank": 5
+      },
+      "status": "UNSAT",
+      "unbalanced": true,
+      "variables": 27
+    },
+    {
+      "clauses": 384,
+      "k": 8,
+      "solver_witness": "0x97252a5f6c0e56fef8",
+      "stats": {
+        "affine_rows": 16,
+        "blocks": 24,
+        "groups": 40,
+        "groups_checked": 40,
+        "local_trit_words": 504,
+        "rank": 15
+      },
+      "status": "SAT",
+      "unbalanced": false,
+      "variables": 72
+    },
+    {
+      "clauses": 384,
+      "k": 8,
+      "solver_witness": null,
+      "stats": {
+        "affine_rows": 16,
+        "blocks": 24,
+        "groups": 40,
+        "groups_checked": 40,
+        "local_trit_words": 504,
+        "proof_terms": 24,
+        "rank": 15
+      },
+      "status": "UNSAT",
+      "unbalanced": true,
+      "variables": 72
+    },
+    {
+      "clauses": 1536,
+      "k": 32,
+      "solver_witness": "0xf053e1890758b766bc274bcf38fefe4d18f5686672170be38278f7b27ddb39124cb51cb6",
+      "stats": {
+        "affine_rows": 64,
+        "blocks": 96,
+        "groups": 160,
+        "groups_checked": 160,
+        "local_trit_words": 2016,
+        "rank": 63
+      },
+      "status": "SAT",
+      "unbalanced": false,
+      "variables": 288
+    },
+    {
+      "clauses": 1536,
+      "k": 32,
+      "solver_witness": null,
+      "stats": {
+        "affine_rows": 64,
+        "blocks": 96,
+        "groups": 160,
+        "groups_checked": 160,
+        "local_trit_words": 2016,
+        "proof_terms": 88,
+        "rank": 63
+      },
+      "status": "UNSAT",
+      "unbalanced": true,
+      "variables": 288
+    },
+    {
+      "clauses": 6144,
+      "k": 128,
+      "solver_witness": "0x1e07c5395a3d75e96b86e0317a57188319bdad3a58f575ea2013dbd3a1f44dddb2604ee0dcf7628be9d0f118c8ae0f6757e28ae199067eb64d7528afd453b7ba8b3ffdd2b6f3e5fc2d84477691cdedba84e373787f9db7f9ed6febf5df00763b756964559a709ebad9cbf5c6b2773c9b4e06b5666ff694ddbffd82fe163a896d75a9ffeeb342fbdb476f6b2349753e4a",
+      "stats": {
+        "affine_rows": 256,
+        "blocks": 384,
+        "groups": 640,
+        "groups_checked": 640,
+        "local_trit_words": 8064,
+        "rank": 255
+      },
+      "status": "SAT",
+      "unbalanced": false,
+      "variables": 1152
+    },
+    {
+      "clauses": 6144,
+      "k": 128,
+      "solver_witness": null,
+      "stats": {
+        "affine_rows": 256,
+        "blocks": 384,
+        "groups": 640,
+        "groups_checked": 640,
+        "local_trit_words": 8064,
+        "proof_terms": 364,
+        "rank": 255
+      },
+      "status": "UNSAT",
+      "unbalanced": true,
+      "variables": 1152
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Complete on recognized disjoint signed one-hot blocks with affine local trit relations; not general SAT.",
+  "summary": {
+    "independently_replayed_unsat": 4,
+    "largest_clauses": 6144,
+    "largest_trit_rank": 255,
+    "largest_variables": 1152,
+    "prism_cases": 8,
+    "solver_constructed_models": 4
+  }
+}

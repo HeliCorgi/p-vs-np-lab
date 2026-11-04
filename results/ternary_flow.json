@@ -1,0 +1,737 @@
+{
+  "all_checks_passed": true,
+  "local_equations": [
+    {
+      "affine_dimension": 2,
+      "coefficient_field": 2,
+      "domain_modulus": 2,
+      "indicator_space": 3,
+      "number_of_independent_equations": 1
+    },
+    {
+      "affine_dimension": 3,
+      "coefficient_field": 3,
+      "domain_modulus": 2,
+      "indicator_space": 3,
+      "number_of_independent_equations": 0
+    },
+    {
+      "affine_dimension": 3,
+      "coefficient_field": 5,
+      "domain_modulus": 2,
+      "indicator_space": 3,
+      "number_of_independent_equations": 0
+    },
+    {
+      "affine_dimension": 6,
+      "coefficient_field": 2,
+      "domain_modulus": 3,
+      "indicator_space": 9,
+      "number_of_independent_equations": 3
+    },
+    {
+      "affine_dimension": 5,
+      "coefficient_field": 3,
+      "domain_modulus": 3,
+      "indicator_space": 9,
+      "number_of_independent_equations": 4
+    },
+    {
+      "affine_dimension": 6,
+      "coefficient_field": 5,
+      "domain_modulus": 3,
+      "indicator_space": 9,
+      "number_of_independent_equations": 3
+    }
+  ],
+  "petersen_control": {
+    "clauses": 240,
+    "status": "UNSAT",
+    "terms": 14,
+    "variables": 45
+  },
+  "prism_controls": [
+    {
+      "checked_source_model": true,
+      "clauses": 24,
+      "flow_prime": 2,
+      "k": 3,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 5,
+            "local_assignments": 336,
+            "local_rows": 24,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 15,
+            "scopes_examined": 15
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 336,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 15,
+            "scopes_examined": 15
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 9,
+      "vertices": 6,
+      "witness_hex": "0x16f"
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 24,
+      "flow_prime": 2,
+      "k": 3,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 5,
+            "local_assignments": 48,
+            "local_rows": 6,
+            "max_scope_size": 3,
+            "prime": 2,
+            "scopes_available": 15,
+            "scopes_examined": 6
+          },
+          "status": "UNSAT",
+          "terms": 6
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 336,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 15,
+            "scopes_examined": 15
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": true,
+      "variables": 9,
+      "vertices": 6,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 64,
+      "flow_prime": 2,
+      "k": 8,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 15,
+            "local_assignments": 896,
+            "local_rows": 64,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 40,
+            "scopes_examined": 40
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 896,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 40,
+            "scopes_examined": 40
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 24,
+      "vertices": 16,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 64,
+      "flow_prime": 2,
+      "k": 8,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 15,
+            "local_assignments": 128,
+            "local_rows": 16,
+            "max_scope_size": 3,
+            "prime": 2,
+            "scopes_available": 40,
+            "scopes_examined": 16
+          },
+          "status": "UNSAT",
+          "terms": 16
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 896,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 40,
+            "scopes_examined": 40
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": true,
+      "variables": 24,
+      "vertices": 16,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 256,
+      "flow_prime": 2,
+      "k": 32,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 63,
+            "local_assignments": 3584,
+            "local_rows": 256,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 160,
+            "scopes_examined": 160
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 3584,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 160,
+            "scopes_examined": 160
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 96,
+      "vertices": 64,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 256,
+      "flow_prime": 2,
+      "k": 32,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 63,
+            "local_assignments": 512,
+            "local_rows": 64,
+            "max_scope_size": 3,
+            "prime": 2,
+            "scopes_available": 160,
+            "scopes_examined": 64
+          },
+          "status": "UNSAT",
+          "terms": 64
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 3584,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 160,
+            "scopes_examined": 160
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": true,
+      "variables": 96,
+      "vertices": 64,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 1024,
+      "flow_prime": 2,
+      "k": 128,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 255,
+            "local_assignments": 14336,
+            "local_rows": 1024,
+            "max_scope_size": 5,
+            "prime": 2,
+            "scopes_available": 640,
+            "scopes_examined": 640
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 14336,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 640,
+            "scopes_examined": 640
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 384,
+      "vertices": 256,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 1024,
+      "flow_prime": 2,
+      "k": 128,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 255,
+            "local_assignments": 2048,
+            "local_rows": 256,
+            "max_scope_size": 3,
+            "prime": 2,
+            "scopes_available": 640,
+            "scopes_examined": 256
+          },
+          "status": "UNSAT",
+          "terms": 256
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 0,
+            "local_assignments": 14336,
+            "local_rows": 0,
+            "max_scope_size": 5,
+            "prime": 3,
+            "scopes_available": 640,
+            "scopes_examined": 640
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": true,
+      "variables": 384,
+      "vertices": 256,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 144,
+      "flow_prime": 3,
+      "k": 3,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 9,
+            "local_assignments": 16212,
+            "local_rows": 297,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 366,
+            "scopes_examined": 366
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 14,
+            "local_assignments": 16212,
+            "local_rows": 303,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 366,
+            "scopes_examined": 366
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 27,
+      "vertices": 6,
+      "witness_hex": "0x43e5d97"
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 144,
+      "flow_prime": 3,
+      "k": 3,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 9,
+            "local_assignments": 16212,
+            "local_rows": 297,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 366,
+            "scopes_examined": 366
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 14,
+            "local_assignments": 16212,
+            "local_rows": 300,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 366,
+            "scopes_examined": 366
+          },
+          "status": "UNSAT",
+          "terms": 10
+        }
+      ],
+      "unbalanced": true,
+      "variables": 27,
+      "vertices": 6,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 384,
+      "flow_prime": 3,
+      "k": 8,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 24,
+            "local_assignments": 43232,
+            "local_rows": 792,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 976,
+            "scopes_examined": 976
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 39,
+            "local_assignments": 43232,
+            "local_rows": 808,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 976,
+            "scopes_examined": 976
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 72,
+      "vertices": 16,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 384,
+      "flow_prime": 3,
+      "k": 8,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 24,
+            "local_assignments": 43232,
+            "local_rows": 792,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 976,
+            "scopes_examined": 976
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 39,
+            "local_assignments": 43232,
+            "local_rows": 805,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 976,
+            "scopes_examined": 976
+          },
+          "status": "UNSAT",
+          "terms": 23
+        }
+      ],
+      "unbalanced": true,
+      "variables": 72,
+      "vertices": 16,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 1536,
+      "flow_prime": 3,
+      "k": 32,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 96,
+            "local_assignments": 172928,
+            "local_rows": 3168,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 3904,
+            "scopes_examined": 3904
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 159,
+            "local_assignments": 172928,
+            "local_rows": 3232,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 3904,
+            "scopes_examined": 3904
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 288,
+      "vertices": 64,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 1536,
+      "flow_prime": 3,
+      "k": 32,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 96,
+            "local_assignments": 172928,
+            "local_rows": 3168,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 3904,
+            "scopes_examined": 3904
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 159,
+            "local_assignments": 172928,
+            "local_rows": 3229,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 3904,
+            "scopes_examined": 3904
+          },
+          "status": "UNSAT",
+          "terms": 94
+        }
+      ],
+      "unbalanced": true,
+      "variables": 288,
+      "vertices": 64,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": true,
+      "clauses": 6144,
+      "flow_prime": 3,
+      "k": 128,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 384,
+            "local_assignments": 691712,
+            "local_rows": 12672,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 15616,
+            "scopes_examined": 15616
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 639,
+            "local_assignments": 691712,
+            "local_rows": 12928,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 15616,
+            "scopes_examined": 15616
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        }
+      ],
+      "unbalanced": false,
+      "variables": 1152,
+      "vertices": 256,
+      "witness_hex": null
+    },
+    {
+      "checked_source_model": false,
+      "clauses": 6144,
+      "flow_prime": 3,
+      "k": 128,
+      "learners": [
+        {
+          "prime": 2,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 384,
+            "local_assignments": 691712,
+            "local_rows": 12672,
+            "max_scope_size": 9,
+            "prime": 2,
+            "scopes_available": 15616,
+            "scopes_examined": 15616
+          },
+          "status": "UNKNOWN",
+          "terms": null
+        },
+        {
+          "prime": 3,
+          "stats": {
+            "budget_limited": false,
+            "global_rank": 639,
+            "local_assignments": 691712,
+            "local_rows": 12925,
+            "max_scope_size": 9,
+            "prime": 3,
+            "scopes_available": 15616,
+            "scopes_examined": 15616
+          },
+          "status": "UNSAT",
+          "terms": 377
+        }
+      ],
+      "unbalanced": true,
+      "variables": 1152,
+      "vertices": 256,
+      "witness_hex": null
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Refutes nonzero charge; balanced instances have independent witnesses, not SAT conclusions from failed search.",
+  "summary": {
+    "field_runs": 32,
+    "largest_ternary_clauses": 6144,
+    "largest_ternary_proof_terms": 377,
+    "largest_ternary_variables": 1152,
+    "largest_vertices": 256,
+    "raw_boolean_truth_assignments": 4608
+  }
+}

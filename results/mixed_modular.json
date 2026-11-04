@@ -1,0 +1,1914 @@
+{
+  "all_checks_passed": true,
+  "alternating": [
+    {
+      "checked_sat_word": true,
+      "clauses": 2040,
+      "proof_nodes": 0,
+      "rounds": 3,
+      "status": "UNKNOWN",
+      "total": 0,
+      "transfers": {
+        "2->3:1": 1,
+        "2->3:2": 8,
+        "3->2:3": 5
+      },
+      "variables": 445
+    },
+    {
+      "checked_sat_word": false,
+      "clauses": 2040,
+      "proof_nodes": 209,
+      "rounds": 2,
+      "status": "UNSAT",
+      "total": 1,
+      "transfers": {
+        "2->3:1": 1,
+        "2->3:2": 4,
+        "3->2:3": 5
+      },
+      "variables": 445
+    }
+  ],
+  "controls": [
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 284,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 4,
+      "nodes": 0,
+      "ports": 3,
+      "short_rows_checked": 16,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {},
+      "variables": 63
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 284,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 4,
+      "nodes": 27,
+      "ports": 3,
+      "short_rows_checked": 16,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {
+        "3->2:3": 1
+      },
+      "variables": 63
+    },
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 452,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 7,
+      "nodes": 0,
+      "ports": 3,
+      "short_rows_checked": 25,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {},
+      "variables": 99
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 452,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 7,
+      "nodes": 46,
+      "ports": 3,
+      "short_rows_checked": 25,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {
+        "3->2:3": 1
+      },
+      "variables": 99
+    },
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 732,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 12,
+      "nodes": 0,
+      "ports": 3,
+      "short_rows_checked": 40,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {},
+      "variables": 159
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 732,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 12,
+      "nodes": 66,
+      "ports": 3,
+      "short_rows_checked": 40,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 2,
+      "transfers": {
+        "3->2:3": 1
+      },
+      "variables": 159
+    },
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 304,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 4,
+      "nodes": 0,
+      "ports": 4,
+      "short_rows_checked": 17,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {},
+      "variables": 68
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 304,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 4,
+      "nodes": 31,
+      "ports": 4,
+      "short_rows_checked": 6,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {
+        "3->2:4": 1
+      },
+      "variables": 68
+    },
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 472,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 7,
+      "nodes": 0,
+      "ports": 4,
+      "short_rows_checked": 26,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {},
+      "variables": 104
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 472,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 7,
+      "nodes": 46,
+      "ports": 4,
+      "short_rows_checked": 16,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {
+        "3->2:4": 1
+      },
+      "variables": 104
+    },
+    {
+      "bad": false,
+      "bridge": "UNKNOWN",
+      "checked_sat_word": true,
+      "clauses": 752,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 12,
+      "nodes": 0,
+      "ports": 4,
+      "short_rows_checked": 41,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {},
+      "variables": 164
+    },
+    {
+      "bad": true,
+      "bridge": "UNSAT",
+      "checked_sat_word": false,
+      "clauses": 752,
+      "fields": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "k": 12,
+      "nodes": 71,
+      "ports": 4,
+      "short_rows_checked": 12,
+      "smaller_pass": "UNKNOWN",
+      "smaller_width": 3,
+      "transfers": {
+        "3->2:4": 1
+      },
+      "variables": 164
+    }
+  ],
+  "port_table": [
+    {
+      "binary": false,
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "ternary": false
+    },
+    {
+      "binary": true,
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "ternary": false
+    },
+    {
+      "binary": true,
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "ternary": false
+    },
+    {
+      "binary": false,
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "ternary": true
+    },
+    {
+      "binary": true,
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "ternary": false
+    },
+    {
+      "binary": false,
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "ternary": true
+    },
+    {
+      "binary": false,
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "ternary": true
+    },
+    {
+      "binary": true,
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "ternary": false
+    }
+  ],
+  "sample_certificate": {
+    "kind": "boolean-field-bridge-v1",
+    "nodes": [
+      {
+        "evidence": {
+          "clauses": [
+            0,
+            1,
+            97,
+            247
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            1,
+            43,
+            63
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            1,
+            1
+          ],
+          [
+            43,
+            1
+          ],
+          [
+            63,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            139,
+            199,
+            230,
+            257
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            1,
+            55,
+            59
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            1,
+            1
+          ],
+          [
+            55,
+            1
+          ],
+          [
+            59,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            33,
+            39,
+            143,
+            197
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 1,
+          "scope": [
+            4,
+            37,
+            42
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 1,
+        "row": [
+          [
+            4,
+            1
+          ],
+          [
+            37,
+            1
+          ],
+          [
+            42,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            12,
+            110,
+            161,
+            232
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            4,
+            40,
+            45
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            4,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            45,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            19,
+            111,
+            256,
+            265
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 1,
+          "scope": [
+            14,
+            39,
+            60
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 1,
+        "row": [
+          [
+            14,
+            1
+          ],
+          [
+            39,
+            1
+          ],
+          [
+            60,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            87,
+            116,
+            200,
+            260
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 1,
+          "scope": [
+            14,
+            52,
+            55
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 1,
+        "row": [
+          [
+            14,
+            1
+          ],
+          [
+            52,
+            1
+          ],
+          [
+            55,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            9,
+            27,
+            62,
+            83
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            17,
+            40,
+            61
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            17,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            61,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            55,
+            73,
+            162,
+            236
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 1,
+          "scope": [
+            17,
+            42,
+            63
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 1,
+        "row": [
+          [
+            17,
+            1
+          ],
+          [
+            42,
+            1
+          ],
+          [
+            63,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            23,
+            25,
+            61,
+            262
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 1,
+          "scope": [
+            37,
+            52,
+            53
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 1,
+        "row": [
+          [
+            37,
+            1
+          ],
+          [
+            52,
+            1
+          ],
+          [
+            53,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            104,
+            169,
+            185,
+            252
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            39,
+            45,
+            51
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            39,
+            1
+          ],
+          [
+            45,
+            1
+          ],
+          [
+            51,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            89,
+            94,
+            198,
+            253
+          ],
+          "coeff": [
+            1,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            59,
+            60,
+            61
+          ]
+        },
+        "op": "local",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            59,
+            1
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            61,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            204,
+            4,
+            117,
+            280
+          ],
+          "coeff": [
+            2,
+            2,
+            2
+          ],
+          "rhs": 2,
+          "scope": [
+            5,
+            25,
+            32
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 2,
+        "row": [
+          [
+            5,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            32,
+            2
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            137,
+            6,
+            202,
+            270
+          ],
+          "coeff": [
+            1,
+            2,
+            2
+          ],
+          "rhs": 2,
+          "scope": [
+            12,
+            19,
+            48
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 2,
+        "row": [
+          [
+            12,
+            1
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            48,
+            2
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            5,
+            63,
+            282,
+            137,
+            6,
+            202,
+            220,
+            66,
+            231,
+            35,
+            42,
+            17,
+            34,
+            208,
+            69,
+            270,
+            183,
+            91,
+            182,
+            32
+          ],
+          "coeff": [
+            2,
+            1,
+            0,
+            2,
+            0,
+            1,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            3,
+            10,
+            12,
+            19,
+            21,
+            43,
+            48
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            3,
+            2
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            43,
+            1
+          ],
+          [
+            48,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            204,
+            4,
+            77,
+            175,
+            117,
+            278,
+            46,
+            280,
+            28,
+            174,
+            221,
+            21,
+            251,
+            150,
+            57,
+            135,
+            240,
+            177,
+            71,
+            109
+          ],
+          "coeff": [
+            0,
+            2,
+            1,
+            2,
+            0,
+            2,
+            1
+          ],
+          "rhs": 0,
+          "scope": [
+            5,
+            20,
+            25,
+            30,
+            31,
+            32,
+            51
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            20,
+            2
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            32,
+            2
+          ],
+          [
+            51,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            122,
+            2,
+            187,
+            29,
+            146,
+            85,
+            217,
+            38,
+            176,
+            11,
+            149,
+            151,
+            181,
+            215,
+            164,
+            147,
+            67,
+            102,
+            41,
+            96
+          ],
+          "coeff": [
+            1,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            11,
+            36,
+            44,
+            50,
+            53,
+            54,
+            56
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            11,
+            1
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            44,
+            1
+          ],
+          [
+            53,
+            1
+          ],
+          [
+            54,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            129,
+            115,
+            122,
+            2,
+            275,
+            144,
+            44,
+            195,
+            85,
+            126,
+            24,
+            79,
+            227,
+            156,
+            133,
+            75,
+            105,
+            172,
+            92,
+            245,
+            149,
+            140,
+            118,
+            20,
+            210,
+            214,
+            76,
+            7,
+            47,
+            40
+          ],
+          "coeff": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            2,
+            11,
+            15,
+            27,
+            33,
+            35,
+            46,
+            54,
+            56
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            11,
+            1
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            27,
+            1
+          ],
+          [
+            35,
+            2
+          ],
+          [
+            46,
+            1
+          ],
+          [
+            54,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            129,
+            115,
+            137,
+            6,
+            100,
+            246,
+            202,
+            120,
+            195,
+            121,
+            166,
+            266,
+            269,
+            259,
+            75,
+            224,
+            242,
+            270,
+            148,
+            145,
+            124,
+            206,
+            103,
+            216,
+            157,
+            78,
+            65,
+            271,
+            179,
+            127
+          ],
+          "coeff": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            2,
+            12,
+            13,
+            19,
+            26,
+            35,
+            46,
+            47,
+            48
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            12,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            26,
+            2
+          ],
+          [
+            35,
+            2
+          ],
+          [
+            46,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            5,
+            63,
+            68,
+            136,
+            282,
+            8,
+            48,
+            134,
+            165,
+            53,
+            30,
+            220,
+            226,
+            163,
+            272,
+            31,
+            108,
+            283,
+            207,
+            37,
+            88,
+            279,
+            141,
+            155,
+            51,
+            113,
+            167,
+            15,
+            131,
+            171
+          ],
+          "coeff": [
+            1,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            3,
+            8,
+            10,
+            16,
+            21,
+            34,
+            38,
+            49,
+            57
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            3,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            34,
+            1
+          ],
+          [
+            38,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            204,
+            4,
+            188,
+            142,
+            258,
+            56,
+            281,
+            117,
+            234,
+            274,
+            205,
+            10,
+            125,
+            49,
+            101,
+            280,
+            36,
+            243,
+            170,
+            209,
+            192,
+            190,
+            189,
+            233,
+            93,
+            249,
+            186,
+            18,
+            98,
+            229
+          ],
+          "coeff": [
+            2,
+            2,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            5,
+            6,
+            7,
+            18,
+            22,
+            25,
+            28,
+            32,
+            62
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            28,
+            1
+          ],
+          [
+            32,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            188,
+            142,
+            258,
+            68,
+            136,
+            8,
+            264,
+            254,
+            238,
+            36,
+            267,
+            43,
+            235,
+            45,
+            225,
+            138,
+            228,
+            90,
+            222,
+            22,
+            74,
+            152,
+            207,
+            95,
+            178,
+            250,
+            154,
+            60,
+            16,
+            194
+          ],
+          "coeff": [
+            2,
+            2,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            6,
+            7,
+            8,
+            16,
+            22,
+            24,
+            41,
+            57,
+            58
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            41,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            14,
+            64,
+            100,
+            246,
+            132,
+            264,
+            254,
+            120,
+            238,
+            191,
+            248,
+            239,
+            26,
+            119,
+            168,
+            3,
+            223,
+            82,
+            158,
+            103,
+            130,
+            81,
+            72,
+            107,
+            59,
+            237,
+            194,
+            201,
+            84,
+            273
+          ],
+          "coeff": [
+            2,
+            1,
+            1,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            9,
+            13,
+            23,
+            24,
+            26,
+            29,
+            41,
+            47,
+            58
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            9,
+            2
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            23,
+            1
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            26,
+            2
+          ],
+          [
+            41,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            14,
+            64,
+            275,
+            144,
+            77,
+            175,
+            132,
+            44,
+            278,
+            268,
+            244,
+            153,
+            203,
+            239,
+            173,
+            70,
+            276,
+            263,
+            99,
+            140,
+            211,
+            218,
+            114,
+            150,
+            212,
+            241,
+            128,
+            13,
+            86,
+            184
+          ],
+          "coeff": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            9,
+            15,
+            20,
+            23,
+            27,
+            29,
+            30,
+            31,
+            33
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            9,
+            2
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            23,
+            1
+          ],
+          [
+            27,
+            1
+          ],
+          [
+            30,
+            1
+          ]
+        ]
+      },
+      {
+        "evidence": {
+          "clauses": [
+            56,
+            281,
+            234,
+            48,
+            134,
+            187,
+            29,
+            165,
+            146,
+            186,
+            261,
+            277,
+            52,
+            58,
+            159,
+            80,
+            213,
+            123,
+            180,
+            50,
+            219,
+            196,
+            160,
+            171,
+            54,
+            106,
+            151,
+            193,
+            255,
+            112
+          ],
+          "coeff": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "rhs": 0,
+          "scope": [
+            18,
+            28,
+            34,
+            36,
+            38,
+            44,
+            49,
+            50,
+            62
+          ]
+        },
+        "op": "local",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            18,
+            2
+          ],
+          [
+            28,
+            2
+          ],
+          [
+            34,
+            2
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            38,
+            2
+          ],
+          [
+            44,
+            1
+          ]
+        ]
+      },
+      {
+        "op": "sum",
+        "p": 3,
+        "rhs": 0,
+        "row": [
+          [
+            43,
+            1
+          ],
+          [
+            51,
+            2
+          ],
+          [
+            53,
+            2
+          ]
+        ],
+        "terms": [
+          [
+            11,
+            2
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            21,
+            1
+          ],
+          [
+            22,
+            2
+          ],
+          [
+            23,
+            1
+          ]
+        ]
+      },
+      {
+        "from": 24,
+        "op": "boolean",
+        "p": 2,
+        "rhs": 0,
+        "row": [
+          [
+            43,
+            1
+          ],
+          [
+            51,
+            1
+          ],
+          [
+            53,
+            1
+          ]
+        ]
+      },
+      {
+        "op": "sum",
+        "p": 2,
+        "rhs": 1,
+        "row": [],
+        "terms": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            25,
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "sample_input": "mixed_port_flow(4), ternary_rhs=2; scramble seed 1403209",
+  "schema_version": 1,
+  "scope": "Short-row widths are not input size. Matching witnesses are checked on the raw scrambled CNF; UNKNOWN alone does not certify SAT.",
+  "summary": {
+    "alternating_unsat_rounds": 2,
+    "bridge_widths": [
+      3,
+      4
+    ],
+    "cases": 12,
+    "checked_positive_controls": 6,
+    "largest_k": 12,
+    "refutations": 6,
+    "single_field_runs": 24
+  }
+}

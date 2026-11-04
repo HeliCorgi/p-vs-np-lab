@@ -1,0 +1,194 @@
+{
+  "all_checks_passed": true,
+  "controls": [
+    {
+      "clauses": 360,
+      "code_scramble_seed": 14560,
+      "k": 3,
+      "native_conflict_rhs": 2,
+      "native_sat": "SAT",
+      "native_unsat_terms": 6,
+      "native_validated": true,
+      "primes": [
+        {
+          "field": 2,
+          "raw_scope_rows_checked": 18,
+          "scope_count": 369
+        },
+        {
+          "field": 3,
+          "raw_scope_rows_checked": 18,
+          "scope_count": 369
+        }
+      ],
+      "reference_falsifies_unbalanced": true,
+      "reference_is_balanced_model": true,
+      "state_seed": 14144,
+      "variables": 45
+    },
+    {
+      "clauses": 960,
+      "code_scramble_seed": 14565,
+      "k": 8,
+      "native_conflict_rhs": 2,
+      "native_sat": "SAT",
+      "native_unsat_terms": 16,
+      "native_validated": true,
+      "primes": [
+        {
+          "field": 2,
+          "raw_scope_rows_checked": 48,
+          "scope_count": 984
+        },
+        {
+          "field": 3,
+          "raw_scope_rows_checked": 48,
+          "scope_count": 984
+        }
+      ],
+      "reference_falsifies_unbalanced": true,
+      "reference_is_balanced_model": true,
+      "state_seed": 14144,
+      "variables": 120
+    },
+    {
+      "clauses": 1920,
+      "code_scramble_seed": 14573,
+      "k": 16,
+      "native_conflict_rhs": 2,
+      "native_sat": "SAT",
+      "native_unsat_terms": 32,
+      "native_validated": true,
+      "primes": [
+        {
+          "field": 2,
+          "raw_scope_rows_checked": 96,
+          "scope_count": 1968
+        },
+        {
+          "field": 3,
+          "raw_scope_rows_checked": 96,
+          "scope_count": 1968
+        }
+      ],
+      "reference_falsifies_unbalanced": true,
+      "reference_is_balanced_model": true,
+      "state_seed": 14144,
+      "variables": 240
+    },
+    {
+      "clauses": 3840,
+      "code_scramble_seed": 14589,
+      "k": 32,
+      "native_conflict_rhs": 2,
+      "native_sat": "SAT",
+      "native_unsat_terms": 64,
+      "native_validated": true,
+      "primes": [
+        {
+          "field": 2,
+          "raw_scope_rows_checked": 192,
+          "scope_count": 3936
+        },
+        {
+          "field": 3,
+          "raw_scope_rows_checked": 192,
+          "scope_count": 3936
+        }
+      ],
+      "reference_falsifies_unbalanced": true,
+      "reference_is_balanced_model": true,
+      "state_seed": 14144,
+      "variables": 480
+    }
+  ],
+  "large_scope_oracles": [
+    {
+      "affine_dimension": 8,
+      "boolean_bits": 15,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 2,
+      "model_count": 16,
+      "vertices": 1
+    },
+    {
+      "affine_dimension": 9,
+      "boolean_bits": 15,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 3,
+      "model_count": 16,
+      "vertices": 1
+    },
+    {
+      "affine_dimension": 9,
+      "boolean_bits": 15,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 5,
+      "model_count": 16,
+      "vertices": 1
+    },
+    {
+      "affine_dimension": 9,
+      "boolean_bits": 15,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 7,
+      "model_count": 16,
+      "vertices": 1
+    },
+    {
+      "affine_dimension": 13,
+      "boolean_bits": 25,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 2,
+      "model_count": 64,
+      "vertices": 2
+    },
+    {
+      "affine_dimension": 15,
+      "boolean_bits": 25,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 3,
+      "model_count": 64,
+      "vertices": 2
+    },
+    {
+      "affine_dimension": 15,
+      "boolean_bits": 25,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 5,
+      "model_count": 64,
+      "vertices": 2
+    },
+    {
+      "affine_dimension": 15,
+      "boolean_bits": 25,
+      "common_word_in_hull": true,
+      "common_word_is_raw_model": false,
+      "field": 7,
+      "model_count": 64,
+      "vertices": 2
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Finite rows for 2,3 and complete small local tables for 2,3,5,7. All-field all-scope claim is the graph/character argument, not exhaustive enumeration.",
+  "summary": {
+    "ambient_prime_rows_checked": 708,
+    "full_star_fields": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "full_two_star_boolean_bits": 25,
+    "largest_native_proof_terms": 64,
+    "largest_raw_clauses": 3840,
+    "largest_raw_variables": 480
+  }
+}

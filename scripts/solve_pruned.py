@@ -20,6 +20,7 @@ def main():
     p.add_argument('--max-proof-nodes',type=int,help='Total propagation nodes across all map searches')
     p.add_argument('--max-proof-queries',type=int,help='Total nonsyntactic clause queries across all map searches')
     root=p.add_mutually_exclusive_group()
+    root.add_argument('--conservation',action='store_true',help='Try checked finite-domain conservation before building the frontier')
     root.add_argument('--case-parity',action='store_true',help='Try both values of one pivot using private resolution and parity in each case')
     root.add_argument('--recover-case-parity',action='store_true',help='Certify a reduced core, then try both parity cases there')
     root.add_argument('--recover-parity',action='store_true',help='First certify a reduced core and try its root parity refutation')
@@ -40,7 +41,7 @@ def main():
                          max_transport_checks=args.max_transport_checks,split_parity=args.split_parity,private_parity=args.private_parity,
                          derived_depth=args.derived_depth,max_proof_nodes=args.max_proof_nodes,
                          max_proof_queries=args.max_proof_queries,recover_parity=args.recover_parity,
-                         case_parity=args.case_parity,recover_case_parity=args.recover_case_parity)
+                         case_parity=args.case_parity,recover_case_parity=args.recover_case_parity,conservation=args.conservation)
     except (ValueError,TypeError,KeyError,OSError) as e:
         print('Input error:',e,file=sys.stderr);return 1
     print(json.dumps(out,indent=2))

@@ -7,6 +7,26 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第14段階：Boolean節から3を法とする保存則を発見する
+
+前回の標的だった「元の変数名も、流れを表すグラフも知らずに、保存則を復元できるか」を検査しました。[局所表からの合同式の発見](docs/modular_hull.md)は、入力の節が許すBoolean割当から方程式を導き、重み付き和が矛盾するか調べます。3値の各変数がちょうど一つの状態を選び、局所関係がすべてアフィンであることを確認できた場合には、[真偽の判定と元の充足割当の構成](docs/trit_solver.md)まで行います。未知の入力で保存則が見つからなければ `UNKNOWN` です。
+
+| 何を確かめたか | 結果 |
+|---|---|
+| [法3のフロー](docs/ternary_flow.md) | 符号・変数名・節順を入れ替えた1,152変数・6,144節で、総電荷が整合する側は割当を構成し全節を確認。不整合な側は元の節から独立に検算できる反証を出力 |
+| [異なる法の間で必要な情報を渡す](docs/mixed_modular.md) | 片方が3ビットの和に奇数を要求し、他方がちょうど2を要求する場合、それぞれ単独では未決着。共通のBoolean割当について証明した関係を渡すと反証できる。2,040節の例では実際に双方向の変換を使用 |
+| [法を入力で指定しない](docs/prime_spectrum.md) | 局所表の階数を整数の小行列式から調べ、例から2・3・5を検出。[整数の不変因子](docs/local_torsion.md)では、巡回する4状態と独立な二つの偶奇を区別できる。いずれも局所診断で、空の結果はSATを意味しない |
+| [素数体では見えない場合](docs/four_flow.md) | 総電荷が2の4状態フローには、局所的にどの体で導いた一次式もすべて満たす一つのBoolean割当がある。一方、[法4の環として計算](docs/cyclic_four.md)すると、480変数・3,840節の例を64項の `0=2 (mod 4)` で反証できる。[有限アーベル群での境界](docs/abelian_visibility.md)も記録 |
+| [保存則を隠す／保存則自体がない](docs/modular_barrier.md) | [3,840個の補助変数の消去](docs/modular_padding.md)で保存則を復元した例がある。別に、元の節または変数を `n/1000` 個まで集めても、どの体でも非自明な一次・二次の等式を得られない解あり・解なしの入力対が存在。この強い範囲は存在証明で、SAT一般の計算時間下界ではない |
+
+```bash
+python scripts/solve_conservation.py examples/phase14_ternary_sat.json | python scripts/solve_conservation.py examples/phase14_ternary_sat.json --check -
+python scripts/solve_conservation.py examples/phase14_mixed.json --method mixed | python scripts/solve_conservation.py examples/phase14_mixed.json --check -
+python scripts/solve_conservation.py examples/phase14_four_bad.json | python scripts/solve_conservation.py examples/phase14_four_bad.json --check -
+```
+
+統合判定器でも `--conservation` を指定可能。既定の分岐法は以前のままです。[Leanで追加した5定理](Formal/ModularHull.lean)は局所的な含意、重み付き和、法3・法4の矛盾とBoolean上の法をまたぐ含意の健全性に関するものです。アルゴリズム全体や確率的な下界をLeanで検証したものではありません。
+
 ## 第13段階：複数の節で枝を移す。その証明はどこまで短いか
 
 前回は、変換先の各節を「元の一節」から保証する規則でした。今回は、変換先の節を偽と仮定して元の節から値を順に強制し、矛盾するまでの節番号を記録します。[独立チェッカー](docs/derived_transport.md)はその推論を再生し、枝Aの解を枝Bの解に移せると確認できたときだけAを削ります。探索の失敗や予算切れでAを捨てることはありません。
@@ -327,7 +347,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要57定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要62定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -355,7 +375,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 272件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 307件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

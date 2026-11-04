@@ -133,7 +133,7 @@ def _layer(n, layer, mode, anchors, stats, policy=None):
 def solve_pruned(n,clauses,*,order=None,max_width=64,label_mode='affine',anchor_collisions=True,
                  transport=False,transport_strategies=None,max_transport_checks=None,
                  transport_trace=False,split_parity=False,private_parity=False,
-                 derived_depth=None,max_proof_nodes=None,max_proof_queries=None,recover_parity=False,case_parity=False,recover_case_parity=False):
+                 derived_depth=None,max_proof_nodes=None,max_proof_queries=None,recover_parity=False,case_parity=False,recover_case_parity=False,conservation=False):
     """Decide width-three SAT or return UNKNOWN at a retained-list width cap.
 
     Literals are signed one-based IDs. An explicit order must permute all
@@ -150,7 +150,7 @@ def solve_pruned(n,clauses,*,order=None,max_width=64,label_mode='affine',anchor_
         raise ValueError('unknown label mode or nonboolean anchor option')
     if max_width is not None and (type(max_width) is not int or max_width<0):
         raise ValueError('expected nonnegative width cap or None')
-    if any(type(b) is not bool for b in (transport,transport_trace,split_parity,private_parity,recover_parity,case_parity,recover_case_parity)):
+    if any(type(b) is not bool for b in (transport,transport_trace,split_parity,private_parity,recover_parity,case_parity,recover_case_parity,conservation)):
         raise ValueError('expected Boolean method options')
     if max_transport_checks is not None and (type(max_transport_checks) is not int or max_transport_checks<0):
         raise ValueError('expected nonnegative transport check cap or None')
@@ -168,9 +168,9 @@ def solve_pruned(n,clauses,*,order=None,max_width=64,label_mode='affine',anchor_
         transport_strategies=tuple(transport_strategies)
         if any(v not in ('identity','flip','rename','single','constants') for v in transport_strategies):
             raise ValueError('unknown transport strategy')
-    if sum((private_parity,split_parity,recover_parity,case_parity,recover_case_parity))>1:raise ValueError('select one root parity pass')
+    if sum((private_parity,split_parity,recover_parity,case_parity,recover_case_parity,conservation))>1:raise ValueError('select one root parity pass')
     # The optional root parity proof refers to the original caller's clause IDs.
-    if any((split_parity,private_parity,recover_parity,case_parity,recover_case_parity)):
+    if any((split_parity,private_parity,recover_parity,case_parity,recover_case_parity,conservation)):
         if isinstance(clauses,(str,bytes)):raise ValueError('expected CNF')
         clauses=tuple(tuple(c) for c in clauses)
     source=_source(n,clauses)
@@ -204,10 +204,13 @@ def solve_pruned(n,clauses,*,order=None,max_width=64,label_mode='affine',anchor_
         if derived is not None:out.update(derived_depth=derived_depth,max_proof_nodes=max_proof_nodes,
             max_proof_queries=max_proof_queries,max_transport_checks=max_transport_checks)
         if trace is not None:out['transport_trace']=trace
-        if parity_result is not None:out['root_recovered_parity' if recover_parity or recover_case_parity else ('root_case_parity' if case_parity else ('root_private_parity' if private_parity else 'root_split_parity'))]=parity_result
+        if parity_result is not None:out['root_conservation' if conservation else 'root_recovered_parity' if recover_parity or recover_case_parity else ('root_case_parity' if case_parity else ('root_private_parity' if private_parity else 'root_split_parity'))]=parity_result
         return out
-    if any((split_parity,private_parity,recover_parity,case_parity,recover_case_parity)):
-        if recover_parity or recover_case_parity:
+    if any((split_parity,private_parity,recover_parity,case_parity,recover_case_parity,conservation)):
+        if conservation:
+            from .conservation import solve_conservation
+            parity_result=solve_conservation(n,clauses)
+        elif recover_parity or recover_case_parity:
             from .recovered_parity import recover_then_refute
             parity_result=recover_then_refute(n,clauses,case=recover_case_parity)
         elif case_parity:
@@ -219,7 +222,7 @@ def solve_pruned(n,clauses,*,order=None,max_width=64,label_mode='affine',anchor_
         else:
             from .split_parity import split_parity_refute
             parity_result=split_parity_refute(n,clauses)
-        if parity_result['status']=='UNSAT':return answer('UNSAT')
+        if parity_result['status'] in ('SAT','UNSAT'):return answer(parity_result['status'])
     for depth in range(len(order)+1):
         nodes+=len(layer);peak=max(peak,len(layer))
         status,layer=_layer(n,layer,label_mode,anchor_collisions,stats,policy)

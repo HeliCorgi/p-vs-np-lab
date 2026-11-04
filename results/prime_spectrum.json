@@ -1,0 +1,517 @@
+{
+  "all_checks_passed": true,
+  "five_fixture": {
+    "clauses": 59,
+    "profile": {
+      "dimension": 7,
+      "exceptional_primes": [
+        2,
+        5
+      ],
+      "kind": "affine-prime-spectrum-v1",
+      "models": 8,
+      "modular": {
+        "2": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "minor": 5,
+          "rank": 7,
+          "words": [
+            1,
+            6,
+            26,
+            39,
+            61,
+            72,
+            112
+          ]
+        },
+        "5": {
+          "columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "minor": 4,
+          "rank": 7,
+          "words": [
+            1,
+            6,
+            26,
+            39,
+            61,
+            72,
+            83
+          ]
+        }
+      },
+      "rational": {
+        "columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "minor": 10,
+        "rank": 8,
+        "words": [
+          1,
+          6,
+          26,
+          39,
+          61,
+          72,
+          83,
+          112
+        ]
+      }
+    },
+    "variables": 7,
+    "word_set": [
+      1,
+      6,
+      26,
+      39,
+      61,
+      72,
+      83,
+      112
+    ]
+  },
+  "odd_cycle": {
+    "discovered": [],
+    "fallback_status": "UNSAT",
+    "length": 11,
+    "scopes": 22
+  },
+  "prism": [
+    {
+      "clauses": 24,
+      "example": {
+        "profile": {
+          "dimension": 3,
+          "exceptional_primes": [
+            2
+          ],
+          "kind": "affine-prime-spectrum-v1",
+          "models": 4,
+          "modular": {
+            "2": {
+              "columns": [
+                0,
+                1,
+                2
+              ],
+              "minor": 1,
+              "rank": 3,
+              "words": [
+                1,
+                2,
+                4
+              ]
+            }
+          },
+          "rational": {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "minor": -2,
+            "rank": 4,
+            "words": [
+              1,
+              2,
+              4,
+              7
+            ]
+          }
+        },
+        "scope": [
+          1,
+          5,
+          7
+        ]
+      },
+      "k": 3,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 15,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 15,
+      "unbalanced": false,
+      "variables": 9
+    },
+    {
+      "clauses": 24,
+      "example": {
+        "profile": {
+          "dimension": 3,
+          "exceptional_primes": [
+            2
+          ],
+          "kind": "affine-prime-spectrum-v1",
+          "models": 4,
+          "modular": {
+            "2": {
+              "columns": [
+                0,
+                1,
+                2
+              ],
+              "minor": 1,
+              "rank": 3,
+              "words": [
+                1,
+                2,
+                4
+              ]
+            }
+          },
+          "rational": {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "minor": -2,
+            "rank": 4,
+            "words": [
+              1,
+              2,
+              4,
+              7
+            ]
+          }
+        },
+        "scope": [
+          1,
+          5,
+          7
+        ]
+      },
+      "k": 3,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 15,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 15,
+      "unbalanced": true,
+      "variables": 9
+    },
+    {
+      "clauses": 128,
+      "k": 16,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 80,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 80,
+      "unbalanced": false,
+      "variables": 48
+    },
+    {
+      "clauses": 128,
+      "k": 16,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 80,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 80,
+      "unbalanced": true,
+      "variables": 48
+    },
+    {
+      "clauses": 512,
+      "k": 64,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 320,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 320,
+      "unbalanced": false,
+      "variables": 192
+    },
+    {
+      "clauses": 512,
+      "k": 64,
+      "observed_primes": [
+        2
+      ],
+      "rank_drop_scopes": 320,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 320,
+      "unbalanced": true,
+      "variables": 192
+    },
+    {
+      "clauses": 144,
+      "example": {
+        "profile": {
+          "dimension": 9,
+          "exceptional_primes": [
+            3
+          ],
+          "kind": "affine-prime-spectrum-v1",
+          "models": 9,
+          "modular": {
+            "3": {
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                7
+              ],
+              "minor": 1,
+              "rank": 6,
+              "words": [
+                12,
+                34,
+                53,
+                75,
+                187,
+                287
+              ]
+            }
+          },
+          "rational": {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "minor": -3,
+            "rank": 7,
+            "words": [
+              12,
+              34,
+              53,
+              75,
+              187,
+              237,
+              287
+            ]
+          }
+        },
+        "scope": [
+          1,
+          2,
+          7,
+          11,
+          12,
+          16,
+          17,
+          21,
+          23
+        ]
+      },
+      "k": 3,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 6,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 366,
+      "unbalanced": false,
+      "variables": 27
+    },
+    {
+      "clauses": 144,
+      "example": {
+        "profile": {
+          "dimension": 9,
+          "exceptional_primes": [
+            3
+          ],
+          "kind": "affine-prime-spectrum-v1",
+          "models": 9,
+          "modular": {
+            "3": {
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                7
+              ],
+              "minor": 1,
+              "rank": 6,
+              "words": [
+                12,
+                34,
+                53,
+                75,
+                187,
+                287
+              ]
+            }
+          },
+          "rational": {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "minor": -3,
+            "rank": 7,
+            "words": [
+              12,
+              34,
+              53,
+              75,
+              187,
+              237,
+              287
+            ]
+          }
+        },
+        "scope": [
+          1,
+          2,
+          7,
+          11,
+          12,
+          16,
+          17,
+          21,
+          23
+        ]
+      },
+      "k": 3,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 6,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 366,
+      "unbalanced": true,
+      "variables": 27
+    },
+    {
+      "clauses": 768,
+      "k": 16,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 32,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 1952,
+      "unbalanced": false,
+      "variables": 144
+    },
+    {
+      "clauses": 768,
+      "k": 16,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 32,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 1952,
+      "unbalanced": true,
+      "variables": 144
+    },
+    {
+      "clauses": 3072,
+      "k": 64,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 128,
+      "subsequent_status": "UNKNOWN",
+      "total_scopes": 7808,
+      "unbalanced": false,
+      "variables": 576
+    },
+    {
+      "clauses": 3072,
+      "k": 64,
+      "observed_primes": [
+        3
+      ],
+      "rank_drop_scopes": 128,
+      "subsequent_status": "UNSAT",
+      "total_scopes": 7808,
+      "unbalanced": true,
+      "variables": 576
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Exact exceptional characteristics per scanned local relation. Not a complete list of global refutation characteristics or a SAT inference.",
+  "spurious_minor_control": {
+    "dimension": 3,
+    "exceptional_primes": [],
+    "kind": "affine-prime-spectrum-v1",
+    "models": 3,
+    "modular": {
+      "2": {
+        "columns": [
+          0,
+          1,
+          3
+        ],
+        "minor": -1,
+        "rank": 3,
+        "words": [
+          3,
+          5,
+          6
+        ]
+      }
+    },
+    "rational": {
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "minor": -2,
+      "rank": 3,
+      "words": [
+        3,
+        5,
+        6
+      ]
+    }
+  },
+  "summary": {
+    "highest_recovered_test_prime": 5,
+    "largest_prism": 64,
+    "largest_scanned_scopes": 7808,
+    "odd_cycle_length": 11,
+    "scrambled_field_controls": 12
+  }
+}

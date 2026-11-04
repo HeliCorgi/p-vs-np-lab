@@ -1,0 +1,144 @@
+{
+  "all_checks_passed": true,
+  "guarded": [
+    {
+      "checked_word": true,
+      "clauses": 10386,
+      "k": 3,
+      "learners": [
+        {
+          "field": 2,
+          "learned_rank": 2934,
+          "peel_steps": 0,
+          "status": "UNKNOWN"
+        },
+        {
+          "field": 3,
+          "learned_rank": 2934,
+          "peel_steps": 0,
+          "status": "UNKNOWN"
+        }
+      ],
+      "n": 4401,
+      "unbalanced": false
+    },
+    {
+      "checked_word": false,
+      "clauses": 10386,
+      "k": 3,
+      "learners": [
+        {
+          "field": 2,
+          "learned_rank": 2934,
+          "peel_steps": 0,
+          "status": "UNKNOWN"
+        },
+        {
+          "field": 3,
+          "learned_rank": 2934,
+          "peel_steps": 0,
+          "status": "UNKNOWN"
+        }
+      ],
+      "n": 4401,
+      "unbalanced": true
+    }
+  ],
+  "padded": [
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": true,
+      "clauses": 1584,
+      "k": 3,
+      "peeled_status": "UNKNOWN",
+      "residual_clauses": 144,
+      "residual_variables": 27,
+      "steps": 1440,
+      "unbalanced": false,
+      "variables": 1467
+    },
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": false,
+      "clauses": 1584,
+      "k": 3,
+      "peeled_status": "UNSAT",
+      "residual_clauses": 144,
+      "residual_variables": 27,
+      "steps": 1440,
+      "unbalanced": true,
+      "variables": 1467
+    },
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": true,
+      "clauses": 2640,
+      "k": 5,
+      "peeled_status": "UNKNOWN",
+      "residual_clauses": 240,
+      "residual_variables": 45,
+      "steps": 2400,
+      "unbalanced": false,
+      "variables": 2445
+    },
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": false,
+      "clauses": 2640,
+      "k": 5,
+      "peeled_status": "UNSAT",
+      "residual_clauses": 240,
+      "residual_variables": 45,
+      "steps": 2400,
+      "unbalanced": true,
+      "variables": 2445
+    },
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": true,
+      "clauses": 4224,
+      "k": 8,
+      "peeled_status": "UNKNOWN",
+      "residual_clauses": 384,
+      "residual_variables": 72,
+      "steps": 3840,
+      "unbalanced": false,
+      "variables": 3912
+    },
+    {
+      "bare_rows": 0,
+      "bare_status": "UNKNOWN",
+      "chain_length": 10,
+      "checked_sat_lift": false,
+      "clauses": 4224,
+      "k": 8,
+      "peeled_status": "UNSAT",
+      "residual_clauses": 384,
+      "residual_variables": 72,
+      "steps": 3840,
+      "unbalanced": true,
+      "variables": 3912
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Exponential search is not needed on the plain private chain; exact equality guards defeat this particular detector, not general SAT.",
+  "summary": {
+    "chain_controls": 6,
+    "guarded_controls": 2,
+    "largest_clauses": 4224,
+    "largest_steps": 3840,
+    "largest_variables": 3912,
+    "recovered_clauses": 384,
+    "recovered_variables": 72
+  }
+}
