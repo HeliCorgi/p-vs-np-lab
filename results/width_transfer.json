@@ -1,0 +1,67 @@
+{
+  "all_checks_passed": true,
+  "instances": [
+    {
+      "all_hard_axiom_images_checked": true,
+      "easy_branch_proof_lines": 226,
+      "easy_branch_proof_width": 4,
+      "gate_copy": 7,
+      "graph": "K4",
+      "image_clauses": 145,
+      "image_variables": 108,
+      "sat_variant_original_model_checked": true,
+      "source_clauses": 16,
+      "source_variables": 6,
+      "vertices": 4
+    },
+    {
+      "all_hard_axiom_images_checked": true,
+      "easy_branch_proof_lines": 306,
+      "easy_branch_proof_width": 4,
+      "gate_copy": 7,
+      "graph": "prism-3",
+      "image_clauses": 209,
+      "image_variables": 156,
+      "sat_variant_original_model_checked": true,
+      "source_clauses": 24,
+      "source_variables": 9,
+      "vertices": 6
+    },
+    {
+      "all_hard_axiom_images_checked": true,
+      "easy_branch_proof_lines": 466,
+      "easy_branch_proof_width": 4,
+      "gate_copy": 7,
+      "graph": "prism-5",
+      "image_clauses": 337,
+      "image_variables": 252,
+      "sat_variant_original_model_checked": true,
+      "source_clauses": 40,
+      "source_variables": 15,
+      "vertices": 10
+    },
+    {
+      "all_hard_axiom_images_checked": true,
+      "easy_branch_proof_lines": 1026,
+      "easy_branch_proof_width": 4,
+      "gate_copy": 7,
+      "graph": "prism-12",
+      "image_clauses": 785,
+      "image_variables": 588,
+      "sat_variant_original_model_checked": true,
+      "source_clauses": 96,
+      "source_variables": 36,
+      "vertices": 24
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Finite proof checks, not measurements of asymptotic width. Infinite-family claims use the primary theorem.",
+  "summary": {
+    "K4_exact_minimum_resolution_width": 4,
+    "checked_graphs": 4,
+    "input_translation_lines": 76,
+    "max_easy_branch_width": 4,
+    "output_translation_lines": 3,
+    "width_three_K4_saturated_clauses": 16
+  }
+}

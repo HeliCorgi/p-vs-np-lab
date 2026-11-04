@@ -1,0 +1,310 @@
+{
+  "actual_sat_moves": [
+    {
+      "changed_bits": 8,
+      "k": 3,
+      "source_model_hex": "0xaaad552aad54ad54d52ab52ab534cb4ccb4fffffffe00001b780159",
+      "target_model_hex": "0xaaad552aad54ad52d52ab52ad534cb4ccb4fffffff800007b780159"
+    },
+    {
+      "changed_bits": 16,
+      "k": 8,
+      "source_model_hex": "0x2aaa555555aa956aaa95595aa955aaaa955a955aa95556aa5a596699669669699669669000fffff00ffcffc0000c00ff2b7abd5e02e1709e",
+      "target_model_hex": "0x2aaa555555aa956aaa95695aa555aaaa955a956aa95556a95a596699669669699669669000fffff03ff0ffc0003c00fc2b7abd5e02e1709e"
+    }
+  ],
+  "all_checks_passed": true,
+  "driver": [
+    {
+      "clauses": 252,
+      "k": 2,
+      "n": 176,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "derivation": {
+          "budget_limited": false,
+          "candidate_maps": 2,
+          "clause_scans": 53513,
+          "finder_calls": 2,
+          "nodes": 66,
+          "queries": 66,
+          "split_trials": 0,
+          "unit_steps": 1389
+        },
+        "individual_merges": 0,
+        "individual_true": 0,
+        "labels": 7,
+        "or_labels": 0,
+        "pruned_no": 0,
+        "transport_budget_reached": true,
+        "transport_checks": 2,
+        "transport_drops": 2,
+        "transport_methods": {
+          "interface-rup": 2
+        }
+      },
+      "widths": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "clauses": 388,
+      "k": 4,
+      "n": 266,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "derivation": {
+          "budget_limited": false,
+          "candidate_maps": 4,
+          "clause_scans": 248286,
+          "finder_calls": 4,
+          "nodes": 236,
+          "queries": 236,
+          "split_trials": 0,
+          "unit_steps": 4101
+        },
+        "individual_merges": 0,
+        "individual_true": 0,
+        "labels": 11,
+        "or_labels": 0,
+        "pruned_no": 0,
+        "transport_budget_reached": true,
+        "transport_checks": 4,
+        "transport_drops": 4,
+        "transport_methods": {
+          "interface-rup": 4
+        }
+      },
+      "widths": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "clauses": 660,
+      "k": 8,
+      "n": 446,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "derivation": {
+          "budget_limited": false,
+          "candidate_maps": 8,
+          "clause_scans": 1408940,
+          "finder_calls": 8,
+          "nodes": 888,
+          "queries": 888,
+          "split_trials": 0,
+          "unit_steps": 13485
+        },
+        "individual_merges": 0,
+        "individual_true": 0,
+        "labels": 19,
+        "or_labels": 0,
+        "pruned_no": 0,
+        "transport_budget_reached": true,
+        "transport_checks": 8,
+        "transport_drops": 8,
+        "transport_methods": {
+          "interface-rup": 8
+        }
+      },
+      "widths": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "switch_tseitin",
+      "k": 1,
+      "nodes": 24,
+      "queries": 24,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "switch_tseitin",
+      "k": 2,
+      "nodes": 60,
+      "queries": 60,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 2,
+      "family": "switch_tseitin",
+      "k": 2,
+      "nodes": 240,
+      "queries": 240,
+      "verified_pairs": 12
+    },
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "switch_tseitin",
+      "k": 3,
+      "nodes": 88,
+      "queries": 88,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 2,
+      "family": "switch_tseitin",
+      "k": 3,
+      "nodes": 456,
+      "queries": 456,
+      "verified_pairs": 12
+    },
+    {
+      "all_pairs": true,
+      "depth": 3,
+      "family": "switch_tseitin",
+      "k": 3,
+      "nodes": 1568,
+      "queries": 1568,
+      "verified_pairs": 56
+    },
+    {
+      "all_pairs": false,
+      "depth": 4,
+      "family": "switch_tseitin",
+      "k": 4,
+      "nodes": 72,
+      "queries": 72,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": false,
+      "depth": 8,
+      "family": "switch_tseitin",
+      "k": 8,
+      "nodes": 136,
+      "queries": 136,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": false,
+      "depth": 16,
+      "family": "switch_tseitin",
+      "k": 16,
+      "nodes": 264,
+      "queries": 264,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "padded_tseitin",
+      "k": 1,
+      "nodes": 40,
+      "queries": 40,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "padded_tseitin",
+      "k": 2,
+      "nodes": 68,
+      "queries": 68,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 2,
+      "family": "padded_tseitin",
+      "k": 2,
+      "nodes": 384,
+      "queries": 384,
+      "verified_pairs": 12
+    },
+    {
+      "all_pairs": true,
+      "depth": 1,
+      "family": "padded_tseitin",
+      "k": 3,
+      "nodes": 96,
+      "queries": 96,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": true,
+      "depth": 2,
+      "family": "padded_tseitin",
+      "k": 3,
+      "nodes": 552,
+      "queries": 552,
+      "verified_pairs": 12
+    },
+    {
+      "all_pairs": true,
+      "depth": 3,
+      "family": "padded_tseitin",
+      "k": 3,
+      "nodes": 2464,
+      "queries": 2464,
+      "verified_pairs": 56
+    },
+    {
+      "all_pairs": false,
+      "depth": 4,
+      "family": "padded_tseitin",
+      "k": 4,
+      "nodes": 112,
+      "queries": 112,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": false,
+      "depth": 8,
+      "family": "padded_tseitin",
+      "k": 8,
+      "nodes": 208,
+      "queries": 208,
+      "verified_pairs": 2
+    },
+    {
+      "all_pairs": false,
+      "depth": 16,
+      "family": "padded_tseitin",
+      "k": 16,
+      "nodes": 400,
+      "queries": 400,
+      "verified_pairs": 2
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Width-one prefix, not a full SAT decision. Prior direct systems excluded every direct map on the odd raw branches.",
+  "summary": {
+    "checked_ordered_pairs": 184,
+    "max_driver_k": 8,
+    "max_pair_k": 16,
+    "tag_width": 1
+  }
+}

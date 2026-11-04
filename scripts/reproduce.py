@@ -32,6 +32,7 @@ NEW_REPORTS = (
     "selector_overlap.json", "event_projection.json", "overlap_lattice.json", "observation_2sat.json",
     "decision_pruning.json", "pruning_codec.json", "blocked_pruning.json",
     "witness_transport.json", "transport_obstruction.json", "transport_padding.json", "split_parity.json",
+    "branch_interface.json", "blind_recovery.json", "width_transfer.json", "rigid_ceiling.json", "case_parity.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -172,6 +173,8 @@ def main() -> None:
                for name in ("decision_pruning", "pruning_codec", "blocked_pruning")}
     phase12 = {name: read_json(out / (name + ".json"))
                for name in ("witness_transport", "transport_obstruction", "transport_padding", "split_parity")}
+    phase13 = {name: read_json(out / (name + ".json"))
+               for name in ("branch_interface","blind_recovery","width_transfer","rigid_ceiling","case_parity")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -181,7 +184,7 @@ def main() -> None:
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
             or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
-            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values()))):
+            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values()))):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -228,6 +231,8 @@ def main() -> None:
         "ternary_support_threshold_summary": threshold["summary"],
         "unit_support_matching_summary": matching["summary"],
         "general_three_option_weight_two_polynomial_solver": False,
+        "derived_transport_summaries": {name: r["summary"] for name,r in phase13.items()},
+        "derived_transport_general_polynomial_solver": False,
         "witness_transport_summaries": {name: r["summary"] for name,r in phase12.items()},
         "general_polynomial_time_from_transport_or_split_parity": False,
         "decision_pruning_summaries": {name: r["summary"] for name,r in phase11.items()},

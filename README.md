@@ -7,6 +7,26 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第13段階：複数の節で枝を移す。その証明はどこまで短いか
+
+前回は、変換先の各節を「元の一節」から保証する規則でした。今回は、変換先の節を偽と仮定して元の節から値を順に強制し、矛盾するまでの節番号を記録します。[独立チェッカー](docs/derived_transport.md)はその推論を再生し、枝Aの解を枝Bの解に移せると確認できたときだけAを削ります。探索の失敗や予算切れでAを捨てることはありません。
+
+| 検証した問い | 結果 |
+|---|---|
+| 前回の指数個の枝を、本当に新規則で統合できるか | [二項節で等しくなる変数の対応](docs/interface_transport.md)を使うと、前回の反例族では各タグ分岐後に残す代表が1個で足りる。補助変数を足した版にも成立。8回のタグ分岐では8回の移送を実行した。その先の一般部分まで幅1になるとは限らない |
+| 以前の前処理が何も見つけられなかった符号化はどうか | [六変数の局所証明と等値関係の復元](docs/blind_recovery.md)により、変数名・符号・節順を変えた12,932変数・18,113節を899変数・2,568節に縮約。解なし側で反証、解あり側で元入力の全節を満たす割当を確認。任意の3-SATから作れる別の表現には、この復元法が何もしない |
+| 十分短い解消証明さえ探せば、枝数を一般に抑えられるか | [両方向の証明長下界](docs/robust_ceiling.md)と[各タグ層への拡張](docs/layered_resolution_barrier.md)。選んだ変数順で深さ `d` の `2^d` 個の残余式のどの二つでも、符号付き変数・定数によるどの写像にも、通常の解消規則だけで保証するには指数長の証明が必要な族がある。これは全SAT算法の下界ではない |
+| 同じ種類の入力を別の方法で解けるか | [一つの変数の両ケースにパリティ検査を適用](docs/case_parity.md)。8モジュールの実験（888変数・1,280節）で両方に矛盾があり、全入力の充足不能を独立に検算できた |
+
+関連資料：[幅制限を以前の符号化へ移す証明](docs/width_transfer.md)、[単一の分岐層に多数のグラフを埋め込む構成](docs/port_antichain.md)、[小さなグラフでの独立検査](results/rigid_ceiling.json)。[今回追加したLeanの5定理](Formal/DerivedTransport.lean)が扱うのは、単位伝播・二分岐による矛盾・導出した節による証人移送の健全性です。指数下界やPython実装全体を形式検証したものではありません。
+
+```bash
+python scripts/solve_pruned.py examples/phase13_hidden_odd.json --recover-parity | python scripts/check_pruning_parity.py examples/phase13_hidden_odd.json -
+python scripts/solve_pruned.py examples/phase13_transport_cut.json --derived-depth 0 --label syntax --max-width 1 --max-transport-checks 2
+```
+
+2番目は2個のタグを幅1で通過し、その先では比較予算が尽きて `UNKNOWN` になります。[次の研究対象](docs/reverse_engineering.md)は、節の証明を長くすることより、複数の枝に共通する代数的な矛盾を元の節から発見・検算することです。
+
 ## 第12段階：枝の解を移す。一方向の証明で足りるか
 
 枝Aの解を枝Bの解に必ず変換できれば、Bを残してAを削れます。BからAへ戻せる必要はありません。[発見器と独立チェッカー](docs/transport_discovery.md)は、Bの各変数をAの符号付き変数または定数で置き換え、Bの各節が恒真になるか、Aの一つの節で保証されるかを元の節で調べます。探索が失敗しても枝は捨てません。[Leanで追加した6定理](Formal/WitnessTransport.lean)は、実際に割当を移すこと、証明書の合成、正しい向きの枝削除を扱います。
@@ -307,7 +327,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要52定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要57定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -335,7 +355,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 247件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 272件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

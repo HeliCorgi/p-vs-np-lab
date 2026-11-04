@@ -1,0 +1,200 @@
+{
+  "all_checks_passed": true,
+  "hidden_controls": [
+    {
+      "clauses": 345,
+      "k": 1,
+      "odd": true,
+      "variables": 256
+    },
+    {
+      "clauses": 345,
+      "k": 1,
+      "odd": false,
+      "variables": 256
+    },
+    {
+      "clauses": 765,
+      "k": 4,
+      "odd": true,
+      "variables": 556
+    },
+    {
+      "clauses": 765,
+      "k": 4,
+      "odd": false,
+      "variables": 556
+    },
+    {
+      "clauses": 2445,
+      "k": 16,
+      "odd": true,
+      "variables": 1756
+    },
+    {
+      "clauses": 2445,
+      "k": 16,
+      "odd": false,
+      "variables": 1756
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Sound normalization, exact inversion on proper 3-CNF images modulo signed names, used variables and duplicates; no polynomial general SAT claim.",
+  "summary": {
+    "hidden_controls": 6,
+    "largest_checked_switches": 128,
+    "largest_raw_clauses": 18113,
+    "largest_raw_variables": 12932,
+    "largest_reduced_clauses": 2568,
+    "largest_reduced_variables": 899,
+    "lifted_proper_cases": 46,
+    "proper_cases": 48,
+    "source_assignments": 2288
+  },
+  "switch_controls": [
+    {
+      "checked_lift": false,
+      "k": 1,
+      "odd": true,
+      "raw_clauses": 333,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 232,
+      "reduced_clauses": 28,
+      "reduced_parity": "UNSAT",
+      "reduced_variables": 10,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 10,
+        "tree_edges": 428,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": true,
+      "k": 1,
+      "odd": false,
+      "raw_clauses": 333,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 232,
+      "reduced_clauses": 28,
+      "reduced_parity": "UNKNOWN",
+      "reduced_variables": 10,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 10,
+        "tree_edges": 428,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": false,
+      "k": 4,
+      "odd": true,
+      "raw_clauses": 753,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 532,
+      "reduced_clauses": 88,
+      "reduced_parity": "UNSAT",
+      "reduced_variables": 31,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 31,
+        "tree_edges": 986,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": true,
+      "k": 4,
+      "odd": false,
+      "raw_clauses": 753,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 532,
+      "reduced_clauses": 88,
+      "reduced_parity": "UNKNOWN",
+      "reduced_variables": 31,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 31,
+        "tree_edges": 986,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": false,
+      "k": 32,
+      "odd": true,
+      "raw_clauses": 4673,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 3332,
+      "reduced_clauses": 648,
+      "reduced_parity": "UNSAT",
+      "reduced_variables": 227,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 227,
+        "tree_edges": 6194,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": true,
+      "k": 32,
+      "odd": false,
+      "raw_clauses": 4673,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 3332,
+      "reduced_clauses": 648,
+      "reduced_parity": "UNKNOWN",
+      "reduced_variables": 227,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 227,
+        "tree_edges": 6194,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": false,
+      "k": 128,
+      "odd": true,
+      "raw_clauses": 18113,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 12932,
+      "reduced_clauses": 2568,
+      "reduced_parity": "UNSAT",
+      "reduced_variables": 899,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 899,
+        "tree_edges": 24050,
+        "truth_assignments_tested": 64
+      }
+    },
+    {
+      "checked_lift": true,
+      "k": 128,
+      "odd": false,
+      "raw_clauses": 18113,
+      "raw_parity": "UNKNOWN",
+      "raw_variables": 12932,
+      "reduced_clauses": 2568,
+      "reduced_parity": "UNKNOWN",
+      "reduced_variables": 899,
+      "stats": {
+        "forced_pins": 5,
+        "packs": 1,
+        "signed_components": 899,
+        "tree_edges": 24050,
+        "truth_assignments_tested": 64
+      }
+    }
+  ]
+}

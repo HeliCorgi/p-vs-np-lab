@@ -1,0 +1,187 @@
+{
+  "all_checks_passed": true,
+  "modules": [
+    {
+      "checked_sat_word": false,
+      "child_xor_terms": [
+        10,
+        10
+      ],
+      "clauses": 160,
+      "k": 1,
+      "odd": true,
+      "stats": {
+        "branch_unsat_proofs": 2,
+        "candidate_pivots": 111,
+        "inner_calls": 3,
+        "limit_reached": false,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": 75
+      },
+      "status": "UNSAT",
+      "variables": 111
+    },
+    {
+      "checked_sat_word": true,
+      "child_xor_terms": [],
+      "clauses": 160,
+      "k": 1,
+      "odd": false,
+      "stats": {
+        "branch_unsat_proofs": 0,
+        "candidate_pivots": 111,
+        "inner_calls": 2,
+        "limit_reached": true,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": null
+      },
+      "status": "UNKNOWN",
+      "variables": 111
+    },
+    {
+      "checked_sat_word": false,
+      "child_xor_terms": [
+        10,
+        10
+      ],
+      "clauses": 480,
+      "k": 3,
+      "odd": true,
+      "stats": {
+        "branch_unsat_proofs": 2,
+        "candidate_pivots": 333,
+        "inner_calls": 3,
+        "limit_reached": false,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": 8
+      },
+      "status": "UNSAT",
+      "variables": 333
+    },
+    {
+      "checked_sat_word": true,
+      "child_xor_terms": [],
+      "clauses": 480,
+      "k": 3,
+      "odd": false,
+      "stats": {
+        "branch_unsat_proofs": 0,
+        "candidate_pivots": 333,
+        "inner_calls": 2,
+        "limit_reached": true,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": null
+      },
+      "status": "UNKNOWN",
+      "variables": 333
+    },
+    {
+      "checked_sat_word": false,
+      "child_xor_terms": [
+        10,
+        10
+      ],
+      "clauses": 1280,
+      "k": 8,
+      "odd": true,
+      "stats": {
+        "branch_unsat_proofs": 2,
+        "candidate_pivots": 888,
+        "inner_calls": 3,
+        "limit_reached": false,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": 64
+      },
+      "status": "UNSAT",
+      "variables": 888
+    },
+    {
+      "checked_sat_word": true,
+      "child_xor_terms": [],
+      "clauses": 1280,
+      "k": 8,
+      "odd": false,
+      "stats": {
+        "branch_unsat_proofs": 0,
+        "candidate_pivots": 888,
+        "inner_calls": 2,
+        "limit_reached": true,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": null
+      },
+      "status": "UNKNOWN",
+      "variables": 888
+    }
+  ],
+  "recovered_images": [
+    {
+      "checked_lift": false,
+      "odd": true,
+      "raw_clauses": 651,
+      "raw_variables": 488,
+      "reduced_clauses": 160,
+      "reduced_variables": 96,
+      "result": "UNSAT",
+      "stats": {
+        "branch_unsat_proofs": 2,
+        "candidate_pivots": 96,
+        "inner_calls": 3,
+        "limit_reached": false,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": 3
+      }
+    },
+    {
+      "checked_lift": true,
+      "odd": false,
+      "raw_clauses": 651,
+      "raw_variables": 488,
+      "reduced_clauses": 160,
+      "reduced_variables": 96,
+      "result": "UNKNOWN",
+      "stats": {
+        "branch_unsat_proofs": 0,
+        "candidate_pivots": 96,
+        "inner_calls": 2,
+        "limit_reached": true,
+        "pivots_tried": 1,
+        "root_status": "UNKNOWN",
+        "successful_pivot": null
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Proofs from two complementary restrictions, not a shallow ordinary resolution refutation. No general polynomial SAT claim.",
+  "summary": {
+    "all_pivots_in_unsat_miss": 19,
+    "largest_clauses": 1280,
+    "largest_modules": 8,
+    "largest_variables": 888,
+    "mask_image_clauses": 651,
+    "mask_image_variables": 488,
+    "module_controls": 6,
+    "successful_inner_calls": 3,
+    "successful_odd_pivots": 1
+  },
+  "unsat_miss": {
+    "clauses": 24,
+    "stats": {
+      "branch_unsat_proofs": 0,
+      "candidate_pivots": 19,
+      "inner_calls": 20,
+      "limit_reached": false,
+      "pivots_tried": 19,
+      "root_status": "UNKNOWN",
+      "successful_pivot": null
+    },
+    "status": "UNKNOWN",
+    "variables": 19
+  }
+}

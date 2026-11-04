@@ -16,7 +16,13 @@ def main():
     p.add_argument('--transport',action='store_true',help='Prune by checked directed witness maps')
     p.add_argument('--transport-trace',action='store_true',help='Include maps and both residuals (requires --transport)')
     p.add_argument('--max-transport-checks',type=int,help='Total directed finder attempts; exhaustion keeps both branches')
+    p.add_argument('--derived-depth',type=int,choices=range(4),help='Verify witness maps using propagation and at most this many nested decisions')
+    p.add_argument('--max-proof-nodes',type=int,help='Total propagation nodes across all map searches')
+    p.add_argument('--max-proof-queries',type=int,help='Total nonsyntactic clause queries across all map searches')
     root=p.add_mutually_exclusive_group()
+    root.add_argument('--case-parity',action='store_true',help='Try both values of one pivot using private resolution and parity in each case')
+    root.add_argument('--recover-case-parity',action='store_true',help='Certify a reduced core, then try both parity cases there')
+    root.add_argument('--recover-parity',action='store_true',help='First certify a reduced core and try its root parity refutation')
     root.add_argument('--private-parity',action='store_true',help='Add short private-pivot resolvents before seeking a root parity refutation')
     root.add_argument('--split-parity',action='store_true',help='First seek a checked common-parity contradiction at the root')
     g=p.add_mutually_exclusive_group()
@@ -31,7 +37,10 @@ def main():
             raise ValueError('Expected distinct variable names and a clause list.')
         out=solve_pruned(len(vs),cs,max_width=None if args.unbounded else args.max_width,
                          label_mode=args.label,transport=args.transport,transport_trace=args.transport_trace,
-                         max_transport_checks=args.max_transport_checks,split_parity=args.split_parity,private_parity=args.private_parity)
+                         max_transport_checks=args.max_transport_checks,split_parity=args.split_parity,private_parity=args.private_parity,
+                         derived_depth=args.derived_depth,max_proof_nodes=args.max_proof_nodes,
+                         max_proof_queries=args.max_proof_queries,recover_parity=args.recover_parity,
+                         case_parity=args.case_parity,recover_case_parity=args.recover_case_parity)
     except (ValueError,TypeError,KeyError,OSError) as e:
         print('Input error:',e,file=sys.stderr);return 1
     print(json.dumps(out,indent=2))

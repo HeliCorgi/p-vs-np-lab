@@ -1,0 +1,114 @@
+{
+  "all_checks_passed": true,
+  "cross_discovery": [
+    {
+      "source": "petersen",
+      "stats": {
+        "budget_limited": false,
+        "cache_hits": 25,
+        "candidate_maps": 1,
+        "clause_scans": 3520,
+        "nodes": 56,
+        "queries": 56,
+        "split_trials": 0,
+        "syntactic_hits": 24,
+        "unit_steps": 32
+      },
+      "status": "UNKNOWN",
+      "target": "pentagonal-prism"
+    },
+    {
+      "source": "pentagonal-prism",
+      "stats": {
+        "budget_limited": false,
+        "cache_hits": 25,
+        "candidate_maps": 1,
+        "clause_scans": 2880,
+        "nodes": 56,
+        "queries": 56,
+        "split_trials": 0,
+        "syntactic_hits": 24,
+        "unit_steps": 32
+      },
+      "status": "UNKNOWN",
+      "target": "petersen"
+    }
+  ],
+  "graphs": [
+    {
+      "connected_supports": 566,
+      "depth_zero_goals_checked": 4091,
+      "depth_zero_goals_proved": 40,
+      "falsifications_with_satisfied_isolated_star": 40,
+      "falsifications_with_violated_isolated_star": 40,
+      "graph": "petersen",
+      "isolated_vertex_supports": 10,
+      "single_clause_critical_words": 40,
+      "unoriented_four_cycles": 0,
+      "width_at_most_three_nonraw": 4051,
+      "width_at_most_three_raw": 40
+    },
+    {
+      "connected_supports": 566,
+      "depth_zero_goals_checked": 4091,
+      "depth_zero_goals_proved": 40,
+      "falsifications_with_satisfied_isolated_star": 40,
+      "falsifications_with_violated_isolated_star": 40,
+      "graph": "pentagonal-prism",
+      "isolated_vertex_supports": 10,
+      "single_clause_critical_words": 40,
+      "unoriented_four_cycles": 5,
+      "width_at_most_three_nonraw": 4051,
+      "width_at_most_three_raw": 40
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Finite ten-vertex checks only; no asymptotic girth, expansion or exponential search cost inferred.",
+  "sibling_checks": [
+    {
+      "direct_lift": true,
+      "graph": "petersen",
+      "odd": true,
+      "retraction_on_active_axioms": 40,
+      "rup_reverse": true,
+      "slice_clauses": 120,
+      "source_clauses": 160
+    },
+    {
+      "direct_lift": true,
+      "graph": "pentagonal-prism",
+      "odd": true,
+      "retraction_on_active_axioms": 40,
+      "rup_reverse": true,
+      "slice_clauses": 120,
+      "source_clauses": 160
+    },
+    {
+      "direct_lift": true,
+      "graph": "petersen",
+      "odd": false,
+      "retraction_on_active_axioms": 40,
+      "rup_reverse": true,
+      "slice_clauses": 120,
+      "source_clauses": 160
+    },
+    {
+      "direct_lift": true,
+      "graph": "pentagonal-prism",
+      "odd": false,
+      "retraction_on_active_axioms": 40,
+      "rup_reverse": true,
+      "slice_clauses": 120,
+      "source_clauses": 160
+    }
+  ],
+  "summary": {
+    "bilateral_sibling_controls": 4,
+    "checked_small_clauses": 8182,
+    "critical_words": 80,
+    "edges_per_graph": 15,
+    "graphs": 2,
+    "raw_proved_at_depth_zero": 80,
+    "vertices_per_graph": 10
+  }
+}
