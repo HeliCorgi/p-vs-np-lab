@@ -53,6 +53,11 @@ THEOREMS = {
     "BoundaryLab.AffineCover.compact_cubic_identity",
     "BoundaryLab.AffineCover.compact_selector_substitution",
     "BoundaryLab.AffineCover.weighted_identity_implies_cover",
+    "BoundaryLab.DecisionPruning.anchored_collision",
+    "BoundaryLab.DecisionPruning.distinct_refutes_anchor",
+    "BoundaryLab.DecisionPruning.thin_preserves",
+    "BoundaryLab.DecisionPruning.split_preserves",
+    "BoundaryLab.DecisionPruning.rounds_preserve",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

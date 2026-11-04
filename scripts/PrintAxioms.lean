@@ -47,3 +47,9 @@ import Formal
 #print axioms BoundaryLab.AffineCover.compact_cubic_identity
 #print axioms BoundaryLab.AffineCover.compact_selector_substitution
 #print axioms BoundaryLab.AffineCover.weighted_identity_implies_cover
+
+#print axioms BoundaryLab.DecisionPruning.anchored_collision
+#print axioms BoundaryLab.DecisionPruning.distinct_refutes_anchor
+#print axioms BoundaryLab.DecisionPruning.thin_preserves
+#print axioms BoundaryLab.DecisionPruning.split_preserves
+#print axioms BoundaryLab.DecisionPruning.rounds_preserve
