@@ -72,3 +72,8 @@ import Formal
 #print axioms BoundaryLab.ModularHull.mod_three_refutes
 #print axioms BoundaryLab.ModularHull.mod_four_refutes
 #print axioms BoundaryLab.ModularHull.boolean_bridge_sound
+
+#print axioms BoundaryLab.IntegerCertificate.scale_congruence
+#print axioms BoundaryLab.IntegerCertificate.integer_certificate_refutes
+#print axioms BoundaryLab.IntegerCertificate.refuted_value_forces
+#print axioms BoundaryLab.IntegerCertificate.both_values_refute

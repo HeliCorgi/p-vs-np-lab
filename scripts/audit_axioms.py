@@ -74,6 +74,10 @@ THEOREMS = {
     "BoundaryLab.ModularHull.mod_three_refutes",
     "BoundaryLab.ModularHull.mod_four_refutes",
     "BoundaryLab.ModularHull.boolean_bridge_sound",
+    "BoundaryLab.IntegerCertificate.scale_congruence",
+    "BoundaryLab.IntegerCertificate.integer_certificate_refutes",
+    "BoundaryLab.IntegerCertificate.refuted_value_forces",
+    "BoundaryLab.IntegerCertificate.both_values_refute",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
