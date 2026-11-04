@@ -70,4 +70,5 @@ import Formal
 #print axioms BoundaryLab.ModularHull.local_table_sound
 #print axioms BoundaryLab.ModularHull.weighted_sum_sound
 #print axioms BoundaryLab.ModularHull.mod_three_refutes
+#print axioms BoundaryLab.ModularHull.mod_four_refutes
 #print axioms BoundaryLab.ModularHull.boolean_bridge_sound

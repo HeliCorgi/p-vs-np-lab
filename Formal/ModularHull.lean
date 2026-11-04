@@ -3,8 +3,8 @@ import Formal.WitnessTransport
 /-! A semantic kernel for local Boolean truth tables and modular row proofs.
 No field conversion is applied to a row. The cross-field rule requires a
 Boolean implication; the proof of the summation rule below uses only addition
-with zero, distributivity and interchange. The concrete contradiction theorem
-instantiates these finite arithmetic laws at modulus 3 by kernel computation.
+with zero, distributivity and interchange. The concrete contradiction theorems
+instantiate these finite arithmetic laws at moduli 3 and 4 by kernel computation.
 It is not a formalization of scope discovery or Python's Gaussian elimination. -/
 set_option autoImplicit false
 
@@ -104,6 +104,23 @@ theorem mod_three_refutes {V : Type} (f : CNF V) (vs : List V)
   have co : sumCoeff ts = (fun _ => 0) := funext cancel
   rw [co, dot_zero (by decide : (0:Fin 3)+0=0), one] at eq
   exact (by decide : (0:Fin 3) ≠ 1) eq
+
+/-- Over the composite modulus, 0=2 is already a contradiction: nothing
+in this theorem divides by a putative nonzero pivot. -/
+theorem mod_four_refutes {V : Type} (f : CNF V) (vs : List V)
+    (ts : List (Fin 4 × Eqn V (Fin 4)))
+    (ok : ∀ a, Models a f → ∀ t ∈ ts, Valid vs a t.2)
+    (cancel : ∀ v, sumCoeff ts v = 0) (nonzero : sumRhs ts ≠ 0) :
+    ¬ Sat f := by
+  intro sat
+  obtain ⟨a,model⟩ := sat
+  have sh : ∀ x y z w : Fin 4, (x+y)+(z+w) = (x+z)+(y+w) := by decide
+  have di : ∀ k x y : Fin 4, k*(x+y) = k*x + k*y := by decide
+  have mz : ∀ k : Fin 4, k*0 = 0 := by decide
+  have eq := weighted_sum_sound (by decide : (0:Fin 4)+0=0) mz sh di vs a ts (ok a model)
+  have co : sumCoeff ts = (fun _ => 0) := funext cancel
+  rw [co, dot_zero (by decide : (0:Fin 4)+0=0)] at eq
+  exact nonzero eq.symm
 
 /-- A bridge can change arithmetic domains only through an explicitly checked
 implication on the SAME Boolean words. The two row codomains can differ. -/
