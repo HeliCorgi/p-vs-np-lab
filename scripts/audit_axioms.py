@@ -47,6 +47,12 @@ THEOREMS = {
     "BoundaryLab.HoleFibers.three_pairs_escape",
     "BoundaryLab.HoleFibers.two_pairs_blocked_iff_cross",
     "BoundaryLab.HoleFibers.two_point_fiber_puncture",
+    "BoundaryLab.AffineCover.bit_projection_iff",
+    "BoundaryLab.AffineCover.selector_cubic_identity",
+    "BoundaryLab.AffineCover.priority_selector_substitution",
+    "BoundaryLab.AffineCover.compact_cubic_identity",
+    "BoundaryLab.AffineCover.compact_selector_substitution",
+    "BoundaryLab.AffineCover.weighted_identity_implies_cover",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

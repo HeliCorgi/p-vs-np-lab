@@ -7,3 +7,4 @@ import Formal.BridgeAffineBarrier
 import Formal.JointXorClause
 import Formal.AffineFrontier
 import Formal.HoleFibers
+import Formal.AffineCover

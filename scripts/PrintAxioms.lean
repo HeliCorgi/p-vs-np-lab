@@ -40,3 +40,10 @@ import Formal
 #print axioms BoundaryLab.HoleFibers.three_pairs_escape
 #print axioms BoundaryLab.HoleFibers.two_pairs_blocked_iff_cross
 #print axioms BoundaryLab.HoleFibers.two_point_fiber_puncture
+
+#print axioms BoundaryLab.AffineCover.bit_projection_iff
+#print axioms BoundaryLab.AffineCover.selector_cubic_identity
+#print axioms BoundaryLab.AffineCover.priority_selector_substitution
+#print axioms BoundaryLab.AffineCover.compact_cubic_identity
+#print axioms BoundaryLab.AffineCover.compact_selector_substitution
+#print axioms BoundaryLab.AffineCover.weighted_identity_implies_cover
