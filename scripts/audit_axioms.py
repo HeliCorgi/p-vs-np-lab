@@ -78,6 +78,10 @@ THEOREMS = {
     "BoundaryLab.IntegerCertificate.integer_certificate_refutes",
     "BoundaryLab.IntegerCertificate.refuted_value_forces",
     "BoundaryLab.IntegerCertificate.both_values_refute",
+    "BoundaryLab.CorrelationProof.derivation_sound",
+    "BoundaryLab.CorrelationProof.empty_relation_refutes",
+    "BoundaryLab.CorrelationProof.resolution_is_exact_projection",
+    "BoundaryLab.CorrelationProof.separate_projections_lose_correlation",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

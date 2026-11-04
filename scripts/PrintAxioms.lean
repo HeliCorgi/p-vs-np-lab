@@ -77,3 +77,8 @@ import Formal
 #print axioms BoundaryLab.IntegerCertificate.integer_certificate_refutes
 #print axioms BoundaryLab.IntegerCertificate.refuted_value_forces
 #print axioms BoundaryLab.IntegerCertificate.both_values_refute
+
+#print axioms BoundaryLab.CorrelationProof.derivation_sound
+#print axioms BoundaryLab.CorrelationProof.empty_relation_refutes
+#print axioms BoundaryLab.CorrelationProof.resolution_is_exact_projection
+#print axioms BoundaryLab.CorrelationProof.separate_projections_lose_correlation
