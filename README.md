@@ -7,6 +7,31 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第16段階：失われていた相関を残す。前回の反例に必要な強さを確定する
+
+前回、整数式を一つも学習できなかった **31変数・152節のUNSAT式を、元の節だけから反証しました**。変数名・符号・節順を変えた例でも確認しています。解消法で証明を発見し、その証明を、実際のBoolean解集合の結合・射影と、GF(2)上の多項式計算でそれぞれ独立に検算します。発見器に保存済みの探索木や生成時の構造は渡していません。
+
+| この有限例で確定した最小値 | 結果 | 上限と下限の根拠 |
+|---|---:|---|
+| [通常の解消証明の節幅](docs/correlation_resolution.md) | **4** | 幅3の閉包は152個の元の節から増えない。幅4では115個の元の節と253回の解消から空節を導く |
+| [解集合を結合する際の変数の総数](docs/correlation_relations.md) | **5** | 4変数以内では異なる元の節の制約を結合できない。5変数まで使う368ノードの証明を真理値表で独立検算 |
+| [多項式計算の次数](docs/correlation_polynomial.md) | **5** | 全ての体に成立する次数4の不変量と次数5の構成。実行したGF(2)チェッカーは1,262ノード・6,313単項式出現を検算 |
+| [整合する局所分布の階層](docs/correlation_proof_boundary.md#3-nonnegative-local-distributions-an-exact-sa-convention) | **5** | 4変数までの全36,457範囲に整合する非負分布が存在。5変数までの分布は結合証明により不可能。階層の定義を明示し、LPを実行したとは主張しない |
+
+最初に残った二項節は `x23 ∨ ¬x30` です。この節が許す3通りのBoolean割当は整数アフィン格子としては全空間を生成するため、一次式に戻すと再び制約が消えます。今回保持したのは、その **禁止された一組そのもの** です。この二項節の導出だけでも元の13節を使っており、「各元節の局所情報」と「多数の節から学習した小さな関係」を区別する必要があります。
+
+**発見の費用も記録しました。** 最終証明は368ノードですが、探索では26,826節を保存し、180,420組の候補を調べ、さらに463,497回の包含探索と8,085,954回の上位集合の包含検査を行っています。証明の検算は6,398個の局所割当で済みますが、この数を探索全体の費用とは扱いません。[再現結果](results/correlation_resolution.json)には両方を保存しています。
+
+**一般化に関する判断：この成功だけから幅や次数を固定して一般SATを解く方針には進みません。** [先行研究との比較](docs/correlation_proof_boundary.md)では、同じ「各節が3変数、二つの節は高々1変数を共有する」クラス内でも、変数数に比例する多項式次数・解消幅が必要な無限族を、既知の下界定理から構成しました。これは存在証明であり、全SAT算法の下界ではありません。次の検査対象は、証明付きで学習した非線形制約を全体の整数推論へ渡す組合せです。その組合せに既存の下界を無条件に転用せず、規則・証明サイズ・探索費用を明示して比較します。**今回もP vs NPの解決候補は得られていません。**
+
+```bash
+python scripts/solve_correlations.py examples/phase16_correlations_unsat.json --method relations | python scripts/solve_correlations.py examples/phase16_correlations_unsat.json --check -
+python scripts/solve_correlations.py examples/phase16_correlations_unsat.json --method polynomial --max-degree 5 | python scripts/solve_correlations.py examples/phase16_correlations_unsat.json --check -
+python scripts/solve_correlations.py examples/phase16_correlations_unsat.json --method marginals
+```
+
+最後のコマンドは局所緩和の成立を確認しますが、元の式の判定は `UNKNOWN`（終了コード2）です。独立なSAT側対照も [同じ支持構造の例](examples/phase16_correlations_sat.json)として保存しました。[Leanの追加4定理](Formal/CorrelationProof.lean)は共有割当を保つ結合・射影の意味論を扱います。Python実装や上記の下界全体の形式検証ではありません。
+
 ## 第15段階：全体を組み合わせて法を発見する。その方針の限界まで確認する
 
 前回残した「局所には特別な法がないのに、全体で初めて整数の矛盾が生じる」対象を実装しました。[整数の判定器](docs/integer_hull.md)は、元のBoolean節の局所表から整数等式・合同式を導き、全体で合成して矛盾する法を発見します。素数の候補一覧や素因数分解は使いません。最終証明書は、元の節に対する局所含意と整数の重み付き和だけで独立に検算できます。整数の緩和に解があっても、Booleanの解を得たことにはならないため `UNKNOWN` です。
@@ -368,7 +393,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要66定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要70定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -396,13 +421,14 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 319件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例、整数格子の独立な小行列式オラクルと条件付き証明の改変検査を含みます。
+- 341件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例、整数格子の独立な小行列式オラクルと条件付き証明の改変検査を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。
 - 最大5変数のブロックへの還元を50入力・344個の元割当で照合し、262個の元モデルの持ち上げを検査。独立な節の族について、局所表が定数サイズでも現行の合成表が指数的に増えることを確認。
 - openai/mathの15ファイルのハッシュ・出典照合と、上流スケジュールの整数計算。これは上流の定理のカーネル検証とは別です。
 - 旧実験28ファイルのハッシュ確認と再実行。上流11ファイルはさらに上流manifestで照合します。
+- 第16段階の解消・結合射影・多項式証明の独立検算。SAT/UNSATの両入力で局所分布を全範囲検査し、証明改変・予算超過・大きな未使用変数番号も検査。
 - 新しい決定的なJSONと、コミット済み `results/*.json` の一致確認。
 - 旧結果5ファイルの数学的内容の一致確認。時刻・Python環境・計測時間だけは比較対象から除き、状態数・式・証人・判定結果を比較します。
 
@@ -420,6 +446,8 @@ CIはPythonとLeanを別jobで実行します。Pythonの成功だけを形式�
 | 場所 | 内容 |
 |---|---|
 | [`docs/solution_criteria.md`](docs/solution_criteria.md) | P=NP／P≠NPの厳密な証明条件 |
+| [`docs/correlation_proof_boundary.md`](docs/correlation_proof_boundary.md) | 非線形相関の4種類の閾値、先行研究、同じクラスの漸近下界、次の境界 |
+| [`scripts/solve_correlations.py`](scripts/solve_correlations.py) | 生の3CNFからの証明発見・独立検算・局所分布の診断 |
 | [`docs/reverse_engineering.md`](docs/reverse_engineering.md) | 現在の算法・一般SATへの還元・計算量の不足箇所 |
 | [`docs/research_notes.md`](docs/research_notes.md) | 第1段階の研究記録 |
 | [`docs/prior_work.md`](docs/prior_work.md) | ETHの最近の主張、CNF-XOR学習、証明ログの先行研究 |

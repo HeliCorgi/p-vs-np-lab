@@ -36,6 +36,8 @@ NEW_REPORTS = (
     "ternary_flow.json", "trit_solver.json", "mixed_modular.json", "modular_barrier.json",
     "prime_spectrum.json", "modular_padding.json", "four_flow.json", "local_torsion.json",
     "global_integer.json", "integer_probe.json",
+    "correlation_resolution.json", "correlation_relations.json",
+    "correlation_polynomial.json", "correlation_marginals.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -183,6 +185,9 @@ def main() -> None:
                             "prime_spectrum","modular_padding","four_flow","local_torsion")}
     phase15 = {name: read_json(out / (name + ".json"))
                for name in ("global_integer", "integer_probe")}
+    phase16 = {name: read_json(out / (name + ".json"))
+               for name in ("correlation_resolution", "correlation_relations",
+                            "correlation_polynomial", "correlation_marginals")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -192,7 +197,7 @@ def main() -> None:
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
             or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
-            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values()))):
+            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values()))):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -243,6 +248,8 @@ def main() -> None:
         "conservation_general_polynomial_solver": False,
         "global_integer_summaries": {name: r["summary"] for name,r in phase15.items()},
         "global_integer_general_polynomial_solver": False,
+        "nonlinear_correlation_summaries": {name: r["summary"] for name,r in phase16.items()},
+        "nonlinear_correlation_general_polynomial_solver": False,
         "derived_transport_summaries": {name: r["summary"] for name,r in phase13.items()},
         "derived_transport_general_polynomial_solver": False,
         "witness_transport_summaries": {name: r["summary"] for name,r in phase12.items()},

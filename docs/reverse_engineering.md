@@ -1,5 +1,42 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 16 decision: the nonlinear finite gate is passed; expose the hybrid boundary next
+
+The [previous 31-variable/152-clause blind core](correlation_proof_boundary.md)
+now has an independently checked refutation found from its raw clauses.
+Its minimum ordinary-resolution width is exactly four. Exact join/project
+reasoning needs union width five, polynomial calculus needs degree five
+over every field, and the explicitly defined local-distribution hierarchy
+first becomes infeasible at level five. The two latter executable checks
+are an F2 arithmetic proof and rational level-four distributions, respectively;
+the all-field and level-five implications are proved in the accompanying note.
+
+The first learned binary clause has a full integer affine lattice, so
+immediately replacing it by that lattice would discard the recovered
+information. Global learned relations and their complete derivations must
+be retained. The 368-node refutation also hides a larger discovery process:
+26,826 stored clauses, 180,420 candidate pairs, and over eight million
+superset containment checks. Both proof size and discovery are recorded.
+
+The [same-class asymptotic control](correlation_proof_boundary.md#4-a-scalable-control-in-the-same-proper-linear-3-cnf-class)
+constructs proper linear 3-CNF families with raw integer-blind small fragments
+and polynomial-calculus degree Omega(n) over every field, using a published
+boundary-expansion lower bound. It also forces linear resolution and
+exact-join width. Increasing fixed caps is therefore not a completeness
+argument for these systems. The construction is existential, not a practical
+large-instance generator or a lower bound against every SAT algorithm.
+
+**Next test and acceptance gate.** Specify and implement the feedback
+between proof-certified nonlinear consequences and the global integer
+backend. Seek an infinite family on which the combination has a proved
+advantage over either stage alone, and a precise accounting of discovery,
+local truth tables, integer coefficient bits, and all learned definitions.
+An integer-lemma inference is not an ordinary resolution step; do not
+silently transfer resolution or PC lower bounds to that enlarged system.
+Conversely, a finite success of the hybrid does not prove a polynomial
+bound on every 3SAT input. Require the family theorem and the proof-system
+comparison before spending more effort on larger undirected searches.
+
 ## Phase 15 decision: global integer obstructions work; arithmetic-only completeness does not
 
 The previous target is now implemented. The [integer backend](integer_hull.md) derives exact equations and congruences from raw Boolean tables, combines them without a supplied modulus, and emits a separately checked contradiction. [Carry loops](global_integer_fixtures.md) have torsion-free local tables but globally impose m*x=q; the raw tests recover 4, 5, 7, 8, 9, 25 and 49. The composite examples distinguish integer solvability from checking every prime field separately. They do **not** separate this backend from the previous Boolean field bridge, which already refutes its recorded carry-loop controls.

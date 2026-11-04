@@ -1,0 +1,7173 @@
+{
+  "all_checks_passed": true,
+  "bounded_static": [
+    {
+      "active_variables": 31,
+      "basis_rank": 152,
+      "certificate": null,
+      "columns_seen": 400,
+      "degree_limit": 3,
+      "eligible_events": 152,
+      "events": 152,
+      "events_above_degree": 0,
+      "impossible_events": 0,
+      "input": "unsat",
+      "max_rows": null,
+      "n": 31,
+      "reason": "constant_not_in_bounded_span",
+      "rows_generated": 152,
+      "status": "UNKNOWN"
+    },
+    {
+      "active_variables": 31,
+      "basis_rank": 4408,
+      "certificate": null,
+      "columns_seen": 8596,
+      "degree_limit": 4,
+      "eligible_events": 152,
+      "events": 152,
+      "events_above_degree": 0,
+      "impossible_events": 0,
+      "input": "unsat",
+      "max_rows": null,
+      "n": 31,
+      "reason": "constant_not_in_bounded_span",
+      "rows_generated": 4864,
+      "status": "UNKNOWN"
+    },
+    {
+      "active_variables": 31,
+      "basis_rank": 152,
+      "certificate": null,
+      "columns_seen": 640,
+      "degree_limit": 3,
+      "eligible_events": 152,
+      "events": 152,
+      "events_above_degree": 0,
+      "impossible_events": 0,
+      "input": "sat_same_support",
+      "max_rows": null,
+      "n": 31,
+      "reason": "constant_not_in_bounded_span",
+      "rows_generated": 152,
+      "status": "UNKNOWN"
+    },
+    {
+      "active_variables": 31,
+      "basis_rank": 4408,
+      "certificate": null,
+      "columns_seen": 9245,
+      "degree_limit": 4,
+      "eligible_events": 152,
+      "events": 152,
+      "events_above_degree": 0,
+      "impossible_events": 0,
+      "input": "sat_same_support",
+      "max_rows": null,
+      "n": 31,
+      "reason": "constant_not_in_bounded_span",
+      "rows_generated": 4864,
+      "status": "UNKNOWN"
+    }
+  ],
+  "clauses": 152,
+  "dynamic_degree_statement": {
+    "executable_checker_field": 2,
+    "fields": "all fields",
+    "lower": 5,
+    "lower_reason": "degree-four invariant for proper linear three-CNF",
+    "static_degree_five_decided": false,
+    "upper": 5,
+    "upper_reason": "checked width-four resolution DAG and the explicit new-factor translation"
+  },
+  "polynomial": {
+    "certificate": {
+      "degree": 5,
+      "field": 2,
+      "kind": "boolean-polynomial-calculus-v1",
+      "nodes": [
+        {
+          "clause": 0,
+          "op": "input"
+        },
+        {
+          "clause": 1,
+          "op": "input"
+        },
+        {
+          "clause": 3,
+          "op": "input"
+        },
+        {
+          "clause": 5,
+          "op": "input"
+        },
+        {
+          "clause": 6,
+          "op": "input"
+        },
+        {
+          "clause": 7,
+          "op": "input"
+        },
+        {
+          "clause": 8,
+          "op": "input"
+        },
+        {
+          "clause": 10,
+          "op": "input"
+        },
+        {
+          "clause": 11,
+          "op": "input"
+        },
+        {
+          "clause": 12,
+          "op": "input"
+        },
+        {
+          "clause": 13,
+          "op": "input"
+        },
+        {
+          "clause": 15,
+          "op": "input"
+        },
+        {
+          "clause": 16,
+          "op": "input"
+        },
+        {
+          "clause": 17,
+          "op": "input"
+        },
+        {
+          "clause": 18,
+          "op": "input"
+        },
+        {
+          "clause": 19,
+          "op": "input"
+        },
+        {
+          "clause": 20,
+          "op": "input"
+        },
+        {
+          "clause": 21,
+          "op": "input"
+        },
+        {
+          "clause": 22,
+          "op": "input"
+        },
+        {
+          "clause": 23,
+          "op": "input"
+        },
+        {
+          "clause": 25,
+          "op": "input"
+        },
+        {
+          "clause": 26,
+          "op": "input"
+        },
+        {
+          "clause": 27,
+          "op": "input"
+        },
+        {
+          "clause": 28,
+          "op": "input"
+        },
+        {
+          "clause": 29,
+          "op": "input"
+        },
+        {
+          "clause": 31,
+          "op": "input"
+        },
+        {
+          "clause": 32,
+          "op": "input"
+        },
+        {
+          "clause": 35,
+          "op": "input"
+        },
+        {
+          "clause": 36,
+          "op": "input"
+        },
+        {
+          "clause": 37,
+          "op": "input"
+        },
+        {
+          "clause": 38,
+          "op": "input"
+        },
+        {
+          "clause": 39,
+          "op": "input"
+        },
+        {
+          "clause": 40,
+          "op": "input"
+        },
+        {
+          "clause": 41,
+          "op": "input"
+        },
+        {
+          "clause": 42,
+          "op": "input"
+        },
+        {
+          "clause": 43,
+          "op": "input"
+        },
+        {
+          "clause": 46,
+          "op": "input"
+        },
+        {
+          "clause": 47,
+          "op": "input"
+        },
+        {
+          "clause": 48,
+          "op": "input"
+        },
+        {
+          "clause": 49,
+          "op": "input"
+        },
+        {
+          "clause": 50,
+          "op": "input"
+        },
+        {
+          "clause": 52,
+          "op": "input"
+        },
+        {
+          "clause": 53,
+          "op": "input"
+        },
+        {
+          "clause": 54,
+          "op": "input"
+        },
+        {
+          "clause": 55,
+          "op": "input"
+        },
+        {
+          "clause": 56,
+          "op": "input"
+        },
+        {
+          "clause": 57,
+          "op": "input"
+        },
+        {
+          "clause": 58,
+          "op": "input"
+        },
+        {
+          "clause": 59,
+          "op": "input"
+        },
+        {
+          "clause": 61,
+          "op": "input"
+        },
+        {
+          "clause": 62,
+          "op": "input"
+        },
+        {
+          "clause": 63,
+          "op": "input"
+        },
+        {
+          "clause": 64,
+          "op": "input"
+        },
+        {
+          "clause": 65,
+          "op": "input"
+        },
+        {
+          "clause": 66,
+          "op": "input"
+        },
+        {
+          "clause": 67,
+          "op": "input"
+        },
+        {
+          "clause": 69,
+          "op": "input"
+        },
+        {
+          "clause": 70,
+          "op": "input"
+        },
+        {
+          "clause": 71,
+          "op": "input"
+        },
+        {
+          "clause": 72,
+          "op": "input"
+        },
+        {
+          "clause": 74,
+          "op": "input"
+        },
+        {
+          "clause": 75,
+          "op": "input"
+        },
+        {
+          "clause": 76,
+          "op": "input"
+        },
+        {
+          "clause": 77,
+          "op": "input"
+        },
+        {
+          "clause": 79,
+          "op": "input"
+        },
+        {
+          "clause": 80,
+          "op": "input"
+        },
+        {
+          "clause": 81,
+          "op": "input"
+        },
+        {
+          "clause": 82,
+          "op": "input"
+        },
+        {
+          "clause": 83,
+          "op": "input"
+        },
+        {
+          "clause": 85,
+          "op": "input"
+        },
+        {
+          "clause": 86,
+          "op": "input"
+        },
+        {
+          "clause": 87,
+          "op": "input"
+        },
+        {
+          "clause": 89,
+          "op": "input"
+        },
+        {
+          "clause": 90,
+          "op": "input"
+        },
+        {
+          "clause": 92,
+          "op": "input"
+        },
+        {
+          "clause": 94,
+          "op": "input"
+        },
+        {
+          "clause": 95,
+          "op": "input"
+        },
+        {
+          "clause": 96,
+          "op": "input"
+        },
+        {
+          "clause": 97,
+          "op": "input"
+        },
+        {
+          "clause": 99,
+          "op": "input"
+        },
+        {
+          "clause": 100,
+          "op": "input"
+        },
+        {
+          "clause": 101,
+          "op": "input"
+        },
+        {
+          "clause": 102,
+          "op": "input"
+        },
+        {
+          "clause": 104,
+          "op": "input"
+        },
+        {
+          "clause": 105,
+          "op": "input"
+        },
+        {
+          "clause": 106,
+          "op": "input"
+        },
+        {
+          "clause": 109,
+          "op": "input"
+        },
+        {
+          "clause": 110,
+          "op": "input"
+        },
+        {
+          "clause": 112,
+          "op": "input"
+        },
+        {
+          "clause": 114,
+          "op": "input"
+        },
+        {
+          "clause": 115,
+          "op": "input"
+        },
+        {
+          "clause": 117,
+          "op": "input"
+        },
+        {
+          "clause": 118,
+          "op": "input"
+        },
+        {
+          "clause": 120,
+          "op": "input"
+        },
+        {
+          "clause": 122,
+          "op": "input"
+        },
+        {
+          "clause": 124,
+          "op": "input"
+        },
+        {
+          "clause": 125,
+          "op": "input"
+        },
+        {
+          "clause": 126,
+          "op": "input"
+        },
+        {
+          "clause": 128,
+          "op": "input"
+        },
+        {
+          "clause": 129,
+          "op": "input"
+        },
+        {
+          "clause": 130,
+          "op": "input"
+        },
+        {
+          "clause": 131,
+          "op": "input"
+        },
+        {
+          "clause": 136,
+          "op": "input"
+        },
+        {
+          "clause": 137,
+          "op": "input"
+        },
+        {
+          "clause": 138,
+          "op": "input"
+        },
+        {
+          "clause": 139,
+          "op": "input"
+        },
+        {
+          "clause": 140,
+          "op": "input"
+        },
+        {
+          "clause": 141,
+          "op": "input"
+        },
+        {
+          "clause": 144,
+          "op": "input"
+        },
+        {
+          "clause": 146,
+          "op": "input"
+        },
+        {
+          "clause": 147,
+          "op": "input"
+        },
+        {
+          "clause": 148,
+          "op": "input"
+        },
+        {
+          "clause": 149,
+          "op": "input"
+        },
+        {
+          "clause": 150,
+          "op": "input"
+        },
+        {
+          "clause": 151,
+          "op": "input"
+        },
+        {
+          "op": "multiply",
+          "parent": 0,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 115,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 100,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 117,
+          "variable": 28
+        },
+        {
+          "left": 117,
+          "op": "add",
+          "right": 118
+        },
+        {
+          "left": 116,
+          "op": "add",
+          "right": 119
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 121,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 28,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 123,
+          "variable": 21
+        },
+        {
+          "left": 123,
+          "op": "add",
+          "right": 124
+        },
+        {
+          "left": 122,
+          "op": "add",
+          "right": 125
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 127,
+          "variable": 7
+        },
+        {
+          "left": 127,
+          "op": "add",
+          "right": 128
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 16
+        },
+        {
+          "op": "multiply",
+          "parent": 130,
+          "variable": 21
+        },
+        {
+          "left": 130,
+          "op": "add",
+          "right": 131
+        },
+        {
+          "left": 129,
+          "op": "add",
+          "right": 132
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 2
+        },
+        {
+          "left": 2,
+          "op": "add",
+          "right": 134
+        },
+        {
+          "op": "multiply",
+          "parent": 135,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 25,
+          "variable": 23
+        },
+        {
+          "op": "multiply",
+          "parent": 137,
+          "variable": 24
+        },
+        {
+          "left": 137,
+          "op": "add",
+          "right": 138
+        },
+        {
+          "left": 136,
+          "op": "add",
+          "right": 139
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 11
+        },
+        {
+          "left": 2,
+          "op": "add",
+          "right": 141
+        },
+        {
+          "op": "multiply",
+          "parent": 142,
+          "variable": 19
+        },
+        {
+          "left": 142,
+          "op": "add",
+          "right": 143
+        },
+        {
+          "op": "multiply",
+          "parent": 31,
+          "variable": 15
+        },
+        {
+          "left": 31,
+          "op": "add",
+          "right": 145
+        },
+        {
+          "op": "multiply",
+          "parent": 146,
+          "variable": 23
+        },
+        {
+          "left": 144,
+          "op": "add",
+          "right": 147
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 149,
+          "variable": 28
+        },
+        {
+          "left": 149,
+          "op": "add",
+          "right": 150
+        },
+        {
+          "op": "multiply",
+          "parent": 86,
+          "variable": 15
+        },
+        {
+          "left": 86,
+          "op": "add",
+          "right": 152
+        },
+        {
+          "op": "multiply",
+          "parent": 153,
+          "variable": 23
+        },
+        {
+          "left": 151,
+          "op": "add",
+          "right": 154
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 156,
+          "variable": 30
+        },
+        {
+          "op": "multiply",
+          "parent": 17,
+          "variable": 13
+        },
+        {
+          "left": 17,
+          "op": "add",
+          "right": 158
+        },
+        {
+          "op": "multiply",
+          "parent": 159,
+          "variable": 23
+        },
+        {
+          "left": 159,
+          "op": "add",
+          "right": 160
+        },
+        {
+          "left": 157,
+          "op": "add",
+          "right": 161
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 6
+        },
+        {
+          "left": 3,
+          "op": "add",
+          "right": 163
+        },
+        {
+          "op": "multiply",
+          "parent": 164,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 94,
+          "variable": 23
+        },
+        {
+          "left": 94,
+          "op": "add",
+          "right": 166
+        },
+        {
+          "op": "multiply",
+          "parent": 167,
+          "variable": 26
+        },
+        {
+          "left": 165,
+          "op": "add",
+          "right": 168
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 7
+        },
+        {
+          "op": "multiply",
+          "parent": 170,
+          "variable": 26
+        },
+        {
+          "left": 170,
+          "op": "add",
+          "right": 171
+        },
+        {
+          "op": "multiply",
+          "parent": 61,
+          "variable": 4
+        },
+        {
+          "left": 61,
+          "op": "add",
+          "right": 173
+        },
+        {
+          "op": "multiply",
+          "parent": 174,
+          "variable": 25
+        },
+        {
+          "left": 174,
+          "op": "add",
+          "right": 175
+        },
+        {
+          "left": 172,
+          "op": "add",
+          "right": 176
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 15
+        },
+        {
+          "op": "multiply",
+          "parent": 178,
+          "variable": 22
+        },
+        {
+          "op": "multiply",
+          "parent": 87,
+          "variable": 4
+        },
+        {
+          "left": 87,
+          "op": "add",
+          "right": 180
+        },
+        {
+          "op": "multiply",
+          "parent": 181,
+          "variable": 29
+        },
+        {
+          "left": 179,
+          "op": "add",
+          "right": 182
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 9
+        },
+        {
+          "left": 5,
+          "op": "add",
+          "right": 184
+        },
+        {
+          "op": "multiply",
+          "parent": 185,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 33,
+          "variable": 1
+        },
+        {
+          "left": 33,
+          "op": "add",
+          "right": 187
+        },
+        {
+          "op": "multiply",
+          "parent": 188,
+          "variable": 27
+        },
+        {
+          "left": 188,
+          "op": "add",
+          "right": 189
+        },
+        {
+          "left": 186,
+          "op": "add",
+          "right": 190
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 15
+        },
+        {
+          "left": 5,
+          "op": "add",
+          "right": 192
+        },
+        {
+          "op": "multiply",
+          "parent": 193,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 70,
+          "variable": 1
+        },
+        {
+          "left": 70,
+          "op": "add",
+          "right": 195
+        },
+        {
+          "op": "multiply",
+          "parent": 196,
+          "variable": 27
+        },
+        {
+          "left": 196,
+          "op": "add",
+          "right": 197
+        },
+        {
+          "left": 194,
+          "op": "add",
+          "right": 198
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 200,
+          "variable": 29
+        },
+        {
+          "left": 200,
+          "op": "add",
+          "right": 201
+        },
+        {
+          "op": "multiply",
+          "parent": 58,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 203,
+          "variable": 18
+        },
+        {
+          "left": 202,
+          "op": "add",
+          "right": 204
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 7
+        },
+        {
+          "left": 6,
+          "op": "add",
+          "right": 206
+        },
+        {
+          "op": "multiply",
+          "parent": 207,
+          "variable": 21
+        },
+        {
+          "left": 207,
+          "op": "add",
+          "right": 208
+        },
+        {
+          "op": "multiply",
+          "parent": 133,
+          "variable": 18
+        },
+        {
+          "left": 209,
+          "op": "add",
+          "right": 210
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 212,
+          "variable": 20
+        },
+        {
+          "left": 212,
+          "op": "add",
+          "right": 213
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 12
+        },
+        {
+          "left": 14,
+          "op": "add",
+          "right": 215
+        },
+        {
+          "op": "multiply",
+          "parent": 216,
+          "variable": 30
+        },
+        {
+          "left": 214,
+          "op": "add",
+          "right": 217
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 17
+        },
+        {
+          "left": 7,
+          "op": "add",
+          "right": 219
+        },
+        {
+          "op": "multiply",
+          "parent": 220,
+          "variable": 29
+        },
+        {
+          "left": 220,
+          "op": "add",
+          "right": 221
+        },
+        {
+          "op": "multiply",
+          "parent": 112,
+          "variable": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 223,
+          "variable": 30
+        },
+        {
+          "left": 222,
+          "op": "add",
+          "right": 224
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 3
+        },
+        {
+          "left": 8,
+          "op": "add",
+          "right": 226
+        },
+        {
+          "op": "multiply",
+          "parent": 227,
+          "variable": 17
+        },
+        {
+          "op": "multiply",
+          "parent": 59,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 229,
+          "variable": 24
+        },
+        {
+          "left": 228,
+          "op": "add",
+          "right": 230
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 232,
+          "variable": 16
+        },
+        {
+          "left": 232,
+          "op": "add",
+          "right": 233
+        },
+        {
+          "op": "multiply",
+          "parent": 40,
+          "variable": 10
+        },
+        {
+          "left": 40,
+          "op": "add",
+          "right": 235
+        },
+        {
+          "op": "multiply",
+          "parent": 236,
+          "variable": 28
+        },
+        {
+          "left": 234,
+          "op": "add",
+          "right": 237
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 239,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 53,
+          "variable": 10
+        },
+        {
+          "left": 53,
+          "op": "add",
+          "right": 241
+        },
+        {
+          "op": "multiply",
+          "parent": 242,
+          "variable": 28
+        },
+        {
+          "left": 240,
+          "op": "add",
+          "right": 243
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 245,
+          "variable": 27
+        },
+        {
+          "op": "multiply",
+          "parent": 64,
+          "variable": 10
+        },
+        {
+          "left": 64,
+          "op": "add",
+          "right": 247
+        },
+        {
+          "op": "multiply",
+          "parent": 248,
+          "variable": 28
+        },
+        {
+          "left": 246,
+          "op": "add",
+          "right": 249
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 9
+        },
+        {
+          "op": "multiply",
+          "parent": 251,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 85,
+          "variable": 5
+        },
+        {
+          "left": 85,
+          "op": "add",
+          "right": 253
+        },
+        {
+          "op": "multiply",
+          "parent": 254,
+          "variable": 20
+        },
+        {
+          "left": 254,
+          "op": "add",
+          "right": 255
+        },
+        {
+          "left": 252,
+          "op": "add",
+          "right": 256
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 4
+        },
+        {
+          "left": 11,
+          "op": "add",
+          "right": 258
+        },
+        {
+          "op": "multiply",
+          "parent": 259,
+          "variable": 13
+        },
+        {
+          "left": 259,
+          "op": "add",
+          "right": 260
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 262,
+          "variable": 15
+        },
+        {
+          "left": 262,
+          "op": "add",
+          "right": 263
+        },
+        {
+          "left": 261,
+          "op": "add",
+          "right": 264
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 266,
+          "variable": 28
+        },
+        {
+          "left": 266,
+          "op": "add",
+          "right": 267
+        },
+        {
+          "op": "multiply",
+          "parent": 86,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 269,
+          "variable": 15
+        },
+        {
+          "left": 269,
+          "op": "add",
+          "right": 270
+        },
+        {
+          "left": 268,
+          "op": "add",
+          "right": 271
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 23
+        },
+        {
+          "left": 12,
+          "op": "add",
+          "right": 273
+        },
+        {
+          "op": "multiply",
+          "parent": 274,
+          "variable": 28
+        },
+        {
+          "left": 274,
+          "op": "add",
+          "right": 275
+        },
+        {
+          "op": "multiply",
+          "parent": 109,
+          "variable": 4
+        },
+        {
+          "left": 109,
+          "op": "add",
+          "right": 277
+        },
+        {
+          "op": "multiply",
+          "parent": 278,
+          "variable": 15
+        },
+        {
+          "left": 278,
+          "op": "add",
+          "right": 279
+        },
+        {
+          "left": 276,
+          "op": "add",
+          "right": 280
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 19
+        },
+        {
+          "left": 12,
+          "op": "add",
+          "right": 282
+        },
+        {
+          "op": "multiply",
+          "parent": 283,
+          "variable": 23
+        },
+        {
+          "op": "multiply",
+          "parent": 148,
+          "variable": 4
+        },
+        {
+          "left": 148,
+          "op": "add",
+          "right": 285
+        },
+        {
+          "left": 284,
+          "op": "add",
+          "right": 286
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 23
+        },
+        {
+          "left": 13,
+          "op": "add",
+          "right": 288
+        },
+        {
+          "op": "multiply",
+          "parent": 289,
+          "variable": 29
+        },
+        {
+          "left": 289,
+          "op": "add",
+          "right": 290
+        },
+        {
+          "op": "multiply",
+          "parent": 65,
+          "variable": 3
+        },
+        {
+          "left": 65,
+          "op": "add",
+          "right": 292
+        },
+        {
+          "op": "multiply",
+          "parent": 293,
+          "variable": 9
+        },
+        {
+          "left": 293,
+          "op": "add",
+          "right": 294
+        },
+        {
+          "left": 291,
+          "op": "add",
+          "right": 295
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 19
+        },
+        {
+          "left": 14,
+          "op": "add",
+          "right": 297
+        },
+        {
+          "op": "multiply",
+          "parent": 298,
+          "variable": 21
+        },
+        {
+          "left": 298,
+          "op": "add",
+          "right": 299
+        },
+        {
+          "op": "multiply",
+          "parent": 30,
+          "variable": 18
+        },
+        {
+          "left": 30,
+          "op": "add",
+          "right": 301
+        },
+        {
+          "op": "multiply",
+          "parent": 302,
+          "variable": 20
+        },
+        {
+          "left": 302,
+          "op": "add",
+          "right": 303
+        },
+        {
+          "left": 300,
+          "op": "add",
+          "right": 304
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 1
+        },
+        {
+          "left": 14,
+          "op": "add",
+          "right": 306
+        },
+        {
+          "op": "multiply",
+          "parent": 307,
+          "variable": 7
+        },
+        {
+          "left": 307,
+          "op": "add",
+          "right": 308
+        },
+        {
+          "op": "multiply",
+          "parent": 50,
+          "variable": 18
+        },
+        {
+          "left": 50,
+          "op": "add",
+          "right": 310
+        },
+        {
+          "op": "multiply",
+          "parent": 311,
+          "variable": 20
+        },
+        {
+          "left": 311,
+          "op": "add",
+          "right": 312
+        },
+        {
+          "left": 309,
+          "op": "add",
+          "right": 313
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 1
+        },
+        {
+          "left": 15,
+          "op": "add",
+          "right": 315
+        },
+        {
+          "op": "multiply",
+          "parent": 316,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 191,
+          "variable": 18
+        },
+        {
+          "left": 191,
+          "op": "add",
+          "right": 318
+        },
+        {
+          "left": 317,
+          "op": "add",
+          "right": 319
+        },
+        {
+          "op": "multiply",
+          "parent": 16,
+          "variable": 25
+        },
+        {
+          "left": 16,
+          "op": "add",
+          "right": 321
+        },
+        {
+          "op": "multiply",
+          "parent": 322,
+          "variable": 26
+        },
+        {
+          "left": 322,
+          "op": "add",
+          "right": 323
+        },
+        {
+          "op": "multiply",
+          "parent": 177,
+          "variable": 3
+        },
+        {
+          "left": 324,
+          "op": "add",
+          "right": 325
+        },
+        {
+          "op": "multiply",
+          "parent": 17,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 327,
+          "variable": 25
+        },
+        {
+          "left": 327,
+          "op": "add",
+          "right": 328
+        },
+        {
+          "op": "multiply",
+          "parent": 326,
+          "variable": 30
+        },
+        {
+          "left": 329,
+          "op": "add",
+          "right": 330
+        },
+        {
+          "op": "multiply",
+          "parent": 18,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 332,
+          "variable": 29
+        },
+        {
+          "left": 332,
+          "op": "add",
+          "right": 333
+        },
+        {
+          "op": "multiply",
+          "parent": 58,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 335,
+          "variable": 27
+        },
+        {
+          "left": 334,
+          "op": "add",
+          "right": 336
+        },
+        {
+          "op": "multiply",
+          "parent": 18,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 338,
+          "variable": 29
+        },
+        {
+          "left": 338,
+          "op": "add",
+          "right": 339
+        },
+        {
+          "op": "multiply",
+          "parent": 97,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 341,
+          "variable": 16
+        },
+        {
+          "left": 341,
+          "op": "add",
+          "right": 342
+        },
+        {
+          "left": 340,
+          "op": "add",
+          "right": 343
+        },
+        {
+          "op": "multiply",
+          "parent": 19,
+          "variable": 4
+        },
+        {
+          "left": 19,
+          "op": "add",
+          "right": 345
+        },
+        {
+          "op": "multiply",
+          "parent": 346,
+          "variable": 22
+        },
+        {
+          "op": "multiply",
+          "parent": 183,
+          "variable": 18
+        },
+        {
+          "left": 183,
+          "op": "add",
+          "right": 348
+        },
+        {
+          "left": 347,
+          "op": "add",
+          "right": 349
+        },
+        {
+          "op": "multiply",
+          "parent": 19,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 351,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 205,
+          "variable": 15
+        },
+        {
+          "left": 352,
+          "op": "add",
+          "right": 353
+        },
+        {
+          "op": "multiply",
+          "parent": 19,
+          "variable": 17
+        },
+        {
+          "left": 19,
+          "op": "add",
+          "right": 355
+        },
+        {
+          "op": "multiply",
+          "parent": 356,
+          "variable": 30
+        },
+        {
+          "op": "multiply",
+          "parent": 225,
+          "variable": 15
+        },
+        {
+          "left": 357,
+          "op": "add",
+          "right": 358
+        },
+        {
+          "op": "multiply",
+          "parent": 20,
+          "variable": 18
+        },
+        {
+          "left": 20,
+          "op": "add",
+          "right": 360
+        },
+        {
+          "op": "multiply",
+          "parent": 361,
+          "variable": 21
+        },
+        {
+          "left": 361,
+          "op": "add",
+          "right": 362
+        },
+        {
+          "op": "multiply",
+          "parent": 305,
+          "variable": 7
+        },
+        {
+          "left": 363,
+          "op": "add",
+          "right": 364
+        },
+        {
+          "op": "multiply",
+          "parent": 20,
+          "variable": 1
+        },
+        {
+          "left": 20,
+          "op": "add",
+          "right": 366
+        },
+        {
+          "op": "multiply",
+          "parent": 367,
+          "variable": 18
+        },
+        {
+          "left": 367,
+          "op": "add",
+          "right": 368
+        },
+        {
+          "op": "multiply",
+          "parent": 314,
+          "variable": 19
+        },
+        {
+          "left": 369,
+          "op": "add",
+          "right": 370
+        },
+        {
+          "op": "multiply",
+          "parent": 21,
+          "variable": 12
+        },
+        {
+          "left": 21,
+          "op": "add",
+          "right": 372
+        },
+        {
+          "op": "multiply",
+          "parent": 373,
+          "variable": 19
+        },
+        {
+          "left": 373,
+          "op": "add",
+          "right": 374
+        },
+        {
+          "op": "multiply",
+          "parent": 82,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 376,
+          "variable": 27
+        },
+        {
+          "left": 376,
+          "op": "add",
+          "right": 377
+        },
+        {
+          "left": 375,
+          "op": "add",
+          "right": 378
+        },
+        {
+          "op": "multiply",
+          "parent": 22,
+          "variable": 2
+        },
+        {
+          "left": 22,
+          "op": "add",
+          "right": 380
+        },
+        {
+          "op": "multiply",
+          "parent": 381,
+          "variable": 31
+        },
+        {
+          "left": 381,
+          "op": "add",
+          "right": 382
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 8
+        },
+        {
+          "left": 74,
+          "op": "add",
+          "right": 384
+        },
+        {
+          "op": "multiply",
+          "parent": 385,
+          "variable": 21
+        },
+        {
+          "left": 385,
+          "op": "add",
+          "right": 386
+        },
+        {
+          "left": 383,
+          "op": "add",
+          "right": 387
+        },
+        {
+          "op": "multiply",
+          "parent": 22,
+          "variable": 13
+        },
+        {
+          "left": 22,
+          "op": "add",
+          "right": 389
+        },
+        {
+          "op": "multiply",
+          "parent": 390,
+          "variable": 24
+        },
+        {
+          "left": 390,
+          "op": "add",
+          "right": 391
+        },
+        {
+          "op": "multiply",
+          "parent": 103,
+          "variable": 8
+        },
+        {
+          "left": 103,
+          "op": "add",
+          "right": 393
+        },
+        {
+          "op": "multiply",
+          "parent": 394,
+          "variable": 29
+        },
+        {
+          "left": 394,
+          "op": "add",
+          "right": 395
+        },
+        {
+          "left": 392,
+          "op": "add",
+          "right": 396
+        },
+        {
+          "op": "multiply",
+          "parent": 22,
+          "variable": 14
+        },
+        {
+          "op": "multiply",
+          "parent": 398,
+          "variable": 19
+        },
+        {
+          "left": 398,
+          "op": "add",
+          "right": 399
+        },
+        {
+          "op": "multiply",
+          "parent": 106,
+          "variable": 8
+        },
+        {
+          "left": 106,
+          "op": "add",
+          "right": 401
+        },
+        {
+          "op": "multiply",
+          "parent": 402,
+          "variable": 21
+        },
+        {
+          "left": 402,
+          "op": "add",
+          "right": 403
+        },
+        {
+          "left": 400,
+          "op": "add",
+          "right": 404
+        },
+        {
+          "op": "multiply",
+          "parent": 23,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 406,
+          "variable": 14
+        },
+        {
+          "op": "multiply",
+          "parent": 47,
+          "variable": 22
+        },
+        {
+          "left": 47,
+          "op": "add",
+          "right": 408
+        },
+        {
+          "op": "multiply",
+          "parent": 409,
+          "variable": 30
+        },
+        {
+          "left": 407,
+          "op": "add",
+          "right": 410
+        },
+        {
+          "op": "multiply",
+          "parent": 24,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 412,
+          "variable": 13
+        },
+        {
+          "left": 412,
+          "op": "add",
+          "right": 413
+        },
+        {
+          "op": "multiply",
+          "parent": 108,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 415,
+          "variable": 9
+        },
+        {
+          "left": 415,
+          "op": "add",
+          "right": 416
+        },
+        {
+          "left": 414,
+          "op": "add",
+          "right": 417
+        },
+        {
+          "op": "multiply",
+          "parent": 25,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 419,
+          "variable": 28
+        },
+        {
+          "left": 419,
+          "op": "add",
+          "right": 420
+        },
+        {
+          "op": "multiply",
+          "parent": 120,
+          "variable": 15
+        },
+        {
+          "left": 421,
+          "op": "add",
+          "right": 422
+        },
+        {
+          "op": "multiply",
+          "parent": 25,
+          "variable": 29
+        },
+        {
+          "left": 25,
+          "op": "add",
+          "right": 424
+        },
+        {
+          "left": 354,
+          "op": "add",
+          "right": 425
+        },
+        {
+          "op": "multiply",
+          "parent": 26,
+          "variable": 6
+        },
+        {
+          "left": 26,
+          "op": "add",
+          "right": 427
+        },
+        {
+          "op": "multiply",
+          "parent": 428,
+          "variable": 17
+        },
+        {
+          "left": 428,
+          "op": "add",
+          "right": 429
+        },
+        {
+          "op": "multiply",
+          "parent": 107,
+          "variable": 4
+        },
+        {
+          "left": 107,
+          "op": "add",
+          "right": 431
+        },
+        {
+          "op": "multiply",
+          "parent": 432,
+          "variable": 19
+        },
+        {
+          "left": 430,
+          "op": "add",
+          "right": 433
+        },
+        {
+          "op": "multiply",
+          "parent": 26,
+          "variable": 15
+        },
+        {
+          "left": 26,
+          "op": "add",
+          "right": 435
+        },
+        {
+          "op": "multiply",
+          "parent": 436,
+          "variable": 28
+        },
+        {
+          "left": 436,
+          "op": "add",
+          "right": 437
+        },
+        {
+          "op": "multiply",
+          "parent": 281,
+          "variable": 19
+        },
+        {
+          "left": 438,
+          "op": "add",
+          "right": 439
+        },
+        {
+          "left": 287,
+          "op": "add",
+          "right": 436
+        },
+        {
+          "op": "multiply",
+          "parent": 27,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 442,
+          "variable": 15
+        },
+        {
+          "op": "multiply",
+          "parent": 91,
+          "variable": 21
+        },
+        {
+          "left": 91,
+          "op": "add",
+          "right": 444
+        },
+        {
+          "op": "multiply",
+          "parent": 445,
+          "variable": 25
+        },
+        {
+          "left": 443,
+          "op": "add",
+          "right": 446
+        },
+        {
+          "op": "multiply",
+          "parent": 28,
+          "variable": 12
+        },
+        {
+          "left": 28,
+          "op": "add",
+          "right": 448
+        },
+        {
+          "op": "multiply",
+          "parent": 449,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 451,
+          "variable": 20
+        },
+        {
+          "left": 450,
+          "op": "add",
+          "right": 452
+        },
+        {
+          "op": "multiply",
+          "parent": 29,
+          "variable": 3
+        },
+        {
+          "left": 29,
+          "op": "add",
+          "right": 454
+        },
+        {
+          "op": "multiply",
+          "parent": 455,
+          "variable": 21
+        },
+        {
+          "left": 455,
+          "op": "add",
+          "right": 456
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 11
+        },
+        {
+          "left": 66,
+          "op": "add",
+          "right": 458
+        },
+        {
+          "op": "multiply",
+          "parent": 459,
+          "variable": 29
+        },
+        {
+          "left": 459,
+          "op": "add",
+          "right": 460
+        },
+        {
+          "left": 457,
+          "op": "add",
+          "right": 461
+        },
+        {
+          "op": "multiply",
+          "parent": 29,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 463,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 68,
+          "variable": 11
+        },
+        {
+          "left": 68,
+          "op": "add",
+          "right": 465
+        },
+        {
+          "op": "multiply",
+          "parent": 466,
+          "variable": 29
+        },
+        {
+          "left": 466,
+          "op": "add",
+          "right": 467
+        },
+        {
+          "left": 464,
+          "op": "add",
+          "right": 468
+        },
+        {
+          "op": "multiply",
+          "parent": 29,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 470,
+          "variable": 27
+        },
+        {
+          "op": "multiply",
+          "parent": 337,
+          "variable": 22
+        },
+        {
+          "left": 471,
+          "op": "add",
+          "right": 472
+        },
+        {
+          "op": "multiply",
+          "parent": 29,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 474,
+          "variable": 16
+        },
+        {
+          "left": 474,
+          "op": "add",
+          "right": 475
+        },
+        {
+          "op": "multiply",
+          "parent": 344,
+          "variable": 22
+        },
+        {
+          "left": 476,
+          "op": "add",
+          "right": 477
+        },
+        {
+          "op": "multiply",
+          "parent": 30,
+          "variable": 4
+        },
+        {
+          "left": 30,
+          "op": "add",
+          "right": 479
+        },
+        {
+          "op": "multiply",
+          "parent": 480,
+          "variable": 17
+        },
+        {
+          "left": 480,
+          "op": "add",
+          "right": 481
+        },
+        {
+          "op": "multiply",
+          "parent": 434,
+          "variable": 21
+        },
+        {
+          "left": 434,
+          "op": "add",
+          "right": 483
+        },
+        {
+          "left": 482,
+          "op": "add",
+          "right": 484
+        },
+        {
+          "op": "multiply",
+          "parent": 146,
+          "variable": 28
+        },
+        {
+          "left": 146,
+          "op": "add",
+          "right": 486
+        },
+        {
+          "op": "multiply",
+          "parent": 272,
+          "variable": 19
+        },
+        {
+          "left": 272,
+          "op": "add",
+          "right": 488
+        },
+        {
+          "left": 487,
+          "op": "add",
+          "right": 489
+        },
+        {
+          "op": "multiply",
+          "parent": 31,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 491,
+          "variable": 29
+        },
+        {
+          "left": 491,
+          "op": "add",
+          "right": 492
+        },
+        {
+          "op": "multiply",
+          "parent": 469,
+          "variable": 24
+        },
+        {
+          "left": 493,
+          "op": "add",
+          "right": 494
+        },
+        {
+          "op": "multiply",
+          "parent": 32,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 496,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 96,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 498,
+          "variable": 12
+        },
+        {
+          "left": 497,
+          "op": "add",
+          "right": 499
+        },
+        {
+          "op": "multiply",
+          "parent": 33,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 501,
+          "variable": 28
+        },
+        {
+          "left": 501,
+          "op": "add",
+          "right": 502
+        },
+        {
+          "op": "multiply",
+          "parent": 63,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 504,
+          "variable": 26
+        },
+        {
+          "left": 504,
+          "op": "add",
+          "right": 505
+        },
+        {
+          "left": 503,
+          "op": "add",
+          "right": 506
+        },
+        {
+          "op": "multiply",
+          "parent": 34,
+          "variable": 12
+        },
+        {
+          "left": 34,
+          "op": "add",
+          "right": 508
+        },
+        {
+          "op": "multiply",
+          "parent": 509,
+          "variable": 20
+        },
+        {
+          "left": 509,
+          "op": "add",
+          "right": 510
+        },
+        {
+          "op": "multiply",
+          "parent": 218,
+          "variable": 24
+        },
+        {
+          "left": 511,
+          "op": "add",
+          "right": 512
+        },
+        {
+          "op": "multiply",
+          "parent": 34,
+          "variable": 14
+        },
+        {
+          "op": "multiply",
+          "parent": 514,
+          "variable": 22
+        },
+        {
+          "left": 514,
+          "op": "add",
+          "right": 515
+        },
+        {
+          "op": "multiply",
+          "parent": 411,
+          "variable": 24
+        },
+        {
+          "left": 516,
+          "op": "add",
+          "right": 517
+        },
+        {
+          "op": "multiply",
+          "parent": 35,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 519,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 244,
+          "variable": 8
+        },
+        {
+          "left": 520,
+          "op": "add",
+          "right": 521
+        },
+        {
+          "op": "multiply",
+          "parent": 35,
+          "variable": 21
+        },
+        {
+          "left": 35,
+          "op": "add",
+          "right": 523
+        },
+        {
+          "op": "multiply",
+          "parent": 524,
+          "variable": 31
+        },
+        {
+          "left": 524,
+          "op": "add",
+          "right": 525
+        },
+        {
+          "op": "multiply",
+          "parent": 388,
+          "variable": 10
+        },
+        {
+          "left": 388,
+          "op": "add",
+          "right": 527
+        },
+        {
+          "left": 526,
+          "op": "add",
+          "right": 528
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 13
+        },
+        {
+          "left": 423,
+          "op": "add",
+          "right": 530
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 24
+        },
+        {
+          "left": 490,
+          "op": "add",
+          "right": 532
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 534,
+          "variable": 26
+        },
+        {
+          "left": 534,
+          "op": "add",
+          "right": 535
+        },
+        {
+          "op": "multiply",
+          "parent": 507,
+          "variable": 15
+        },
+        {
+          "left": 536,
+          "op": "add",
+          "right": 537
+        },
+        {
+          "op": "multiply",
+          "parent": 37,
+          "variable": 19
+        },
+        {
+          "left": 37,
+          "op": "add",
+          "right": 539
+        },
+        {
+          "op": "multiply",
+          "parent": 540,
+          "variable": 29
+        },
+        {
+          "op": "multiply",
+          "parent": 106,
+          "variable": 21
+        },
+        {
+          "left": 106,
+          "op": "add",
+          "right": 542
+        },
+        {
+          "op": "multiply",
+          "parent": 543,
+          "variable": 27
+        },
+        {
+          "left": 543,
+          "op": "add",
+          "right": 544
+        },
+        {
+          "left": 541,
+          "op": "add",
+          "right": 545
+        },
+        {
+          "op": "multiply",
+          "parent": 37,
+          "variable": 8
+        },
+        {
+          "left": 37,
+          "op": "add",
+          "right": 547
+        },
+        {
+          "op": "multiply",
+          "parent": 548,
+          "variable": 19
+        },
+        {
+          "left": 548,
+          "op": "add",
+          "right": 549
+        },
+        {
+          "op": "multiply",
+          "parent": 405,
+          "variable": 27
+        },
+        {
+          "left": 405,
+          "op": "add",
+          "right": 551
+        },
+        {
+          "left": 550,
+          "op": "add",
+          "right": 552
+        },
+        {
+          "op": "multiply",
+          "parent": 38,
+          "variable": 23
+        },
+        {
+          "left": 38,
+          "op": "add",
+          "right": 554
+        },
+        {
+          "op": "multiply",
+          "parent": 555,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 89,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 557,
+          "variable": 13
+        },
+        {
+          "left": 556,
+          "op": "add",
+          "right": 558
+        },
+        {
+          "op": "multiply",
+          "parent": 38,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 560,
+          "variable": 23
+        },
+        {
+          "left": 560,
+          "op": "add",
+          "right": 561
+        },
+        {
+          "op": "multiply",
+          "parent": 102,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 563,
+          "variable": 14
+        },
+        {
+          "left": 562,
+          "op": "add",
+          "right": 564
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 17
+        },
+        {
+          "left": 39,
+          "op": "add",
+          "right": 566
+        },
+        {
+          "op": "multiply",
+          "parent": 567,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 85,
+          "variable": 4
+        },
+        {
+          "left": 85,
+          "op": "add",
+          "right": 569
+        },
+        {
+          "op": "multiply",
+          "parent": 570,
+          "variable": 13
+        },
+        {
+          "left": 570,
+          "op": "add",
+          "right": 571
+        },
+        {
+          "left": 568,
+          "op": "add",
+          "right": 572
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 23
+        },
+        {
+          "left": 39,
+          "op": "add",
+          "right": 574
+        },
+        {
+          "op": "multiply",
+          "parent": 575,
+          "variable": 30
+        },
+        {
+          "op": "multiply",
+          "parent": 162,
+          "variable": 9
+        },
+        {
+          "left": 162,
+          "op": "add",
+          "right": 577
+        },
+        {
+          "left": 576,
+          "op": "add",
+          "right": 578
+        },
+        {
+          "op": "multiply",
+          "parent": 40,
+          "variable": 29
+        },
+        {
+          "left": 40,
+          "op": "add",
+          "right": 580
+        },
+        {
+          "left": 478,
+          "op": "add",
+          "right": 581
+        },
+        {
+          "op": "multiply",
+          "parent": 41,
+          "variable": 15
+        },
+        {
+          "left": 41,
+          "op": "add",
+          "right": 583
+        },
+        {
+          "op": "multiply",
+          "parent": 584,
+          "variable": 27
+        },
+        {
+          "left": 584,
+          "op": "add",
+          "right": 585
+        },
+        {
+          "op": "multiply",
+          "parent": 199,
+          "variable": 20
+        },
+        {
+          "left": 586,
+          "op": "add",
+          "right": 587
+        },
+        {
+          "op": "multiply",
+          "parent": 42,
+          "variable": 11
+        },
+        {
+          "left": 42,
+          "op": "add",
+          "right": 589
+        },
+        {
+          "op": "multiply",
+          "parent": 590,
+          "variable": 23
+        },
+        {
+          "left": 590,
+          "op": "add",
+          "right": 591
+        },
+        {
+          "op": "multiply",
+          "parent": 109,
+          "variable": 8
+        },
+        {
+          "left": 109,
+          "op": "add",
+          "right": 593
+        },
+        {
+          "op": "multiply",
+          "parent": 594,
+          "variable": 20
+        },
+        {
+          "left": 592,
+          "op": "add",
+          "right": 595
+        },
+        {
+          "op": "multiply",
+          "parent": 42,
+          "variable": 10
+        },
+        {
+          "left": 42,
+          "op": "add",
+          "right": 597
+        },
+        {
+          "left": 522,
+          "op": "add",
+          "right": 598
+        },
+        {
+          "op": "multiply",
+          "parent": 43,
+          "variable": 6
+        },
+        {
+          "left": 43,
+          "op": "add",
+          "right": 600
+        },
+        {
+          "left": 485,
+          "op": "add",
+          "right": 601
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 19
+        },
+        {
+          "left": 44,
+          "op": "add",
+          "right": 603
+        },
+        {
+          "op": "multiply",
+          "parent": 604,
+          "variable": 27
+        },
+        {
+          "left": 604,
+          "op": "add",
+          "right": 605
+        },
+        {
+          "op": "multiply",
+          "parent": 379,
+          "variable": 8
+        },
+        {
+          "left": 379,
+          "op": "add",
+          "right": 607
+        },
+        {
+          "left": 606,
+          "op": "add",
+          "right": 608
+        },
+        {
+          "op": "multiply",
+          "parent": 45,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 610,
+          "variable": 9
+        },
+        {
+          "left": 610,
+          "op": "add",
+          "right": 611
+        },
+        {
+          "op": "multiply",
+          "parent": 418,
+          "variable": 12
+        },
+        {
+          "left": 612,
+          "op": "add",
+          "right": 613
+        },
+        {
+          "op": "multiply",
+          "parent": 45,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 615,
+          "variable": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 500,
+          "variable": 1
+        },
+        {
+          "left": 500,
+          "op": "add",
+          "right": 617
+        },
+        {
+          "left": 616,
+          "op": "add",
+          "right": 618
+        },
+        {
+          "op": "multiply",
+          "parent": 46,
+          "variable": 12
+        },
+        {
+          "left": 619,
+          "op": "add",
+          "right": 620
+        },
+        {
+          "op": "multiply",
+          "parent": 49,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 622,
+          "variable": 17
+        },
+        {
+          "op": "multiply",
+          "parent": 231,
+          "variable": 27
+        },
+        {
+          "left": 231,
+          "op": "add",
+          "right": 624
+        },
+        {
+          "left": 623,
+          "op": "add",
+          "right": 625
+        },
+        {
+          "op": "multiply",
+          "parent": 51,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 627,
+          "variable": 31
+        },
+        {
+          "op": "multiply",
+          "parent": 78,
+          "variable": 13
+        },
+        {
+          "left": 78,
+          "op": "add",
+          "right": 629
+        },
+        {
+          "op": "multiply",
+          "parent": 630,
+          "variable": 17
+        },
+        {
+          "left": 628,
+          "op": "add",
+          "right": 631
+        },
+        {
+          "op": "multiply",
+          "parent": 51,
+          "variable": 4
+        },
+        {
+          "left": 51,
+          "op": "add",
+          "right": 633
+        },
+        {
+          "op": "multiply",
+          "parent": 634,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 573,
+          "variable": 28
+        },
+        {
+          "left": 573,
+          "op": "add",
+          "right": 636
+        },
+        {
+          "left": 635,
+          "op": "add",
+          "right": 637
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 21
+        },
+        {
+          "left": 52,
+          "op": "add",
+          "right": 639
+        },
+        {
+          "left": 553,
+          "op": "add",
+          "right": 640
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 12
+        },
+        {
+          "left": 52,
+          "op": "add",
+          "right": 642
+        },
+        {
+          "left": 609,
+          "op": "add",
+          "right": 643
+        },
+        {
+          "op": "multiply",
+          "parent": 54,
+          "variable": 14
+        },
+        {
+          "op": "multiply",
+          "parent": 645,
+          "variable": 23
+        },
+        {
+          "left": 645,
+          "op": "add",
+          "right": 646
+        },
+        {
+          "op": "multiply",
+          "parent": 565,
+          "variable": 25
+        },
+        {
+          "left": 647,
+          "op": "add",
+          "right": 648
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 30
+        },
+        {
+          "left": 518,
+          "op": "add",
+          "right": 650
+        },
+        {
+          "op": "multiply",
+          "parent": 56,
+          "variable": 15
+        },
+        {
+          "left": 350,
+          "op": "add",
+          "right": 652
+        },
+        {
+          "op": "multiply",
+          "parent": 57,
+          "variable": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 654,
+          "variable": 21
+        },
+        {
+          "left": 654,
+          "op": "add",
+          "right": 655
+        },
+        {
+          "op": "multiply",
+          "parent": 84,
+          "variable": 24
+        },
+        {
+          "left": 84,
+          "op": "add",
+          "right": 657
+        },
+        {
+          "op": "multiply",
+          "parent": 658,
+          "variable": 31
+        },
+        {
+          "left": 656,
+          "op": "add",
+          "right": 659
+        },
+        {
+          "op": "multiply",
+          "parent": 58,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 582,
+          "variable": 13
+        },
+        {
+          "left": 661,
+          "op": "add",
+          "right": 662
+        },
+        {
+          "op": "multiply",
+          "parent": 59,
+          "variable": 13
+        },
+        {
+          "left": 59,
+          "op": "add",
+          "right": 664
+        },
+        {
+          "op": "multiply",
+          "parent": 665,
+          "variable": 31
+        },
+        {
+          "op": "multiply",
+          "parent": 632,
+          "variable": 18
+        },
+        {
+          "left": 632,
+          "op": "add",
+          "right": 667
+        },
+        {
+          "left": 666,
+          "op": "add",
+          "right": 668
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 670,
+          "variable": 10
+        },
+        {
+          "left": 670,
+          "op": "add",
+          "right": 671
+        },
+        {
+          "op": "multiply",
+          "parent": 238,
+          "variable": 12
+        },
+        {
+          "left": 238,
+          "op": "add",
+          "right": 673
+        },
+        {
+          "left": 672,
+          "op": "add",
+          "right": 674
+        },
+        {
+          "op": "multiply",
+          "parent": 62,
+          "variable": 3
+        },
+        {
+          "left": 62,
+          "op": "add",
+          "right": 676
+        },
+        {
+          "op": "multiply",
+          "parent": 677,
+          "variable": 29
+        },
+        {
+          "left": 677,
+          "op": "add",
+          "right": 678
+        },
+        {
+          "op": "multiply",
+          "parent": 296,
+          "variable": 30
+        },
+        {
+          "left": 679,
+          "op": "add",
+          "right": 680
+        },
+        {
+          "op": "multiply",
+          "parent": 62,
+          "variable": 13
+        },
+        {
+          "left": 62,
+          "op": "add",
+          "right": 682
+        },
+        {
+          "left": 579,
+          "op": "add",
+          "right": 683
+        },
+        {
+          "op": "multiply",
+          "parent": 64,
+          "variable": 29
+        },
+        {
+          "left": 64,
+          "op": "add",
+          "right": 685
+        },
+        {
+          "left": 473,
+          "op": "add",
+          "right": 686
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 15
+        },
+        {
+          "op": "multiply",
+          "parent": 688,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 447,
+          "variable": 22
+        },
+        {
+          "left": 447,
+          "op": "add",
+          "right": 690
+        },
+        {
+          "left": 689,
+          "op": "add",
+          "right": 691
+        },
+        {
+          "op": "multiply",
+          "parent": 67,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 693,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 88,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 695,
+          "variable": 29
+        },
+        {
+          "left": 695,
+          "op": "add",
+          "right": 696
+        },
+        {
+          "left": 694,
+          "op": "add",
+          "right": 697
+        },
+        {
+          "op": "multiply",
+          "parent": 69,
+          "variable": 30
+        },
+        {
+          "left": 331,
+          "op": "add",
+          "right": 699
+        },
+        {
+          "op": "multiply",
+          "parent": 70,
+          "variable": 28
+        },
+        {
+          "left": 70,
+          "op": "add",
+          "right": 701
+        },
+        {
+          "left": 538,
+          "op": "add",
+          "right": 702
+        },
+        {
+          "op": "multiply",
+          "parent": 71,
+          "variable": 2
+        },
+        {
+          "left": 71,
+          "op": "add",
+          "right": 704
+        },
+        {
+          "left": 529,
+          "op": "add",
+          "right": 705
+        },
+        {
+          "op": "multiply",
+          "parent": 72,
+          "variable": 28
+        },
+        {
+          "left": 675,
+          "op": "add",
+          "right": 707
+        },
+        {
+          "op": "multiply",
+          "parent": 73,
+          "variable": 17
+        },
+        {
+          "left": 669,
+          "op": "add",
+          "right": 709
+        },
+        {
+          "op": "multiply",
+          "parent": 75,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 651,
+          "variable": 16
+        },
+        {
+          "left": 711,
+          "op": "add",
+          "right": 712
+        },
+        {
+          "op": "multiply",
+          "parent": 76,
+          "variable": 27
+        },
+        {
+          "left": 76,
+          "op": "add",
+          "right": 714
+        },
+        {
+          "left": 320,
+          "op": "add",
+          "right": 715
+        },
+        {
+          "op": "multiply",
+          "parent": 76,
+          "variable": 20
+        },
+        {
+          "left": 76,
+          "op": "add",
+          "right": 717
+        },
+        {
+          "left": 371,
+          "op": "add",
+          "right": 718
+        },
+        {
+          "op": "multiply",
+          "parent": 77,
+          "variable": 24
+        },
+        {
+          "left": 626,
+          "op": "add",
+          "right": 720
+        },
+        {
+          "op": "multiply",
+          "parent": 79,
+          "variable": 21
+        },
+        {
+          "left": 79,
+          "op": "add",
+          "right": 722
+        },
+        {
+          "op": "multiply",
+          "parent": 723,
+          "variable": 29
+        },
+        {
+          "left": 723,
+          "op": "add",
+          "right": 724
+        },
+        {
+          "op": "multiply",
+          "parent": 462,
+          "variable": 8
+        },
+        {
+          "left": 725,
+          "op": "add",
+          "right": 726
+        },
+        {
+          "op": "multiply",
+          "parent": 79,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 728,
+          "variable": 23
+        },
+        {
+          "left": 728,
+          "op": "add",
+          "right": 729
+        },
+        {
+          "op": "multiply",
+          "parent": 596,
+          "variable": 3
+        },
+        {
+          "left": 730,
+          "op": "add",
+          "right": 731
+        },
+        {
+          "op": "multiply",
+          "parent": 80,
+          "variable": 23
+        },
+        {
+          "left": 80,
+          "op": "add",
+          "right": 733
+        },
+        {
+          "left": 681,
+          "op": "add",
+          "right": 734
+        },
+        {
+          "op": "multiply",
+          "parent": 80,
+          "variable": 25
+        },
+        {
+          "left": 80,
+          "op": "add",
+          "right": 736
+        },
+        {
+          "op": "multiply",
+          "parent": 700,
+          "variable": 29
+        },
+        {
+          "left": 737,
+          "op": "add",
+          "right": 738
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 9
+        },
+        {
+          "op": "multiply",
+          "parent": 740,
+          "variable": 20
+        },
+        {
+          "left": 740,
+          "op": "add",
+          "right": 741
+        },
+        {
+          "op": "multiply",
+          "parent": 257,
+          "variable": 29
+        },
+        {
+          "left": 742,
+          "op": "add",
+          "right": 743
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 11
+        },
+        {
+          "left": 81,
+          "op": "add",
+          "right": 745
+        },
+        {
+          "left": 495,
+          "op": "add",
+          "right": 746
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 748,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 663,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 750,
+          "variable": 24
+        },
+        {
+          "left": 749,
+          "op": "add",
+          "right": 751
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 753,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 698,
+          "variable": 5
+        },
+        {
+          "left": 754,
+          "op": "add",
+          "right": 755
+        },
+        {
+          "op": "multiply",
+          "parent": 83,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 757,
+          "variable": 30
+        },
+        {
+          "left": 757,
+          "op": "add",
+          "right": 758
+        },
+        {
+          "op": "multiply",
+          "parent": 98,
+          "variable": 12
+        },
+        {
+          "left": 98,
+          "op": "add",
+          "right": 760
+        },
+        {
+          "op": "multiply",
+          "parent": 761,
+          "variable": 24
+        },
+        {
+          "left": 759,
+          "op": "add",
+          "right": 762
+        },
+        {
+          "op": "multiply",
+          "parent": 83,
+          "variable": 30
+        },
+        {
+          "left": 513,
+          "op": "add",
+          "right": 764
+        },
+        {
+          "op": "multiply",
+          "parent": 84,
+          "variable": 2
+        },
+        {
+          "left": 211,
+          "op": "add",
+          "right": 766
+        },
+        {
+          "op": "multiply",
+          "parent": 84,
+          "variable": 20
+        },
+        {
+          "left": 84,
+          "op": "add",
+          "right": 768
+        },
+        {
+          "left": 365,
+          "op": "add",
+          "right": 769
+        },
+        {
+          "op": "multiply",
+          "parent": 85,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 721,
+          "variable": 9
+        },
+        {
+          "left": 771,
+          "op": "add",
+          "right": 772
+        },
+        {
+          "op": "multiply",
+          "parent": 153,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 440,
+          "variable": 24
+        },
+        {
+          "left": 774,
+          "op": "add",
+          "right": 775
+        },
+        {
+          "op": "multiply",
+          "parent": 86,
+          "variable": 13
+        },
+        {
+          "left": 86,
+          "op": "add",
+          "right": 777
+        },
+        {
+          "left": 638,
+          "op": "add",
+          "right": 778
+        },
+        {
+          "op": "multiply",
+          "parent": 87,
+          "variable": 21
+        },
+        {
+          "left": 87,
+          "op": "add",
+          "right": 780
+        },
+        {
+          "left": 692,
+          "op": "add",
+          "right": 781
+        },
+        {
+          "op": "multiply",
+          "parent": 89,
+          "variable": 20
+        },
+        {
+          "left": 649,
+          "op": "add",
+          "right": 783
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 29
+        },
+        {
+          "left": 90,
+          "op": "add",
+          "right": 785
+        },
+        {
+          "left": 359,
+          "op": "add",
+          "right": 786
+        },
+        {
+          "op": "multiply",
+          "parent": 92,
+          "variable": 21
+        },
+        {
+          "left": 588,
+          "op": "add",
+          "right": 788
+        },
+        {
+          "op": "multiply",
+          "parent": 93,
+          "variable": 13
+        },
+        {
+          "left": 93,
+          "op": "add",
+          "right": 790
+        },
+        {
+          "left": 614,
+          "op": "add",
+          "right": 791
+        },
+        {
+          "op": "multiply",
+          "parent": 94,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 793,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 752,
+          "variable": 11
+        },
+        {
+          "left": 794,
+          "op": "add",
+          "right": 795
+        },
+        {
+          "op": "multiply",
+          "parent": 95,
+          "variable": 6
+        },
+        {
+          "left": 95,
+          "op": "add",
+          "right": 797
+        },
+        {
+          "op": "multiply",
+          "parent": 798,
+          "variable": 23
+        },
+        {
+          "left": 798,
+          "op": "add",
+          "right": 799
+        },
+        {
+          "op": "multiply",
+          "parent": 169,
+          "variable": 17
+        },
+        {
+          "left": 800,
+          "op": "add",
+          "right": 801
+        },
+        {
+          "op": "multiply",
+          "parent": 96,
+          "variable": 12
+        },
+        {
+          "left": 96,
+          "op": "add",
+          "right": 803
+        },
+        {
+          "op": "multiply",
+          "parent": 804,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 708,
+          "variable": 7
+        },
+        {
+          "op": "multiply",
+          "parent": 806,
+          "variable": 13
+        },
+        {
+          "left": 805,
+          "op": "add",
+          "right": 807
+        },
+        {
+          "op": "multiply",
+          "parent": 99,
+          "variable": 12
+        },
+        {
+          "left": 99,
+          "op": "add",
+          "right": 809
+        },
+        {
+          "op": "multiply",
+          "parent": 810,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 808,
+          "variable": 27
+        },
+        {
+          "left": 808,
+          "op": "add",
+          "right": 812
+        },
+        {
+          "left": 811,
+          "op": "add",
+          "right": 813
+        },
+        {
+          "op": "multiply",
+          "parent": 101,
+          "variable": 23
+        },
+        {
+          "left": 101,
+          "op": "add",
+          "right": 815
+        },
+        {
+          "op": "multiply",
+          "parent": 816,
+          "variable": 28
+        },
+        {
+          "left": 816,
+          "op": "add",
+          "right": 817
+        },
+        {
+          "op": "multiply",
+          "parent": 109,
+          "variable": 21
+        },
+        {
+          "left": 109,
+          "op": "add",
+          "right": 819
+        },
+        {
+          "op": "multiply",
+          "parent": 820,
+          "variable": 30
+        },
+        {
+          "left": 820,
+          "op": "add",
+          "right": 821
+        },
+        {
+          "left": 818,
+          "op": "add",
+          "right": 822
+        },
+        {
+          "op": "multiply",
+          "parent": 101,
+          "variable": 8
+        },
+        {
+          "op": "multiply",
+          "parent": 824,
+          "variable": 29
+        },
+        {
+          "left": 824,
+          "op": "add",
+          "right": 825
+        },
+        {
+          "op": "multiply",
+          "parent": 727,
+          "variable": 30
+        },
+        {
+          "left": 727,
+          "op": "add",
+          "right": 827
+        },
+        {
+          "left": 826,
+          "op": "add",
+          "right": 828
+        },
+        {
+          "op": "multiply",
+          "parent": 102,
+          "variable": 11
+        },
+        {
+          "left": 102,
+          "op": "add",
+          "right": 830
+        },
+        {
+          "left": 732,
+          "op": "add",
+          "right": 831
+        },
+        {
+          "op": "multiply",
+          "parent": 103,
+          "variable": 2
+        },
+        {
+          "left": 103,
+          "op": "add",
+          "right": 833
+        },
+        {
+          "op": "multiply",
+          "parent": 834,
+          "variable": 23
+        },
+        {
+          "op": "multiply",
+          "parent": 140,
+          "variable": 21
+        },
+        {
+          "left": 835,
+          "op": "add",
+          "right": 836
+        },
+        {
+          "op": "multiply",
+          "parent": 104,
+          "variable": 24
+        },
+        {
+          "left": 756,
+          "op": "add",
+          "right": 838
+        },
+        {
+          "op": "multiply",
+          "parent": 105,
+          "variable": 24
+        },
+        {
+          "left": 105,
+          "op": "add",
+          "right": 840
+        },
+        {
+          "left": 837,
+          "op": "add",
+          "right": 841
+        },
+        {
+          "op": "multiply",
+          "parent": 107,
+          "variable": 26
+        },
+        {
+          "left": 802,
+          "op": "add",
+          "right": 843
+        },
+        {
+          "op": "multiply",
+          "parent": 110,
+          "variable": 23
+        },
+        {
+          "left": 110,
+          "op": "add",
+          "right": 845
+        },
+        {
+          "op": "multiply",
+          "parent": 844,
+          "variable": 28
+        },
+        {
+          "left": 844,
+          "op": "add",
+          "right": 847
+        },
+        {
+          "left": 846,
+          "op": "add",
+          "right": 848
+        },
+        {
+          "op": "multiply",
+          "parent": 111,
+          "variable": 24
+        },
+        {
+          "left": 744,
+          "op": "add",
+          "right": 850
+        },
+        {
+          "op": "multiply",
+          "parent": 113,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 852,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 814,
+          "variable": 23
+        },
+        {
+          "left": 814,
+          "op": "add",
+          "right": 854
+        },
+        {
+          "left": 853,
+          "op": "add",
+          "right": 855
+        },
+        {
+          "op": "multiply",
+          "parent": 113,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 857,
+          "variable": 24
+        },
+        {
+          "left": 857,
+          "op": "add",
+          "right": 858
+        },
+        {
+          "op": "multiply",
+          "parent": 842,
+          "variable": 12
+        },
+        {
+          "op": "multiply",
+          "parent": 860,
+          "variable": 27
+        },
+        {
+          "left": 860,
+          "op": "add",
+          "right": 861
+        },
+        {
+          "left": 859,
+          "op": "add",
+          "right": 862
+        },
+        {
+          "op": "multiply",
+          "parent": 426,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 864,
+          "variable": 27
+        },
+        {
+          "left": 864,
+          "op": "add",
+          "right": 865
+        },
+        {
+          "op": "multiply",
+          "parent": 789,
+          "variable": 13
+        },
+        {
+          "op": "multiply",
+          "parent": 867,
+          "variable": 29
+        },
+        {
+          "left": 867,
+          "op": "add",
+          "right": 868
+        },
+        {
+          "left": 866,
+          "op": "add",
+          "right": 869
+        },
+        {
+          "op": "multiply",
+          "parent": 441,
+          "variable": 28
+        },
+        {
+          "left": 441,
+          "op": "add",
+          "right": 871
+        },
+        {
+          "left": 155,
+          "op": "add",
+          "right": 872
+        },
+        {
+          "op": "multiply",
+          "parent": 531,
+          "variable": 19
+        },
+        {
+          "op": "multiply",
+          "parent": 874,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 776,
+          "variable": 13
+        },
+        {
+          "left": 875,
+          "op": "add",
+          "right": 876
+        },
+        {
+          "op": "multiply",
+          "parent": 531,
+          "variable": 23
+        },
+        {
+          "op": "multiply",
+          "parent": 873,
+          "variable": 13
+        },
+        {
+          "left": 878,
+          "op": "add",
+          "right": 879
+        },
+        {
+          "op": "multiply",
+          "parent": 533,
+          "variable": 13
+        },
+        {
+          "left": 877,
+          "op": "add",
+          "right": 881
+        },
+        {
+          "op": "multiply",
+          "parent": 582,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 883,
+          "variable": 30
+        },
+        {
+          "op": "multiply",
+          "parent": 34,
+          "variable": 16
+        },
+        {
+          "left": 34,
+          "op": "add",
+          "right": 885
+        },
+        {
+          "op": "multiply",
+          "parent": 886,
+          "variable": 29
+        },
+        {
+          "left": 886,
+          "op": "add",
+          "right": 887
+        },
+        {
+          "left": 884,
+          "op": "add",
+          "right": 888
+        },
+        {
+          "op": "multiply",
+          "parent": 599,
+          "variable": 9
+        },
+        {
+          "op": "multiply",
+          "parent": 890,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 851,
+          "variable": 10
+        },
+        {
+          "left": 851,
+          "op": "add",
+          "right": 892
+        },
+        {
+          "op": "multiply",
+          "parent": 893,
+          "variable": 28
+        },
+        {
+          "left": 891,
+          "op": "add",
+          "right": 894
+        },
+        {
+          "op": "multiply",
+          "parent": 602,
+          "variable": 13
+        },
+        {
+          "left": 602,
+          "op": "add",
+          "right": 896
+        },
+        {
+          "op": "multiply",
+          "parent": 897,
+          "variable": 15
+        },
+        {
+          "left": 897,
+          "op": "add",
+          "right": 898
+        },
+        {
+          "op": "multiply",
+          "parent": 265,
+          "variable": 17
+        },
+        {
+          "left": 265,
+          "op": "add",
+          "right": 900
+        },
+        {
+          "left": 899,
+          "op": "add",
+          "right": 901
+        },
+        {
+          "op": "multiply",
+          "parent": 621,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 903,
+          "variable": 23
+        },
+        {
+          "left": 903,
+          "op": "add",
+          "right": 904
+        },
+        {
+          "op": "multiply",
+          "parent": 832,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 906,
+          "variable": 12
+        },
+        {
+          "left": 905,
+          "op": "add",
+          "right": 907
+        },
+        {
+          "op": "multiply",
+          "parent": 641,
+          "variable": 12
+        },
+        {
+          "op": "multiply",
+          "parent": 909,
+          "variable": 24
+        },
+        {
+          "left": 909,
+          "op": "add",
+          "right": 910
+        },
+        {
+          "op": "multiply",
+          "parent": 863,
+          "variable": 8
+        },
+        {
+          "left": 863,
+          "op": "add",
+          "right": 912
+        },
+        {
+          "left": 911,
+          "op": "add",
+          "right": 913
+        },
+        {
+          "op": "multiply",
+          "parent": 644,
+          "variable": 24
+        },
+        {
+          "left": 644,
+          "op": "add",
+          "right": 915
+        },
+        {
+          "left": 914,
+          "op": "add",
+          "right": 916
+        },
+        {
+          "op": "multiply",
+          "parent": 653,
+          "variable": 13
+        },
+        {
+          "left": 653,
+          "op": "add",
+          "right": 918
+        },
+        {
+          "op": "multiply",
+          "parent": 919,
+          "variable": 17
+        },
+        {
+          "left": 919,
+          "op": "add",
+          "right": 920
+        },
+        {
+          "op": "multiply",
+          "parent": 902,
+          "variable": 18
+        },
+        {
+          "left": 902,
+          "op": "add",
+          "right": 922
+        },
+        {
+          "left": 921,
+          "op": "add",
+          "right": 923
+        },
+        {
+          "op": "multiply",
+          "parent": 684,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 925,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 559,
+          "variable": 30
+        },
+        {
+          "left": 926,
+          "op": "add",
+          "right": 927
+        },
+        {
+          "op": "multiply",
+          "parent": 687,
+          "variable": 8
+        },
+        {
+          "left": 687,
+          "op": "add",
+          "right": 929
+        },
+        {
+          "op": "multiply",
+          "parent": 930,
+          "variable": 24
+        },
+        {
+          "left": 930,
+          "op": "add",
+          "right": 931
+        },
+        {
+          "op": "multiply",
+          "parent": 397,
+          "variable": 27
+        },
+        {
+          "left": 932,
+          "op": "add",
+          "right": 933
+        },
+        {
+          "op": "multiply",
+          "parent": 687,
+          "variable": 21
+        },
+        {
+          "left": 870,
+          "op": "add",
+          "right": 935
+        },
+        {
+          "op": "multiply",
+          "parent": 700,
+          "variable": 23
+        },
+        {
+          "left": 700,
+          "op": "add",
+          "right": 937
+        },
+        {
+          "left": 928,
+          "op": "add",
+          "right": 938
+        },
+        {
+          "op": "multiply",
+          "parent": 703,
+          "variable": 23
+        },
+        {
+          "left": 703,
+          "op": "add",
+          "right": 940
+        },
+        {
+          "op": "multiply",
+          "parent": 849,
+          "variable": 21
+        },
+        {
+          "left": 941,
+          "op": "add",
+          "right": 942
+        },
+        {
+          "op": "multiply",
+          "parent": 706,
+          "variable": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 944,
+          "variable": 24
+        },
+        {
+          "left": 944,
+          "op": "add",
+          "right": 945
+        },
+        {
+          "op": "multiply",
+          "parent": 660,
+          "variable": 2
+        },
+        {
+          "left": 660,
+          "op": "add",
+          "right": 947
+        },
+        {
+          "left": 946,
+          "op": "add",
+          "right": 948
+        },
+        {
+          "op": "multiply",
+          "parent": 708,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 950,
+          "variable": 30
+        },
+        {
+          "left": 950,
+          "op": "add",
+          "right": 951
+        },
+        {
+          "op": "multiply",
+          "parent": 763,
+          "variable": 28
+        },
+        {
+          "left": 952,
+          "op": "add",
+          "right": 953
+        },
+        {
+          "op": "multiply",
+          "parent": 710,
+          "variable": 4
+        },
+        {
+          "left": 710,
+          "op": "add",
+          "right": 955
+        },
+        {
+          "left": 924,
+          "op": "add",
+          "right": 956
+        },
+        {
+          "op": "multiply",
+          "parent": 713,
+          "variable": 29
+        },
+        {
+          "left": 713,
+          "op": "add",
+          "right": 958
+        },
+        {
+          "left": 889,
+          "op": "add",
+          "right": 959
+        },
+        {
+          "op": "multiply",
+          "parent": 716,
+          "variable": 21
+        },
+        {
+          "left": 716,
+          "op": "add",
+          "right": 961
+        },
+        {
+          "op": "multiply",
+          "parent": 962,
+          "variable": 29
+        },
+        {
+          "op": "multiply",
+          "parent": 546,
+          "variable": 18
+        },
+        {
+          "left": 546,
+          "op": "add",
+          "right": 964
+        },
+        {
+          "left": 963,
+          "op": "add",
+          "right": 965
+        },
+        {
+          "op": "multiply",
+          "parent": 719,
+          "variable": 21
+        },
+        {
+          "left": 719,
+          "op": "add",
+          "right": 967
+        },
+        {
+          "left": 305,
+          "op": "add",
+          "right": 968
+        },
+        {
+          "left": 735,
+          "op": "add",
+          "right": 939
+        },
+        {
+          "op": "multiply",
+          "parent": 970,
+          "variable": 15
+        },
+        {
+          "left": 970,
+          "op": "add",
+          "right": 971
+        },
+        {
+          "op": "multiply",
+          "parent": 972,
+          "variable": 24
+        },
+        {
+          "left": 972,
+          "op": "add",
+          "right": 973
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 30
+        },
+        {
+          "left": 974,
+          "op": "add",
+          "right": 975
+        },
+        {
+          "op": "multiply",
+          "parent": 970,
+          "variable": 21
+        },
+        {
+          "left": 970,
+          "op": "add",
+          "right": 977
+        },
+        {
+          "op": "multiply",
+          "parent": 978,
+          "variable": 28
+        },
+        {
+          "left": 978,
+          "op": "add",
+          "right": 979
+        },
+        {
+          "left": 823,
+          "op": "add",
+          "right": 980
+        },
+        {
+          "op": "multiply",
+          "parent": 977,
+          "variable": 24
+        },
+        {
+          "left": 977,
+          "op": "add",
+          "right": 982
+        },
+        {
+          "op": "multiply",
+          "parent": 842,
+          "variable": 30
+        },
+        {
+          "left": 983,
+          "op": "add",
+          "right": 984
+        },
+        {
+          "op": "multiply",
+          "parent": 739,
+          "variable": 15
+        },
+        {
+          "op": "multiply",
+          "parent": 986,
+          "variable": 21
+        },
+        {
+          "left": 986,
+          "op": "add",
+          "right": 987
+        },
+        {
+          "op": "multiply",
+          "parent": 782,
+          "variable": 29
+        },
+        {
+          "op": "multiply",
+          "parent": 989,
+          "variable": 30
+        },
+        {
+          "left": 988,
+          "op": "add",
+          "right": 990
+        },
+        {
+          "op": "multiply",
+          "parent": 739,
+          "variable": 24
+        },
+        {
+          "op": "multiply",
+          "parent": 960,
+          "variable": 25
+        },
+        {
+          "left": 960,
+          "op": "add",
+          "right": 993
+        },
+        {
+          "left": 992,
+          "op": "add",
+          "right": 994
+        },
+        {
+          "op": "multiply",
+          "parent": 747,
+          "variable": 13
+        },
+        {
+          "left": 796,
+          "op": "add",
+          "right": 996
+        },
+        {
+          "op": "multiply",
+          "parent": 765,
+          "variable": 28
+        },
+        {
+          "left": 954,
+          "op": "add",
+          "right": 998
+        },
+        {
+          "op": "multiply",
+          "parent": 767,
+          "variable": 24
+        },
+        {
+          "left": 767,
+          "op": "add",
+          "right": 1000
+        },
+        {
+          "left": 949,
+          "op": "add",
+          "right": 1001
+        },
+        {
+          "op": "multiply",
+          "parent": 770,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1003,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 126,
+          "variable": 7
+        },
+        {
+          "left": 1004,
+          "op": "add",
+          "right": 1005
+        },
+        {
+          "op": "multiply",
+          "parent": 773,
+          "variable": 28
+        },
+        {
+          "left": 895,
+          "op": "add",
+          "right": 1007
+        },
+        {
+          "left": 779,
+          "op": "add",
+          "right": 882
+        },
+        {
+          "op": "multiply",
+          "parent": 1009,
+          "variable": 25
+        },
+        {
+          "left": 839,
+          "op": "add",
+          "right": 1010
+        },
+        {
+          "op": "multiply",
+          "parent": 1009,
+          "variable": 12
+        },
+        {
+          "left": 1009,
+          "op": "add",
+          "right": 1012
+        },
+        {
+          "left": 999,
+          "op": "add",
+          "right": 1013
+        },
+        {
+          "op": "multiply",
+          "parent": 1009,
+          "variable": 9
+        },
+        {
+          "left": 1008,
+          "op": "add",
+          "right": 1015
+        },
+        {
+          "op": "multiply",
+          "parent": 1011,
+          "variable": 30
+        },
+        {
+          "left": 995,
+          "op": "add",
+          "right": 1017
+        },
+        {
+          "op": "multiply",
+          "parent": 1014,
+          "variable": 5
+        },
+        {
+          "left": 1014,
+          "op": "add",
+          "right": 1019
+        },
+        {
+          "op": "multiply",
+          "parent": 1020,
+          "variable": 9
+        },
+        {
+          "left": 1020,
+          "op": "add",
+          "right": 1021
+        },
+        {
+          "op": "multiply",
+          "parent": 93,
+          "variable": 24
+        },
+        {
+          "left": 1022,
+          "op": "add",
+          "right": 1023
+        },
+        {
+          "op": "multiply",
+          "parent": 1014,
+          "variable": 9
+        },
+        {
+          "left": 1014,
+          "op": "add",
+          "right": 1025
+        },
+        {
+          "op": "multiply",
+          "parent": 1026,
+          "variable": 13
+        },
+        {
+          "left": 1026,
+          "op": "add",
+          "right": 1027
+        },
+        {
+          "op": "multiply",
+          "parent": 792,
+          "variable": 24
+        },
+        {
+          "left": 1028,
+          "op": "add",
+          "right": 1029
+        },
+        {
+          "op": "multiply",
+          "parent": 1016,
+          "variable": 5
+        },
+        {
+          "left": 1016,
+          "op": "add",
+          "right": 1031
+        },
+        {
+          "left": 1024,
+          "op": "add",
+          "right": 1032
+        },
+        {
+          "op": "multiply",
+          "parent": 1016,
+          "variable": 13
+        },
+        {
+          "left": 1016,
+          "op": "add",
+          "right": 1034
+        },
+        {
+          "left": 1030,
+          "op": "add",
+          "right": 1035
+        },
+        {
+          "op": "multiply",
+          "parent": 1018,
+          "variable": 15
+        },
+        {
+          "left": 1018,
+          "op": "add",
+          "right": 1037
+        },
+        {
+          "left": 976,
+          "op": "add",
+          "right": 1038
+        },
+        {
+          "op": "multiply",
+          "parent": 1018,
+          "variable": 21
+        },
+        {
+          "left": 985,
+          "op": "add",
+          "right": 1040
+        },
+        {
+          "op": "multiply",
+          "parent": 1033,
+          "variable": 13
+        },
+        {
+          "left": 997,
+          "op": "add",
+          "right": 1042
+        },
+        {
+          "op": "multiply",
+          "parent": 1036,
+          "variable": 21
+        },
+        {
+          "left": 103,
+          "op": "add",
+          "right": 1044
+        },
+        {
+          "left": 1036,
+          "op": "add",
+          "right": 1043
+        },
+        {
+          "op": "multiply",
+          "parent": 1046,
+          "variable": 15
+        },
+        {
+          "left": 1046,
+          "op": "add",
+          "right": 1047
+        },
+        {
+          "op": "multiply",
+          "parent": 1048,
+          "variable": 23
+        },
+        {
+          "left": 2,
+          "op": "add",
+          "right": 1049
+        },
+        {
+          "op": "multiply",
+          "parent": 1046,
+          "variable": 7
+        },
+        {
+          "left": 1046,
+          "op": "add",
+          "right": 1051
+        },
+        {
+          "op": "multiply",
+          "parent": 1052,
+          "variable": 31
+        },
+        {
+          "left": 57,
+          "op": "add",
+          "right": 1053
+        },
+        {
+          "op": "multiply",
+          "parent": 1046,
+          "variable": 21
+        },
+        {
+          "op": "multiply",
+          "parent": 1055,
+          "variable": 23
+        },
+        {
+          "left": 842,
+          "op": "add",
+          "right": 1056
+        },
+        {
+          "op": "multiply",
+          "parent": 1046,
+          "variable": 8
+        },
+        {
+          "left": 1046,
+          "op": "add",
+          "right": 1058
+        },
+        {
+          "op": "multiply",
+          "parent": 1059,
+          "variable": 27
+        },
+        {
+          "left": 1059,
+          "op": "add",
+          "right": 1060
+        },
+        {
+          "left": 917,
+          "op": "add",
+          "right": 1061
+        },
+        {
+          "op": "multiply",
+          "parent": 1060,
+          "variable": 29
+        },
+        {
+          "left": 1060,
+          "op": "add",
+          "right": 1063
+        },
+        {
+          "left": 934,
+          "op": "add",
+          "right": 1064
+        },
+        {
+          "op": "multiply",
+          "parent": 1046,
+          "variable": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 1066,
+          "variable": 21
+        },
+        {
+          "left": 1066,
+          "op": "add",
+          "right": 1067
+        },
+        {
+          "left": 1002,
+          "op": "add",
+          "right": 1068
+        },
+        {
+          "op": "multiply",
+          "parent": 1039,
+          "variable": 29
+        },
+        {
+          "left": 1039,
+          "op": "add",
+          "right": 1070
+        },
+        {
+          "left": 787,
+          "op": "add",
+          "right": 1071
+        },
+        {
+          "op": "multiply",
+          "parent": 1039,
+          "variable": 21
+        },
+        {
+          "left": 1039,
+          "op": "add",
+          "right": 1073
+        },
+        {
+          "op": "multiply",
+          "parent": 1074,
+          "variable": 29
+        },
+        {
+          "left": 991,
+          "op": "add",
+          "right": 1075
+        },
+        {
+          "op": "multiply",
+          "parent": 1041,
+          "variable": 29
+        },
+        {
+          "left": 1076,
+          "op": "add",
+          "right": 1077
+        },
+        {
+          "op": "multiply",
+          "parent": 1045,
+          "variable": 10
+        },
+        {
+          "left": 1045,
+          "op": "add",
+          "right": 1079
+        },
+        {
+          "op": "multiply",
+          "parent": 1080,
+          "variable": 27
+        },
+        {
+          "op": "multiply",
+          "parent": 1081,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 250,
+          "variable": 21
+        },
+        {
+          "left": 1082,
+          "op": "add",
+          "right": 1083
+        },
+        {
+          "op": "multiply",
+          "parent": 1045,
+          "variable": 23
+        },
+        {
+          "left": 1045,
+          "op": "add",
+          "right": 1085
+        },
+        {
+          "op": "multiply",
+          "parent": 1086,
+          "variable": 27
+        },
+        {
+          "left": 1086,
+          "op": "add",
+          "right": 1087
+        },
+        {
+          "op": "multiply",
+          "parent": 1088,
+          "variable": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 856,
+          "variable": 21
+        },
+        {
+          "left": 1089,
+          "op": "add",
+          "right": 1090
+        },
+        {
+          "op": "multiply",
+          "parent": 1045,
+          "variable": 29
+        },
+        {
+          "left": 1045,
+          "op": "add",
+          "right": 1092
+        },
+        {
+          "left": 936,
+          "op": "add",
+          "right": 1093
+        },
+        {
+          "op": "multiply",
+          "parent": 1045,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1095,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 1096,
+          "variable": 7
+        },
+        {
+          "op": "multiply",
+          "parent": 1006,
+          "variable": 13
+        },
+        {
+          "left": 1006,
+          "op": "add",
+          "right": 1098
+        },
+        {
+          "left": 1097,
+          "op": "add",
+          "right": 1099
+        },
+        {
+          "op": "multiply",
+          "parent": 1045,
+          "variable": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 1069,
+          "variable": 13
+        },
+        {
+          "left": 1069,
+          "op": "add",
+          "right": 1102
+        },
+        {
+          "left": 1101,
+          "op": "add",
+          "right": 1103
+        },
+        {
+          "op": "multiply",
+          "parent": 1050,
+          "variable": 21
+        },
+        {
+          "left": 1050,
+          "op": "add",
+          "right": 1105
+        },
+        {
+          "op": "multiply",
+          "parent": 1106,
+          "variable": 25
+        },
+        {
+          "op": "multiply",
+          "parent": 782,
+          "variable": 23
+        },
+        {
+          "left": 1107,
+          "op": "add",
+          "right": 1108
+        },
+        {
+          "op": "multiply",
+          "parent": 1054,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1110,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 1111,
+          "variable": 13
+        },
+        {
+          "left": 1111,
+          "op": "add",
+          "right": 1112
+        },
+        {
+          "op": "multiply",
+          "parent": 1100,
+          "variable": 31
+        },
+        {
+          "left": 1113,
+          "op": "add",
+          "right": 1114
+        },
+        {
+          "op": "multiply",
+          "parent": 1057,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 1116,
+          "variable": 12
+        },
+        {
+          "op": "multiply",
+          "parent": 1117,
+          "variable": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 908,
+          "variable": 21
+        },
+        {
+          "left": 1118,
+          "op": "add",
+          "right": 1119
+        },
+        {
+          "op": "multiply",
+          "parent": 1057,
+          "variable": 28
+        },
+        {
+          "left": 1057,
+          "op": "add",
+          "right": 1121
+        },
+        {
+          "left": 943,
+          "op": "add",
+          "right": 1122
+        },
+        {
+          "op": "multiply",
+          "parent": 1057,
+          "variable": 27
+        },
+        {
+          "left": 1057,
+          "op": "add",
+          "right": 1124
+        },
+        {
+          "op": "multiply",
+          "parent": 1125,
+          "variable": 28
+        },
+        {
+          "left": 1091,
+          "op": "add",
+          "right": 1126
+        },
+        {
+          "op": "multiply",
+          "parent": 1057,
+          "variable": 25
+        },
+        {
+          "left": 1109,
+          "op": "add",
+          "right": 1128
+        },
+        {
+          "op": "multiply",
+          "parent": 1062,
+          "variable": 29
+        },
+        {
+          "left": 1062,
+          "op": "add",
+          "right": 1130
+        },
+        {
+          "left": 1065,
+          "op": "add",
+          "right": 1131
+        },
+        {
+          "op": "multiply",
+          "parent": 1069,
+          "variable": 27
+        },
+        {
+          "left": 1069,
+          "op": "add",
+          "right": 1133
+        },
+        {
+          "op": "multiply",
+          "parent": 1134,
+          "variable": 29
+        },
+        {
+          "left": 966,
+          "op": "add",
+          "right": 1135
+        },
+        {
+          "op": "multiply",
+          "parent": 1069,
+          "variable": 20
+        },
+        {
+          "left": 1069,
+          "op": "add",
+          "right": 1137
+        },
+        {
+          "left": 969,
+          "op": "add",
+          "right": 1138
+        },
+        {
+          "op": "multiply",
+          "parent": 1072,
+          "variable": 8
+        },
+        {
+          "op": "multiply",
+          "parent": 1140,
+          "variable": 21
+        },
+        {
+          "left": 1140,
+          "op": "add",
+          "right": 1141
+        },
+        {
+          "left": 829,
+          "op": "add",
+          "right": 1142
+        },
+        {
+          "left": 1072,
+          "op": "add",
+          "right": 1078
+        },
+        {
+          "op": "multiply",
+          "parent": 1144,
+          "variable": 10
+        },
+        {
+          "op": "multiply",
+          "parent": 1145,
+          "variable": 20
+        },
+        {
+          "left": 1145,
+          "op": "add",
+          "right": 1146
+        },
+        {
+          "left": 98,
+          "op": "add",
+          "right": 1147
+        },
+        {
+          "op": "multiply",
+          "parent": 1144,
+          "variable": 5
+        },
+        {
+          "left": 1144,
+          "op": "add",
+          "right": 1149
+        },
+        {
+          "op": "multiply",
+          "parent": 1150,
+          "variable": 27
+        },
+        {
+          "left": 114,
+          "op": "add",
+          "right": 1151
+        },
+        {
+          "op": "multiply",
+          "parent": 1094,
+          "variable": 8
+        },
+        {
+          "left": 1143,
+          "op": "add",
+          "right": 1153
+        },
+        {
+          "op": "multiply",
+          "parent": 1104,
+          "variable": 31
+        },
+        {
+          "left": 1104,
+          "op": "add",
+          "right": 1155
+        },
+        {
+          "left": 73,
+          "op": "add",
+          "right": 1156
+        },
+        {
+          "op": "multiply",
+          "parent": 1104,
+          "variable": 4
+        },
+        {
+          "left": 1104,
+          "op": "add",
+          "right": 1158
+        },
+        {
+          "left": 957,
+          "op": "add",
+          "right": 1159
+        },
+        {
+          "op": "multiply",
+          "parent": 1123,
+          "variable": 23
+        },
+        {
+          "left": 1123,
+          "op": "add",
+          "right": 1161
+        },
+        {
+          "left": 981,
+          "op": "add",
+          "right": 1162
+        },
+        {
+          "op": "multiply",
+          "parent": 1123,
+          "variable": 10
+        },
+        {
+          "left": 1123,
+          "op": "add",
+          "right": 1164
+        },
+        {
+          "op": "multiply",
+          "parent": 1165,
+          "variable": 27
+        },
+        {
+          "left": 1084,
+          "op": "add",
+          "right": 1166
+        },
+        {
+          "op": "multiply",
+          "parent": 1123,
+          "variable": 27
+        },
+        {
+          "left": 1123,
+          "op": "add",
+          "right": 1168
+        },
+        {
+          "left": 1127,
+          "op": "add",
+          "right": 1169
+        },
+        {
+          "op": "multiply",
+          "parent": 1129,
+          "variable": 20
+        },
+        {
+          "left": 784,
+          "op": "add",
+          "right": 1171
+        },
+        {
+          "left": 1132,
+          "op": "add",
+          "right": 1154
+        },
+        {
+          "op": "multiply",
+          "parent": 1173,
+          "variable": 4
+        },
+        {
+          "left": 1173,
+          "op": "add",
+          "right": 1174
+        },
+        {
+          "op": "multiply",
+          "parent": 1175,
+          "variable": 25
+        },
+        {
+          "left": 1175,
+          "op": "add",
+          "right": 1176
+        },
+        {
+          "left": 4,
+          "op": "add",
+          "right": 1177
+        },
+        {
+          "op": "multiply",
+          "parent": 1173,
+          "variable": 21
+        },
+        {
+          "left": 1173,
+          "op": "add",
+          "right": 1179
+        },
+        {
+          "op": "multiply",
+          "parent": 1180,
+          "variable": 27
+        },
+        {
+          "left": 1180,
+          "op": "add",
+          "right": 1181
+        },
+        {
+          "left": 1136,
+          "op": "add",
+          "right": 1182
+        },
+        {
+          "op": "multiply",
+          "parent": 1139,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1184,
+          "variable": 5
+        },
+        {
+          "left": 126,
+          "op": "add",
+          "right": 1185
+        },
+        {
+          "op": "multiply",
+          "parent": 1139,
+          "variable": 10
+        },
+        {
+          "left": 1139,
+          "op": "add",
+          "right": 1187
+        },
+        {
+          "op": "multiply",
+          "parent": 1188,
+          "variable": 27
+        },
+        {
+          "op": "multiply",
+          "parent": 1167,
+          "variable": 20
+        },
+        {
+          "left": 1167,
+          "op": "add",
+          "right": 1190
+        },
+        {
+          "left": 1189,
+          "op": "add",
+          "right": 1191
+        },
+        {
+          "op": "multiply",
+          "parent": 1148,
+          "variable": 12
+        },
+        {
+          "op": "multiply",
+          "parent": 1193,
+          "variable": 21
+        },
+        {
+          "left": 1120,
+          "op": "add",
+          "right": 1194
+        },
+        {
+          "op": "multiply",
+          "parent": 1148,
+          "variable": 27
+        },
+        {
+          "left": 1192,
+          "op": "add",
+          "right": 1196
+        },
+        {
+          "op": "multiply",
+          "parent": 1152,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1198,
+          "variable": 13
+        },
+        {
+          "left": 1198,
+          "op": "add",
+          "right": 1199
+        },
+        {
+          "op": "multiply",
+          "parent": 1200,
+          "variable": 31
+        },
+        {
+          "op": "multiply",
+          "parent": 1115,
+          "variable": 27
+        },
+        {
+          "left": 1201,
+          "op": "add",
+          "right": 1202
+        },
+        {
+          "op": "multiply",
+          "parent": 1198,
+          "variable": 21
+        },
+        {
+          "left": 1198,
+          "op": "add",
+          "right": 1204
+        },
+        {
+          "op": "multiply",
+          "parent": 1186,
+          "variable": 27
+        },
+        {
+          "left": 1205,
+          "op": "add",
+          "right": 1206
+        },
+        {
+          "op": "multiply",
+          "parent": 1157,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1208,
+          "variable": 27
+        },
+        {
+          "left": 1203,
+          "op": "add",
+          "right": 1209
+        },
+        {
+          "op": "multiply",
+          "parent": 1160,
+          "variable": 27
+        },
+        {
+          "left": 1210,
+          "op": "add",
+          "right": 1211
+        },
+        {
+          "op": "multiply",
+          "parent": 1163,
+          "variable": 13
+        },
+        {
+          "left": 880,
+          "op": "add",
+          "right": 1213
+        },
+        {
+          "left": 1170,
+          "op": "add",
+          "right": 1183
+        },
+        {
+          "op": "multiply",
+          "parent": 1215,
+          "variable": 20
+        },
+        {
+          "left": 1215,
+          "op": "add",
+          "right": 1216
+        },
+        {
+          "left": 1197,
+          "op": "add",
+          "right": 1217
+        },
+        {
+          "op": "multiply",
+          "parent": 1215,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1219,
+          "variable": 21
+        },
+        {
+          "left": 1219,
+          "op": "add",
+          "right": 1220
+        },
+        {
+          "left": 1207,
+          "op": "add",
+          "right": 1221
+        },
+        {
+          "op": "multiply",
+          "parent": 1215,
+          "variable": 13
+        },
+        {
+          "left": 1215,
+          "op": "add",
+          "right": 1223
+        },
+        {
+          "left": 1212,
+          "op": "add",
+          "right": 1224
+        },
+        {
+          "op": "multiply",
+          "parent": 1218,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1226,
+          "variable": 12
+        },
+        {
+          "left": 1226,
+          "op": "add",
+          "right": 1227
+        },
+        {
+          "op": "multiply",
+          "parent": 1228,
+          "variable": 28
+        },
+        {
+          "left": 453,
+          "op": "add",
+          "right": 1229
+        },
+        {
+          "op": "multiply",
+          "parent": 1218,
+          "variable": 10
+        },
+        {
+          "left": 1218,
+          "op": "add",
+          "right": 1231
+        },
+        {
+          "op": "multiply",
+          "parent": 1232,
+          "variable": 28
+        },
+        {
+          "left": 599,
+          "op": "add",
+          "right": 1233
+        },
+        {
+          "op": "multiply",
+          "parent": 1218,
+          "variable": 25
+        },
+        {
+          "left": 1172,
+          "op": "add",
+          "right": 1235
+        },
+        {
+          "op": "multiply",
+          "parent": 1225,
+          "variable": 28
+        },
+        {
+          "left": 1225,
+          "op": "add",
+          "right": 1237
+        },
+        {
+          "left": 1214,
+          "op": "add",
+          "right": 1238
+        },
+        {
+          "op": "multiply",
+          "parent": 1236,
+          "variable": 4
+        },
+        {
+          "left": 1236,
+          "op": "add",
+          "right": 1240
+        },
+        {
+          "left": 1178,
+          "op": "add",
+          "right": 1241
+        },
+        {
+          "op": "multiply",
+          "parent": 1239,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1243,
+          "variable": 12
+        },
+        {
+          "left": 1243,
+          "op": "add",
+          "right": 1244
+        },
+        {
+          "left": 1230,
+          "op": "add",
+          "right": 1245
+        },
+        {
+          "op": "multiply",
+          "parent": 1239,
+          "variable": 10
+        },
+        {
+          "left": 1239,
+          "op": "add",
+          "right": 1247
+        },
+        {
+          "left": 1234,
+          "op": "add",
+          "right": 1248
+        },
+        {
+          "op": "multiply",
+          "parent": 1242,
+          "variable": 21
+        },
+        {
+          "left": 1242,
+          "op": "add",
+          "right": 1250
+        },
+        {
+          "left": 1222,
+          "op": "add",
+          "right": 1251
+        },
+        {
+          "op": "multiply",
+          "parent": 1242,
+          "variable": 12
+        },
+        {
+          "left": 1242,
+          "op": "add",
+          "right": 1253
+        },
+        {
+          "left": 1246,
+          "op": "add",
+          "right": 1254
+        },
+        {
+          "op": "multiply",
+          "parent": 1249,
+          "variable": 12
+        },
+        {
+          "op": "multiply",
+          "parent": 1256,
+          "variable": 21
+        },
+        {
+          "left": 1195,
+          "op": "add",
+          "right": 1257
+        },
+        {
+          "op": "multiply",
+          "parent": 1252,
+          "variable": 12
+        },
+        {
+          "left": 1258,
+          "op": "add",
+          "right": 1259
+        },
+        {
+          "left": 1255,
+          "op": "add",
+          "right": 1260
+        }
+      ],
+      "root": 1261,
+      "variables": 31
+    },
+    "reason": "checked Boolean polynomial-calculus contradiction",
+    "stats": {
+      "budget_limited": false,
+      "generated_monomial_occurrences": 6313,
+      "generated_nodes": 1262,
+      "generated_work": 15003,
+      "max_generated_degree": 5,
+      "max_polynomial_monomials": 32,
+      "proof_degree": 5,
+      "proof_monomial_occurrences": 6313,
+      "proof_nodes": 1262,
+      "proof_operations": {
+        "add": 552,
+        "input": 115,
+        "multiply": 595
+      },
+      "proof_work": 15003,
+      "source_resolution_nodes": 368,
+      "source_resolution_width": 4
+    },
+    "status": "UNSAT",
+    "witness": null
+  },
+  "positive_word": 2147483647,
+  "proper_linear_three_cnf": true,
+  "resolution_search": {
+    "active_rows": 1,
+    "active_variables": 31,
+    "agenda_pops": 390,
+    "budget_limited": false,
+    "certificate_bytes": 15952,
+    "certificate_depth": 22,
+    "certificate_inputs": 115,
+    "certificate_nodes": 368,
+    "certificate_parent_union_width": 5,
+    "certificate_resolutions": 253,
+    "certificate_width": 4,
+    "complete": false,
+    "duplicate_candidates": 11592,
+    "first_retained_derived_by_width": {
+      "0": {
+        "ancestor_nodes": 368,
+        "clause": [],
+        "node": 367,
+        "raw_ancestors": 115
+      },
+      "1": {
+        "ancestor_nodes": 98,
+        "clause": [
+          -24
+        ],
+        "node": 305,
+        "raw_ancestors": 41
+      },
+      "2": {
+        "ancestor_nodes": 27,
+        "clause": [
+          23,
+          -30
+        ],
+        "node": 281,
+        "raw_ancestors": 13
+      },
+      "3": {
+        "ancestor_nodes": 7,
+        "clause": [
+          -13,
+          -15,
+          29
+        ],
+        "node": 160,
+        "raw_ancestors": 4
+      },
+      "4": {
+        "ancestor_nodes": 3,
+        "clause": [
+          -2,
+          -13,
+          -19,
+          28
+        ],
+        "node": 115,
+        "raw_ancestors": 2
+      }
+    },
+    "mask_coordinate_bits": 62,
+    "pairs_checked": 180420,
+    "peak_active": 9840,
+    "peak_agenda": 26438,
+    "retired_rows": 26825,
+    "search_width_histogram": {
+      "0": 1,
+      "1": 33,
+      "2": 381,
+      "3": 3743,
+      "4": 22668
+    },
+    "source_clauses": 152,
+    "source_over_width": 0,
+    "source_tautologies": 0,
+    "stored_literal_slots": 102696,
+    "stored_rows": 26826,
+    "subsumed_candidates": 14771,
+    "subsumption_probes": 463497,
+    "superset_checks": 8085954,
+    "tautological_pairs": 6703,
+    "width": 4,
+    "width_rejections": 120680
+  },
+  "sample_input": [
+    [
+      -2,
+      28,
+      30
+    ],
+    [
+      -5,
+      -16,
+      21
+    ],
+    [
+      -7,
+      -25,
+      30
+    ],
+    [
+      15,
+      -23,
+      24
+    ],
+    [
+      -5,
+      -11,
+      -14
+    ],
+    [
+      13,
+      23,
+      -26
+    ],
+    [
+      4,
+      25,
+      -29
+    ],
+    [
+      1,
+      -26,
+      27
+    ],
+    [
+      -2,
+      16,
+      -18
+    ],
+    [
+      -1,
+      -30,
+      -31
+    ],
+    [
+      12,
+      -18,
+      -30
+    ],
+    [
+      -10,
+      -18,
+      -24
+    ],
+    [
+      10,
+      -22,
+      -28
+    ],
+    [
+      5,
+      -17,
+      20
+    ],
+    [
+      14,
+      -17,
+      -31
+    ],
+    [
+      -6,
+      -9,
+      15
+    ],
+    [
+      4,
+      -11,
+      15
+    ],
+    [
+      3,
+      9,
+      10
+    ],
+    [
+      -6,
+      18,
+      20
+    ],
+    [
+      -9,
+      18,
+      27
+    ],
+    [
+      -3,
+      4,
+      7
+    ],
+    [
+      -4,
+      26,
+      -30
+    ],
+    [
+      -11,
+      16,
+      -27
+    ],
+    [
+      -15,
+      18,
+      29
+    ],
+    [
+      -1,
+      14,
+      -15
+    ],
+    [
+      -7,
+      -19,
+      20
+    ],
+    [
+      -4,
+      27,
+      31
+    ],
+    [
+      8,
+      21,
+      29
+    ],
+    [
+      -8,
+      22,
+      -30
+    ],
+    [
+      -1,
+      8,
+      9
+    ],
+    [
+      -2,
+      -12,
+      14
+    ],
+    [
+      2,
+      -13,
+      -15
+    ],
+    [
+      4,
+      -19,
+      -23
+    ],
+    [
+      2,
+      -17,
+      19
+    ],
+    [
+      -9,
+      -16,
+      -25
+    ],
+    [
+      12,
+      21,
+      -25
+    ],
+    [
+      -4,
+      16,
+      -20
+    ],
+    [
+      11,
+      -22,
+      29
+    ],
+    [
+      6,
+      19,
+      21
+    ],
+    [
+      11,
+      19,
+      -24
+    ],
+    [
+      7,
+      -11,
+      -12
+    ],
+    [
+      9,
+      -19,
+      26
+    ],
+    [
+      6,
+      -24,
+      -30
+    ],
+    [
+      2,
+      -8,
+      10
+    ],
+    [
+      -11,
+      -18,
+      -25
+    ],
+    [
+      -4,
+      10,
+      -14
+    ],
+    [
+      -15,
+      19,
+      28
+    ],
+    [
+      14,
+      21,
+      27
+    ],
+    [
+      -3,
+      -13,
+      -14
+    ],
+    [
+      4,
+      9,
+      13
+    ],
+    [
+      -6,
+      16,
+      22
+    ],
+    [
+      7,
+      -16,
+      -23
+    ],
+    [
+      -1,
+      -20,
+      -21
+    ],
+    [
+      8,
+      -20,
+      -28
+    ],
+    [
+      4,
+      17,
+      -21
+    ],
+    [
+      4,
+      8,
+      12
+    ],
+    [
+      1,
+      -12,
+      13
+    ],
+    [
+      -1,
+      -10,
+      -11
+    ],
+    [
+      -6,
+      8,
+      -14
+    ],
+    [
+      -2,
+      5,
+      7
+    ],
+    [
+      6,
+      25,
+      31
+    ],
+    [
+      -3,
+      -24,
+      27
+    ],
+    [
+      1,
+      6,
+      7
+    ],
+    [
+      13,
+      -17,
+      28
+    ],
+    [
+      8,
+      -19,
+      27
+    ],
+    [
+      -2,
+      -20,
+      22
+    ],
+    [
+      13,
+      -20,
+      -25
+    ],
+    [
+      -14,
+      -22,
+      -24
+    ],
+    [
+      11,
+      20,
+      -31
+    ],
+    [
+      4,
+      18,
+      22
+    ],
+    [
+      7,
+      24,
+      -31
+    ],
+    [
+      -13,
+      -16,
+      29
+    ],
+    [
+      3,
+      -17,
+      18
+    ],
+    [
+      -15,
+      -16,
+      31
+    ],
+    [
+      12,
+      -16,
+      -28
+    ],
+    [
+      -7,
+      26,
+      29
+    ],
+    [
+      -9,
+      23,
+      -30
+    ],
+    [
+      -9,
+      -21,
+      28
+    ],
+    [
+      -2,
+      4,
+      6
+    ],
+    [
+      -13,
+      22,
+      -27
+    ],
+    [
+      -10,
+      23,
+      29
+    ],
+    [
+      3,
+      21,
+      22
+    ],
+    [
+      -1,
+      -28,
+      29
+    ],
+    [
+      -5,
+      -19,
+      22
+    ],
+    [
+      -5,
+      -26,
+      -31
+    ],
+    [
+      -3,
+      25,
+      -26
+    ],
+    [
+      15,
+      -21,
+      26
+    ],
+    [
+      -10,
+      21,
+      31
+    ],
+    [
+      5,
+      10,
+      -15
+    ],
+    [
+      6,
+      10,
+      12
+    ],
+    [
+      13,
+      18,
+      31
+    ],
+    [
+      -3,
+      5,
+      6
+    ],
+    [
+      2,
+      -29,
+      31
+    ],
+    [
+      -14,
+      -18,
+      28
+    ],
+    [
+      14,
+      -16,
+      -30
+    ],
+    [
+      -1,
+      18,
+      -19
+    ],
+    [
+      -10,
+      -17,
+      -27
+    ],
+    [
+      -3,
+      -28,
+      -31
+    ],
+    [
+      8,
+      -18,
+      26
+    ],
+    [
+      -3,
+      -8,
+      11
+    ],
+    [
+      3,
+      -29,
+      -30
+    ],
+    [
+      -5,
+      -24,
+      -29
+    ],
+    [
+      12,
+      19,
+      -31
+    ],
+    [
+      -1,
+      -2,
+      3
+    ],
+    [
+      12,
+      -20,
+      -24
+    ],
+    [
+      -7,
+      -18,
+      21
+    ],
+    [
+      -9,
+      17,
+      -24
+    ],
+    [
+      -9,
+      -22,
+      31
+    ],
+    [
+      14,
+      20,
+      -26
+    ],
+    [
+      -4,
+      -24,
+      28
+    ],
+    [
+      -15,
+      -22,
+      -25
+    ],
+    [
+      -8,
+      -17,
+      25
+    ],
+    [
+      1,
+      -24,
+      -25
+    ],
+    [
+      -1,
+      4,
+      5
+    ],
+    [
+      14,
+      23,
+      -25
+    ],
+    [
+      -15,
+      -17,
+      -30
+    ],
+    [
+      1,
+      -16,
+      -17
+    ],
+    [
+      -3,
+      -12,
+      -15
+    ],
+    [
+      15,
+      20,
+      27
+    ],
+    [
+      -10,
+      19,
+      -25
+    ],
+    [
+      5,
+      9,
+      -12
+    ],
+    [
+      5,
+      18,
+      23
+    ],
+    [
+      6,
+      -11,
+      -13
+    ],
+    [
+      2,
+      -25,
+      -27
+    ],
+    [
+      11,
+      -17,
+      -26
+    ],
+    [
+      -7,
+      -10,
+      -13
+    ],
+    [
+      -6,
+      27,
+      29
+    ],
+    [
+      -7,
+      -9,
+      14
+    ],
+    [
+      -10,
+      20,
+      30
+    ],
+    [
+      7,
+      27,
+      -28
+    ],
+    [
+      -13,
+      -19,
+      -30
+    ],
+    [
+      -11,
+      21,
+      30
+    ],
+    [
+      -7,
+      17,
+      22
+    ],
+    [
+      -2,
+      -9,
+      -11
+    ],
+    [
+      -2,
+      -24,
+      -26
+    ],
+    [
+      7,
+      8,
+      15
+    ],
+    [
+      3,
+      -20,
+      23
+    ],
+    [
+      13,
+      -21,
+      24
+    ],
+    [
+      5,
+      -25,
+      -28
+    ],
+    [
+      -2,
+      -21,
+      -23
+    ],
+    [
+      -14,
+      19,
+      -29
+    ],
+    [
+      6,
+      17,
+      23
+    ],
+    [
+      -3,
+      16,
+      -19
+    ],
+    [
+      -12,
+      -22,
+      -26
+    ],
+    [
+      -5,
+      -8,
+      13
+    ],
+    [
+      8,
+      -16,
+      -24
+    ],
+    [
+      11,
+      23,
+      28
+    ],
+    [
+      -6,
+      -26,
+      28
+    ],
+    [
+      -9,
+      20,
+      29
+    ],
+    [
+      -12,
+      17,
+      29
+    ],
+    [
+      -12,
+      23,
+      27
+    ],
+    [
+      5,
+      -27,
+      30
+    ]
+  ],
+  "schema_version": 1,
+  "scope": "The executable checker is F2. The degree-four invariant and resolution translation apply over every field. Discovery is resolution-guided, not complete bounded-degree polynomial calculus. A fixed finite degree threshold is not an all-input complexity bound. No claim of a static degree-five failure is made.",
+  "summary": {
+    "largest_polynomial_monomials": 32,
+    "polynomial_degree": 5,
+    "polynomial_monomial_occurrences": 6313,
+    "polynomial_nodes": 1262,
+    "polynomial_work": 15003,
+    "proven_minimum_dynamic_degree": 5,
+    "resolution_nodes": 368,
+    "static_complete_runs": 4,
+    "static_degree_four_rank": 4408
+  },
+  "variables": 31
+}

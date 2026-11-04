@@ -1,0 +1,4995 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "clauses": 152,
+      "positive_control_rejects_certificate": true,
+      "relations": {
+        "budget_limited": false,
+        "certificate_bytes": 25890,
+        "enumerated_cells": 6398,
+        "inputs": 115,
+        "joins": 253,
+        "max_relation_width": 4,
+        "nodes": 368,
+        "stored_table_cells": 3659,
+        "union_width": 5
+      },
+      "scramble_seed": null,
+      "search": {
+        "active_rows": 1,
+        "active_variables": 31,
+        "agenda_pops": 390,
+        "budget_limited": false,
+        "certificate_bytes": 15952,
+        "certificate_depth": 22,
+        "certificate_inputs": 115,
+        "certificate_nodes": 368,
+        "certificate_parent_union_width": 5,
+        "certificate_resolutions": 253,
+        "certificate_width": 4,
+        "complete": false,
+        "duplicate_candidates": 11592,
+        "first_retained_derived_by_width": {
+          "0": {
+            "ancestor_nodes": 368,
+            "clause": [],
+            "node": 367,
+            "raw_ancestors": 115
+          },
+          "1": {
+            "ancestor_nodes": 98,
+            "clause": [
+              -24
+            ],
+            "node": 305,
+            "raw_ancestors": 41
+          },
+          "2": {
+            "ancestor_nodes": 27,
+            "clause": [
+              23,
+              -30
+            ],
+            "node": 281,
+            "raw_ancestors": 13
+          },
+          "3": {
+            "ancestor_nodes": 7,
+            "clause": [
+              -13,
+              -15,
+              29
+            ],
+            "node": 160,
+            "raw_ancestors": 4
+          },
+          "4": {
+            "ancestor_nodes": 3,
+            "clause": [
+              -2,
+              -13,
+              -19,
+              28
+            ],
+            "node": 115,
+            "raw_ancestors": 2
+          }
+        },
+        "mask_coordinate_bits": 62,
+        "pairs_checked": 180420,
+        "peak_active": 9840,
+        "peak_agenda": 26438,
+        "retired_rows": 26825,
+        "search_width_histogram": {
+          "0": 1,
+          "1": 33,
+          "2": 381,
+          "3": 3743,
+          "4": 22668
+        },
+        "source_clauses": 152,
+        "source_over_width": 0,
+        "source_tautologies": 0,
+        "stored_literal_slots": 102696,
+        "stored_rows": 26826,
+        "subsumed_candidates": 14771,
+        "subsumption_probes": 463497,
+        "superset_checks": 8085954,
+        "tautological_pairs": 6703,
+        "width": 4,
+        "width_rejections": 120680
+      },
+      "union_four_cap_returns_unknown": true,
+      "variables": 31
+    },
+    {
+      "clauses": 152,
+      "positive_control_rejects_certificate": true,
+      "relations": {
+        "budget_limited": false,
+        "certificate_bytes": 30651,
+        "enumerated_cells": 7726,
+        "inputs": 123,
+        "joins": 311,
+        "max_relation_width": 4,
+        "nodes": 434,
+        "stored_table_cells": 4355,
+        "union_width": 5
+      },
+      "scramble_seed": 16002,
+      "search": {
+        "active_rows": 1,
+        "active_variables": 31,
+        "agenda_pops": 446,
+        "budget_limited": false,
+        "certificate_bytes": 19146,
+        "certificate_depth": 33,
+        "certificate_inputs": 123,
+        "certificate_nodes": 434,
+        "certificate_parent_union_width": 5,
+        "certificate_resolutions": 311,
+        "certificate_width": 4,
+        "complete": false,
+        "duplicate_candidates": 9286,
+        "first_retained_derived_by_width": {
+          "0": {
+            "ancestor_nodes": 434,
+            "clause": [],
+            "node": 433,
+            "raw_ancestors": 123
+          },
+          "1": {
+            "ancestor_nodes": 121,
+            "clause": [
+              9
+            ],
+            "node": 350,
+            "raw_ancestors": 47
+          },
+          "2": {
+            "ancestor_nodes": 22,
+            "clause": [
+              9,
+              -25
+            ],
+            "node": 326,
+            "raw_ancestors": 11
+          },
+          "3": {
+            "ancestor_nodes": 7,
+            "clause": [
+              -8,
+              -15,
+              21
+            ],
+            "node": 159,
+            "raw_ancestors": 4
+          },
+          "4": {
+            "ancestor_nodes": 3,
+            "clause": [
+              7,
+              9,
+              -20,
+              25
+            ],
+            "node": 123,
+            "raw_ancestors": 2
+          }
+        },
+        "mask_coordinate_bits": 62,
+        "pairs_checked": 122711,
+        "peak_active": 7085,
+        "peak_agenda": 22784,
+        "retired_rows": 23226,
+        "search_width_histogram": {
+          "0": 1,
+          "1": 33,
+          "2": 460,
+          "3": 3937,
+          "4": 18796
+        },
+        "source_clauses": 152,
+        "source_over_width": 0,
+        "source_tautologies": 0,
+        "stored_literal_slots": 87948,
+        "stored_rows": 23227,
+        "subsumed_candidates": 13761,
+        "subsumption_probes": 406043,
+        "superset_checks": 5448608,
+        "tautological_pairs": 4067,
+        "width": 4,
+        "width_rejections": 72522
+      },
+      "union_four_cap_returns_unknown": true,
+      "variables": 31
+    }
+  ],
+  "first_retained_binary_relation": {
+    "allowed_words": [
+      0,
+      1,
+      3
+    ],
+    "clause": [
+      23,
+      -30
+    ],
+    "integer_affine_lattice": "full Z^2; the missing Boolean pair is lost",
+    "proof_node": 281,
+    "scope": [
+      23,
+      30
+    ],
+    "table": 11
+  },
+  "sample_refutation": {
+    "certificate": {
+      "kind": "boolean-relation-join-project-v1",
+      "nodes": [
+        {
+          "clause": 0,
+          "op": "input",
+          "scope": [
+            2,
+            28,
+            30
+          ],
+          "table": 253
+        },
+        {
+          "clause": 1,
+          "op": "input",
+          "scope": [
+            5,
+            16,
+            21
+          ],
+          "table": 247
+        },
+        {
+          "clause": 3,
+          "op": "input",
+          "scope": [
+            15,
+            23,
+            24
+          ],
+          "table": 251
+        },
+        {
+          "clause": 5,
+          "op": "input",
+          "scope": [
+            13,
+            23,
+            26
+          ],
+          "table": 239
+        },
+        {
+          "clause": 6,
+          "op": "input",
+          "scope": [
+            4,
+            25,
+            29
+          ],
+          "table": 239
+        },
+        {
+          "clause": 7,
+          "op": "input",
+          "scope": [
+            1,
+            26,
+            27
+          ],
+          "table": 251
+        },
+        {
+          "clause": 8,
+          "op": "input",
+          "scope": [
+            2,
+            16,
+            18
+          ],
+          "table": 223
+        },
+        {
+          "clause": 10,
+          "op": "input",
+          "scope": [
+            12,
+            18,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "clause": 11,
+          "op": "input",
+          "scope": [
+            10,
+            18,
+            24
+          ],
+          "table": 127
+        },
+        {
+          "clause": 12,
+          "op": "input",
+          "scope": [
+            10,
+            22,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "clause": 13,
+          "op": "input",
+          "scope": [
+            5,
+            17,
+            20
+          ],
+          "table": 251
+        },
+        {
+          "clause": 15,
+          "op": "input",
+          "scope": [
+            6,
+            9,
+            15
+          ],
+          "table": 247
+        },
+        {
+          "clause": 16,
+          "op": "input",
+          "scope": [
+            4,
+            11,
+            15
+          ],
+          "table": 251
+        },
+        {
+          "clause": 17,
+          "op": "input",
+          "scope": [
+            3,
+            9,
+            10
+          ],
+          "table": 254
+        },
+        {
+          "clause": 18,
+          "op": "input",
+          "scope": [
+            6,
+            18,
+            20
+          ],
+          "table": 253
+        },
+        {
+          "clause": 19,
+          "op": "input",
+          "scope": [
+            9,
+            18,
+            27
+          ],
+          "table": 253
+        },
+        {
+          "clause": 20,
+          "op": "input",
+          "scope": [
+            3,
+            4,
+            7
+          ],
+          "table": 253
+        },
+        {
+          "clause": 21,
+          "op": "input",
+          "scope": [
+            4,
+            26,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "clause": 22,
+          "op": "input",
+          "scope": [
+            11,
+            16,
+            27
+          ],
+          "table": 223
+        },
+        {
+          "clause": 23,
+          "op": "input",
+          "scope": [
+            15,
+            18,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 25,
+          "op": "input",
+          "scope": [
+            7,
+            19,
+            20
+          ],
+          "table": 247
+        },
+        {
+          "clause": 26,
+          "op": "input",
+          "scope": [
+            4,
+            27,
+            31
+          ],
+          "table": 253
+        },
+        {
+          "clause": 27,
+          "op": "input",
+          "scope": [
+            8,
+            21,
+            29
+          ],
+          "table": 254
+        },
+        {
+          "clause": 28,
+          "op": "input",
+          "scope": [
+            8,
+            22,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "clause": 29,
+          "op": "input",
+          "scope": [
+            1,
+            8,
+            9
+          ],
+          "table": 253
+        },
+        {
+          "clause": 31,
+          "op": "input",
+          "scope": [
+            2,
+            13,
+            15
+          ],
+          "table": 191
+        },
+        {
+          "clause": 32,
+          "op": "input",
+          "scope": [
+            4,
+            19,
+            23
+          ],
+          "table": 191
+        },
+        {
+          "clause": 35,
+          "op": "input",
+          "scope": [
+            12,
+            21,
+            25
+          ],
+          "table": 239
+        },
+        {
+          "clause": 36,
+          "op": "input",
+          "scope": [
+            4,
+            16,
+            20
+          ],
+          "table": 223
+        },
+        {
+          "clause": 37,
+          "op": "input",
+          "scope": [
+            11,
+            22,
+            29
+          ],
+          "table": 251
+        },
+        {
+          "clause": 38,
+          "op": "input",
+          "scope": [
+            6,
+            19,
+            21
+          ],
+          "table": 254
+        },
+        {
+          "clause": 39,
+          "op": "input",
+          "scope": [
+            11,
+            19,
+            24
+          ],
+          "table": 239
+        },
+        {
+          "clause": 40,
+          "op": "input",
+          "scope": [
+            7,
+            11,
+            12
+          ],
+          "table": 191
+        },
+        {
+          "clause": 41,
+          "op": "input",
+          "scope": [
+            9,
+            19,
+            26
+          ],
+          "table": 251
+        },
+        {
+          "clause": 42,
+          "op": "input",
+          "scope": [
+            6,
+            24,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "clause": 43,
+          "op": "input",
+          "scope": [
+            2,
+            8,
+            10
+          ],
+          "table": 251
+        },
+        {
+          "clause": 46,
+          "op": "input",
+          "scope": [
+            15,
+            19,
+            28
+          ],
+          "table": 253
+        },
+        {
+          "clause": 47,
+          "op": "input",
+          "scope": [
+            14,
+            21,
+            27
+          ],
+          "table": 254
+        },
+        {
+          "clause": 48,
+          "op": "input",
+          "scope": [
+            3,
+            13,
+            14
+          ],
+          "table": 127
+        },
+        {
+          "clause": 49,
+          "op": "input",
+          "scope": [
+            4,
+            9,
+            13
+          ],
+          "table": 254
+        },
+        {
+          "clause": 50,
+          "op": "input",
+          "scope": [
+            6,
+            16,
+            22
+          ],
+          "table": 253
+        },
+        {
+          "clause": 52,
+          "op": "input",
+          "scope": [
+            1,
+            20,
+            21
+          ],
+          "table": 127
+        },
+        {
+          "clause": 53,
+          "op": "input",
+          "scope": [
+            8,
+            20,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "clause": 54,
+          "op": "input",
+          "scope": [
+            4,
+            17,
+            21
+          ],
+          "table": 239
+        },
+        {
+          "clause": 55,
+          "op": "input",
+          "scope": [
+            4,
+            8,
+            12
+          ],
+          "table": 254
+        },
+        {
+          "clause": 56,
+          "op": "input",
+          "scope": [
+            1,
+            12,
+            13
+          ],
+          "table": 251
+        },
+        {
+          "clause": 57,
+          "op": "input",
+          "scope": [
+            1,
+            10,
+            11
+          ],
+          "table": 127
+        },
+        {
+          "clause": 58,
+          "op": "input",
+          "scope": [
+            6,
+            8,
+            14
+          ],
+          "table": 223
+        },
+        {
+          "clause": 59,
+          "op": "input",
+          "scope": [
+            2,
+            5,
+            7
+          ],
+          "table": 253
+        },
+        {
+          "clause": 61,
+          "op": "input",
+          "scope": [
+            3,
+            24,
+            27
+          ],
+          "table": 247
+        },
+        {
+          "clause": 62,
+          "op": "input",
+          "scope": [
+            1,
+            6,
+            7
+          ],
+          "table": 254
+        },
+        {
+          "clause": 63,
+          "op": "input",
+          "scope": [
+            13,
+            17,
+            28
+          ],
+          "table": 251
+        },
+        {
+          "clause": 64,
+          "op": "input",
+          "scope": [
+            8,
+            19,
+            27
+          ],
+          "table": 251
+        },
+        {
+          "clause": 65,
+          "op": "input",
+          "scope": [
+            2,
+            20,
+            22
+          ],
+          "table": 247
+        },
+        {
+          "clause": 66,
+          "op": "input",
+          "scope": [
+            13,
+            20,
+            25
+          ],
+          "table": 191
+        },
+        {
+          "clause": 67,
+          "op": "input",
+          "scope": [
+            14,
+            22,
+            24
+          ],
+          "table": 127
+        },
+        {
+          "clause": 69,
+          "op": "input",
+          "scope": [
+            4,
+            18,
+            22
+          ],
+          "table": 254
+        },
+        {
+          "clause": 70,
+          "op": "input",
+          "scope": [
+            7,
+            24,
+            31
+          ],
+          "table": 239
+        },
+        {
+          "clause": 71,
+          "op": "input",
+          "scope": [
+            13,
+            16,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "clause": 72,
+          "op": "input",
+          "scope": [
+            3,
+            17,
+            18
+          ],
+          "table": 251
+        },
+        {
+          "clause": 74,
+          "op": "input",
+          "scope": [
+            12,
+            16,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "clause": 75,
+          "op": "input",
+          "scope": [
+            7,
+            26,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 76,
+          "op": "input",
+          "scope": [
+            9,
+            23,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "clause": 77,
+          "op": "input",
+          "scope": [
+            9,
+            21,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "clause": 79,
+          "op": "input",
+          "scope": [
+            13,
+            22,
+            27
+          ],
+          "table": 223
+        },
+        {
+          "clause": 80,
+          "op": "input",
+          "scope": [
+            10,
+            23,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 81,
+          "op": "input",
+          "scope": [
+            3,
+            21,
+            22
+          ],
+          "table": 254
+        },
+        {
+          "clause": 82,
+          "op": "input",
+          "scope": [
+            1,
+            28,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "clause": 83,
+          "op": "input",
+          "scope": [
+            5,
+            19,
+            22
+          ],
+          "table": 247
+        },
+        {
+          "clause": 85,
+          "op": "input",
+          "scope": [
+            3,
+            25,
+            26
+          ],
+          "table": 223
+        },
+        {
+          "clause": 86,
+          "op": "input",
+          "scope": [
+            15,
+            21,
+            26
+          ],
+          "table": 251
+        },
+        {
+          "clause": 87,
+          "op": "input",
+          "scope": [
+            10,
+            21,
+            31
+          ],
+          "table": 253
+        },
+        {
+          "clause": 89,
+          "op": "input",
+          "scope": [
+            6,
+            10,
+            12
+          ],
+          "table": 254
+        },
+        {
+          "clause": 90,
+          "op": "input",
+          "scope": [
+            13,
+            18,
+            31
+          ],
+          "table": 254
+        },
+        {
+          "clause": 92,
+          "op": "input",
+          "scope": [
+            2,
+            29,
+            31
+          ],
+          "table": 251
+        },
+        {
+          "clause": 94,
+          "op": "input",
+          "scope": [
+            14,
+            16,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "clause": 95,
+          "op": "input",
+          "scope": [
+            1,
+            18,
+            19
+          ],
+          "table": 223
+        },
+        {
+          "clause": 96,
+          "op": "input",
+          "scope": [
+            10,
+            17,
+            27
+          ],
+          "table": 127
+        },
+        {
+          "clause": 97,
+          "op": "input",
+          "scope": [
+            3,
+            28,
+            31
+          ],
+          "table": 127
+        },
+        {
+          "clause": 99,
+          "op": "input",
+          "scope": [
+            3,
+            8,
+            11
+          ],
+          "table": 247
+        },
+        {
+          "clause": 100,
+          "op": "input",
+          "scope": [
+            3,
+            29,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "clause": 101,
+          "op": "input",
+          "scope": [
+            5,
+            24,
+            29
+          ],
+          "table": 127
+        },
+        {
+          "clause": 102,
+          "op": "input",
+          "scope": [
+            12,
+            19,
+            31
+          ],
+          "table": 239
+        },
+        {
+          "clause": 104,
+          "op": "input",
+          "scope": [
+            12,
+            20,
+            24
+          ],
+          "table": 191
+        },
+        {
+          "clause": 105,
+          "op": "input",
+          "scope": [
+            7,
+            18,
+            21
+          ],
+          "table": 247
+        },
+        {
+          "clause": 106,
+          "op": "input",
+          "scope": [
+            9,
+            17,
+            24
+          ],
+          "table": 223
+        },
+        {
+          "clause": 109,
+          "op": "input",
+          "scope": [
+            4,
+            24,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "clause": 110,
+          "op": "input",
+          "scope": [
+            15,
+            22,
+            25
+          ],
+          "table": 127
+        },
+        {
+          "clause": 112,
+          "op": "input",
+          "scope": [
+            1,
+            24,
+            25
+          ],
+          "table": 191
+        },
+        {
+          "clause": 114,
+          "op": "input",
+          "scope": [
+            14,
+            23,
+            25
+          ],
+          "table": 239
+        },
+        {
+          "clause": 115,
+          "op": "input",
+          "scope": [
+            15,
+            17,
+            30
+          ],
+          "table": 127
+        },
+        {
+          "clause": 117,
+          "op": "input",
+          "scope": [
+            3,
+            12,
+            15
+          ],
+          "table": 127
+        },
+        {
+          "clause": 118,
+          "op": "input",
+          "scope": [
+            15,
+            20,
+            27
+          ],
+          "table": 254
+        },
+        {
+          "clause": 120,
+          "op": "input",
+          "scope": [
+            5,
+            9,
+            12
+          ],
+          "table": 239
+        },
+        {
+          "clause": 122,
+          "op": "input",
+          "scope": [
+            6,
+            11,
+            13
+          ],
+          "table": 191
+        },
+        {
+          "clause": 124,
+          "op": "input",
+          "scope": [
+            11,
+            17,
+            26
+          ],
+          "table": 191
+        },
+        {
+          "clause": 125,
+          "op": "input",
+          "scope": [
+            7,
+            10,
+            13
+          ],
+          "table": 127
+        },
+        {
+          "clause": 126,
+          "op": "input",
+          "scope": [
+            6,
+            27,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 128,
+          "op": "input",
+          "scope": [
+            10,
+            20,
+            30
+          ],
+          "table": 253
+        },
+        {
+          "clause": 129,
+          "op": "input",
+          "scope": [
+            7,
+            27,
+            28
+          ],
+          "table": 239
+        },
+        {
+          "clause": 130,
+          "op": "input",
+          "scope": [
+            13,
+            19,
+            30
+          ],
+          "table": 127
+        },
+        {
+          "clause": 131,
+          "op": "input",
+          "scope": [
+            11,
+            21,
+            30
+          ],
+          "table": 253
+        },
+        {
+          "clause": 136,
+          "op": "input",
+          "scope": [
+            3,
+            20,
+            23
+          ],
+          "table": 251
+        },
+        {
+          "clause": 137,
+          "op": "input",
+          "scope": [
+            13,
+            21,
+            24
+          ],
+          "table": 251
+        },
+        {
+          "clause": 138,
+          "op": "input",
+          "scope": [
+            5,
+            25,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "clause": 139,
+          "op": "input",
+          "scope": [
+            2,
+            21,
+            23
+          ],
+          "table": 127
+        },
+        {
+          "clause": 140,
+          "op": "input",
+          "scope": [
+            14,
+            19,
+            29
+          ],
+          "table": 223
+        },
+        {
+          "clause": 141,
+          "op": "input",
+          "scope": [
+            6,
+            17,
+            23
+          ],
+          "table": 254
+        },
+        {
+          "clause": 144,
+          "op": "input",
+          "scope": [
+            5,
+            8,
+            13
+          ],
+          "table": 247
+        },
+        {
+          "clause": 146,
+          "op": "input",
+          "scope": [
+            11,
+            23,
+            28
+          ],
+          "table": 254
+        },
+        {
+          "clause": 147,
+          "op": "input",
+          "scope": [
+            6,
+            26,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "clause": 148,
+          "op": "input",
+          "scope": [
+            9,
+            20,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 149,
+          "op": "input",
+          "scope": [
+            12,
+            17,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "clause": 150,
+          "op": "input",
+          "scope": [
+            12,
+            23,
+            27
+          ],
+          "table": 253
+        },
+        {
+          "clause": 151,
+          "op": "input",
+          "scope": [
+            5,
+            27,
+            30
+          ],
+          "table": 251
+        },
+        {
+          "left": 0,
+          "op": "join-project",
+          "right": 100,
+          "scope": [
+            2,
+            13,
+            19,
+            28
+          ],
+          "table": 65407
+        },
+        {
+          "left": 1,
+          "op": "join-project",
+          "right": 28,
+          "scope": [
+            4,
+            5,
+            20,
+            21
+          ],
+          "table": 65407
+        },
+        {
+          "left": 1,
+          "op": "join-project",
+          "right": 48,
+          "scope": [
+            2,
+            7,
+            16,
+            21
+          ],
+          "table": 65503
+        },
+        {
+          "left": 2,
+          "op": "join-project",
+          "right": 25,
+          "scope": [
+            2,
+            13,
+            23,
+            24
+          ],
+          "table": 65471
+        },
+        {
+          "left": 2,
+          "op": "join-project",
+          "right": 31,
+          "scope": [
+            11,
+            15,
+            19,
+            23
+          ],
+          "table": 65279
+        },
+        {
+          "left": 2,
+          "op": "join-project",
+          "right": 86,
+          "scope": [
+            4,
+            15,
+            23,
+            28
+          ],
+          "table": 65503
+        },
+        {
+          "left": 3,
+          "op": "join-project",
+          "right": 17,
+          "scope": [
+            4,
+            13,
+            23,
+            30
+          ],
+          "table": 65023
+        },
+        {
+          "left": 3,
+          "op": "join-project",
+          "right": 94,
+          "scope": [
+            6,
+            11,
+            23,
+            26
+          ],
+          "table": 64511
+        },
+        {
+          "left": 4,
+          "op": "join-project",
+          "right": 61,
+          "scope": [
+            4,
+            7,
+            25,
+            26
+          ],
+          "table": 65531
+        },
+        {
+          "left": 4,
+          "op": "join-project",
+          "right": 87,
+          "scope": [
+            4,
+            15,
+            22,
+            29
+          ],
+          "table": 49151
+        },
+        {
+          "left": 5,
+          "op": "join-project",
+          "right": 33,
+          "scope": [
+            1,
+            9,
+            19,
+            27
+          ],
+          "table": 65519
+        },
+        {
+          "left": 5,
+          "op": "join-project",
+          "right": 70,
+          "scope": [
+            1,
+            15,
+            21,
+            27
+          ],
+          "table": 65519
+        },
+        {
+          "left": 6,
+          "op": "join-project",
+          "right": 58,
+          "scope": [
+            2,
+            13,
+            18,
+            29
+          ],
+          "table": 65407
+        },
+        {
+          "left": 6,
+          "op": "join-project",
+          "right": 117,
+          "scope": [
+            2,
+            7,
+            18,
+            21
+          ],
+          "table": 65503
+        },
+        {
+          "left": 7,
+          "op": "join-project",
+          "right": 14,
+          "scope": [
+            6,
+            12,
+            20,
+            30
+          ],
+          "table": 65023
+        },
+        {
+          "left": 7,
+          "op": "join-project",
+          "right": 112,
+          "scope": [
+            17,
+            18,
+            29,
+            30
+          ],
+          "table": 64511
+        },
+        {
+          "left": 8,
+          "op": "join-project",
+          "right": 59,
+          "scope": [
+            3,
+            10,
+            17,
+            24
+          ],
+          "table": 49151
+        },
+        {
+          "left": 9,
+          "op": "join-project",
+          "right": 40,
+          "scope": [
+            6,
+            10,
+            16,
+            28
+          ],
+          "table": 65023
+        },
+        {
+          "left": 9,
+          "op": "join-project",
+          "right": 53,
+          "scope": [
+            2,
+            10,
+            20,
+            28
+          ],
+          "table": 57343
+        },
+        {
+          "left": 9,
+          "op": "join-project",
+          "right": 64,
+          "scope": [
+            10,
+            13,
+            27,
+            28
+          ],
+          "table": 49151
+        },
+        {
+          "left": 10,
+          "op": "join-project",
+          "right": 85,
+          "scope": [
+            5,
+            9,
+            20,
+            24
+          ],
+          "table": 64511
+        },
+        {
+          "left": 11,
+          "op": "join-project",
+          "right": 39,
+          "scope": [
+            4,
+            6,
+            13,
+            15
+          ],
+          "table": 65531
+        },
+        {
+          "left": 12,
+          "op": "join-project",
+          "right": 86,
+          "scope": [
+            11,
+            15,
+            24,
+            28
+          ],
+          "table": 65503
+        },
+        {
+          "left": 12,
+          "op": "join-project",
+          "right": 109,
+          "scope": [
+            4,
+            15,
+            23,
+            28
+          ],
+          "table": 65534
+        },
+        {
+          "left": 12,
+          "op": "join-project",
+          "right": 119,
+          "scope": [
+            4,
+            15,
+            19,
+            23
+          ],
+          "table": 65279
+        },
+        {
+          "left": 13,
+          "op": "join-project",
+          "right": 65,
+          "scope": [
+            3,
+            9,
+            23,
+            29
+          ],
+          "table": 65534
+        },
+        {
+          "left": 14,
+          "op": "join-project",
+          "right": 30,
+          "scope": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "table": 65534
+        },
+        {
+          "left": 14,
+          "op": "join-project",
+          "right": 50,
+          "scope": [
+            1,
+            7,
+            18,
+            20
+          ],
+          "table": 65534
+        },
+        {
+          "left": 15,
+          "op": "join-project",
+          "right": 125,
+          "scope": [
+            1,
+            18,
+            19,
+            27
+          ],
+          "table": 65519
+        },
+        {
+          "left": 16,
+          "op": "join-project",
+          "right": 123,
+          "scope": [
+            3,
+            4,
+            25,
+            26
+          ],
+          "table": 65533
+        },
+        {
+          "left": 17,
+          "op": "join-project",
+          "right": 144,
+          "scope": [
+            3,
+            25,
+            26,
+            30
+          ],
+          "table": 65023
+        },
+        {
+          "left": 18,
+          "op": "join-project",
+          "right": 58,
+          "scope": [
+            11,
+            13,
+            27,
+            29
+          ],
+          "table": 65407
+        },
+        {
+          "left": 18,
+          "op": "join-project",
+          "right": 97,
+          "scope": [
+            6,
+            11,
+            16,
+            29
+          ],
+          "table": 65527
+        },
+        {
+          "left": 19,
+          "op": "join-project",
+          "right": 124,
+          "scope": [
+            4,
+            15,
+            18,
+            22
+          ],
+          "table": 64511
+        },
+        {
+          "left": 19,
+          "op": "join-project",
+          "right": 127,
+          "scope": [
+            2,
+            13,
+            15,
+            29
+          ],
+          "table": 65407
+        },
+        {
+          "left": 19,
+          "op": "join-project",
+          "right": 130,
+          "scope": [
+            15,
+            17,
+            29,
+            30
+          ],
+          "table": 65023
+        },
+        {
+          "left": 20,
+          "op": "join-project",
+          "right": 141,
+          "scope": [
+            7,
+            18,
+            20,
+            21
+          ],
+          "table": 65533
+        },
+        {
+          "left": 20,
+          "op": "join-project",
+          "right": 142,
+          "scope": [
+            1,
+            18,
+            19,
+            20
+          ],
+          "table": 65519
+        },
+        {
+          "left": 21,
+          "op": "join-project",
+          "right": 82,
+          "scope": [
+            4,
+            12,
+            19,
+            27
+          ],
+          "table": 65533
+        },
+        {
+          "left": 22,
+          "op": "join-project",
+          "right": 74,
+          "scope": [
+            2,
+            8,
+            21,
+            31
+          ],
+          "table": 65534
+        },
+        {
+          "left": 22,
+          "op": "join-project",
+          "right": 103,
+          "scope": [
+            8,
+            13,
+            24,
+            29
+          ],
+          "table": 65534
+        },
+        {
+          "left": 22,
+          "op": "join-project",
+          "right": 106,
+          "scope": [
+            8,
+            14,
+            19,
+            21
+          ],
+          "table": 65531
+        },
+        {
+          "left": 23,
+          "op": "join-project",
+          "right": 47,
+          "scope": [
+            6,
+            14,
+            22,
+            30
+          ],
+          "table": 63487
+        },
+        {
+          "left": 24,
+          "op": "join-project",
+          "right": 108,
+          "scope": [
+            1,
+            5,
+            9,
+            13
+          ],
+          "table": 65527
+        },
+        {
+          "left": 25,
+          "op": "join-project",
+          "right": 115,
+          "scope": [
+            13,
+            15,
+            19,
+            28
+          ],
+          "table": 65407
+        },
+        {
+          "left": 25,
+          "op": "join-project",
+          "right": 149,
+          "scope": [
+            13,
+            15,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "left": 26,
+          "op": "join-project",
+          "right": 107,
+          "scope": [
+            4,
+            6,
+            17,
+            19
+          ],
+          "table": 65279
+        },
+        {
+          "left": 26,
+          "op": "join-project",
+          "right": 138,
+          "scope": [
+            4,
+            15,
+            19,
+            28
+          ],
+          "table": 65519
+        },
+        {
+          "left": 26,
+          "op": "join-project",
+          "right": 139,
+          "scope": [
+            4,
+            15,
+            23
+          ],
+          "table": 239
+        },
+        {
+          "left": 27,
+          "op": "join-project",
+          "right": 91,
+          "scope": [
+            3,
+            15,
+            21,
+            25
+          ],
+          "table": 63487
+        },
+        {
+          "left": 28,
+          "op": "join-project",
+          "right": 60,
+          "scope": [
+            4,
+            12,
+            20,
+            28
+          ],
+          "table": 57343
+        },
+        {
+          "left": 29,
+          "op": "join-project",
+          "right": 66,
+          "scope": [
+            3,
+            11,
+            21,
+            29
+          ],
+          "table": 65534
+        },
+        {
+          "left": 29,
+          "op": "join-project",
+          "right": 68,
+          "scope": [
+            5,
+            11,
+            19,
+            29
+          ],
+          "table": 65503
+        },
+        {
+          "left": 29,
+          "op": "join-project",
+          "right": 146,
+          "scope": [
+            13,
+            22,
+            27,
+            29
+          ],
+          "table": 65407
+        },
+        {
+          "left": 29,
+          "op": "join-project",
+          "right": 147,
+          "scope": [
+            6,
+            16,
+            22,
+            29
+          ],
+          "table": 65503
+        },
+        {
+          "left": 30,
+          "op": "join-project",
+          "right": 161,
+          "scope": [
+            4,
+            6,
+            17,
+            21
+          ],
+          "table": 65534
+        },
+        {
+          "left": 31,
+          "op": "join-project",
+          "right": 137,
+          "scope": [
+            15,
+            19,
+            24,
+            28
+          ],
+          "table": 65519
+        },
+        {
+          "left": 31,
+          "op": "join-project",
+          "right": 167,
+          "scope": [
+            5,
+            11,
+            24,
+            29
+          ],
+          "table": 65503
+        },
+        {
+          "left": 32,
+          "op": "join-project",
+          "right": 96,
+          "scope": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "table": 32767
+        },
+        {
+          "left": 33,
+          "op": "join-project",
+          "right": 63,
+          "scope": [
+            19,
+            21,
+            26,
+            28
+          ],
+          "table": 65527
+        },
+        {
+          "left": 34,
+          "op": "join-project",
+          "right": 129,
+          "scope": [
+            12,
+            20,
+            24,
+            30
+          ],
+          "table": 61439
+        },
+        {
+          "left": 34,
+          "op": "join-project",
+          "right": 157,
+          "scope": [
+            14,
+            22,
+            24,
+            30
+          ],
+          "table": 57343
+        },
+        {
+          "left": 35,
+          "op": "join-project",
+          "right": 133,
+          "scope": [
+            8,
+            10,
+            20,
+            28
+          ],
+          "table": 57343
+        },
+        {
+          "left": 35,
+          "op": "join-project",
+          "right": 154,
+          "scope": [
+            2,
+            10,
+            21,
+            31
+          ],
+          "table": 65534
+        },
+        {
+          "left": 36,
+          "op": "join-project",
+          "right": 159,
+          "scope": [
+            13,
+            15,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "left": 36,
+          "op": "join-project",
+          "right": 171,
+          "scope": [
+            19,
+            24,
+            28
+          ],
+          "table": 251
+        },
+        {
+          "left": 36,
+          "op": "join-project",
+          "right": 174,
+          "scope": [
+            15,
+            21,
+            26,
+            28
+          ],
+          "table": 65527
+        },
+        {
+          "left": 37,
+          "op": "join-project",
+          "right": 106,
+          "scope": [
+            19,
+            21,
+            27,
+            29
+          ],
+          "table": 65279
+        },
+        {
+          "left": 37,
+          "op": "join-project",
+          "right": 156,
+          "scope": [
+            8,
+            19,
+            21,
+            27
+          ],
+          "table": 65534
+        },
+        {
+          "left": 38,
+          "op": "join-project",
+          "right": 89,
+          "scope": [
+            3,
+            13,
+            23,
+            25
+          ],
+          "table": 63487
+        },
+        {
+          "left": 38,
+          "op": "join-project",
+          "right": 102,
+          "scope": [
+            13,
+            14,
+            20,
+            23
+          ],
+          "table": 65407
+        },
+        {
+          "left": 39,
+          "op": "join-project",
+          "right": 85,
+          "scope": [
+            4,
+            13,
+            17,
+            24
+          ],
+          "table": 65279
+        },
+        {
+          "left": 39,
+          "op": "join-project",
+          "right": 121,
+          "scope": [
+            9,
+            13,
+            23,
+            30
+          ],
+          "table": 65279
+        },
+        {
+          "left": 40,
+          "op": "join-project",
+          "right": 169,
+          "scope": [
+            6,
+            16,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "left": 41,
+          "op": "join-project",
+          "right": 126,
+          "scope": [
+            15,
+            20,
+            21,
+            27
+          ],
+          "table": 65471
+        },
+        {
+          "left": 42,
+          "op": "join-project",
+          "right": 109,
+          "scope": [
+            8,
+            11,
+            20,
+            23
+          ],
+          "table": 65519
+        },
+        {
+          "left": 42,
+          "op": "join-project",
+          "right": 177,
+          "scope": [
+            10,
+            20,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "left": 43,
+          "op": "join-project",
+          "right": 170,
+          "scope": [
+            4,
+            6,
+            17
+          ],
+          "table": 254
+        },
+        {
+          "left": 44,
+          "op": "join-project",
+          "right": 153,
+          "scope": [
+            8,
+            12,
+            19,
+            27
+          ],
+          "table": 65534
+        },
+        {
+          "left": 45,
+          "op": "join-project",
+          "right": 158,
+          "scope": [
+            5,
+            9,
+            12,
+            13
+          ],
+          "table": 65503
+        },
+        {
+          "left": 45,
+          "op": "join-project",
+          "right": 173,
+          "scope": [
+            1,
+            10,
+            11,
+            12
+          ],
+          "table": 49151
+        },
+        {
+          "left": 46,
+          "op": "join-project",
+          "right": 195,
+          "scope": [
+            10,
+            11,
+            12
+          ],
+          "table": 127
+        },
+        {
+          "left": 49,
+          "op": "join-project",
+          "right": 131,
+          "scope": [
+            10,
+            17,
+            24,
+            27
+          ],
+          "table": 65407
+        },
+        {
+          "left": 51,
+          "op": "join-project",
+          "right": 78,
+          "scope": [
+            3,
+            13,
+            17,
+            31
+          ],
+          "table": 57343
+        },
+        {
+          "left": 51,
+          "op": "join-project",
+          "right": 186,
+          "scope": [
+            4,
+            13,
+            24,
+            28
+          ],
+          "table": 65519
+        },
+        {
+          "left": 52,
+          "op": "join-project",
+          "right": 183,
+          "scope": [
+            8,
+            21,
+            27
+          ],
+          "table": 254
+        },
+        {
+          "left": 52,
+          "op": "join-project",
+          "right": 193,
+          "scope": [
+            8,
+            12,
+            27
+          ],
+          "table": 254
+        },
+        {
+          "left": 54,
+          "op": "join-project",
+          "right": 185,
+          "scope": [
+            14,
+            20,
+            23,
+            25
+          ],
+          "table": 63487
+        },
+        {
+          "left": 55,
+          "op": "join-project",
+          "right": 176,
+          "scope": [
+            14,
+            24,
+            30
+          ],
+          "table": 127
+        },
+        {
+          "left": 56,
+          "op": "join-project",
+          "right": 148,
+          "scope": [
+            4,
+            15,
+            18
+          ],
+          "table": 251
+        },
+        {
+          "left": 57,
+          "op": "join-project",
+          "right": 84,
+          "scope": [
+            18,
+            21,
+            24,
+            31
+          ],
+          "table": 65023
+        },
+        {
+          "left": 58,
+          "op": "join-project",
+          "right": 188,
+          "scope": [
+            6,
+            13,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "left": 59,
+          "op": "join-project",
+          "right": 198,
+          "scope": [
+            13,
+            17,
+            18,
+            31
+          ],
+          "table": 64511
+        },
+        {
+          "left": 60,
+          "op": "join-project",
+          "right": 132,
+          "scope": [
+            6,
+            10,
+            12,
+            28
+          ],
+          "table": 65023
+        },
+        {
+          "left": 62,
+          "op": "join-project",
+          "right": 140,
+          "scope": [
+            3,
+            23,
+            29,
+            30
+          ],
+          "table": 65279
+        },
+        {
+          "left": 62,
+          "op": "join-project",
+          "right": 187,
+          "scope": [
+            13,
+            23,
+            30
+          ],
+          "table": 239
+        },
+        {
+          "left": 64,
+          "op": "join-project",
+          "right": 168,
+          "scope": [
+            13,
+            27,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "left": 66,
+          "op": "join-project",
+          "right": 164,
+          "scope": [
+            15,
+            21,
+            22,
+            25
+          ],
+          "table": 65023
+        },
+        {
+          "left": 67,
+          "op": "join-project",
+          "right": 88,
+          "scope": [
+            24,
+            25,
+            28,
+            29
+          ],
+          "table": 65407
+        },
+        {
+          "left": 69,
+          "op": "join-project",
+          "right": 145,
+          "scope": [
+            3,
+            25,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 70,
+          "op": "join-project",
+          "right": 181,
+          "scope": [
+            21,
+            26,
+            28
+          ],
+          "table": 253
+        },
+        {
+          "left": 71,
+          "op": "join-project",
+          "right": 178,
+          "scope": [
+            2,
+            21,
+            31
+          ],
+          "table": 254
+        },
+        {
+          "left": 72,
+          "op": "join-project",
+          "right": 208,
+          "scope": [
+            10,
+            12,
+            28
+          ],
+          "table": 239
+        },
+        {
+          "left": 73,
+          "op": "join-project",
+          "right": 207,
+          "scope": [
+            13,
+            17,
+            18
+          ],
+          "table": 251
+        },
+        {
+          "left": 75,
+          "op": "join-project",
+          "right": 203,
+          "scope": [
+            16,
+            24,
+            30
+          ],
+          "table": 127
+        },
+        {
+          "left": 76,
+          "op": "join-project",
+          "right": 143,
+          "scope": [
+            18,
+            19,
+            27
+          ],
+          "table": 251
+        },
+        {
+          "left": 76,
+          "op": "join-project",
+          "right": 152,
+          "scope": [
+            18,
+            19,
+            20
+          ],
+          "table": 251
+        },
+        {
+          "left": 77,
+          "op": "join-project",
+          "right": 197,
+          "scope": [
+            10,
+            17,
+            24
+          ],
+          "table": 127
+        },
+        {
+          "left": 79,
+          "op": "join-project",
+          "right": 166,
+          "scope": [
+            8,
+            11,
+            21,
+            29
+          ],
+          "table": 65533
+        },
+        {
+          "left": 79,
+          "op": "join-project",
+          "right": 190,
+          "scope": [
+            3,
+            11,
+            20,
+            23
+          ],
+          "table": 65503
+        },
+        {
+          "left": 80,
+          "op": "join-project",
+          "right": 209,
+          "scope": [
+            3,
+            23,
+            30
+          ],
+          "table": 239
+        },
+        {
+          "left": 80,
+          "op": "join-project",
+          "right": 214,
+          "scope": [
+            25,
+            29,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "left": 81,
+          "op": "join-project",
+          "right": 135,
+          "scope": [
+            9,
+            20,
+            24,
+            29
+          ],
+          "table": 57343
+        },
+        {
+          "left": 81,
+          "op": "join-project",
+          "right": 172,
+          "scope": [
+            5,
+            11,
+            24
+          ],
+          "table": 223
+        },
+        {
+          "left": 81,
+          "op": "join-project",
+          "right": 206,
+          "scope": [
+            5,
+            6,
+            13,
+            24
+          ],
+          "table": 32767
+        },
+        {
+          "left": 81,
+          "op": "join-project",
+          "right": 213,
+          "scope": [
+            5,
+            24,
+            25,
+            28
+          ],
+          "table": 32767
+        },
+        {
+          "left": 83,
+          "op": "join-project",
+          "right": 98,
+          "scope": [
+            10,
+            12,
+            24,
+            30
+          ],
+          "table": 65503
+        },
+        {
+          "left": 83,
+          "op": "join-project",
+          "right": 175,
+          "scope": [
+            12,
+            24,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "left": 84,
+          "op": "join-project",
+          "right": 128,
+          "scope": [
+            2,
+            18,
+            21
+          ],
+          "table": 247
+        },
+        {
+          "left": 84,
+          "op": "join-project",
+          "right": 151,
+          "scope": [
+            7,
+            20,
+            21
+          ],
+          "table": 253
+        },
+        {
+          "left": 85,
+          "op": "join-project",
+          "right": 222,
+          "scope": [
+            9,
+            10,
+            24
+          ],
+          "table": 127
+        },
+        {
+          "left": 86,
+          "op": "join-project",
+          "right": 162,
+          "scope": [
+            15,
+            19,
+            24,
+            28
+          ],
+          "table": 65471
+        },
+        {
+          "left": 86,
+          "op": "join-project",
+          "right": 199,
+          "scope": [
+            13,
+            24,
+            28
+          ],
+          "table": 251
+        },
+        {
+          "left": 87,
+          "op": "join-project",
+          "right": 212,
+          "scope": [
+            15,
+            21,
+            25
+          ],
+          "table": 223
+        },
+        {
+          "left": 89,
+          "op": "join-project",
+          "right": 202,
+          "scope": [
+            20,
+            23,
+            25
+          ],
+          "table": 223
+        },
+        {
+          "left": 90,
+          "op": "join-project",
+          "right": 150,
+          "scope": [
+            15,
+            29,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 92,
+          "op": "join-project",
+          "right": 189,
+          "scope": [
+            15,
+            21,
+            27
+          ],
+          "table": 251
+        },
+        {
+          "left": 93,
+          "op": "join-project",
+          "right": 194,
+          "scope": [
+            9,
+            12,
+            13
+          ],
+          "table": 251
+        },
+        {
+          "left": 94,
+          "op": "join-project",
+          "right": 229,
+          "scope": [
+            5,
+            11,
+            13,
+            24
+          ],
+          "table": 32767
+        },
+        {
+          "left": 95,
+          "op": "join-project",
+          "right": 122,
+          "scope": [
+            6,
+            17,
+            23,
+            26
+          ],
+          "table": 64511
+        },
+        {
+          "left": 96,
+          "op": "join-project",
+          "right": 217,
+          "scope": [
+            7,
+            12,
+            13,
+            28
+          ],
+          "table": 57343
+        },
+        {
+          "left": 99,
+          "op": "join-project",
+          "right": 245,
+          "scope": [
+            12,
+            13,
+            27,
+            28
+          ],
+          "table": 64511
+        },
+        {
+          "left": 101,
+          "op": "join-project",
+          "right": 109,
+          "scope": [
+            21,
+            23,
+            28,
+            30
+          ],
+          "table": 65534
+        },
+        {
+          "left": 101,
+          "op": "join-project",
+          "right": 223,
+          "scope": [
+            8,
+            21,
+            29,
+            30
+          ],
+          "table": 65533
+        },
+        {
+          "left": 102,
+          "op": "join-project",
+          "right": 224,
+          "scope": [
+            11,
+            20,
+            23
+          ],
+          "table": 251
+        },
+        {
+          "left": 103,
+          "op": "join-project",
+          "right": 118,
+          "scope": [
+            2,
+            21,
+            23,
+            24
+          ],
+          "table": 65471
+        },
+        {
+          "left": 104,
+          "op": "join-project",
+          "right": 230,
+          "scope": [
+            24,
+            25,
+            28
+          ],
+          "table": 127
+        },
+        {
+          "left": 105,
+          "op": "join-project",
+          "right": 250,
+          "scope": [
+            21,
+            23,
+            24
+          ],
+          "table": 247
+        },
+        {
+          "left": 107,
+          "op": "join-project",
+          "right": 244,
+          "scope": [
+            6,
+            23,
+            26
+          ],
+          "table": 239
+        },
+        {
+          "left": 110,
+          "op": "join-project",
+          "right": 253,
+          "scope": [
+            23,
+            26,
+            28
+          ],
+          "table": 251
+        },
+        {
+          "left": 111,
+          "op": "join-project",
+          "right": 227,
+          "scope": [
+            9,
+            20,
+            24
+          ],
+          "table": 223
+        },
+        {
+          "left": 113,
+          "op": "join-project",
+          "right": 246,
+          "scope": [
+            13,
+            23,
+            27,
+            28
+          ],
+          "table": 65023
+        },
+        {
+          "left": 113,
+          "op": "join-project",
+          "right": 252,
+          "scope": [
+            12,
+            21,
+            24,
+            27
+          ],
+          "table": 65527
+        },
+        {
+          "left": 160,
+          "op": "join-project",
+          "right": 241,
+          "scope": [
+            13,
+            21,
+            27,
+            29
+          ],
+          "table": 65527
+        },
+        {
+          "left": 163,
+          "op": "join-project",
+          "right": 120,
+          "scope": [
+            15,
+            23,
+            28
+          ],
+          "table": 251
+        },
+        {
+          "left": 179,
+          "op": "join-project",
+          "right": 236,
+          "scope": [
+            13,
+            19,
+            24,
+            28
+          ],
+          "table": 65407
+        },
+        {
+          "left": 179,
+          "op": "join-project",
+          "right": 259,
+          "scope": [
+            13,
+            23,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "left": 180,
+          "op": "join-project",
+          "right": 260,
+          "scope": [
+            13,
+            24,
+            28
+          ],
+          "table": 247
+        },
+        {
+          "left": 188,
+          "op": "join-project",
+          "right": 34,
+          "scope": [
+            16,
+            24,
+            29,
+            30
+          ],
+          "table": 64511
+        },
+        {
+          "left": 191,
+          "op": "join-project",
+          "right": 255,
+          "scope": [
+            9,
+            10,
+            24,
+            28
+          ],
+          "table": 57343
+        },
+        {
+          "left": 192,
+          "op": "join-project",
+          "right": 136,
+          "scope": [
+            4,
+            13,
+            15,
+            17
+          ],
+          "table": 65534
+        },
+        {
+          "left": 196,
+          "op": "join-project",
+          "right": 249,
+          "scope": [
+            10,
+            12,
+            20,
+            23
+          ],
+          "table": 65407
+        },
+        {
+          "left": 200,
+          "op": "join-project",
+          "right": 257,
+          "scope": [
+            8,
+            12,
+            24,
+            27
+          ],
+          "table": 65531
+        },
+        {
+          "left": 201,
+          "op": "join-project",
+          "right": 267,
+          "scope": [
+            8,
+            24,
+            27
+          ],
+          "table": 254
+        },
+        {
+          "left": 204,
+          "op": "join-project",
+          "right": 265,
+          "scope": [
+            4,
+            13,
+            17,
+            18
+          ],
+          "table": 65534
+        },
+        {
+          "left": 210,
+          "op": "join-project",
+          "right": 184,
+          "scope": [
+            3,
+            23,
+            25,
+            30
+          ],
+          "table": 57343
+        },
+        {
+          "left": 211,
+          "op": "join-project",
+          "right": 155,
+          "scope": [
+            8,
+            24,
+            27,
+            29
+          ],
+          "table": 65519
+        },
+        {
+          "left": 211,
+          "op": "join-project",
+          "right": 258,
+          "scope": [
+            13,
+            21,
+            29
+          ],
+          "table": 247
+        },
+        {
+          "left": 214,
+          "op": "join-project",
+          "right": 270,
+          "scope": [
+            3,
+            23,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 215,
+          "op": "join-project",
+          "right": 254,
+          "scope": [
+            21,
+            23,
+            28
+          ],
+          "table": 253
+        },
+        {
+          "left": 216,
+          "op": "join-project",
+          "right": 205,
+          "scope": [
+            2,
+            18,
+            21,
+            24
+          ],
+          "table": 65531
+        },
+        {
+          "left": 217,
+          "op": "join-project",
+          "right": 231,
+          "scope": [
+            12,
+            24,
+            28,
+            30
+          ],
+          "table": 65471
+        },
+        {
+          "left": 218,
+          "op": "join-project",
+          "right": 269,
+          "scope": [
+            4,
+            13,
+            18
+          ],
+          "table": 254
+        },
+        {
+          "left": 219,
+          "op": "join-project",
+          "right": 263,
+          "scope": [
+            24,
+            29,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 220,
+          "op": "join-project",
+          "right": 182,
+          "scope": [
+            18,
+            21,
+            27,
+            29
+          ],
+          "table": 65279
+        },
+        {
+          "left": 221,
+          "op": "join-project",
+          "right": 141,
+          "scope": [
+            18,
+            20,
+            21
+          ],
+          "table": 254
+        },
+        {
+          "left": 225,
+          "op": "join-project",
+          "right": 273,
+          "scope": [
+            23,
+            30
+          ],
+          "table": 11
+        },
+        {
+          "left": 281,
+          "op": "join-project",
+          "right": 2,
+          "scope": [
+            15,
+            24,
+            30
+          ],
+          "table": 239
+        },
+        {
+          "left": 281,
+          "op": "join-project",
+          "right": 247,
+          "scope": [
+            21,
+            23,
+            28
+          ],
+          "table": 254
+        },
+        {
+          "left": 281,
+          "op": "join-project",
+          "right": 252,
+          "scope": [
+            21,
+            24,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 226,
+          "op": "join-project",
+          "right": 238,
+          "scope": [
+            15,
+            21,
+            29,
+            30
+          ],
+          "table": 57343
+        },
+        {
+          "left": 226,
+          "op": "join-project",
+          "right": 278,
+          "scope": [
+            24,
+            25,
+            30
+          ],
+          "table": 223
+        },
+        {
+          "left": 228,
+          "op": "join-project",
+          "right": 243,
+          "scope": [
+            5,
+            13,
+            24
+          ],
+          "table": 127
+        },
+        {
+          "left": 232,
+          "op": "join-project",
+          "right": 276,
+          "scope": [
+            12,
+            24,
+            28
+          ],
+          "table": 191
+        },
+        {
+          "left": 233,
+          "op": "join-project",
+          "right": 275,
+          "scope": [
+            18,
+            21,
+            24
+          ],
+          "table": 253
+        },
+        {
+          "left": 234,
+          "op": "join-project",
+          "right": 116,
+          "scope": [
+            4,
+            5,
+            7,
+            21
+          ],
+          "table": 65407
+        },
+        {
+          "left": 235,
+          "op": "join-project",
+          "right": 264,
+          "scope": [
+            9,
+            24,
+            28
+          ],
+          "table": 127
+        },
+        {
+          "left": 237,
+          "op": "join-project",
+          "right": 262,
+          "scope": [
+            24,
+            28
+          ],
+          "table": 13
+        },
+        {
+          "left": 292,
+          "op": "join-project",
+          "right": 251,
+          "scope": [
+            24,
+            25
+          ],
+          "table": 7
+        },
+        {
+          "left": 292,
+          "op": "join-project",
+          "right": 288,
+          "scope": [
+            12,
+            24
+          ],
+          "table": 11
+        },
+        {
+          "left": 292,
+          "op": "join-project",
+          "right": 291,
+          "scope": [
+            9,
+            24
+          ],
+          "table": 7
+        },
+        {
+          "left": 293,
+          "op": "join-project",
+          "right": 286,
+          "scope": [
+            24,
+            30
+          ],
+          "table": 7
+        },
+        {
+          "left": 294,
+          "op": "join-project",
+          "right": 93,
+          "scope": [
+            5,
+            9,
+            24
+          ],
+          "table": 239
+        },
+        {
+          "left": 294,
+          "op": "join-project",
+          "right": 242,
+          "scope": [
+            9,
+            13,
+            24
+          ],
+          "table": 239
+        },
+        {
+          "left": 295,
+          "op": "join-project",
+          "right": 297,
+          "scope": [
+            5,
+            24
+          ],
+          "table": 11
+        },
+        {
+          "left": 295,
+          "op": "join-project",
+          "right": 298,
+          "scope": [
+            13,
+            24
+          ],
+          "table": 11
+        },
+        {
+          "left": 296,
+          "op": "join-project",
+          "right": 282,
+          "scope": [
+            15,
+            30
+          ],
+          "table": 11
+        },
+        {
+          "left": 296,
+          "op": "join-project",
+          "right": 284,
+          "scope": [
+            21,
+            30
+          ],
+          "table": 7
+        },
+        {
+          "left": 299,
+          "op": "join-project",
+          "right": 287,
+          "scope": [
+            13,
+            24
+          ],
+          "table": 7
+        },
+        {
+          "left": 300,
+          "op": "join-project",
+          "right": 103,
+          "scope": [
+            13,
+            21
+          ],
+          "table": 11
+        },
+        {
+          "left": 300,
+          "op": "join-project",
+          "right": 303,
+          "scope": [
+            24
+          ],
+          "table": 1
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 2,
+          "scope": [
+            15,
+            23
+          ],
+          "table": 11
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 57,
+          "scope": [
+            7,
+            31
+          ],
+          "table": 11
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 252,
+          "scope": [
+            21,
+            23
+          ],
+          "table": 7
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 268,
+          "scope": [
+            8,
+            27
+          ],
+          "table": 14
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 271,
+          "scope": [
+            8,
+            27,
+            29
+          ],
+          "table": 251
+        },
+        {
+          "left": 305,
+          "op": "join-project",
+          "right": 289,
+          "scope": [
+            18,
+            21
+          ],
+          "table": 13
+        },
+        {
+          "left": 301,
+          "op": "join-project",
+          "right": 240,
+          "scope": [
+            29,
+            30
+          ],
+          "table": 11
+        },
+        {
+          "left": 301,
+          "op": "join-project",
+          "right": 285,
+          "scope": [
+            21,
+            29,
+            30
+          ],
+          "table": 191
+        },
+        {
+          "left": 302,
+          "op": "join-project",
+          "right": 313,
+          "scope": [
+            29,
+            30
+          ],
+          "table": 7
+        },
+        {
+          "left": 304,
+          "op": "join-project",
+          "right": 134,
+          "scope": [
+            10,
+            21,
+            27,
+            28
+          ],
+          "table": 49151
+        },
+        {
+          "left": 304,
+          "op": "join-project",
+          "right": 256,
+          "scope": [
+            21,
+            23,
+            27,
+            28
+          ],
+          "table": 65023
+        },
+        {
+          "left": 304,
+          "op": "join-project",
+          "right": 272,
+          "scope": [
+            21,
+            29
+          ],
+          "table": 13
+        },
+        {
+          "left": 304,
+          "op": "join-project",
+          "right": 290,
+          "scope": [
+            4,
+            5,
+            7,
+            13
+          ],
+          "table": 65407
+        },
+        {
+          "left": 304,
+          "op": "join-project",
+          "right": 311,
+          "scope": [
+            13,
+            18
+          ],
+          "table": 11
+        },
+        {
+          "left": 306,
+          "op": "join-project",
+          "right": 238,
+          "scope": [
+            21,
+            23,
+            25
+          ],
+          "table": 191
+        },
+        {
+          "left": 307,
+          "op": "join-project",
+          "right": 318,
+          "scope": [
+            4,
+            5,
+            13,
+            31
+          ],
+          "table": 63487
+        },
+        {
+          "left": 308,
+          "op": "join-project",
+          "right": 266,
+          "scope": [
+            10,
+            12,
+            20,
+            21
+          ],
+          "table": 32767
+        },
+        {
+          "left": 308,
+          "op": "join-project",
+          "right": 274,
+          "scope": [
+            21,
+            28
+          ],
+          "table": 13
+        },
+        {
+          "left": 308,
+          "op": "join-project",
+          "right": 316,
+          "scope": [
+            21,
+            27,
+            28
+          ],
+          "table": 223
+        },
+        {
+          "left": 308,
+          "op": "join-project",
+          "right": 320,
+          "scope": [
+            23,
+            25
+          ],
+          "table": 7
+        },
+        {
+          "left": 309,
+          "op": "join-project",
+          "right": 310,
+          "scope": [
+            8,
+            29
+          ],
+          "table": 14
+        },
+        {
+          "left": 311,
+          "op": "join-project",
+          "right": 279,
+          "scope": [
+            21,
+            27,
+            29
+          ],
+          "table": 239
+        },
+        {
+          "left": 311,
+          "op": "join-project",
+          "right": 280,
+          "scope": [
+            20,
+            21
+          ],
+          "table": 14
+        },
+        {
+          "left": 312,
+          "op": "join-project",
+          "right": 248,
+          "scope": [
+            8,
+            21,
+            29
+          ],
+          "table": 253
+        },
+        {
+          "left": 312,
+          "op": "join-project",
+          "right": 314,
+          "scope": [
+            30
+          ],
+          "table": 1
+        },
+        {
+          "left": 330,
+          "op": "join-project",
+          "right": 98,
+          "scope": [
+            10,
+            20
+          ],
+          "table": 13
+        },
+        {
+          "left": 330,
+          "op": "join-project",
+          "right": 114,
+          "scope": [
+            5,
+            27
+          ],
+          "table": 11
+        },
+        {
+          "left": 317,
+          "op": "join-project",
+          "right": 329,
+          "scope": [
+            8,
+            29
+          ],
+          "table": 13
+        },
+        {
+          "left": 319,
+          "op": "join-project",
+          "right": 73,
+          "scope": [
+            13,
+            31
+          ],
+          "table": 14
+        },
+        {
+          "left": 319,
+          "op": "join-project",
+          "right": 277,
+          "scope": [
+            4,
+            13
+          ],
+          "table": 14
+        },
+        {
+          "left": 323,
+          "op": "join-project",
+          "right": 283,
+          "scope": [
+            23,
+            28
+          ],
+          "table": 14
+        },
+        {
+          "left": 323,
+          "op": "join-project",
+          "right": 315,
+          "scope": [
+            10,
+            21,
+            27
+          ],
+          "table": 191
+        },
+        {
+          "left": 323,
+          "op": "join-project",
+          "right": 324,
+          "scope": [
+            21,
+            27
+          ],
+          "table": 13
+        },
+        {
+          "left": 325,
+          "op": "join-project",
+          "right": 239,
+          "scope": [
+            20,
+            25
+          ],
+          "table": 7
+        },
+        {
+          "left": 326,
+          "op": "join-project",
+          "right": 333,
+          "scope": [
+            29
+          ],
+          "table": 2
+        },
+        {
+          "left": 340,
+          "op": "join-project",
+          "right": 4,
+          "scope": [
+            4,
+            25
+          ],
+          "table": 14
+        },
+        {
+          "left": 340,
+          "op": "join-project",
+          "right": 327,
+          "scope": [
+            21,
+            27
+          ],
+          "table": 14
+        },
+        {
+          "left": 328,
+          "op": "join-project",
+          "right": 116,
+          "scope": [
+            4,
+            5,
+            21
+          ],
+          "table": 247
+        },
+        {
+          "left": 328,
+          "op": "join-project",
+          "right": 337,
+          "scope": [
+            10,
+            20,
+            27
+          ],
+          "table": 239
+        },
+        {
+          "left": 331,
+          "op": "join-project",
+          "right": 322,
+          "scope": [
+            10,
+            12,
+            21
+          ],
+          "table": 127
+        },
+        {
+          "left": 331,
+          "op": "join-project",
+          "right": 344,
+          "scope": [
+            20,
+            27
+          ],
+          "table": 11
+        },
+        {
+          "left": 332,
+          "op": "join-project",
+          "right": 321,
+          "scope": [
+            4,
+            13,
+            27,
+            31
+          ],
+          "table": 57343
+        },
+        {
+          "left": 332,
+          "op": "join-project",
+          "right": 343,
+          "scope": [
+            4,
+            21,
+            27
+          ],
+          "table": 223
+        },
+        {
+          "left": 334,
+          "op": "join-project",
+          "right": 347,
+          "scope": [
+            4,
+            13,
+            27
+          ],
+          "table": 223
+        },
+        {
+          "left": 335,
+          "op": "join-project",
+          "right": 349,
+          "scope": [
+            13,
+            27
+          ],
+          "table": 11
+        },
+        {
+          "left": 336,
+          "op": "join-project",
+          "right": 261,
+          "scope": [
+            13,
+            28
+          ],
+          "table": 13
+        },
+        {
+          "left": 338,
+          "op": "join-project",
+          "right": 342,
+          "scope": [
+            27
+          ],
+          "table": 2
+        },
+        {
+          "left": 352,
+          "op": "join-project",
+          "right": 346,
+          "scope": [
+            20
+          ],
+          "table": 2
+        },
+        {
+          "left": 352,
+          "op": "join-project",
+          "right": 348,
+          "scope": [
+            4,
+            21
+          ],
+          "table": 13
+        },
+        {
+          "left": 352,
+          "op": "join-project",
+          "right": 350,
+          "scope": [
+            13
+          ],
+          "table": 2
+        },
+        {
+          "left": 353,
+          "op": "join-project",
+          "right": 165,
+          "scope": [
+            4,
+            12,
+            28
+          ],
+          "table": 223
+        },
+        {
+          "left": 353,
+          "op": "join-project",
+          "right": 191,
+          "scope": [
+            10,
+            28
+          ],
+          "table": 11
+        },
+        {
+          "left": 353,
+          "op": "join-project",
+          "right": 339,
+          "scope": [
+            25
+          ],
+          "table": 1
+        },
+        {
+          "left": 355,
+          "op": "join-project",
+          "right": 351,
+          "scope": [
+            28
+          ],
+          "table": 2
+        },
+        {
+          "left": 358,
+          "op": "join-project",
+          "right": 341,
+          "scope": [
+            4
+          ],
+          "table": 2
+        },
+        {
+          "left": 359,
+          "op": "join-project",
+          "right": 356,
+          "scope": [
+            4,
+            12
+          ],
+          "table": 13
+        },
+        {
+          "left": 359,
+          "op": "join-project",
+          "right": 357,
+          "scope": [
+            10
+          ],
+          "table": 2
+        },
+        {
+          "left": 360,
+          "op": "join-project",
+          "right": 354,
+          "scope": [
+            21
+          ],
+          "table": 2
+        },
+        {
+          "left": 360,
+          "op": "join-project",
+          "right": 361,
+          "scope": [
+            12
+          ],
+          "table": 2
+        },
+        {
+          "left": 362,
+          "op": "join-project",
+          "right": 345,
+          "scope": [
+            12,
+            21
+          ],
+          "table": 7
+        },
+        {
+          "left": 363,
+          "op": "join-project",
+          "right": 365,
+          "scope": [
+            12
+          ],
+          "table": 1
+        },
+        {
+          "left": 364,
+          "op": "join-project",
+          "right": 366,
+          "scope": [],
+          "table": 0
+        }
+      ],
+      "root": 367,
+      "union_width": 5,
+      "variables": 31
+    },
+    "clauses": [
+      [
+        -2,
+        28,
+        30
+      ],
+      [
+        -5,
+        -16,
+        21
+      ],
+      [
+        -7,
+        -25,
+        30
+      ],
+      [
+        15,
+        -23,
+        24
+      ],
+      [
+        -5,
+        -11,
+        -14
+      ],
+      [
+        13,
+        23,
+        -26
+      ],
+      [
+        4,
+        25,
+        -29
+      ],
+      [
+        1,
+        -26,
+        27
+      ],
+      [
+        -2,
+        16,
+        -18
+      ],
+      [
+        -1,
+        -30,
+        -31
+      ],
+      [
+        12,
+        -18,
+        -30
+      ],
+      [
+        -10,
+        -18,
+        -24
+      ],
+      [
+        10,
+        -22,
+        -28
+      ],
+      [
+        5,
+        -17,
+        20
+      ],
+      [
+        14,
+        -17,
+        -31
+      ],
+      [
+        -6,
+        -9,
+        15
+      ],
+      [
+        4,
+        -11,
+        15
+      ],
+      [
+        3,
+        9,
+        10
+      ],
+      [
+        -6,
+        18,
+        20
+      ],
+      [
+        -9,
+        18,
+        27
+      ],
+      [
+        -3,
+        4,
+        7
+      ],
+      [
+        -4,
+        26,
+        -30
+      ],
+      [
+        -11,
+        16,
+        -27
+      ],
+      [
+        -15,
+        18,
+        29
+      ],
+      [
+        -1,
+        14,
+        -15
+      ],
+      [
+        -7,
+        -19,
+        20
+      ],
+      [
+        -4,
+        27,
+        31
+      ],
+      [
+        8,
+        21,
+        29
+      ],
+      [
+        -8,
+        22,
+        -30
+      ],
+      [
+        -1,
+        8,
+        9
+      ],
+      [
+        -2,
+        -12,
+        14
+      ],
+      [
+        2,
+        -13,
+        -15
+      ],
+      [
+        4,
+        -19,
+        -23
+      ],
+      [
+        2,
+        -17,
+        19
+      ],
+      [
+        -9,
+        -16,
+        -25
+      ],
+      [
+        12,
+        21,
+        -25
+      ],
+      [
+        -4,
+        16,
+        -20
+      ],
+      [
+        11,
+        -22,
+        29
+      ],
+      [
+        6,
+        19,
+        21
+      ],
+      [
+        11,
+        19,
+        -24
+      ],
+      [
+        7,
+        -11,
+        -12
+      ],
+      [
+        9,
+        -19,
+        26
+      ],
+      [
+        6,
+        -24,
+        -30
+      ],
+      [
+        2,
+        -8,
+        10
+      ],
+      [
+        -11,
+        -18,
+        -25
+      ],
+      [
+        -4,
+        10,
+        -14
+      ],
+      [
+        -15,
+        19,
+        28
+      ],
+      [
+        14,
+        21,
+        27
+      ],
+      [
+        -3,
+        -13,
+        -14
+      ],
+      [
+        4,
+        9,
+        13
+      ],
+      [
+        -6,
+        16,
+        22
+      ],
+      [
+        7,
+        -16,
+        -23
+      ],
+      [
+        -1,
+        -20,
+        -21
+      ],
+      [
+        8,
+        -20,
+        -28
+      ],
+      [
+        4,
+        17,
+        -21
+      ],
+      [
+        4,
+        8,
+        12
+      ],
+      [
+        1,
+        -12,
+        13
+      ],
+      [
+        -1,
+        -10,
+        -11
+      ],
+      [
+        -6,
+        8,
+        -14
+      ],
+      [
+        -2,
+        5,
+        7
+      ],
+      [
+        6,
+        25,
+        31
+      ],
+      [
+        -3,
+        -24,
+        27
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        13,
+        -17,
+        28
+      ],
+      [
+        8,
+        -19,
+        27
+      ],
+      [
+        -2,
+        -20,
+        22
+      ],
+      [
+        13,
+        -20,
+        -25
+      ],
+      [
+        -14,
+        -22,
+        -24
+      ],
+      [
+        11,
+        20,
+        -31
+      ],
+      [
+        4,
+        18,
+        22
+      ],
+      [
+        7,
+        24,
+        -31
+      ],
+      [
+        -13,
+        -16,
+        29
+      ],
+      [
+        3,
+        -17,
+        18
+      ],
+      [
+        -15,
+        -16,
+        31
+      ],
+      [
+        12,
+        -16,
+        -28
+      ],
+      [
+        -7,
+        26,
+        29
+      ],
+      [
+        -9,
+        23,
+        -30
+      ],
+      [
+        -9,
+        -21,
+        28
+      ],
+      [
+        -2,
+        4,
+        6
+      ],
+      [
+        -13,
+        22,
+        -27
+      ],
+      [
+        -10,
+        23,
+        29
+      ],
+      [
+        3,
+        21,
+        22
+      ],
+      [
+        -1,
+        -28,
+        29
+      ],
+      [
+        -5,
+        -19,
+        22
+      ],
+      [
+        -5,
+        -26,
+        -31
+      ],
+      [
+        -3,
+        25,
+        -26
+      ],
+      [
+        15,
+        -21,
+        26
+      ],
+      [
+        -10,
+        21,
+        31
+      ],
+      [
+        5,
+        10,
+        -15
+      ],
+      [
+        6,
+        10,
+        12
+      ],
+      [
+        13,
+        18,
+        31
+      ],
+      [
+        -3,
+        5,
+        6
+      ],
+      [
+        2,
+        -29,
+        31
+      ],
+      [
+        -14,
+        -18,
+        28
+      ],
+      [
+        14,
+        -16,
+        -30
+      ],
+      [
+        -1,
+        18,
+        -19
+      ],
+      [
+        -10,
+        -17,
+        -27
+      ],
+      [
+        -3,
+        -28,
+        -31
+      ],
+      [
+        8,
+        -18,
+        26
+      ],
+      [
+        -3,
+        -8,
+        11
+      ],
+      [
+        3,
+        -29,
+        -30
+      ],
+      [
+        -5,
+        -24,
+        -29
+      ],
+      [
+        12,
+        19,
+        -31
+      ],
+      [
+        -1,
+        -2,
+        3
+      ],
+      [
+        12,
+        -20,
+        -24
+      ],
+      [
+        -7,
+        -18,
+        21
+      ],
+      [
+        -9,
+        17,
+        -24
+      ],
+      [
+        -9,
+        -22,
+        31
+      ],
+      [
+        14,
+        20,
+        -26
+      ],
+      [
+        -4,
+        -24,
+        28
+      ],
+      [
+        -15,
+        -22,
+        -25
+      ],
+      [
+        -8,
+        -17,
+        25
+      ],
+      [
+        1,
+        -24,
+        -25
+      ],
+      [
+        -1,
+        4,
+        5
+      ],
+      [
+        14,
+        23,
+        -25
+      ],
+      [
+        -15,
+        -17,
+        -30
+      ],
+      [
+        1,
+        -16,
+        -17
+      ],
+      [
+        -3,
+        -12,
+        -15
+      ],
+      [
+        15,
+        20,
+        27
+      ],
+      [
+        -10,
+        19,
+        -25
+      ],
+      [
+        5,
+        9,
+        -12
+      ],
+      [
+        5,
+        18,
+        23
+      ],
+      [
+        6,
+        -11,
+        -13
+      ],
+      [
+        2,
+        -25,
+        -27
+      ],
+      [
+        11,
+        -17,
+        -26
+      ],
+      [
+        -7,
+        -10,
+        -13
+      ],
+      [
+        -6,
+        27,
+        29
+      ],
+      [
+        -7,
+        -9,
+        14
+      ],
+      [
+        -10,
+        20,
+        30
+      ],
+      [
+        7,
+        27,
+        -28
+      ],
+      [
+        -13,
+        -19,
+        -30
+      ],
+      [
+        -11,
+        21,
+        30
+      ],
+      [
+        -7,
+        17,
+        22
+      ],
+      [
+        -2,
+        -9,
+        -11
+      ],
+      [
+        -2,
+        -24,
+        -26
+      ],
+      [
+        7,
+        8,
+        15
+      ],
+      [
+        3,
+        -20,
+        23
+      ],
+      [
+        13,
+        -21,
+        24
+      ],
+      [
+        5,
+        -25,
+        -28
+      ],
+      [
+        -2,
+        -21,
+        -23
+      ],
+      [
+        -14,
+        19,
+        -29
+      ],
+      [
+        6,
+        17,
+        23
+      ],
+      [
+        -3,
+        16,
+        -19
+      ],
+      [
+        -12,
+        -22,
+        -26
+      ],
+      [
+        -5,
+        -8,
+        13
+      ],
+      [
+        8,
+        -16,
+        -24
+      ],
+      [
+        11,
+        23,
+        28
+      ],
+      [
+        -6,
+        -26,
+        28
+      ],
+      [
+        -9,
+        20,
+        29
+      ],
+      [
+        -12,
+        17,
+        29
+      ],
+      [
+        -12,
+        23,
+        27
+      ],
+      [
+        5,
+        -27,
+        30
+      ]
+    ],
+    "variables": 31
+  },
+  "schema_version": 1,
+  "scope": "Exact joins on one shared Boolean assignment followed by existential projection, original coordinates only. Width counts the union before projection. Minimum width five follows from the proper-linear-three-CNF invariant in the accompanying note, not from a capped search. No general polynomial SAT algorithm.",
+  "summary": {
+    "checked_refutations": 2,
+    "maximum_stored_relation_scope": 4,
+    "minimum_join_union_width": 5,
+    "original_enumerated_cells": 6398,
+    "original_input_nodes": 115,
+    "original_join_nodes": 253,
+    "original_proof_bytes": 25890,
+    "original_proof_nodes": 368,
+    "original_stored_table_cells": 3659
+  }
+}
