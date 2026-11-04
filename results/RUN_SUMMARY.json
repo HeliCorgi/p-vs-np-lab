@@ -105,7 +105,7 @@
   },
   "source_sha256": {
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
-    ".github/workflows/cmr-graphic.yml": "ca4c293fb08360efe14f5ec5f8ed80731885e5bf059c83387a66a5d2f878034f",
+    ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
     ".github/workflows/upstream-math.yml": "1fd3cf1bb4ac050258679526c25efa1ffe18066cb7ef75c312b95a59b8326605",
     "Formal.lean": "530eabb7ff67eed70901ffc59410d50e38e3dd7ba8560b12815058ae1174ed6f",
     "Formal/AffineFrontier.lean": "6234e89ef1c32b82bd13e6dc892c5771e7c770ff7fb26a7da59ef455b45ee235",

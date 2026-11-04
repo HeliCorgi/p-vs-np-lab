@@ -27,7 +27,7 @@ jobs:
       - name: Build only the pinned CMR 1.4.0 graph realization CLI
         run: |
           test "$(git -C _cmr-src rev-parse HEAD)" = 0c42a44deb8262a1f2a400add5d6be80e90eda3c
-          cmake -S _cmr-src -B _cmr-build -DCMAKE_BUILD_TYPE=Release -DTESTS=OFF -DGENERATORS=OFF -DGMP=OFF -DSHARED=OFF
+          cmake -S _cmr-src -B _cmr-build -DCMAKE_BUILD_TYPE=Release -DTESTS=OFF -DGENERATORS=OFF -DGMP=ON -DCMAKE_REQUIRE_FIND_PACKAGE_GMP=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=TRUE -DSHARED=OFF
           cmake --build _cmr-build --target cmr_graphic --parallel 2
       - name: Check CMR graph outputs and original witnesses in Python
         run: python3 scripts/check_cmr_graphic.py --executable "$PWD/_cmr-build/cmr-graphic"
