@@ -91,16 +91,34 @@ def _split_at(node, target):
     raise AssertionError('No surviving decomposition of a represented point.')
 
 
-def decide_hole_flats(supports, rhs, *, cover=False):
+def decide_hole_flats(supports, rhs, *, cover=False, overlap=None, max_pairs=None,
+                      max_rows=None, degree=4, max_intersections=None,
+                      condition_on=(), max_slices=256):
     """Decide by symbolic pair sums, returning UNKNOWN when unresolved dependencies remain.
 
     This deterministic polynomial-time *partial* procedure tries one particular
     solution of the last affine relaxation. When that hits a hole and the
     decomposition is nonunique it never reports UNSAT on that basis. Set
     cover=True to try a constructive exclusion-count bound on such fibers.
+    With overlap=None this is the legacy pair/optional first-moment procedure.
+    An explicit project/lattice/refute method instead examines the actual
+    post-merge joint fiber. Only lattice counts admissible tuples of merged
+    flat values; these counts do not count original choices or CNF models.
+    overlap='auto' tries projection only on a small unresolved fiber after the
+    optional cover pass, capped at 128 tested cross-slice pairs. Explicit
+    overlap methods have their own limits; the unbudgeted exact methods do
+    not have a general polynomial bound.
     """
     if type(cover) is not bool:
         raise ValueError("cover must be a Boolean.")
+    if overlap not in (None,'auto','project','lattice','refute'):
+        raise ValueError('Unknown overlap method.')
+    for label,budget in [('max_pairs',max_pairs),('max_rows',max_rows),('max_intersections',max_intersections)]:
+        if budget is not None and (type(budget) is not int or budget<0):
+            raise ValueError(f'{label} must be a nonnegative integer or None.')
+    if type(degree) is not int or degree<0 or (max_slices is not None and
+            (type(max_slices) is not int or max_slices<0)):
+        raise ValueError('Invalid degree or slice limit.')
     groups = _read_groups(supports)
     if any(len(g)>3 for g in groups):
         raise ValueError('hole-flat backend requires at most three distinct options per group.')
@@ -110,6 +128,10 @@ def decide_hole_flats(supports, rhs, *, cover=False):
                pair_tests=0, merges=0, full_merges=0, one_hole_merges=0,
                final_flats=0, max_flat_rank=0, final_hull_rank=0,
                decomposition_nullity=0, split_nodes=0)
+    if overlap is not None:
+        out.update(overlap_method=overlap,overlap_result=None)
+        if overlap=='lattice':
+            out.update(merged_decomposition_count=None,count_scope='admissible post-merge flat tuples; not source models')
     if any(not g for g in groups):
         out.update(status='UNSAT',reason='empty_support')
         return out
@@ -167,23 +189,57 @@ def decide_hole_flats(supports, rhs, *, cover=False):
                 v^=d
             at+=1
         stack.append((node,v))
-    if any(value==node.hole for node,value in stack):
+    def attempt(method):
+        from .fiber_arrangement import solve_flat_arrangement
+        pair_cap = (min(128,max_pairs) if max_pairs is not None else 128) if overlap=='auto' else max_pairs
+        extra = solve_flat_arrangement([(n.anchor,n.dirs,n.hole) for n in nodes], core.target,
+                                       method=method,max_pairs=pair_cap,max_rows=max_rows,degree=degree,
+                                       max_intersections=max_intersections,condition_on=condition_on,
+                                       max_slices=max_slices)
+        out['overlap_result'] = extra
+        out['reason'] = 'overlap_'+extra['reason']
+        out['status'] = extra['status']
+        if method=='lattice':
+            out['merged_decomposition_count'] = extra.get('parameter_result',{}).get('survivor_count')
+        if extra['status']!='SAT':
+            return None
+        if (len(extra['witness'])!=len(nodes) or reduce(xor,extra['witness'],0)!=core.target
+                or any(v==n.hole for n,v in zip(nodes,extra['witness']))):
+            raise AssertionError('Invalid exact arrangement witness.')
+        return list(zip(nodes,extra['witness']))
+
+    if overlap not in (None,'auto'):
+        stack = attempt(overlap)
+        if stack is None:
+            return out
+    elif any(value==node.hole for node,value in stack):
         if not nullity:
             out.update(status='UNSAT', reason='forced_hole')
             return out
-        if not cover:
-            out.update(reason='dependent_flats_hit_hole')
-            return out
-        from .flat_cover import solve_hole_cover
-        extra=solve_hole_cover([(n.anchor,n.dirs,n.hole) for n in nodes], core.target)
-        out['cover_evidence']={k:v for k,v in extra.items() if k!='witness'}
-        if extra['status']!='SAT':
-            out.update(status=extra['status'],reason='cover_'+extra['reason'])
-            return out
-        if (len(extra['witness'])!=len(nodes) or reduce(xor,extra['witness'],0)!=core.target
-                or any(v==n.hole for n,v in zip(nodes,extra['witness']))):
-            raise AssertionError('Invalid avoidance witness.')
-        stack=list(zip(nodes,extra['witness']))
+        unresolved = True
+        if cover:
+            from .flat_cover import solve_hole_cover
+            extra=solve_hole_cover([(n.anchor,n.dirs,n.hole) for n in nodes], core.target)
+            out['cover_evidence']={k:v for k,v in extra.items() if k!='witness'}
+            if extra['status']=='UNSAT':
+                out.update(status='UNSAT',reason='cover_'+extra['reason'])
+                return out
+            if extra['status']=='SAT':
+                if (len(extra['witness'])!=len(nodes) or reduce(xor,extra['witness'],0)!=core.target
+                        or any(v==n.hole for n,v in zip(nodes,extra['witness']))):
+                    raise AssertionError('Invalid avoidance witness.')
+                stack=list(zip(nodes,extra['witness']))
+                unresolved = False
+            else:
+                out['reason']='cover_'+extra['reason']
+        else:
+            out['reason']='dependent_flats_hit_hole'
+        if unresolved:
+            if overlap!='auto' or len(nodes)>40 or nullity>24:
+                return out
+            stack=attempt('project')
+            if stack is None:
+                return out
 
     chosen=[None]*len(core.residual)
     while stack:

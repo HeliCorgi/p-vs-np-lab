@@ -1,0 +1,1104 @@
+{
+  "all_checks_passed": true,
+  "controls": {
+    "formulas": 40,
+    "modes_per_formula": 4,
+    "raw_parameter_assignments_checked": 12552,
+    "source_model_roundtrips_across_modes": 364
+  },
+  "cube_source_cnf": [
+    [
+      -1,
+      -2,
+      -3
+    ],
+    [
+      -1,
+      -2,
+      3
+    ],
+    [
+      -1,
+      2,
+      -3
+    ],
+    [
+      -1,
+      2,
+      3
+    ],
+    [
+      1,
+      -2,
+      -3
+    ],
+    [
+      1,
+      -2,
+      3
+    ],
+    [
+      1,
+      2,
+      -3
+    ],
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "modes": {
+    "relaxed": {
+      "bounded_search": [
+        {
+          "basis_rank": 24,
+          "columns_seen": 46,
+          "degree_limit": 2,
+          "rows_generated": 24,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 396,
+          "columns_seen": 532,
+          "degree_limit": 3,
+          "rows_generated": 480,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 2842,
+          "columns_seen": 3098,
+          "degree_limit": 4,
+          "rows_generated": 4414,
+          "status": "UNSAT",
+          "terms_in_discovered_proof": 54
+        }
+      ],
+      "cube": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 19,
+        "parameter_survivors": 0,
+        "parameter_witness": null,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 0,
+        "source_witness": null,
+        "status": "UNSAT"
+      },
+      "dual_separator": {
+        "degree": 3,
+        "kind": "gf2-static-cube-dual-degree3-v1",
+        "n": 19,
+        "ones": [
+          0,
+          68,
+          1028,
+          16388,
+          262148,
+          80,
+          528,
+          16400,
+          131088,
+          192,
+          4160,
+          32832,
+          1280,
+          8448,
+          262400,
+          3072,
+          66560,
+          20480,
+          135168,
+          49152,
+          327680,
+          131089,
+          32833,
+          8449,
+          3073,
+          135169,
+          49153,
+          518,
+          1030,
+          131078,
+          262150,
+          1282,
+          8450,
+          262402,
+          3074,
+          66562,
+          327682,
+          84,
+          1044,
+          16404,
+          262164,
+          196,
+          1092,
+          4164,
+          16452,
+          32836,
+          262212,
+          1284,
+          16644,
+          262404,
+          3076,
+          17412,
+          66564,
+          263172,
+          20484,
+          266244,
+          49156,
+          278532,
+          327684
+        ],
+        "row_rank": 396
+      },
+      "events_in_cube": 24,
+      "explicit_certificate": {
+        "degree": 4,
+        "kind": "gf2-affine-cover-static-v1",
+        "n": 19,
+        "terms": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            16,
+            5
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            17,
+            3
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            19,
+            4
+          ],
+          [
+            19,
+            5
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            20,
+            3
+          ],
+          [
+            21,
+            0
+          ],
+          [
+            21,
+            2
+          ],
+          [
+            21,
+            4
+          ],
+          [
+            21,
+            6
+          ],
+          [
+            22,
+            0
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            22,
+            4
+          ],
+          [
+            22,
+            5
+          ],
+          [
+            23,
+            0
+          ],
+          [
+            23,
+            1
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            3
+          ]
+        ]
+      },
+      "explicit_certificate_utf8_bytes": 426,
+      "near_miss": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 17,
+        "parameter_survivors": 32,
+        "parameter_witness": 16960,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 1,
+        "source_witness": 0,
+        "status": "SAT"
+      },
+      "occurrence_terms_in_explicit_proof": 54,
+      "separator_rows_checked": 480
+    },
+    "strict": {
+      "bounded_search": [
+        {
+          "basis_rank": 32,
+          "columns_seen": 54,
+          "degree_limit": 2,
+          "rows_generated": 32,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 516,
+          "columns_seen": 645,
+          "degree_limit": 3,
+          "rows_generated": 640,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 3490,
+          "columns_seen": 3716,
+          "degree_limit": 4,
+          "rows_generated": 5771,
+          "status": "UNSAT",
+          "terms_in_discovered_proof": 54
+        }
+      ],
+      "cube": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 19,
+        "parameter_survivors": 0,
+        "parameter_witness": null,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 0,
+        "source_witness": null,
+        "status": "UNSAT"
+      },
+      "dual_separator": {
+        "degree": 3,
+        "kind": "gf2-static-cube-dual-degree3-v1",
+        "n": 19,
+        "ones": [
+          0,
+          68,
+          1028,
+          16388,
+          262148,
+          80,
+          528,
+          16400,
+          131088,
+          192,
+          4160,
+          32832,
+          1280,
+          8448,
+          262400,
+          3072,
+          66560,
+          20480,
+          135168,
+          49152,
+          327680,
+          131089,
+          32833,
+          8449,
+          3073,
+          135169,
+          49153,
+          518,
+          1030,
+          131078,
+          262150,
+          1282,
+          8450,
+          262402,
+          3074,
+          66562,
+          327682,
+          84,
+          1044,
+          16404,
+          262164,
+          196,
+          1092,
+          4164,
+          16452,
+          32836,
+          262212,
+          1284,
+          16644,
+          262404,
+          3076,
+          17412,
+          66564,
+          263172,
+          20484,
+          266244,
+          49156,
+          278532,
+          327684
+        ],
+        "row_rank": 516
+      },
+      "events_in_cube": 32,
+      "explicit_certificate": {
+        "degree": 4,
+        "kind": "gf2-affine-cover-static-v1",
+        "n": 19,
+        "terms": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            14,
+            3
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            17,
+            4
+          ],
+          [
+            17,
+            5
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            18,
+            3
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            20,
+            6
+          ],
+          [
+            21,
+            0
+          ],
+          [
+            21,
+            1
+          ],
+          [
+            21,
+            4
+          ],
+          [
+            21,
+            5
+          ],
+          [
+            22,
+            2
+          ],
+          [
+            22,
+            3
+          ],
+          [
+            24,
+            4
+          ],
+          [
+            24,
+            6
+          ],
+          [
+            25,
+            4
+          ],
+          [
+            25,
+            5
+          ],
+          [
+            26,
+            0
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            26,
+            2
+          ],
+          [
+            26,
+            3
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            28,
+            2
+          ],
+          [
+            28,
+            4
+          ],
+          [
+            28,
+            6
+          ],
+          [
+            29,
+            0
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            29,
+            4
+          ],
+          [
+            29,
+            5
+          ],
+          [
+            30,
+            0
+          ],
+          [
+            30,
+            1
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            30,
+            3
+          ]
+        ]
+      },
+      "explicit_certificate_utf8_bytes": 432,
+      "near_miss": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 1,
+        "parameter_bits": 17,
+        "parameter_survivors": 24,
+        "parameter_witness": 16960,
+        "peak_terms": 2,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 1,
+        "source_witness": 0,
+        "status": "SAT"
+      },
+      "occurrence_terms_in_explicit_proof": 54,
+      "separator_rows_checked": 640
+    }
+  },
+  "near_miss": "remove last (+++) clause; the unique source model is mask zero",
+  "one_auxiliary_modes": {
+    "parsimonious": {
+      "bounded_search": [
+        {
+          "basis_rank": 24,
+          "degree_limit": 2,
+          "rows_generated": 24,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 147,
+          "degree_limit": 3,
+          "rows_generated": 269,
+          "status": "UNSAT"
+        }
+      ],
+      "cube": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 11,
+        "parameter_survivors": 0,
+        "parameter_witness": null,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 0,
+        "source_witness": null,
+        "status": "UNSAT"
+      },
+      "events_in_cube": 24,
+      "explicit_certificate": {
+        "degree": 3,
+        "kind": "gf2-affine-cover-static-v1",
+        "n": 11,
+        "terms": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            0
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            15,
+            0
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            16,
+            0
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            19,
+            4
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            21,
+            0
+          ],
+          [
+            21,
+            4
+          ],
+          [
+            22,
+            0
+          ],
+          [
+            22,
+            4
+          ],
+          [
+            23,
+            0
+          ]
+        ]
+      },
+      "explicit_certificate_utf8_bytes": 276,
+      "minimal_static_degree_on_cube": 3,
+      "near_miss": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 10,
+        "parameter_survivors": 1,
+        "parameter_witness": 512,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 1,
+        "source_witness": 0,
+        "status": "SAT"
+      }
+    },
+    "two_event": {
+      "bounded_search": [
+        {
+          "basis_rank": 16,
+          "degree_limit": 2,
+          "rows_generated": 16,
+          "status": "UNKNOWN"
+        },
+        {
+          "basis_rank": 131,
+          "degree_limit": 3,
+          "rows_generated": 182,
+          "status": "UNSAT"
+        }
+      ],
+      "cube": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 11,
+        "parameter_survivors": 0,
+        "parameter_witness": null,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 0,
+        "source_witness": null,
+        "status": "UNSAT"
+      },
+      "events_in_cube": 16,
+      "explicit_certificate": {
+        "degree": 3,
+        "kind": "gf2-affine-cover-static-v1",
+        "n": 11,
+        "terms": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            0
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            13,
+            0
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            0
+          ],
+          [
+            15,
+            1
+          ]
+        ]
+      },
+      "explicit_certificate_utf8_bytes": 220,
+      "minimal_static_degree_on_cube": 3,
+      "near_miss": {
+        "conditioned_source_bits": 3,
+        "intersections_tested": 0,
+        "parameter_bits": 10,
+        "parameter_survivors": 4,
+        "parameter_witness": 928,
+        "peak_terms": 0,
+        "slices_completed": 8,
+        "slices_total": 8,
+        "source_model_count": 1,
+        "source_witness": 0,
+        "status": "SAT"
+      }
+    }
+  },
+  "schema_version": 1,
+  "scope": "Static degree uses rank(event)+squarefree multiplier weight. Counts are parameter witnesses; no general polynomial decider is claimed. Timings are not mixed into deterministic work counters.",
+  "source_variables": [
+    "x",
+    "y",
+    "z"
+  ],
+  "summary": {
+    "cube_parameter_bits": 19,
+    "cube_parameter_survivors": 0,
+    "degree_three_dual_nonzeros": 59,
+    "degree_three_rows_checked": 640,
+    "explicit_certificate_terms": 54,
+    "formulas": 40,
+    "minimal_static_degree": 4,
+    "modes_per_formula": 4,
+    "near_miss_parsimonious_survivors": 1,
+    "near_miss_relaxed_survivors": 32,
+    "near_miss_strict_survivors": 24,
+    "near_miss_two_event_survivors": 4,
+    "parsimonious_cube_certificate_terms": 32,
+    "raw_parameter_assignments_checked": 12552,
+    "source_model_roundtrips_across_modes": 364,
+    "two_event_cube_bits": 11,
+    "two_event_cube_certificate_terms": 24,
+    "two_event_cube_events": 16,
+    "two_event_cube_min_static_degree": 3
+  }
+}

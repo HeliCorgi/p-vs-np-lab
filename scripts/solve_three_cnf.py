@@ -17,12 +17,18 @@ def main() -> int:
     p.add_argument('--encoding', choices=('blocks', 'sparse'), default='blocks',
                    help='Five-state blocks or three-option, weight-two XOR supports')
     p.add_argument('--max-transitions', type=int, help='Residual prefix-option attempts; preprocessing is separate')
-    p.add_argument('--method', choices=('auto','frontier','gauge','graphic','cmr','holes'), default='auto',
+    p.add_argument('--method', choices=('auto','frontier','gauge','graphic','cmr','holes','project','refute','lattice'), default='auto',
                    help='Backend for --encoding sparse. Optional cmr uses a trusted local executable.')
     p.add_argument('--max-matching-calls', type=int, help='Leaf matching budget for --method gauge')
     p.add_argument('--max-outer-branches', type=int, help='Outer piece-combination budget for --method gauge')
     p.add_argument('--max-tree-trials', type=int, default=3, help='Candidate trees for graphic recognition')
     p.add_argument('--cmr-executable', default='cmr-graphic')
+    p.add_argument('--max-pairs', type=int, help='Cross-slice pairs in project; auto also caps this at 128')
+    p.add_argument('--max-intersections', type=int, help='Lattice intersection tests')
+    p.add_argument('--condition-on', nargs='+', type=int, help='Lattice cutset: parity masks in the generated kernel-parameter coordinates')
+    p.add_argument('--max-slices', type=int, help='Limit on enumerated lattice cutset slices (default 256)')
+    p.add_argument('--degree', type=int, help='Static indicator refutation degree (default 4)')
+    p.add_argument('--max-rows', type=int, help='Generated indicator multiples in refute')
     a = p.parse_args()
     try:
         obj = json.loads(sys.stdin.read() if a.input == '-' else Path(a.input).read_text())
@@ -33,6 +39,12 @@ def main() -> int:
             raise ValueError('Expected arrays variables and clauses, with an optional group_order array.')
         if a.method != 'gauge' and (a.max_matching_calls is not None or a.max_outer_branches is not None):
             raise ValueError('Matching-call/outer-branch budgets require --method gauge.')
+        if a.max_pairs is not None and (a.encoding!='sparse' or a.method not in ('project','auto')):
+            raise ValueError('--max-pairs requires --encoding sparse and --method project or auto.')
+        if (a.degree is not None or a.max_rows is not None) and a.method!='refute':
+            raise ValueError('--degree/--max-rows require --method refute.')
+        if any(v is not None for v in (a.max_intersections,a.condition_on,a.max_slices)) and a.method!='lattice':
+            raise ValueError('Lattice budgets and cutsets require --method lattice.')
         if a.encoding == 'blocks':
             if a.method != 'auto' or a.max_tree_trials != 3 or a.cmr_executable != 'cmr-graphic':
                 raise ValueError('Support method options require --encoding sparse.')
@@ -45,7 +57,11 @@ def main() -> int:
             result = decide_xor_choices(red.supports, red.rhs, max_transitions=a.max_transitions,
                                         method=a.method, max_matching_calls=a.max_matching_calls,
                                         max_outer_branches=a.max_outer_branches,
-                                        max_tree_trials=a.max_tree_trials, cmr_executable=a.cmr_executable)
+                                        max_tree_trials=a.max_tree_trials, cmr_executable=a.cmr_executable,
+                                        max_pairs=a.max_pairs, max_rows=a.max_rows,
+                                        degree=4 if a.degree is None else a.degree,
+                                        max_intersections=a.max_intersections, condition_on=a.condition_on or (),
+                                        max_slices=256 if a.max_slices is None else a.max_slices)
             model = red.project_witness(result['witness']) if result['status'] == 'SAT' else None
             result.update(source_witness_mask=model, source_witness=(None if model is None else
                           {v: bool(model & (1 << i)) for i, v in enumerate(red.original_variables)}))

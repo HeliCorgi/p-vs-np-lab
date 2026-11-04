@@ -1,0 +1,373 @@
+{
+  "all_checks_passed": true,
+  "axes": [
+    {
+      "component_count": 1,
+      "d": 3,
+      "intersections_tested": 7,
+      "max_components_per_slice": 1,
+      "peak_terms": 5,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "subset_count_by_formula": 8,
+      "survivor_count": 4,
+      "witness": 6,
+      "witness_restrictions": 17
+    },
+    {
+      "component_count": 1,
+      "d": 8,
+      "intersections_tested": 42,
+      "max_components_per_slice": 1,
+      "peak_terms": 10,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "subset_count_by_formula": 256,
+      "survivor_count": 247,
+      "witness": 192,
+      "witness_restrictions": 57
+    },
+    {
+      "component_count": 1,
+      "d": 16,
+      "intersections_tested": 150,
+      "max_components_per_slice": 1,
+      "peak_terms": 18,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "subset_count_by_formula": 65536,
+      "survivor_count": 65519,
+      "witness": 49152,
+      "witness_restrictions": 173
+    },
+    {
+      "component_count": 1,
+      "d": 32,
+      "intersections_tested": 558,
+      "max_components_per_slice": 1,
+      "peak_terms": 34,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "subset_count_by_formula": 4294967296,
+      "survivor_count": 4294967263,
+      "witness": 3221225472,
+      "witness_restrictions": 597
+    },
+    {
+      "component_count": 1,
+      "d": 64,
+      "intersections_tested": 2142,
+      "max_components_per_slice": 1,
+      "peak_terms": 66,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "subset_count_by_formula": 18446744073709551616,
+      "survivor_count": 18446744073709551551,
+      "witness": 13835058055282163712,
+      "witness_restrictions": 2213
+    }
+  ],
+  "bounded_order_pairs": [
+    {
+      "dimension": 3,
+      "events": 6,
+      "labelled_intersections_compared_per_order": [
+        6,
+        15
+      ],
+      "max_tested_order": 2,
+      "n": 2,
+      "survivor_counts_by_last_constant": [
+        0,
+        2
+      ]
+    },
+    {
+      "dimension": 4,
+      "events": 8,
+      "labelled_intersections_compared_per_order": [
+        8,
+        28,
+        56
+      ],
+      "max_tested_order": 3,
+      "n": 3,
+      "survivor_counts_by_last_constant": [
+        2,
+        0
+      ]
+    },
+    {
+      "dimension": 5,
+      "events": 10,
+      "labelled_intersections_compared_per_order": [
+        10,
+        45,
+        120,
+        210
+      ],
+      "max_tested_order": 4,
+      "n": 4,
+      "survivor_counts_by_last_constant": [
+        0,
+        2
+      ]
+    },
+    {
+      "dimension": 6,
+      "events": 12,
+      "labelled_intersections_compared_per_order": [
+        12,
+        66,
+        220,
+        495,
+        792
+      ],
+      "max_tested_order": 5,
+      "n": 5,
+      "survivor_counts_by_last_constant": [
+        2,
+        0
+      ]
+    }
+  ],
+  "connected_paths": [
+    {
+      "all_size_dictionary_lower_bound": 2,
+      "component_count": 1,
+      "intersections_tested": 3,
+      "max_components_per_slice": 1,
+      "n": 3,
+      "peak_terms": 4,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 5,
+      "witness": 2,
+      "witness_restrictions": 9
+    },
+    {
+      "all_size_dictionary_lower_bound": 4,
+      "component_count": 1,
+      "intersections_tested": 23,
+      "max_components_per_slice": 1,
+      "n": 6,
+      "peak_terms": 18,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 21,
+      "witness": 42,
+      "witness_restrictions": 62
+    },
+    {
+      "all_size_dictionary_lower_bound": 8,
+      "component_count": 1,
+      "intersections_tested": 121,
+      "max_components_per_slice": 1,
+      "n": 9,
+      "peak_terms": 86,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 89,
+      "witness": 170,
+      "witness_restrictions": 311
+    },
+    {
+      "all_size_dictionary_lower_bound": 16,
+      "component_count": 1,
+      "intersections_tested": 599,
+      "max_components_per_slice": 1,
+      "n": 12,
+      "peak_terms": 418,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 377,
+      "witness": 2730,
+      "witness_restrictions": 1532
+    },
+    {
+      "all_size_dictionary_lower_bound": 32,
+      "component_count": 1,
+      "intersections_tested": 2929,
+      "max_components_per_slice": 1,
+      "n": 15,
+      "peak_terms": 2038,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 1597,
+      "witness": 10922,
+      "witness_restrictions": 7473
+    },
+    {
+      "all_size_dictionary_lower_bound": 64,
+      "component_count": 1,
+      "intersections_tested": 14287,
+      "max_components_per_slice": 1,
+      "n": 18,
+      "peak_terms": 9938,
+      "reason": "exact_complement",
+      "slices_completed": 1,
+      "slices_total": 1,
+      "status": "SAT",
+      "survivor_count": 6765,
+      "witness": 174762,
+      "witness_restrictions": 36442
+    }
+  ],
+  "path_budget": {
+    "component_count": 1,
+    "intersections_tested": 96,
+    "max_components_per_slice": 1,
+    "peak_terms": 50,
+    "reason": "intersection_budget_exhausted",
+    "slices_completed": 0,
+    "slices_total": 1,
+    "status": "UNKNOWN",
+    "survivor_count": null,
+    "witness": null,
+    "witness_restrictions": 0
+  },
+  "schema_version": 1,
+  "scope": "Exact counts of original parameter vectors, not necessarily source models. Axis subset counts and path lower bounds are mathematical formulas, not subset-enumeration timings. Source separator bits are supplied.",
+  "source_separator_cases": [
+    {
+      "component_count": 0,
+      "intersections_tested": 0,
+      "max_components_per_slice": 0,
+      "mode": "strict",
+      "parameter_dimension": 19,
+      "peak_terms": 0,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 8,
+      "source_models": 0,
+      "status": "UNSAT",
+      "survivor_count": 0,
+      "witness": null,
+      "witness_restrictions": 0
+    },
+    {
+      "component_count": 0,
+      "intersections_tested": 0,
+      "max_components_per_slice": 0,
+      "mode": "relaxed",
+      "parameter_dimension": 19,
+      "peak_terms": 0,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 8,
+      "source_models": 0,
+      "status": "UNSAT",
+      "survivor_count": 0,
+      "witness": null,
+      "witness_restrictions": 0
+    },
+    {
+      "component_count": 0,
+      "intersections_tested": 0,
+      "max_components_per_slice": 0,
+      "mode": "compact",
+      "parameter_dimension": 11,
+      "peak_terms": 0,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 8,
+      "source_models": 0,
+      "status": "UNSAT",
+      "survivor_count": 0,
+      "witness": null,
+      "witness_restrictions": 0
+    },
+    {
+      "component_count": 1,
+      "intersections_tested": 1,
+      "max_components_per_slice": 1,
+      "mode": "strict",
+      "parameter_dimension": 17,
+      "peak_terms": 2,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 7,
+      "source_models": 1,
+      "status": "SAT",
+      "survivor_count": 24,
+      "witness": 16967,
+      "witness_restrictions": 3
+    },
+    {
+      "component_count": 0,
+      "intersections_tested": 0,
+      "max_components_per_slice": 0,
+      "mode": "relaxed",
+      "parameter_dimension": 17,
+      "peak_terms": 0,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 7,
+      "source_models": 1,
+      "status": "SAT",
+      "survivor_count": 32,
+      "witness": 16967,
+      "witness_restrictions": 0
+    },
+    {
+      "component_count": 0,
+      "intersections_tested": 0,
+      "max_components_per_slice": 0,
+      "mode": "compact",
+      "parameter_dimension": 10,
+      "peak_terms": 0,
+      "reason": "exact_complement",
+      "slices_completed": 8,
+      "slices_total": 8,
+      "source_clauses": 7,
+      "source_models": 1,
+      "status": "SAT",
+      "survivor_count": 4,
+      "witness": 191,
+      "witness_restrictions": 0
+    }
+  ],
+  "summary": {
+    "axes_max_dimension": 64,
+    "axes_max_dimension_count": 18446744073709551551,
+    "axes_max_dimension_intersections": 2142,
+    "axes_max_dimension_terms": 66,
+    "bounded_order_pairs": 4,
+    "cube_parameter_survivors": 0,
+    "cube_slices": 8,
+    "labelled_low_order_intersections": 2083,
+    "path_max_intersections": 14287,
+    "path_max_terms": 9938,
+    "path_max_vertices": 18,
+    "sat_sibling_counts_by_encoding": {
+      "compact": 4,
+      "relaxed": 32,
+      "strict": 24
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "all_checks_passed": true,
+  "connected_unsat": [
+    {
+      "bad_events": 45,
+      "deficiency": 2,
+      "distinct_forms": 10,
+      "free_bits": 8,
+      "original_cliques": 0,
+      "original_color_sizes": [
+        5,
+        5
+      ],
+      "padded_vertices": 10,
+      "proved_distinct_closure_lower_bound": 1,
+      "rank": 8,
+      "reason": "degree_bounded_closures_exhausted",
+      "selected_original_vertices": null,
+      "status": "UNSAT",
+      "subsets_tested": 55,
+      "theoretical_subsets_including_empty": 56,
+      "unique_closures_tested": 11
+    },
+    {
+      "bad_events": 56,
+      "deficiency": 3,
+      "distinct_forms": 15,
+      "free_bits": 12,
+      "original_cliques": 0,
+      "original_color_sizes": [
+        5,
+        5,
+        5
+      ],
+      "padded_vertices": 15,
+      "proved_distinct_closure_lower_bound": 3,
+      "rank": 12,
+      "reason": "degree_bounded_closures_exhausted",
+      "selected_original_vertices": null,
+      "status": "UNSAT",
+      "subsets_tested": 575,
+      "theoretical_subsets_including_empty": 576,
+      "unique_closures_tested": 65
+    },
+    {
+      "bad_events": 67,
+      "deficiency": 4,
+      "distinct_forms": 20,
+      "free_bits": 16,
+      "original_cliques": 0,
+      "original_color_sizes": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "padded_vertices": 20,
+      "proved_distinct_closure_lower_bound": 9,
+      "rank": 16,
+      "reason": "degree_bounded_closures_exhausted",
+      "selected_original_vertices": null,
+      "status": "UNSAT",
+      "subsets_tested": 6195,
+      "theoretical_subsets_including_empty": 6196,
+      "unique_closures_tested": 380
+    }
+  ],
+  "planted_sat": {
+    "bad_events": 84,
+    "deficiency": 3,
+    "distinct_forms": 15,
+    "free_bits": 12,
+    "original_cliques": 1,
+    "original_color_sizes": [
+      2,
+      3,
+      2
+    ],
+    "padded_vertices": 15,
+    "rank": 12,
+    "reason": "parity_feasible_implication_closure",
+    "selected_original_vertices": [
+      0,
+      1,
+      0
+    ],
+    "status": "SAT",
+    "subsets_tested": 179,
+    "theoretical_subsets_including_empty": 576,
+    "unique_closures_tested": 38
+  },
+  "raw_oracle": {
+    "assignments": 256,
+    "original_selections": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "survivors": 12
+  },
+  "schema_version": 1,
+  "scope": "Decision and original witnesses. The underlying 2-SUB-SAT upper/lower bounds are known. The parameter is measured on a presented arrangement, not the minimum over all logically equivalent CSP encodings.",
+  "summary": {
+    "budget_control": "UNKNOWN",
+    "colored_graph_cases": 24,
+    "largest_connected_seed_tests": 6195,
+    "largest_observed_deficiency": 4,
+    "seeded_sat": 19,
+    "seeded_unsat": 1
+  }
+}

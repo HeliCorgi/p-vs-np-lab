@@ -1,6 +1,12 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
-## Current obstruction and remaining algorithmic target
+## Current target: decide many coupled parity conditions without listing every small seed
+
+We now [compile the residual affine fiber](../src/pnp_lab/fiber_arrangement.py) into forbidden intersections of parity equations. The [compact clause encoding](selector_overlap.md) needs just one private bit and two forbidden codimension-two flats per 3-literal clause. Thus a deterministic method deciding avoidance in polynomial time on every such image would decide 3SAT in polynomial time. A satisfiability witness projects back to the original clauses. Bounded-degree [static proofs](overlap_refutation.md) cannot be complete here, and [bit elimination](event_projection.md) has an explicit bad cut in its union-of-flats representation.
+
+The [observation solver](observation_2sat.md) instead solves a 2-CNF relaxation and imposes its remaining independent parity checks. It is polynomial for each fixed number of checks, but general inputs can force many of them. A concrete next target is to derive conflicts **between parity checks** from the implication graph before enumerating their seeds: on the [connected colored family](observation_limits.md) two classes exclude all joint choices even though either class is separately feasible. A useful first result would be a sound, independently checkable rule that detects that family for all sizes, followed by hard controls with no conflicting pair of checks. Such a rule, even if successful, would not yet imply a uniform polynomial worst-case bound on all compact 3SAT images.
+
+## Previous target: feasibility in a fiber with several holes
 
 A choice from a ternary support becomes an affine plane with one forbidden point. [Symbolic addition](hole_flats.md) can combine certain intersecting planes without materializing their sums, even when their differences are not graphic. [Graph realization](graphic_gauge.md) and [fixed-coordinate branching](gauge_matching.md) provide complementary solvers. Polynomial work on successfully recognized families does not bound the complete fallback. [Every labelled binary column matroid can occur as a minor](binary_minor_universality.md) after exact affine absorption on some sparse bridge image, so no proper minor-closed binary class covers every image. A remaining target is joint feasibility when the individual direction spaces have trivial pairwise intersections but collectively have dependencies: find a decomposition of the target that simultaneously avoids each forbidden point, or prove none exists. A polynomial all-input algorithm for these residual 3SAT images would suffice for P=NP.
 

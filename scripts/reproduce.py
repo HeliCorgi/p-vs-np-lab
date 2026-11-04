@@ -29,6 +29,7 @@ NEW_REPORTS = (
     "constant_block_bridge.json", "affine_frontier.json",
     "ternary_support_threshold.json", "unit_support_matching.json",
     "gauge_matching.json", "graphic_matching.json", "binary_minor_universality.json", "hole_flats.json",
+    "selector_overlap.json", "event_projection.json", "overlap_lattice.json", "observation_2sat.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -163,6 +164,8 @@ def main() -> None:
     matching = read_json(out / NEW_REPORTS[12])
     phase7_8 = {name: read_json(out / (name + ".json"))
                 for name in ("gauge_matching", "graphic_matching", "binary_minor_universality", "hole_flats")}
+    phase9_10 = {name: read_json(out / (name + ".json"))
+                 for name in ("selector_overlap", "event_projection", "overlap_lattice", "observation_2sat")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -172,7 +175,7 @@ def main() -> None:
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
             or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
-            or not all(r["all_checks_passed"] for r in phase7_8.values())):
+            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values()))):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -219,6 +222,8 @@ def main() -> None:
         "ternary_support_threshold_summary": threshold["summary"],
         "unit_support_matching_summary": matching["summary"],
         "general_three_option_weight_two_polynomial_solver": False,
+        "phase9_10_summaries": {name:r["summary"] for name,r in phase9_10.items()},
+        "all_input_polynomial_time_from_overlap": False,
         "phase7_8_summaries": {name: r["summary"] for name, r in phase7_8.items()},
         "cmr_gate_scope": "Separate optional pinned executable workflow; Python replay does not build CMR.",
         "openai_math_snapshot": math_snapshot,

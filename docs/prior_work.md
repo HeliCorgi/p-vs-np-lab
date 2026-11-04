@@ -14,6 +14,12 @@ still lists **P versus NP as unsolved** at this snapshot. None of the work
 described below supplies a polynomial-time SAT algorithm or a lower bound
 against every polynomial-time algorithm.
 
+## Follow-up: avoiding unions of affine flats (2026-11-04)
+
+Arvind and Guruswami, [*CNF Satisfiability in a Subspace and Related Problems* (IPEC 2021)](https://doi.org/10.4230/LIPIcs.IPEC.2021.5), explicitly relate avoiding a union of subspaces to CNF satisfiability restricted to a subspace. For 2-CNF they give a deterministic polynomial bound for each fixed codimension and prove W[1]-hardness when parameterized by codimension. This is the underlying problem of our [observation implementation](observation_2sat.md), not a newly discovered tractability frontier. Our [finite controls and parameter analysis](observation_limits.md) address how the number of constraints changes when choosing local observations.
+
+Alekhnovich and Razborov, [*Lower Bounds for Polynomial Calculus: Nonbinomial Case* (2003)](https://www.mathnet.ru/eng/tm403), Corollary 4.7 of the [authors’ version](https://people.cs.uchicago.edu/~razborov/files/misha.pdf), supply the random 3-CNF polynomial-calculus degree lower bound over GF(2). Our [substitution argument](overlap_refutation.md) transfers this to the **specified static certificates** on two selector encodings. Neither the cited result nor this transfer lower-bounds all algorithms for SAT.
+
 ## 1. The target remains a uniform, all-input theorem
 
 [Cook's official problem description](https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf),

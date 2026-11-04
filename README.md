@@ -7,6 +7,27 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第9–10段階：禁止条件の重なりを使い、前回の未決着例を解く
+
+3変数の全8通りの割当を1節ずつ禁止した式は明らかにUNSATです。前回の「穴の個数を足す」判定は、この式を疎なXOR選択問題に変換すると `UNKNOWN` でした。今回の[消去法](docs/event_projection.md)は**同じ変換像**に対し、禁止集合を交差させて1ビットずつ消し、36組の交差検査でUNSATを確定します。1節を外した例では28組を調べ、唯一の解を元の変数に戻して検査します。ここで数えたのは交差検査で、総演算回数ではありません。
+
+| 手法 | 得られた結果 | 一般化の限界 |
+|---|---|---|
+| [各節を小さく変換](docs/selector_overlap.md) | 補助1ビット・禁止条件2個で充足可能性を保存。3個にすれば元の解と一対一に対応 | いずれも一般3SATを表す。条件数の最小性は文書の局所変換モデル内での主張 |
+| [多項式の恒等式による反証](docs/overlap_refutation.md) | 同じ8節の例で、旧セレクタ座標は最小次数4（54項の証明）、小さい変換では最小次数3（24項の証明） | 両変換とも、入力の大きさとともに必要次数が線形に増える充足不能例が存在 |
+| [交差をまとめる厳密計数](docs/overlap_lattice.md) | 64次元空間で64本の座標軸を避ける点の数 `2^64−65` を、最大66項で計算 | 連結なパスの入力族では、処理順によらずこの符号付き展開の項数は指数的 |
+| [2-SATと線形条件](docs/observation_2sat.md) | 観測ビット間の独立な整合条件が固定本数なら、決定的多項式時間で解を復元 | [先行研究と難しい入力族](docs/observation_limits.md)。一般入力で条件の本数は定数に収まらない |
+
+[元の8節](examples/overlap_cube_unsat.json)を使って、古い変換像をそのまま解く場合、短い反証を出す場合、解がいくつあるか数える場合を試せます。
+
+```bash
+python scripts/solve_three_cnf.py examples/overlap_cube_unsat.json --encoding sparse --method project
+python scripts/solve_overlap.py examples/overlap_cube_unsat.json --encoding compact --method refute --degree 3
+python scripts/solve_overlap.py examples/overlap_cube_unsat.json --encoding parsimonious --method count --slice-source
+```
+
+[Leanで追加した6定理](Formal/AffineCover.lean)は、ビット消去の同値、二つの節変換の恒等式と代入、重み付き恒等式から全割当の被覆が従うことを扱います。次数下界・実行時間・Python実装全体を形式検証したものではありません。[証明書を含む実験記録](results/selector_overlap.json)と[次の研究課題](docs/reverse_engineering.md)を収録しました。
+
 ## 第7–8段階：グラフに直せる範囲と、表を列挙しない合成
 
 3候補のXOR選択を、入力全体で同じ線形座標変換と、グループごとのXOR平行移動で重み1に変換できれば、完全マッチングで解けます。[必要十分条件](docs/graphic_gauge.md)は、候補対の全差分がグラフの辺の依存関係を表すこと（グラフィック・マトロイド）です。[Pythonの認識器](src/pnp_lab/graphic_support.py)は木の候補を予算内で探索し、見つけた木は元の全差分で検査します。[任意のCMRバックエンド](src/pnp_lab/cmr_graphic.py)も用意し、[固定版CI](results/cmr_integration_audit.json)で実バイナリの5ケースを確認しました。非グラフィックという結果だけではSAT/UNSATは決まりません。
@@ -246,7 +267,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要35定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要41定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -274,7 +295,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 165件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 197件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。
