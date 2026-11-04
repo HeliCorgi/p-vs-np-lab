@@ -73,9 +73,9 @@ private theorem error_identity {V : Type} (vs : List V) (a : V → Bool)
 /-- A congruence of modulus d can be used at modulus m with weight w only
 when m divides w*d.  This includes d=0, namely a local exact equality. -/
 theorem scale_congruence (m d w u b : Int)
-    (local : d ∣ u - b) (compatible : m ∣ w * d) :
+    (law : d ∣ u - b) (compatible : m ∣ w * d) :
     m ∣ w * (u - b) := by
-  obtain ⟨k, hk⟩ := local
+  obtain ⟨k, hk⟩ := law
   obtain ⟨q, hq⟩ := compatible
   refine ⟨q * k, ?_⟩
   rw [hk, ← Int.mul_assoc, hq, Int.mul_assoc]
