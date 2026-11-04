@@ -67,12 +67,14 @@ theorem closed_sound {V : Type} {f : CNF V} {trail : Clause V} (p : Closed f tra
 theorem refutes_negation_entails {V : Type} {f : CNF V} {c : Clause V}
     (p : Closed f c) (a : V → Bool) (m : Models a f) : Holds a c := by
   classical
-  by_contra missing
-  apply closed_sound p a m
-  intro l hl
-  cases h : eval a l with
-  | false => rfl
-  | true => exact False.elim (missing ⟨l, hl, h⟩)
+  by_cases good : Holds a c
+  · exact good
+  · apply False.elim
+    apply closed_sound p a m
+    intro l hl
+    cases h : eval a l with
+    | false => rfl
+    | true => exact False.elim (good ⟨l, hl, h⟩)
 
 def Reasons {S T : Type} (f : CNF S) (g : CNF T) (sigma : T → Term S) : Prop :=
   ∀ c ∈ g, Covered f (c.map (pull sigma)) ∨ Closed f (c.map (pull sigma))
