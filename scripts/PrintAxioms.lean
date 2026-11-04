@@ -60,3 +60,9 @@ import Formal
 #print axioms BoundaryLab.WitnessTransport.lift_compose
 #print axioms BoundaryLab.WitnessTransport.certificate_compose
 #print axioms BoundaryLab.WitnessTransport.directed_drop
+
+#print axioms BoundaryLab.DerivedTransport.unit_forced
+#print axioms BoundaryLab.DerivedTransport.closed_sound
+#print axioms BoundaryLab.DerivedTransport.refutes_negation_entails
+#print axioms BoundaryLab.DerivedTransport.transports_model
+#print axioms BoundaryLab.DerivedTransport.justified_drop

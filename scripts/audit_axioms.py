@@ -64,6 +64,11 @@ THEOREMS = {
     "BoundaryLab.WitnessTransport.lift_compose",
     "BoundaryLab.WitnessTransport.certificate_compose",
     "BoundaryLab.WitnessTransport.directed_drop",
+    "BoundaryLab.DerivedTransport.unit_forced",
+    "BoundaryLab.DerivedTransport.closed_sound",
+    "BoundaryLab.DerivedTransport.refutes_negation_entails",
+    "BoundaryLab.DerivedTransport.transports_model",
+    "BoundaryLab.DerivedTransport.justified_drop",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
