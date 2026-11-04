@@ -1,0 +1,345 @@
+{
+  "all_checks_passed": true,
+  "exhaustive_comparator_levels": [
+    {
+      "anchored_pairs": 0,
+      "anchored_union_counts": [],
+      "depth": 0,
+      "k": 1,
+      "original_variables": 3,
+      "residuals": 1
+    },
+    {
+      "anchored_pairs": 1,
+      "anchored_union_counts": [
+        2
+      ],
+      "depth": 1,
+      "k": 1,
+      "original_variables": 3,
+      "residuals": 2
+    },
+    {
+      "anchored_pairs": 0,
+      "anchored_union_counts": [],
+      "depth": 0,
+      "k": 2,
+      "original_variables": 6,
+      "residuals": 1
+    },
+    {
+      "anchored_pairs": 1,
+      "anchored_union_counts": [
+        7
+      ],
+      "depth": 1,
+      "k": 2,
+      "original_variables": 6,
+      "residuals": 2
+    },
+    {
+      "anchored_pairs": 3,
+      "anchored_union_counts": [
+        2,
+        3,
+        4
+      ],
+      "depth": 2,
+      "k": 2,
+      "original_variables": 6,
+      "residuals": 4
+    },
+    {
+      "anchored_pairs": 0,
+      "anchored_union_counts": [],
+      "depth": 0,
+      "k": 3,
+      "original_variables": 9,
+      "residuals": 1
+    },
+    {
+      "anchored_pairs": 1,
+      "anchored_union_counts": [
+        26
+      ],
+      "depth": 1,
+      "k": 3,
+      "original_variables": 9,
+      "residuals": 2
+    },
+    {
+      "anchored_pairs": 3,
+      "anchored_union_counts": [
+        7,
+        11,
+        15
+      ],
+      "depth": 2,
+      "k": 3,
+      "original_variables": 9,
+      "residuals": 4
+    },
+    {
+      "anchored_pairs": 7,
+      "anchored_union_counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "depth": 3,
+      "k": 3,
+      "original_variables": 9,
+      "residuals": 8
+    },
+    {
+      "anchored_pairs": 0,
+      "anchored_union_counts": [],
+      "depth": 0,
+      "k": 4,
+      "original_variables": 12,
+      "residuals": 1
+    },
+    {
+      "anchored_pairs": 1,
+      "anchored_union_counts": [
+        100
+      ],
+      "depth": 1,
+      "k": 4,
+      "original_variables": 12,
+      "residuals": 2
+    },
+    {
+      "anchored_pairs": 3,
+      "anchored_union_counts": [
+        26,
+        42,
+        58
+      ],
+      "depth": 2,
+      "k": 4,
+      "original_variables": 12,
+      "residuals": 4
+    },
+    {
+      "anchored_pairs": 7,
+      "anchored_union_counts": [
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31
+      ],
+      "depth": 3,
+      "k": 4,
+      "original_variables": 12,
+      "residuals": 8
+    },
+    {
+      "anchored_pairs": 15,
+      "anchored_union_counts": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "depth": 4,
+      "k": 4,
+      "original_variables": 12,
+      "residuals": 16
+    }
+  ],
+  "majority_closed_nonzero_relations": 93,
+  "max_one_hot_in_one_block": 2,
+  "measured_modular_controls": [
+    {
+      "actual_counts": [
+        1,
+        0
+      ],
+      "modulus": 1,
+      "residual_variables": 2,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        2,
+        0
+      ],
+      "modulus": 2,
+      "residual_variables": 2,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        3,
+        0
+      ],
+      "modulus": 3,
+      "residual_variables": 4,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        4,
+        0
+      ],
+      "modulus": 4,
+      "residual_variables": 4,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        5,
+        0
+      ],
+      "modulus": 5,
+      "residual_variables": 6,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        7,
+        0
+      ],
+      "modulus": 7,
+      "residual_variables": 6,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        8,
+        0
+      ],
+      "modulus": 8,
+      "residual_variables": 6,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        9,
+        0
+      ],
+      "modulus": 9,
+      "residual_variables": 8,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        13,
+        0
+      ],
+      "modulus": 13,
+      "residual_variables": 8,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        16,
+        0
+      ],
+      "modulus": 16,
+      "residual_variables": 8,
+      "residues": [
+        0,
+        0
+      ]
+    },
+    {
+      "actual_counts": [
+        17,
+        0
+      ],
+      "modulus": 17,
+      "residual_variables": 10,
+      "residues": [
+        0,
+        0
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Large counts are symbolic. These barriers target specified label/cover representations; no general SAT lower bound.",
+  "summary": {
+    "exhaustive_comparator_max_k": 4,
+    "exhaustive_levels": 14,
+    "exhaustive_raw_cnf_assignments": 4680,
+    "largest_symbolic_comparator_k": 512,
+    "majority_relations_tested": 128,
+    "modular_examples": 11
+  },
+  "symbolic_comparator_levels": [
+    {
+      "clauses": 46,
+      "k": 8,
+      "max_width": 3,
+      "predicted_positive_anchor_partners": 255,
+      "variables": 24
+    },
+    {
+      "clauses": 190,
+      "k": 32,
+      "max_width": 3,
+      "predicted_positive_anchor_partners": 4294967295,
+      "variables": 96
+    },
+    {
+      "clauses": 766,
+      "k": 128,
+      "max_width": 3,
+      "predicted_positive_anchor_partners": 340282366920938463463374607431768211455,
+      "variables": 384
+    },
+    {
+      "clauses": 3070,
+      "k": 512,
+      "max_width": 3,
+      "predicted_positive_anchor_partners": 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084095,
+      "variables": 1536
+    }
+  ]
+}

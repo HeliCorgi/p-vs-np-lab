@@ -1,6 +1,10 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
-## Current target: decide many coupled parity conditions without listing every small seed
+## Main target: polynomial list width of unrestricted SAT self-reduction
+
+[The decision-pruning criterion](decision_pruning.md) replaces the previous goal of deriving pairwise parity conflicts. The [matching twins](parity_shadow.md) show exactly which information every proper linear feasibility observation misses. A sound collision label for anchored disjunctions, computable in polynomial time and of uniformly polynomial diversity at satisfiable anchors, would decide 3SAT in polynomial time. We constructed [positive and negative controls for actual labels](codec_controls.md), including [a stronger simplifier and a new obstruction](blocked_pruning.md). The missing all-input bound is explicit; none of these counterexamples lower-bounds arbitrary SAT solvers.
+
+## Previous target: decide many coupled parity conditions without listing every small seed
 
 We now [compile the residual affine fiber](../src/pnp_lab/fiber_arrangement.py) into forbidden intersections of parity equations. The [compact clause encoding](selector_overlap.md) needs just one private bit and two forbidden codimension-two flats per 3-literal clause. Thus a deterministic method deciding avoidance in polynomial time on every such image would decide 3SAT in polynomial time. A satisfiability witness projects back to the original clauses. Bounded-degree [static proofs](overlap_refutation.md) cannot be complete here, and [bit elimination](event_projection.md) has an explicit bad cut in its union-of-flats representation.
 

@@ -1,0 +1,219 @@
+{
+  "all_checks_passed": true,
+  "equal_budget_driver": [
+    {
+      "anchor_collisions": true,
+      "clauses": 20,
+      "label_mode": "syntax",
+      "marked": false,
+      "max_width": 4,
+      "n": 12,
+      "nodes": 15,
+      "peak_width": 8,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "individual_merges": 0,
+        "individual_true": 0,
+        "labels": 85,
+        "or_labels": 70,
+        "pruned_no": 0
+      },
+      "status": "UNKNOWN",
+      "widths": [
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    {
+      "anchor_collisions": true,
+      "clauses": 20,
+      "label_mode": "affine",
+      "marked": false,
+      "max_width": 4,
+      "n": 12,
+      "nodes": 15,
+      "peak_width": 4,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "individual_merges": 5,
+        "individual_true": 1,
+        "labels": 17,
+        "or_labels": 2,
+        "pruned_no": 0
+      },
+      "status": "SAT",
+      "widths": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "anchor_collisions": true,
+      "clauses": 52,
+      "label_mode": "affine",
+      "marked": true,
+      "max_width": 4,
+      "n": 28,
+      "nodes": 15,
+      "peak_width": 8,
+      "stats": {
+        "anchor_false": 0,
+        "anchor_merges": 0,
+        "anchor_true": 0,
+        "individual_merges": 0,
+        "individual_true": 0,
+        "labels": 85,
+        "or_labels": 70,
+        "pruned_no": 0
+      },
+      "status": "UNKNOWN",
+      "widths": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ],
+  "exhaustive_tag_levels": [
+    {
+      "anchors_checked": 1,
+      "depth": 0,
+      "k": 1,
+      "marked_distinct_partners_per_anchor": 0,
+      "marked_individual_keys": 1,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 2,
+      "depth": 1,
+      "k": 1,
+      "marked_distinct_partners_per_anchor": 1,
+      "marked_individual_keys": 2,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 1,
+      "depth": 0,
+      "k": 2,
+      "marked_distinct_partners_per_anchor": 0,
+      "marked_individual_keys": 1,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 2,
+      "depth": 1,
+      "k": 2,
+      "marked_distinct_partners_per_anchor": 1,
+      "marked_individual_keys": 2,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 4,
+      "depth": 2,
+      "k": 2,
+      "marked_distinct_partners_per_anchor": 3,
+      "marked_individual_keys": 4,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 1,
+      "depth": 0,
+      "k": 3,
+      "marked_distinct_partners_per_anchor": 0,
+      "marked_individual_keys": 1,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 2,
+      "depth": 1,
+      "k": 3,
+      "marked_distinct_partners_per_anchor": 1,
+      "marked_individual_keys": 2,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 4,
+      "depth": 2,
+      "k": 3,
+      "marked_distinct_partners_per_anchor": 3,
+      "marked_individual_keys": 4,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 8,
+      "depth": 3,
+      "k": 3,
+      "marked_distinct_partners_per_anchor": 7,
+      "marked_individual_keys": 8,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 1,
+      "depth": 0,
+      "k": 4,
+      "marked_distinct_partners_per_anchor": 0,
+      "marked_individual_keys": 1,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 2,
+      "depth": 1,
+      "k": 4,
+      "marked_distinct_partners_per_anchor": 1,
+      "marked_individual_keys": 2,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 4,
+      "depth": 2,
+      "k": 4,
+      "marked_distinct_partners_per_anchor": 3,
+      "marked_individual_keys": 4,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 8,
+      "depth": 3,
+      "k": 4,
+      "marked_distinct_partners_per_anchor": 7,
+      "marked_individual_keys": 8,
+      "positive_keys": 1
+    },
+    {
+      "anchors_checked": 16,
+      "depth": 4,
+      "k": 4,
+      "marked_distinct_partners_per_anchor": 15,
+      "marked_individual_keys": 16,
+      "positive_keys": 1
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Both coupled controls are SAT and existentially equivalent on the original variables. This is a fixed-order barrier to the actual present codec and driver, not to all decision keys.",
+  "summary": {
+    "distinct_pair_queries": 198,
+    "driver_cap": 4,
+    "levels": 14,
+    "marked_affine": "UNKNOWN",
+    "marked_widths": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "max_k_exhaustive": 4,
+    "unmarked_affine": "SAT"
+  }
+}

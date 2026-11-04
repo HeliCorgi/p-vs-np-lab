@@ -1,0 +1,505 @@
+{
+  "all_checks_passed": true,
+  "repaired_markers": [
+    {
+      "k": 3,
+      "levels": [
+        {
+          "depth": 0,
+          "new_keys": 1,
+          "old_keys": 1
+        },
+        {
+          "depth": 1,
+          "new_keys": 1,
+          "old_keys": 2
+        },
+        {
+          "depth": 2,
+          "new_keys": 1,
+          "old_keys": 4
+        },
+        {
+          "depth": 3,
+          "new_keys": 1,
+          "old_keys": 8
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 1,
+        "nodes": 9,
+        "peak_width": 2,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 3,
+          "individual_true": 1,
+          "labels": 8,
+          "or_labels": 0,
+          "pruned_no": 0
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "k": 4,
+      "levels": [
+        {
+          "depth": 0,
+          "new_keys": 1,
+          "old_keys": 1
+        },
+        {
+          "depth": 1,
+          "new_keys": 1,
+          "old_keys": 2
+        },
+        {
+          "depth": 2,
+          "new_keys": 1,
+          "old_keys": 4
+        },
+        {
+          "depth": 3,
+          "new_keys": 1,
+          "old_keys": 8
+        },
+        {
+          "depth": 4,
+          "new_keys": 1,
+          "old_keys": 16
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 1,
+        "nodes": 11,
+        "peak_width": 2,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 4,
+          "individual_true": 1,
+          "labels": 10,
+          "or_labels": 0,
+          "pruned_no": 0
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "k": 6,
+      "levels": [
+        {
+          "depth": 0,
+          "new_keys": 1,
+          "old_keys": 1
+        },
+        {
+          "depth": 1,
+          "new_keys": 1,
+          "old_keys": 2
+        },
+        {
+          "depth": 2,
+          "new_keys": 1,
+          "old_keys": 4
+        },
+        {
+          "depth": 3,
+          "new_keys": 1,
+          "old_keys": 8
+        },
+        {
+          "depth": 4,
+          "new_keys": 1,
+          "old_keys": 16
+        },
+        {
+          "depth": 5,
+          "new_keys": 1,
+          "old_keys": 32
+        },
+        {
+          "depth": 6,
+          "new_keys": 1,
+          "old_keys": 64
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 1,
+        "nodes": 15,
+        "peak_width": 2,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 6,
+          "individual_true": 1,
+          "labels": 14,
+          "or_labels": 0,
+          "pruned_no": 0
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Exponential on the specified labels/order, not all SAT methods or orders. Larger sizes follow analytically.",
+  "shielded_switches": [
+    {
+      "clauses": 11,
+      "k": 1,
+      "levels": [
+        {
+          "anchor_keys": 0,
+          "depth": 0,
+          "residuals": 1
+        },
+        {
+          "anchor_keys": 1,
+          "depth": 1,
+          "residuals": 2
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 1,
+        "nodes": 3,
+        "peak_width": 2,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 5,
+          "or_labels": 2,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2
+        ]
+      },
+      "unsat_twin": {
+        "clauses": 17,
+        "solver": {
+          "anchor_collisions": true,
+          "label_mode": "blocked",
+          "max_width": 1,
+          "nodes": 3,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 5,
+            "or_labels": 2,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2
+          ]
+        },
+        "variables": 14
+      },
+      "variables": 10
+    },
+    {
+      "clauses": 19,
+      "k": 2,
+      "levels": [
+        {
+          "anchor_keys": 0,
+          "depth": 0,
+          "residuals": 1
+        },
+        {
+          "anchor_keys": 1,
+          "depth": 1,
+          "residuals": 2
+        },
+        {
+          "anchor_keys": 3,
+          "depth": 2,
+          "residuals": 4
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 3,
+        "nodes": 7,
+        "peak_width": 4,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 21,
+          "or_labels": 14,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2,
+          4
+        ]
+      },
+      "unsat_twin": {
+        "clauses": 25,
+        "solver": {
+          "anchor_collisions": true,
+          "label_mode": "blocked",
+          "max_width": 3,
+          "nodes": 7,
+          "peak_width": 4,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 21,
+            "or_labels": 14,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2,
+            4
+          ]
+        },
+        "variables": 21
+      },
+      "variables": 17
+    },
+    {
+      "clauses": 27,
+      "k": 3,
+      "levels": [
+        {
+          "anchor_keys": 0,
+          "depth": 0,
+          "residuals": 1
+        },
+        {
+          "anchor_keys": 1,
+          "depth": 1,
+          "residuals": 2
+        },
+        {
+          "anchor_keys": 3,
+          "depth": 2,
+          "residuals": 4
+        },
+        {
+          "anchor_keys": 7,
+          "depth": 3,
+          "residuals": 8
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 7,
+        "nodes": 15,
+        "peak_width": 8,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 85,
+          "or_labels": 70,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      "unsat_twin": {
+        "clauses": 33,
+        "solver": {
+          "anchor_collisions": true,
+          "label_mode": "blocked",
+          "max_width": 7,
+          "nodes": 15,
+          "peak_width": 8,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 85,
+            "or_labels": 70,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2,
+            4,
+            8
+          ]
+        },
+        "variables": 28
+      },
+      "variables": 24
+    },
+    {
+      "clauses": 35,
+      "k": 4,
+      "levels": [
+        {
+          "anchor_keys": 0,
+          "depth": 0,
+          "residuals": 1
+        },
+        {
+          "anchor_keys": 1,
+          "depth": 1,
+          "residuals": 2
+        },
+        {
+          "anchor_keys": 3,
+          "depth": 2,
+          "residuals": 4
+        },
+        {
+          "anchor_keys": 7,
+          "depth": 3,
+          "residuals": 8
+        },
+        {
+          "anchor_keys": 15,
+          "depth": 4,
+          "residuals": 16
+        }
+      ],
+      "solver": {
+        "anchor_collisions": true,
+        "label_mode": "blocked",
+        "max_width": 15,
+        "nodes": 31,
+        "peak_width": 16,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 341,
+          "or_labels": 310,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "unsat_twin": {
+        "clauses": 41,
+        "solver": {
+          "anchor_collisions": true,
+          "label_mode": "blocked",
+          "max_width": 15,
+          "nodes": 31,
+          "peak_width": 16,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 341,
+            "or_labels": 310,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "variables": 35
+      },
+      "variables": 31
+    }
+  ],
+  "summary": {
+    "blocked_marker_keys_at_last_k": 1,
+    "largest_measured_shield_k": 4,
+    "largest_measured_unpruned_width": 16,
+    "largest_repaired_k": 6,
+    "previous_marker_keys_at_last_k": 64,
+    "unsat_twin_peak_width": 16
+  },
+  "unsat_core_oracle": {
+    "assignments": 32,
+    "models": 0,
+    "models_after_removing_each_clause": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  }
+}
