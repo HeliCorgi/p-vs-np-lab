@@ -1,0 +1,489 @@
+{
+  "all_checks_passed": true,
+  "discovery_controls": {
+    "flip_masks": 3784,
+    "formulas": 42,
+    "method": "exhaustive for small controls only, not used by finder",
+    "satisfiable": 37
+  },
+  "old_shielded_twins": {
+    "SAT": {
+      "baseline": {
+        "nodes": 31,
+        "peak_width": 16,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 341,
+          "or_labels": 310,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "clauses": 35,
+      "transport": {
+        "nodes": 27,
+        "peak_width": 2,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 7,
+          "individual_true": 1,
+          "labels": 26,
+          "or_labels": 0,
+          "pruned_no": 0,
+          "transport_budget_reached": false,
+          "transport_checks": 6,
+          "transport_drops": 5,
+          "transport_methods": {
+            "constant-word": 1,
+            "refined-renaming": 4
+          }
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "variables": 31
+    },
+    "UNSAT": {
+      "baseline": {
+        "nodes": 31,
+        "peak_width": 16,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 0,
+          "individual_true": 0,
+          "labels": 341,
+          "or_labels": 310,
+          "pruned_no": 0
+        },
+        "status": "UNKNOWN",
+        "widths": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "clauses": 41,
+      "transport": {
+        "nodes": 83,
+        "peak_width": 4,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 13,
+          "individual_true": 0,
+          "labels": 97,
+          "or_labels": 14,
+          "pruned_no": 24,
+          "transport_budget_reached": false,
+          "transport_checks": 19,
+          "transport_drops": 5,
+          "transport_methods": {
+            "refined-renaming": 5
+          }
+        },
+        "status": "UNSAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "variables": 35
+    }
+  },
+  "schema_version": 1,
+  "scope": "The width bound stops after the tag prefix. Polynomial discovery is partial; arbitrary raw diagonal certificate existence is NP-complete.",
+  "summary": {
+    "flip_discovery_controls": 42,
+    "flip_masks_checked": 3784,
+    "largest_k": 6,
+    "old_shield_sat": "SAT",
+    "old_shield_unsat": "UNSAT",
+    "retained_tag_width": 1,
+    "tag_cap_eight": "SAT",
+    "tag_prefix_pairs": 78
+  },
+  "tags": [
+    {
+      "all_sibling_pairs_checked": 15,
+      "cap_eight_run": {
+        "nodes": 71,
+        "peak_width": 12,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 5,
+          "individual_true": 1,
+          "labels": 70,
+          "or_labels": 0,
+          "pruned_no": 13,
+          "transport_budget_reached": false,
+          "transport_checks": 100,
+          "transport_drops": 16,
+          "transport_methods": {
+            "translate-affine": 14,
+            "translate-equality": 2
+          }
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          6,
+          6,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "cap_one_runs": {
+        "blocked-flip": {
+          "nodes": 11,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 11,
+            "or_labels": 0,
+            "pruned_no": 0,
+            "transport_budget_reached": false,
+            "transport_checks": 6,
+            "transport_drops": 4,
+            "transport_methods": {
+              "translate-affine": 4
+            }
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "blocked-off": {
+          "nodes": 3,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 3,
+            "or_labels": 0,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2
+          ]
+        },
+        "syntax-flip": {
+          "nodes": 11,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 11,
+            "or_labels": 0,
+            "pruned_no": 0,
+            "transport_budget_reached": false,
+            "transport_checks": 6,
+            "transport_drops": 4,
+            "transport_methods": {
+              "translate-affine": 4
+            }
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "syntax-off": {
+          "nodes": 3,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 3,
+            "or_labels": 0,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2
+          ]
+        }
+      },
+      "clauses": 124,
+      "k": 4,
+      "method_counts": {
+        "translate-affine": 15
+      },
+      "variables": 52
+    },
+    {
+      "all_sibling_pairs_checked": 63,
+      "cap_eight_run": {
+        "nodes": 117,
+        "peak_width": 12,
+        "stats": {
+          "anchor_false": 0,
+          "anchor_merges": 0,
+          "anchor_true": 0,
+          "individual_merges": 7,
+          "individual_true": 1,
+          "labels": 116,
+          "or_labels": 0,
+          "pruned_no": 16,
+          "transport_budget_reached": false,
+          "transport_checks": 301,
+          "transport_drops": 34,
+          "transport_methods": {
+            "translate-affine": 25,
+            "translate-equality": 9
+          }
+        },
+        "status": "SAT",
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          6,
+          6,
+          5,
+          5,
+          4,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "cap_one_runs": {
+        "blocked-flip": {
+          "nodes": 15,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 15,
+            "or_labels": 0,
+            "pruned_no": 0,
+            "transport_budget_reached": false,
+            "transport_checks": 8,
+            "transport_drops": 6,
+            "transport_methods": {
+              "translate-affine": 6
+            }
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "blocked-off": {
+          "nodes": 3,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 3,
+            "or_labels": 0,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2
+          ]
+        },
+        "syntax-flip": {
+          "nodes": 15,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 15,
+            "or_labels": 0,
+            "pruned_no": 0,
+            "transport_budget_reached": false,
+            "transport_checks": 8,
+            "transport_drops": 6,
+            "transport_methods": {
+              "translate-affine": 6
+            }
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "syntax-off": {
+          "nodes": 3,
+          "peak_width": 2,
+          "stats": {
+            "anchor_false": 0,
+            "anchor_merges": 0,
+            "anchor_true": 0,
+            "individual_merges": 0,
+            "individual_true": 0,
+            "labels": 3,
+            "or_labels": 0,
+            "pruned_no": 0
+          },
+          "status": "UNKNOWN",
+          "widths": [
+            1,
+            2
+          ]
+        }
+      },
+      "clauses": 186,
+      "k": 6,
+      "method_counts": {
+        "translate-affine": 63
+      },
+      "variables": 78
+    }
+  ]
+}

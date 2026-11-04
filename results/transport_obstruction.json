@@ -1,0 +1,226 @@
+{
+  "all_checks_passed": true,
+  "exhaustive_small": [
+    {
+      "clauses": 98,
+      "critical_assignments_checked": 282,
+      "k": 1,
+      "levels": [
+        {
+          "clauses": 98,
+          "completions_per_prefix": 2,
+          "depth": 0,
+          "raw_restrictions": 1,
+          "total_literals": 224
+        },
+        {
+          "clauses": 92,
+          "completions_per_prefix": 1,
+          "depth": 1,
+          "raw_restrictions": 2,
+          "total_literals": 200
+        }
+      ],
+      "n": 45,
+      "root_proof_terms": 40
+    },
+    {
+      "clauses": 138,
+      "critical_assignments_checked": 906,
+      "k": 2,
+      "levels": [
+        {
+          "clauses": 138,
+          "completions_per_prefix": 4,
+          "depth": 0,
+          "raw_restrictions": 1,
+          "total_literals": 324
+        },
+        {
+          "clauses": 132,
+          "completions_per_prefix": 2,
+          "depth": 1,
+          "raw_restrictions": 2,
+          "total_literals": 300
+        },
+        {
+          "clauses": 126,
+          "completions_per_prefix": 1,
+          "depth": 2,
+          "raw_restrictions": 4,
+          "total_literals": 276
+        }
+      ],
+      "n": 62,
+      "root_proof_terms": 53
+    },
+    {
+      "clauses": 178,
+      "critical_assignments_checked": 2466,
+      "k": 3,
+      "levels": [
+        {
+          "clauses": 178,
+          "completions_per_prefix": 8,
+          "depth": 0,
+          "raw_restrictions": 1,
+          "total_literals": 424
+        },
+        {
+          "clauses": 172,
+          "completions_per_prefix": 4,
+          "depth": 1,
+          "raw_restrictions": 2,
+          "total_literals": 400
+        },
+        {
+          "clauses": 166,
+          "completions_per_prefix": 2,
+          "depth": 2,
+          "raw_restrictions": 4,
+          "total_literals": 376
+        },
+        {
+          "clauses": 160,
+          "completions_per_prefix": 1,
+          "depth": 3,
+          "raw_restrictions": 8,
+          "total_literals": 352
+        }
+      ],
+      "n": 79,
+      "root_proof_terms": 66
+    },
+    {
+      "clauses": 218,
+      "critical_assignments_checked": 0,
+      "k": 4,
+      "levels": [
+        {
+          "clauses": 218,
+          "completions_per_prefix": 16,
+          "depth": 0,
+          "raw_restrictions": 1,
+          "total_literals": 524
+        },
+        {
+          "clauses": 212,
+          "completions_per_prefix": 8,
+          "depth": 1,
+          "raw_restrictions": 2,
+          "total_literals": 500
+        },
+        {
+          "clauses": 206,
+          "completions_per_prefix": 4,
+          "depth": 2,
+          "raw_restrictions": 4,
+          "total_literals": 476
+        },
+        {
+          "clauses": 200,
+          "completions_per_prefix": 2,
+          "depth": 3,
+          "raw_restrictions": 8,
+          "total_literals": 452
+        },
+        {
+          "clauses": 194,
+          "completions_per_prefix": 1,
+          "depth": 4,
+          "raw_restrictions": 16,
+          "total_literals": 428
+        }
+      ],
+      "n": 96,
+      "root_proof_terms": 79
+    },
+    {
+      "clauses": 258,
+      "critical_assignments_checked": 0,
+      "k": 5,
+      "levels": [
+        {
+          "clauses": 258,
+          "completions_per_prefix": 32,
+          "depth": 0,
+          "raw_restrictions": 1,
+          "total_literals": 624
+        },
+        {
+          "clauses": 252,
+          "completions_per_prefix": 16,
+          "depth": 1,
+          "raw_restrictions": 2,
+          "total_literals": 600
+        },
+        {
+          "clauses": 246,
+          "completions_per_prefix": 8,
+          "depth": 2,
+          "raw_restrictions": 4,
+          "total_literals": 576
+        },
+        {
+          "clauses": 240,
+          "completions_per_prefix": 4,
+          "depth": 3,
+          "raw_restrictions": 8,
+          "total_literals": 552
+        },
+        {
+          "clauses": 234,
+          "completions_per_prefix": 2,
+          "depth": 4,
+          "raw_restrictions": 16,
+          "total_literals": 528
+        },
+        {
+          "clauses": 228,
+          "completions_per_prefix": 1,
+          "depth": 5,
+          "raw_restrictions": 32,
+          "total_literals": 504
+        }
+      ],
+      "n": 113,
+      "root_proof_terms": 92
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Width bound is on direct raw syntactic literal/constant certificate domination at the designated cut/order. Conservation refutes these formulas directly; no general SAT lower bound.",
+  "summary": {
+    "complete_unsigned_codes_checked": 62,
+    "critical_assignments_checked": 3654,
+    "largest_root_checked": 128,
+    "largest_root_clauses": 5178,
+    "largest_root_variables": 2204,
+    "prefix_structures_checked": 119
+  },
+  "symbolic_large": [
+    {
+      "clauses": 698,
+      "k": 16,
+      "leaf_set_enumerated": false,
+      "n": 300,
+      "root_proof_terms": 235,
+      "theorem_raw_leaf_antichain": "65536"
+    },
+    {
+      "clauses": 2618,
+      "k": 64,
+      "leaf_set_enumerated": false,
+      "n": 1116,
+      "root_proof_terms": 859,
+      "theorem_raw_leaf_antichain": "18446744073709551616"
+    },
+    {
+      "clauses": 5178,
+      "k": 128,
+      "leaf_set_enumerated": false,
+      "n": 2204,
+      "root_proof_terms": 1691,
+      "theorem_raw_leaf_antichain": "340282366920938463463374607431768211456"
+    }
+  ]
+}

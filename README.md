@@ -7,6 +7,25 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月4日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第12段階：枝の解を移す。一方向の証明で足りるか
+
+枝Aの解を枝Bの解に必ず変換できれば、Bを残してAを削れます。BからAへ戻せる必要はありません。[発見器と独立チェッカー](docs/transport_discovery.md)は、Bの各変数をAの符号付き変数または定数で置き換え、Bの各節が恒真になるか、Aの一つの節で保証されるかを元の節で調べます。探索が失敗しても枝は捨てません。[Leanで追加した6定理](Formal/WitnessTransport.lean)は、実際に割当を移すこと、証明書の合成、正しい向きの枝削除を扱います。
+
+| 何を試したか | 結果と限界 |
+|---|---|
+| [前回の解あり・解なしの対照例](docs/transport_positive.md) | 以前は幅上限15で両方 `UNKNOWN`。同じ上限で、移送を加えると両方正答。別の族では6回のタグ分岐がすべて幅1。残りの一般部分まで幅1で解けるとは限らない |
+| [変換の完全探索](docs/transport_discovery.md) | 提案済みの証明書は多項式時間で検査可能。一方、兄弟枝間で有効な符号反転が存在するかの完全判定だけでもNP完全。一般多項式時間の発見器は得られていない |
+| [証明書自体が存在しない族](docs/transport_obstruction.md) | 指定のタグを先に分岐すると、深さ `d` にある `2^d` 個の生の残余式はどの二つも、この直接の移送証明書では統合できない。タグの全列挙ではなく全サイズの証明 |
+| [枝を作らず根で反証](docs/split_parity.md) | 二通りのタグ値それぞれで導ける共通のXOR式を集める。2,204変数・5,178節の実入力から、1,691項の検算可能な矛盾を得た。偶数パリティの充足可能な対照例は反証しない |
+| [補助変数でパリティを隠した場合](docs/transport_padding.md) | [短い解消節を加える](docs/private_resolution.md)と、1,526変数・2,292節の例も分岐前に反証。一方、この根の前処理が解消節もXOR式も一つも生成できないNP完全な入力クラスがある |
+
+```bash
+python scripts/solve_pruned.py examples/transport_shielded_unsat.json --label blocked --transport --max-width 15
+python scripts/solve_pruned.py examples/transport_switch_k2.json --split-parity | python scripts/check_pruning_parity.py examples/transport_switch_k2.json -
+```
+
+第2のコマンドは、元の節と出力された証明だけで充足不能を再検査します。[解決条件から逆算した次の課題](docs/reverse_engineering.md)は、枝間の直接の代入だけに依存せず、複数の枝で共有できる短い帰結をどう発見するかです。
+
 ## 第11段階：方針転換 — 全入力で探索の幅を抑えられるか
 
 前回の「少数のパリティ条件を組にして調べる」方針を主軸から外しました。充足可能な入力と充足不能な入力を一組作ると、独立条件が `k` 本あるのに、**どんな階数 `k−1` 以下の線形観測を選んでも両者の可否が一致**します。違いは、全員に別々の資源を割り当てられるかにあります。[反例と証人](docs/parity_shadow.md)は、元の条項を読む他の解法を排除しません。
@@ -288,7 +307,7 @@ python scripts/solve_mixed.py examples/mixed_unsat.json --max-cells 2
 
 [`Formal/BoundaryComposition.lean`](Formal/BoundaryComposition.lean) は、内部が独立に分離された二つの部品について、存在量化した境界関係が論理積で合成できることを証明します。内部間に新しい辺がある分解へ適用する場合は、その前提を別途確認する必要があります。
 
-Lean 4.19.0とStdのみを使用します。主要46定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
+Lean 4.19.0とStdのみを使用します。主要52定理の実際の推移的な公理依存を [`scripts/audit_axioms.py`](scripts/audit_axioms.py) で取得し、標準の `propext`、`Classical.choice`、`Quot.sound` 以外を拒否します。通常のカーネル判定を用い、証明穴やネイティブ評価への信頼で有限命題を埋めません。
 
 ## 2. 指数サイズになる表現と、小さく扱える表現
 
@@ -316,7 +335,7 @@ python scripts/reproduce.py --out-dir reproduced --check
 
 この1コマンドで次を実行します。
 
-- 221件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
+- 247件の意味論テスト。GF(2)射影120系・結合80組の固定seed比較、共有変数や色名を誤って消す負例を含みます。
 - 星グラフ4ケース、パリティ10ケース、GF(2)7ケース、混合制約の構造化例と136例の独立oracle照合、3SAT還元の検査。
 - 第3段階の推論・反例・符号化比較。さらに160例・10,200割当を元入力の独立全探索と照合し、707座標までのfull-hull証明書を検査。
 - 第4段階の共同推論160例・5,714割当、署名計数144例・8,176割当の独立照合、全サイズの反例族に対応する有限実験。

@@ -1,0 +1,102 @@
+{
+  "all_checks_passed": true,
+  "controls": [
+    {
+      "bare_common_rows": 1,
+      "bare_status": "UNKNOWN",
+      "clauses": 184,
+      "combined_at_cap": {
+        "or_labels": 2,
+        "status": "UNKNOWN",
+        "transport_checks": 2,
+        "width_cap": 1,
+        "widths": [
+          1,
+          2
+        ]
+      },
+      "k": 1,
+      "raw_prefix_antichain_size": "2",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 86,
+      "variables": 131,
+      "width_from_theorem_not_enumeration": false
+    },
+    {
+      "bare_common_rows": 2,
+      "bare_status": "UNKNOWN",
+      "clauses": 252,
+      "combined_at_cap": {
+        "or_labels": 14,
+        "status": "UNKNOWN",
+        "transport_checks": 14,
+        "width_cap": 2,
+        "widths": [
+          1,
+          2,
+          4
+        ]
+      },
+      "k": 2,
+      "raw_prefix_antichain_size": "4",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 114,
+      "variables": 176,
+      "width_from_theorem_not_enumeration": false
+    },
+    {
+      "bare_common_rows": 3,
+      "bare_status": "UNKNOWN",
+      "clauses": 320,
+      "k": 3,
+      "raw_prefix_antichain_size": "8",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 142,
+      "variables": 221,
+      "width_from_theorem_not_enumeration": true
+    },
+    {
+      "bare_common_rows": 4,
+      "bare_status": "UNKNOWN",
+      "clauses": 388,
+      "k": 4,
+      "raw_prefix_antichain_size": "16",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 170,
+      "variables": 266,
+      "width_from_theorem_not_enumeration": true
+    },
+    {
+      "bare_common_rows": 8,
+      "bare_status": "UNKNOWN",
+      "clauses": 660,
+      "k": 8,
+      "raw_prefix_antichain_size": "256",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 282,
+      "variables": 446,
+      "width_from_theorem_not_enumeration": true
+    },
+    {
+      "bare_common_rows": 32,
+      "bare_status": "UNKNOWN",
+      "clauses": 2292,
+      "k": 32,
+      "raw_prefix_antichain_size": "4294967296",
+      "resolved_status": "UNSAT",
+      "resolvents_added": 954,
+      "variables": 1526,
+      "width_from_theorem_not_enumeration": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "All-size width for the specified tag order and exact three pre-private-resolution pruning policies; bounded combined-driver runs distinguished from the proof. No general SAT lower bound.",
+  "summary": {
+    "largest_checked_k": 32,
+    "largest_combined_width_observed": 4,
+    "last_clauses": 2292,
+    "last_resolvents": 954,
+    "last_variables": 1526,
+    "prefix_contractions_checked": 56
+  }
+}

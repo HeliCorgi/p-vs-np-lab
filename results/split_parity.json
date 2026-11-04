@@ -1,0 +1,784 @@
+{
+  "all_checks_passed": true,
+  "ordinary": [
+    {
+      "certificate": {
+        "kind": "split-xor-v1",
+        "terms": [
+          {
+            "base": [
+              [
+                29,
+                [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                224,
+                [
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                1792,
+                [
+                  8,
+                  9,
+                  10,
+                  11
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                14336,
+                [
+                  12,
+                  13,
+                  14,
+                  15
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                1040,
+                [
+                  16,
+                  17
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                8320,
+                [
+                  18,
+                  19
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                49152,
+                [
+                  20,
+                  21
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                196608,
+                [
+                  22,
+                  23
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                786432,
+                [
+                  24,
+                  25
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                3145728,
+                [
+                  26,
+                  27
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                12582912,
+                [
+                  28,
+                  29
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                16392,
+                [
+                  30,
+                  31
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                8388864,
+                [
+                  32,
+                  33
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                1572864,
+                [
+                  34,
+                  35
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                6291456,
+                [
+                  36,
+                  37
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                50331648,
+                [
+                  50,
+                  51
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                201326592,
+                [
+                  52,
+                  53
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                805306368,
+                [
+                  54,
+                  55
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                3221225472,
+                [
+                  56,
+                  57
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                12884901888,
+                [
+                  58,
+                  59
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                16777728,
+                [
+                  60,
+                  61
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                8589936640,
+                [
+                  62,
+                  63
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                100663296,
+                [
+                  64,
+                  65
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                402653184,
+                [
+                  66,
+                  67
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                1610612736,
+                [
+                  68,
+                  69
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                6442450944,
+                [
+                  70,
+                  71
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                51539607552,
+                [
+                  72,
+                  73
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                206158430208,
+                [
+                  74,
+                  75
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                824633720832,
+                [
+                  76,
+                  77
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                3298534883328,
+                [
+                  78,
+                  79
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                13194139533312,
+                [
+                  80,
+                  81
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                52776558133248,
+                [
+                  82,
+                  83
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                35184372088836,
+                [
+                  84,
+                  85
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                17179873280,
+                [
+                  86,
+                  87
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                103079215104,
+                [
+                  88,
+                  89
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                412316860416,
+                [
+                  90,
+                  91
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                1649267441664,
+                [
+                  92,
+                  93
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                6597069766656,
+                [
+                  94,
+                  95
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "base": [
+              [
+                26388279066624,
+                [
+                  96,
+                  97
+                ]
+              ]
+            ],
+            "pivot": 0
+          },
+          {
+            "one": [
+              [
+                131104,
+                [
+                  44,
+                  45
+                ]
+              ],
+              [
+                262208,
+                [
+                  46,
+                  47
+                ]
+              ],
+              [
+                98304,
+                [
+                  48,
+                  49
+                ]
+              ]
+            ],
+            "pivot": 1,
+            "zero": [
+              [
+                32800,
+                [
+                  38,
+                  39
+                ]
+              ],
+              [
+                65600,
+                [
+                  40,
+                  41
+                ]
+              ],
+              [
+                393216,
+                [
+                  42,
+                  43
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "clauses": 98,
+      "k": 1,
+      "odd": true,
+      "stats": {
+        "base_rows": 39,
+        "common_rows": 1,
+        "variables_examined": 1
+      },
+      "status": "UNSAT",
+      "terms": 40,
+      "variables": 45
+    },
+    {
+      "clauses": 98,
+      "k": 1,
+      "odd": false,
+      "stats": {
+        "base_rows": 39,
+        "common_rows": 39,
+        "variables_examined": 45
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 45
+    },
+    {
+      "clauses": 138,
+      "k": 2,
+      "odd": true,
+      "stats": {
+        "base_rows": 51,
+        "common_rows": 2,
+        "variables_examined": 2
+      },
+      "status": "UNSAT",
+      "terms": 53,
+      "variables": 62
+    },
+    {
+      "clauses": 138,
+      "k": 2,
+      "odd": false,
+      "stats": {
+        "base_rows": 51,
+        "common_rows": 50,
+        "variables_examined": 62
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 62
+    },
+    {
+      "clauses": 218,
+      "k": 4,
+      "odd": true,
+      "stats": {
+        "base_rows": 75,
+        "common_rows": 4,
+        "variables_examined": 4
+      },
+      "status": "UNSAT",
+      "terms": 79,
+      "variables": 96
+    },
+    {
+      "clauses": 218,
+      "k": 4,
+      "odd": false,
+      "stats": {
+        "base_rows": 75,
+        "common_rows": 72,
+        "variables_examined": 96
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 96
+    },
+    {
+      "clauses": 698,
+      "k": 16,
+      "odd": true,
+      "stats": {
+        "base_rows": 219,
+        "common_rows": 16,
+        "variables_examined": 16
+      },
+      "status": "UNSAT",
+      "terms": 235,
+      "variables": 300
+    },
+    {
+      "clauses": 698,
+      "k": 16,
+      "odd": false,
+      "stats": {
+        "base_rows": 219,
+        "common_rows": 204,
+        "variables_examined": 300
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 300
+    },
+    {
+      "clauses": 2618,
+      "k": 64,
+      "odd": true,
+      "stats": {
+        "base_rows": 795,
+        "common_rows": 64,
+        "variables_examined": 64
+      },
+      "status": "UNSAT",
+      "terms": 859,
+      "variables": 1116
+    },
+    {
+      "clauses": 2618,
+      "k": 64,
+      "odd": false,
+      "stats": {
+        "base_rows": 795,
+        "common_rows": 732,
+        "variables_examined": 1116
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 1116
+    },
+    {
+      "clauses": 5178,
+      "k": 128,
+      "odd": true,
+      "stats": {
+        "base_rows": 1563,
+        "common_rows": 128,
+        "variables_examined": 128
+      },
+      "status": "UNSAT",
+      "terms": 1691,
+      "variables": 2204
+    },
+    {
+      "clauses": 5178,
+      "k": 128,
+      "odd": false,
+      "stats": {
+        "base_rows": 1563,
+        "common_rows": 1436,
+        "variables_examined": 2204
+      },
+      "status": "UNKNOWN",
+      "terms": 0,
+      "variables": 2204
+    }
+  ],
+  "schema_version": 1,
+  "scope": "A polynomial one-pass UNSAT refuter; absence of discovered rows is not SAT.",
+  "simple_support_images": [
+    {
+      "clauses": 333,
+      "k": 1,
+      "n": 232,
+      "odd": true,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 230
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "clauses": 333,
+      "k": 1,
+      "n": 232,
+      "odd": false,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 230
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "clauses": 473,
+      "k": 2,
+      "n": 332,
+      "odd": true,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 330
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "clauses": 473,
+      "k": 2,
+      "n": 332,
+      "odd": false,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 330
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "clauses": 753,
+      "k": 4,
+      "n": 532,
+      "odd": true,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 530
+      },
+      "status": "UNKNOWN"
+    },
+    {
+      "clauses": 753,
+      "k": 4,
+      "n": 532,
+      "odd": false,
+      "private_resolvents_added": 0,
+      "stats": {
+        "base_rows": 0,
+        "common_rows": 0,
+        "variables_examined": 530
+      },
+      "status": "UNKNOWN"
+    }
+  ],
+  "summary": {
+    "forcing_models": [
+      62,
+      63
+    ],
+    "largest_checked_certificate_terms": 1691,
+    "largest_clauses": 5178,
+    "largest_k": 128,
+    "largest_variables": 2204,
+    "simple_support_controls": 6
+  }
+}
