@@ -82,6 +82,10 @@ THEOREMS = {
     "BoundaryLab.CorrelationProof.empty_relation_refutes",
     "BoundaryLab.CorrelationProof.resolution_is_exact_projection",
     "BoundaryLab.CorrelationProof.separate_projections_lose_correlation",
+    "BoundaryLab.IntegerFeedback.edge_sound",
+    "BoundaryLab.IntegerFeedback.path_sound",
+    "BoundaryLab.IntegerFeedback.replace_disjunct",
+    "BoundaryLab.IntegerFeedback.feedback_refutes",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

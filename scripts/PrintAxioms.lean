@@ -82,3 +82,7 @@ import Formal
 #print axioms BoundaryLab.CorrelationProof.empty_relation_refutes
 #print axioms BoundaryLab.CorrelationProof.resolution_is_exact_projection
 #print axioms BoundaryLab.CorrelationProof.separate_projections_lose_correlation
+#print axioms BoundaryLab.IntegerFeedback.edge_sound
+#print axioms BoundaryLab.IntegerFeedback.path_sound
+#print axioms BoundaryLab.IntegerFeedback.replace_disjunct
+#print axioms BoundaryLab.IntegerFeedback.feedback_refutes
