@@ -9,3 +9,5 @@ import ProofLab.AffineClauseDAG
 import ProofLab.ParametrizedDAGDimension
 import ProofLab.AffineCoefficients
 import ProofLab.DualKernelCoordinates
+import ProofLab.OptimalAffineParameters
+import ProofLab.IntrinsicAffineRestriction

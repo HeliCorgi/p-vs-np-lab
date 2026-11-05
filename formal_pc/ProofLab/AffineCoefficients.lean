@@ -66,7 +66,12 @@ theorem eq_affinePolynomial (p : Poly V) (hp : p.totalDegree ≤ 1) :
       simp [affinePolynomial, coeff_sum]
     · change d.sum (fun _ k => k) = 1 at hd
       obtain ⟨v, rfl⟩ := (Finsupp.sum_eq_one_iff d).mp hd
-      simp [affinePolynomial, coeff_sum, coeff_single_X, smul_eq_mul]
+      have hne : (0 : V →₀ ℕ) ≠ Finsupp.single v 1 := by
+        intro h
+        have hval : (0 : ℕ) = 1 := by
+          simpa using congrArg (fun e : V →₀ ℕ => e v) h
+        exact Nat.zero_ne_one hval
+      simp [affinePolynomial, coeff_sum, coeff_single_X, smul_eq_mul, hne]
 
 /-- Evaluation of a general affine polynomial is its constant plus its slope. -/
 theorem eval_affine (p : Poly V) (hp : p.totalDegree ≤ 1) (x : V → BinaryField) :
