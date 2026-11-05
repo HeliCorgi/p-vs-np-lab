@@ -99,6 +99,12 @@ THEOREMS = {
     "BoundaryLab.ParityQueries.parity_tree_refutes",
     "BoundaryLab.ParityQueries.query_budget_reserve",
     "BoundaryLab.ParityQueries.degree_rank_mass",
+    "BoundaryLab.AffineDAGAnnihilator.eval_zero",
+    "BoundaryLab.AffineDAGAnnihilator.multilinear_vanishing_unique",
+    "BoundaryLab.AffineDAGAnnihilator.two_low_identity",
+    "BoundaryLab.AffineDAGAnnihilator.one_high_identity",
+    "BoundaryLab.AffineDAGAnnihilator.two_high_vanishing",
+    "BoundaryLab.AffineDAGAnnihilator.rank_cut_degree_budget",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

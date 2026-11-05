@@ -99,3 +99,9 @@ import Formal
 #print axioms BoundaryLab.ParityQueries.parity_tree_refutes
 #print axioms BoundaryLab.ParityQueries.query_budget_reserve
 #print axioms BoundaryLab.ParityQueries.degree_rank_mass
+#print axioms BoundaryLab.AffineDAGAnnihilator.eval_zero
+#print axioms BoundaryLab.AffineDAGAnnihilator.multilinear_vanishing_unique
+#print axioms BoundaryLab.AffineDAGAnnihilator.two_low_identity
+#print axioms BoundaryLab.AffineDAGAnnihilator.one_high_identity
+#print axioms BoundaryLab.AffineDAGAnnihilator.two_high_vanishing
+#print axioms BoundaryLab.AffineDAGAnnihilator.rank_cut_degree_budget
