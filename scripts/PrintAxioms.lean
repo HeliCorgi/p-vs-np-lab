@@ -94,3 +94,7 @@ import Formal
 #print axioms BoundaryLab.SupportLocalization.absorbed_size
 #print axioms BoundaryLab.SupportLocalization.residual_boundary
 #print axioms BoundaryLab.SupportLocalization.free_choice_leaves
+#print axioms BoundaryLab.ParityQueries.unique_coordinate_changes_answer
+#print axioms BoundaryLab.ParityQueries.free_coordinate_answers
+#print axioms BoundaryLab.ParityQueries.parity_tree_refutes
+#print axioms BoundaryLab.ParityQueries.query_budget_reserve

@@ -94,6 +94,10 @@ THEOREMS = {
     "BoundaryLab.SupportLocalization.absorbed_size",
     "BoundaryLab.SupportLocalization.residual_boundary",
     "BoundaryLab.SupportLocalization.free_choice_leaves",
+    "BoundaryLab.ParityQueries.unique_coordinate_changes_answer",
+    "BoundaryLab.ParityQueries.free_coordinate_answers",
+    "BoundaryLab.ParityQueries.parity_tree_refutes",
+    "BoundaryLab.ParityQueries.query_budget_reserve",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
