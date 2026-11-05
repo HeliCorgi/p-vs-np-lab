@@ -35,6 +35,32 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 19: dated outcome (2026-11-05 JST)
+
+Starting main was `8bfca4c451d6be1cbc84be50f9d6f667f66528a3`.
+All 455 file blobs matched its recursive Git tree before editing; recent
+commits, open PRs (none), and completed CI runs were checked. The cycle
+addressed parity queries, the specific next gate left in phase 18.
+
+The [general expansion theorem](parity_localization.md) now covers short
+parity questions with arbitrary-modulus integer terminals. A complementary
+[same-field theorem](parity_pc_bridge.md) covers arbitrarily wide parity
+queries with bounded-degree ordinary-PC terminals, including heterogeneous
+degree budgets. Both are tree results, with all restrictions stated. The
+[strong lower-bound record](strong_lower_bounds.md) retains these reusable
+statements and attributes established results separately.
+
+The new finite artifacts audit both-answer extension, a rank-charge
+counterexample, original-clause parity certificates, and legal ordinary-PC
+branch discharge and composition. The simple parity-block positive class
+has a proof-discovery and bit-cost argument, not just a short supplied proof.
+The [primary literature map](parity_query_prior_work.md) also records a
+September/November 2026 unrestricted-DAG claim. Its
+[bounded semantic source review](braun_resoplus_audit.md) does not certify
+the entire external formalization, and it is not a premise of the lab's
+new proofs. No all-input SAT algorithm, general algorithmic lower bound,
+or P versus NP solution candidate was obtained.
+
 ## Phase 18: dated outcome (2026-11-05 JST)
 
 The new [support theorem](support_localization.md) answers the previous

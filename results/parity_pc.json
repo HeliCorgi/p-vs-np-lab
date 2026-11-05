@@ -1,0 +1,772 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "false_reduced_degree_claim_rejected": true,
+      "hypothetical_reduced_degree": 2,
+      "name": "balanced_parity_2",
+      "no_path_axioms_at_root": true,
+      "parity_tree": {
+        "kind": "parity-query-tree-v1",
+        "nodes": [
+          {
+            "one": 4,
+            "query": [
+              1,
+              2
+            ],
+            "zero": 1
+          },
+          {
+            "one": 3,
+            "query": [
+              1
+            ],
+            "zero": 2
+          },
+          {
+            "clause": 0
+          },
+          {
+            "clause": 3
+          },
+          {
+            "one": 6,
+            "query": [
+              1
+            ],
+            "zero": 5
+          },
+          {
+            "clause": 1
+          },
+          {
+            "clause": 2
+          }
+        ],
+        "root": 0
+      },
+      "proof_bytes": 1685,
+      "proof_sha256": "4a6ea3dff99e3ac8ed2767e00dce8acdcd2dc98961da24a8e87c3b331a7bb28c",
+      "raw_binding_checked": true,
+      "raw_clauses": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "repeated_power_lines": 34,
+      "stats": {
+        "actual_leaf_degree_histogram": {
+          "2": 4
+        },
+        "branch_glue": [
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 0
+          },
+          {
+            "actual_degree": 3,
+            "child_degrees": [
+              2,
+              2
+            ],
+            "child_ranks": [
+              2,
+              2
+            ],
+            "discharged_branch": 0,
+            "rank": 3,
+            "tree_node": 1
+          },
+          {
+            "actual_degree": 3,
+            "child_degrees": [
+              2,
+              2
+            ],
+            "child_ranks": [
+              2,
+              2
+            ],
+            "discharged_branch": 0,
+            "rank": 3,
+            "tree_node": 4
+          }
+        ],
+        "budget_limited": false,
+        "certified_rank": 4,
+        "leaf_count_degree_bound": 4,
+        "leaves": 4,
+        "max_leaf_degree": 2,
+        "max_polynomial_monomials": 8,
+        "operations": {
+          "add": 25,
+          "boolean": 2,
+          "input": 4,
+          "multiply": 14
+        },
+        "proof_degree": 4,
+        "proof_monomial_occurrences": 152,
+        "proof_nodes": 45,
+        "query_tree_depth": 2,
+        "weighted_leaf_mass": 16
+      },
+      "variables": 2
+    },
+    {
+      "false_reduced_degree_claim_rejected": true,
+      "hypothetical_reduced_degree": 3,
+      "name": "balanced_parity_3",
+      "no_path_axioms_at_root": true,
+      "parity_tree": {
+        "kind": "parity-query-tree-v1",
+        "nodes": [
+          {
+            "one": 8,
+            "query": [
+              1,
+              2,
+              3
+            ],
+            "zero": 1
+          },
+          {
+            "one": 5,
+            "query": [
+              1
+            ],
+            "zero": 2
+          },
+          {
+            "one": 4,
+            "query": [
+              2
+            ],
+            "zero": 3
+          },
+          {
+            "clause": 0
+          },
+          {
+            "clause": 3
+          },
+          {
+            "one": 7,
+            "query": [
+              2
+            ],
+            "zero": 6
+          },
+          {
+            "clause": 5
+          },
+          {
+            "clause": 6
+          },
+          {
+            "one": 12,
+            "query": [
+              1
+            ],
+            "zero": 9
+          },
+          {
+            "one": 11,
+            "query": [
+              2
+            ],
+            "zero": 10
+          },
+          {
+            "clause": 1
+          },
+          {
+            "clause": 2
+          },
+          {
+            "one": 14,
+            "query": [
+              2
+            ],
+            "zero": 13
+          },
+          {
+            "clause": 4
+          },
+          {
+            "clause": 7
+          }
+        ],
+        "root": 0
+      },
+      "proof_bytes": 6029,
+      "proof_sha256": "95027f2f6431d1a5b8e5f1fad486d25fd3fdf4a41e6ec79fca723e3f104f3aef",
+      "raw_binding_checked": true,
+      "raw_clauses": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          1,
+          -2,
+          -3
+        ],
+        [
+          -1,
+          2,
+          3
+        ],
+        [
+          -1,
+          2,
+          -3
+        ],
+        [
+          -1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "repeated_power_lines": 133,
+      "stats": {
+        "actual_leaf_degree_histogram": {
+          "3": 8
+        },
+        "branch_glue": [
+          {
+            "actual_degree": 6,
+            "child_degrees": [
+              5,
+              5
+            ],
+            "child_ranks": [
+              5,
+              5
+            ],
+            "discharged_branch": 0,
+            "rank": 6,
+            "tree_node": 0
+          },
+          {
+            "actual_degree": 5,
+            "child_degrees": [
+              4,
+              4
+            ],
+            "child_ranks": [
+              4,
+              4
+            ],
+            "discharged_branch": 0,
+            "rank": 5,
+            "tree_node": 1
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 2
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 5
+          },
+          {
+            "actual_degree": 5,
+            "child_degrees": [
+              4,
+              4
+            ],
+            "child_ranks": [
+              4,
+              4
+            ],
+            "discharged_branch": 0,
+            "rank": 5,
+            "tree_node": 8
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 9
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 12
+          }
+        ],
+        "budget_limited": false,
+        "certified_rank": 6,
+        "leaf_count_degree_bound": 6,
+        "leaves": 8,
+        "max_leaf_degree": 3,
+        "max_polynomial_monomials": 24,
+        "operations": {
+          "add": 91,
+          "boolean": 3,
+          "input": 8,
+          "multiply": 58
+        },
+        "proof_degree": 6,
+        "proof_monomial_occurrences": 1010,
+        "proof_nodes": 160,
+        "query_tree_depth": 3,
+        "weighted_leaf_mass": 64
+      },
+      "variables": 3
+    },
+    {
+      "false_reduced_degree_claim_rejected": true,
+      "hypothetical_reduced_degree": 3,
+      "name": "nonuniform_comb",
+      "no_path_axioms_at_root": true,
+      "parity_tree": {
+        "kind": "parity-query-tree-v1",
+        "nodes": [
+          {
+            "one": 2,
+            "query": [
+              1
+            ],
+            "zero": 1
+          },
+          {
+            "clause": 0
+          },
+          {
+            "one": 4,
+            "query": [
+              2
+            ],
+            "zero": 3
+          },
+          {
+            "clause": 1
+          },
+          {
+            "one": 6,
+            "query": [
+              3
+            ],
+            "zero": 5
+          },
+          {
+            "clause": 2
+          },
+          {
+            "clause": 3
+          }
+        ],
+        "root": 0
+      },
+      "proof_bytes": 1335,
+      "proof_sha256": "51d11a68941ee1934d2e7161064704bcf608afe123e001133cd78c60f52f6267",
+      "raw_binding_checked": true,
+      "raw_clauses": [
+        [
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          -2,
+          3
+        ],
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "repeated_power_lines": 14,
+      "stats": {
+        "actual_leaf_degree_histogram": {
+          "1": 1,
+          "2": 1,
+          "3": 2
+        },
+        "branch_glue": [
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              1,
+              4
+            ],
+            "child_ranks": [
+              2,
+              4
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 0
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              2,
+              4
+            ],
+            "child_ranks": [
+              2,
+              4
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 2
+          },
+          {
+            "actual_degree": 4,
+            "child_degrees": [
+              3,
+              3
+            ],
+            "child_ranks": [
+              3,
+              3
+            ],
+            "discharged_branch": 0,
+            "rank": 4,
+            "tree_node": 4
+          }
+        ],
+        "budget_limited": false,
+        "certified_rank": 4,
+        "leaf_count_degree_bound": 5,
+        "leaves": 4,
+        "max_leaf_degree": 3,
+        "max_polynomial_monomials": 4,
+        "operations": {
+          "add": 15,
+          "boolean": 3,
+          "input": 4,
+          "multiply": 13
+        },
+        "proof_degree": 4,
+        "proof_monomial_occurrences": 82,
+        "proof_nodes": 35,
+        "query_tree_depth": 3,
+        "weighted_leaf_mass": 24
+      },
+      "variables": 3
+    }
+  ],
+  "sample_first_ordinary_pc_certificate": {
+    "degree": 4,
+    "field": 2,
+    "kind": "ordinary-pc-f2-path-v1",
+    "nodes": [
+      {
+        "op": "boolean",
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 0,
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 0,
+        "variable": 2
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 1
+      },
+      {
+        "left": 2,
+        "op": "add",
+        "right": 3
+      },
+      {
+        "op": "boolean",
+        "variable": 2
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 5
+      },
+      {
+        "op": "multiply",
+        "parent": 6,
+        "variable": 1
+      },
+      {
+        "left": 6,
+        "op": "add",
+        "right": 7
+      },
+      {
+        "left": 4,
+        "op": "add",
+        "right": 8
+      },
+      {
+        "op": "multiply",
+        "parent": 9,
+        "variable": 1
+      },
+      {
+        "left": 9,
+        "op": "add",
+        "right": 10
+      },
+      {
+        "clause": 0,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 12,
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 12,
+        "variable": 2
+      },
+      {
+        "left": 12,
+        "op": "add",
+        "right": 13
+      },
+      {
+        "left": 14,
+        "op": "add",
+        "right": 15
+      },
+      {
+        "op": "multiply",
+        "parent": 16,
+        "variable": 1
+      },
+      {
+        "left": 16,
+        "op": "add",
+        "right": 17
+      },
+      {
+        "left": 4,
+        "op": "add",
+        "right": 11
+      },
+      {
+        "left": 18,
+        "op": "add",
+        "right": 19
+      },
+      {
+        "left": 6,
+        "op": "add",
+        "right": 20
+      },
+      {
+        "op": "multiply",
+        "parent": 21,
+        "variable": 1
+      },
+      {
+        "clause": 3,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 23,
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 23,
+        "variable": 2
+      },
+      {
+        "left": 23,
+        "op": "add",
+        "right": 24
+      },
+      {
+        "left": 25,
+        "op": "add",
+        "right": 26
+      },
+      {
+        "left": 20,
+        "op": "add",
+        "right": 22
+      },
+      {
+        "left": 27,
+        "op": "add",
+        "right": 28
+      },
+      {
+        "op": "multiply",
+        "parent": 29,
+        "variable": 1
+      },
+      {
+        "left": 29,
+        "op": "add",
+        "right": 30
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 31
+      },
+      {
+        "op": "multiply",
+        "parent": 32,
+        "variable": 1
+      },
+      {
+        "left": 32,
+        "op": "add",
+        "right": 33
+      },
+      {
+        "clause": 1,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 35,
+        "variable": 1
+      },
+      {
+        "left": 35,
+        "op": "add",
+        "right": 36
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 34
+      },
+      {
+        "left": 37,
+        "op": "add",
+        "right": 38
+      },
+      {
+        "left": 29,
+        "op": "add",
+        "right": 39
+      },
+      {
+        "op": "multiply",
+        "parent": 40,
+        "variable": 1
+      },
+      {
+        "clause": 2,
+        "op": "input"
+      },
+      {
+        "left": 39,
+        "op": "add",
+        "right": 41
+      },
+      {
+        "left": 42,
+        "op": "add",
+        "right": 43
+      }
+    ],
+    "root": 44,
+    "variables": 2
+  },
+  "schema_version": 1,
+  "scope": "Exact ordinary F2 polynomial traces, with repeated variables retained and Boolean axioms explicit. Finite checks of the discharge/rank composition, not a search for minimum PC degree or a polynomial-size trace-conversion claim. Full-cube inputs have much shorter direct sum proofs; the conversion overhead is not a lower bound.",
+  "summary": {
+    "branch_compositions": 13,
+    "explicit_arithmetic_nodes": 240,
+    "maximum_degree": 6,
+    "nonuniform_leaf_rank_checked": true,
+    "ordinary_pc_refutations": 3,
+    "repeated_power_lines": 181,
+    "underestimated_degrees_rejected": 3
+  }
+}

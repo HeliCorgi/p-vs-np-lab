@@ -1,0 +1,93 @@
+{
+  "all_checks_passed": true,
+  "arbitrary_boolean_query_control": {
+    "arbitrary_boolean_two_sided_extension_refuted": true,
+    "extendible_answers": [
+      true
+    ],
+    "fresh_query_support": [
+      1,
+      2,
+      3
+    ],
+    "input_clauses": [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "query": "x1 OR x2 OR x3",
+    "satisfying_words": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "coverage": "Every first support of size 1, 2 or 3 on the signed seven-petal SAT control; both replies, repeated and cancelling expressions, overlap and fresh continuations, adaptive third questions, and all raw subsets at every checked state. Does not enumerate all query trees.",
+  "rank_charge_control": {
+    "absorbed_clauses": 9,
+    "both_answers_checked": true,
+    "complete_satisfying_words": [
+      166440,
+      166442
+    ],
+    "invalid_rank_charge_bound": 8,
+    "invalid_rank_charge_refuted": true,
+    "normalized_support": 18,
+    "query_rank": 1,
+    "scope": "Counterexample to replacing exposure cardinality by equation rank inside this closure argument; not an UNSAT hardness counterexample."
+  },
+  "rank_control_checks": {
+    "absorbed_coordinate_queries": 0,
+    "constant_queries": 0,
+    "first_supports": 0,
+    "forced_queries": 0,
+    "hall_checks": 511,
+    "histories_checked": 0,
+    "largest_closure": 9,
+    "matching_repairs": 9,
+    "maximality_comparisons": 511,
+    "maximum_exposed": 18,
+    "maximum_fresh_support": 18,
+    "maximum_offered_support": 18,
+    "nonempty_absorptions": 1,
+    "offered_edges": 2,
+    "offered_queries": 1,
+    "one_bit_pair_checks": 1,
+    "previous_answers_checked": 2,
+    "repeated_cancelled_queries": 0,
+    "residual_boundary_checks": 511,
+    "residual_neighborhood_checks": 511,
+    "states_checked": 3
+  },
+  "schema_version": 1,
+  "scope": "Finite audit of the two-sided parity extension and exposure invariant. The expanding UNSAT family lower bound is proved separately; no asymptotic claim is inferred from these SAT controls.",
+  "summary": {
+    "absorbed_coordinate_queries": 1120,
+    "constant_queries": 1150,
+    "first_supports": 575,
+    "forced_queries": 8020,
+    "hall_checks": 34880,
+    "histories_checked": 960,
+    "largest_closure": 7,
+    "matching_repairs": 9215,
+    "maximality_comparisons": 54757,
+    "maximum_exposed": 6,
+    "maximum_fresh_support": 3,
+    "maximum_offered_support": 3,
+    "nonempty_absorptions": 3340,
+    "offered_edges": 6710,
+    "offered_queries": 3355,
+    "one_bit_pair_checks": 3355,
+    "previous_answers_checked": 33870,
+    "repeated_cancelled_queries": 1150,
+    "residual_boundary_checks": 54757,
+    "residual_neighborhood_checks": 54757,
+    "states_checked": 14731
+  }
+}

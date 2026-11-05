@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Solve a raw JSON 3-CNF with checked implication-to-arithmetic feedback."""
+"""Try checked feedback or parity-block refutations on a raw JSON CNF."""
 import argparse
 import json
 from pathlib import Path
@@ -9,12 +9,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from pnp_lab.feedback_witness import check_feedback_witness, feedback_witness
 from pnp_lab.integer_feedback import check_integer_feedback, integer_feedback_refute
 from pnp_lab.field_split import KIND as SPLIT_KIND, check_field_split, field_split_refute
+from pnp_lab.parity_query import KIND as PARITY_KIND, check_parity_query, parity_query_refute
 from pnp_lab.modular_hull import _input
 
 
 def decide(n, cs, *, method='auto', max_edges=None, family_budget=False):
-    if method not in ('auto', 'witness', 'refute', 'split'):
+    if method not in ('auto', 'witness', 'refute', 'split', 'parity'):
         raise ValueError('unknown method')
+    if method == 'parity':
+        if max_edges is not None:
+            raise ValueError('--max-edges applies to the implication-path solver')
+        return parity_query_refute(n, cs)
     cs = _input(n, cs)
     if method == 'split':
         if max_edges is not None:
@@ -47,6 +52,8 @@ def verify(n, cs, report):
         cert = report.get('certificate')
         if isinstance(cert, dict) and cert.get('kind') == SPLIT_KIND:
             return check_field_split(n, cs, cert)
+        if isinstance(cert, dict) and cert.get('kind') == PARITY_KIND:
+            return check_parity_query(n, cs, cert)
         return check_integer_feedback(n, cs, report.get('certificate'))
     word = report.get('witness_hex')
     if (report.get('status') == 'SAT' and isinstance(word, str)
@@ -59,7 +66,7 @@ def verify(n, cs, report):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', type=Path)
-    parser.add_argument('--method', choices=['auto','witness','refute','split'], default='auto')
+    parser.add_argument('--method', choices=['auto','witness','refute','split','parity'], default='auto')
     parser.add_argument('--max-edges', type=int, help='override the edge-visit budget per stage')
     parser.add_argument('--family-budget', action='store_true',
                         help='scale path and witness limits to the input as in the shielded Tseitin theorem')

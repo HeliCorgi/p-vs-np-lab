@@ -1,5 +1,52 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 19: preserve general lower bounds and separate two escape conditions
+
+The previous acceptance test now has two precise answers. The
+[support-sensitive theorem](parity_localization.md) extends the absorption
+argument to parity questions touching at most $q$ fresh coordinates, while
+allowing arbitrary moduli and coefficient sizes in the integer terminal
+proofs. It applies to general bounded-arity neighborhood expanders, and its
+optimized ternary exponent approaches $s/(4q)$ at fixed width and local scope.
+The rank-one sunflower counterexample prevents charging just one unit for
+every such question inside this particular invariant.
+
+Independently, the [PC leaf theorem](parity_pc_bridge.md) permits parity
+queries of arbitrary support. If each leaf has an actual ordinary-PC proof
+over the **same** field F2 of degree $d_\lambda\ge2$, then
+$\sum_\lambda2^{d_\lambda}\ge2^{D_{\rm PC}(F)}$. Its discharge step uses
+explicit Boolean axioms and ordinary formal degree, not free multilinear
+reduction. This is a degree simulation, not a promise of a small expanded
+PC proof or efficient proof discovery. The arithmetic interface must include
+the path assumptions and a common detecting characteristic.
+
+The [raw-input parity checker and finder](parity_query_audit.md) fix a
+concrete query semantics. Complete parity blocks with an inconsistent linear
+subsystem have a polynomially discoverable proof with at most one leaf per
+input clause. The finite graph controls were already easy for the old F2
+arithmetic solver; no stronger separation is inferred from them.
+
+The user's request to retain generalizable strong lower bounds is implemented
+in [the reusable record](strong_lower_bounds.md). It separates this lab's
+syntheses from published PC/tree-size, stifling, and bounded-depth DAG bounds.
+The [new Braun unrestricted-DAG claim](braun_resoplus_audit.md), revised
+2026-11-03, is recorded with its source-audit limits. Its separated-space
+criterion needs more than a large PC refutation degree; substituting our
+existing degree bound into it would not be justified.
+
+**Next acceptance test.** Work on a specific gap between these two bounds:
+arbitrary-support parity questions with genuinely mixed-characteristic
+terminal proofs, or a precisely checked reuse rule across incoming branch
+contexts. The two-prime selector already supplies one easy family, so another
+larger selector benchmark is insufficient. For a lower-bound approach, first
+audit the new separated-space criterion and identify the exact stronger
+property needed of the existing family. A bounded source audit is not a
+completed external theorem verification; do not spend a long build budget
+before fixing the theorem/model/dependency target. For a proposed positive
+algorithm, include raw-input discovery, certificates, bit lengths, and an
+asymptotic family argument. Neither a fixed-field degree lower bound nor a
+proof-system separation settles P versus NP.
+
 ## Phase 18: retire the high-digit search on the existing expanding family
 
 We tested the precise [phase-17 high-digit question](feedback_simulation.md).

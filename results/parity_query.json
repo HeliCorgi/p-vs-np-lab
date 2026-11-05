@@ -1,0 +1,427 @@
+{
+  "all_checks_passed": true,
+  "graph_cases": [
+    {
+      "clauses": 16,
+      "raw_sat_word_hex": "0x33",
+      "seed": 19004,
+      "stats": {
+        "basis_xors": 3,
+        "max_block_width": 0,
+        "parity_blocks": 4,
+        "raw_clauses": 16,
+        "selected_blocks": 0,
+        "selected_pattern_count": 0,
+        "support_groups": 4,
+        "used_variables": 6
+      },
+      "status": "UNKNOWN",
+      "truth": "SAT",
+      "variables": 6,
+      "vertices": 4
+    },
+    {
+      "certificate_bytes": 764,
+      "clauses": 16,
+      "previous_prime_two_affine_sum": {
+        "checked": true,
+        "status": "UNSAT"
+      },
+      "seed": 19004,
+      "semantic_replay": {
+        "assignments": 64,
+        "questions": 256,
+        "reached_leaves": 16
+      },
+      "stats": {
+        "basis_xors": 3,
+        "inconsistent_leaves": 0,
+        "leaves": 16,
+        "max_block_width": 3,
+        "max_depth": 4,
+        "max_query_support": 4,
+        "nodes": 31,
+        "parity_blocks": 4,
+        "queries": 15,
+        "query_variable_occurrences": 22,
+        "raw_clauses": 16,
+        "selected_blocks": 4,
+        "selected_pattern_count": 16,
+        "support_groups": 4,
+        "used_variables": 6
+      },
+      "status": "UNSAT",
+      "truth": "UNSAT",
+      "variables": 6,
+      "vertices": 4
+    },
+    {
+      "clauses": 24,
+      "raw_sat_word_hex": "0x1be",
+      "seed": 19006,
+      "stats": {
+        "basis_xors": 5,
+        "max_block_width": 0,
+        "parity_blocks": 6,
+        "raw_clauses": 24,
+        "selected_blocks": 0,
+        "selected_pattern_count": 0,
+        "support_groups": 6,
+        "used_variables": 9
+      },
+      "status": "UNKNOWN",
+      "truth": "SAT",
+      "variables": 9,
+      "vertices": 6
+    },
+    {
+      "certificate_bytes": 1150,
+      "clauses": 24,
+      "previous_prime_two_affine_sum": {
+        "checked": true,
+        "status": "UNSAT"
+      },
+      "seed": 19006,
+      "semantic_replay": {
+        "assignments": 512,
+        "questions": 2304,
+        "reached_leaves": 24
+      },
+      "stats": {
+        "basis_xors": 5,
+        "inconsistent_leaves": 0,
+        "leaves": 24,
+        "max_block_width": 3,
+        "max_depth": 5,
+        "max_query_support": 5,
+        "nodes": 47,
+        "parity_blocks": 6,
+        "queries": 23,
+        "query_variable_occurrences": 35,
+        "raw_clauses": 24,
+        "selected_blocks": 6,
+        "selected_pattern_count": 24,
+        "support_groups": 6,
+        "used_variables": 9
+      },
+      "status": "UNSAT",
+      "truth": "UNSAT",
+      "variables": 9,
+      "vertices": 6
+    }
+  ],
+  "opposite_blocks_same_support": {
+    "clauses": 4,
+    "semantic_replay": {
+      "assignments": 4,
+      "questions": 8,
+      "reached_leaves": 4
+    },
+    "stats": {
+      "basis_xors": 1,
+      "inconsistent_leaves": 0,
+      "leaves": 4,
+      "max_block_width": 2,
+      "max_depth": 2,
+      "max_query_support": 2,
+      "nodes": 7,
+      "parity_blocks": 2,
+      "queries": 3,
+      "query_variable_occurrences": 4,
+      "raw_clauses": 4,
+      "selected_blocks": 2,
+      "selected_pattern_count": 4,
+      "support_groups": 1,
+      "used_variables": 2
+    },
+    "variables": 2
+  },
+  "overlap_control": {
+    "clauses": 14,
+    "semantic_replay": {
+      "assignments": 16,
+      "questions": 52,
+      "reached_leaves": 10
+    },
+    "stats": {
+      "basis_xors": 2,
+      "inconsistent_leaves": 0,
+      "leaves": 10,
+      "max_block_width": 3,
+      "max_depth": 4,
+      "max_query_support": 3,
+      "nodes": 19,
+      "parity_blocks": 3,
+      "queries": 9,
+      "query_variable_occurrences": 12,
+      "raw_clauses": 14,
+      "selected_blocks": 3,
+      "selected_pattern_count": 10,
+      "support_groups": 4,
+      "used_variables": 4
+    },
+    "variables": 4
+  },
+  "sample_raw_certificate": {
+    "certificate": {
+      "kind": "parity-query-tree-v1",
+      "nodes": [
+        {
+          "one": 16,
+          "query": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "zero": 1
+        },
+        {
+          "one": 9,
+          "query": [
+            1,
+            2,
+            3
+          ],
+          "zero": 2
+        },
+        {
+          "one": 6,
+          "query": [
+            1
+          ],
+          "zero": 3
+        },
+        {
+          "one": 5,
+          "query": [
+            4
+          ],
+          "zero": 4
+        },
+        {
+          "clause": 8
+        },
+        {
+          "clause": 13
+        },
+        {
+          "one": 8,
+          "query": [
+            4
+          ],
+          "zero": 7
+        },
+        {
+          "clause": 9
+        },
+        {
+          "clause": 1
+        },
+        {
+          "one": 13,
+          "query": [
+            1
+          ],
+          "zero": 10
+        },
+        {
+          "one": 12,
+          "query": [
+            2
+          ],
+          "zero": 11
+        },
+        {
+          "clause": 4
+        },
+        {
+          "clause": 3
+        },
+        {
+          "one": 15,
+          "query": [
+            2
+          ],
+          "zero": 14
+        },
+        {
+          "clause": 11
+        },
+        {
+          "clause": 14
+        },
+        {
+          "one": 24,
+          "query": [
+            2,
+            5,
+            6
+          ],
+          "zero": 17
+        },
+        {
+          "one": 21,
+          "query": [
+            2
+          ],
+          "zero": 18
+        },
+        {
+          "one": 20,
+          "query": [
+            5
+          ],
+          "zero": 19
+        },
+        {
+          "clause": 6
+        },
+        {
+          "clause": 10
+        },
+        {
+          "one": 23,
+          "query": [
+            5
+          ],
+          "zero": 22
+        },
+        {
+          "clause": 15
+        },
+        {
+          "clause": 7
+        },
+        {
+          "one": 28,
+          "query": [
+            3
+          ],
+          "zero": 25
+        },
+        {
+          "one": 27,
+          "query": [
+            4
+          ],
+          "zero": 26
+        },
+        {
+          "clause": 5
+        },
+        {
+          "clause": 0
+        },
+        {
+          "one": 30,
+          "query": [
+            4
+          ],
+          "zero": 29
+        },
+        {
+          "clause": 2
+        },
+        {
+          "clause": 12
+        }
+      ],
+      "root": 0
+    },
+    "raw_clauses": [
+      [
+        3,
+        -6,
+        -4
+      ],
+      [
+        -1,
+        5,
+        -4
+      ],
+      [
+        -6,
+        4,
+        -3
+      ],
+      [
+        -2,
+        1,
+        3
+      ],
+      [
+        2,
+        1,
+        -3
+      ],
+      [
+        3,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        6
+      ],
+      [
+        -2,
+        -5,
+        6
+      ],
+      [
+        4,
+        1,
+        5
+      ],
+      [
+        -1,
+        4,
+        -5
+      ],
+      [
+        -6,
+        2,
+        -5
+      ],
+      [
+        -1,
+        2,
+        3
+      ],
+      [
+        -4,
+        -3,
+        6
+      ],
+      [
+        -5,
+        -4,
+        1
+      ],
+      [
+        -1,
+        -3,
+        -2
+      ],
+      [
+        -2,
+        5,
+        -6
+      ]
+    ],
+    "variables": 6
+  },
+  "schema_version": 1,
+  "scope": "Independent exact raw-clause path checking and all-word routing on small controls. The raw finder uses no graph metadata. These controls were already easy for the previous F2 affine-sum refuter; no new separation from affine-terminal trees or measured asymptotic lower bound is claimed.",
+  "summary": {
+    "all_assignment_replays": 596,
+    "graph_inputs": 4,
+    "graph_sat_siblings_checked": 2,
+    "largest_query_support": 5,
+    "largest_tree_nodes": 47,
+    "previous_affine_sum_refutations": 2,
+    "raw_checked_refutations": 4
+  }
+}
