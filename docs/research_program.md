@@ -35,6 +35,41 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 24: the affine-cover/circuit boundary (2026-11-06 JST)
+
+The actual unfinished continuation was `research/affine-cover-circuit-boundary`
+at `54f7d62a74f4943007b39c39b2197e186ddae44e`, ahead of main `9dd8e876`.
+Its quadratic polar module failed to compile. Repairing its sum binder scope,
+explicit functional extensionality, and constant second-difference cancellation
+completed the intended dimension theorem without weakening its statement.
+
+The [connected counting proof](affine_cover_circuit_boundary.md) now derives
+an exponential affine one-cover bound for the binary inner-product function:
+on `2m` original input bits, at least `2^(m-2)` charts are required for `m >= 2`,
+even with overlapping images. The dimension bound and a sufficiently large
+positive subset are proved internally. A linear-size circuit for the same
+function refutes the precise proposed translation from arbitrary small
+circuits to small exact affine covers on their original inputs. The circuit
+gate count is a paper construction, separate from the named Lean endpoints.
+
+The complete package build and 126 endpoint axiom audits, including 20 new
+endpoints, passed at `6aa1b3fe` in
+[run 42125609896](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42125609896).
+The [audit record](../results/affine_cover_formal_audit.json) retains source
+hashes, actual axiom sets, the three failed checkpoints, and the separate
+successful core/reproduction workflow. All 388 tests and 62 deterministic
+reports passed there. The local unit suite also passed all 388 tests once its
+required fixtures and CLI files were present. No package pin, foundation
+source, workflow permission, or proof-system premise was changed.
+
+This is an elementary representation obstruction, with no priority claim.
+It neither resolves P versus NP nor excludes every possible simulation into
+an affine-clause proof system. The earlier expander separator, quantitative
+existence/counting, full exponential formalization, and intrinsic distinct-flat
+deduplication remain unfinished. A P-versus-NP-relevant next target needs an
+explicit efficient simulation and a bound valid for the model it uses; the
+rejected same-input affine-cover translation cannot supply that bridge.
+
 ## Phase 23: optimal affine parameters (2026-11-06 JST)
 
 The user selected the exact unfinished chart theorem. Starting main was
