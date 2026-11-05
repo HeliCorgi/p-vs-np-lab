@@ -37,14 +37,14 @@ def quadratic (z : Point W) : F2 := ∑ i, z.1 i * z.2 i
 
 /-- Its explicit symmetric polar pairing. -/
 def polar (a b : Point W) : F2 :=
-  ∑ i, a.1 i * b.2 i + b.1 i * a.2 i
+  ∑ i, (a.1 i * b.2 i + b.1 i * a.2 i)
 
 theorem quadratic_add (a b : Point W) :
     quadratic (a + b) = quadratic a + quadratic b + polar a b := by
   unfold quadratic polar
   change (∑ i, (a.1 i + b.1 i) * (a.2 i + b.2 i)) =
     (∑ i, a.1 i * a.2 i) + (∑ i, b.1 i * b.2 i) +
-      ∑ i, a.1 i * b.2 i + b.1 i * a.2 i
+      ∑ i, (a.1 i * b.2 i + b.1 i * a.2 i)
   simp only [add_mul, mul_add, Finset.sum_add_distrib]
   ring
 
@@ -123,7 +123,9 @@ theorem constant_on_translate_isotropic
   have h := quadratic_second_difference a u v
   rw [hconstant (u + v) (U.add_mem hu hv), hconstant u hu,
     hconstant v hv, hzero] at h
-  simpa using h.symm
+  calc
+    polar u v = c - c - c + c := h.symm
+    _ = 0 := by ring
 
 /-- The polar image of a direction space, inside the ambient dual. -/
 def polarImage (U : Submodule F2 (Point W)) :
