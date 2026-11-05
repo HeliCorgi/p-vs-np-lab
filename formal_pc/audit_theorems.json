@@ -29,5 +29,12 @@
   "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial",
   "BoundaryLab.AffineIndicators.cnfClause_falsityPolynomial",
   "BoundaryLab.DAGDimension.dag_dimension_budget",
-  "BoundaryLab.DAGDimension.dag_separated_dimension_budget"
+  "BoundaryLab.DAGDimension.dag_separated_dimension_budget",
+  "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_zero",
+  "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_one",
+  "BoundaryLab.AffineIndicators.falsityPolynomial_degree",
+  "BoundaryLab.AffineIndicators.compressedPolynomial_eq_zero_iff",
+  "BoundaryLab.AffineIndicators.compressedPolynomial_empty",
+  "BoundaryLab.AffineIndicators.literalForm_injective",
+  "BoundaryLab.AffineIndicators.cnfClause_affine"
 ]

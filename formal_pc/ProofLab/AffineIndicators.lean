@@ -53,7 +53,9 @@ def spanRank (C : Clause V) : ℕ :=
   Module.finrank BinaryField (Submodule.span BinaryField (C : Set (Poly V)))
 
 theorem binary_eq_zero_or_one (a : BinaryField) : a = 0 ∨ a = 1 := by
-  fin_cases a <;> decide
+  fin_cases a
+  · exact Or.inl rfl
+  · exact Or.inr rfl
 
 theorem eval_falsityPolynomial_eq_zero (C : Clause V) (x : V → BinaryField) :
     eval x (falsityPolynomial C) = 0 ↔ clauseHolds C x := by
@@ -281,14 +283,26 @@ theorem literalForm_degree (l : V × Bool) : (literalForm l).totalDegree ≤ 1 :
   · simp [literalForm]
 
 theorem literalForm_injective : Function.Injective (literalForm (V := V)) := by
+  have hX : Function.Injective (X : V → Poly V) := MvPolynomial.X_injective
   rintro ⟨v, b⟩ ⟨w, c⟩ h
-  have hzero := congrArg (eval (fun _ : V => (0 : BinaryField))) h
   cases b <;> cases c
-  · have hv : (X v : Poly V) = X w := sub_left_inj.mp h
-    exact Prod.ext (X_injective hv) rfl
-  · simp [literalForm] at hzero
-  · simp [literalForm] at hzero
-  · exact Prod.ext (X_injective h) rfl
+  · change (1 - X v : Poly V) = 1 - X w at h
+    have hv : (X v : Poly V) = X w := by
+      have hcomp := congrArg (fun p : Poly V => 1 - p) h
+      simpa only [sub_sub_cancel] using hcomp
+    exact congrArg (fun u : V => (u, false)) (hX hv)
+  · change (1 - X v : Poly V) = X w at h
+    have hbad : (1 : BinaryField) = 0 := by
+      simpa only [map_sub, map_one, eval_X, sub_zero] using
+        congrArg (eval (fun _ : V => (0 : BinaryField))) h
+    exact False.elim (one_ne_zero hbad)
+  · change (X v : Poly V) = 1 - X w at h
+    have hbad : (0 : BinaryField) = 1 := by
+      simpa only [map_sub, map_one, eval_X, sub_zero] using
+        congrArg (eval (fun _ : V => (0 : BinaryField))) h
+    exact False.elim (zero_ne_one hbad)
+  · change (X v : Poly V) = X w at h
+    exact congrArg (fun u : V => (u, true)) (hX h)
 
 /-- The finite affine clause corresponding to an ordinary CNF clause. -/
 def cnfClause (L : Finset (V × Bool)) : Clause V := by
