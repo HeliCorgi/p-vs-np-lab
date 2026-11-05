@@ -115,4 +115,31 @@ theorem glue_congruence (m a b u v x y r : Int) (norm : u*a + v*b = 1)
     omega
   rwa [replaceSum] at total
 
+/-- Integer arithmetic in the absorbed-set bound: |C| < 8 |A|. -/
+theorem absorbed_size (t n fresh a : Nat) (expands : 7*t < 4*n)
+    (deficient : 8*fresh ≤ 13*t) (removed : n ≤ fresh + a) : t < 8*a := by
+  omega
+
+/-- Fresh expansion 13/8 and at most three occurrences per clause leave
+more than t/4 unique neighbors after the maintained assignment. -/
+theorem residual_boundary (t n boundary : Nat) (fresh : 13*t < 8*n)
+    (incidences : 2*n ≤ 3*t + boundary) : t < 4*boundary := by
+  omega
+
+/-- Evidence of k independent two-sided offers in a tree with n leaves.
+A forced answer may discard the other subtree, but cannot shrink its parent. -/
+inductive Offers : Nat → Nat → Prop where
+  | terminal {n : Nat} (positive : 1 ≤ n) : Offers 0 n
+  | forced {k n m : Nat} (child : Offers k n) (leaves : n ≤ m) : Offers k m
+  | free {k l r : Nat} (left : Offers k l) (right : Offers k r) :
+      Offers (k+1) (l+r)
+
+theorem free_choice_leaves {k n : Nat} (proof : Offers k n) : 2^k ≤ n := by
+  induction proof with
+  | terminal positive => simpa using positive
+  | forced child leaves ih => exact Nat.le_trans ih leaves
+  | free left right ihLeft ihRight =>
+    rw [Nat.pow_succ]
+    omega
+
 end BoundaryLab.SupportLocalization

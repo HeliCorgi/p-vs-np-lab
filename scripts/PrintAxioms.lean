@@ -91,3 +91,6 @@ import Formal
 #print axioms BoundaryLab.SupportLocalization.support_gap
 #print axioms BoundaryLab.SupportLocalization.face_coefficient
 #print axioms BoundaryLab.SupportLocalization.glue_congruence
+#print axioms BoundaryLab.SupportLocalization.absorbed_size
+#print axioms BoundaryLab.SupportLocalization.residual_boundary
+#print axioms BoundaryLab.SupportLocalization.free_choice_leaves

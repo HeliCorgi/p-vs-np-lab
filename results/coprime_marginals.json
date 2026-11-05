@@ -1,0 +1,103 @@
+{
+  "all_checks_passed": true,
+  "bezout_weights": [
+    -5,
+    1
+  ],
+  "branch_scales": [
+    16,
+    81
+  ],
+  "clauses": 132,
+  "edge_sets_with_giant": 99,
+  "fixed_defect_negative_control": {
+    "clause": [
+      2,
+      4,
+      5
+    ],
+    "defect": 0,
+    "raw_word": 76695808,
+    "sigma": 0,
+    "violated_clause_id": 0
+  },
+  "level": 4,
+  "missing_giant_at_five": {
+    "deleted": [
+      0,
+      1,
+      2,
+      5,
+      6
+    ],
+    "parts": [
+      2,
+      2,
+      1
+    ]
+  },
+  "oriented_edges": [
+    [
+      0,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "raw_refutation_checked": true,
+  "scope": "All scope tables through order four on one 29-variable UNSAT switch. Signed integer marginals, not probabilities or a Boolean assignment. No general expansion lower bound inferred from this example. Missing giant for five deleted edges is a failure of this construction criterion, not a level-five infeasibility proof.",
+  "selector_integer_masses": [
+    -80,
+    81
+  ],
+  "stats": {
+    "branch_word_projections": 974435,
+    "cells": 410931,
+    "max_signed": 81,
+    "min_signed": -80,
+    "minimum_giant_vertices": 3,
+    "negative_cells": 57425,
+    "positive_cells": 163850,
+    "projection_equalities": 2416599,
+    "raw_zero_mass_cells": 36522,
+    "scopes": 27841,
+    "zero_cells": 189656
+  },
+  "summary": {
+    "checked_projection_equalities": 2416599,
+    "checked_scopes": 27841,
+    "edge_sets_with_giant": 99,
+    "level": 4,
+    "minimum_giant_vertices": 3,
+    "negative_integer_cells": 57425,
+    "selector_masses": [
+      -80,
+      81
+    ],
+    "table_cells": 410931,
+    "variables": 29
+  },
+  "variables": 29
+}

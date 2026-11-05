@@ -8,13 +8,18 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from pnp_lab.feedback_witness import check_feedback_witness, feedback_witness
 from pnp_lab.integer_feedback import check_integer_feedback, integer_feedback_refute
+from pnp_lab.field_split import KIND as SPLIT_KIND, check_field_split, field_split_refute
 from pnp_lab.modular_hull import _input
 
 
 def decide(n, cs, *, method='auto', max_edges=None, family_budget=False):
-    if method not in ('auto', 'witness', 'refute'):
+    if method not in ('auto', 'witness', 'refute', 'split'):
         raise ValueError('unknown method')
     cs = _input(n, cs)
+    if method == 'split':
+        if max_edges is not None:
+            raise ValueError('--max-edges is for the path solver, not the separator search')
+        return field_split_refute(n, cs, max_candidates=n if family_budget else 32)
     m = len(cs)
     limits = dict(max_edges=(2*m if family_budget else 1000000) if max_edges is None else max_edges)
     model_limits = {}
@@ -39,6 +44,9 @@ def verify(n, cs, report):
     if not isinstance(report, dict):
         return False
     if report.get('status') == 'UNSAT':
+        cert = report.get('certificate')
+        if isinstance(cert, dict) and cert.get('kind') == SPLIT_KIND:
+            return check_field_split(n, cs, cert)
         return check_integer_feedback(n, cs, report.get('certificate'))
     word = report.get('witness_hex')
     if (report.get('status') == 'SAT' and isinstance(word, str)
@@ -51,7 +59,7 @@ def verify(n, cs, report):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', type=Path)
-    parser.add_argument('--method', choices=['auto','witness','refute'], default='auto')
+    parser.add_argument('--method', choices=['auto','witness','refute','split'], default='auto')
     parser.add_argument('--max-edges', type=int, help='override the edge-visit budget per stage')
     parser.add_argument('--family-budget', action='store_true',
                         help='scale path and witness limits to the input as in the shielded Tseitin theorem')

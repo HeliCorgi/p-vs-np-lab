@@ -1,0 +1,19 @@
+{
+  "all_checks_passed": true,
+  "schema_version": 1,
+  "scope": "All ordered first/second queries and both free replies on the seven-petal satisfiable control; residual expansion checked on every disjoint subfamily. A finite audit of the strategy, not evidence of hardness of this fixture.",
+  "summary": {
+    "absorbed_nonempty": 1260,
+    "both_values_checks": 1275,
+    "forced_edges": 840,
+    "free_edges": 2550,
+    "histories": 1680,
+    "largest_block": 5,
+    "original_variables": 15,
+    "repair_assignments": 6720,
+    "residual_neighborhood_checks": 35017,
+    "signed_input_clauses": 7,
+    "states_checked": 2551
+  },
+  "two_false_pins_force_third": true
+}

@@ -1,0 +1,734 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "before_split_fields_2_3": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "branch_fields": [
+        3,
+        2
+      ],
+      "branch_terms": [
+        10,
+        7
+      ],
+      "certificate_bytes": 2101,
+      "clauses": 188,
+      "previous_width_one_bridge": {
+        "checked": true,
+        "probes": 25,
+        "status": "UNSAT",
+        "transfers": {
+          "2->3:1": 1
+        }
+      },
+      "prism_vertices": 6,
+      "seed": 18185,
+      "stats": {
+        "budget_limited": false,
+        "candidates": 1,
+        "field_calls": 3,
+        "local_assignments": 34572,
+        "scopes_examined": 951,
+        "tried": 1
+      },
+      "status": "UNSAT",
+      "truth": "UNSAT",
+      "variables": 41
+    },
+    {
+      "before_split_fields_2_3": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "clauses": 188,
+      "prism_vertices": 6,
+      "raw_sat_word_hex": "0x11a7b33703e",
+      "seed": 18185,
+      "stats": {
+        "budget_limited": false,
+        "candidates": 1,
+        "field_calls": 3,
+        "local_assignments": 34572,
+        "scopes_examined": 951,
+        "tried": 1
+      },
+      "status": "UNKNOWN",
+      "truth": "SAT",
+      "variables": 41
+    },
+    {
+      "before_split_fields_2_3": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "branch_fields": [
+        2,
+        3
+      ],
+      "branch_terms": [
+        13,
+        15
+      ],
+      "certificate_bytes": 3703,
+      "clauses": 356,
+      "previous_width_one_bridge": {
+        "checked": true,
+        "probes": 69,
+        "status": "UNSAT",
+        "transfers": {
+          "2->3:1": 1
+        }
+      },
+      "prism_vertices": 12,
+      "seed": 18188,
+      "stats": {
+        "budget_limited": false,
+        "candidates": 1,
+        "field_calls": 3,
+        "local_assignments": 68456,
+        "scopes_examined": 1825,
+        "tried": 1
+      },
+      "status": "UNSAT",
+      "truth": "UNSAT",
+      "variables": 77
+    },
+    {
+      "before_split_fields_2_3": [
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "clauses": 356,
+      "prism_vertices": 12,
+      "raw_sat_word_hex": "0x148c534dd019495fc322",
+      "seed": 18188,
+      "stats": {
+        "budget_limited": false,
+        "candidates": 1,
+        "field_calls": 2,
+        "local_assignments": 66608,
+        "scopes_examined": 1562,
+        "tried": 1
+      },
+      "status": "UNKNOWN",
+      "truth": "SAT",
+      "variables": 77
+    }
+  ],
+  "local_translation": [
+    {
+      "coefficient_field": "F3",
+      "group": 2,
+      "root_tuples": 160,
+      "stars": 24,
+      "violating_tuples": 80
+    },
+    {
+      "coefficient_field": "F4",
+      "group": 3,
+      "root_tuples": 756,
+      "stars": 36,
+      "violating_tuples": 504
+    }
+  ],
+  "sample_regenerable_refutation": {
+    "certificate": {
+      "branches": [
+        {
+          "kind": "boolean-modular-hull-v1",
+          "prime": 3,
+          "terms": [
+            {
+              "clauses": [
+                135,
+                121,
+                17,
+                119,
+                171,
+                105,
+                128,
+                134,
+                82,
+                153,
+                74,
+                125,
+                38,
+                12,
+                59,
+                87,
+                69,
+                169,
+                147,
+                146,
+                176,
+                47,
+                18,
+                64,
+                158,
+                24,
+                55,
+                75,
+                140,
+                68
+              ],
+              "coeff": [
+                0,
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                2
+              ],
+              "rhs": 0,
+              "scope": [
+                1,
+                2,
+                8,
+                16,
+                19,
+                24,
+                28,
+                33,
+                36
+              ]
+            },
+            {
+              "clauses": [
+                135,
+                121,
+                11,
+                163,
+                27,
+                148,
+                61,
+                134,
+                165,
+                142,
+                86,
+                112,
+                39,
+                87,
+                122,
+                71,
+                15,
+                161,
+                2,
+                137,
+                8,
+                13,
+                37,
+                111,
+                83,
+                63,
+                104,
+                93,
+                120,
+                115
+              ],
+              "coeff": [
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                1,
+                17,
+                18,
+                21,
+                24,
+                27,
+                31,
+                32,
+                36
+              ]
+            },
+            {
+              "clauses": [
+                135,
+                121,
+                134,
+                87
+              ],
+              "coeff": [
+                2,
+                1,
+                1
+              ],
+              "rhs": 1,
+              "scope": [
+                1,
+                24,
+                36
+              ]
+            },
+            {
+              "clauses": [
+                17,
+                119,
+                73,
+                48,
+                27,
+                148,
+                61,
+                82,
+                42,
+                97,
+                98,
+                3,
+                77,
+                176,
+                149,
+                70,
+                66,
+                16,
+                72,
+                88,
+                85,
+                13,
+                14,
+                31,
+                114,
+                1,
+                44,
+                32,
+                80,
+                7
+              ],
+              "coeff": [
+                1,
+                2,
+                2,
+                2,
+                1,
+                0,
+                0,
+                2,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                2,
+                7,
+                18,
+                21,
+                28,
+                32,
+                33,
+                39,
+                40
+              ]
+            },
+            {
+              "clauses": [
+                144,
+                107,
+                21,
+                166,
+                171,
+                105,
+                99,
+                118,
+                128,
+                51,
+                136,
+                57,
+                178,
+                9,
+                132,
+                76,
+                90,
+                43,
+                81,
+                6,
+                46,
+                100,
+                96,
+                47,
+                23,
+                78,
+                109,
+                172,
+                150,
+                29
+              ],
+              "coeff": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                0,
+                0,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                3,
+                4,
+                8,
+                11,
+                13,
+                16,
+                19,
+                23,
+                34
+              ]
+            },
+            {
+              "clauses": [
+                144,
+                107,
+                73,
+                48,
+                118,
+                152,
+                54,
+                10,
+                42,
+                62,
+                41,
+                9,
+                52,
+                159,
+                139,
+                5,
+                123,
+                162,
+                156,
+                126,
+                85,
+                34,
+                40,
+                94,
+                89,
+                30,
+                167,
+                60,
+                175,
+                84
+              ],
+              "coeff": [
+                1,
+                1,
+                1,
+                2,
+                2,
+                0,
+                0,
+                1,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                3,
+                7,
+                13,
+                15,
+                29,
+                34,
+                38,
+                39,
+                40
+              ]
+            },
+            {
+              "clauses": [
+                20,
+                21,
+                166,
+                164,
+                129,
+                133,
+                92,
+                99,
+                170,
+                4,
+                116,
+                36,
+                43,
+                160
+              ],
+              "coeff": [
+                0,
+                1,
+                2,
+                2,
+                1,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                4,
+                5,
+                11,
+                23,
+                30,
+                41
+              ]
+            },
+            {
+              "clauses": [
+                21,
+                166,
+                99,
+                43
+              ],
+              "coeff": [
+                1,
+                2,
+                1
+              ],
+              "rhs": 1,
+              "scope": [
+                4,
+                11,
+                23
+              ]
+            },
+            {
+              "clauses": [
+                133,
+                92,
+                152,
+                54,
+                11,
+                163,
+                165,
+                10,
+                36,
+                67,
+                33,
+                95,
+                145,
+                154,
+                160,
+                28,
+                168,
+                143,
+                30,
+                117,
+                91,
+                137,
+                103,
+                141,
+                56,
+                53,
+                35,
+                179,
+                124,
+                26
+              ],
+              "coeff": [
+                2,
+                1,
+                2,
+                0,
+                1,
+                2,
+                1,
+                0,
+                0
+              ],
+              "rhs": 0,
+              "scope": [
+                5,
+                15,
+                17,
+                27,
+                29,
+                30,
+                31,
+                38,
+                41
+              ]
+            },
+            {
+              "clauses": [
+                11,
+                163,
+                165,
+                137
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 2,
+              "scope": [
+                17,
+                27,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "boolean-modular-hull-v1",
+          "prime": 2,
+          "terms": [
+            {
+              "clauses": [
+                44,
+                77,
+                104,
+                156
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                6,
+                10,
+                22
+              ]
+            },
+            {
+              "clauses": [
+                106,
+                108,
+                111,
+                176
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                6,
+                14,
+                35
+              ]
+            },
+            {
+              "clauses": [
+                36,
+                157
+              ],
+              "coeff": [
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                9,
+                10
+              ]
+            },
+            {
+              "clauses": [
+                19,
+                48,
+                126,
+                154
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                9,
+                20,
+                26
+              ]
+            },
+            {
+              "clauses": [
+                21,
+                49,
+                99,
+                149
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                12,
+                14,
+                37
+              ]
+            },
+            {
+              "clauses": [
+                0,
+                57,
+                127,
+                136
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 1,
+              "scope": [
+                12,
+                20,
+                22
+              ]
+            },
+            {
+              "clauses": [
+                100,
+                124,
+                172,
+                173
+              ],
+              "coeff": [
+                1,
+                1,
+                1
+              ],
+              "rhs": 0,
+              "scope": [
+                26,
+                35,
+                37
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "one-split-two-fields-v1",
+      "selector": 25
+    },
+    "prism_vertices": 6,
+    "seed": 18185
+  },
+  "schema_version": 1,
+  "scope": "Finite prisms and raw proof replays. The all-field PC bound is for uniformly expanding graphs, not a measured degree on these prisms. One split lies outside the single-sum model.",
+  "summary": {
+    "inputs": 4,
+    "largest_clauses": 356,
+    "largest_variables": 77,
+    "local_root_tuples": 916,
+    "local_star_patterns": 60,
+    "mixed_refutations": 2,
+    "previous_unary_bridge_refutations": 2,
+    "sat_siblings_checked": 2
+  }
+}

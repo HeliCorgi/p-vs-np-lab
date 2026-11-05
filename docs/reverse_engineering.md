@@ -1,5 +1,48 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 18: retire the high-digit search on the existing expanding family
+
+We tested the precise [phase-17 high-digit question](feedback_simulation.md).
+On the phase-16 proper ternary clause expanders the new answer is negative
+independently of digit, modulus, coefficient size and number of learned
+rows: [common semantic support](support_localization.md) makes each small
+scope's integer affine lattice the entire ambient lattice even after
+bounded-width resolution. Coordinate two-faces extend this conclusion to
+multilinear moment coordinates of degree at most two. The semantic support
+need not be the raw ancestors of the displayed proof.
+
+The [variable-query tree bound](conditional_localization.md) is stronger
+than failure after one pin: absorb a maximal small set of clauses around
+free questions and keep enough expansion for the remaining restricted
+integer leaves. Hall matching permits both answers to fresh queries.
+With fixed width and scope, an exponential number of tree leaves is
+necessary. No theorem here prohibits shared intermediate proofs in a DAG.
+
+A [different expander construction](field_split_boundary.md) enters the
+alternative direction. A two-characteristic flow switch has a polynomially
+discoverable one-split proof, while ordinary PC needs high degree in every
+field and the unpinned one-sum system fails for any detecting digit by
+[signed integral marginals](coprime_pseudomarginals.md). Its expanding graph
+is the graph carrying flow, **not** the clause-variable graph of the first
+family. One selector with incompatible Boolean residues already illustrates
+why a domain-aware bridge can also solve it; the previous unary bridge
+refutes the finite UNSAT controls. The two-prime construction and the
+all-field restriction argument have explicit antecedents in Lichter–Pago
+and Conneryd–Ghannane–Pang; this cycle checks the lab's precise encoding.
+
+**Next acceptance test.** Do not continue increasing a modulus, variable
+tree depth, or the number of switch benchmarks. Specify an inference outside
+the proved tree model. For example, allow a query of a parity of many
+original variables, and specify exactly how a conditional leaf may use that
+parity (never as an unchecked new axiom). Either show how to adapt the
+absorption/extension argument against that explicitly defined rule, or give a
+polynomial-size family separation with an independently verifiable certificate
+and a polynomial discovery bound. For shared proofs, charge the cost of
+establishing the same learned clause under all incoming contexts. Encoding
+an arbitrary SAT decision into a question or an unchecked merger is not an
+algorithm. Other all-field-degree-hard families might still have high-digit
+one-sum proofs; neither phase 18 family supplies such a positive example.
+
 ## Phase 17 decision: a real separation for feedback, and a degree bound for the combination
 
 The [audited research program](research_program.md) records the starting

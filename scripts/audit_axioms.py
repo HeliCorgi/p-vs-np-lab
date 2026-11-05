@@ -91,6 +91,9 @@ THEOREMS = {
     "BoundaryLab.SupportLocalization.support_gap",
     "BoundaryLab.SupportLocalization.face_coefficient",
     "BoundaryLab.SupportLocalization.glue_congruence",
+    "BoundaryLab.SupportLocalization.absorbed_size",
+    "BoundaryLab.SupportLocalization.residual_boundary",
+    "BoundaryLab.SupportLocalization.free_choice_leaves",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

@@ -35,6 +35,21 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 18: dated outcome (2026-11-05 JST)
+
+The new [support theorem](support_localization.md) answers the previous
+high-digit question negatively on the lab's existing all-field-hard
+expander family. Even [trees of variable queries with integer refutation
+leaves](conditional_localization.md) have an exponential leaf lower bound
+there at fixed width and local scope. A separate [Boolean field-switch
+family](field_split_boundary.md) admits polynomially discovered mixed-field
+proofs with one split, yet its [unpinned integer relaxation](coprime_pseudomarginals.md)
+survives every modulus. This is consistent with published two-prime CSP
+constructions; it is not an all-input lower or upper bound. The new
+[acceptance test](reverse_engineering.md) concerns rules genuinely outside
+the variable-tree model such as wide parity queries or certified branch
+sharing. The ongoing objective and standard for a solution remain unchanged.
+
 ## Phase 17: question, evidence, and stopping decision
 
 **Falsifiable question.** Can independently justified nonlinear clauses

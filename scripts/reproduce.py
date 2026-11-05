@@ -40,6 +40,8 @@ NEW_REPORTS = (
     "correlation_polynomial.json", "correlation_marginals.json",
     "integer_feedback.json", "feedback_prime_power.json", "feedback_simulation.json",
     "feedback_digits.json",
+    "support_localization.json", "branch_localization.json", "field_split.json",
+    "coprime_marginals.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -193,6 +195,8 @@ def main() -> None:
     phase17 = {name: read_json(out / (name + ".json"))
                for name in ("integer_feedback", "feedback_prime_power",
                             "feedback_simulation", "feedback_digits")}
+    phase18 = {name: read_json(out / (name + ".json"))
+               for name in ("support_localization", "branch_localization", "field_split", "coprime_marginals")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -202,7 +206,7 @@ def main() -> None:
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
             or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
-            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values(), *phase17.values()))):
+            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values(), *phase17.values(), *phase18.values()))):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -257,6 +261,8 @@ def main() -> None:
         "nonlinear_correlation_general_polynomial_solver": False,
         "integer_feedback_summaries": {name: r["summary"] for name,r in phase17.items()},
         "integer_feedback_general_polynomial_solver": False,
+        "localization_and_field_split_summaries": {name: r["summary"] for name,r in phase18.items()},
+        "localization_or_field_split_resolves_general_sat": False,
         "derived_transport_summaries": {name: r["summary"] for name,r in phase13.items()},
         "derived_transport_general_polynomial_solver": False,
         "witness_transport_summaries": {name: r["summary"] for name,r in phase12.items()},
