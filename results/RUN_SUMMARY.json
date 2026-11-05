@@ -601,7 +601,7 @@
     "Formal/IntegerFeedback.lean": "1bc45650aa59456af4c44acbdab22b373b06f8e385a57345b0652b8a4e2129fa",
     "Formal/JointXorClause.lean": "9c95f67675ae51133922239cd70bdd63be31ccf82ce2a777b1948aa99df13e30",
     "Formal/ModularHull.lean": "5c1f628594e887847db1a98fe8bab0c8c21ac8196e505ae914a734b36907a331",
-    "Formal/ParityQueries.lean": "cbffa88bd157f277f4ead9648d0b3234d7b53a0862f503ffe880b8dd7f9e0af5",
+    "Formal/ParityQueries.lean": "726770a9024fa44381eeead4ec72e6d92ffd0b04f6db84ea3f5b5b6318a385d9",
     "Formal/QuotientSearch.lean": "f70e569084eea41ed1feb53525286b0dfb98a2469031f1a0f9f80a4646665971",
     "Formal/StarProjection.lean": "fa790a036036a0288722d778d1912122fd3852a52ea9462a9085c5f71040c8b1",
     "Formal/SupportLocalization.lean": "8f45244849a6d55e7554fb56d0af0509f4887a114ce3496f12ea4b8944945145",

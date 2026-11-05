@@ -149,10 +149,10 @@ private theorem merge_mass (a b : Nat) : 2^(mergeRank a b) ≤ 2^a + 2^b := by
   · simp only [mergeRank, if_neg eq]
     by_cases le : a ≤ b
     · rw [Nat.max_eq_right le]
-      omega
+      exact Nat.le_add_left _ _
     · have reverse : b ≤ a := by omega
       rw [Nat.max_eq_left reverse]
-      omega
+      exact Nat.le_add_right _ _
 
 inductive DegreeTree where
   | leaf (degree : Nat)
