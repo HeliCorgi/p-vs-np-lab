@@ -62,12 +62,16 @@ def polarFunctional (a : Point W) : Module.Dual F2 (Point W) where
 def polarDual : Point W →ₗ[F2] Module.Dual F2 (Point W) where
   toFun := polarFunctional
   map_add' a b := by
-    ext z
-    simp [polarFunctional, polar, add_mul, mul_add, Finset.sum_add_distrib,
+    apply LinearMap.ext
+    intro z
+    change polar (a + b) z = polar a z + polar b z
+    simp [polar, add_mul, mul_add, Finset.sum_add_distrib,
       add_assoc, add_left_comm, add_comm]
   map_smul' c a := by
-    ext z
-    simp [polarFunctional, polar, smul_eq_mul, mul_add, Finset.mul_sum,
+    apply LinearMap.ext
+    intro z
+    change polar (c • a) z = c * polar a z
+    simp [polar, smul_eq_mul, mul_add, Finset.mul_sum,
       mul_assoc, mul_left_comm]
 
 @[simp]
