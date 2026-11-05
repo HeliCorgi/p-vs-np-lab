@@ -86,6 +86,11 @@ THEOREMS = {
     "BoundaryLab.IntegerFeedback.path_sound",
     "BoundaryLab.IntegerFeedback.replace_disjunct",
     "BoundaryLab.IntegerFeedback.feedback_refutes",
+    "BoundaryLab.SupportLocalization.drop_private",
+    "BoundaryLab.SupportLocalization.boundary_union",
+    "BoundaryLab.SupportLocalization.support_gap",
+    "BoundaryLab.SupportLocalization.face_coefficient",
+    "BoundaryLab.SupportLocalization.glue_congruence",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

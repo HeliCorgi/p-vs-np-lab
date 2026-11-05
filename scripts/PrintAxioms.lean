@@ -86,3 +86,8 @@ import Formal
 #print axioms BoundaryLab.IntegerFeedback.path_sound
 #print axioms BoundaryLab.IntegerFeedback.replace_disjunct
 #print axioms BoundaryLab.IntegerFeedback.feedback_refutes
+#print axioms BoundaryLab.SupportLocalization.drop_private
+#print axioms BoundaryLab.SupportLocalization.boundary_union
+#print axioms BoundaryLab.SupportLocalization.support_gap
+#print axioms BoundaryLab.SupportLocalization.face_coefficient
+#print axioms BoundaryLab.SupportLocalization.glue_congruence
