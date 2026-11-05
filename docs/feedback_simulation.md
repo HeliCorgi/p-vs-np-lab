@@ -218,8 +218,8 @@ If both scope measures stay small, **every** detecting characteristic
 has a large digit index. Increasing the exponent in the modulus while
 keeping a low nonzero residual digit does not evade this obstruction.
 A large digit index is only a necessary condition: the bound supplies
-no efficient certificate using it. Even $D=\Omega(n)$ requires only
-logarithmically many bits to *name* such an index, so this does not give
+no efficient certificate using it. This lower bound permits $D=\Theta(n)$, an index whose binary encoding
+has only logarithmically many bits. It therefore does not give
 a superpolynomial lower bound on the length of arbitrary integer
 certificates.
 

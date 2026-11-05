@@ -543,7 +543,7 @@
     "Formal/ExactlyOneParity.lean": "ed6c9c6057dcb84ac60ba83ed52f60d8cbdf683b228e9e2778ae111808be3cff",
     "Formal/HoleFibers.lean": "b8ea2b4eb4318624b464e7ee1358ca4e966f73674ca6a8fd7bf055f01051592e",
     "Formal/IntegerCertificate.lean": "da9b01b21e15dd6ad91fe2a024a40a8e4a8cee0929ebe32711f6707d5d5d1dfb",
-    "Formal/IntegerFeedback.lean": "6ac6353a648bf02f0e31da68dee18b179071f4c0a142dafac40b6a66e71b70d4",
+    "Formal/IntegerFeedback.lean": "1bc45650aa59456af4c44acbdab22b373b06f8e385a57345b0652b8a4e2129fa",
     "Formal/JointXorClause.lean": "9c95f67675ae51133922239cd70bdd63be31ccf82ce2a777b1948aa99df13e30",
     "Formal/ModularHull.lean": "5c1f628594e887847db1a98fe8bab0c8c21ac8196e505ae914a734b36907a331",
     "Formal/QuotientSearch.lean": "f70e569084eea41ed1feb53525286b0dfb98a2469031f1a0f9f80a4646665971",

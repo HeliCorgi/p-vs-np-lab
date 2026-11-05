@@ -49,7 +49,7 @@ theorem path_sound {V : Type} {f : CNF V} {p q : Term V}
     (path : Path f p q) {a : V → Bool} (model : Models a f) :
     eval a p = true → eval a q = true := by
   induction path with
-  | refl p => exact fun h => h
+  | refl => exact fun h => h
   | step prior edge ih => exact fun h => edge_sound edge model (ih h)
 
 theorem replace_disjunct {V : Type} {f : CNF V} {p q : Term V} {rest : Clause V}
