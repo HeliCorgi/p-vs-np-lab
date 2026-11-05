@@ -18,6 +18,10 @@ def query {V : Type} (a : V → Bool) (vs : List V) : Bool :=
 private theorem query_cons {V : Type} (a : V → Bool) (v : V) (vs : List V) :
     query a (v :: vs) = Bool.xor (a v) (query a vs) := rfl
 
+private theorem xor_preserves_difference (bit p q : Bool) (different : p ≠ q) :
+    Bool.xor bit p ≠ Bool.xor bit q := by
+  cases bit <;> cases p <;> cases q <;> simp_all
+
 private theorem outside_unchanged {V : Type} [DecidableEq V]
     (a : V → Bool) (x : V) (b : Bool) (vs : List V) (outside : x ∉ vs) :
     query (setBit a x b) vs = query a vs := by
@@ -46,7 +50,9 @@ theorem unique_coordinate_changes_answer {V : Type} [DecidableEq V]
       rw [query_cons, query_cons,
         outside_unchanged a x false vs nd.1,
         outside_unchanged a x true vs nd.1]
-      simp only [setBit, if_pos rfl]
+      have atFalse : setBit a x false x = false := by simp [setBit]
+      have atTrue : setBit a x true x = true := by simp [setBit]
+      rw [atFalse, atTrue]
       cases query a vs <;> decide
     · have tail : x ∈ vs := by
         rcases List.mem_cons.mp hit with h | h
@@ -54,10 +60,10 @@ theorem unique_coordinate_changes_answer {V : Type} [DecidableEq V]
         · exact h
       have different := ih nd.2 tail
       rw [query_cons, query_cons]
-      simp only [setBit, if_neg same]
-      cases a v <;>
-        cases query (setBit a x false) vs <;>
-        cases query (setBit a x true) vs <;> simp_all
+      have atFalse : setBit a x false v = a v := by simp [setBit, same]
+      have atTrue : setBit a x true v = a v := by simp [setBit, same]
+      rw [atFalse, atTrue]
+      exact xor_preserves_difference _ _ _ different
 
 private theorem either_value (p q b : Bool) (different : p ≠ q) : b = p ∨ b = q := by
   cases p <;> cases q <;> cases b <;> simp_all
