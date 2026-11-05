@@ -104,5 +104,19 @@
   "BoundaryLab.IntrinsicAffineRestriction.parameterCount_le_of_high_rank",
   "BoundaryLab.IntrinsicAffineRestriction.mem_nonemptyDiscardedNodes",
   "BoundaryLab.IntrinsicAffineRestriction.affine_clause_intrinsic_budget",
-  "BoundaryLab.IntrinsicAffineRestriction.affine_clause_separated_intrinsic_budget"
+  "BoundaryLab.IntrinsicAffineRestriction.affine_clause_separated_intrinsic_budget",
+  "BoundaryLab.QuadraticPolar.quadratic_add",
+  "BoundaryLab.QuadraticPolar.polarDual_apply",
+  "BoundaryLab.QuadraticPolar.polar_add_right",
+  "BoundaryLab.QuadraticPolar.polarDual_injective",
+  "BoundaryLab.QuadraticPolar.polarEquiv_apply",
+  "BoundaryLab.QuadraticPolar.polarDual_surjective",
+  "BoundaryLab.QuadraticPolar.quadratic_second_difference",
+  "BoundaryLab.QuadraticPolar.constant_on_translate_isotropic",
+  "BoundaryLab.QuadraticPolar.finrank_polarImage",
+  "BoundaryLab.QuadraticPolar.le_commonKernel_polarImage",
+  "BoundaryLab.QuadraticPolar.finrank_point",
+  "BoundaryLab.QuadraticPolar.finrank_le_of_isotropic",
+  "BoundaryLab.QuadraticPolar.finrank_le_of_constant_translate",
+  "BoundaryLab.QuadraticPolar.parameterCount_le_of_constant_affine"
 ]

@@ -11,3 +11,4 @@ import ProofLab.AffineCoefficients
 import ProofLab.DualKernelCoordinates
 import ProofLab.OptimalAffineParameters
 import ProofLab.IntrinsicAffineRestriction
+import ProofLab.QuadraticPolar
