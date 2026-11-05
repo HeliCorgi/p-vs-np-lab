@@ -141,9 +141,9 @@ theorem finrank_direction (C : Clause V) (hC : IsAffineClause C)
 count. The codimension formula is proved before this equivalence is chosen. -/
 def parameterLinearEquiv (C : Clause V) (hC : IsAffineClause C)
     (a : V → BinaryField) (ha : clauseZero C a) :
-    (Fin (Fintype.card V - spanRank C) → BinaryField) ≃ₗ[BinaryField] direction C := by
-  simpa only [finrank_slopeSpace C hC a ha, Module.finrank_pi] using
-    DualKernelCoordinates.coordinateEquiv (slopeSpace C)
+    (Fin (Fintype.card V - spanRank C) → BinaryField) ≃ₗ[BinaryField] direction C :=
+  (Module.finBasisOfFinrankEq BinaryField (direction C)
+    (finrank_direction C hC a ha)).equivFun.symm
 
 /-- Include the direction coordinates into the original assignment space. -/
 def parameterLinearMap (C : Clause V) (hC : IsAffineClause C)
