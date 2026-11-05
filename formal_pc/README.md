@@ -61,7 +61,7 @@ retained as historical evidence for their exact source commits.
 | `ProofLab.ParametrizedDAGDimension` | Concrete affine covers supply all numerical image budgets internally, yielding the dimension criterion directly for polynomial or affine-clause DAGs. |
 | `ProofLab.AffineCoefficients` | Ordinary affine coefficient reconstruction, evaluation under translation, and rank-preserving slope projection on a consistent affine span. |
 | `ProofLab.DualKernelCoordinates` | Common-kernel dimension and exact linear coordinates for any finite-dimensional vector space over any field. |
-| `ProofLab.OptimalAffineParameters` | An actual injective affine map with exactly `n-spanRank C` parameters, exact clause-zero image, and degree-one coordinate-polynomial encoding. |
+| `ProofLab.OptimalAffineParameters` | An actual injective affine map with exactly `n-spanRank C` parameters, exact clause-zero image, and degree-at-most-one coordinate-polynomial encoding. |
 | `ProofLab.IntrinsicAffineRestriction` | Exact vanishing kernel, intrinsic Boolean image budget, high-rank parameter bound, and a source-DAG criterion constructing all charts and coverage internally. |
 
 The newest composed theorem derives the numerical image bounds from the

@@ -222,6 +222,9 @@ retained-rank, empty-finish, and degree hypotheses, it proves
 \]
 
 Here `C_D(F)` is the actual ordinary-PC derivable space through degree `D`.
+The raw input-width bound is at most `R` for every tagged initial node,
+including discarded nodes. The rank bound is at most `R` for retained derived
+nodes. These are the explicit source adapter's premises.
 There is no supplied chart, coverage premise, numerical image-bound premise,
 or assumed final PC derivability. The separate ordinary-PC separation premise
 eliminates the intersection term. It is still a genuine unproved application
