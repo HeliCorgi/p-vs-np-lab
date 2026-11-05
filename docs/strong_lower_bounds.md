@@ -7,6 +7,23 @@ search is not entered as an asymptotic theorem. Published results, deductions
 for this repository's models, and newly encountered unverified claims are
 kept distinct. Last updated: **2026-11-05 UTC**.
 
+## Phase 21 audit: actual PC replay and a conditional dimension transfer
+
+The [ordinary-PC formalization](ordinary_pc_formalization.md) implements the
+phase-20 weighted replay and connects it to the finite-dimensional kernel
+argument. It constructs ordinary affine indicators and proves basis-subclause
+compression rather than postulating low-degree indicators. The numerical
+restriction-image bounds and ordinary-PC separation are explicit hypotheses
+of the connected dimension theorem. The complete package build and 38 theorem
+axiom audits passed; the exact pinned sources and observed verification record
+are linked in that audit.
+
+This is a stronger verification of the algebraic mechanism, not an additional
+unconditional asymptotic claim. The `b_k(dim Z)` restriction bound, geometric
+codimension connection, expander separator, and existence/counting chain are
+not yet fully formalized. The phase-20 exponential bound below keeps its
+paper-proof evidence level and does not become a P versus NP claim.
+
 ## Phase 20 addition: unrestricted affine-clause DAGs and a rank-profile bound
 
 **Provenance and evidence:** a complete paper argument developed and reviewed

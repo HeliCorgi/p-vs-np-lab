@@ -110,13 +110,17 @@ def run_component(script: Path, out: Path, log: Path) -> None:
 
 def source_hashes() -> dict[str, str]:
     sources = set()
-    for directory in ("src", "experiments", "tests", "scripts", "Formal"):
+    for directory in ("src", "experiments", "tests", "scripts", "Formal", "formal_pc"):
         sources.update(path for path in (ROOT / directory).rglob("*")
-                       if path.suffix in {".py", ".lean"} and "__pycache__" not in path.parts)
+                       if path.suffix in {".py", ".lean"}
+                       and not {"__pycache__", ".lake"}.intersection(path.parts))
     sources.update(ROOT / path for path in (
         "Formal.lean", "lakefile.lean", "lake-manifest.json", "lean-toolchain", "pyproject.toml",
         "experiments/baseline/PACKAGE_MANIFEST.json",
         "experiments/baseline/upstream/SOURCE_MANIFEST.json",
+        "formal_pc/lean-toolchain", "formal_pc/lake-manifest.json",
+        "formal_pc/audit_theorems.json", "formal_pc/third_party/noemesis/manifest.json",
+        "formal_pc/third_party/noemesis/LICENSE", "formal_pc/third_party/noemesis/UPSTREAM_LICENSE",
     ))
     sources.update((ROOT / "examples").glob("*.json"))
     sources.add(ROOT / "third_party/openai_math/manifest.json")
@@ -143,6 +147,8 @@ def main() -> None:
     sys.path.insert(0, str(ROOT))
     from scripts.verify_openai_math_snapshot import verify_snapshot
     math_snapshot = verify_snapshot()
+    from formal_pc.audit import verify_snapshot as verify_pc_snapshot
+    pc_snapshot = verify_pc_snapshot()
     suite = unittest.defaultTestLoader.discover(str(ROOT / "tests"))
     tests = unittest.TextTestRunner(verbosity=2).run(suite)
     if not tests.wasSuccessful() or not tests.testsRun:
@@ -285,12 +291,13 @@ def main() -> None:
         "phase7_8_summaries": {name: r["summary"] for name, r in phase7_8.items()},
         "cmr_gate_scope": "Separate optional pinned executable workflow; Python replay does not build CMR.",
         "openai_math_snapshot": math_snapshot,
+        "ordinary_pc_foundation_snapshot": pc_snapshot,
         "upstream_schedule_first_possible": parameters["first_possible"],
         "upstream_schedule_total_cutoff_computed": parameters["total_algorithm_cutoff_computed"],
         "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
         "mixed_algorithm_general_polynomial_time": False,
         "mixed_time_bound": "poly(N) + 2^r poly(N), where r is observed affine coefficient rank.",
-        "lean_scope": "Not run by this Python command. Run lake build Formal; CI has a separate kernel-check job.",
+        "lean_scope": "Not run by this Python command. The core Formal package and nested formal_pc/ProofLab package have separate Lean build and transitive axiom-audit CI jobs. Byte integrity is not formal verification.",
         "p_vs_np": "No P versus NP resolution or lower bound for all SAT algorithms is claimed.",
         "source_sha256": source_hashes(),
     }

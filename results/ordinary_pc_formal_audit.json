@@ -1,0 +1,244 @@
+{
+  "status": "successful hosted Lean build and transitive theorem axiom audit",
+  "repository": "HeliCorgi/p-vs-np-lab",
+  "verified_source_commit": "14fd320fb6c722d77b1d7db01622c58d48729c41",
+  "workflow_run_id": 42058417943,
+  "workflow_job_id": 127353043947,
+  "workflow_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42058417943",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "mathlib_commit": "67248ba34806c60bf24b5e99f0f09946ffc465c9",
+  "foundation_commit": "25239211058ef718402a908b3272f01480c159c4",
+  "audited_theorems": 38,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "theorem_axioms": {
+    "MathResearch.PolynomialCalculus.Derives.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.Derives.mul_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.nsSpace_le_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eq_zero_of_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.polynomial_boolean_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget_of_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.finiteDimensional_of_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.boolean_zero_pc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.replay_low_nodes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_replay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_mem_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.exists_basis_subclause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_derivable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_falsityPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_separated_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.falsityPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.literalForm_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_source_sha256": {
+    ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
+    "formal_pc/ProofLab.lean": "70df722606cf8e0be1adbb37cae13a62694866ddd7a46812334e7a1d79912311",
+    "formal_pc/ProofLab/AffineIndicators.lean": "b9c6803274ea20b7415a535cf31bf83d624b04eedb49f9e5e327ea42ca740cf1",
+    "formal_pc/ProofLab/DAGDimension.lean": "a92bb1c3434bb9b4cb6364e8a0a13b21b7aacbe02c22ba59c9eb7d9a24f65276",
+    "formal_pc/ProofLab/DimensionBudget.lean": "a322739e2fd3fa5579ca6fa040c037d0d56d517b9163cb770cf41ef799da303d",
+    "formal_pc/ProofLab/MaskedDAG.lean": "8620a874591d32f8100d08fed2937e2e7bd6a7403df46e0126b3a439ebc88277",
+    "formal_pc/audit.py": "ad1a87cda60807ca12ebf418baad637e6e681e64af61453a2be68545201800b9",
+    "formal_pc/audit_theorems.json": "b34752398f1107671a93cc265dcc3b43b24a5e7c777e201bb829e0b01e631037",
+    "formal_pc/claims/BooleanReduction.lean": "4e5d93eb2510b5ae15056910087019da701f0250b59ac78421094e7ec885438f",
+    "formal_pc/claims/PolynomialCalculus.lean": "d4497f46ac69b42c808a710af8a5b8ffb82225abcb4888d15269d09a683a9e85",
+    "formal_pc/claims/PolynomialCalculusReuse.lean": "532576bb740b1b2f356e26a2929e054a8916e09bbd9d12e1318bf5ae856f7750",
+    "formal_pc/lake-manifest.json": "12a6a2c1930a552f180ff1620fcfb0d3d7cebedf100b1a1d1fe398acfd2fd696",
+    "formal_pc/lakefile.lean": "4153a6177f5c36d70b8ac77a01609923360dc3b088c8cfd16ef7dfec63bf19c7",
+    "formal_pc/lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+    "formal_pc/third_party/noemesis/LICENSE": "985643adb0a78c8820c1b34f0ec5826aefd27f76e3b1319192bb98975bc675e4",
+    "formal_pc/third_party/noemesis/UPSTREAM_LICENSE": "6060f4bf2f7e68cba0683f0d35a244aae2084c319cec22f0d3446340f4c493a5",
+    "formal_pc/third_party/noemesis/manifest.json": "3e3d09b7a65f064c7d1694f60e428506d662de03d8715c17cb7007500c8d46f7"
+  },
+  "scope": {
+    "ordinary_polynomial_PC_replay": true,
+    "connected_dimension_theorem_with_explicit_image_and_separation_hypotheses": true,
+    "concrete_affine_indicator_basis_compression": true,
+    "independent_kernel_replay_of_all_Mathlib_cache": false,
+    "geometric_codimension_and_squarefree_image_formula_formalized": false,
+    "expander_separator_formalized": false,
+    "complete_exponential_lower_bound_formalized": false,
+    "upstream_main_bit_PHP_theorem_verified": false,
+    "p_vs_np_resolved": false
+  },
+  "notes": [
+    "This is an observed CI provenance record, not a deterministic finite-experiment report.",
+    "The Lean build uses the standard pinned Mathlib cache; the three vendored foundations and lab modules are compiled from source.",
+    "Axiom sets are parsed from the actual Lean #print axioms output, not inferred from a source-text search."
+  ]
+}

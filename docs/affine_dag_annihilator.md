@@ -422,3 +422,12 @@ mathematical argument. The repository's finite experiments and selected
 formal lemmas must retain their own narrower descriptions; neither is
 a substitute for formalizing the entire theorem and its eventual
 combinatorial application.
+## Phase-21 formalization note
+
+The [ordinary-PC package](ordinary_pc_formalization.md) now implements the
+weighted semantic-DAG replay and its generic dimension transfer using actual
+ordinary polynomials and primitive PC rules. That audit records compilation
+status and the remaining geometric restriction and separator obligations.
+The full geometric and exponential statements in this note are not thereby
+claimed to be fully formalized.
+

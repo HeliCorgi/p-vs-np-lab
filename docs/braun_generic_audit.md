@@ -1,5 +1,13 @@
 # The phase-20 extension of the Braun source audit
 
+**Phase-21 follow-up:** the [ordinary-PC package](ordinary_pc_formalization.md)
+selectively reuses and compiles the three unmodified MIT foundation files
+`PolynomialCalculus`, `PolynomialCalculusReuse`, and `BooleanReduction` at the
+same pinned revision. Their combined size is 18,251 bytes. The full bit-PHP
+theorem and the rest of the upstream dependency chain are still outside that
+build. The following text records the earlier static phase-20 audit; its
+statement that no build was run applies to that phase, not to the follow-up.
+
 **Status, 2026-11-05: bounded static source inspection, with independently
 reconstructed paper arguments.** No upstream installer, script, workflow,
 Lean build, compiled artifact, or kernel checker was run. The full bit-PHP

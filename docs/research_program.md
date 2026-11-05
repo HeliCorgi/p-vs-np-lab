@@ -35,6 +35,44 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 21: ordinary-PC formalization cycle (2026-11-05 UTC)
+
+Starting main was `08ab7b79d1537b444a42bbec4d374e24090aae70`.
+All 491 file blobs matched the local snapshot; the current README, research
+decisions, phase-20 proofs and failure controls, recent commits, open PRs
+(none), and successful main CI were checked. The selected task was the exact
+first gate left in phase 20: formalize the ordinary-PC replay, rather than
+increase the finite benchmark sizes.
+
+The [phase-21 package](ordinary_pc_formalization.md) contains actual ordinary
+polynomials and primitive degree-bounded PC derivations, a complete weighted
+semantic-DAG replay, concrete basis-compressed affine indicators, and a
+connected dimension-budget theorem. Its hosted Lean build and transitive axiom
+audit passed, with 38 named theorem audits allowing only standard logical
+axioms. The [source/CI record](../results/ordinary_pc_formal_audit.json) preserves
+the actual result separately from Python reproduction. The geometric restriction image
+and expander separator remain explicit missing bridges to full formalization
+of the exponential lower bound.
+
+Three unmodified MIT-licensed foundation files by Kamil Braun are reused with
+full attribution, pinned hashes, and license notices. Their first hosted build
+succeeded. The initial lab modules exposed elaboration issues (a comment
+delimiter, universe/decidability inference, explicit zero/one cases, and a
+dimension rewrite). A later literal-injectivity timeout was resolved by typed
+equalities without changing the theorem or raising heartbeat limits. These
+failed checkpoints are followed by the successful complete package build and
+axiom audit. No mathematical counterexample to the replay
+argument was found in this bounded audit. Selective compilation does not
+certify the upstream bit-PHP theorem. The old `openai/math` snapshot and its
+failed 180-minute audit record are preserved without relaunching that build.
+
+The [next acceptance test](reverse_engineering.md) is the actual Boolean
+restriction map with its squarefree dimension, followed by the published
+graph-reduction interface. The [general lower-bound register](strong_lower_bounds.md)
+preserves the phase-20 paper theorem with its current evidence level. No
+all-algorithm lower bound or polynomial-time general SAT algorithm has been
+obtained.
+
 ## Phase 20: dated outcome (2026-11-05 UTC)
 
 Starting main was `c6a2b2e758c618c355149b70fc24437c470db145`.

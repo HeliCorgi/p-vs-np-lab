@@ -1,11 +1,24 @@
 # p-vs-np-lab
 
 [![Research checks](https://github.com/HeliCorgi/p-vs-np-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/HeliCorgi/p-vs-np-lab/actions/workflows/ci.yml)
+[![Ordinary PC formalization](https://github.com/HeliCorgi/p-vs-np-lab/actions/workflows/ordinary-pc.yml/badge.svg)](https://github.com/HeliCorgi/p-vs-np-lab/actions/workflows/ordinary-pc.yml)
 
 P versus NPに関連する、再現可能な定理・反例・計算実験の研究室。
 最初のテーマは **境界関係の圧縮・合成・存在消去**。
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月5日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
+
+## 第21段階：DAGの次数上限を、実際の多項式計算で形式化する
+
+前回の指数下界の核心を、[別パッケージのLean証明](formal_pc/README.md)へ移しました。今回の対象は、**同じ節を何度再利用しても、共通多項式で重み付けした再生の次数が $k+3R$ 以下に収まること**です。通常の多変数多項式と、入力・加算・定数倍・一変数の乗算という実際のPC導出規則を使い、Boolean還元の費用も数えます。
+
+| 形式化した接続 | 内容 |
+|---|---|
+| [重み付きDAG再生](formal_pc/ProofLab/MaskedDAG.lean) | 任意に共有された以前の親を使える。残す節の次数が $R$ 以下で、捨てる節の反例集合すべてで次数 $k$ 以下の同じ多項式 $f$ が消えれば、元の公理から $f$ を次数 $k+3R$ 以下で導く |
+| [アフィン節の具体的な多項式](formal_pc/ProofLab/AffineIndicators.lean) | 節の式の線形基底を抽出し、同じ真理値を持つ低次数の多項式を構成する。元のCNF公理との多項式としての一致と、Boolean補正による圧縮も扱う |
+| [DAGから次元不等式へ](formal_pc/ProofLab/DAGDimension.lean) | 再生定理と階数・核の計算を接続し、$\dim U\le\dim(U\cap C_{k+3R}(F))+\sum_a\mathrm{budget}(a)$ を導く。最終的なPC導出可能性を仮定にはしていない |
+
+**検証状態：** 新しいパッケージ全体のLeanビルドと、38件の定理の依存公理監査に成功しました。[検証記録](results/ordinary_pc_formal_audit.json)には、実際のCI・ソースのハッシュ・公理の一覧を保存しています。[正確な定理・出典・残っている仮定](docs/ordinary_pc_formalization.md)も明記しました。制限写像の像の次元の上界、アフィン空間の余次元との対応、展開性から大きな独立空間を作る部分は、まだ別の証明義務です。したがって、**指数下界全体のLean形式化も、P vs NPの解決も完了していません。** 次は実際のBoolean制限写像とその次元を形式化します。
 
 ## 第20段階：節を共有できる偶奇解消DAGにも、指数下界を与える
 

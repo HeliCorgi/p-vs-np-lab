@@ -1,5 +1,28 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 21: actual ordinary-PC replay, then the geometric image budget
+
+The [new formal package](ordinary_pc_formalization.md) implements the first
+phase-20 target in actual ordinary PC: Boolean-zero certificates, completed-line
+reuse, and a topologically indexed unary/binary DAG replay through degree
+`k+3R`. A concrete basis-subclause construction supplies ordinary affine
+indicators, including exact raw CNF products. The composed dimension theorem
+derives its kernel-to-PC implication from the DAG instead of assuming the
+desired derivability. Hosted compilation and all 38 explicit theorem axiom
+audits passed; Python source checks remain a separate integrity gate.
+
+**Next acceptance test.** Build actual restriction maps on nonempty affine
+Boolean flats, prove that their kernels mean pointwise vanishing, and prove the
+squarefree image budget `b_k(dim Z)`. Ordinary substitution alone has the larger
+ordinary-polynomial ambient dimension and cannot be given the squarefree bound
+without proof. Also connect span rank, nonempty-flat codimension, and the source
+affine-clause DAG to the mixed raw-input/compressed-derived polynomial DAG.
+Only after these interfaces are explicit should the next cycle formalize the
+published graph-reduction operator, the separator, and its quantitative
+existence. The phase-20 exponential statement remains a paper proof until all
+of these are discharged. No increased benchmark size or additional choice of
+modulus substitutes for this acceptance test.
+
 ## Phase 20: a direct DAG criterion and its expander application
 
 The separated-space gate now has a concrete answer. The
