@@ -3,3 +3,7 @@ import ProofLab.DimensionBudget
 import ProofLab.MaskedDAG
 import ProofLab.AffineIndicators
 import ProofLab.DAGDimension
+import ProofLab.BooleanFunctionSpace
+import ProofLab.AffineRestriction
+import ProofLab.AffineClauseDAG
+import ProofLab.ParametrizedDAGDimension
