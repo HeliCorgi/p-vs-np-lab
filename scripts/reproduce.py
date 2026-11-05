@@ -43,6 +43,7 @@ NEW_REPORTS = (
     "support_localization.json", "branch_localization.json", "field_split.json",
     "coprime_marginals.json",
     "parity_localization.json", "parity_query.json", "parity_pc.json",
+    "pc_subspace.json", "affine_dag_pc.json", "expander_separation.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -200,6 +201,8 @@ def main() -> None:
                for name in ("support_localization", "branch_localization", "field_split", "coprime_marginals")}
     phase19 = {name: read_json(out / (name + ".json"))
                for name in ("parity_localization", "parity_query", "parity_pc")}
+    phase20 = {name: read_json(out / (name + ".json"))
+               for name in ("pc_subspace", "affine_dag_pc", "expander_separation")}
     baseline = read_json(out / "baseline/RUN_SUMMARY.json")
     if (not star["all_checks_passed"]
             or not all(c["checks_passed"] for c in parity["cases"])
@@ -209,7 +212,7 @@ def main() -> None:
             or not signatures["all_checks_passed"] or not parameters["all_checks_passed"]
             or not block_bridge["all_checks_passed"] or not frontier["all_checks_passed"]
             or not threshold["all_checks_passed"] or not matching["all_checks_passed"]
-            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values(), *phase17.values(), *phase18.values(), *phase19.values()))):
+            or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values(), *phase17.values(), *phase18.values(), *phase19.values(), *phase20.values()))):
         raise RuntimeError("An experiment did not report success")
 
     summary = {
@@ -268,6 +271,9 @@ def main() -> None:
         "localization_or_field_split_resolves_general_sat": False,
         "parity_query_summaries": {name: r["summary"] for name,r in phase19.items()},
         "parity_query_bounds_apply_to_all_sat_algorithms": False,
+        "affine_dag_separation_summaries": {name: r["summary"] for name,r in phase20.items()},
+        "affine_dag_bound_evidence": "Paper proof using the published graph-reduction operator and a directly proved common-annihilator criterion; full theorem formalization and external review remain outstanding. Finite reports do not prove the asymptotic statement.",
+        "affine_dag_bound_applies_to_all_sat_algorithms": False,
         "derived_transport_summaries": {name: r["summary"] for name,r in phase13.items()},
         "derived_transport_general_polynomial_solver": False,
         "witness_transport_summaries": {name: r["summary"] for name,r in phase12.items()},
@@ -285,7 +291,7 @@ def main() -> None:
         "mixed_algorithm_general_polynomial_time": False,
         "mixed_time_bound": "poly(N) + 2^r poly(N), where r is observed affine coefficient rank.",
         "lean_scope": "Not run by this Python command. Run lake build Formal; CI has a separate kernel-check job.",
-        "p_vs_np": "No resolution or general algorithmic lower bound claimed.",
+        "p_vs_np": "No P versus NP resolution or lower bound for all SAT algorithms is claimed.",
         "source_sha256": source_hashes(),
     }
     write_json(out / "RUN_SUMMARY.json", summary)

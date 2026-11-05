@@ -1,0 +1,2666 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "certificate_bytes": 520,
+      "certificate_sha256": "5067233329775a7faf89ce83f9066ecc3e8cd2a3d2223025e200884e77ad87d8",
+      "clauses": [
+        [
+          -1,
+          -2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "independent_closure_check": true,
+      "models": 4,
+      "name": "degree_fall_makes_new_products",
+      "new_dynamic_monomial": [
+        1,
+        3
+      ],
+      "profile": {
+        "actual_trace_degree": 2,
+        "ambient_dimension": 10,
+        "basis_rank": 6,
+        "bound": 2,
+        "budget_limited": false,
+        "eligible_axioms": 5,
+        "low_degree_consequence_rank": 6,
+        "low_degree_dimension": 10,
+        "multiplied_derived_rows": 3,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 4,
+        "static_basis_rank": 5,
+        "static_low_degree_rank": 5,
+        "static_refutes": false,
+        "static_separated_dimension": 5,
+        "target_degree": 2,
+        "trace_nodes": 9,
+        "trace_terms": 12,
+        "variables": 3,
+        "work": 36
+      },
+      "variables": 3
+    },
+    {
+      "certificate_bytes": 747,
+      "certificate_sha256": "9da9e48cb17759d565d91fd8d30d0118f56c30a1197eb46309d4fab56fa35498",
+      "clauses": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          -1,
+          -3
+        ],
+        [
+          -1,
+          -5
+        ],
+        [
+          -3,
+          -5
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -4,
+          -6
+        ]
+      ],
+      "independent_closure_check": true,
+      "models": 0,
+      "name": "php_3_2_degree_two",
+      "profile": {
+        "actual_trace_degree": 2,
+        "ambient_dimension": 28,
+        "basis_rank": 15,
+        "bound": 2,
+        "budget_limited": false,
+        "eligible_axioms": 15,
+        "low_degree_consequence_rank": 15,
+        "low_degree_dimension": 28,
+        "multiplied_derived_rows": 0,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 13,
+        "static_basis_rank": 15,
+        "static_low_degree_rank": 15,
+        "static_refutes": false,
+        "static_separated_dimension": 13,
+        "target_degree": 2,
+        "trace_nodes": 16,
+        "trace_terms": 30,
+        "variables": 6,
+        "work": 90
+      },
+      "variables": 6
+    },
+    {
+      "certificate_bytes": 12343,
+      "certificate_sha256": "2421c77c06a8024c3a5ca585ea77e785635b7b0ef97510b7507336095f35042e",
+      "clauses": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          -1,
+          -3
+        ],
+        [
+          -1,
+          -5
+        ],
+        [
+          -3,
+          -5
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -4,
+          -6
+        ]
+      ],
+      "exact_pc_refutation_degree": 3,
+      "independent_closure_check": true,
+      "models": 0,
+      "name": "php_3_2_degree_three",
+      "profile": {
+        "actual_trace_degree": 3,
+        "ambient_dimension": 84,
+        "basis_rank": 84,
+        "bound": 3,
+        "budget_limited": false,
+        "eligible_axioms": 15,
+        "low_degree_consequence_rank": 84,
+        "low_degree_dimension": 84,
+        "multiplied_derived_rows": 168,
+        "omitted_clause_axioms": 0,
+        "refutes": true,
+        "separated_dimension": 0,
+        "static_basis_rank": 82,
+        "static_low_degree_rank": 82,
+        "static_refutes": false,
+        "static_separated_dimension": 2,
+        "target_degree": 3,
+        "trace_nodes": 312,
+        "trace_terms": 828,
+        "variables": 6,
+        "work": 1219
+      },
+      "static_degree_three_nonrefutation_witness": {
+        "bound": 3,
+        "field": 2,
+        "kind": "ordinary-static-f2-moment-v1",
+        "one_monomials": [
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            3,
+            3,
+            4
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            5,
+            5,
+            6
+          ],
+          [
+            5,
+            6,
+            6
+          ]
+        ],
+        "variables": 6
+      },
+      "variables": 6
+    },
+    {
+      "certificate_bytes": 2030,
+      "certificate_sha256": "8b74312dd77543429b517c2eb097a76579d6d199d00a514908ab5d8825c4ace0",
+      "clauses": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          -1,
+          -3
+        ],
+        [
+          -1,
+          -5
+        ],
+        [
+          -3,
+          -5
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -4,
+          -6
+        ],
+        [
+          -7
+        ],
+        [
+          -8
+        ],
+        [
+          -9
+        ]
+      ],
+      "independent_closure_check": true,
+      "models": 0,
+      "name": "forced_zero_padding_degree_two",
+      "profile": {
+        "actual_trace_degree": 2,
+        "ambient_dimension": 55,
+        "basis_rank": 42,
+        "bound": 2,
+        "budget_limited": false,
+        "eligible_axioms": 21,
+        "low_degree_consequence_rank": 42,
+        "low_degree_dimension": 55,
+        "multiplied_derived_rows": 27,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 13,
+        "static_basis_rank": 42,
+        "static_low_degree_rank": 42,
+        "static_refutes": false,
+        "static_separated_dimension": 13,
+        "target_degree": 2,
+        "trace_nodes": 46,
+        "trace_terms": 63,
+        "variables": 9,
+        "work": 219
+      },
+      "variables": 9
+    },
+    {
+      "certificate_bytes": 23771,
+      "certificate_sha256": "3ea741d0b6526e03b3224bdc6f5670b8f0947995f9f963ef446d9b04086a8315",
+      "clauses": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          -1,
+          -3
+        ],
+        [
+          -1,
+          -5
+        ],
+        [
+          -3,
+          -5
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          -6
+        ],
+        [
+          -4,
+          -6
+        ],
+        [
+          -7
+        ],
+        [
+          -8
+        ],
+        [
+          -9
+        ]
+      ],
+      "independent_closure_check": true,
+      "models": 0,
+      "name": "forced_zero_padding_degree_three",
+      "profile": {
+        "actual_trace_degree": 3,
+        "ambient_dimension": 220,
+        "basis_rank": 220,
+        "bound": 3,
+        "budget_limited": false,
+        "eligible_axioms": 21,
+        "low_degree_consequence_rank": 55,
+        "low_degree_dimension": 55,
+        "multiplied_derived_rows": 495,
+        "omitted_clause_axioms": 0,
+        "refutes": true,
+        "separated_dimension": 0,
+        "static_basis_rank": 218,
+        "static_low_degree_rank": 53,
+        "static_refutes": false,
+        "static_separated_dimension": 2,
+        "target_degree": 2,
+        "trace_nodes": 571,
+        "trace_terms": 1258,
+        "variables": 9,
+        "work": 2801
+      },
+      "variables": 9
+    },
+    {
+      "certificate_bytes": 676,
+      "certificate_sha256": "2b1504a816b883729cbd3cad800c354a198f301d94a687ed965ccd11db9501f3",
+      "clauses": [
+        [
+          -1
+        ],
+        [
+          -2
+        ],
+        [
+          -3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "independent_closure_check": true,
+      "models": 0,
+      "name": "wide_axiom_omission_warning",
+      "not_a_generic_criterion_instance": "The input width is 3 but B=2; its contradictory wide axiom is ineligible. The generic criterion uses B >= w.",
+      "profile": {
+        "actual_trace_degree": 2,
+        "ambient_dimension": 10,
+        "basis_rank": 9,
+        "bound": 2,
+        "budget_limited": false,
+        "eligible_axioms": 6,
+        "low_degree_consequence_rank": 9,
+        "low_degree_dimension": 10,
+        "multiplied_derived_rows": 9,
+        "omitted_clause_axioms": 1,
+        "refutes": false,
+        "separated_dimension": 1,
+        "static_basis_rank": 9,
+        "static_low_degree_rank": 9,
+        "static_refutes": false,
+        "static_separated_dimension": 1,
+        "target_degree": 2,
+        "trace_nodes": 13,
+        "trace_terms": 15,
+        "variables": 3,
+        "work": 75
+      },
+      "variables": 3
+    },
+    {
+      "certificate_bytes": 791,
+      "certificate_sha256": "0b2146581e322c0dc41c3d09c4229a443d557fa8d346dd5f4a066f63cc4f6c26",
+      "clauses": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "independent_closure_check": true,
+      "individual_nonzero_classes": 8,
+      "joint_space": {
+        "dimension": 8,
+        "generator_count": 8,
+        "intersection_dimension": 1,
+        "quotient_rank": 7,
+        "separated": false
+      },
+      "models": 7,
+      "name": "individual_nonmembership_does_not_separate_span",
+      "nonzero_intersection_polynomial": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "profile": {
+        "actual_trace_degree": 3,
+        "ambient_dimension": 20,
+        "basis_rank": 13,
+        "bound": 3,
+        "budget_limited": false,
+        "eligible_axioms": 4,
+        "low_degree_consequence_rank": 13,
+        "low_degree_dimension": 20,
+        "multiplied_derived_rows": 9,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 7,
+        "static_basis_rank": 13,
+        "static_low_degree_rank": 13,
+        "static_refutes": false,
+        "static_separated_dimension": 7,
+        "target_degree": 3,
+        "trace_nodes": 14,
+        "trace_terms": 32,
+        "variables": 3,
+        "work": 81
+      },
+      "variables": 3
+    },
+    {
+      "certificate_bytes": 2362,
+      "certificate_sha256": "26459429f765b819492da46d7063fda26b9a1099af966bbdc26c34b08ae65e75",
+      "clauses": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "empty_support": {
+        "actual_minimum_boundary_ratio": [
+          3,
+          1
+        ],
+        "all_squarefree_monomials_up_to_k": 42,
+        "clause_sets_checked": 3,
+        "convention": "Union of all clause sets A with 1 <= |A| <= s and boundary(A) contained in the monomial variables.",
+        "degree_k_empty_support_monomials": 18,
+        "empty_support_monomials": [
+          [],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            6
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ],
+        "neighborhood_seven_fourths_checked": true,
+        "span": {
+          "dimension": 40,
+          "generator_count": 40,
+          "intersection_dimension": 0,
+          "quotient_rank": 40,
+          "separated": true
+        },
+        "stated_boundary_expansion": [
+          1,
+          2
+        ],
+        "support_range": 12
+      },
+      "independent_closure_check": true,
+      "models": 49,
+      "name": "disjoint_triples_empty_support_space",
+      "profile": {
+        "actual_trace_degree": 3,
+        "ambient_dimension": 84,
+        "basis_rank": 44,
+        "bound": 3,
+        "budget_limited": false,
+        "eligible_axioms": 8,
+        "low_degree_consequence_rank": 44,
+        "low_degree_dimension": 84,
+        "multiplied_derived_rows": 36,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 40,
+        "static_basis_rank": 44,
+        "static_low_degree_rank": 44,
+        "static_refutes": false,
+        "static_separated_dimension": 40,
+        "target_degree": 3,
+        "trace_nodes": 45,
+        "trace_terms": 100,
+        "variables": 6,
+        "work": 252
+      },
+      "variables": 6
+    },
+    {
+      "certificate_bytes": 2383,
+      "certificate_sha256": "6f08818c197c199853b8c823db66a9cbe885098175a8c4d170f68ff69ac83bea",
+      "clauses": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          6,
+          1
+        ]
+      ],
+      "empty_support": {
+        "actual_minimum_boundary_ratio": [
+          1,
+          1
+        ],
+        "all_squarefree_monomials_up_to_k": 42,
+        "clause_sets_checked": 7,
+        "convention": "Union of all clause sets A with 1 <= |A| <= s and boundary(A) contained in the monomial variables.",
+        "degree_k_empty_support_monomials": 16,
+        "empty_support_monomials": [
+          [],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            6
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        "neighborhood_seven_fourths_checked": true,
+        "span": {
+          "dimension": 38,
+          "generator_count": 38,
+          "intersection_dimension": 0,
+          "quotient_rank": 38,
+          "separated": true
+        },
+        "stated_boundary_expansion": [
+          1,
+          2
+        ],
+        "support_range": 12
+      },
+      "independent_closure_check": true,
+      "models": 45,
+      "name": "three_clause_cycle_empty_support_space",
+      "profile": {
+        "actual_trace_degree": 3,
+        "ambient_dimension": 84,
+        "basis_rank": 45,
+        "bound": 3,
+        "budget_limited": false,
+        "eligible_axioms": 9,
+        "low_degree_consequence_rank": 45,
+        "low_degree_dimension": 84,
+        "multiplied_derived_rows": 36,
+        "omitted_clause_axioms": 0,
+        "refutes": false,
+        "separated_dimension": 39,
+        "static_basis_rank": 45,
+        "static_low_degree_rank": 45,
+        "static_refutes": false,
+        "static_separated_dimension": 39,
+        "target_degree": 3,
+        "trace_nodes": 46,
+        "trace_terms": 108,
+        "variables": 6,
+        "work": 270
+      },
+      "variables": 6,
+      "whole_clause_set_matters": {
+        "contains_an_individual_clause": false,
+        "monomial": [
+          2,
+          4,
+          6
+        ],
+        "support_clause_ids": [
+          0,
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "sample_php_degree_three_complete_pc_certificate": {
+    "basis": [
+      151,
+      160,
+      90,
+      66,
+      60,
+      81,
+      74,
+      10,
+      1,
+      4,
+      39,
+      5,
+      48,
+      11,
+      36,
+      7,
+      44,
+      8,
+      12,
+      2,
+      6,
+      55,
+      13,
+      52,
+      9,
+      14,
+      3,
+      15,
+      99,
+      16,
+      34,
+      102,
+      42,
+      104,
+      17,
+      18,
+      19,
+      20,
+      21,
+      37,
+      22,
+      40,
+      41,
+      117,
+      45,
+      83,
+      46,
+      28,
+      129,
+      106,
+      107,
+      61,
+      109,
+      75,
+      112,
+      23,
+      49,
+      76,
+      67,
+      68,
+      69,
+      124,
+      29,
+      82,
+      113,
+      24,
+      50,
+      116,
+      25,
+      26,
+      27,
+      53,
+      30,
+      131,
+      120,
+      121,
+      91,
+      126,
+      31,
+      98,
+      127,
+      32,
+      33,
+      134
+    ],
+    "bound": 3,
+    "field": 2,
+    "kind": "ordinary-pc-f2-subspace-v1",
+    "separated_monomials": [],
+    "target_degree": 3,
+    "trace": {
+      "degree": 3,
+      "field": 2,
+      "kind": "ordinary-pc-f2-path-v1",
+      "nodes": [
+        {
+          "op": "zero"
+        },
+        {
+          "clause": 0,
+          "op": "input"
+        },
+        {
+          "clause": 1,
+          "op": "input"
+        },
+        {
+          "clause": 2,
+          "op": "input"
+        },
+        {
+          "clause": 3,
+          "op": "input"
+        },
+        {
+          "clause": 4,
+          "op": "input"
+        },
+        {
+          "clause": 5,
+          "op": "input"
+        },
+        {
+          "clause": 6,
+          "op": "input"
+        },
+        {
+          "clause": 7,
+          "op": "input"
+        },
+        {
+          "clause": 8,
+          "op": "input"
+        },
+        {
+          "op": "boolean",
+          "variable": 1
+        },
+        {
+          "op": "boolean",
+          "variable": 2
+        },
+        {
+          "op": "boolean",
+          "variable": 3
+        },
+        {
+          "op": "boolean",
+          "variable": 4
+        },
+        {
+          "op": "boolean",
+          "variable": 5
+        },
+        {
+          "op": "boolean",
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 1,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 2,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 3,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 2
+        },
+        {
+          "left": 35,
+          "op": "add",
+          "right": 18
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 4
+        },
+        {
+          "left": 38,
+          "op": "add",
+          "right": 22
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 4,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 2
+        },
+        {
+          "left": 43,
+          "op": "add",
+          "right": 20
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 5,
+          "variable": 6
+        },
+        {
+          "left": 47,
+          "op": "add",
+          "right": 28
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 4
+        },
+        {
+          "left": 51,
+          "op": "add",
+          "right": 26
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 6,
+          "variable": 6
+        },
+        {
+          "left": 54,
+          "op": "add",
+          "right": 30
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 1
+        },
+        {
+          "left": 56,
+          "op": "add",
+          "right": 19
+        },
+        {
+          "left": 57,
+          "op": "add",
+          "right": 7
+        },
+        {
+          "left": 58,
+          "op": "add",
+          "right": 39
+        },
+        {
+          "left": 59,
+          "op": "add",
+          "right": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 3
+        },
+        {
+          "left": 62,
+          "op": "add",
+          "right": 23
+        },
+        {
+          "left": 63,
+          "op": "add",
+          "right": 7
+        },
+        {
+          "left": 64,
+          "op": "add",
+          "right": 36
+        },
+        {
+          "left": 65,
+          "op": "add",
+          "right": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 7,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 1
+        },
+        {
+          "left": 70,
+          "op": "add",
+          "right": 21
+        },
+        {
+          "left": 71,
+          "op": "add",
+          "right": 8
+        },
+        {
+          "left": 72,
+          "op": "add",
+          "right": 48
+        },
+        {
+          "left": 73,
+          "op": "add",
+          "right": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 5
+        },
+        {
+          "left": 77,
+          "op": "add",
+          "right": 29
+        },
+        {
+          "left": 78,
+          "op": "add",
+          "right": 8
+        },
+        {
+          "left": 79,
+          "op": "add",
+          "right": 44
+        },
+        {
+          "left": 80,
+          "op": "add",
+          "right": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 8,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 3
+        },
+        {
+          "left": 84,
+          "op": "add",
+          "right": 27
+        },
+        {
+          "left": 85,
+          "op": "add",
+          "right": 9
+        },
+        {
+          "left": 86,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "left": 87,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "left": 88,
+          "op": "add",
+          "right": 74
+        },
+        {
+          "left": 89,
+          "op": "add",
+          "right": 66
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 5
+        },
+        {
+          "left": 92,
+          "op": "add",
+          "right": 31
+        },
+        {
+          "left": 93,
+          "op": "add",
+          "right": 9
+        },
+        {
+          "left": 94,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "left": 95,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "left": 96,
+          "op": "add",
+          "right": 81
+        },
+        {
+          "op": "multiply",
+          "parent": 9,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 10,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 11,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 12,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 13,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 14,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 15,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 1
+        },
+        {
+          "left": 135,
+          "op": "add",
+          "right": 18
+        },
+        {
+          "left": 136,
+          "op": "add",
+          "right": 34
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 3
+        },
+        {
+          "left": 139,
+          "op": "add",
+          "right": 112
+        },
+        {
+          "left": 140,
+          "op": "add",
+          "right": 37
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 4
+        },
+        {
+          "left": 142,
+          "op": "add",
+          "right": 23
+        },
+        {
+          "left": 143,
+          "op": "add",
+          "right": 22
+        },
+        {
+          "left": 144,
+          "op": "add",
+          "right": 2
+        },
+        {
+          "left": 145,
+          "op": "add",
+          "right": 7
+        },
+        {
+          "left": 146,
+          "op": "add",
+          "right": 36
+        },
+        {
+          "left": 147,
+          "op": "add",
+          "right": 39
+        },
+        {
+          "left": 148,
+          "op": "add",
+          "right": 4
+        },
+        {
+          "left": 149,
+          "op": "add",
+          "right": 60
+        },
+        {
+          "left": 150,
+          "op": "add",
+          "right": 90
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 5
+        },
+        {
+          "left": 152,
+          "op": "add",
+          "right": 49
+        },
+        {
+          "op": "multiply",
+          "parent": 36,
+          "variable": 6
+        },
+        {
+          "left": 154,
+          "op": "add",
+          "right": 76
+        },
+        {
+          "left": 155,
+          "op": "add",
+          "right": 41
+        },
+        {
+          "left": 156,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "left": 157,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "left": 158,
+          "op": "add",
+          "right": 66
+        },
+        {
+          "left": 159,
+          "op": "add",
+          "right": 90
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 1
+        },
+        {
+          "left": 161,
+          "op": "add",
+          "right": 102
+        },
+        {
+          "left": 162,
+          "op": "add",
+          "right": 34
+        },
+        {
+          "left": 163,
+          "op": "add",
+          "right": 39
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 2
+        },
+        {
+          "left": 165,
+          "op": "add",
+          "right": 19
+        },
+        {
+          "left": 166,
+          "op": "add",
+          "right": 18
+        },
+        {
+          "left": 167,
+          "op": "add",
+          "right": 7
+        },
+        {
+          "left": 168,
+          "op": "add",
+          "right": 36
+        },
+        {
+          "left": 169,
+          "op": "add",
+          "right": 39
+        },
+        {
+          "left": 170,
+          "op": "add",
+          "right": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 3
+        },
+        {
+          "left": 172,
+          "op": "add",
+          "right": 22
+        },
+        {
+          "left": 173,
+          "op": "add",
+          "right": 37
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 5
+        },
+        {
+          "left": 176,
+          "op": "add",
+          "right": 45
+        },
+        {
+          "op": "multiply",
+          "parent": 39,
+          "variable": 6
+        },
+        {
+          "left": 178,
+          "op": "add",
+          "right": 83
+        },
+        {
+          "left": 179,
+          "op": "add",
+          "right": 41
+        },
+        {
+          "left": 180,
+          "op": "add",
+          "right": 48
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 1
+        },
+        {
+          "left": 182,
+          "op": "add",
+          "right": 20
+        },
+        {
+          "left": 183,
+          "op": "add",
+          "right": 42
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 4
+        },
+        {
+          "left": 186,
+          "op": "add",
+          "right": 68
+        },
+        {
+          "left": 187,
+          "op": "add",
+          "right": 45
+        },
+        {
+          "left": 188,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "left": 189,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 5
+        },
+        {
+          "left": 191,
+          "op": "add",
+          "right": 124
+        },
+        {
+          "left": 192,
+          "op": "add",
+          "right": 46
+        },
+        {
+          "op": "multiply",
+          "parent": 44,
+          "variable": 6
+        },
+        {
+          "left": 194,
+          "op": "add",
+          "right": 29
+        },
+        {
+          "left": 195,
+          "op": "add",
+          "right": 28
+        },
+        {
+          "left": 196,
+          "op": "add",
+          "right": 3
+        },
+        {
+          "left": 197,
+          "op": "add",
+          "right": 8
+        },
+        {
+          "left": 198,
+          "op": "add",
+          "right": 44
+        },
+        {
+          "left": 199,
+          "op": "add",
+          "right": 48
+        },
+        {
+          "left": 200,
+          "op": "add",
+          "right": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 1
+        },
+        {
+          "left": 202,
+          "op": "add",
+          "right": 104
+        },
+        {
+          "left": 203,
+          "op": "add",
+          "right": 42
+        },
+        {
+          "left": 204,
+          "op": "add",
+          "right": 48
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 2
+        },
+        {
+          "left": 206,
+          "op": "add",
+          "right": 21
+        },
+        {
+          "left": 207,
+          "op": "add",
+          "right": 20
+        },
+        {
+          "left": 208,
+          "op": "add",
+          "right": 8
+        },
+        {
+          "left": 209,
+          "op": "add",
+          "right": 44
+        },
+        {
+          "left": 210,
+          "op": "add",
+          "right": 48
+        },
+        {
+          "left": 211,
+          "op": "add",
+          "right": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 3
+        },
+        {
+          "left": 213,
+          "op": "add",
+          "right": 41
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 4
+        },
+        {
+          "left": 215,
+          "op": "add",
+          "right": 83
+        },
+        {
+          "left": 216,
+          "op": "add",
+          "right": 45
+        },
+        {
+          "left": 217,
+          "op": "add",
+          "right": 39
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 5
+        },
+        {
+          "left": 219,
+          "op": "add",
+          "right": 28
+        },
+        {
+          "left": 220,
+          "op": "add",
+          "right": 46
+        },
+        {
+          "op": "multiply",
+          "parent": 48,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 2
+        },
+        {
+          "left": 223,
+          "op": "add",
+          "right": 68
+        },
+        {
+          "left": 224,
+          "op": "add",
+          "right": 49
+        },
+        {
+          "left": 225,
+          "op": "add",
+          "right": 44
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 3
+        },
+        {
+          "left": 227,
+          "op": "add",
+          "right": 26
+        },
+        {
+          "left": 228,
+          "op": "add",
+          "right": 50
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 5
+        },
+        {
+          "left": 231,
+          "op": "add",
+          "right": 126
+        },
+        {
+          "left": 232,
+          "op": "add",
+          "right": 53
+        },
+        {
+          "op": "multiply",
+          "parent": 52,
+          "variable": 6
+        },
+        {
+          "left": 234,
+          "op": "add",
+          "right": 31
+        },
+        {
+          "left": 235,
+          "op": "add",
+          "right": 30
+        },
+        {
+          "left": 236,
+          "op": "add",
+          "right": 3
+        },
+        {
+          "left": 237,
+          "op": "add",
+          "right": 9
+        },
+        {
+          "left": 238,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "left": 239,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "left": 240,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "left": 241,
+          "op": "add",
+          "right": 74
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 2
+        },
+        {
+          "left": 243,
+          "op": "add",
+          "right": 76
+        },
+        {
+          "left": 244,
+          "op": "add",
+          "right": 49
+        },
+        {
+          "left": 245,
+          "op": "add",
+          "right": 36
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 3
+        },
+        {
+          "left": 247,
+          "op": "add",
+          "right": 116
+        },
+        {
+          "left": 248,
+          "op": "add",
+          "right": 50
+        },
+        {
+          "left": 249,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 4
+        },
+        {
+          "left": 251,
+          "op": "add",
+          "right": 27
+        },
+        {
+          "left": 252,
+          "op": "add",
+          "right": 26
+        },
+        {
+          "left": 253,
+          "op": "add",
+          "right": 9
+        },
+        {
+          "left": 254,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "left": 255,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "left": 256,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 5
+        },
+        {
+          "left": 258,
+          "op": "add",
+          "right": 30
+        },
+        {
+          "left": 259,
+          "op": "add",
+          "right": 53
+        },
+        {
+          "op": "multiply",
+          "parent": 55,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 2
+        },
+        {
+          "left": 262,
+          "op": "add",
+          "right": 7
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 3
+        },
+        {
+          "left": 264,
+          "op": "add",
+          "right": 2
+        },
+        {
+          "left": 265,
+          "op": "add",
+          "right": 4
+        },
+        {
+          "left": 266,
+          "op": "add",
+          "right": 60
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 5
+        },
+        {
+          "left": 269,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "op": "multiply",
+          "parent": 60,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 2
+        },
+        {
+          "left": 273,
+          "op": "add",
+          "right": 36
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 4
+        },
+        {
+          "left": 275,
+          "op": "add",
+          "right": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 66,
+          "variable": 6
+        },
+        {
+          "left": 278,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "left": 279,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 2
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 3
+        },
+        {
+          "left": 282,
+          "op": "add",
+          "right": 55
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 5
+        },
+        {
+          "left": 285,
+          "op": "add",
+          "right": 3
+        },
+        {
+          "left": 286,
+          "op": "add",
+          "right": 5
+        },
+        {
+          "left": 287,
+          "op": "add",
+          "right": 74
+        },
+        {
+          "op": "multiply",
+          "parent": 74,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 1
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 2
+        },
+        {
+          "left": 291,
+          "op": "add",
+          "right": 44
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 4
+        },
+        {
+          "left": 294,
+          "op": "add",
+          "right": 52
+        },
+        {
+          "left": 295,
+          "op": "add",
+          "right": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 81,
+          "variable": 6
+        },
+        {
+          "left": 297,
+          "op": "add",
+          "right": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 1
+        },
+        {
+          "left": 299,
+          "op": "add",
+          "right": 1
+        },
+        {
+          "left": 300,
+          "op": "add",
+          "right": 10
+        },
+        {
+          "left": 301,
+          "op": "add",
+          "right": 90
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 2
+        },
+        {
+          "left": 303,
+          "op": "add",
+          "right": 11
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 3
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 5
+        },
+        {
+          "op": "multiply",
+          "parent": 90,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 151,
+          "variable": 4
+        },
+        {
+          "op": "multiply",
+          "parent": 151,
+          "variable": 6
+        },
+        {
+          "op": "multiply",
+          "parent": 160,
+          "variable": 1
+        }
+      ],
+      "root": 311,
+      "variables": 6
+    },
+    "variables": 6
+  },
+  "schema_version": 1,
+  "scope": "Finite exact ordinary F2 PC spaces. A complete subspace certificate replays derivations and verifies a closed-space upper inclusion. Static moment witnesses certify only the original-axiom-multiple span. Empty-support controls are satisfiable small formulas; they do not instantiate an asymptotic UNSAT lower bound or validate the external affine-DAG criterion.",
+  "summary": {
+    "complete_pc_spaces": 9,
+    "empty_support_dimensions": [
+      40,
+      38
+    ],
+    "empty_support_spans_checked": 2,
+    "exact_php_pc_degree": 3,
+    "independent_closure_checks": 9,
+    "individually_nonzero_but_jointly_dependent": 8,
+    "malformed_complete_spaces_rejected": 3,
+    "maximal_ambient_dimension": 220,
+    "padding_preserved_separated_dimension": 13,
+    "php_dynamic_degree_three_rank": 84,
+    "php_static_degree_three_rank": 82,
+    "static_dynamic_rank_gaps": 3
+  }
+}

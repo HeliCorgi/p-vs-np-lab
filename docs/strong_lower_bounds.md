@@ -5,7 +5,76 @@ resolve P versus NP. A bound for a specified proof system is recorded with
 that system, its encoding, and every resource restriction. A finite failed
 search is not entered as an asymptotic theorem. Published results, deductions
 for this repository's models, and newly encountered unverified claims are
-kept distinct. Last updated: **2026-11-05 JST**.
+kept distinct. Last updated: **2026-11-05 UTC**.
+
+## Phase 20 addition: unrestricted affine-clause DAGs and a rank-profile bound
+
+**Provenance and evidence:** a complete paper argument developed and reviewed
+within this lab, using the published Mikša–Nordström graph-reduction operator.
+The new direct simulation is motivated by the investigation of Braun's
+separated-space criterion, but does not assume the preprint's theorem or
+formalization. Full Lean formalization, external specialist review, and a
+priority claim are not supplied. See the
+[direct criterion](affine_dag_annihilator.md) and
+[separated-space construction](expander_separated_space.md).
+
+For a proper width-$w$ CNF $F$ on $n$ original variables, let $C_B(F)$ be
+the **actual ordinary-PC consequence space** over F2 through degree $B$,
+with explicit Boolean axioms. Let $U$ be a degree-at-most-$k$ subspace,
+$w\le R<n$, and $\mathcal Z$ the distinct nonempty falsity flats of
+rank-greater-than-$R$ lines in an affine-clause refutation DAG. Arbitrary
+parent reuse and arbitrary sound unary/binary semantic inference are allowed.
+Writing $b_k(t)=\sum_{j=0}^{\min(k,t)}\binom tj$, the new inequality is
+
+\[
+ \dim U\le\dim(U\cap C_{k+3R}(F))
+                     +\sum_{Z\in\mathcal Z}b_k(\dim Z).
+\]
+
+If $U\cap C_{k+3R}(F)=\{0\}$, this gives
+
+\[
+               S\ge|\mathcal Z|\ge\frac{\dim U}{b_k(n-R-1)}.
+\]
+
+For sound rules with at most $a$ parents, the same argument uses the
+explicit budget $k+(a+1)R$. The proof tracks ordinary formal degrees;
+Boolean-zero corrections have actual Boolean-axiom derivations. Completed
+parent lines are reused, so DAG depth does not accumulate degree.
+
+The required large separated space is supplied for proper linear ternary
+CNFs of bounded occurrence with $|\partial A|>|A|/2$ up to
+$s=\lfloor\varepsilon n\rfloor$. The span of degree-$k$ squarefree
+monomials with empty pooled support is fixed by the published reduction
+and is separated from $C_B$ for $3\le B\le s/4$, **over every field**.
+Connected-set counting and positive association give a sufficiently large
+dimension; no static Macaulay span is substituted for $C_B$.
+
+The existing existential UNSAT family can retain $m=12n$ clauses while
+enforcing maximum variable occurrence $\Delta=4096$. Put
+$C=(3\Delta)^2$ and $\varepsilon=10^{-16}$. For all sufficiently large
+$n$, the direct F2 criterion gives
+
+\[
+ S\ge|\mathcal Z|\ge
+       \frac14\exp\!\left(\frac{\varepsilon^2 n}{131072C^2}\right)
+ =\frac14\exp\!\left(\frac{n}{81\cdot2^{65}\cdot10^{32}}\right).
+\]
+
+The bound concerns unrestricted semantic binary affine-clause DAGs and
+therefore standard unrestricted `Res(⊕)`. It does not require a tree,
+regularity, bounded depth, or bounded parity support. It is also a bound
+on **distinct** high-rank falsity flats, not just repeated line occurrences.
+The tiny exponent coefficient and nonconstructive family existence make
+this an asymptotic result, not a practical small-instance performance claim.
+With the ordinary explicit variable-index encoding, the input bit length
+is $\Theta(n\log n)$; the parameter in the display is the variable count.
+
+The [finite and formal audit boundary](affine_dag_pc_audit.md) is separate.
+Source extension definitions, mixed-characteristic arithmetic, arbitrary
+circuit lines, and all SAT algorithms are not covered by this simulation.
+The result is retained as a strong proof-system lower bound, **not a
+P versus NP solution candidate**.
 
 ## 1. Common supports defeat every modulus in a local integer suffix
 

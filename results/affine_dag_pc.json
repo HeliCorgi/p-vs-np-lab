@@ -1,0 +1,956 @@
+{
+  "affine_dag": {
+    "kind": "semantic-affine-dag-v1",
+    "nodes": [
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            0
+          ]
+        ],
+        "input": 0,
+        "op": "input"
+      },
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            1
+          ]
+        ],
+        "input": 1,
+        "op": "input"
+      },
+      {
+        "clause": [
+          [
+            [
+              2
+            ],
+            1
+          ]
+        ],
+        "input": 2,
+        "op": "input"
+      },
+      {
+        "clause": [
+          [
+            [
+              3
+            ],
+            1
+          ]
+        ],
+        "input": 3,
+        "op": "input"
+      },
+      {
+        "clause": [
+          [
+            [
+              2,
+              3
+            ],
+            1
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          2,
+          3
+        ]
+      },
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          0
+        ]
+      },
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          1
+        ]
+      },
+      {
+        "clause": [
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          5,
+          6
+        ]
+      },
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            0
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          5,
+          4
+        ]
+      },
+      {
+        "clause": [
+          [
+            [
+              1
+            ],
+            0
+          ],
+          [
+            [
+              1
+            ],
+            1
+          ]
+        ],
+        "op": "infer",
+        "parents": [
+          0
+        ]
+      },
+      {
+        "clause": [],
+        "op": "infer",
+        "parents": [
+          8,
+          1
+        ]
+      }
+    ],
+    "variables": 4
+  },
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "mask": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "name": "linear_parity",
+      "profile": {
+        "assignment_checks": 112,
+        "cases": {
+          "discarded": 2,
+          "input": 4,
+          "one_high_parent": 1,
+          "tautology": 1,
+          "two_high_parents": 1,
+          "zero_high_parents": 3
+        },
+        "dag_nodes": 11,
+        "guaranteed_degree": 4,
+        "mask_degree": 1,
+        "max_parent_reuses": 2,
+        "max_polynomial_monomials": 8,
+        "operations": {
+          "add": 31,
+          "boolean": 3,
+          "input": 3,
+          "multiply": 24,
+          "zero": 1
+        },
+        "proof_degree": 4,
+        "proof_monomial_occurrences": 181,
+        "proof_nodes": 62,
+        "rank_limit": 1,
+        "semantic_literal_work": 656,
+        "shared_nodes": 3
+      },
+      "proof_bytes": 2342,
+      "proof_sha256": "4f56913d47935a027f7c55d0f3e8279bf26fe7de6442f06421a56d01f786941a",
+      "repeated_power_lines": 50
+    },
+    {
+      "mask": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "name": "quadratic_with_square",
+      "profile": {
+        "assignment_checks": 112,
+        "cases": {
+          "discarded": 2,
+          "input": 4,
+          "one_high_parent": 1,
+          "tautology": 1,
+          "two_high_parents": 1,
+          "zero_high_parents": 3
+        },
+        "dag_nodes": 11,
+        "guaranteed_degree": 5,
+        "mask_degree": 2,
+        "max_parent_reuses": 2,
+        "max_polynomial_monomials": 16,
+        "operations": {
+          "add": 67,
+          "boolean": 3,
+          "input": 3,
+          "multiply": 56,
+          "zero": 1
+        },
+        "proof_degree": 5,
+        "proof_monomial_occurrences": 616,
+        "proof_nodes": 130,
+        "rank_limit": 1,
+        "semantic_literal_work": 656,
+        "shared_nodes": 3
+      },
+      "proof_bytes": 4975,
+      "proof_sha256": "035113a66613556f86c60fe8830bcc06cb79c74ca48669a61ac164a74d099d4d",
+      "repeated_power_lines": 117
+    }
+  ],
+  "raw_clauses": [
+    [
+      1
+    ],
+    [
+      -1
+    ],
+    [
+      -2
+    ],
+    [
+      -3
+    ]
+  ],
+  "sample_ordinary_pc_certificate": {
+    "degree": 5,
+    "field": 2,
+    "kind": "ordinary-pc-f2-path-v1",
+    "nodes": [
+      {
+        "op": "zero"
+      },
+      {
+        "clause": 1,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 1,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 2,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 2,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 2,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 1,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 6,
+        "variable": 4
+      },
+      {
+        "left": 3,
+        "op": "add",
+        "right": 4
+      },
+      {
+        "left": 5,
+        "op": "add",
+        "right": 8
+      },
+      {
+        "left": 7,
+        "op": "add",
+        "right": 9
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 10
+      },
+      {
+        "clause": 2,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 12,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 13,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 13,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 13,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 12,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 17,
+        "variable": 4
+      },
+      {
+        "left": 14,
+        "op": "add",
+        "right": 15
+      },
+      {
+        "left": 16,
+        "op": "add",
+        "right": 19
+      },
+      {
+        "left": 18,
+        "op": "add",
+        "right": 20
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 21
+      },
+      {
+        "clause": 3,
+        "op": "input"
+      },
+      {
+        "op": "multiply",
+        "parent": 23,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 24,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 24,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 24,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 23,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 28,
+        "variable": 4
+      },
+      {
+        "left": 25,
+        "op": "add",
+        "right": 26
+      },
+      {
+        "left": 27,
+        "op": "add",
+        "right": 30
+      },
+      {
+        "left": 29,
+        "op": "add",
+        "right": 31
+      },
+      {
+        "left": 0,
+        "op": "add",
+        "right": 32
+      },
+      {
+        "op": "multiply",
+        "parent": 22,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 22,
+        "variable": 3
+      },
+      {
+        "left": 34,
+        "op": "add",
+        "right": 35
+      },
+      {
+        "op": "multiply",
+        "parent": 33,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 37,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 37,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 33,
+        "variable": 3
+      },
+      {
+        "left": 37,
+        "op": "add",
+        "right": 38
+      },
+      {
+        "left": 39,
+        "op": "add",
+        "right": 41
+      },
+      {
+        "left": 40,
+        "op": "add",
+        "right": 42
+      },
+      {
+        "left": 36,
+        "op": "add",
+        "right": 43
+      },
+      {
+        "op": "boolean",
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 45,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 46,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 47,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 46,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 45,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 49,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 50,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 46,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 45,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 50,
+        "variable": 3
+      },
+      {
+        "op": "boolean",
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 56,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 55,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 57,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 59,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 57,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 56,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 62,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 56,
+        "variable": 4
+      },
+      {
+        "left": 45,
+        "op": "add",
+        "right": 46
+      },
+      {
+        "left": 47,
+        "op": "add",
+        "right": 65
+      },
+      {
+        "left": 46,
+        "op": "add",
+        "right": 66
+      },
+      {
+        "left": 45,
+        "op": "add",
+        "right": 67
+      },
+      {
+        "left": 48,
+        "op": "add",
+        "right": 68
+      },
+      {
+        "left": 49,
+        "op": "add",
+        "right": 69
+      },
+      {
+        "left": 50,
+        "op": "add",
+        "right": 70
+      },
+      {
+        "left": 49,
+        "op": "add",
+        "right": 71
+      },
+      {
+        "left": 50,
+        "op": "add",
+        "right": 72
+      },
+      {
+        "left": 51,
+        "op": "add",
+        "right": 73
+      },
+      {
+        "left": 52,
+        "op": "add",
+        "right": 74
+      },
+      {
+        "left": 53,
+        "op": "add",
+        "right": 75
+      },
+      {
+        "left": 54,
+        "op": "add",
+        "right": 76
+      },
+      {
+        "left": 55,
+        "op": "add",
+        "right": 77
+      },
+      {
+        "left": 57,
+        "op": "add",
+        "right": 78
+      },
+      {
+        "left": 58,
+        "op": "add",
+        "right": 79
+      },
+      {
+        "left": 59,
+        "op": "add",
+        "right": 80
+      },
+      {
+        "left": 57,
+        "op": "add",
+        "right": 81
+      },
+      {
+        "left": 52,
+        "op": "add",
+        "right": 82
+      },
+      {
+        "left": 54,
+        "op": "add",
+        "right": 83
+      },
+      {
+        "left": 57,
+        "op": "add",
+        "right": 84
+      },
+      {
+        "left": 59,
+        "op": "add",
+        "right": 85
+      },
+      {
+        "left": 57,
+        "op": "add",
+        "right": 86
+      },
+      {
+        "left": 60,
+        "op": "add",
+        "right": 87
+      },
+      {
+        "left": 61,
+        "op": "add",
+        "right": 88
+      },
+      {
+        "left": 61,
+        "op": "add",
+        "right": 89
+      },
+      {
+        "left": 63,
+        "op": "add",
+        "right": 90
+      },
+      {
+        "left": 64,
+        "op": "add",
+        "right": 91
+      },
+      {
+        "left": 64,
+        "op": "add",
+        "right": 92
+      },
+      {
+        "left": 44,
+        "op": "add",
+        "right": 93
+      },
+      {
+        "op": "multiply",
+        "parent": 94,
+        "variable": 1
+      },
+      {
+        "left": 94,
+        "op": "add",
+        "right": 95
+      },
+      {
+        "op": "multiply",
+        "parent": 45,
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 97,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 97,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 56,
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 100,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 100,
+        "variable": 4
+      },
+      {
+        "left": 97,
+        "op": "add",
+        "right": 98
+      },
+      {
+        "left": 97,
+        "op": "add",
+        "right": 103
+      },
+      {
+        "left": 99,
+        "op": "add",
+        "right": 104
+      },
+      {
+        "left": 101,
+        "op": "add",
+        "right": 105
+      },
+      {
+        "left": 102,
+        "op": "add",
+        "right": 106
+      },
+      {
+        "left": 45,
+        "op": "add",
+        "right": 107
+      },
+      {
+        "left": 46,
+        "op": "add",
+        "right": 108
+      },
+      {
+        "left": 45,
+        "op": "add",
+        "right": 109
+      },
+      {
+        "left": 54,
+        "op": "add",
+        "right": 110
+      },
+      {
+        "left": 57,
+        "op": "add",
+        "right": 111
+      },
+      {
+        "left": 64,
+        "op": "add",
+        "right": 112
+      },
+      {
+        "left": 96,
+        "op": "add",
+        "right": 113
+      },
+      {
+        "op": "multiply",
+        "parent": 11,
+        "variable": 1
+      },
+      {
+        "left": 114,
+        "op": "add",
+        "right": 115
+      },
+      {
+        "op": "boolean",
+        "variable": 1
+      },
+      {
+        "op": "multiply",
+        "parent": 117,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 118,
+        "variable": 2
+      },
+      {
+        "op": "multiply",
+        "parent": 118,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 118,
+        "variable": 4
+      },
+      {
+        "op": "multiply",
+        "parent": 117,
+        "variable": 3
+      },
+      {
+        "op": "multiply",
+        "parent": 122,
+        "variable": 4
+      },
+      {
+        "left": 97,
+        "op": "add",
+        "right": 119
+      },
+      {
+        "left": 120,
+        "op": "add",
+        "right": 124
+      },
+      {
+        "left": 121,
+        "op": "add",
+        "right": 125
+      },
+      {
+        "left": 123,
+        "op": "add",
+        "right": 126
+      },
+      {
+        "left": 97,
+        "op": "add",
+        "right": 127
+      },
+      {
+        "left": 116,
+        "op": "add",
+        "right": 128
+      }
+    ],
+    "root": 129,
+    "variables": 4
+  },
+  "schema_version": 1,
+  "scope": "Finite semantic DAGs and explicit ordinary-PC traces only. The roots are the supplied masks, not necessarily 1. No minimum-degree or asymptotic lower bound is inferred from these tiny UNSAT controls; those require the separate dimension and expander proofs.",
+  "summary": {
+    "all_three_variable_affine_flats_checked": 52,
+    "boolean_ideal_basis_proofs": 27,
+    "masked_dag_conversions": 2,
+    "maximum_ordinary_degree": 5,
+    "no_unchecked_path_axioms": true,
+    "ordinary_pc_nodes": 192,
+    "rule_cases": {
+      "discarded": 4,
+      "input": 8,
+      "one_high_parent": 2,
+      "tautology": 2,
+      "two_high_parents": 2,
+      "zero_high_parents": 6
+    },
+    "source_shared_nodes": 3
+  }
+}

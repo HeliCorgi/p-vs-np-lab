@@ -35,6 +35,40 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 20: dated outcome (2026-11-05 UTC)
+
+Starting main was `c6a2b2e758c618c355149b70fc24437c470db145`.
+Its 474 file blobs matched the local tree before editing. Recent history,
+open PRs (none), and successful head CI runs were checked. This cycle took
+the preceding separated-space question seriously rather than relabeling
+the earlier PC refutation-degree bound.
+
+The [direct common-annihilator theorem](affine_dag_annihilator.md) bounds
+semantic unary/binary affine-clause DAGs by a low-degree separated-space
+dimension. The [expander construction](expander_separated_space.md)
+supplies such a space and a fixed occurrence bound, leading to an
+exponential node-count bound, and even an exponential count of distinct
+high-rank falsity flats, on an existential proper linear 3-CNF family.
+Arbitrary sharing, depth, and parity support are allowed. The source lines
+remain affine clauses on the original F2 variables. This paper argument
+was independently examined within the cycle; complete formalization,
+external review, and any priority assessment remain outstanding.
+
+The [upstream source audit](braun_generic_audit.md) read and hash-verified
+17 additional pinned Lean files. No upstream build was run. The new
+direct proof removes the registry/removal theorem from this lab result's
+dependencies; the published Mikša–Nordström graph-reduction theorem remains
+an explicit mathematical input.
+
+Three new reproducible reports audit actual PC consequence spaces,
+masked DAG-to-PC traces, and support/parameter counts. Failure controls
+separate static from dynamic polynomial consequences and individual
+nonmembership from independence of a span. The Lean addition verifies
+six semantic and budget lemmas, not the complete lower-bound theorem.
+This is a strong proof-system result recorded independently of the ultimate
+goal. No polynomial-time general SAT algorithm, all-algorithm lower bound,
+or P versus NP resolution has been obtained.
+
 ## Phase 19: dated outcome (2026-11-05 JST)
 
 Starting main was `8bfca4c451d6be1cbc84be50f9d6f667f66528a3`.

@@ -17,6 +17,13 @@ open-problem statement as the only current information.
 
 ## 1. Revision and inspection boundary
 
+**Phase-20 follow-up:** [the bounded dependency audit](braun_generic_audit.md)
+adds 17 pinned source files. The lab then obtained a
+[direct common-annihilator criterion](affine_dag_annihilator.md), with a
+separate proof that does not import the preprint's registry/removal theorem.
+The historical twelve-file inventory below remains the scope of phase 19;
+neither phase claims a complete upstream kernel build.
+
 The upstream repository is [`kbr-/math-research`](https://github.com/kbr-/math-research).
 Its main ref was pinned to
 [`25239211058ef718402a908b3272f01480c159c4`](https://github.com/kbr-/math-research/tree/25239211058ef718402a908b3272f01480c159c4)

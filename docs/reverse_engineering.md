@@ -1,5 +1,48 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 20: a direct DAG criterion and its expander application
+
+The separated-space gate now has a concrete answer. The
+[common-annihilator theorem](affine_dag_annihilator.md) works directly on
+semantic binary DAGs of affine clauses. Fix a rank threshold $R$ and choose
+one polynomial $f$ vanishing on every high-rank falsity flat. Each retained
+clause has an indicator of degree at most $R$; multiplying it by $f$ and
+replaying semantic rules derives $f$ through ordinary PC degree $k+3R$.
+No high-rank indicator is expanded, and reuse of completed parent lines
+does not accumulate degree with depth. Rank-nullity turns this into an
+inequality for the number of distinct high falsity flats.
+
+The [large separated space](expander_separated_space.md) is built from
+squarefree monomials with empty pooled clause support. The published
+Mikša–Nordström operator annihilates the actual degree-bounded PC space
+and fixes their entire span. A bounded-occurrence refinement of the old
+expander construction, connected-set counting, and positive association
+give an exponential lower bound on unrestricted semantic binary affine
+DAGs on the original variables, including standard `Res(⊕)`.
+
+This is a complete paper argument reviewed inside the research cycle.
+It has not received external specialist review or a full Lean
+formalization. The [finite checks](affine_dag_pc_audit.md) verify smaller
+interfaces, and the [exact PC-space engine](pc_subspace_audit.md) prevents
+two invalid shortcuts: a static original-axiom-multiple span is not the
+dynamic PC space, and individual nonmembership does not prove joint
+separation. The general result is recorded in
+[strong_lower_bounds.md](strong_lower_bounds.md). The direct proof does
+not depend on accepting the newly encountered Braun bit-PHP claim.
+
+**Next acceptance test.** Prioritize an adversarial audit and formalization
+of this new proof chain before extending its scope. The first formal target
+is ordinary PC with explicit Boolean axioms, degree-preserving Boolean-zero
+certificates, and the weighted replay for a topologically indexed DAG;
+the second is the affine restriction/rank-nullity theorem. The published
+graph-reduction interface and the quantitative separator must be stated
+as separate dependencies until actually formalized. A successful check of
+the current six semantic/arithmetic lemmas is not a formal proof of these
+targets. Do not substitute more finite instances, a larger modulus, or a
+larger tree for this gate. Any attempt to reach source extension variables,
+mixed fields, or arbitrary circuit lines needs a new checked simulation.
+The P versus NP all-algorithm quantifier remains unresolved.
+
 ## Phase 19: preserve general lower bounds and separate two escape conditions
 
 The previous acceptance test now has two precise answers. The

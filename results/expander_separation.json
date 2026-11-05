@@ -1,0 +1,439 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "all_variable_subsets_checked": 64,
+      "bernoulli_probability": "3969/4096",
+      "clause_subsets": 3,
+      "connected_clause_subsets": 2,
+      "decreasing_event_product": "3969/4096",
+      "good_monomials_by_degree": [
+        1,
+        6,
+        15,
+        18,
+        9,
+        0,
+        0
+      ],
+      "harris_inequality_checked": true,
+      "name": "disjoint_triples",
+      "raw_clause_only_false_negatives": [],
+      "strict_half_boundary_expansion": true,
+      "support_cutoff": 12,
+      "supports": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "uniform_counts": [
+        1,
+        6,
+        15,
+        20,
+        15,
+        6,
+        1
+      ],
+      "variables": 6
+    },
+    {
+      "all_variable_subsets_checked": 64,
+      "bernoulli_probability": "1917/2048",
+      "clause_subsets": 7,
+      "connected_clause_subsets": 7,
+      "decreasing_event_product": "261205753701375/281474976710656",
+      "good_monomials_by_degree": [
+        1,
+        6,
+        15,
+        16,
+        0,
+        0,
+        0
+      ],
+      "harris_inequality_checked": true,
+      "name": "linear_triangle",
+      "raw_clause_only_false_negatives": [
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          2,
+          4,
+          5,
+          6
+        ]
+      ],
+      "strict_half_boundary_expansion": true,
+      "support_cutoff": 12,
+      "supports": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          5,
+          6
+        ]
+      ],
+      "uniform_counts": [
+        1,
+        6,
+        15,
+        20,
+        15,
+        6,
+        1
+      ],
+      "variables": 6
+    },
+    {
+      "all_variable_subsets_checked": 64,
+      "bernoulli_probability": "0",
+      "clause_subsets": 15,
+      "connected_clause_subsets": 15,
+      "decreasing_event_product": "0",
+      "good_monomials_by_degree": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "harris_inequality_checked": true,
+      "name": "zero_boundary_pasch",
+      "raw_clause_only_false_negatives": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "strict_half_boundary_expansion": false,
+      "support_cutoff": 12,
+      "supports": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "uniform_counts": [
+        1,
+        6,
+        15,
+        20,
+        15,
+        6,
+        1
+      ],
+      "variables": 6
+    }
+  ],
+  "parameters": [
+    {
+      "all_rational_budget_checks_passed": true,
+      "ambient_variables": 10000000000000000000000000000000000000000,
+      "bernoulli_p": "1/233466604682886512640000000000000000",
+      "cnf_constructed": false,
+      "connected_count_constant": 150994944,
+      "distinct_flat_bound_exponent_before_factor_one_quarter": "390625/11673330234144325632",
+      "epsilon": "1/10000000000000000",
+      "expansion_cutoff": 1000000000000000000000000,
+      "expected_set_size": "59604644775390625/1391569403904",
+      "harris_loss_exponent": "7/102003116029984336615833600000000",
+      "maximum_occurrence": 4096,
+      "rank_cutoff": 62500000000000000000000,
+      "selected_degree_interval": [
+        21417,
+        85665
+      ],
+      "specific_n_existence_certified": false
+    },
+    {
+      "all_rational_budget_checks_passed": true,
+      "ambient_variables": 1000000000000000000000000000000000000000000000000000000000000,
+      "bernoulli_p": "1/233466604682886512640000000000000000",
+      "cnf_constructed": false,
+      "connected_count_constant": 150994944,
+      "distinct_flat_bound_exponent_before_factor_one_quarter": "37252902984619140625/11132555231232",
+      "epsilon": "1/10000000000000000",
+      "expansion_cutoff": 100000000000000000000000000000000000000000000,
+      "expected_set_size": "5684341886080801486968994140625/1327104",
+      "harris_loss_exponent": "1708984375/249031044995078946816",
+      "maximum_occurrence": 4096,
+      "rank_cutoff": 6250000000000000000000000000000000000000000,
+      "selected_degree_interval": [
+        2141633920959021104212253,
+        8566535683836084416849009
+      ],
+      "specific_n_existence_certified": false
+    },
+    {
+      "all_rational_budget_checks_passed": true,
+      "ambient_variables": 100000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "bernoulli_p": "1/233466604682886512640000000000000000",
+      "cnf_constructed": false,
+      "connected_count_constant": 150994944,
+      "distinct_flat_bound_exponent_before_factor_one_quarter": "3552713678800500929355621337890625/10616832",
+      "epsilon": "1/10000000000000000",
+      "expansion_cutoff": 10000000000000000000000000000000000000000000000000000000000000000,
+      "expected_set_size": "34694469519536141888238489627838134765625000000/81",
+      "harris_loss_exponent": "162981450557708740234375/237494511599616",
+      "maximum_occurrence": 4096,
+      "rank_cutoff": 625000000000000000000000000000000000000000000000000000000000000,
+      "selected_degree_interval": [
+        214163392095902110421225244616284782503858025,
+        856653568383608441684900978465139130015432098
+      ],
+      "specific_n_existence_certified": false
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Exact finite combinatorics and rational parameter budgets. These do not generate the asymptotic hard family, determine an explicit existence threshold, or establish the general lower bound by experiment; see the mathematical proofs.",
+  "summary": {
+    "connected_component_reduction_checked": true,
+    "exhaustive_variable_subsets": 192,
+    "failed_expansion_control_detected": true,
+    "finite_support_families": 3,
+    "harris_product_checked": true,
+    "rational_parameter_checks": 3,
+    "source_clause_only_test_counterexample": true
+  }
+}
