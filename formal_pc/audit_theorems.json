@@ -66,5 +66,20 @@
   "BoundaryLab.ParametrizedDAGDimension.dag_restriction_budget",
   "BoundaryLab.ParametrizedDAGDimension.dag_separated_restriction_budget",
   "BoundaryLab.ParametrizedDAGDimension.affine_clause_restriction_budget",
-  "BoundaryLab.ParametrizedDAGDimension.affine_clause_separated_restriction_budget"
+  "BoundaryLab.ParametrizedDAGDimension.affine_clause_separated_restriction_budget",
+  "BoundaryLab.AffineCoefficients.eq_affinePolynomial",
+  "BoundaryLab.AffineCoefficients.eval_affine",
+  "BoundaryLab.AffineCoefficients.eval_translate",
+  "BoundaryLab.AffineCoefficients.affine_span_degree",
+  "BoundaryLab.AffineCoefficients.eq_zero_of_linearPart_zero_of_eval_zero",
+  "BoundaryLab.AffineCoefficients.linearPartMap_span_injective",
+  "BoundaryLab.AffineCoefficients.mem_slopeSpace_iff",
+  "BoundaryLab.AffineCoefficients.linearPart_mem_slopeSpace",
+  "BoundaryLab.AffineCoefficients.finrank_slopeSpace",
+  "BoundaryLab.DualKernelCoordinates.mem_commonKernel",
+  "BoundaryLab.DualKernelCoordinates.finrank_add_finrank_commonKernel",
+  "BoundaryLab.DualKernelCoordinates.finrank_le",
+  "BoundaryLab.DualKernelCoordinates.finrank_commonKernel",
+  "BoundaryLab.DualKernelCoordinates.coordinateEquiv_annihilates",
+  "BoundaryLab.DualKernelCoordinates.existsUnique_coordinates"
 ]

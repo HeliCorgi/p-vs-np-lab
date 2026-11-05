@@ -7,3 +7,5 @@ import ProofLab.BooleanFunctionSpace
 import ProofLab.AffineRestriction
 import ProofLab.AffineClauseDAG
 import ProofLab.ParametrizedDAGDimension
+import ProofLab.AffineCoefficients
+import ProofLab.DualKernelCoordinates
