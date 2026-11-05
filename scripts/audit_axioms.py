@@ -98,6 +98,7 @@ THEOREMS = {
     "BoundaryLab.ParityQueries.free_coordinate_answers",
     "BoundaryLab.ParityQueries.parity_tree_refutes",
     "BoundaryLab.ParityQueries.query_budget_reserve",
+    "BoundaryLab.ParityQueries.degree_rank_mass",
 }
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 

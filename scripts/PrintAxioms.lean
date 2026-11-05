@@ -98,3 +98,4 @@ import Formal
 #print axioms BoundaryLab.ParityQueries.free_coordinate_answers
 #print axioms BoundaryLab.ParityQueries.parity_tree_refutes
 #print axioms BoundaryLab.ParityQueries.query_budget_reserve
+#print axioms BoundaryLab.ParityQueries.degree_rank_mass

@@ -137,4 +137,42 @@ theorem query_budget_reserve (q k a c s m : Nat)
     c + 8*m ≤ s := by
   omega
 
+/-- The rank recurrence for combining same-field polynomial proofs: discharge
+the smaller-rank branch first. This is only the combinatorial recurrence, not
+a formalization of polynomial calculus or its deduction lemma. -/
+def mergeRank (a b : Nat) : Nat := if a = b then a+1 else max a b
+
+private theorem merge_mass (a b : Nat) : 2^(mergeRank a b) ≤ 2^a + 2^b := by
+  by_cases eq : a = b
+  · subst b
+    simp [mergeRank, Nat.pow_succ, Nat.mul_two]
+  · simp only [mergeRank, if_neg eq]
+    by_cases le : a ≤ b
+    · rw [Nat.max_eq_right le]
+      omega
+    · have reverse : b ≤ a := by omega
+      rw [Nat.max_eq_left reverse]
+      omega
+
+inductive DegreeTree where
+  | leaf (degree : Nat)
+  | fork (left right : DegreeTree)
+
+def degreeRank : DegreeTree → Nat
+  | .leaf d => d
+  | .fork l r => mergeRank (degreeRank l) (degreeRank r)
+
+def degreeMass : DegreeTree → Nat
+  | .leaf d => 2^d
+  | .fork l r => degreeMass l + degreeMass r
+
+/-- Heterogeneous local degree budgets pay an exponential mass. Together with
+the separately proved PC deduction argument this yields sum 2^d_leaf ≥ 2^D. -/
+theorem degree_rank_mass (t : DegreeTree) : 2^(degreeRank t) ≤ degreeMass t := by
+  induction t with
+  | leaf d => exact Nat.le_refl _
+  | fork l r ihLeft ihRight =>
+    exact Nat.le_trans (merge_mass (degreeRank l) (degreeRank r))
+      (Nat.add_le_add ihLeft ihRight)
+
 end BoundaryLab.ParityQueries
