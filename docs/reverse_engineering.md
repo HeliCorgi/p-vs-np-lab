@@ -1,5 +1,40 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 17 decision: a real separation for feedback, and a degree bound for the combination
+
+The [audited research program](research_program.md) records the starting
+commit, earlier failed routes, and the standards for a solution claim.
+The previous positive gate is met by [shielded parity on graphs](feedback_separation.md):
+one-pass path learning and arithmetic decide both charge parities, including
+SAT witness recovery, with polynomial total bit cost on that family when
+budgets scale with the explicit input. Ordinary resolution on odd expanding
+graphs needs exponential length; all raw integer affine scopes of size at
+most 15 are blind. This comparison does not extend to all-field PC: the
+positive family is easy in its matching characteristic. The [carry
+control](feedback_carry.md) separately needs more than a prime-field *linear*
+test; it is not the expander resolution separation.
+
+More strongly, a [simulation theorem](feedback_simulation.md) applies to
+any width-bounded resolution prefix followed by bounded-scope integer
+leaves and one weighted global contradiction. In a detecting characteristic
+$p$, the degree bound involves the width, local scope, and the index
+$D=p^{v_p(R)}$ of the first nonzero digit of the integer right-hand side.
+For a squarefree modulus one can take $D=1$. Thus the earlier family with
+linear PC degree in **all fields** obstructs the entire combination when
+these three parameters are small. The theorem does not imply proof-size
+hardness for arbitrary binary-encoded moduli, or transfer to several rounds,
+branching on arithmetic, or additional extension variables.
+
+**Next test.** On a family with an independent all-field degree lower bound,
+either find a polynomial-cost high-digit arithmetic refutation with small
+prefix width and leaf scope, or prove a further obstruction. Include how
+the necessary digit and certificate are discovered from the original CNF.
+Inflating weights or a modulus on an already easy carry cycle will not meet
+the gate. A separate possible direction is a split between different
+characteristics; this lies outside the theorem and needs a separate
+encoding and lower-bound proof. No additional benchmark of the same
+one-way shielding is needed merely to enlarge the variable count.
+
 ## Phase 16 decision: the nonlinear finite gate is passed; expose the hybrid boundary next
 
 The [previous 31-variable/152-clause blind core](correlation_proof_boundary.md)

@@ -1,0 +1,382 @@
+{
+  "all_checks_passed": true,
+  "capped_control": {
+    "reason": "sparse product cap",
+    "stats": {
+      "global_truth_assignments": 0,
+      "local_degrees": [
+        0,
+        1,
+        2
+      ],
+      "local_words": 8,
+      "modular_model_cells_with_nonzero_exponent": 0,
+      "negative_exponent_cells": 1,
+      "peak_live_coefficient_terms": 1,
+      "peak_prefix_degrees": [
+        0,
+        0,
+        0
+      ],
+      "positive_model_cells": 3,
+      "sparse_products": 0
+    },
+    "status": "UNKNOWN"
+  },
+  "cases": [
+    {
+      "characteristic": 2,
+      "first_detecting_degree": 2,
+      "global_series_coefficients": [
+        1,
+        0,
+        1
+      ],
+      "modulus": 4,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": false,
+      "residual_rhs_mod_m": 2,
+      "sign_flip": false,
+      "source_charge": 2,
+      "stats": {
+        "global_truth_assignments": 32,
+        "local_degrees": [
+          0,
+          1,
+          2
+        ],
+        "local_words": 32,
+        "modular_model_cells_with_nonzero_exponent": 0,
+        "negative_exponent_cells": 10,
+        "peak_live_coefficient_terms": 10,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2
+        ],
+        "positive_model_cells": 12,
+        "sparse_products": 94
+      },
+      "status": "VERIFIED",
+      "terms": 4,
+      "variables": 5
+    },
+    {
+      "characteristic": 2,
+      "first_detecting_degree": 2,
+      "global_series_coefficients": [
+        1,
+        0,
+        1
+      ],
+      "modulus": 4,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": true,
+      "residual_rhs_mod_m": 2,
+      "sign_flip": true,
+      "source_charge": 2,
+      "stats": {
+        "global_truth_assignments": 32,
+        "local_degrees": [
+          0,
+          1,
+          2
+        ],
+        "local_words": 34,
+        "modular_model_cells_with_nonzero_exponent": 1,
+        "negative_exponent_cells": 11,
+        "peak_live_coefficient_terms": 10,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2
+        ],
+        "positive_model_cells": 14,
+        "sparse_products": 92
+      },
+      "status": "VERIFIED",
+      "terms": 5,
+      "variables": 5
+    },
+    {
+      "characteristic": 2,
+      "first_detecting_degree": 4,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "modulus": 8,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": false,
+      "residual_rhs_mod_m": 4,
+      "sign_flip": false,
+      "source_charge": 4,
+      "stats": {
+        "global_truth_assignments": 512,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3
+        ],
+        "local_words": 64,
+        "modular_model_cells_with_nonzero_exponent": 0,
+        "negative_exponent_cells": 20,
+        "peak_live_coefficient_terms": 20,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3
+        ],
+        "positive_model_cells": 24,
+        "sparse_products": 890
+      },
+      "status": "VERIFIED",
+      "terms": 8,
+      "variables": 9
+    },
+    {
+      "characteristic": 2,
+      "first_detecting_degree": 4,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "modulus": 8,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": true,
+      "residual_rhs_mod_m": 4,
+      "sign_flip": true,
+      "source_charge": 4,
+      "stats": {
+        "global_truth_assignments": 512,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3
+        ],
+        "local_words": 66,
+        "modular_model_cells_with_nonzero_exponent": 1,
+        "negative_exponent_cells": 21,
+        "peak_live_coefficient_terms": 20,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3
+        ],
+        "positive_model_cells": 26,
+        "sparse_products": 776
+      },
+      "status": "VERIFIED",
+      "terms": 9,
+      "variables": 9
+    },
+    {
+      "characteristic": 3,
+      "first_detecting_degree": 3,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "modulus": 9,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": false,
+      "residual_rhs_mod_m": 3,
+      "sign_flip": false,
+      "source_charge": 3,
+      "stats": {
+        "global_truth_assignments": 1024,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "local_words": 72,
+        "modular_model_cells_with_nonzero_exponent": 0,
+        "negative_exponent_cells": 18,
+        "peak_live_coefficient_terms": 18,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "positive_model_cells": 27,
+        "sparse_products": 568
+      },
+      "status": "VERIFIED",
+      "terms": 9,
+      "variables": 10
+    },
+    {
+      "characteristic": 3,
+      "first_detecting_degree": 3,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "modulus": 9,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": true,
+      "residual_rhs_mod_m": 6,
+      "sign_flip": true,
+      "source_charge": 3,
+      "stats": {
+        "global_truth_assignments": 1024,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "local_words": 74,
+        "modular_model_cells_with_nonzero_exponent": 1,
+        "negative_exponent_cells": 28,
+        "peak_live_coefficient_terms": 18,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "positive_model_cells": 29,
+        "sparse_products": 592
+      },
+      "status": "VERIFIED",
+      "terms": 10,
+      "variables": 10
+    },
+    {
+      "characteristic": 5,
+      "first_detecting_degree": 5,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "modulus": 25,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": false,
+      "residual_rhs_mod_m": 5,
+      "sign_flip": false,
+      "source_charge": 5,
+      "stats": {
+        "global_truth_assignments": 0,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          3
+        ],
+        "local_words": 200,
+        "modular_model_cells_with_nonzero_exponent": 0,
+        "negative_exponent_cells": 40,
+        "peak_live_coefficient_terms": 34,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          3
+        ],
+        "positive_model_cells": 75,
+        "sparse_products": 5326
+      },
+      "status": "VERIFIED",
+      "terms": 25,
+      "variables": 26
+    },
+    {
+      "characteristic": 5,
+      "first_detecting_degree": 5,
+      "global_series_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "modulus": 25,
+      "product_cap": 2000000,
+      "redundant_congruence_stress_term": true,
+      "residual_rhs_mod_m": 20,
+      "sign_flip": true,
+      "source_charge": 5,
+      "stats": {
+        "global_truth_assignments": 0,
+        "local_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          3
+        ],
+        "local_words": 202,
+        "modular_model_cells_with_nonzero_exponent": 1,
+        "negative_exponent_cells": 86,
+        "peak_live_coefficient_terms": 34,
+        "peak_prefix_degrees": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          3
+        ],
+        "positive_model_cells": 77,
+        "sparse_products": 6626
+      },
+      "status": "VERIFIED",
+      "terms": 26,
+      "variables": 26
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Truncated series and square-free Boolean polynomial identities for the stated checked carry certificates, not a proof-system checker or all-input SAT solver. Original 26-variable cubes are not enumerated; the full sparse coefficient products are compared symbolically.",
+  "summary": {
+    "first_detecting_degrees": [
+      2,
+      4,
+      3,
+      5
+    ],
+    "full_truth_assignments": 3136,
+    "largest_variables": 26,
+    "local_words": 744,
+    "sparse_global_identities": 8,
+    "symbolic_products": 14964,
+    "tested_moduli": [
+      4,
+      8,
+      9,
+      25
+    ],
+    "verified_integer_certificates": 8
+  }
+}

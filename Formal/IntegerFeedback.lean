@@ -43,14 +43,14 @@ theorem edge_sound {V : Type} {f : CNF V} {p q : Term V} {a : V → Bool}
 
 inductive Path {V : Type} (f : CNF V) : Term V → Term V → Prop where
   | refl (p : Term V) : Path f p p
-  | step {p q r} (prefix : Path f p q) (edge : Edge f q r) : Path f p r
+  | step {p q r} (prior : Path f p q) (edge : Edge f q r) : Path f p r
 
 theorem path_sound {V : Type} {f : CNF V} {p q : Term V}
     (path : Path f p q) {a : V → Bool} (model : Models a f) :
     eval a p = true → eval a q = true := by
   induction path with
   | refl p => exact fun h => h
-  | step prefix edge ih => exact fun h => edge_sound edge model (ih h)
+  | step prior edge ih => exact fun h => edge_sound edge model (ih h)
 
 theorem replace_disjunct {V : Type} {f : CNF V} {p q : Term V} {rest : Clause V}
     (source : p :: rest ∈ f) (path : Path f p q) {a : V → Bool}

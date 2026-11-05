@@ -1,0 +1,150 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "anchors": 5,
+      "arithmetic": {
+        "budget_limited": false,
+        "certificate_terms": 4,
+        "exact_rows": 4,
+        "heavy_columns": 1,
+        "incidence_visits": 8,
+        "max_accumulator_bits": 3,
+        "modulus": 4,
+        "residual_rhs": 2,
+        "table_cells": 32,
+        "triples": 4,
+        "unit_normal_tests": 9
+      },
+      "backend": "signed_column",
+      "certificate_bytes": 3216,
+      "clauses": 1300,
+      "edges_visited": 1280,
+      "gates": 4,
+      "learned_clauses": 20,
+      "modulus": 4,
+      "path_steps": 340,
+      "raw_integer_baseline": {
+        "rows": 0,
+        "scopes": 1960
+      },
+      "raw_sat_word_checked": false,
+      "status": "UNSAT",
+      "total": 2,
+      "variables": 665
+    },
+    {
+      "anchors": 10,
+      "arithmetic": {
+        "budget_limited": false,
+        "certificate_terms": 9,
+        "exact_rows": 9,
+        "heavy_columns": 1,
+        "incidence_visits": 18,
+        "max_accumulator_bits": 4,
+        "modulus": 9,
+        "residual_rhs": 3,
+        "table_cells": 72,
+        "triples": 9,
+        "unit_normal_tests": 22
+      },
+      "backend": "signed_column",
+      "certificate_bytes": 7524,
+      "clauses": 2925,
+      "edges_visited": 2880,
+      "gates": 9,
+      "learned_clauses": 45,
+      "modulus": 9,
+      "path_steps": 765,
+      "raw_integer_baseline": null,
+      "raw_sat_word_checked": false,
+      "status": "UNSAT",
+      "total": 3,
+      "variables": 1495
+    },
+    {
+      "anchors": 26,
+      "arithmetic": {
+        "budget_limited": false,
+        "certificate_terms": 25,
+        "exact_rows": 25,
+        "heavy_columns": 1,
+        "incidence_visits": 50,
+        "max_accumulator_bits": 5,
+        "modulus": 25,
+        "residual_rhs": 20,
+        "table_cells": 200,
+        "triples": 25,
+        "unit_normal_tests": 67
+      },
+      "backend": "signed_column",
+      "certificate_bytes": 21607,
+      "clauses": 8125,
+      "edges_visited": 8000,
+      "gates": 25,
+      "learned_clauses": 125,
+      "modulus": 25,
+      "path_steps": 2125,
+      "raw_integer_baseline": null,
+      "raw_sat_word_checked": false,
+      "status": "UNSAT",
+      "total": 5,
+      "variables": 4151
+    },
+    {
+      "anchors": 9,
+      "arithmetic": {
+        "budget_limited": false,
+        "certificate_terms": 8,
+        "exact_rows": 8,
+        "heavy_columns": 1,
+        "incidence_visits": 16,
+        "max_accumulator_bits": 4,
+        "modulus": 8,
+        "residual_rhs": 4,
+        "table_cells": 64,
+        "triples": 8,
+        "unit_normal_tests": 17
+      },
+      "backend": "signed_column",
+      "certificate_bytes": 6548,
+      "clauses": 2600,
+      "edges_visited": 2560,
+      "gates": 8,
+      "learned_clauses": 40,
+      "modulus": 8,
+      "path_steps": 680,
+      "raw_integer_baseline": null,
+      "raw_sat_word_checked": false,
+      "status": "UNSAT",
+      "total": 4,
+      "variables": 1329
+    },
+    {
+      "anchors": 5,
+      "clauses": 1300,
+      "edges_visited": 1280,
+      "gates": 4,
+      "learned_clauses": 20,
+      "path_steps": 340,
+      "raw_integer_baseline": null,
+      "raw_sat_word_checked": true,
+      "status": "UNKNOWN",
+      "total": 0,
+      "variables": 665
+    }
+  ],
+  "scope": "The field comparison concerns affine equations over unrestricted field-valued coordinates. No lower bound on resolution for the carry ring is claimed.",
+  "summary": {
+    "checked_composite_refutations": 4,
+    "inputs": 5,
+    "max_variables": 4151,
+    "recovered_moduli": [
+      4,
+      9,
+      25,
+      8
+    ],
+    "satisfiable_controls": 1
+  }
+}
