@@ -8,7 +8,26 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 
 **P vs NPの解決は主張していません。** 初期成果は、特定の表現形式がどこで破綻し、どの限定された制約クラスなら正確に扱えるかを確認するものです。2026年11月5日（日本時間）の確認時点で、[Clay Mathematics Institute](https://www.claymath.org/millennium/p-vs-np/)もこの問題を未解決として掲載しています。
 
+## 第23段階：反例集合を、変数数−階数の座標で過不足なく表す
+
+**指定された定理をLeanで証明しました。** 元の変数が $n$ 個で、アフィン節 $C$ の反例集合 $Z(C)$ が非空なら、定数項を含む既存の定義 $r=\operatorname{spanRank}(C)$ に対して $r\le n$ を示し、
+
+\[
+ \Phi_C:\mathbb F_2^{\,n-r}\longrightarrow\mathbb F_2^n,
+ \qquad \operatorname{image}\Phi_C=Z(C)
+\]
+
+となる**単射なアフィン写像**を構成しました。すべての反例が一度ずつ表されます。実際のアフィン写像と、それを表す次数1以下の座標多項式の一致も証明しています。非空という条件によって、アフィン式の線形係数だけを取る写像が節の張る空間上で単射になることが要点です。
+
+[定理と証明の接続](docs/optimal_affine_parameters.md)、[最終定理のLeanソース](formal_pc/ProofLab/OptimalAffineParameters.lean)、[検証記録](results/optimal_affine_formal_audit.json)を保存しました。**パッケージ全体のビルドと106件の依存公理監査に成功**しています。新しい監査対象は38件です。既存の388テスト・62件の決定的な再現記録も一致しました。
+
+さらに、実際の制限写像について $\dim\operatorname{range}L_C\le b_k(n-r)$ を導き、元の節DAGの次元不等式から「適切な座標表示と被覆を与える」という仮定を除きました。空の反例集合は和から除外し、0次元の非空集合は1点として扱います。今回のDAGの和は非空の反例集合を持つ捨てた**ノードごと**に数え、相異なる空間への重複除去はまだ別の接続です。
+
+これは標準的な線形代数を既存の定義・制限写像・普通のPCへ厳密に接続した成果です。基底は古典的選択で構成しており、実行可能な行消去プログラムを新設したという主張ではありません。展開性から大きな分離空間を作る部分と指数下界全体の形式化は残っています。**P vs NPの解決候補を得たという意味ではありません。**
+
 ## 第22段階：Boolean制限写像の次元上界を証明し、元の節DAGへ接続する
+
+以下は第22段階完了時点の記録です。この段階で残した最適座標表示の課題は、上の第23段階で解消しました。
 
 **前回残した制限写像の核と像の次元を、実際に構成した写像についてLeanで証明しました。** 反例集合を、$t_a$ 個のパラメータからなるアフィン写像の像で覆うとき、次数 $k$ 以下の多項式をその像へ制限して得られるBoolean関数の空間は、
 
@@ -561,6 +580,7 @@ CIはPythonとLeanを別jobで実行します。Pythonの成功だけを形式�
 | 場所 | 内容 |
 |---|---|
 | [`docs/solution_criteria.md`](docs/solution_criteria.md) | P=NP／P≠NPの厳密な証明条件 |
+| [`docs/optimal_affine_parameters.md`](docs/optimal_affine_parameters.md) | 非空の反例集合を変数数−階数の座標で表す全単射と、仮定から座標表示を除いた次元不等式 |
 | [`docs/affine_dag_annihilator.md`](docs/affine_dag_annihilator.md) | 共有を許す偶奇節DAGへの一般の次元不等式と、普通のPCによる直接証明 |
 | [`docs/expander_separated_space.md`](docs/expander_separated_space.md) | 大きな独立多項式空間、出現回数を制限した3-CNF族、指数DAG下界 |
 | [`docs/strong_lower_bounds.md`](docs/strong_lower_bounds.md) | 一般化可能な下界の正確な仮定・出典・適用範囲の記録 |

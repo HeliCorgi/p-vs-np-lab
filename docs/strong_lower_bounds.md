@@ -7,6 +7,37 @@ search is not entered as an asymptotic theorem. Published results, deductions
 for this repository's models, and newly encountered unverified claims are
 kept distinct. Last updated: **2026-11-06 JST**.
 
+## Phase 23: the intrinsic rank-profile dimension inequality is formalized
+
+The [optimal affine-coordinate theorem](optimal_affine_parameters.md) now proves
+that a nonempty clause zero-set has an injective, exact affine parameterization
+with `n - spanRank C` parameters. It derives the rank bound and direction-space
+dimension from the existing ordinary-polynomial definition. The resulting
+actual restriction has image dimension at most `b_k(n-spanRank C)`.
+
+For a source affine-clause DAG satisfying the preceding model assumptions,
+let `A` be its nonempty discarded node occurrences. The connected Lean theorem
+constructs all charts and their coverage and proves
+
+\[
+ \dim U\le\dim\bigl(U\cap C_{k+3R}(F)\bigr)
+       +\sum_{i\in A}b_k\bigl(n-\operatorname{spanRank}(C_i)\bigr).
+\]
+
+The separated version removes the intersection term using the explicit
+separation premise for actual ordinary PC. Empty zero-sets contribute nothing.
+Repeated nodes are counted separately; the distinct-flat version of the paper
+theorem is not claimed as this corollary. Consistent rank `r>R` also implies
+`n-r <= n-R-1`, now as a checked helper.
+
+This closes the geometric parameter-count gap in the formal lower-bound route.
+All 106 named package audits passed, including 38 new endpoints. It adds no
+unconditional all-algorithm lower bound: the intended expander separator and
+quantitative existence/counting remain separate formal obligations. The
+phase-20 exponential claim retains its paper-proof evidence level. The generic
+common-kernel coordinate lemma is reusable over any field; the complete
+clause/restriction chain is currently formalized over `F2`.
+
 ## Phase 22: a formal affine-cover dimension inequality
 
 The [Boolean-restriction theorem](boolean_restriction_dimension.md) now

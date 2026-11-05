@@ -16,6 +16,14 @@ high-rank falsity flats. Its verification does not require the preprint's
 bit-PHP theorem, ENS registry, or family-removal theorem. See the separate
 [bounded source audit](braun_generic_audit.md) for what was actually read.
 
+**Phase-23 formalization follow-up:** [optimal affine coordinates](optimal_affine_parameters.md)
+are now constructed from every nonempty clause zero-set, and the actual
+restriction budget uses `n-spanRank C`. The connected source-DAG Lean theorem
+constructs all charts and covers internally, summing over nonempty discarded
+node occurrences. Distinct-flat deduplication, the expander-separated source
+space, and quantitative existence/counting remain separate formal obligations.
+This update does not reclassify the entire paper theorem as Lean-verified.
+
 ## 1. Definitions and the exact statement
 
 Work over $K=\mathbb F_2$ in the **ordinary** polynomial ring

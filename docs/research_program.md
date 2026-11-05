@@ -35,6 +35,41 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 23: optimal affine parameters (2026-11-06 JST)
+
+The user selected the exact unfinished chart theorem. Starting main was
+`6ffad1cdb12c0d8a78324581010584313afb1eaa`; all 517 file blobs matched, both
+main workflows were successful, no open PRs were present, and the latest
+commits and current proof/decision records were inspected. The task stayed
+within that target and its direct restriction/DAG consequences.
+
+Four [new modules](optimal_affine_parameters.md) recover affine coefficients
+in the ordinary polynomial ring, prove consistency preserves slope rank,
+derive common-kernel dimension over an arbitrary field, and construct the
+exact affine map with `n-spanRank C` parameters. Its coordinate-polynomial
+encoding has degree at most one, exact image, and injectivity. The intrinsic
+restriction budget and source-DAG criterion now construct their charts;
+empty zero-sets have no index in the sum. Repeated node occurrences are still
+counted separately. All original source and actual-PC separation premises
+remain explicit.
+
+The complete hosted build and 106 named endpoint audits passed at `e8bf0ee`
+in [run 42116967349](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42116967349).
+The [audit record](../results/optimal_affine_formal_audit.json) retains exact
+source hashes, observed axiom sets, and both earlier failed checkpoints.
+Their repairs were an explicit nonzero degree-one exponent and a direct
+basis choice from the already proved dimension formula. No theorem statement
+was weakened and no axiom or proof hole was added. An independent internal
+statement audit found no defect in exact image, dimension, empty-set handling,
+or the connected criterion's retained premises.
+
+Independent local reproduction passed 388 tests and matched 62 deterministic
+reports with the current source hashes. No new finite benchmarks, vendored
+sources, package pins, or workflow settings were added. Classical basis choice
+is a mathematical construction, not a new executable elimination algorithm.
+The expander separator, quantitative existence/counting, and full exponential
+formalization remain unfinished. No P versus NP resolution was obtained.
+
 ## Phase 22: Boolean restriction dimension (2026-11-06 JST)
 
 Starting main was `42e2dde0d32bd19a4fdce4b701d3b1f5525906a1`.

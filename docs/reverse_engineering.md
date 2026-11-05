@@ -1,5 +1,31 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 23: optimal coordinates are proved; construct the actual PC separator next
+
+The [exact affine-chart theorem](optimal_affine_parameters.md) completes the
+selected acceptance test: from affinehood and a common zero alone, it proves
+`spanRank C <= card V`, constructs an injective affine map on exactly
+`card V - spanRank C` parameters, and proves its image is precisely the zero-set.
+The ordinary coordinate polynomials have degree at most one. The connected
+source-DAG criterion now constructs its own charts and cover, with empty
+zero-sets excluded and a per-node intrinsic rank-profile sum. All 106 named
+ordinary-PC endpoint audits passed; this includes 38 new endpoints.
+
+**Next substantial acceptance test.** Formalize the published graph-reduction
+operator needed for the expander construction and prove that it fixes the
+entire proposed source space `U` while annihilating every actual ordinary-PC
+derivation through the stated degree. Deduce `U intersect C_B(F) = {0}` from
+those two properties. A refutation-degree bound alone, individual monomial
+nonmembership, or a static span of original axiom multiples cannot replace this
+obligation. Keep repeated-variable multiplication and unused original variables
+inside the proved interface. Counting enough fixed monomials and constructing
+the quantitative formula family are subsequent obligations. Distinct-flat
+deduplication is also not asserted by the new per-node corollary.
+
+The completed chart uses classical basis choice and makes no new algorithmic
+SAT claim. Larger finite benchmarks are not needed to validate this universal
+statement. Earlier sections below record the targets as they stood at each phase.
+
 ## Phase 22: close the numerical restriction budget, then construct optimal coordinates
 
 The [concrete restriction theorem](boolean_restriction_dimension.md) closes

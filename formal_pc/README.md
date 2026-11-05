@@ -1,6 +1,6 @@
 # Ordinary polynomial-calculus formalization
 
-This is a separate Lean package for the phase-21/22 formalization. The repository's
+This is a separate Lean package for the phase-21/22/23 formalization. The repository's
 original `Formal` package remains on Lean 4.19.0. This package pins Lean
 4.34.0-rc2 and Mathlib `67248ba34806c60bf24b5e99f0f09946ffc465c9`.
 
@@ -40,13 +40,14 @@ in `audit_theorems.json` and allows only `propext`, `Classical.choice`, and
 those dependencies. It does not claim an independent Lean-kernel replay of all
 cached Mathlib dependencies.
 
-**Verified status:** the full package and all **68 theorem axiom audits** passed
-in [CI run 42111933039](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42111933039)
-at source commit `ab108e6b1077cdae6b4879768c573c682326d3ee`. The exact source hashes
+**Verified status:** the full package and all **106 theorem axiom audits** passed
+in [CI run 42116967349](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42116967349)
+at source commit `e8bf0ee8c074583ce10df180849153f418847189`. The exact source hashes
 and observed axiom sets are preserved in the
-[phase-22 audit record](../results/boolean_restriction_formal_audit.json).
-The [38-endpoint phase-21 record](../results/ordinary_pc_formal_audit.json) is
-retained as historical evidence for its exact source commit.
+[phase-23 audit record](../results/optimal_affine_formal_audit.json).
+The [68-endpoint phase-22 record](../results/boolean_restriction_formal_audit.json)
+and [38-endpoint phase-21 record](../results/ordinary_pc_formal_audit.json) are
+retained as historical evidence for their exact source commits.
 
 | Module | Verified mathematical content |
 |---|---|
@@ -58,11 +59,17 @@ retained as historical evidence for its exact source commit.
 | `ProofLab.AffineRestriction` | Actual affine-coordinate restriction maps, their pointwise kernels, ordinary substitution degree, and the proved numerical image bound. |
 | `ProofLab.AffineClauseDAG` | Raw source clause products and compressed derived clauses construct a sound polynomial DAG with the stated retained degree bound. |
 | `ProofLab.ParametrizedDAGDimension` | Concrete affine covers supply all numerical image budgets internally, yielding the dimension criterion directly for polynomial or affine-clause DAGs. |
+| `ProofLab.AffineCoefficients` | Ordinary affine coefficient reconstruction, evaluation under translation, and rank-preserving slope projection on a consistent affine span. |
+| `ProofLab.DualKernelCoordinates` | Common-kernel dimension and exact linear coordinates for any finite-dimensional vector space over any field. |
+| `ProofLab.OptimalAffineParameters` | An actual injective affine map with exactly `n-spanRank C` parameters, exact clause-zero image, and degree-one coordinate-polynomial encoding. |
+| `ProofLab.IntrinsicAffineRestriction` | Exact vanishing kernel, intrinsic Boolean image budget, high-rank parameter bound, and a source-DAG criterion constructing all charts and coverage internally. |
 
-The newest composed theorem proves the numerical image bounds. It still takes
-the affine parameterizations/coverage and ordinary-PC separation as explicit
-data or hypotheses. Constructing an optimal parameterization from arbitrary
-consistent affine-clause equations, identifying intrinsic dimension/codimension,
-and proving the expander separator are unfinished obligations. The
-[current scope note](../docs/boolean_restriction_dimension.md) records the exact
-boundary. No P vs NP claim follows from this package.
+The newest composed theorem derives the numerical image bounds from the
+original clause ranks and constructs its affine charts and coverage internally.
+Its sum is over nonempty discarded node occurrences. Ordinary-PC separation
+remains an explicit hypothesis; distinct-flat deduplication, the expander
+separator, and quantitative existence/counting are not yet connected as a
+complete formal exponential theorem. The
+[current scope note](../docs/optimal_affine_parameters.md) records the exact
+boundary. The coordinates use classical basis choice, with no executable
+elimination claim. No P vs NP claim follows from this package.

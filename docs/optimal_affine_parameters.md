@@ -1,9 +1,13 @@
 # Phase 23: optimal affine coordinates for every nonempty clause zero-set
 
-**Verification pending.** The four new Lean modules implement the precise
-acceptance test selected after phase 22. The complete package is undergoing
-hosted compilation and its explicit transitive axiom audit. This status will
-be replaced only after the actual checks complete.
+**Verified, 2026-11-06 JST.** The exact chart theorem and its connected
+restriction/DAG corollaries passed the complete hosted Lean build at
+[`e8bf0ee`](https://github.com/HeliCorgi/p-vs-np-lab/commit/e8bf0ee8c074583ce10df180849153f418847189).
+All **106 named theorem axiom audits**, including 38 new endpoints, passed in
+[CI run 42116967349](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42116967349).
+The [observed source and axiom record](../results/optimal_affine_formal_audit.json)
+preserves that evidence. The selected phase-22 acceptance test is completed;
+the expander separator and full exponential theorem remain separate obligations.
 
 ## 1. Exact theorem and its meaning
 
@@ -256,14 +260,30 @@ lake build ProofLab
 python3 audit.py
 ```
 
-The current audit list has 106 named endpoints, 38 more than phase 22. Final
-build results and observed axiom sets will be recorded after verification.
+All 106 named endpoint audits passed, 38 more than phase 22. Only `propext`,
+`Classical.choice`, and `Quot.sound` were observed in their actual transitive
+axiom sets. Standard cached dependencies may be reused; this is not an
+independent replay of every cached kernel object. The original core package
+separately audits 93 endpoints. Independent local Python reproduction passed
+388 tests and matched all 62 deterministic reports, including current source
+hashes. Those numerical checks are separate from formal verification.
+
 The first partial checkpoint compiled the generic dual-kernel module and
 exposed one unclosed coefficient-simplification goal: the degree-one monomial
 exponent must be explicitly distinguished from the zero exponent. Evaluating
 those exponent vectors at the selected variable supplies the contradiction
 `0=1` in the natural numbers. The theorem statement and mathematical proof
-were unchanged by this elaboration repair.
+were unchanged by this elaboration repair. The second checkpoint exposed a
+dependent-type simplification failure when transporting the coordinate-space
+dimension. Choosing a basis directly from the already proved direction-space
+dimension resolved it. Both failed checkpoint IDs and the successful complete
+build are recorded in the audit JSON; neither repair weakened the theorem.
+
+An independent internal statement review checked exact image, injectivity,
+zero dimensions, the original polynomial-rank definition, all source-DAG
+premises, the nonempty-node indexing, and the remaining PC separation premise.
+It found no mathematical statement defect. This is not external specialist
+review of the full phase-20 exponential argument.
 
 The next substantial application obligation is the expander reduction operator
 and separation of an entire polynomial subspace from actual bounded-degree PC.

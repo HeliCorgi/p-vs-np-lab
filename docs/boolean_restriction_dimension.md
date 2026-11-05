@@ -1,5 +1,10 @@
 # Phase 22: actual Boolean restriction maps and their dimension budgets
 
+**Phase-23 follow-up:** the [optimal-coordinate theorem](optimal_affine_parameters.md)
+now discharges the nonempty-flat parameterization obligation below and connects
+the intrinsic per-node rank-profile inequality. This page preserves the
+phase-22 statements and evidence at that earlier stage.
+
 **Verified, 2026-11-06 JST.** Four new Lean modules connect the source affine
 clause DAG to concrete restriction maps and the explicit binomial image bound.
 The package built on its first hosted attempt at
