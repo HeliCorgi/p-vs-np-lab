@@ -1,5 +1,11 @@
 # Phase 21: ordinary-PC replay and the exact remaining geometry
 
+**Phase-22 follow-up:** [actual Boolean restrictions and their binomial budgets](boolean_restriction_dimension.md)
+now close the restriction-map/kernel, numerical image-budget, and source-DAG
+adapter obligations listed below. The optimal parameterization/codimension
+connection and the expander separator remain unfinished. This document records
+the earlier phase-21 verification and its then-current boundary.
+
 The phase-20 [common-annihilator argument](affine_dag_annihilator.md) now has
 an implementation in the separate [`formal_pc`](../formal_pc/README.md) Lean
 package. This cycle formalizes actual ordinary polynomials and degree-bounded

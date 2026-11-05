@@ -422,12 +422,15 @@ mathematical argument. The repository's finite experiments and selected
 formal lemmas must retain their own narrower descriptions; neither is
 a substitute for formalizing the entire theorem and its eventual
 combinatorial application.
-## Phase-21 formalization note
+## Formalization follow-up
 
-The [ordinary-PC package](ordinary_pc_formalization.md) now implements the
+The [phase-21 ordinary-PC package](ordinary_pc_formalization.md) implements the
 weighted semantic-DAG replay and its generic dimension transfer using actual
-ordinary polynomials and primitive PC rules. That audit records compilation
-status and the remaining geometric restriction and separator obligations.
-The full geometric and exponential statements in this note are not thereby
-claimed to be fully formalized.
+ordinary polynomials and primitive PC rules. The
+[phase-22 restriction theorem](boolean_restriction_dimension.md) constructs
+actual Boolean restrictions, proves their numerical binomial budgets, and
+connects the source affine-clause DAG. Optimal parameterization existence,
+intrinsic codimension, and the separator/counting chain remain separate
+obligations. The full geometric and exponential statements in this note are
+not thereby claimed to be fully formalized.
 

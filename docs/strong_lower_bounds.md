@@ -5,7 +5,36 @@ resolve P versus NP. A bound for a specified proof system is recorded with
 that system, its encoding, and every resource restriction. A finite failed
 search is not entered as an asymptotic theorem. Published results, deductions
 for this repository's models, and newly encountered unverified claims are
-kept distinct. Last updated: **2026-11-05 UTC**.
+kept distinct. Last updated: **2026-11-06 JST**.
+
+## Phase 22: a formal affine-cover dimension inequality
+
+The [Boolean-restriction theorem](boolean_restriction_dimension.md) now
+constructs the actual restriction maps, proves their kernels mean pointwise
+vanishing, and proves the squarefree image budget. For a finite family of
+affine maps from `t_a` Boolean parameters whose images cover every discarded
+node's nonzero locus, it proves
+
+\[
+ \dim U\le\dim(U\cap C_{k+3R}(F))+\sum_a b_k(t_a),
+ \qquad b_k(t)=\sum_{j=0}^{\min(k,t)}\binom tj.
+\]
+
+The source can be supplied as a semantic unary/binary affine-clause DAG with
+actual raw input polynomials. The adapter constructs the polynomial DAG and
+its degree bound. The numerical image estimates and final PC derivability are
+proved internally. The supplied parameterizations/coverage, raw input width,
+retained span rank, and ordinary-PC separation remain explicit hypotheses.
+If separation holds, the intersection term is zero, giving a lower bound on
+the total Boolean dimension budget of any such affine cover.
+
+The 30 new endpoints compiled and passed their axiom audits; the ordinary-PC
+package now audits 68 endpoints. This formal result does not yet replace each
+`t_a` by the intrinsic dimension of an arbitrary clause zero-flat. Optimal
+parameterization existence, the expander separator, and the final exponential
+chain still require formal proofs. The phase-20 asymptotic statement below
+therefore retains its paper-proof evidence level. No priority or all-algorithm
+lower-bound claim is added.
 
 ## Phase 21 audit: actual PC replay and a conditional dimension transfer
 

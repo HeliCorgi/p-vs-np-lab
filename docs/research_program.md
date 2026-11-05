@@ -35,6 +35,37 @@ rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
 
+## Phase 22: Boolean restriction dimension (2026-11-06 JST)
+
+Starting main was `42e2dde0d32bd19a4fdce4b701d3b1f5525906a1`.
+All 511 file blobs matched the local tree, recent history and open PRs (none)
+were checked, and both main workflows had succeeded. The preceding proof
+modules, explicit scope boundaries, and next acceptance test were read before
+choosing this cycle's target.
+
+The [new restriction proof](boolean_restriction_dimension.md) constructs
+linear maps into actual Boolean function spaces, proves their kernel meaning,
+and proves their image dimensions are at most the explicit truncated binomial
+sum. A clause-level adapter connects raw initial polynomials and compressed
+derived polynomials to the existing semantic DAG replay. The composed theorem
+therefore proves its numerical image budgets internally. Supplied affine
+parameterizations and coverage remain explicit data; optimal intrinsic
+dimension is not assumed.
+
+The four new modules compiled on their first hosted attempt. Thirty new theorem
+endpoints extend the ordinary-PC axiom audit from 38 to 68; only standard
+logical axioms were observed. The [new audit record](../results/boolean_restriction_formal_audit.json)
+preserves exact sources and CI evidence. A focused independent internal
+statement audit found no coverage-direction or hidden-conclusion defect and
+confirmed that all tagged input clauses have the stated raw width bound.
+No new upstream source files or finite benchmark reports were added.
+
+The next target is a bijective affine parameterization of each nonempty clause
+zero-set with exactly `n - spanRank C` parameters, followed by the expander
+separator and quantitative proof. The full exponential bound remains a paper
+proof with incomplete formalization and no external specialist review. No
+P versus NP resolution or general polynomial-time SAT algorithm was obtained.
+
 ## Phase 21: ordinary-PC formalization cycle (2026-11-05 UTC)
 
 Starting main was `08ab7b79d1537b444a42bbec4d374e24090aae70`.

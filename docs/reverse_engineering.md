@@ -1,5 +1,25 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 22: close the numerical restriction budget, then construct optimal coordinates
+
+The [concrete restriction theorem](boolean_restriction_dimension.md) closes
+three previous interfaces: actual Boolean restriction maps and their kernels,
+the proved truncated-binomial image dimension, and the source affine-clause
+DAG adapter. The connected inequality now derives its numerical image bounds
+instead of receiving them as hypotheses. All four new modules built on the
+first attempt; all 68 ordinary-PC theorem axiom audits passed.
+
+**Next acceptance test.** For any affine clause with nonempty zero-set, prove
+`spanRank C ≤ card V` and construct a bijective affine parameterization of its
+zero-set using exactly `card V - spanRank C` parameters. Prove the coordinate
+polynomials have degree at most one. Empty zero-sets must be treated separately,
+since a zero-parameter cube still has one point. This single theorem should
+instantiate the new cover criterion and justify the `n-R-1` parameter bound
+for high-rank clauses. Do not identify a supplied parameter count with intrinsic
+dimension before this connection is proved. The published graph reduction,
+the ordinary-PC separator, and the quantitative exponential application remain
+subsequent obligations. Larger finite benchmarks cannot replace these proofs.
+
 ## Phase 21: actual ordinary-PC replay, then the geometric image budget
 
 The [new formal package](ordinary_pc_formalization.md) implements the first

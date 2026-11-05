@@ -1,0 +1,407 @@
+{
+  "phase": 22,
+  "status": "successful hosted Lean build and actual transitive theorem axiom audit",
+  "verified_on_jst": "2026-11-06",
+  "repository": "HeliCorgi/p-vs-np-lab",
+  "verified_source_commit": "ab108e6b1077cdae6b4879768c573c682326d3ee",
+  "workflow_run_id": 42111933039,
+  "workflow_job_id": 127541427797,
+  "workflow_url": "https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42111933039",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "mathlib_commit": "67248ba34806c60bf24b5e99f0f09946ffc465c9",
+  "foundation_commit": "25239211058ef718402a908b3272f01480c159c4",
+  "audited_theorems": 68,
+  "new_theorem_audits": 30,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "theorem_axioms": {
+    "MathResearch.PolynomialCalculus.Derives.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.Derives.mul_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.nsSpace_le_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eq_zero_of_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.polynomial_boolean_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget_of_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.finiteDimensional_of_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.boolean_zero_pc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.replay_low_nodes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_replay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_mem_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.exists_basis_subclause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_derivable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_falsityPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_separated_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.falsityPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.literalForm_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.booleanEval_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.mem_lowSupports": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.card_lowSupports": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.supportMonomial_mem_lowDegreeFunctions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.eval_mem_lowDegreeFunctions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.finrank_lowDegreeFunctions_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.ordinarySubstitution_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.ordinarySubstitution_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionLinear_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionLinear_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.mem_ker_restrictionLinear_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_range_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.finrank_restrictionOn_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_derived": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_eq_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_one_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.polynomialDag_of_clauseDag": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.retained_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.affine_clause_dag_replay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.dag_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.dag_separated_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.affine_clause_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.affine_clause_separated_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_source_sha256": {
+    ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
+    "formal_pc/ProofLab.lean": "908614b6f77d3794455be7ca9bc9362a408fe7296a42d04981a910294224839c",
+    "formal_pc/ProofLab/AffineClauseDAG.lean": "69d2e600b3c84bdfa78a1db788011ec0a4e6f79d53d3d6abf897cc23f3247407",
+    "formal_pc/ProofLab/AffineIndicators.lean": "b9c6803274ea20b7415a535cf31bf83d624b04eedb49f9e5e327ea42ca740cf1",
+    "formal_pc/ProofLab/AffineRestriction.lean": "ffd3099d32a7713c33c7d5bf4e71277c7ac63a32057bac5f5d443d6656e0fc0d",
+    "formal_pc/ProofLab/BooleanFunctionSpace.lean": "57955b8624eff5fe2c02af5758085fb6bc2475bbab3bc3f1feced4625caada89",
+    "formal_pc/ProofLab/DAGDimension.lean": "a92bb1c3434bb9b4cb6364e8a0a13b21b7aacbe02c22ba59c9eb7d9a24f65276",
+    "formal_pc/ProofLab/DimensionBudget.lean": "a322739e2fd3fa5579ca6fa040c037d0d56d517b9163cb770cf41ef799da303d",
+    "formal_pc/ProofLab/MaskedDAG.lean": "8620a874591d32f8100d08fed2937e2e7bd6a7403df46e0126b3a439ebc88277",
+    "formal_pc/ProofLab/ParametrizedDAGDimension.lean": "6b1e5545fb13dcc85e9a5653fd7d857d36256947d2f3fdcfabcde491704475fc",
+    "formal_pc/audit.py": "ad1a87cda60807ca12ebf418baad637e6e681e64af61453a2be68545201800b9",
+    "formal_pc/audit_theorems.json": "c42d097e8ae5eded68b6f9ade2b86e26faf3db17bab4a26a4ee0ccd464cf475f",
+    "formal_pc/claims/BooleanReduction.lean": "4e5d93eb2510b5ae15056910087019da701f0250b59ac78421094e7ec885438f",
+    "formal_pc/claims/PolynomialCalculus.lean": "d4497f46ac69b42c808a710af8a5b8ffb82225abcb4888d15269d09a683a9e85",
+    "formal_pc/claims/PolynomialCalculusReuse.lean": "532576bb740b1b2f356e26a2929e054a8916e09bbd9d12e1318bf5ae856f7750",
+    "formal_pc/lake-manifest.json": "12a6a2c1930a552f180ff1620fcfb0d3d7cebedf100b1a1d1fe398acfd2fd696",
+    "formal_pc/lakefile.lean": "4153a6177f5c36d70b8ac77a01609923360dc3b088c8cfd16ef7dfec63bf19c7",
+    "formal_pc/lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+    "formal_pc/third_party/noemesis/LICENSE": "985643adb0a78c8820c1b34f0ec5826aefd27f76e3b1319192bb98975bc675e4",
+    "formal_pc/third_party/noemesis/UPSTREAM_LICENSE": "6060f4bf2f7e68cba0683f0d35a244aae2084c319cec22f0d3446340f4c493a5",
+    "formal_pc/third_party/noemesis/manifest.json": "3e3d09b7a65f064c7d1694f60e428506d662de03d8715c17cb7007500c8d46f7"
+  },
+  "scope": {
+    "actual_boolean_function_restriction_maps": true,
+    "kernel_equals_pointwise_vanishing_on_parameterization_image": true,
+    "affine_substitution_preserves_ordinary_degree": true,
+    "explicit_truncated_binomial_image_budget_proved": true,
+    "raw_affine_clause_DAG_adapter": true,
+    "connected_dimension_criterion_with_proved_image_budgets": true,
+    "parameterizations_and_cover_supplied_as_data": true,
+    "intrinsic_dimension_equals_parameter_count_proved": false,
+    "optimal_parameterization_existence_from_clause_equations_proved": false,
+    "expander_separator_formalized": false,
+    "complete_exponential_lower_bound_formalized": false,
+    "independent_kernel_replay_of_all_cached_dependencies": false,
+    "p_vs_np_resolved": false
+  },
+  "notes": [
+    "All four new modules compiled on the first hosted attempt.",
+    "This observed CI record is distinct from deterministic finite-experiment reports.",
+    "Existing compiled dependencies may be reused from standard Mathlib and GitHub caches; this is not an independent replay of all cached kernel objects.",
+    "No new upstream source files were vendored in this phase. The three pinned MIT foundation files remain unchanged.",
+    "The clause-level wrapper bounds the raw width of every tagged initial node, including discarded ones."
+  ]
+}
