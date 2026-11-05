@@ -1,5 +1,7 @@
 import ProofLab.QuadraticPolar
 import Mathlib.Data.Fintype.Card
+import Mathlib.Data.Fintype.Prod
+import Mathlib.Data.Fintype.Pi
 import Mathlib.Data.Finset.Card
 
 /-!
@@ -49,7 +51,8 @@ theorem positiveSlice_injective : Function.Injective (positiveSlice (W := W)) :=
   · funext j
     exact congrArg (fun z : Point (Option W) => z.2 (some j)) hab
 
-theorem card_point : Fintype.card (Point W) = 2 ^ (2 * Fintype.card W) := by
+theorem card_point [DecidableEq W] :
+    Fintype.card (Point W) = 2 ^ (2 * Fintype.card W) := by
   simp [Point, Fintype.card_fun, ← pow_add, two_mul]
 
 /-- A finite chart union covering the one-level must have exponentially many
@@ -73,7 +76,7 @@ theorem cover_parameter_budget {ι : Type} [Fintype ι]
       Finset.mem_image.mpr ⟨y, Finset.mem_univ y, hy⟩⟩
   have hslice : slice.card = 2 ^ (2 * Fintype.card W) := by
     rw [Finset.card_image_of_injective _ positiveSlice_injective, Finset.card_univ]
-    exact card_point
+    exact card_point (W := W)
   calc
     2 ^ (2 * Fintype.card W) = slice.card := hslice.symm
     _ ≤ (Finset.univ.biUnion images).card := Finset.card_le_card hsubset

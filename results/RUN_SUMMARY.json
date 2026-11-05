@@ -810,7 +810,7 @@
     "formal_pc/ProofLab/MaskedDAG.lean": "8620a874591d32f8100d08fed2937e2e7bd6a7403df46e0126b3a439ebc88277",
     "formal_pc/ProofLab/OptimalAffineParameters.lean": "f935bef64fcb19666baee94da3634e3c4a0853fe444ea1dcb64409268c0b5d48",
     "formal_pc/ProofLab/ParametrizedDAGDimension.lean": "6b1e5545fb13dcc85e9a5653fd7d857d36256947d2f3fdcfabcde491704475fc",
-    "formal_pc/ProofLab/QuadraticAffineCover.lean": "64218fc6383ba1535a255935a35f9f125c017e397ee3e2d5e769b41ed5ad2008",
+    "formal_pc/ProofLab/QuadraticAffineCover.lean": "02c3f7f1156ffe823ee5f905c57a1a5b52ce31e80096be514061da6a6b799ea2",
     "formal_pc/ProofLab/QuadraticPolar.lean": "85ef1f989ba02baf47d113f9de9b25ec1feb6f1c13c3e53f84ad21a1e68c6caa",
     "formal_pc/audit.py": "ad1a87cda60807ca12ebf418baad637e6e681e64af61453a2be68545201800b9",
     "formal_pc/audit_theorems.json": "e24901fc0cd5097c22b7e74c8d846621cf213a8104b6465650f91b53a9924b60",
