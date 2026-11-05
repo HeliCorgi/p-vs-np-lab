@@ -18,7 +18,7 @@ here. Such results must discharge the image bounds and separation hypotheses.
 
 The kernel embedding and product-of-images argument follows standard
 rank-nullity. Its application to ordinary PC also occurs in
-`kbr-/math-research`, `claims/GenericAffineSubspaceConsequence.lean`, commit
+the upstream math-research repository, `claims/GenericAffineSubspaceConsequence.lean`, commit
 `25239211058ef718402a908b3272f01480c159c4` (MIT).
 -/
 
@@ -112,7 +112,9 @@ theorem separated_family_budget (U W : Submodule K V) [FiniteDimensional K U]
     · intro u hu
       simpa using hsep u hu.1 hu.2
     · exact bot_le
-  simpa [hinter] using family_kernel_budget_of_bounds U W L hker budget hbudget
+  have hdim := family_kernel_budget_of_bounds U W L hker budget hbudget
+  rw [hinter, finrank_bot, zero_add] at hdim
+  exact hdim
 
 end LinearAlgebra
 
@@ -163,5 +165,7 @@ theorem pc_separated_family_budget
   exact separated_family_budget U (pcSpace F B) L hker budget hbudget hsep
 
 end OrdinaryPC
+
+end
 
 end BoundaryLab.DimensionBudget

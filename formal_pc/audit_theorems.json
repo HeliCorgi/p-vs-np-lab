@@ -26,5 +26,8 @@
   "BoundaryLab.AffineIndicators.compressedPolynomial_derivable",
   "BoundaryLab.AffineIndicators.affinePolynomial_eval",
   "BoundaryLab.AffineIndicators.affinePolynomial_degree",
-  "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial"
+  "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial",
+  "BoundaryLab.AffineIndicators.cnfClause_falsityPolynomial",
+  "BoundaryLab.DAGDimension.dag_dimension_budget",
+  "BoundaryLab.DAGDimension.dag_separated_dimension_budget"
 ]

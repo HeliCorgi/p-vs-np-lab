@@ -61,7 +61,9 @@ theorem boolean_zero_pc {F : Set (Poly (ZMod 2) V)}
   exact hp.mono hbool le_rfl
 
 private theorem zero_or_one (z : ZMod 2) : z = 0 ∨ z = 1 := by
-  fin_cases z <;> simp
+  fin_cases z
+  · exact Or.inl rfl
+  · exact Or.inr rfl
 
 private theorem one_sub_degree (p : Poly (ZMod 2) V) :
     (1 - p).totalDegree ≤ p.totalDegree := by

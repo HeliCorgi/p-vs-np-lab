@@ -2,3 +2,4 @@ import claims.BooleanReduction
 import ProofLab.DimensionBudget
 import ProofLab.MaskedDAG
 import ProofLab.AffineIndicators
+import ProofLab.DAGDimension

@@ -28,7 +28,9 @@ abbrev BinaryField := ZMod 2
 abbrev Poly (V : Type*) := MvPolynomial V BinaryField
 abbrev Clause (V : Type*) := Finset (Poly V)
 
-variable {V : Type*}
+-- The pinned Boolean-reduction theorem is stated for universe-zero variables.
+-- This includes every finite variable type used by the research construction.
+variable {V : Type}
 
 /-- A finite disjunction of affine forms over the original variables. -/
 def IsAffineClause (C : Clause V) : Prop :=
@@ -51,7 +53,7 @@ def spanRank (C : Clause V) : ℕ :=
   Module.finrank BinaryField (Submodule.span BinaryField (C : Set (Poly V)))
 
 theorem binary_eq_zero_or_one (a : BinaryField) : a = 0 ∨ a = 1 := by
-  fin_cases a <;> simp
+  fin_cases a <;> decide
 
 theorem eval_falsityPolynomial_eq_zero (C : Clause V) (x : V → BinaryField) :
     eval x (falsityPolynomial C) = 0 ↔ clauseHolds C x := by
@@ -223,6 +225,7 @@ theorem compressedPolynomial_derivable [Fintype V]
     (C : Clause V) (hC : IsAffineClause C)
     (hinit : falsityPolynomial C ∈ F) :
     MathResearch.PolynomialCalculus.Derives F C.card (compressedPolynomial C) := by
+  classical
   have hraw := falsityPolynomial_degree C hC
   have hcompressed := (compressedPolynomial_degree C hC).trans (spanRank_le_card C)
   have hdiff : (compressedPolynomial C - falsityPolynomial C).totalDegree ≤ C.card :=
@@ -277,6 +280,27 @@ theorem literalForm_degree (l : V × Bool) : (literalForm l).totalDegree ≤ 1 :
   · exact (totalDegree_sub 1 (X v)).trans (by simp)
   · simp [literalForm]
 
+theorem literalForm_injective : Function.Injective (literalForm (V := V)) := by
+  rintro ⟨v, b⟩ ⟨w, c⟩ h
+  have hzero := congrArg (eval (fun _ : V => (0 : BinaryField))) h
+  cases b <;> cases c
+  · have hv : (X v : Poly V) = X w := sub_left_inj.mp h
+    exact Prod.ext (X_injective hv) rfl
+  · simp [literalForm] at hzero
+  · simp [literalForm] at hzero
+  · exact Prod.ext (X_injective h) rfl
+
+/-- The finite affine clause corresponding to an ordinary CNF clause. -/
+def cnfClause (L : Finset (V × Bool)) : Clause V := by
+  classical
+  exact L.image literalForm
+
+theorem cnfClause_affine (L : Finset (V × Bool)) : IsAffineClause (cnfClause L) := by
+  classical
+  intro p hp
+  obtain ⟨l, _, rfl⟩ := Finset.mem_image.mp hp
+  exact literalForm_degree l
+
 /-- Exact source-clause encoding, before any Boolean reduction. -/
 theorem ordinary_cnf_initial_polynomial (L : Finset (V × Bool)) :
     (∏ l ∈ L, (1 - literalForm l)) =
@@ -286,6 +310,19 @@ theorem ordinary_cnf_initial_polynomial (L : Finset (V × Bool)) :
   intro l _
   rcases l with ⟨v, b⟩
   cases b <;> simp [literalForm]
+
+/-- The generic affine-clause product is exactly the standard ordinary CNF
+axiom.  This is an equality of unreduced polynomials, even for a clause
+containing both polarities of a variable. -/
+theorem cnfClause_falsityPolynomial (L : Finset (V × Bool)) :
+    falsityPolynomial (cnfClause L) =
+      ∏ l ∈ L, (if l.2 then 1 - X l.1 else X l.1 : Poly V) := by
+  classical
+  unfold falsityPolynomial cnfClause
+  rw [Finset.prod_image]
+  · exact ordinary_cnf_initial_polynomial L
+  · intro a _ b _ h
+    exact literalForm_injective h
 
 end CNF
 end
