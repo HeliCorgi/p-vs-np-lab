@@ -1,0 +1,32 @@
+name: Ordinary PC formalization
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ordinary-pc:
+    name: Ordinary PC Lean build and axiom audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify the pinned foundation sources
+        run: python3 formal_pc/audit.py --verify-snapshot-only
+      - name: Build the actual polynomial-calculus library
+        uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
+        with:
+          lake-package-directory: formal_pc
+          auto-config: 'false'
+          build: 'true'
+          build-args: 'ProofLab'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'true'
+          use-github-cache: 'true'
+      - name: Audit the actual transitive theorem axioms
+        run: python3 formal_pc/audit.py

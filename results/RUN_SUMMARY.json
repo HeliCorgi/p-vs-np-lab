@@ -677,6 +677,7 @@
   "source_sha256": {
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
+    ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
     ".github/workflows/upstream-math.yml": "1fd3cf1bb4ac050258679526c25efa1ffe18066cb7ef75c312b95a59b8326605",
     "Formal.lean": "46fec3d76a2c3812c7f9d5304c4ac2cd964eae1921b68f9a8e1dc673ee375389",
     "Formal/AffineCover.lean": "f9fef128aea9667348ccf25a96351642572990b0f0ac27451d8c4f70978b8f25",

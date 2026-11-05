@@ -1,0 +1,31 @@
+{
+  "author": "Kamil Braun",
+  "commit": "25239211058ef718402a908b3272f01480c159c4",
+  "files": [
+    {
+      "bytes": 5091,
+      "git_blob_sha1": "432f7be7295e3b78183a60148574b16b22e0311e",
+      "path": "formal_pc/claims/PolynomialCalculus.lean",
+      "sha256": "d4497f46ac69b42c808a710af8a5b8ffb82225abcb4888d15269d09a683a9e85",
+      "source_path": "formalization/claims/PolynomialCalculus.lean"
+    },
+    {
+      "bytes": 3778,
+      "git_blob_sha1": "41aaa239578395688fec35c9622fe7dc3d6d287f",
+      "path": "formal_pc/claims/PolynomialCalculusReuse.lean",
+      "sha256": "532576bb740b1b2f356e26a2929e054a8916e09bbd9d12e1318bf5ae856f7750",
+      "source_path": "formalization/claims/PolynomialCalculusReuse.lean"
+    },
+    {
+      "bytes": 9382,
+      "git_blob_sha1": "8770c6535d726173d149631c4b7bb53ccfc7aede",
+      "path": "formal_pc/claims/BooleanReduction.lean",
+      "sha256": "4e5d93eb2510b5ae15056910087019da701f0250b59ac78421094e7ec885438f",
+      "source_path": "formalization/claims/BooleanReduction.lean"
+    }
+  ],
+  "license": "MIT",
+  "modifications": "None: the three Lean files are byte-identical to the pinned source. Package configuration and ProofLab modules are separate lab additions.",
+  "repository": "https://github.com/kbr-/math-research",
+  "work": "Noemesis: A Framework for Autonomous Mathematical Research"
+}
