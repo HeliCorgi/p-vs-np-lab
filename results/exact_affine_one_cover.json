@@ -1,0 +1,97 @@
+{
+  "method": "RREF exhaustive all affine cosets; independent source-count and partition checks",
+  "scope": "finite tests only, m<=3; theorem for all m proven in accompanying note",
+  "results": [
+    {
+      "ambient_bits": 2,
+      "cosets_by_dim": {
+        "0": 4,
+        "1": 6,
+        "2": 1
+      },
+      "exact_minimum_cover_from_proved_size_bound": 1,
+      "explicit_partition_charts": 1,
+      "largest_positive_flat_dim": 0,
+      "m": 1,
+      "max_positive_flat_example": [
+        3
+      ],
+      "positive_cosets_by_dim": {
+        "0": 1
+      },
+      "positive_points": 1,
+      "subspaces_by_dim": {
+        "0": 1,
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "ambient_bits": 4,
+      "cosets_by_dim": {
+        "0": 16,
+        "1": 120,
+        "2": 140,
+        "3": 30,
+        "4": 1
+      },
+      "exact_minimum_cover_from_proved_size_bound": 3,
+      "explicit_partition_charts": 3,
+      "largest_positive_flat_dim": 1,
+      "m": 2,
+      "max_positive_flat_example": [
+        10,
+        11
+      ],
+      "positive_cosets_by_dim": {
+        "0": 6,
+        "1": 15
+      },
+      "positive_points": 6,
+      "subspaces_by_dim": {
+        "0": 1,
+        "1": 15,
+        "2": 35,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "ambient_bits": 6,
+      "cosets_by_dim": {
+        "0": 64,
+        "1": 2016,
+        "2": 10416,
+        "3": 11160,
+        "4": 2604,
+        "5": 126,
+        "6": 1
+      },
+      "exact_minimum_cover_from_proved_size_bound": 7,
+      "explicit_partition_charts": 7,
+      "largest_positive_flat_dim": 2,
+      "m": 3,
+      "max_positive_flat_example": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "positive_cosets_by_dim": {
+        "0": 28,
+        "1": 378,
+        "2": 315
+      },
+      "positive_points": 28,
+      "subspaces_by_dim": {
+        "0": 1,
+        "1": 63,
+        "2": 651,
+        "3": 1395,
+        "4": 651,
+        "5": 63,
+        "6": 1
+      }
+    }
+  ]
+}

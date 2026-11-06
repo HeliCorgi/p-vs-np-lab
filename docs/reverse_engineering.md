@@ -1,5 +1,27 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 25: exact inner-product affine one-cover (2026-11-06 JST)
+
+Preselected falsifiable target: the positive level of \(Q_m(x,y)=x\cdot y\) has
+an exact minimum original-variable affine one-cover of \(2^m-1\) flats.
+A positive affine flat with dimension \(\ge m\) would refute the sharp
+dimension lemma; an incorrect positive-level count or failure of the
+explicit partition would refute the rest. The complete mathematical proof
+is in [exact_affine_one_cover.md](exact_affine_one_cover.md): project the
+affine flat to its first \(m\) bits, restrict its vertical kernel, and observe
+that the first-block affine image lies in a linear annihilator **without
+containing zero**. Rank-nullity then yields \(\dim A\le m-1\). Counting all
+positive assignments and fixing each nonzero first-block vector produces
+matching lower and upper bounds.
+
+Cutoff: full enumeration of all affine cosets only for \(m=1,2,3\).
+Independent RREF/Gaussian-binomial tests and explicit partition checks passed.
+This is a paper proof and finite experiment, **not** an extra Lean endpoint.
+No larger brute-force search is justified. An auxiliary-variable Tseitin
+encoding of the same linear-size circuit is the next *different-model*
+adversarial test. The universality obstacle and the unfinished expander
+formalization remain; no P vs NP claim follows.
+
 ## Phase 23: optimal coordinates are proved; construct the actual PC separator next
 
 The [exact affine-chart theorem](optimal_affine_parameters.md) completes the
