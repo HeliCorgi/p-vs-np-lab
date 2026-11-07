@@ -623,7 +623,7 @@
     },
     "overlap_lattice": {
       "axes_max_dimension": 64,
-      "axes_max_dimension_count": 18446744073709552000,
+      "axes_max_dimension_count": 18446744073709551551,
       "axes_max_dimension_intersections": 2142,
       "axes_max_dimension_terms": 66,
       "bounded_order_pairs": 4,
@@ -682,6 +682,8 @@
     "oracle_unsat": 34
   },
   "source_sha256": {
+    "experiments/tseitin_affine_lift.py": "f1626b627a0226e8d9cc7bfc0394ea3800b27c390c19dca7e84f042150182e0a",
+    "tests/test_tseitin_affine_lift.py": "cbe2327a49b520cc55826e628d08568ebe202c9f6cd946dbc5ac277ea577afbf",
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
     ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
@@ -1020,9 +1022,7 @@
     "third_party/openai_math/lean/lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
     "third_party/openai_math/manifest.json": "111b7b3ef8782153918b8740abe7623f7050c1343c78493287996028d3dc30f8",
     "third_party/openai_math/paper/README.upstream.md": "a40b8829123b44bd9cfb589e5afa856b0018dc8cb36de36fa79e4315a03fe506",
-    "third_party/openai_math/paper/measurement-separation-excerpt.tex": "896d4c2f8e8f64695e7d38c8df0be2e897d61a718cb13a1b33a0a9ae2094446c",
-    "experiments/tseitin_affine_lift.py": "f1626b627a0226e8d9cc7bfc0394ea3800b27c390c19dca7e84f042150182e0a",
-    "tests/test_tseitin_affine_lift.py": "cbe2327a49b520cc55826e628d08568ebe202c9f6cd946dbc5ac277ea577afbf"
+    "third_party/openai_math/paper/measurement-separation-excerpt.tex": "896d4c2f8e8f64695e7d38c8df0be2e897d61a718cb13a1b33a0a9ae2094446c"
   },
   "star_cases": 4,
   "star_widths": {
