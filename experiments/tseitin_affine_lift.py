@@ -123,6 +123,5 @@ def main():
                       'theorem':'exact cover 2^m-1 follows from mathematical projection and affine fibers',
                       'results':[verify(m) for m in (1,2,3)]},indent=2,sort_keys=True))
 
-
 if __name__ == '__main__':
     main()
