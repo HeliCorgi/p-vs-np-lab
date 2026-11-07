@@ -682,6 +682,8 @@
     "oracle_unsat": 34
   },
   "source_sha256": {
+    "experiments/tseitin_affine_lift.py": "f1626b627a0226e8d9cc7bfc0394ea3800b27c390c19dca7e84f042150182e0a",
+    "tests/test_tseitin_affine_lift.py": "cbe2327a49b520cc55826e628d08568ebe202c9f6cd946dbc5ac277ea577afbf",
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
     ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
@@ -1059,7 +1061,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 392,
+  "unit_tests_passed": 398,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
