@@ -1,7 +1,7 @@
 """Independent finite oracles for Tseitin gate graph and affine lifting."""
 import unittest
 
-from tseitin_affine_lift import build_cnf, eval_clause, extension, positive, verify
+from experiments.tseitin_affine_lift import build_cnf, eval_clause, extension, positive, verify
 
 
 class TseitinAffineLiftTests(unittest.TestCase):

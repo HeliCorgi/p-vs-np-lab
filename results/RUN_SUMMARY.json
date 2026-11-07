@@ -1022,7 +1022,7 @@
     "third_party/openai_math/paper/README.upstream.md": "a40b8829123b44bd9cfb589e5afa856b0018dc8cb36de36fa79e4315a03fe506",
     "third_party/openai_math/paper/measurement-separation-excerpt.tex": "896d4c2f8e8f64695e7d38c8df0be2e897d61a718cb13a1b33a0a9ae2094446c",
     "experiments/tseitin_affine_lift.py": "f1626b627a0226e8d9cc7bfc0394ea3800b27c390c19dca7e84f042150182e0a",
-    "tests/test_tseitin_affine_lift.py": "ddfaad57430df7298fe84c95bc55d0762cfe35ad54660e721ec325dd3480d3cd"
+    "tests/test_tseitin_affine_lift.py": "cbe2327a49b520cc55826e628d08568ebe202c9f6cd946dbc5ac277ea577afbf"
   },
   "star_cases": 4,
   "star_widths": {
