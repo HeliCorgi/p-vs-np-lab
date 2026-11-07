@@ -1,5 +1,25 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 26: adversarial Tseitin lift of the inner-product cover (2026-11-07 JST)
+
+Preselected test: can auxiliary gate bits evade the sharp affine one-cover
+bound from phase 25? No, for a precise representation model. Projection
+of an affine flat is affine, so every exact existential extension of the
+positive inner-product relation inherits the lower bound 2^m-1.
+The explicit functional Tseitin encoding with 4m-1 variables and 7m-3
+clauses achieves equality: fixing nonzero x makes every AND/XOR gate affine
+in the free y bits. However, the four-point positive affine plane with
+x_0=y_0=1, x_1=x_2=u, y_1=y_2=v does not lift affinely because its
+AND outputs include u*v. For m=3, 315 positive original 2-flats shrink
+to 135 affine 2-flats after this lift.
+
+See [tseitin_affine_lift.md](tseitin_affine_lift.md) for the proof, exact
+CNF rules, explicit counterexample, finite m=1..3 tests, and delimitations.
+This does not establish hardness for any SAT algorithm; the explicit
+formula family has an immediate satisfying assignment. The next test
+must concern an actual auxiliary-aware algorithm or proof system and
+uniform bit-cost, not this affine-cover representation measure alone.
+
 ## Phase 25: exact inner-product affine one-cover (2026-11-06 JST)
 
 Preselected falsifiable target: the positive level of \(Q_m(x,y)=x\cdot y\) has
