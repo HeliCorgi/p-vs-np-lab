@@ -683,7 +683,9 @@
   },
   "source_sha256": {
     "experiments/tseitin_affine_lift.py": "f1626b627a0226e8d9cc7bfc0394ea3800b27c390c19dca7e84f042150182e0a",
+    "experiments/tseitin_obdd_boundary.py": "5eeaef5d3b0c33bd9afcf8246940ffef84a0c6b94bc5f78fd9ca91f52accb2e2",
     "tests/test_tseitin_affine_lift.py": "cbe2327a49b520cc55826e628d08568ebe202c9f6cd946dbc5ac277ea577afbf",
+    "tests/test_tseitin_obdd_boundary.py": "9f6e731364e18b9471ce76f53ccff57448dc19d40e1a3f96c7429f5d8c13daa7",
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
     ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
@@ -835,7 +837,7 @@
     "scripts/check_cmr_graphic.py": "a054330e0884db3cc73ae28e5523c0526ce5fa57d3f9eaec62c6ae0833790c06",
     "scripts/check_pruning_parity.py": "5e571c5cf3959e2a7946e2f69ea09a706a130e16185811c183dbbaf212e103e8",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "1bb7e8902c972fb8bbcaf0c302fd9f219b9d10a4a5d60efbc5205561d327fe79",
+    "scripts/reproduce.py": "ba43b2ef58ea55e05d399cadab0b2aa8d5c1186859115fc1822b3b834dda6be9",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
     "scripts/solve_feedback.py": "adb143e2a7716659b0454e1887c1fa897256ec159e7565b5e5af78225136ca6a",
@@ -1061,7 +1063,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 398,
+  "unit_tests_passed": 405,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
