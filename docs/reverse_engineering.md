@@ -1,5 +1,31 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 27: witness OBDDs separate affine covers from shared states (2026-11-08 JST)
+
+Preselected question and cutoff: test the exact phase-26 AND/XOR Tseitin
+3-CNF against the claim that its \(2^m-1\) affine one-cover lower bound
+forces an equally large ordered decision DAG, preserving *all* witness
+gate variables. Test exhaustive Boolean spaces only for \(m=1,2,3\),
+and register the falsifiers before implementation.
+
+The answer is negative, even for a **deterministic ordered read-once**
+DAG accepting exactly the full CNF satisfying relation: variable order
+\(x_0,y_0,p_0,x_1,y_1,p_1,t_1,\ldots\) admits at most four live states
+per level and exactly \(12m-7\) decision nodes, plus two terminals.
+An x-first order on the same relation, however, must have at least
+\(2^m-1\) live residual states after the first block. The sharp
+ordering contrast is a mathematical construction and residual-function
+argument, not a generic lower bound on all OBDDs.
+
+See [tseitin_obdd_boundary.md](tseitin_obdd_boundary.md) for the
+induction, x-prefix separation proof, literature, and fixed independent
+CNF oracle. The seven new tests check \(8+128+2048=2184\) full assignments,
+gate-bit corruptions, shared-DAG accepted counts, and suffix signatures.
+This is not a new Lean formalization and not a P vs NP resolution.
+The next gate must specify a proof system and an actual sound charging
+rule for shared intermediate states before pursuing an algorithmic lower
+bound; the present counterexample should be its first adversarial test.
+
 ## Phase 26: adversarial Tseitin lift of the inner-product cover (2026-11-07 JST)
 
 Preselected test: can auxiliary gate bits evade the sharp affine one-cover
