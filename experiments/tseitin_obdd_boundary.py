@@ -10,7 +10,10 @@ from __future__ import annotations
 from functools import lru_cache
 import json
 
-from experiments.tseitin_affine_lift import build_cnf, eval_clause
+if __package__:
+    from experiments.tseitin_affine_lift import build_cnf, eval_clause
+else:
+    from tseitin_affine_lift import build_cnf, eval_clause
 
 REJECT = "reject"
 ACCEPT = "accept"
