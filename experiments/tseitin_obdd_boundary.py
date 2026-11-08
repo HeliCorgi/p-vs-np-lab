@@ -8,7 +8,9 @@ No external SAT or BDD packages are used.
 from __future__ import annotations
 
 from functools import lru_cache
+import argparse
 import json
+from pathlib import Path
 
 if __package__:
     from experiments.tseitin_affine_lift import build_cnf, eval_clause
@@ -170,11 +172,19 @@ def verify(m: int) -> dict:
 
 
 def main() -> None:
-    print(json.dumps({"scope":"preregistered exhaustive m=1..3 only",
-                      "mathematical_claim":"interleaved OBDD has 12m-7 nonterminal nodes and live width <=4; x-first cut has >=2^m-1 live residuals",
-                      "experiment_is_formal_proof":False,
-                      "new_lean_theorems":0,
-                      "results":[verify(m) for m in (1,2,3)]},sort_keys=True,indent=2))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out-dir", type=Path, default=None)
+    args = parser.parse_args()
+    report = json.dumps({"scope":"preregistered exhaustive m=1..3 only",
+                         "mathematical_claim":"interleaved OBDD has 12m-7 nonterminal nodes and live width <=4; x-first cut has >=2^m-1 live residuals",
+                         "experiment_is_formal_proof":False,
+                         "new_lean_theorems":0,
+                         "results":[verify(m) for m in (1,2,3)]}, sort_keys=True, indent=2) + "\n"
+    if args.out_dir is None:
+        print(report, end="")
+    else:
+        args.out_dir.mkdir(parents=True, exist_ok=True)
+        (args.out_dir / "tseitin_obdd_boundary.json").write_text(report, encoding="utf-8")
 
 
 if __name__ == "__main__":

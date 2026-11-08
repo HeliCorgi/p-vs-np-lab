@@ -134,6 +134,13 @@ Lean formalization are distinct evidence levels. **No new Lean theorem
 is claimed**. The existing Lean audit only verifies the previously
 formalized modules; it does not check Theorems 1–2 here.
 
+
+**Harness correction (documented failure mode).** The first standalone
+experiment entry point printed the JSON but did not accept the existing
+reproduction driver's required `--out-dir` argument. The final entry
+point accepts that argument and writes an exact deterministic JSON file;
+no mathematical assertion or finite search budget was changed.
+
 ### What is ruled out, and next falsifier
 
 **Ruled out:** the proposed inference from the minimum exact affine
