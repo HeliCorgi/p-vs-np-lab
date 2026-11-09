@@ -55,6 +55,7 @@ NEW_REPORTS = (
     "eth_polynomial_repair.json",
     "physical_sat.json",
     "physical_restart_bridge.json",
+    "retained_learning.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -269,6 +270,9 @@ def main() -> None:
     physical_restart = read_json(out / "physical_restart_bridge.json")
     if not physical_restart["all_checks_passed"]:
         raise RuntimeError("Physical SAT restart bridge audit failed")
+    retained_learning = read_json(out / "retained_learning.json")
+    if not retained_learning["all_checks_passed"]:
+        raise RuntimeError("Retained conflict-learning audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
@@ -334,6 +338,16 @@ def main() -> None:
             "stopped_branch": physical_restart["stopped_branch"],
             "complexity_bridge": physical_restart["complexity_bridge"],
             "scope": physical_restart["scope"],
+            "polynomial_general_sat_algorithm": False,
+        },
+        "retained_learning_audit": {
+            "cases": len(retained_learning["cases"]),
+            "physical_panel_rescued": retained_learning["physical_panel_rescued"],
+            "status_counts": retained_learning["status_counts"],
+            "completed_pair_comparison": retained_learning["completed_pair_comparison"],
+            "decision": retained_learning["decision"],
+            "physical_all_size_scope": retained_learning["physical_all_size_scope"],
+            "evidence_scope": retained_learning["evidence_scope"],
             "polynomial_general_sat_algorithm": False,
         },
         "historical_package_files_hash_verified": snapshot_count,

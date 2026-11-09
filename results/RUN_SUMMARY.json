@@ -1264,6 +1264,33 @@
     "thermal_cases": 31
   },
   "polynomial_all_input_pruning_bound_proved": false,
+  "retained_learning_audit": {
+    "cases": 26,
+    "completed_pair_comparison": {
+      "equal_work": 2,
+      "higher_work_with_retention": 11,
+      "lower_work_with_retention": 3,
+      "pairs": 16,
+      "scope": "Descriptive only; all censored pairs remain in cases and status_counts."
+    },
+    "decision": "Physical panel repaired in both modes; retention is not its necessary cause. Stop the ordinary-resolution mechanism as a general polynomial SAT route.",
+    "evidence_scope": "Independent witness/refutation checks and replay of every proof-prefix node, including UNKNOWN; no asymptotic growth inferred from this panel.",
+    "physical_all_size_scope": "The uncapped algorithm solves b connected equality blocks using b decisions and at most b conflicts, in either mode and under signed renamings; proof in src/pnp_lab/retained_learning.py. Fixed experiment caps remain finite.",
+    "physical_panel_rescued": true,
+    "polynomial_general_sat_algorithm": false,
+    "status_counts": {
+      "False": {
+        "SAT": 6,
+        "UNKNOWN": 10,
+        "UNSAT": 10
+      },
+      "True": {
+        "SAT": 6,
+        "UNKNOWN": 10,
+        "UNSAT": 10
+      }
+    }
+  },
   "sat_scaling_audit": {
     "algebraic_controls": 128,
     "censored_dpll": 22,
@@ -1848,6 +1875,7 @@
     "experiments/prime_spectrum.py": "48d02353633dc34e995c2bd1dd69d1021e64c091f0e3abd3837f9cdd2c1a8f34",
     "experiments/projection_barrier.py": "87675fae4325e3dba560c9189bfc7a341780b8292bbbe6902bf52a26e9c97020",
     "experiments/pruning_codec.py": "0d387b72b84783c9999a57f087db74244303fcf1f608bc074ded59b291f35616",
+    "experiments/retained_learning.py": "8368750566faf8a87d59b509e28052488633eef459b325a3ae90f9004325e05c",
     "experiments/rigid_ceiling.py": "de623519954696f4173beb4231724f4cdbf9dd91ea95ac3d99e0632464be567f",
     "experiments/sat_scaling.py": "6b3c7bf29f862e99185e7a86ddde306179b6fa6b60b262cd07fcc35fc33348df",
     "experiments/selector_overlap.py": "10c8125f0d630fa764258011da2535924ece61c53f2ff0fc0c3e4790054e1a48",
@@ -1939,7 +1967,7 @@
     "scripts/plot_physical_sat.py": "5a2ff1af3176af682f6ae3cbdc3f94a008d42b85fcf4e7090b0546a3d2cc6c57",
     "scripts/plot_sat_scaling.py": "9f6337439db53ebe2cbf5e92a9cc022e9ca249561d5edec21132e482d38ce2df",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "f4c476a77987c963c8c087f002819ff469f519ca8a209c14f4f15f462a202c14",
+    "scripts/reproduce.py": "afb2ad741dd8d2a17bcbe2f9747b7e5f5238283f027021c6dc360deb6f5c696b",
     "scripts/run_cdcl_audit.py": "e373c38abfb6ff0a59fa6b8570d3179b711229fe1147396c7dfa82aa8f870896",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
@@ -2019,6 +2047,7 @@
     "src/pnp_lab/relations.py": "3f9b3e4097ea3617691626409f964d520c823669bb4c3eace21f2be53be6b2b4",
     "src/pnp_lab/residual_controls.py": "f8fe5436597b8315709e77e68860af83d32c038316992d38d241f61a302ee062",
     "src/pnp_lab/resolution_closure.py": "aa8014a6abe55e955b73ca3fcdf4ec8918c2c4e4fd937f951e73085162cb8a7b",
+    "src/pnp_lab/retained_learning.py": "ea278bef91efe2b8b4bb5f3c4925c2cec0774e216d29051956975aeaa117b2cd",
     "src/pnp_lab/sat_scaling.py": "a07c584f3e5864620ee6e0bc68f48eeede8186b777fa849dd425770fb099aa6c",
     "src/pnp_lab/selector_events.py": "876dee5add8185bc4d896aa3e76f502d25bc9eb8cc7d0da99a16ad7db8c57b01",
     "src/pnp_lab/shared_dag_sat.py": "618266e96191bf7d10d5839847d28f13fcf1b067a6494f665cd9f268c495d51e",
@@ -2112,6 +2141,7 @@
     "tests/test_relations.py": "eface02cc894278df02b3ed5c3f4d5620762a7e6e5c0a582cd8686fe4fd0717e",
     "tests/test_residual_controls.py": "3dd4d85749c30d44cac19dae1ab5e2d8b67bcd9202517701f89c2b15ddb53ba0",
     "tests/test_resolution_closure.py": "3dcba57cbf4249e8b6f011b7f46373c66cccdd7a138b0ced431b3f063f6fd0e3",
+    "tests/test_retained_learning.py": "9610237a13a6c913560ab2228fe7216857cce5ee5a3314a88784ed3cdfb7cad5",
     "tests/test_sat_scaling.py": "85282c7e783c1cbe87ae8e8826a77b5f9279720b91e0b1a655cab3de7388c4de",
     "tests/test_shared_dag_sat.py": "da2f2ca799132c626c23395eb89119a53984f3920a5c9e3936ba2d0bfa8cb33d",
     "tests/test_signatures.py": "9cd45fe73af3750f5b6f389beeb97277b81488a00e2e0a4e19b74f2cda7a0266",
@@ -2189,7 +2219,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 494,
+  "unit_tests_passed": 504,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
