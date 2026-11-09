@@ -21,6 +21,88 @@ The reduction is standard and supplies no fast zero test; the quadratic
 elimination control does not extend unchanged. Treat that zero test as the
 unsolved algorithmic obligation, not as an available interface lemma.
 
+The 2026-11-10 physical continuation also stops uniform global restarts of
+zero-temperature one-bit dynamics as a general polynomial SAT candidate.
+Even on an easy connected CNF with bounded occurrence, a frozen-block argument
+bounds success after K attempts by `min(1,K(15/16)^b)`. See the
+[all-size argument and finite checks](../experiments/physical_restart_bridge.py)
+and [current research decision](research_program.md). Positive-temperature,
+collective, preprocessing and other mechanisms are outside this counterexample.
+
+## Phase 28: width-three resolution miter versus affine one-covers (2026-11-09 JST)
+
+Preselected falsifier: does the exact 2^m-1 affine one-cover of the positive
+inner-product witness relation force a large ordinary-resolution refutation
+of a double-copy Tseitin circuit with shared original inputs and opposed
+outputs? No. For each m>=1 we derive an explicit 3-CNF with 6m-2 variables
+and 14m-6 input clauses, and an ordinary binary-resolution refutation with
+exactly 18m-12 derived lines and maximum width three (32m-18 lines including
+input clauses). AND-output equivalence uses four resolutions per gate; each
+XOR-output equivalence uses eight input-copy rewrites and six final resolutions.
+The last two lines resolve opposite output *values* after deriving equality,
+not two contradictory input units.
+
+The [preregistered Phase 28 document](tseitin_resolution_miter.md) contains
+the full derivation, falsifiers, and scope boundaries. Independent set-based
+resolution checking, deliberately corrupted line controls, exact certificate
+digests for m=1,2,3,7,16, and 16+1024 exhaustive miter assignments for
+m=1,2 establish the finite audit. The aligned-output sibling is satisfiable,
+preventing a vacuous encoding error. No larger affine-flat or Boolean search
+was performed. This counterexample rules out an unqualified charging rule
+from a *satisfiable half* to a related contradictory miter; it is not an
+all-SAT theorem and adds no Lean endpoint.
+
+The next meaningful gate is a precise restricted proof-system simulation on
+an actually difficult unsatisfiable family, including a sound transformation
+and explicit resource accounting. Test it on this easy equality miter and on
+definitional extensions before attempting a general lower bound.
+
+## Phase 27: witness OBDDs separate affine covers from shared states (2026-11-08 JST)
+
+Preselected question and cutoff: test the exact phase-26 AND/XOR Tseitin
+3-CNF against the claim that its \(2^m-1\) affine one-cover lower bound
+forces an equally large ordered decision DAG, preserving *all* witness
+gate variables. Test exhaustive Boolean spaces only for \(m=1,2,3\),
+and register the falsifiers before implementation.
+
+The answer is negative, even for a **deterministic ordered read-once**
+DAG accepting exactly the full CNF satisfying relation: variable order
+\(x_0,y_0,p_0,x_1,y_1,p_1,t_1,\ldots\) admits at most four live states
+per level and exactly \(12m-7\) decision nodes, plus two terminals.
+An x-first order on the same relation, however, must have at least
+\(2^m-1\) live residual states after the first block. The sharp
+ordering contrast is a mathematical construction and residual-function
+argument, not a generic lower bound on all OBDDs.
+
+See [tseitin_obdd_boundary.md](tseitin_obdd_boundary.md) for the
+induction, x-prefix separation proof, literature, and fixed independent
+CNF oracle. The seven new tests check \(8+128+2048=2184\) full assignments,
+gate-bit corruptions, shared-DAG accepted counts, and suffix signatures.
+This is not a new Lean formalization and not a P vs NP resolution.
+The next gate must specify a proof system and an actual sound charging
+rule for shared intermediate states before pursuing an algorithmic lower
+bound; the present counterexample should be its first adversarial test.
+
+## Phase 26: adversarial Tseitin lift of the inner-product cover (2026-11-07 JST)
+
+Preselected test: can auxiliary gate bits evade the sharp affine one-cover
+bound from phase 25? No, for a precise representation model. Projection
+of an affine flat is affine, so every exact existential extension of the
+positive inner-product relation inherits the lower bound 2^m-1.
+The explicit functional Tseitin encoding with 4m-1 variables and 7m-3
+clauses achieves equality: fixing nonzero x makes every AND/XOR gate affine
+in the free y bits. However, the four-point positive affine plane with
+x_0=y_0=1, x_1=x_2=u, y_1=y_2=v does not lift affinely because its
+AND outputs include u*v. For m=3, 315 positive original 2-flats shrink
+to 135 affine 2-flats after this lift.
+
+See [tseitin_affine_lift.md](tseitin_affine_lift.md) for the proof, exact
+CNF rules, explicit counterexample, finite m=1..3 tests, and delimitations.
+This does not establish hardness for any SAT algorithm; the explicit
+formula family has an immediate satisfying assignment. The next test
+must concern an actual auxiliary-aware algorithm or proof system and
+uniform bit-cost, not this affine-cover representation measure alone.
+
 ## Phase 25: exact inner-product affine one-cover (2026-11-06 JST)
 
 Preselected falsifiable target: the positive level of \(Q_m(x,y)=x\cdot y\) has
