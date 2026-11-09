@@ -1,0 +1,48 @@
+{
+  "all_checks_passed": true,
+  "commuting_tuples": 176,
+  "dimension": 2,
+  "efficient_formula_dependent_constructor_found": false,
+  "explicit_failure": {
+    "missed_singleton_assignment": 1,
+    "represented_assignments": [
+      0
+    ],
+    "variable_matrices": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "formula_independent_polynomial_dimension_refuted": true,
+  "full_representation_control": {
+    "dimension": 8,
+    "truth_functions_checked": 256
+  },
+  "idempotent_matrices": 8,
+  "invalid_representation_controls": {
+    "noncommuting": true,
+    "nonidempotent": true
+  },
+  "original_circuit_checks": 11264,
+  "p_vs_np_resolved": false,
+  "polynomial_support_extractions_checked": 177,
+  "represented_assignment_histogram": {
+    "1": 8,
+    "2": 168
+  },
+  "satisfiable_functions_missed": 11600,
+  "satisfying_witnesses_checked": 33280,
+  "truth_function_checks": 45056,
+  "variables": 3,
+  "zero_matrix_means": "UNKNOWN unless completeness is proved separately"
+}

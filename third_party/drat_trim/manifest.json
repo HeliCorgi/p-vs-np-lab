@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/marijnheule/drat-trim",
+  "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "drat-trim.c",
+      "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+      "bytes": 59546,
+      "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/drat-trim.c"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "71ab2a9dc5a294ad8fba4ccb8c45aaa8a439596d314a2a046ac9b62266872a18",
+      "bytes": 1184,
+      "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/LICENSE"
+    }
+  ]
+}

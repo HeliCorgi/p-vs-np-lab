@@ -1,0 +1,1518 @@
+{
+  "all_algorithm_lower_bound_proved": false,
+  "all_checks_passed": true,
+  "assignments_enumerated": 599168,
+  "cases": [
+    {
+      "cases": [
+        {
+          "binomial_moments": [
+            64,
+            128,
+            96,
+            32,
+            8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "7a49fd52c76887f1de598291b1fbe5a29f49a54e1ec0b23e8fd4192eaddec8b4",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": null,
+            "rank": 3,
+            "row_xors": 3,
+            "status": "SAT",
+            "witness": 0
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            32
+          ],
+          "model_count": 8,
+          "power_moments": [
+            64,
+            128,
+            320,
+            896,
+            2816
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              16,
+              48,
+              32,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "moments": [
+              64,
+              128,
+              96,
+              32,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "subsets_examined": 65536
+          },
+          "subset_order_actually_evaluated": 16,
+          "total_charge_parity": 0,
+          "violation_histogram": [
+            8,
+            0,
+            48,
+            0,
+            8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "binomial_moments": [
+            64,
+            128,
+            96,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "91254bad54b48577d1d07467f158fc5df3fa76240fdd742d48c83b1162472198",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": 15,
+            "rank": 3,
+            "row_xors": 3,
+            "status": "UNSAT",
+            "witness": null
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            32
+          ],
+          "model_count": 0,
+          "power_moments": [
+            64,
+            128,
+            320,
+            896,
+            2624
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              16,
+              48,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "moments": [
+              64,
+              128,
+              96,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "subsets_examined": 65536
+          },
+          "subset_order_actually_evaluated": 16,
+          "total_charge_parity": 1,
+          "violation_histogram": [
+            0,
+            32,
+            0,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "clauses": 16,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "first_distinguishing_order": 4,
+      "graph": "K4",
+      "matching_nonconstant_moment_orders": 3,
+      "maximum_variable_occurrence": 8,
+      "subset_visits_through_distinguishing_order": 2517,
+      "variables": 6,
+      "vertices": 4
+    },
+    {
+      "cases": [
+        {
+          "binomial_moments": [
+            512,
+            1536,
+            1920,
+            1280,
+            480,
+            96,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "6d005db09863dc99da6f9c9be7fa0ef84bec3fee9951d3f32d723188743b42b4",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": null,
+            "rank": 5,
+            "row_xors": 5,
+            "status": "SAT",
+            "witness": 0
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            96
+          ],
+          "model_count": 16,
+          "power_moments": [
+            512,
+            1536,
+            5376,
+            20736,
+            86016,
+            377856,
+            1744896
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              24,
+              168,
+              400
+            ],
+            "moments": [
+              512,
+              1536,
+              1920,
+              1280
+            ],
+            "subsets_examined": 2325
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 0,
+          "violation_histogram": [
+            16,
+            0,
+            240,
+            0,
+            240,
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "binomial_moments": [
+            512,
+            1536,
+            1920,
+            1280,
+            480,
+            96,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "8c9e9490958e207e22aa5bac94aee522c5aa7837719d64b49061307b4ce9a05b",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": 63,
+            "rank": 5,
+            "row_xors": 5,
+            "status": "UNSAT",
+            "witness": null
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            96
+          ],
+          "model_count": 0,
+          "power_moments": [
+            512,
+            1536,
+            5376,
+            20736,
+            86016,
+            377856,
+            1733376
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              24,
+              168,
+              400
+            ],
+            "moments": [
+              512,
+              1536,
+              1920,
+              1280
+            ],
+            "subsets_examined": 2325
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 1,
+          "violation_histogram": [
+            0,
+            96,
+            0,
+            320,
+            0,
+            96,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "clauses": 24,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "first_distinguishing_order": 6,
+      "graph": "prism_3",
+      "matching_nonconstant_moment_orders": 5,
+      "maximum_variable_occurrence": 8,
+      "subset_visits_through_distinguishing_order": 190051,
+      "variables": 9,
+      "vertices": 6
+    },
+    {
+      "cases": [
+        {
+          "binomial_moments": [
+            4096,
+            16384,
+            28672,
+            28672,
+            17920,
+            7168,
+            1792,
+            256,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "0b61f2e681cbb2df96d50dcb7da557e321fdf1f5ebc7edd414f9bf75ee248407",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": null,
+            "rank": 7,
+            "row_xors": 7,
+            "status": "SAT",
+            "witness": 0
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            256
+          ],
+          "model_count": 32,
+          "power_moments": [
+            4096,
+            16384,
+            73728,
+            360448,
+            1880064,
+            10338304,
+            59424768,
+            354746368,
+            2188836864
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              32,
+              352,
+              1664
+            ],
+            "moments": [
+              4096,
+              16384,
+              28672,
+              28672
+            ],
+            "subsets_examined": 5489
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 0,
+          "violation_histogram": [
+            32,
+            0,
+            896,
+            0,
+            2240,
+            0,
+            896,
+            0,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "binomial_moments": [
+            4096,
+            16384,
+            28672,
+            28672,
+            17920,
+            7168,
+            1792,
+            256,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "c7644d4f34265dcefd0ac74b1618533ed78738a7736e45ffb488389a811e8d32",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": 255,
+            "rank": 7,
+            "row_xors": 7,
+            "status": "UNSAT",
+            "witness": null
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            256
+          ],
+          "model_count": 0,
+          "power_moments": [
+            4096,
+            16384,
+            73728,
+            360448,
+            1880064,
+            10338304,
+            59424768,
+            354746368,
+            2187546624
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              32,
+              352,
+              1664
+            ],
+            "moments": [
+              4096,
+              16384,
+              28672,
+              28672
+            ],
+            "subsets_examined": 5489
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 1,
+          "violation_histogram": [
+            0,
+            256,
+            0,
+            1792,
+            0,
+            1792,
+            0,
+            256,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "clauses": 32,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "first_distinguishing_order": 8,
+      "graph": "prism_4",
+      "matching_nonconstant_moment_orders": 7,
+      "maximum_variable_occurrence": 8,
+      "subset_visits_through_distinguishing_order": 15033173,
+      "variables": 12,
+      "vertices": 8
+    },
+    {
+      "cases": [
+        {
+          "binomial_moments": [
+            32768,
+            163840,
+            368640,
+            491520,
+            430080,
+            258048,
+            107520,
+            30720,
+            5760,
+            640,
+            64,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "a16cb353c95b01d1c9a09cf2f35037025601f655dba3b5e0aff39dfa3dcdce5b",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": null,
+            "rank": 9,
+            "row_xors": 9,
+            "status": "SAT",
+            "witness": 0
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            640
+          ],
+          "model_count": 64,
+          "power_moments": [
+            32768,
+            163840,
+            901120,
+            5324800,
+            33341440,
+            219136000,
+            1501265920,
+            10662707200,
+            78173962240,
+            589515980800,
+            4559137669120
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              40,
+              600,
+              4320
+            ],
+            "moments": [
+              32768,
+              163840,
+              368640,
+              491520
+            ],
+            "subsets_examined": 10701
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 0,
+          "violation_histogram": [
+            64,
+            0,
+            2880,
+            0,
+            13440,
+            0,
+            13440,
+            0,
+            2880,
+            0,
+            64,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "binomial_moments": [
+            32768,
+            163840,
+            368640,
+            491520,
+            430080,
+            258048,
+            107520,
+            30720,
+            5760,
+            640,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "46a9c41401ddba89b2c876c86db6739afd463782a2494f40ca8b5a951dfa0539",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": 1023,
+            "rank": 9,
+            "row_xors": 9,
+            "status": "UNSAT",
+            "witness": null
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            640
+          ],
+          "model_count": 0,
+          "power_moments": [
+            32768,
+            163840,
+            901120,
+            5324800,
+            33341440,
+            219136000,
+            1501265920,
+            10662707200,
+            78173962240,
+            589515980800,
+            4558905425920
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              40,
+              600,
+              4320
+            ],
+            "moments": [
+              32768,
+              163840,
+              368640,
+              491520
+            ],
+            "subsets_examined": 10701
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 1,
+          "violation_histogram": [
+            0,
+            640,
+            0,
+            7680,
+            0,
+            16128,
+            0,
+            7680,
+            0,
+            640,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "clauses": 40,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "first_distinguishing_order": 10,
+      "graph": "prism_5",
+      "matching_nonconstant_moment_orders": 9,
+      "maximum_variable_occurrence": 8,
+      "subset_visits_through_distinguishing_order": 1221246132,
+      "variables": 15,
+      "vertices": 10
+    },
+    {
+      "cases": [
+        {
+          "binomial_moments": [
+            262144,
+            1572864,
+            4325376,
+            7208960,
+            8110080,
+            6488064,
+            3784704,
+            1622016,
+            506880,
+            112640,
+            16896,
+            1536,
+            128,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "7795e52dc861d468f3dbcca1fe1cf48609cba0e716922de440f9384095bb8194",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": null,
+            "rank": 11,
+            "row_xors": 11,
+            "status": "SAT",
+            "witness": 0
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            1536
+          ],
+          "model_count": 128,
+          "power_moments": [
+            262144,
+            1572864,
+            10223616,
+            70778880,
+            516292608,
+            3937665024,
+            31217811456,
+            256089784320,
+            2165648130048,
+            18821010161664,
+            167655606583296,
+            1527337829007360,
+            14201842342821888
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              48,
+              912,
+              8896
+            ],
+            "moments": [
+              262144,
+              1572864,
+              4325376,
+              7208960
+            ],
+            "subsets_examined": 18473
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 0,
+          "violation_histogram": [
+            128,
+            0,
+            8448,
+            0,
+            63360,
+            0,
+            118272,
+            0,
+            63360,
+            0,
+            8448,
+            0,
+            128,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "binomial_moments": [
+            262144,
+            1572864,
+            4325376,
+            7208960,
+            8110080,
+            6488064,
+            3784704,
+            1622016,
+            506880,
+            112640,
+            16896,
+            1536,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses_sha256": "4632203ee97e1c3cab7d3e3ba80a7d44c549ebc0dbc419b72cf0325a6bfd2f9a",
+          "gaussian_certificate_checked": true,
+          "gaussian_control": {
+            "contradiction": 4095,
+            "rank": 11,
+            "row_xors": 11,
+            "status": "UNSAT",
+            "witness": null
+          },
+          "low_order_zero_mass_bounds": [
+            0,
+            1536
+          ],
+          "model_count": 0,
+          "power_moments": [
+            262144,
+            1572864,
+            10223616,
+            70778880,
+            516292608,
+            3937665024,
+            31217811456,
+            256089784320,
+            2165648130048,
+            18821010161664,
+            167655606583296,
+            1527337829007360,
+            14201781030617088
+          ],
+          "subset_evaluation": {
+            "consistent_subsets_by_order": [
+              1,
+              48,
+              912,
+              8896
+            ],
+            "moments": [
+              262144,
+              1572864,
+              4325376,
+              7208960
+            ],
+            "subsets_examined": 18473
+          },
+          "subset_order_actually_evaluated": 3,
+          "total_charge_parity": 1,
+          "violation_histogram": [
+            0,
+            1536,
+            0,
+            28160,
+            0,
+            101376,
+            0,
+            101376,
+            0,
+            28160,
+            0,
+            1536,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "clauses": 48,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "first_distinguishing_order": 12,
+      "graph": "prism_6",
+      "matching_nonconstant_moment_orders": 11,
+      "maximum_variable_occurrence": 8,
+      "subset_visits_through_distinguishing_order": 100946732307,
+      "variables": 18,
+      "vertices": 12
+    }
+  ],
+  "complete_moment_algorithm_polynomial_time_proved": false,
+  "decision": "Reject a universal truncated-aggregate shortcut; no fast full-moment construction obtained.",
+  "formula_count": 10,
+  "largest_matching_nonconstant_order": 11,
+  "p_vs_np_probability": null,
+  "p_vs_np_resolved": false,
+  "proposed_mechanism": "SAT from cheaply computed violation-count moments",
+  "scope": "Exact finite counterchecks of the all-size standard parity argument in this script. No new theorem of complexity theory, new Lean proof, or evidence distinguishing P from NP. The counterexample formulas themselves are solved by recovered Gaussian elimination.",
+  "subset_visits_executed": 205048
+}

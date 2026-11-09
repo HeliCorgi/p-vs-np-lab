@@ -1,0 +1,2968 @@
+{
+  "all_checks_passed": true,
+  "balance_requirements": [
+    {
+      "hypotheses": "r>=2, Q>=1, R>=1, M<=3n, 12*r^(4Q)<=M, 2*Q*r^2<=n",
+      "largest_group_size_lower_bound": 46,
+      "largest_possible_Q": 2,
+      "scope": "Bounds if retaining these sufficient balancing conditions and explicit assignment/Taylor scans; not necessary conditions for all designs.",
+      "taylor_order_lower_bound": 1024,
+      "variables": 1024
+    },
+    {
+      "hypotheses": "r>=2, Q>=1, R>=1, M<=3n, 12*r^(4Q)<=M, 2*Q*r^2<=n",
+      "largest_group_size_lower_bound": 1449,
+      "largest_possible_Q": 4,
+      "scope": "Bounds if retaining these sufficient balancing conditions and explicit assignment/Taylor scans; not necessary conditions for all designs.",
+      "taylor_order_lower_bound": 786432,
+      "variables": 1048576
+    },
+    {
+      "hypotheses": "r>=2, Q>=1, R>=1, M<=3n, 12*r^(4Q)<=M, 2*Q*r^2<=n",
+      "largest_group_size_lower_bound": 1482911,
+      "largest_possible_Q": 9,
+      "scope": "Bounds if retaining these sufficient balancing conditions and explicit assignment/Taylor scans; not necessary conditions for all designs.",
+      "taylor_order_lower_bound": 366503875925,
+      "variables": 1099511627776
+    },
+    {
+      "hypotheses": "r>=2, Q>=1, R>=1, M<=3n, 12*r^(4Q)<=M, 2*Q*r^2<=n",
+      "largest_group_size_lower_bound": 1554944255988,
+      "largest_possible_Q": 19,
+      "scope": "Bounds if retaining these sufficient balancing conditions and explicit assignment/Taylor scans; not necessary conditions for all designs.",
+      "taylor_order_lower_bound": 190883024149678290743080,
+      "variables": 1208925819614629174706176
+    }
+  ],
+  "cases": [
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 120,
+      "degree_budget": 0,
+      "dimension": 256,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 120,
+        "consecutive_window": 120,
+        "root_count": 120
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 120
+      },
+      "positions": 4,
+      "weights": [
+        81,
+        108,
+        54,
+        12,
+        1
+      ]
+    },
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 3240,
+      "degree_budget": 0,
+      "dimension": 6561,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 3240,
+        "consecutive_window": 3240,
+        "root_count": 3240
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 3240
+      },
+      "positions": 4,
+      "weights": [
+        1296,
+        2592,
+        1944,
+        648,
+        81
+      ]
+    },
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 32640,
+      "degree_budget": 0,
+      "dimension": 65536,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 32640,
+        "consecutive_window": 32640,
+        "root_count": 32640
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 32640
+      },
+      "positions": 4,
+      "weights": [
+        10000,
+        24000,
+        21600,
+        8640,
+        1296
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 67,
+      "degree_budget": 1,
+      "dimension": 256,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 67,
+        "consecutive_window": 54,
+        "root_count": 67
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          1
+        ],
+        "rank_defect": 67
+      },
+      "positions": 4,
+      "weights": [
+        81,
+        108,
+        54,
+        12,
+        1
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 2025,
+      "degree_budget": 1,
+      "dimension": 6561,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 2025,
+        "consecutive_window": 1944,
+        "root_count": 2025
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          1,
+          2
+        ],
+        "rank_defect": 2025
+      },
+      "positions": 4,
+      "weights": [
+        1296,
+        2592,
+        1944,
+        648,
+        81
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 19936,
+      "degree_budget": 1,
+      "dimension": 65536,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 19936,
+        "consecutive_window": 18640,
+        "root_count": 19936
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          1,
+          2
+        ],
+        "rank_defect": 19936
+      },
+      "positions": 4,
+      "weights": [
+        10000,
+        24000,
+        21600,
+        8640,
+        1296
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 13,
+      "degree_budget": 2,
+      "dimension": 256,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 12,
+        "consecutive_window": 12,
+        "root_count": 1
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2
+        ],
+        "rank_defect": 13
+      },
+      "positions": 4,
+      "weights": [
+        81,
+        108,
+        54,
+        12,
+        1
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 729,
+      "degree_budget": 2,
+      "dimension": 6561,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 648,
+        "consecutive_window": 648,
+        "root_count": 81
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2
+        ],
+        "rank_defect": 729
+      },
+      "positions": 4,
+      "weights": [
+        1296,
+        2592,
+        1944,
+        648,
+        81
+      ]
+    },
+    {
+      "candidate_count": 10,
+      "consecutive_or_constant_rank_defect": 9936,
+      "degree_budget": 2,
+      "dimension": 65536,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 8640,
+        "consecutive_window": 8640,
+        "root_count": 1296
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2
+        ],
+        "rank_defect": 9936
+      },
+      "positions": 4,
+      "weights": [
+        10000,
+        24000,
+        21600,
+        8640,
+        1296
+      ]
+    },
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 1,
+      "degree_budget": 3,
+      "dimension": 256,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 1,
+        "consecutive_window": 1,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "rank_defect": 1
+      },
+      "positions": 4,
+      "weights": [
+        81,
+        108,
+        54,
+        12,
+        1
+      ]
+    },
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 81,
+      "degree_budget": 3,
+      "dimension": 6561,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 81,
+        "consecutive_window": 81,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "rank_defect": 81
+      },
+      "positions": 4,
+      "weights": [
+        1296,
+        2592,
+        1944,
+        648,
+        81
+      ]
+    },
+    {
+      "candidate_count": 5,
+      "consecutive_or_constant_rank_defect": 1296,
+      "degree_budget": 3,
+      "dimension": 65536,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 1296,
+        "consecutive_window": 1296,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "rank_defect": 1296
+      },
+      "positions": 4,
+      "weights": [
+        10000,
+        24000,
+        21600,
+        8640,
+        1296
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "consecutive_or_constant_rank_defect": 0,
+      "degree_budget": 4,
+      "dimension": 256,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 0,
+        "consecutive_window": 0,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 0
+      },
+      "positions": 4,
+      "weights": [
+        81,
+        108,
+        54,
+        12,
+        1
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "consecutive_or_constant_rank_defect": 0,
+      "degree_budget": 4,
+      "dimension": 6561,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 0,
+        "consecutive_window": 0,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 0
+      },
+      "positions": 4,
+      "weights": [
+        1296,
+        2592,
+        1944,
+        648,
+        81
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "consecutive_or_constant_rank_defect": 0,
+      "degree_budget": 4,
+      "dimension": 65536,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 0,
+        "consecutive_window": 0,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 0
+      },
+      "positions": 4,
+      "weights": [
+        10000,
+        24000,
+        21600,
+        8640,
+        1296
+      ]
+    },
+    {
+      "candidate_count": 9,
+      "consecutive_or_constant_rank_defect": 32640,
+      "degree_budget": 0,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 32640,
+        "consecutive_window": 32640,
+        "root_count": 32640
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 32640
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 9,
+      "consecutive_or_constant_rank_defect": 21520080,
+      "degree_budget": 0,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 21520080,
+        "consecutive_window": 21520080,
+        "root_count": 21520080
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 21520080
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 9,
+      "consecutive_or_constant_rank_defect": 2147450880,
+      "degree_budget": 0,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 2147450880,
+        "consecutive_window": 2147450880,
+        "root_count": 2147450880
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 2147450880
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 36,
+      "consecutive_or_constant_rank_defect": 27628,
+      "degree_budget": 1,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 27628,
+        "consecutive_window": 20421,
+        "root_count": 27628
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          1,
+          2
+        ],
+        "rank_defect": 27628
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 36,
+      "consecutive_or_constant_rank_defect": 19532097,
+      "degree_budget": 1,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 19532097,
+        "consecutive_window": 14171760,
+        "root_count": 19532097
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        "nodes": [
+          2,
+          3
+        ],
+        "rank_defect": 19532097
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 36,
+      "consecutive_or_constant_rank_defect": 2077367296,
+      "degree_budget": 1,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 2077367296,
+        "consecutive_window": 1409594880,
+        "root_count": 2077367296
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        "nodes": [
+          2,
+          3
+        ],
+        "rank_defect": 2077367296
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 14020,
+      "degree_budget": 2,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 12232,
+        "consecutive_window": 12232,
+        "root_count": 7459
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3
+        ],
+        "rank_defect": 14020
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 12183777,
+      "degree_budget": 2,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 9034497,
+        "consecutive_window": 9034497,
+        "root_count": 5465313
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 12183777
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 1170167296,
+      "degree_budget": 2,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 915456000,
+        "consecutive_window": 915456000,
+        "root_count": 690167296
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 1170167296
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 7459,
+      "degree_budget": 3,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 5670,
+        "consecutive_window": 5670,
+        "root_count": 277
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "rank_defect": 7459
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 5465313,
+      "degree_budget": 3,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 4618944,
+        "consecutive_window": 4618944,
+        "root_count": 846369
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 5465313
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 690167296,
+      "degree_budget": 3,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 535456000,
+        "consecutive_window": 535456000,
+        "root_count": 124074496
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 690167296
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 1789,
+      "degree_budget": 4,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 1512,
+        "consecutive_window": 1512,
+        "root_count": 1
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 1789
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 2525985,
+      "degree_budget": 4,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 2414448,
+        "consecutive_window": 2414448,
+        "root_count": 6561
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            -2,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 2525985
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 126,
+      "consecutive_or_constant_rank_defect": 254711296,
+      "degree_budget": 4,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 230636800,
+        "consecutive_window": 230636800,
+        "root_count": 1679616
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            -2,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 254711296
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 277,
+      "degree_budget": 5,
+      "dimension": 65536,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 252,
+        "consecutive_window": 252,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -4,
+            15
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 277
+      },
+      "positions": 8,
+      "weights": [
+        6561,
+        17496,
+        20412,
+        13608,
+        5670,
+        1512,
+        252,
+        24,
+        1
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 846369,
+      "degree_budget": 5,
+      "dimension": 43046721,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 734832,
+        "consecutive_window": 734832,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -4,
+            15
+          ]
+        ],
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 846369
+      },
+      "positions": 8,
+      "weights": [
+        1679616,
+        6718464,
+        11757312,
+        11757312,
+        7348320,
+        2939328,
+        734832,
+        104976,
+        6561
+      ]
+    },
+    {
+      "candidate_count": 84,
+      "consecutive_or_constant_rank_defect": 124074496,
+      "degree_budget": 5,
+      "dimension": 4294967296,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 122394880,
+        "consecutive_window": 122394880,
+        "root_count": 0
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            -2,
+            3
+          ],
+          [
+            4,
+            15
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rank_defect": 124074496
+      },
+      "positions": 8,
+      "weights": [
+        100000000,
+        480000000,
+        1008000000,
+        1209600000,
+        907200000,
+        435456000,
+        130636800,
+        22394880,
+        1679616
+      ]
+    },
+    {
+      "candidate_count": 13,
+      "consecutive_or_constant_rank_defect": 8386560,
+      "degree_budget": 0,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 8386560,
+        "consecutive_window": 8386560,
+        "root_count": 8386560
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 8386560
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 13,
+      "consecutive_or_constant_rank_defect": 141214502520,
+      "degree_budget": 0,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 141214502520,
+        "consecutive_window": 141214502520,
+        "root_count": 141214502520
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 141214502520
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 13,
+      "consecutive_or_constant_rank_defect": 140737479966720,
+      "degree_budget": 0,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 140737479966720,
+        "consecutive_window": 140737479966720,
+        "root_count": 140737479966720
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ]
+        ],
+        "nodes": [
+          0
+        ],
+        "rank_defect": 140737479966720
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    },
+    {
+      "candidate_count": 78,
+      "consecutive_or_constant_rank_defect": 8386560,
+      "degree_budget": 1,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 8386560,
+        "consecutive_window": 5541238,
+        "root_count": 8386560
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          2
+        ],
+        "rank_defect": 8386560
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 78,
+      "consecutive_or_constant_rank_defect": 141214502520,
+      "degree_budget": 1,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 141214502520,
+        "consecutive_window": 94014038664,
+        "root_count": 141214502520
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          2
+        ],
+        "rank_defect": 141214502520
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 78,
+      "consecutive_or_constant_rank_defect": 140737479966720,
+      "degree_budget": 1,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 140737479966720,
+        "consecutive_window": 93703554846720,
+        "root_count": 140737479966720
+      },
+      "optimum": {
+        "matched_levels": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "nodes": [
+          0,
+          2
+        ],
+        "rank_defect": 140737479966720
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    },
+    {
+      "candidate_count": 286,
+      "consecutive_or_constant_rank_defect": 5302027,
+      "degree_budget": 2,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 3819232,
+        "consecutive_window": 3819232,
+        "root_count": 3176263
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 5302027
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 286,
+      "consecutive_or_constant_rank_defect": 101348455905,
+      "degree_budget": 2,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 67484503944,
+        "consecutive_window": 67484503944,
+        "root_count": 65431547361
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          5
+        ],
+        "rank_defect": 101348455905
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 286,
+      "consecutive_or_constant_rank_defect": 108217056710656,
+      "degree_budget": 2,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": true,
+      "lower_bounds": {
+        "combined": 67269220761600,
+        "consecutive_window": 67269220761600,
+        "root_count": 65106912710656
+      },
+      "optimum": {
+        "matched_levels": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            3
+          ]
+        ],
+        "nodes": [
+          3,
+          4,
+          6
+        ],
+        "rank_defect": 104521901510656
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    },
+    {
+      "candidate_count": 715,
+      "consecutive_or_constant_rank_defect": 3176263,
+      "degree_budget": 3,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 2264139,
+        "consecutive_window": 2264139,
+        "root_count": 770563
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rank_defect": 3176263
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 715,
+      "consecutive_or_constant_rank_defect": 65431547361,
+      "degree_budget": 3,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 44500743576,
+        "consecutive_window": 44500743576,
+        "root_count": 20535411681
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 65431547361
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 715,
+      "consecutive_or_constant_rank_defect": 65106912710656,
+      "degree_budget": 3,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 45933107982336,
+        "consecutive_window": 45933107982336,
+        "root_count": 19175981510656
+      },
+      "optimum": {
+        "matched_levels": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "nodes": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "rank_defect": 65106912710656
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    },
+    {
+      "candidate_count": 1287,
+      "consecutive_or_constant_rank_defect": 1444159,
+      "degree_budget": 4,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 1205038,
+        "consecutive_window": 1205038,
+        "root_count": 46666
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            -2,
+            3
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rank_defect": 1444159
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 1287,
+      "consecutive_or_constant_rank_defect": 34004252385,
+      "degree_budget": 4,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 26529534720,
+        "consecutive_window": 26529534720,
+        "root_count": 3265704945
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rank_defect": 34004252385
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 1287,
+      "consecutive_or_constant_rank_defect": 41346912710656,
+      "degree_budget": 4,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 29370931200000,
+        "consecutive_window": 29370931200000,
+        "root_count": 3661882310656
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rank_defect": 41346912710656
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    },
+    {
+      "candidate_count": 1716,
+      "consecutive_or_constant_rank_defect": 770563,
+      "degree_budget": 5,
+      "dimension": 16777216,
+      "groups": 2,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 673596,
+        "consecutive_window": 673596,
+        "root_count": 631
+      },
+      "optimum": {
+        "matched_levels": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "newton_coefficients": [
+          [
+            -1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            -2,
+            3
+          ],
+          [
+            4,
+            15
+          ]
+        ],
+        "nodes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rank_defect": 770563
+      },
+      "positions": 12,
+      "weights": [
+        531441,
+        2125764,
+        3897234,
+        4330260,
+        3247695,
+        1732104,
+        673596,
+        192456,
+        40095,
+        5940,
+        594,
+        36,
+        1
+      ]
+    },
+    {
+      "candidate_count": 1716,
+      "consecutive_or_constant_rank_defect": 20535411681,
+      "degree_budget": 5,
+      "dimension": 282429536481,
+      "groups": 3,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 15645623040,
+        "consecutive_window": 15645623040,
+        "root_count": 153586449
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -4,
+            15
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "rank_defect": 20535411681
+      },
+      "positions": 12,
+      "weights": [
+        2176782336,
+        13060694016,
+        35916908544,
+        59861514240,
+        67344203520,
+        53875362816,
+        31427294976,
+        13468840704,
+        4209012720,
+        935336160,
+        140300424,
+        12754584,
+        531441
+      ]
+    },
+    {
+      "candidate_count": 1716,
+      "consecutive_or_constant_rank_defect": 19175981510656,
+      "degree_budget": 5,
+      "dimension": 281474976710656,
+      "groups": 4,
+      "improves_consecutive_or_constant": false,
+      "lower_bounds": {
+        "combined": 15514099200000,
+        "consecutive_window": 15514099200000,
+        "root_count": 444789190656
+      },
+      "optimum": {
+        "matched_levels": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "newton_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -4,
+            15
+          ]
+        ],
+        "nodes": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "rank_defect": 19175981510656
+      },
+      "positions": 12,
+      "weights": [
+        1000000000000,
+        7200000000000,
+        23760000000000,
+        47520000000000,
+        64152000000000,
+        61585920000000,
+        43110144000000,
+        22170931200000,
+        8314099200000,
+        2217093120000,
+        399076761600,
+        43535646720,
+        2176782336
+      ]
+    }
+  ],
+  "core_obligation": "Construct and use actual occurrence-dependent measurements and recover the count with polynomial total bit cost; rank totals alone do not supply this.",
+  "explicit_retuning": [
+    {
+      "all_size_guaranteed_log2_lower_bound": 8,
+      "optimistic_optimum": {
+        "floor_log2_work_lower_bound": 18,
+        "order": 5,
+        "points": 9
+      },
+      "scope": "Optimistic lower bound for explicit coordinates and Taylor calls; not measured SAT time.",
+      "variables": 16
+    },
+    {
+      "all_size_guaranteed_log2_lower_bound": 18,
+      "optimistic_optimum": {
+        "floor_log2_work_lower_bound": 43,
+        "order": 9,
+        "points": 20
+      },
+      "scope": "Optimistic lower bound for explicit coordinates and Taylor calls; not measured SAT time.",
+      "variables": 64
+    },
+    {
+      "all_size_guaranteed_log2_lower_bound": 38,
+      "optimistic_optimum": {
+        "floor_log2_work_lower_bound": 98,
+        "order": 15,
+        "points": 49
+      },
+      "scope": "Optimistic lower bound for explicit coordinates and Taylor calls; not measured SAT time.",
+      "variables": 256
+    },
+    {
+      "all_size_guaranteed_log2_lower_bound": 77,
+      "optimistic_optimum": {
+        "floor_log2_work_lower_bound": 212,
+        "order": 28,
+        "points": 106
+      },
+      "scope": "Optimistic lower bound for explicit coordinates and Taylor calls; not measured SAT time.",
+      "variables": 1024
+    },
+    {
+      "all_size_guaranteed_log2_lower_bound": 155,
+      "optimistic_optimum": {
+        "floor_log2_work_lower_bound": 457,
+        "order": 53,
+        "points": 228
+      },
+      "scope": "Optimistic lower bound for explicit coordinates and Taylor calls; not measured SAT time.",
+      "variables": 4096
+    }
+  ],
+  "finite_improvement_scope": "The one improved auxiliary case retains over 37% defective directions; it is not a full small-tail SAT design or an end-to-end runtime improvement.",
+  "general_polynomial_sat_algorithm_obtained": false,
+  "implicit_spectral_cases": [
+    {
+      "degree_budget": 3,
+      "dimension_bit_length": 513,
+      "groups": 2,
+      "minimum_defect_fraction_lower_bound": "115792089237316195423570985008687907853269984665640564039457584007913129639935/231584178474632390847141970017375815706539969331281128078915168015826259279872",
+      "positions": 256,
+      "spectral_levels": 257
+    },
+    {
+      "degree_budget": 15,
+      "dimension_bit_length": 513,
+      "groups": 2,
+      "minimum_defect_fraction_lower_bound": "45595875511778266918971288806960346834561829751241841299797501602924240793615891906132657255541654739915538562059118559192291312255494511841986253542635/837987995621412318723376562387865382967460363787024586107722590232610251879596686050117143635431464230626991136655378178359617675746660621652103062880256",
+      "positions": 256,
+      "spectral_levels": 257
+    },
+    {
+      "degree_budget": 31,
+      "dimension_bit_length": 1025,
+      "groups": 4,
+      "minimum_defect_fraction_lower_bound": "1040872858649273228675133589059300966737680785761902038733588025173355205897610336637857420870385902611567736886082718849221556175469902279748687837056983219957054824966324544586906961367665572927909776587755845805859283447265625/97032380768794308446811218028906409703555376069793538196190752376628184542898555395679900551790404871905483168570692075385723752757175899465267954690073821200278436001303119096891580351974902801578937449607279296930802928363503616",
+      "positions": 256,
+      "spectral_levels": 257
+    },
+    {
+      "degree_budget": 63,
+      "dimension_bit_length": 8193,
+      "groups": 16,
+      "minimum_defect_fraction_lower_bound": "592311241072442919451662429071538111232321993000695054779894252792337669082535037630573095845115136174290005890530096501080177650928893459508152152612039228182026505358250479395064123926932792967734563227092291323095479328488631729678624754430246369607847532813801567752651247529642180025220185803822726188385227985477312788541404419376919303968024695478278358132917929309183875267508506232662168370207288725817154814985982687324395645183990538687042389142736264864726675265514248269906615729440947760070343083690857105461785777415072305450484616273717881781514262125935444735687415200769950861959999454990293771675358745451077316322094526599759732023230798459225753700829530512947159415092754542440539453189998692652381699859833956217207875050890781829298472752378670702271180680922264881029896589953508884785691203518221842620603253155512892681760455929512042589937789271007096121290872319637923690099312531689737194036761516879054529764538114972600336888698860242091825709178936336751141889782281201942232198801963458563954681571891894228817981954053267246142181252040101641973536931742692837309570897117367801411030743540094121152534888636904979042207449054721946124595783228351931783457952411874841106999430325665659372392172440158161555695563114667382359260336679659901953011997961611768393472184104112779072071401540369049350026181906536820069325720467285281288320730064781760815937935928484434976816535143960898653933067558438309133035846421712993630815187324536920602670028117787414697918806083531961803601006977260112762451171875/93874536112147881243641459021767074836235004905014163723031266474631858684063512288070420552486560185136743630938475541502000706568602086875478469326605894362095215047992234956888466215981773320202330688760585121227140696782441849021080181298746619838089771215204115013483837704122184767112703091167026930476595425705381984125115883483184075015739866766247194681131983414887369774937288108851401024974587522072113458204135564262713811112599205276544532174789351941753098704416864016468770681695822239819132007430698329109473534492913128692135929015176403877985638680181646785175003397628058471917804906674328225851971369807955363439813758294877971307529792476847579453388174539265820849688487391990983136242827366246131606593246112738630337773761966168530510203060125482068017264673649732036081900038093871288297689843171932861021109606269332066715702799238309316189347195008493254032742194184131767244731010545721290345941724629271574381909804054139012613815075924744081615135508604666669786049437048802854841777537493154037322037732762454379075530619603679316187410261151154296933743079849900127887859056581463217480604624197327998054424806744449908936094149760181540641368797734751094860780642944948757681964863872272223708763317191793529535146902998467853856745284218990980650017063378431600630924628519790415769172357162296939844063001390152242072534498514328270662135964220149865180621869138329018026069982353618583913104337192359844750742730729509546255676872255488589779947358686030630233956345810998884134427795363197305752322572288",
+      "positions": 1024,
+      "spectral_levels": 1025
+    }
+  ],
+  "interpolation_candidates_evaluated": 4591,
+  "optimization_cases": 51,
+  "p_vs_np_resolved": false,
+  "scope": "Exact finite optima within f(W), plus elementary all-size bounds on that ansatz and the stated explicit enumerations. No lower bound for all SAT algorithms or contradiction of the upstream subexponential theorem. Existing upstream snapshot remains unchanged.",
+  "source_sections": [
+    "preview-auxiliary Steps 2 and 4",
+    "preview-interpolation",
+    "preview-parameters"
+  ],
+  "spectral_level_evaluations": 57575,
+  "strict_improvements_over_consecutive_or_constant": 1,
+  "upstream_commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "upstream_kernel_replayed": false,
+  "upstream_source_sha256": "b2e6159d4fb7ea6aa4f89ac15605152b0333a5f7cafe93323492bc20a5c066aa",
+  "upstream_source_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex"
+}

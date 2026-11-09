@@ -1,10 +1,12 @@
 # A common-annihilator lower bound for affine-clause DAGs
 
-**Phase 20 status: a paper proof within this lab, with its proof model and
-degree budgets made explicit.** The argument below was reviewed independently
-inside this research cycle. It is not a full Lean formalization, an external
-peer review, a claim of priority, or a P versus NP proof. Any application still
-has to supply the separated polynomial space required by the theorem.
+**Phase 20 status (2026-11-08 JST): the stated F2 exponential application is
+formalized, including the CNF family, separator and counting estimates.**
+See [the exact theorem and verification record](phase20_formalization.md).
+The paper argument below was reviewed within this research cycle; external
+peer review and priority assessment remain separate. This proof-system lower
+bound does not resolve P versus NP. Other applications still have to supply
+the separated polynomial space required by the generic theorem.
 
 The question arose while auditing the separated-space criterion in
 [Braun's 2026 preprint](https://arxiv.org/abs/2609.23015v2) and its
@@ -438,7 +440,8 @@ ordinary polynomials and primitive PC rules. The
 [phase-22 restriction theorem](boolean_restriction_dimension.md) constructs
 actual Boolean restrictions, proves their numerical binomial budgets, and
 connects the source affine-clause DAG. Optimal parameterization existence,
-intrinsic codimension, and the separator/counting chain remain separate
-obligations. The full geometric and exponential statements in this note are
-not thereby claimed to be fully formalized.
+intrinsic codimension, and the separator/counting chain were then separate
+obligations. The [2026-11-08 completion](phase20_formalization.md) subsequently
+closed these obligations for the F2 family and its explicit exponential bound.
+Generalizations such as arbitrary parent arity retain their separate paper scope.
 

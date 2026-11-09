@@ -5,7 +5,24 @@ resolve P versus NP. A bound for a specified proof system is recorded with
 that system, its encoding, and every resource restriction. A finite failed
 search is not entered as an asymptotic theorem. Published results, deductions
 for this repository's models, and newly encountered unverified claims are
-kept distinct. Last updated: **2026-11-06 JST**.
+kept distinct. Last updated: **2026-11-08 JST**.
+
+## Phase 20 completion: existence and the explicit exponential theorem
+
+[`Phase20.exists_unsat_exponential_lower_bound`](../formal_pc/ProofLab/Phase20.lean)
+now proves that for every
+\(n\ge16\cdot1024\cdot12288^4\cdot10^{16}\), the required proper linear,
+occurrence-4096, \(12n\)-clause UNSAT 3-CNF exists, and every refuting
+original-variable F2 affine-clause source DAG has at least
+\(\tfrac14\exp(n/(81\cdot2^{65}\cdot10^{32}))\) nodes and distinct nonempty
+high-rank false flats. The support construction, UNSAT signing, separator,
+density and final numerical inequalities are all proved in the chain.
+The local package build and 390 theorem axiom audits passed.
+See the [proof map and precise model](phase20_formalization.md) and
+[source-bound record](../results/phase20_complete_formal_audit.json).
+External review and novelty assessment remain open. This is not a P versus NP
+result. The phase-21/22/23 entries below describe their historical checkpoints;
+their then-outstanding obligations are superseded for this F2 application.
 
 ## Phase 23: the intrinsic rank-profile dimension inequality is formalized
 
@@ -90,8 +107,9 @@ paper-proof evidence level and does not become a P versus NP claim.
 within this lab, using the published Mikša–Nordström graph-reduction operator.
 The new direct simulation is motivated by the investigation of Braun's
 separated-space criterion, but does not assume the preprint's theorem or
-formalization. Full Lean formalization, external specialist review, and a
-priority claim are not supplied. See the
+formalization. The concrete F2 exponential application is now formalized as
+recorded above; external specialist review and a priority claim are not
+supplied. See the
 [direct criterion](affine_dag_annihilator.md) and
 [separated-space construction](expander_separated_space.md).
 
