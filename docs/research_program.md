@@ -11,7 +11,39 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: test the physical restart bridge (2026-11-10 JST)
+## Current continuation: retain checked conflict information (2026-11-10 JST)
+
+Pre-execution protocol for the user's requested repair: implement a small
+deterministic search with unit propagation, resolution-based conflict analysis,
+and optional reuse of the derived clauses. Both modes use the same first-variable,
+false-first decisions and conflict-directed backtracking. The only search switch
+is whether proved conflict clauses are available to later unit propagation.
+Retain the proof log in both modes and count its size separately from the active
+learned database. This is a controlled reference experiment, not a competitive
+CDCL solver or a new clause-learning method.
+
+The panel is fixed before execution: connected physical traps with 1, 4 and 16
+blocks under two signed renamings; odd graph-XOR CNFs at 12, 24, 36 and 48
+variables with two seeds; random density-six 3-CNFs at the same sizes/seeds;
+and standard pigeonhole contradictions with 2 through 5 holes, using explicit
+3-CNF clause splitting. Only the raw CNFs reach the search. Use at most 200,000
+charged work units, 50,000 stored proof literals, 10,000 proof nodes, 10,000
+active learned literals and decision depth 128 per run. Exhaustion is UNKNOWN;
+do not increase a cap or drop a case after seeing results. Every SAT witness
+must satisfy the original CNF and every UNSAT proof must replay independently.
+Also replay all learned-clause derivations in SAT and interrupted traces.
+
+Accept the narrow repair only if the physical cases are correctly solved under
+these caps. Compare both search cost and stored information on the whole panel;
+do not select a winner by counting only completed cases. Abort on an invalid
+witness, proof or learned clause. The claimed general-polynomial bridge is
+already excluded for this ordinary-resolution proof mechanism by the known
+expander-Tseitin lower bounds cited in [robust_ceiling.md](robust_ceiling.md).
+The finite run checks what this repair actually accomplishes; it does not
+re-prove those bounds or establish the sampled graphs' asymptotic expansion.
+Existing [CDCL experiments](cdcl_audit.md) remain the practical comparison.
+
+## Previous continuation: test the physical restart bridge (2026-11-10 JST)
 
 The user requested executing the bridge investigation and saving the accumulated
 work, including the physical model, to Git. The
