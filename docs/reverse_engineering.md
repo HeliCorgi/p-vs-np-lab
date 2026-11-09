@@ -1,5 +1,33 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Phase 28: width-three resolution miter versus affine one-covers (2026-11-09 JST)
+
+Preselected falsifier: does the exact 2^m-1 affine one-cover of the positive
+inner-product witness relation force a large ordinary-resolution refutation
+of a double-copy Tseitin circuit with shared original inputs and opposed
+outputs? No. For each m>=1 we derive an explicit 3-CNF with 6m-2 variables
+and 14m-6 input clauses, and an ordinary binary-resolution refutation with
+exactly 18m-12 derived lines and maximum width three (32m-18 lines including
+input clauses). AND-output equivalence uses four resolutions per gate; each
+XOR-output equivalence uses eight input-copy rewrites and six final resolutions.
+The last two lines resolve opposite output *values* after deriving equality,
+not two contradictory input units.
+
+The [preregistered Phase 28 document](tseitin_resolution_miter.md) contains
+the full derivation, falsifiers, and scope boundaries. Independent set-based
+resolution checking, deliberately corrupted line controls, exact certificate
+digests for m=1,2,3,7,16, and 16+1024 exhaustive miter assignments for
+m=1,2 establish the finite audit. The aligned-output sibling is satisfiable,
+preventing a vacuous encoding error. No larger affine-flat or Boolean search
+was performed. This counterexample rules out an unqualified charging rule
+from a *satisfiable half* to a related contradictory miter; it is not an
+all-SAT theorem and adds no Lean endpoint.
+
+The next meaningful gate is a precise restricted proof-system simulation on
+an actually difficult unsatisfiable family, including a sound transformation
+and explicit resource accounting. Test it on this easy equality miter and on
+definitional extensions before attempting a general lower bound.
+
 ## Phase 27: witness OBDDs separate affine covers from shared states (2026-11-08 JST)
 
 Preselected question and cutoff: test the exact phase-26 AND/XOR Tseitin
