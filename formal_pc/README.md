@@ -1,6 +1,7 @@
 # Ordinary polynomial-calculus formalization
 
-This is a separate Lean package for the phase-21/22/23/24 formalization. The repository's
+This is a separate Lean package for the phase-21/22/23/24/27 formalization and
+the phase-20 completion work. The repository's
 original `Formal` package remains on Lean 4.19.0. This package pins Lean
 4.34.0-rc2 and Mathlib `67248ba34806c60bf24b5e99f0f09946ffc465c9`.
 
@@ -40,7 +41,44 @@ in `audit_theorems.json` and allows only `propext`, `Classical.choice`, and
 those dependencies. It does not claim an independent Lean-kernel replay of all
 cached Mathlib dependencies.
 
-**Latest verified status:** the full package and all **126 theorem axiom audits**
+**Latest local status (2026-11-08 JST):** the full package and all **390 theorem
+axiom audits** passed. The 70 newly audited theorems close the CNF-family
+existence and numerical specialization. For every
+`n ≥ 16 * 1024 * 12288^4 * 10^16`,
+[`Phase20.exists_unsat_exponential_lower_bound`](ProofLab/Phase20.lean)
+constructs an UNSAT proper linear 3-CNF with exactly `12n` clauses, maximum
+occurrence 4096, and the required expansion. Every refuting original-variable
+affine-clause source DAG has at least
+`(1/4) * exp(n / (81 * 2^65 * 10^32))` nodes and distinct nonempty high-rank
+false flats. Existence, separation, density, rounding and binomial estimates
+are proved inside the chain. See the [precise scope](../docs/phase20_formalization.md)
+and [source-bound audit](../results/phase20_complete_formal_audit.json).
+This completes the stated phase-20 F2 exponential theorem locally; external
+review, novelty assessment and any P versus NP conclusion are separate matters.
+
+**Previous local status:** 320 theorem axiom audits passed for connected
+obstruction counting, positive association, binomial tails and good-set density.
+The [density record](../results/phase20_density_formal_audit.json) retains its
+original source hashes and then-outstanding family/exponent obligations.
+
+**Previous local status:** 245 theorem axiom audits passed for constructed ideal
+normal forms, the expander reduction operator, and ordinary-PC separation for
+every signing. The [separator record](../results/phase20_separator_formal_audit.json)
+retains its original source hashes and then-outstanding density obligation.
+
+**Previous local status:** 181 theorem axiom audits passed for distinct-flat
+counting, pooled-support size and absorption, local satisfiability, and exact
+good-monomial dimension. The [earlier record](../results/phase20_formal_progress_audit.json)
+retains its original source hashes and then-outstanding separation obligation.
+
+**Previous local status:** the full package and all **142 theorem axiom audits**
+passed for the phase-27 working tree. The [local audit record](../results/extension_substitution_formal_audit.json)
+contains source hashes and actual axiom sets. The 16 new endpoints prove
+ordinary-PC degree transfer under polynomial substitution, Boolean extension
+corollaries, and the sharp AND-coordinate obstruction. This is local
+verification, not a new GitHub CI run. See [the exact scope](../docs/extension_substitution.md).
+
+**Previous hosted status:** the full package and all **126 theorem axiom audits**
 passed in [CI run 42125609896](https://github.com/HeliCorgi/p-vs-np-lab/actions/runs/42125609896)
 at source commit `6aa1b3feccd9476a2ef8209b16d22b1a6968e3b5`. The
 [phase-24 audit record](../results/affine_cover_formal_audit.json) preserves exact
@@ -61,6 +99,25 @@ retained as historical evidence for their exact source commits.
 
 | Module | Verified mathematical content |
 |---|---|
+| [ProofLab.DistinctAffineFlats](ProofLab/DistinctAffineFlats.lean) | Deduplication by actual zero-sets, rank invariance under equal nonempty zero-sets, distinct-flat dimension and cardinality budgets, and source line counts. Ordinary-PC separation remains a hypothesis. |
+| [ProofLab.ExpanderSupport](ProofLab/ExpanderSupport.lean) | Actual finite boundaries and pooled supports, a size bound for the whole union, and the support-absorption lemma needed by the reduction operator. |
+| [ProofLab.ExpanderLocalConsistency](ProofLab/ExpanderLocalConsistency.lean) | Private-variable peeling gives local satisfying assignments for every signing, connected to the existing raw ordinary clause polynomials. |
+| [ProofLab.ExpanderMonomials](ProofLab/ExpanderMonomials.lean) | The actual empty-support monomial space, exact dimension, degree bound, and its conditional connection to distinct DAG flats. This does not construct the separating operator. |
+| [ProofLab.IdealNormalForm](ProofLab/IdealNormalForm.lean) | Constructed ideal normal forms: existence, uniqueness, linearity, exact kernel, degree bound, and multiplication after ideal enlargement. |
+| [ProofLab.BooleanIdealNormalForm](ProofLab/BooleanIdealNormalForm.lean) | Explicit Boolean generators force multilinearity; Boolean normalization fixes squarefree polynomials; signed raw clauses define the local ideals. |
+| [ProofLab.NormalFormRestriction](ProofLab/NormalFormRestriction.lean) | Pinning a variable preserves standardness and compares normal forms across ideals. |
+| [ProofLab.ExpanderNormalForm](ProofLab/ExpanderNormalForm.lean) | Private-variable elimination proves support-enlargement consistency and the neighborhood bound for actual normal forms. |
+| [ProofLab.ExpanderReduction](ProofLab/ExpanderReduction.lean) | The actual linear operator fixes the good space, kills all degree-B PC derivations, and proves separation from expansion for every signing. Multiplication includes repeated variables. |
+| [ProofLab.ExpanderDAGLowerBound](ProofLab/ExpanderDAGLowerBound.lean) | Distinct-flat and source-line budgets for the actual signed source family, with separation proved internally. The density specialization is supplied by `ExpanderDensityDAG`. |
+| [ProofLab.FiniteBernoulli](ProofLab/FiniteBernoulli.lean) | Explicit finite product weights, normalization, exact containment probabilities, positive association for overlapping decreasing events, and uniform-layer cardinalities. |
+| [ProofLab.BernoulliBounds](ProofLab/BernoulliBounds.lean) | Exponential avoidance bounds, generating functions and moments, direct Markov estimates, two-sided binomial tails, and dense central-layer selection. |
+| [ProofLab.ConnectedSetCounting](ProofLab/ConnectedSetCounting.lean) | A constructed closed tour of length 2(t−1) for every connected t-set, and the bounded-degree connected-set count. |
+| [ProofLab.ExpanderObstructions](ProofLab/ExpanderObstructions.lean) | Empty pooled support exactly equals avoidance of connected boundaries; the actual intersection graph inherits the occurrence bound. |
+| [ProofLab.LinearClauseBoundary](ProofLab/LinearClauseBoundary.lean) | Incidence counting in linear triples yields boundary size at least three; expansion supplies the size-dependent bound. |
+| [ProofLab.BoundaryProbabilitySum](ProofLab/BoundaryProbabilitySum.lean) | The explicit sum of connected obstruction probabilities is at most 7mC⁴p³, including the finite geometric-series calculation. |
+| [ProofLab.ExpanderDensity](ProofLab/ExpanderDensity.lean) | The actual good-set density is at least ½ exp(−168nC⁴p³) times binomial(n,k) for some pn/2 ≤ k ≤ 2pn under the stated structural and numerical conditions. |
+| [ProofLab.ExpanderDensityDAG](ProofLab/ExpanderDensityDAG.lean) | The selected degree works for every signing and applicable DAG, with both separation and quantitative density proved internally. |
+| [ProofLab.ExtensionSubstitution](ProofLab/ExtensionSubstitution.lean) | Substitution of degree-B ordinary PC through degree DB, all-cube Boolean definitions, and sharp degree/replay costs for AND coordinates. No general circuit or proof-size lower bound is claimed. |
 | `ProofLab.MaskedDAG` | Actual ordinary-PC replay at degree `k+3R`, with arbitrary reuse of earlier parents and explicit Boolean corrections. |
 | `ProofLab.AffineIndicators` | Concrete affine-clause products, extracted basis subclauses, compressed semantics/degree, actual raw-input compression, and exact CNF products. |
 | `ProofLab.DimensionBudget` | Joint-kernel dimension bounds with finite-dimensional source spaces, allowing infinite-dimensional ambient spaces and restriction codomains. |
@@ -75,13 +132,20 @@ retained as historical evidence for their exact source commits.
 | `ProofLab.IntrinsicAffineRestriction` | Exact vanishing kernel, intrinsic Boolean image budget, high-rank parameter bound, and a source-DAG criterion constructing all charts and coverage internally. |
 | `ProofLab.QuadraticPolar` | Explicit nondegenerate polar pairing of the binary inner product, isotropic constant-flat directions, and the derived dimension bound for injective affine charts. |
 | `ProofLab.QuadraticAffineCover` | An explicit large subset of the positive level, finite-union counting with overlaps, and an exponential lower bound on the number of covering affine charts. |
+| [ProofLab.CNFFamilyExistence](ProofLab/CNFFamilyExistence.lean) | Actual finite random triples, simultaneous expansion/count/degree/collision estimates, deletion preserving exactly 12n clauses, bounded occurrence, and UNSAT/SAT signings. |
+| [ProofLab.ExponentialBudget](ProofLab/ExponentialBudget.lean) | Truncated binomial sums, exponential binomial ratios, integer rounding and the exact numerical exponent. |
+| [ProofLab.Phase20](ProofLab/Phase20.lean) | The complete existential F2 exponential theorem, with an explicit ambient-size threshold and no unproved family, separator or density premise. |
 
-The phase-23 composed theorem derives the numerical image bounds from the
-original clause ranks and constructs its affine charts and coverage internally.
-Its sum is over nonempty discarded node occurrences. Ordinary-PC separation
-remains an explicit hypothesis; distinct-flat deduplication, the expander
-separator, and quantitative existence/counting are not yet connected as a
-complete formal exponential theorem. The
-[current scope note](../docs/optimal_affine_parameters.md) records the exact
-boundary. The coordinates use classical basis choice, with no executable
-elimination claim. No P vs NP claim follows from this package.
+The phase-23 theorem constructs affine charts and coverage internally and sums
+over nonempty discarded node occurrences. The new `DistinctAffineFlats` theorem
+deduplicates those sets semantically and proves the uniform count bound.
+The generic distinct-flat theorem retains a separation hypothesis;
+`ExpanderDAGLowerBound` discharges it for the actual signed raw-clause family.
+`ExpanderDensityDAG` additionally discharges the quantitative density condition.
+`CNFFamilyExistence` constructs the required family and UNSAT signing;
+`ExponentialBudget` proves the final numerical inequalities, and `Phase20`
+composes their existence and exponential conclusion. The
+[current scope note](../docs/phase20_formalization.md)
+states the complete theorem and its explicit threshold. The coordinates and representatives use
+classical choice, as do the normal forms; no efficient computation is claimed. No P vs NP claim follows
+from this package.

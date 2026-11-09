@@ -1,7 +1,7 @@
 {
   "affine_cases": 7,
   "affine_dag_bound_applies_to_all_sat_algorithms": false,
-  "affine_dag_bound_evidence": "Paper proof using the published graph-reduction operator and a directly proved common-annihilator criterion; full theorem formalization and external review remain outstanding. Finite reports do not prove the asymptotic statement.",
+  "affine_dag_bound_evidence": "The specified F2 exponential theorem and its family-existence proof are in formal_pc/ProofLab/Phase20.lean; see results/phase20_complete_formal_audit.json for separate Lean build and axiom-audit evidence. This Python run checks finite reports only; it does not execute the formal proof or establish external review or novelty.",
   "affine_dag_separation_summaries": {
     "affine_dag_pc": {
       "all_three_variable_affine_flats_checked": 52,
@@ -48,8 +48,159 @@
     }
   },
   "all_input_polynomial_time_from_overlap": false,
+  "boolean_matrix_sat_audit": {
+    "all_checks_passed": true,
+    "commuting_tuples": 176,
+    "dimension": 2,
+    "efficient_formula_dependent_constructor_found": false,
+    "explicit_failure": {
+      "missed_singleton_assignment": 1,
+      "represented_assignments": [
+        0
+      ],
+      "variable_matrices": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "formula_independent_polynomial_dimension_refuted": true,
+    "full_representation_control": {
+      "dimension": 8,
+      "truth_functions_checked": 256
+    },
+    "idempotent_matrices": 8,
+    "invalid_representation_controls": {
+      "noncommuting": true,
+      "nonidempotent": true
+    },
+    "original_circuit_checks": 11264,
+    "p_vs_np_resolved": false,
+    "polynomial_support_extractions_checked": 177,
+    "represented_assignment_histogram": {
+      "1": 8,
+      "2": 168
+    },
+    "satisfiable_functions_missed": 11600,
+    "satisfying_witnesses_checked": 33280,
+    "truth_function_checks": 45056,
+    "variables": 3,
+    "zero_matrix_means": "UNKNOWN unless completeness is proved separately"
+  },
   "boundary_minimum_additional_clauses": 4,
   "boundary_states_rechecked": 855,
+  "circuit_extension_audit": {
+    "all_checks_passed": true,
+    "duplicate_circuit_refutations": [
+      {
+        "certificate_verified": true,
+        "clauses": 8,
+        "gate_pairs": 1,
+        "local_pairs_bound_sum": 36,
+        "local_rows_bound_sum": 15,
+        "m": 1,
+        "max_local_variables": 4,
+        "proof_nodes": 14,
+        "proof_width": 3,
+        "variables": 4
+      },
+      {
+        "certificate_verified": true,
+        "clauses": 22,
+        "gate_pairs": 3,
+        "local_pairs_bound_sum": 4923,
+        "local_rows_bound_sum": 438,
+        "m": 2,
+        "max_local_variables": 6,
+        "proof_nodes": 46,
+        "proof_width": 3,
+        "variables": 10
+      },
+      {
+        "certificate_verified": true,
+        "clauses": 36,
+        "gate_pairs": 5,
+        "local_pairs_bound_sum": 9810,
+        "local_rows_bound_sum": 861,
+        "m": 3,
+        "max_local_variables": 6,
+        "proof_nodes": 78,
+        "proof_width": 3,
+        "variables": 16
+      },
+      {
+        "certificate_verified": true,
+        "clauses": 106,
+        "gate_pairs": 15,
+        "local_pairs_bound_sum": 34245,
+        "local_rows_bound_sum": 2976,
+        "m": 8,
+        "max_local_variables": 6,
+        "proof_nodes": 238,
+        "proof_width": 3,
+        "variables": 46
+      },
+      {
+        "certificate_verified": true,
+        "clauses": 890,
+        "gate_pairs": 127,
+        "local_pairs_bound_sum": 307917,
+        "local_rows_bound_sum": 26664,
+        "m": 64,
+        "max_local_variables": 6,
+        "proof_nodes": 2030,
+        "proof_width": 3,
+        "variables": 382
+      },
+      {
+        "certificate_verified": true,
+        "clauses": 14330,
+        "gate_pairs": 2047,
+        "local_pairs_bound_sum": 4999437,
+        "local_rows_bound_sum": 432744,
+        "m": 1024,
+        "max_local_variables": 6,
+        "proof_nodes": 32750,
+        "proof_width": 3,
+        "variables": 6142
+      }
+    ],
+    "general_sat_solver": false,
+    "p_vs_np_resolved": false,
+    "projection": [
+      {
+        "assignments_checked": 8,
+        "clauses": 4,
+        "m": 1,
+        "variables": 3,
+        "witnesses": 1
+      },
+      {
+        "assignments_checked": 128,
+        "clauses": 11,
+        "m": 2,
+        "variables": 7,
+        "witnesses": 6
+      },
+      {
+        "assignments_checked": 2048,
+        "clauses": 18,
+        "m": 3,
+        "variables": 11,
+        "witnesses": 28
+      }
+    ],
+    "scope": "Finite verification of explicit circuit encodings and resolution proofs; all-size proof and complexity qualifications are in docs/circuit_extensions.md."
+  },
   "cmr_gate_scope": "Separate optional pinned executable workflow; Python replay does not build CMR.",
   "conservation_general_polynomial_solver": false,
   "conservation_summaries": {
@@ -150,6 +301,15 @@
     "source_assignments_checked": 344,
     "source_models_lifted_and_checked": 262
   },
+  "cubic_phase_sat_audit": {
+    "circuit_cases": 34,
+    "cnf_to_circuit_cases": 80,
+    "phase_assignments_enumerated": 22116,
+    "polynomial_cubic_zero_test_obtained": false,
+    "quadratic_cases": 128,
+    "remaining_core": "A deterministic polynomial-time zero test on the reduced sparse cubic phases; not supplied.",
+    "scope": "Known character-orthogonality and quadratic Gauss-sum constructions, checked here on finite inputs. The quadratic algorithm rejects cubic inputs. No novel separation, general SAT algorithm or Lean claim."
+  },
   "decision_pruning_summaries": {
     "blocked_pruning": {
       "blocked_marker_keys_at_last_k": 1,
@@ -229,6 +389,211 @@
       "output_translation_lines": 3,
       "width_three_K4_saturated_clauses": 16
     }
+  },
+  "eth_polynomial_repair_audit": {
+    "core_obligation": "Construct and use actual occurrence-dependent measurements and recover the count with polynomial total bit cost; rank totals alone do not supply this.",
+    "finite_improvement_scope": "The one improved auxiliary case retains over 37% defective directions; it is not a full small-tail SAT design or an end-to-end runtime improvement.",
+    "general_polynomial_sat_algorithm_obtained": false,
+    "interpolation_candidates_evaluated": 4591,
+    "optimization_cases": 51,
+    "scope": "Exact finite optima within f(W), plus elementary all-size bounds on that ansatz and the stated explicit enumerations. No lower bound for all SAT algorithms or contradiction of the upstream subexponential theorem. Existing upstream snapshot remains unchanged.",
+    "strict_improvements_over_consecutive_or_constant": 1,
+    "upstream_commit": "4eaee87548250b2682affda7d05d947c05554bae",
+    "upstream_kernel_replayed": false
+  },
+  "extension_degree_audit": {
+    "all_checks_passed": true,
+    "families": [
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 1,
+        "gates": 0,
+        "inputs": 1,
+        "multiplication_depth": 0,
+        "operation": "AND",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 1,
+        "truth_assignments_checked": 2
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 1,
+        "gates": 0,
+        "inputs": 1,
+        "multiplication_depth": 0,
+        "operation": "OR",
+        "ordinary_boolean_image_degree": null,
+        "output_degree": 1,
+        "output_terms": 1,
+        "truth_assignments_checked": 2
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 1,
+        "gates": 0,
+        "inputs": 1,
+        "multiplication_depth": 0,
+        "operation": "XOR",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 1,
+        "truth_assignments_checked": 2
+      },
+      {
+        "coordinate_degree": 2,
+        "expansion_work": 3,
+        "gates": 1,
+        "inputs": 2,
+        "multiplication_depth": 1,
+        "operation": "AND",
+        "ordinary_boolean_image_degree": 4,
+        "output_degree": 2,
+        "output_terms": 1,
+        "truth_assignments_checked": 4
+      },
+      {
+        "coordinate_degree": 2,
+        "expansion_work": 15,
+        "gates": 4,
+        "inputs": 2,
+        "multiplication_depth": 1,
+        "operation": "OR",
+        "ordinary_boolean_image_degree": null,
+        "output_degree": 2,
+        "output_terms": 3,
+        "truth_assignments_checked": 4
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 4,
+        "gates": 1,
+        "inputs": 2,
+        "multiplication_depth": 0,
+        "operation": "XOR",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 2,
+        "truth_assignments_checked": 4
+      },
+      {
+        "coordinate_degree": 4,
+        "expansion_work": 7,
+        "gates": 3,
+        "inputs": 4,
+        "multiplication_depth": 2,
+        "operation": "AND",
+        "ordinary_boolean_image_degree": 8,
+        "output_degree": 4,
+        "output_terms": 1,
+        "truth_assignments_checked": 16
+      },
+      {
+        "coordinate_degree": 4,
+        "expansion_work": 71,
+        "gates": 12,
+        "inputs": 4,
+        "multiplication_depth": 2,
+        "operation": "OR",
+        "ordinary_boolean_image_degree": null,
+        "output_degree": 4,
+        "output_terms": 15,
+        "truth_assignments_checked": 16
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 12,
+        "gates": 3,
+        "inputs": 4,
+        "multiplication_depth": 0,
+        "operation": "XOR",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 4,
+        "truth_assignments_checked": 16
+      },
+      {
+        "coordinate_degree": 8,
+        "expansion_work": 15,
+        "gates": 7,
+        "inputs": 8,
+        "multiplication_depth": 3,
+        "operation": "AND",
+        "ordinary_boolean_image_degree": 16,
+        "output_degree": 8,
+        "output_terms": 1,
+        "truth_assignments_checked": 256
+      },
+      {
+        "coordinate_degree": 8,
+        "expansion_work": 687,
+        "gates": 28,
+        "inputs": 8,
+        "multiplication_depth": 3,
+        "operation": "OR",
+        "ordinary_boolean_image_degree": null,
+        "output_degree": 8,
+        "output_terms": 255,
+        "truth_assignments_checked": 256
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 32,
+        "gates": 7,
+        "inputs": 8,
+        "multiplication_depth": 0,
+        "operation": "XOR",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 8,
+        "truth_assignments_checked": 256
+      },
+      {
+        "coordinate_degree": 12,
+        "expansion_work": 23,
+        "gates": 11,
+        "inputs": 12,
+        "multiplication_depth": 4,
+        "operation": "AND",
+        "ordinary_boolean_image_degree": 24,
+        "output_degree": 12,
+        "output_terms": 1,
+        "truth_assignments_checked": 0
+      },
+      {
+        "coordinate_degree": 12,
+        "expansion_work": 9223,
+        "gates": 44,
+        "inputs": 12,
+        "multiplication_depth": 4,
+        "operation": "OR",
+        "ordinary_boolean_image_degree": null,
+        "output_degree": 12,
+        "output_terms": 4095,
+        "truth_assignments_checked": 0
+      },
+      {
+        "coordinate_degree": 1,
+        "expansion_work": 56,
+        "gates": 11,
+        "inputs": 12,
+        "multiplication_depth": 0,
+        "operation": "XOR",
+        "ordinary_boolean_image_degree": 2,
+        "output_degree": 1,
+        "output_terms": 12,
+        "truth_assignments_checked": 0
+      }
+    ],
+    "inner_product_control": {
+      "coordinate_degree": 2,
+      "output_terms": 32,
+      "pairs": 32
+    },
+    "p_vs_np_resolved": false,
+    "size_simulation_claimed": false,
+    "transfer_theorem": "D*B degree budget; formal proof in ExtensionSubstitution.lean",
+    "unrestricted_extension_lower_bound": false
   },
   "fixedpoint_cases": 12,
   "frontier_general_polynomial_solver": false,
@@ -425,6 +790,220 @@
     }
   },
   "localization_or_field_split_resolves_general_sat": false,
+  "mcsp_update_argument_audit": {
+    "all_checks_passed": true,
+    "core_lower_bound_proved": false,
+    "flat_minimum": {
+      "child_minimum_gates": [
+        3,
+        3
+      ],
+      "exhaustive_catalog": [
+        {
+          "functions": 14,
+          "gates": 1,
+          "semantic_dag_states": 9
+        },
+        {
+          "functions": 40,
+          "gates": 2,
+          "semantic_dag_states": 66
+        }
+      ],
+      "next_bits": [
+        0,
+        1
+      ],
+      "prefix": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "prefix_minimum_gates": 3,
+      "witness_tables": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "p_vs_np_resolved": false,
+    "point_repairs": [
+      {
+        "assignments_compared": 16,
+        "inputs": 1,
+        "maximum_added_gates": 5,
+        "patched_circuits": 8,
+        "proved_added_gate_bound": 5,
+        "source_functions": 4
+      },
+      {
+        "assignments_compared": 256,
+        "inputs": 2,
+        "maximum_added_gates": 7,
+        "patched_circuits": 64,
+        "proved_added_gate_bound": 7,
+        "source_functions": 16
+      },
+      {
+        "assignments_compared": 16384,
+        "inputs": 3,
+        "maximum_added_gates": 9,
+        "patched_circuits": 2048,
+        "proved_added_gate_bound": 9,
+        "source_functions": 256
+      }
+    ],
+    "prescribed_candidate_controls": [
+      {
+        "candidate_gates": 2,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": true,
+        "source_truth_table": 0,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 5,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 1,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 4,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 2,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 8,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 3,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 4,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 4,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 8,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 5,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 7,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 6,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 11,
+        "gate_budget": 16,
+        "inputs": 4,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 7,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 3,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 8,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 7,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 9,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 6,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 10,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 10,
+        "gate_budget": 16,
+        "inputs": 4,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 11,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 6,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 12,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 10,
+        "gate_budget": 16,
+        "inputs": 4,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 13,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 9,
+        "gate_budget": 9,
+        "inputs": 3,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 14,
+        "zero_circuit_is_valid_repair": true
+      },
+      {
+        "candidate_gates": 13,
+        "gate_budget": 16,
+        "inputs": 4,
+        "prescribed_candidate_valid": false,
+        "source_truth_table": 15,
+        "zero_circuit_is_valid_repair": true
+      }
+    ],
+    "proof_scope": "Finite checks of the paper lemmas in docs/mcsp_update_core.md; no Lean claim"
+  },
   "mixed_algorithm_general_polynomial_time": false,
   "mixed_enumeration_barrier_cases": 7,
   "mixed_independent_oracle_cases": 136,
@@ -661,8 +1240,477 @@
       "two_event_cube_min_static_degree": 3
     }
   },
+  "physical_sat_audit": {
+    "bounded_trajectories": 12,
+    "encoding_assignments_checked": 1012,
+    "encoding_cases": 51,
+    "general_kernel_cases": 35,
+    "orbit_checks": 16,
+    "polynomial_general_sat_algorithm": false,
+    "reference_states_enumerated": 484,
+    "remaining_core": "A different dynamics/initialization/schedule must prove correctness and total resource bounds on all inputs, including certifiable UNSAT; this audit supplies no such mechanism.",
+    "restart_runs": 12,
+    "scope": "Classical finite-state model and elementary analytic bounds, not real hardware timing, quantum computation, a Lean verification, a novel complexity result, or an all-algorithm lower bound.",
+    "stopped_branch": "Fixed-temperature, zero-initialized local Metropolis as a universal fast SAT solver.",
+    "thermal_cases": 31
+  },
   "polynomial_all_input_pruning_bound_proved": false,
+  "sat_scaling_audit": {
+    "algebraic_controls": 128,
+    "censored_dpll": 22,
+    "completed_dpll": 810,
+    "p_vs_np_probability": null,
+    "scope": "Observed solver/distribution growth only; no all-algorithm or all-size conclusion."
+  },
   "schema_version": 1,
+  "shared_dag_sat_audit": {
+    "algorithm": "fixed-order structural DAG cofactoring",
+    "all_checks_passed": true,
+    "all_variable_orders_lower_bound": false,
+    "budget_control": {
+      "assignment": null,
+      "reason": "expanded state budget",
+      "stats": {
+        "cofactor_node_visits": 1260,
+        "expanded_states": 100,
+        "input_nodes": 99,
+        "interned_nodes": 417,
+        "memo_hits": 91,
+        "states_by_variable": {
+          "1": 1,
+          "10": 5,
+          "11": 9,
+          "12": 17,
+          "13": 29,
+          "14": 28,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1,
+          "8": 2,
+          "9": 3
+        },
+        "work_units": 9703
+      },
+      "status": "UNKNOWN"
+    },
+    "families": [
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 48,
+            "expanded_states": 4,
+            "input_nodes": 19,
+            "interned_nodes": 34,
+            "memo_hits": 5,
+            "states_by_variable": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1
+            },
+            "work_units": 339
+          },
+          "status": "UNSAT"
+        },
+        "gates": 13,
+        "independent_polynomial_zero": true,
+        "inputs": 6,
+        "k": 2,
+        "nonconstant_residuals_after_k_minus_2": 1,
+        "proved_state_lower_bound": 1,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 22,
+            "expanded_states": 2,
+            "input_nodes": 19,
+            "interned_nodes": 23,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "3": 1,
+              "4": 1
+            },
+            "work_units": 219
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 11,
+            "interned_nodes": 11,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 57
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 64
+      },
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 460,
+            "expanded_states": 36,
+            "input_nodes": 35,
+            "interned_nodes": 152,
+            "memo_hits": 37,
+            "states_by_variable": {
+              "1": 1,
+              "2": 2,
+              "3": 4,
+              "4": 7,
+              "5": 11,
+              "6": 11
+            },
+            "work_units": 2802
+          },
+          "status": "UNSAT"
+        },
+        "gates": 25,
+        "independent_polynomial_zero": true,
+        "inputs": 10,
+        "k": 4,
+        "nonconstant_residuals_after_k_minus_2": 4,
+        "proved_state_lower_bound": 4,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 30,
+            "expanded_states": 2,
+            "input_nodes": 35,
+            "interned_nodes": 39,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "5": 1,
+              "6": 1
+            },
+            "work_units": 462
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 23,
+            "interned_nodes": 23,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 155
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 1024
+      },
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 2408,
+            "expanded_states": 176,
+            "input_nodes": 51,
+            "interned_nodes": 594,
+            "memo_hits": 177,
+            "states_by_variable": {
+              "1": 1,
+              "2": 2,
+              "3": 4,
+              "4": 8,
+              "5": 16,
+              "6": 31,
+              "7": 57,
+              "8": 57
+            },
+            "work_units": 14899
+          },
+          "status": "UNSAT"
+        },
+        "gates": 37,
+        "independent_polynomial_zero": true,
+        "inputs": 14,
+        "k": 6,
+        "nonconstant_residuals_after_k_minus_2": 16,
+        "proved_state_lower_bound": 16,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 38,
+            "expanded_states": 2,
+            "input_nodes": 51,
+            "interned_nodes": 55,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "7": 1,
+              "8": 1
+            },
+            "work_units": 781
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 35,
+            "interned_nodes": 35,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 277
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 0
+      },
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 11076,
+            "expanded_states": 748,
+            "input_nodes": 67,
+            "interned_nodes": 2332,
+            "memo_hits": 749,
+            "states_by_variable": {
+              "1": 1,
+              "10": 247,
+              "2": 2,
+              "3": 4,
+              "4": 8,
+              "5": 16,
+              "6": 32,
+              "7": 64,
+              "8": 127,
+              "9": 247
+            },
+            "work_units": 71784
+          },
+          "status": "UNSAT"
+        },
+        "gates": 49,
+        "independent_polynomial_zero": true,
+        "inputs": 18,
+        "k": 8,
+        "nonconstant_residuals_after_k_minus_2": 64,
+        "proved_state_lower_bound": 64,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 46,
+            "expanded_states": 2,
+            "input_nodes": 67,
+            "interned_nodes": 71,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "10": 1,
+              "9": 1
+            },
+            "work_units": 1176
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 47,
+            "interned_nodes": 47,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 423
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 0
+      },
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 48928,
+            "expanded_states": 3048,
+            "input_nodes": 83,
+            "interned_nodes": 9254,
+            "memo_hits": 3049,
+            "states_by_variable": {
+              "1": 1,
+              "10": 511,
+              "11": 1013,
+              "12": 1013,
+              "2": 2,
+              "3": 4,
+              "4": 8,
+              "5": 16,
+              "6": 32,
+              "7": 64,
+              "8": 128,
+              "9": 256
+            },
+            "work_units": 333513
+          },
+          "status": "UNSAT"
+        },
+        "gates": 61,
+        "independent_polynomial_zero": true,
+        "inputs": 22,
+        "k": 10,
+        "nonconstant_residuals_after_k_minus_2": 256,
+        "proved_state_lower_bound": 256,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 54,
+            "expanded_states": 2,
+            "input_nodes": 83,
+            "interned_nodes": 87,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "11": 1,
+              "12": 1
+            },
+            "work_units": 1647
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 59,
+            "interned_nodes": 59,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 593
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 0
+      },
+      {
+        "default_order": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 212732,
+            "expanded_states": 12260,
+            "input_nodes": 99,
+            "interned_nodes": 36912,
+            "memo_hits": 12261,
+            "states_by_variable": {
+              "1": 1,
+              "10": 512,
+              "11": 1024,
+              "12": 2047,
+              "13": 4083,
+              "14": 4083,
+              "2": 2,
+              "3": 4,
+              "4": 8,
+              "5": 16,
+              "6": 32,
+              "7": 64,
+              "8": 128,
+              "9": 256
+            },
+            "work_units": 1518070
+          },
+          "status": "UNSAT"
+        },
+        "gates": 73,
+        "independent_polynomial_zero": true,
+        "inputs": 26,
+        "k": 12,
+        "nonconstant_residuals_after_k_minus_2": 1024,
+        "proved_state_lower_bound": 1024,
+        "selector_first": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 62,
+            "expanded_states": 2,
+            "input_nodes": 99,
+            "interned_nodes": 103,
+            "memo_hits": 3,
+            "states_by_variable": {
+              "13": 1,
+              "14": 1
+            },
+            "work_units": 2194
+          },
+          "status": "UNSAT"
+        },
+        "single_selector": {
+          "assignment": null,
+          "reason": null,
+          "stats": {
+            "cofactor_node_visits": 0,
+            "expanded_states": 0,
+            "input_nodes": 71,
+            "interned_nodes": 71,
+            "memo_hits": 1,
+            "states_by_variable": {},
+            "work_units": 787
+          },
+          "status": "UNSAT"
+        },
+        "truth_assignments_checked": 0
+      }
+    ],
+    "general_sat_polynomial_time": false,
+    "normalizer": "AND/XOR flattening, constants, complements, all-term common factors",
+    "p_vs_np_resolved": false,
+    "polynomial_state_bound_refuted": true,
+    "sat_control": {
+      "assignment": {
+        "1": false,
+        "2": true,
+        "3": true
+      },
+      "reason": null,
+      "stats": {
+        "cofactor_node_visits": 12,
+        "expanded_states": 3,
+        "input_nodes": 7,
+        "interned_nodes": 8,
+        "memo_hits": 3,
+        "states_by_variable": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        },
+        "work_units": 41
+      },
+      "status": "SAT"
+    },
+    "state_bound_scope": "this implementation and a-first order; paper proof, not Lean",
+    "work_units_are_bit_operations": false
+  },
   "signature_algorithm_general_polynomial_time": false,
   "signature_counting_checks_passed": true,
   "signature_counting_summary": {
@@ -742,19 +1790,24 @@
     "experiments/binary_minor_universality.py": "f8268a9397411d08039ee51be22ef302e50f43920076431640d897a06d9f5e5a",
     "experiments/blind_recovery.py": "249042e407f13c9d9636a8370b3f1f6904e8d6c629b2c8e3982b29182ec61827",
     "experiments/blocked_pruning.py": "f7dee88e5d2cc44b0095e3b8250a287da5dbeb0efbd883ca1e92cc692a1196d9",
+    "experiments/boolean_matrix_sat.py": "64e96cd73e529413e1efa3b23627b1e391d9a2eef54d26c41969595911557b65",
     "experiments/branch_interface.py": "760cf1371a43b32830fcf2c210d16106a89d02504a7e3e89d580af9ef54dc7c2",
     "experiments/branch_localization.py": "bac9b7bf685f344f5f2edc948c811d30db36a7cbf38bf97a3cd024533c821dd2",
     "experiments/case_parity.py": "e1fb4ba37bc4eb59e08e7b9dacb688efa54cbed319e18cdb0072c30eef42d0d8",
+    "experiments/circuit_extensions.py": "23ea2c4e9a220d3e288041e68a6631767f1369f5b1e17bc9868026d48ecccbfb",
     "experiments/constant_block_bridge.py": "02b7d76de53308e5473c657f78a08a71d5d8b18826aabf4c0a2bb1893e15213c",
     "experiments/coprime_marginals.py": "6a59966ab7c63d075b4b874ec7cc3a5553a90901d7c32d8064c80018ae3d8dba",
     "experiments/correlation_marginals.py": "656f3e69873037a3c86af84c422680f79b7642373c8acac6fc1cbe3381afa6ed",
     "experiments/correlation_polynomial.py": "819dfd644d81df1bf09baaa5aba8a1fc9aea852b247998a2cf698ba63a4e9551",
     "experiments/correlation_relations.py": "bab5153c64240a9289f062ca29ee135141123c07e666329d0e363632205163a6",
     "experiments/correlation_resolution.py": "58d066b3954ffb5b93ae3df3103148ccf08302a53faccd840488875a25ce9901",
+    "experiments/cubic_phase_sat.py": "cafd2c1e5de160b44c6da9e403ca00296a4e09201fedf0e4252f4c5751e026e4",
     "experiments/decision_pruning.py": "573c838da20b85176a1dcf271bcaf4dc26172e77a1be97b28b7f624c0b07ea64",
+    "experiments/eth_polynomial_repair.py": "d944f96e9e3e616da482b9039b3f161ffc255fd549f7d34f7766c818a54c65e7",
     "experiments/event_projection.py": "e3378d3596f9543f06fec128fc8526ee63a2aaa07a184d3afca790278ec705f4",
     "experiments/exact_affine_one_cover.py": "cc98fe473f99ee92af678b192c89c9d779e3430bfe558d78543c5f7d5e7602bd",
     "experiments/expander_separation.py": "8cc62f56c3454c28ae4bbcc4ff2ae07530570ef96dfc6c305361e2466beb6c9f",
+    "experiments/extension_degree.py": "c4000607b0cb79964f44e1b4372eb4222e18be1598c66ef9afb92fdddf3cd453",
     "experiments/feedback_digits.py": "e72b9f8bcbddfc3dd86e9bd5c2ef6820518b19e308a784ac5a60582a473f00f1",
     "experiments/feedback_prime_power.py": "9646a6004f218d7bdae199a16e35988122702a876ef5ffe17b34e482b13416cb",
     "experiments/feedback_simulation.py": "5fafcfa5b0e8eb5c5557bd227b814048a5f2605d7a7ca0a503b1c77e8944af4a",
@@ -768,6 +1821,7 @@
     "experiments/integer_probe.py": "dc7236fd3489778bb47981bb8cab156a0bdde7f76972485396eee9f3d4b80440",
     "experiments/joint_reasoning.py": "91fdda05557f6197128275e391783d431d472b2c205da4ab86c3d023d38627eb",
     "experiments/local_torsion.py": "9d0703cac386620a0f7e9e8e026d1302c4c3b0b72a52e60140ba7d44dbb55282",
+    "experiments/mcsp_update_gate.py": "e9d6c977a9747e2c6a6e93e0eabb2167e32460989a04b997b00bd0ccdf3db88a",
     "experiments/mixed_constraints.py": "06405c753dd7d5d158912fb0e8004e93f6aeafe861e9ebfb8c659f41266e91de",
     "experiments/mixed_modular.py": "dd29a4b0b7a833cdf73cb84aabdbd13e197087e16f38cb18db79ce5d80735e49",
     "experiments/modular_barrier.py": "69cbe9953edd0107b7fd3908bf93747d8c3054f6c0c861657c1508f3883cf5f2",
@@ -780,11 +1834,14 @@
     "experiments/parity_projection.py": "5a4f559b8baf4a8772fa7f68b0c76c9bf632cac705c06cad6ce4bf0f5794c7ce",
     "experiments/parity_query.py": "8b32a380c21b1c80f895bf18c5395531b9282226de622cdecb9654a6441b2826",
     "experiments/pc_subspace.py": "9ccc02e43c3a3155ebe276b585b06491c9cb1617c98d66c817f830db11cd31fe",
+    "experiments/physical_sat.py": "ba0e1cc0a78716c4c42b0ff48cbafa8809d4b765f1281b074e19affb54ffa291",
     "experiments/prime_spectrum.py": "48d02353633dc34e995c2bd1dd69d1021e64c091f0e3abd3837f9cdd2c1a8f34",
     "experiments/projection_barrier.py": "87675fae4325e3dba560c9189bfc7a341780b8292bbbe6902bf52a26e9c97020",
     "experiments/pruning_codec.py": "0d387b72b84783c9999a57f087db74244303fcf1f608bc074ded59b291f35616",
     "experiments/rigid_ceiling.py": "de623519954696f4173beb4231724f4cdbf9dd91ea95ac3d99e0632464be567f",
+    "experiments/sat_scaling.py": "6b3c7bf29f862e99185e7a86ddde306179b6fa6b60b262cd07fcc35fc33348df",
     "experiments/selector_overlap.py": "10c8125f0d630fa764258011da2535924ece61c53f2ff0fc0c3e4790054e1a48",
+    "experiments/shared_dag_sat.py": "ba8eb326f6eb8e6502e8876223be2db3fa6b73dccaad4a2d8be29862f6e6483f",
     "experiments/signature_counting.py": "6f0326ed2b9d59cd90b517055eb37f489286626c29084730df11c7bd0963fa65",
     "experiments/split_parity.py": "269e8edf8f3340e0175633db4c5d557bb371d6b85d0bf111976c49eef37ef598",
     "experiments/support_localization.py": "3a0ecafe93eecce1b2f09f166d4953f569abee434d5e2856c90652f6b76891f4",
@@ -796,25 +1853,57 @@
     "experiments/trit_solver.py": "1106ccf241dcfc4c4d70e09936ac4b9b4b89f7141a60de46fe010884b905975b",
     "experiments/unit_support_matching.py": "d126ed48f0ee4ca6b968a8485797a27e632105c3d3e0b5764983f146a8141019",
     "experiments/upstream_parameters.py": "406d32d6cbd4d6faf5dce163523d0bfe187c9ed7bb9fa8e8bc3068b238b74589",
+    "experiments/violation_moments.py": "7f983460ef0895ff468595bef2bc8b303a518cb7ac7a37abe9315344709d36f2",
     "experiments/width_transfer.py": "0410cca05371a838d95deb38179162707a01056fa26d111b12cd2a1de68686fd",
     "experiments/witness_transport.py": "a7ae25fec72994db7430715a35fcf21286a231d6ef2053b524979447ece2dabf",
-    "formal_pc/ProofLab.lean": "d5daafc0510a8d4fd817097193a3a0e915ba87874b213de931cb422b4a63665c",
+    "formal_pc/ProofLab.lean": "4a485561e60a128c9be9844083e02bc0e439c3722be703af2e590883a10062a8",
     "formal_pc/ProofLab/AffineClauseDAG.lean": "69d2e600b3c84bdfa78a1db788011ec0a4e6f79d53d3d6abf897cc23f3247407",
     "formal_pc/ProofLab/AffineCoefficients.lean": "199984b58f45154332fff8fe14d4d74a9002c286c6a32a17518cf2c33a2e9425",
     "formal_pc/ProofLab/AffineIndicators.lean": "b9c6803274ea20b7415a535cf31bf83d624b04eedb49f9e5e327ea42ca740cf1",
     "formal_pc/ProofLab/AffineRestriction.lean": "ffd3099d32a7713c33c7d5bf4e71277c7ac63a32057bac5f5d443d6656e0fc0d",
+    "formal_pc/ProofLab/BernoulliBounds.lean": "44750a264a40879f2cf216215815638b0d60ea8f6c5d0624051bde555e7bf262",
+    "formal_pc/ProofLab/BernoulliCounting.lean": "3b6f5f36d4d8a457f3bd77853689aafef8874bbddf2ff9010eb39409a83089af",
     "formal_pc/ProofLab/BooleanFunctionSpace.lean": "57955b8624eff5fe2c02af5758085fb6bc2475bbab3bc3f1feced4625caada89",
+    "formal_pc/ProofLab/BooleanIdealNormalForm.lean": "9ea906ef8af7a5804a86f13cd2ba7c26821175dc7c9bee1cbc2d42bf16198205",
+    "formal_pc/ProofLab/BoundaryProbabilitySum.lean": "aa5f345e8f23aca32bcd63cc93c2f477117bffef34c0e732c8f8e047eebbe7e2",
+    "formal_pc/ProofLab/CNFFamilyExistence.lean": "06dac9ec1d0c98537f6ddb2bd2078c409a62cc0baf0e07f58fc53f1883623d8e",
+    "formal_pc/ProofLab/CNFSigning.lean": "211b09d67cc847917da42c42fbf16e8a4a369392115488371a9e2f1936542504",
+    "formal_pc/ProofLab/ConnectedSetCounting.lean": "8cba6448a42ec7b36fde69ac07260526611f60164849fd92b49d11b82e1e97bd",
     "formal_pc/ProofLab/DAGDimension.lean": "a92bb1c3434bb9b4cb6364e8a0a13b21b7aacbe02c22ba59c9eb7d9a24f65276",
     "formal_pc/ProofLab/DimensionBudget.lean": "a322739e2fd3fa5579ca6fa040c037d0d56d517b9163cb770cf41ef799da303d",
+    "formal_pc/ProofLab/DistinctAffineFlats.lean": "4531c29053a75886525c84752708df3016ae9649bcbcbf53ef5ff06df929ac95",
     "formal_pc/ProofLab/DualKernelCoordinates.lean": "aee7a22147a1fd6fb4db73f71fe2f5b45381ce58a6820777e9ba1d7c9c5537ba",
+    "formal_pc/ProofLab/ExpanderDAGLowerBound.lean": "9802a8674d2361655f3762876938024c22c03b832e54abb52b9d22b533526152",
+    "formal_pc/ProofLab/ExpanderDensity.lean": "e171b6b98b15dba78ab8615a815638ea837b4c91e912e23f5b5def9030c42798",
+    "formal_pc/ProofLab/ExpanderDensityDAG.lean": "558cd599cad53d6741aa8708f32fa27a4bfb7e499204c8b2045fefdc5cd8e5ba",
+    "formal_pc/ProofLab/ExpanderLocalConsistency.lean": "145759a720ad803cf7771337fb247a03e6f4efe28bf61ebef0f99d56e984349b",
+    "formal_pc/ProofLab/ExpanderMonomials.lean": "b0c84e697ef8c776f3a0412184ec56082c262c047886e66a3ae3fbb58fab1f5f",
+    "formal_pc/ProofLab/ExpanderNormalForm.lean": "b1d2494f29d0f9588d054833966ee9dcfb8f0680ccaf0a0d3b2b0a49cc6e33f7",
+    "formal_pc/ProofLab/ExpanderObstructions.lean": "b2ec012f52701f85cf4ec64f1346ee3aa6d389d4db9bd0cbe02965f0da8b2fad",
+    "formal_pc/ProofLab/ExpanderReduction.lean": "32745f4fa976ec143a3369fa93f013a3c21e69712e341e419d63d63995f554b6",
+    "formal_pc/ProofLab/ExpanderSupport.lean": "ff48f1c30bd9f0b699e71df1b4f1f04e975fba91d15d597b5a61392a17e5b5fd",
+    "formal_pc/ProofLab/ExponentialBudget.lean": "6fa3c2a67a4d1906bffad3a3785cb55841822153ab3caa1a7a83be01134b5cd5",
+    "formal_pc/ProofLab/ExtensionSubstitution.lean": "7388db6926d7673fe07ff2397f783a952834b975dad275226ce530dc7690a1f7",
+    "formal_pc/ProofLab/FiniteBernoulli.lean": "4060b2120abb919ca3548b9e15fb746cdbb3b2b9708798b7d1ebda888956921f",
+    "formal_pc/ProofLab/IdealNormalForm.lean": "268ec3aaa2e8dd176b4e77e0dfaad924160cdbdec50a07eb08034a147d368311",
     "formal_pc/ProofLab/IntrinsicAffineRestriction.lean": "3365a8220952e7e6e12c9586eda3bb9c9126ed88a8606ab611abe45ab453d5c1",
+    "formal_pc/ProofLab/LinearClauseBoundary.lean": "9d0837e67702a5b6371ac1bfb1605206a79c20f3f36bb5704050951a4ccfae3e",
     "formal_pc/ProofLab/MaskedDAG.lean": "8620a874591d32f8100d08fed2937e2e7bd6a7403df46e0126b3a439ebc88277",
+    "formal_pc/ProofLab/NeighborhoodBoundary.lean": "031f1a6973a489395d41dd1b6eaff83b60bb7bd829ec946fc47636b7b92372d8",
+    "formal_pc/ProofLab/NormalFormRestriction.lean": "7a151a1f1c807eb08519788f9b060aec28de05fcaa92bc73382bd60a25e14733",
     "formal_pc/ProofLab/OptimalAffineParameters.lean": "f935bef64fcb19666baee94da3634e3c4a0853fe444ea1dcb64409268c0b5d48",
     "formal_pc/ProofLab/ParametrizedDAGDimension.lean": "6b1e5545fb13dcc85e9a5653fd7d857d36256947d2f3fdcfabcde491704475fc",
+    "formal_pc/ProofLab/Phase20.lean": "6ed97d0020c50f18c9ae0a4b157fad521ed0861d3b761b28bef57e2254b67b32",
     "formal_pc/ProofLab/QuadraticAffineCover.lean": "02c3f7f1156ffe823ee5f905c57a1a5b52ce31e80096be514061da6a6b799ea2",
     "formal_pc/ProofLab/QuadraticPolar.lean": "85ef1f989ba02baf47d113f9de9b25ec1feb6f1c13c3e53f84ad21a1e68c6caa",
+    "formal_pc/ProofLab/RandomCNFEstimates.lean": "345339dc98300af107ec9eca87b00a076e87a15a116ceec4615285d6c38a7e72",
+    "formal_pc/ProofLab/RandomCNFExpansion.lean": "fed47222810625166d1ac53f32ca5da3a5d404a8394b49faef6cd35bebf5d344",
+    "formal_pc/ProofLab/RandomCNFMoments.lean": "c5aa47e2858cee9082969d8a414fadcf738e7b481e1bedcd5a38db6f08de5df2",
+    "formal_pc/ProofLab/RandomCNFSample.lean": "8e2ea284a758be697402bfd979a1d787c1953f02a46b95b1958f2c30559eeb82",
+    "formal_pc/ProofLab/TripleCounting.lean": "b6f834d61fb709b90fb73105eab8d6771594e4655d7aacac5f56a57933cfd03b",
+    "formal_pc/ProofLab/TriplePruning.lean": "bd86db1036b2af422e886f9772c319b211914f1cf50cd5aac24fdb705afa6fe7",
     "formal_pc/audit.py": "ad1a87cda60807ca12ebf418baad637e6e681e64af61453a2be68545201800b9",
-    "formal_pc/audit_theorems.json": "e24901fc0cd5097c22b7e74c8d846621cf213a8104b6465650f91b53a9924b60",
+    "formal_pc/audit_theorems.json": "c1f213c5de0981a4ff250416e40d495968c0bbdae9616760a71ed8ddae587c86",
     "formal_pc/claims/BooleanReduction.lean": "4e5d93eb2510b5ae15056910087019da701f0250b59ac78421094e7ec885438f",
     "formal_pc/claims/PolynomialCalculus.lean": "d4497f46ac69b42c808a710af8a5b8ffb82225abcb4888d15269d09a683a9e85",
     "formal_pc/claims/PolynomialCalculusReuse.lean": "532576bb740b1b2f356e26a2929e054a8916e09bbd9d12e1318bf5ae856f7750",
@@ -828,18 +1917,24 @@
     "lakefile.lean": "b40cd1dd73140f00d383508923f075418b159242011411b6853771429f307170",
     "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
     "pyproject.toml": "757482e558ace084bdae34d86a176f55341566d4072e4c7d8774ea469d64b91d",
+    "requirements-cdcl.txt": "2287954a990b72398012f4a22fe83996e5b0e7f80fe0ba56eed558019b952564",
     "scripts/PrintAxioms.lean": "b811c87874ad17a463e91ed0d99cdbd69efce56584ec129a2439e2c9a342ab42",
     "scripts/audit_axioms.py": "91a7d001b69748ccd8ca62b64b9a3ff39637ff33c0b0153a2cd71f6b605726e9",
     "scripts/check_cmr_graphic.py": "a054330e0884db3cc73ae28e5523c0526ce5fa57d3f9eaec62c6ae0833790c06",
     "scripts/check_pruning_parity.py": "5e571c5cf3959e2a7946e2f69ea09a706a130e16185811c183dbbaf212e103e8",
+    "scripts/plot_cdcl_audit.py": "869d5d7f49e10364a90a253f7142f17a090258f97284fbac31e97bfbe502a413",
+    "scripts/plot_physical_sat.py": "5a2ff1af3176af682f6ae3cbdc3f94a008d42b85fcf4e7090b0546a3d2cc6c57",
+    "scripts/plot_sat_scaling.py": "9f6337439db53ebe2cbf5e92a9cc022e9ca249561d5edec21132e482d38ce2df",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "1bb7e8902c972fb8bbcaf0c302fd9f219b9d10a4a5d60efbc5205561d327fe79",
+    "scripts/reproduce.py": "3a4673055a9ea689606b6cb0d4b69b2c9f446f73ad5cf387bb724a867058349a",
+    "scripts/run_cdcl_audit.py": "e373c38abfb6ff0a59fa6b8570d3179b711229fe1147396c7dfa82aa8f870896",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
     "scripts/solve_feedback.py": "adb143e2a7716659b0454e1887c1fa897256ec159e7565b5e5af78225136ca6a",
     "scripts/solve_mixed.py": "9ee631e8bf9751187eaff6c31051eeeb62ed104244a5e315d75fa1c34a6db02e",
     "scripts/solve_overlap.py": "400a0c52c0bb460351a3f004bb07e7cf39ec79ef79ed2ef9d63ae52de4611b29",
     "scripts/solve_pruned.py": "3a830863d159c81a40ce22a6af25f16dda367cd18bc580b9acf480536b773095",
+    "scripts/solve_shared_dag.py": "6ee0572a6a870f37a58c0812b755fbe9343a9a1fd27d3550635f21ecfc548955",
     "scripts/solve_three_cnf.py": "2ccd742f44838979c87c53c771f44c44067fe059d3d1cbf3c3f0fd96bf059d8b",
     "scripts/verify_openai_math_snapshot.py": "74496215b415e18f6686e8e4cb99b845cf97e8939e2b917e9d9a04e72829abd4",
     "src/pnp_lab/__init__.py": "f1e89496db119d2b990b18647f581a173f56b9a3afc266dbe6d9e7d2b0a6b9e7",
@@ -850,6 +1945,8 @@
     "src/pnp_lab/blind_recovery.py": "516dcd39c8e76ac2153f2a1ca4173486f17a4f42454b4974f5c9d53da38e1934",
     "src/pnp_lab/block_bridge.py": "dc37ea110c8090c4aa660751d251532b9ac7c8ee9999b7637659ba6478bbaab4",
     "src/pnp_lab/case_parity.py": "7f1986014c9f38fb342e58452ccff9363ec856f22a817c3a1532ec48fb102419",
+    "src/pnp_lab/cdcl_audit.py": "1138c559f46c6af1be63f01057339a49dcfaa9226bae994814fd8f3c94e0e03d",
+    "src/pnp_lab/circuit_extensions.py": "6b12ca75d7ad6ae3a1741f10434fd303f62c0df5f404263f4b95cf67379841a3",
     "src/pnp_lab/cmr_graphic.py": "dde170de6e56bf45ead7f2dcfb595c82718ec761cc622313f15ca894f8f5514f",
     "src/pnp_lab/conservation.py": "a117836b11dddf4a8fbdf23c5f34f9fd9660a523992204f16442e7c27af20a64",
     "src/pnp_lab/correlation.py": "e808746a46221ab53fe8034004215913dc55ecc0f9233868a44fdb4046dad791",
@@ -859,6 +1956,7 @@
     "src/pnp_lab/derived_transport.py": "d1be104d4c82a4f4626cc61f5b2c13a98ae67dc1e11d8dc5fc9afa01d4b0c572",
     "src/pnp_lab/event_projection.py": "ff05d95fece479eb95adabcc484d9e3857afa6d9a597ac504c370cbf7cde3e20",
     "src/pnp_lab/expander_controls.py": "2c5e6d0b56c158f5f3464ad0d80a3061643cb6e4023228f119b8e295838dfcf3",
+    "src/pnp_lab/extension_degree.py": "1e6dbf13161449170446acb2f3d5497ea03d401405b3f120a0f00988dbc4234c",
     "src/pnp_lab/fano_minor.py": "04b801b98fb608ae605a3a80faaf1405b9c9936ad7d5861b0db7b9c317989cd4",
     "src/pnp_lab/feedback_fixture.py": "0a74cb1ac5b62291d261ae4e4a21ee6575d1419c97a66a1aba5e2da2d2dc9e63",
     "src/pnp_lab/feedback_witness.py": "f0e9cd9760d43158372a2a93bacf4b453a9e4d67e568d271927bb7e8267c5072",
@@ -897,6 +1995,7 @@
     "src/pnp_lab/parity_query.py": "6b3cc907d87df5adc51d70f1d23b1b85cce5d81fa58528c7fd472fd799952057",
     "src/pnp_lab/parity_shadow.py": "0234c1959f9134981d9f0d7faea04ccdba83870648c4d940b59889a067a9437f",
     "src/pnp_lab/pc_subspace.py": "12845adb9e29ba2f6348a002de6840e637c5d24dfd371d5165692b38ab7908ec",
+    "src/pnp_lab/physical_sat.py": "09a0e5861852829b01d088044f3ab9a2f467ddf1120bf2c760c2789f06486701",
     "src/pnp_lab/polynomial_proof.py": "f3036a2a969fb556033a16b81362df775c7c73c027d16f210045e27cee3fc8e9",
     "src/pnp_lab/port_antichain.py": "983332c0e2ffd2d387d69c3fd5d0c3875aa52604d3538d3a19644c8a463ccedf",
     "src/pnp_lab/prime_spectrum.py": "505381f46ed97bbf4e34758024d648d533b8dbaf7651a0a767ac2d1478e925c1",
@@ -907,7 +2006,9 @@
     "src/pnp_lab/relations.py": "3f9b3e4097ea3617691626409f964d520c823669bb4c3eace21f2be53be6b2b4",
     "src/pnp_lab/residual_controls.py": "f8fe5436597b8315709e77e68860af83d32c038316992d38d241f61a302ee062",
     "src/pnp_lab/resolution_closure.py": "aa8014a6abe55e955b73ca3fcdf4ec8918c2c4e4fd937f951e73085162cb8a7b",
+    "src/pnp_lab/sat_scaling.py": "a07c584f3e5864620ee6e0bc68f48eeede8186b777fa849dd425770fb099aa6c",
     "src/pnp_lab/selector_events.py": "876dee5add8185bc4d896aa3e76f502d25bc9eb8cc7d0da99a16ad7db8c57b01",
+    "src/pnp_lab/shared_dag_sat.py": "618266e96191bf7d10d5839847d28f13fcf1b067a6494f665cd9f268c495d51e",
     "src/pnp_lab/signatures.py": "7e24c88818c30e0c8e3663ab21f40a1bfb93eae8ec031555ca9088564ce4666e",
     "src/pnp_lab/simple_support.py": "63dacf70ed66b5306d2541cc5605356b8c2cd01309f564412cafa0887a4c743b",
     "src/pnp_lab/split_parity.py": "9f172875c95e1bca4f8c174d13145a81e4f70bb1f507572f0c7330b2e9c2425e",
@@ -929,17 +2030,22 @@
     "tests/test_blind_recovery.py": "2fdcb0e74fd436f8a21be2ca55425d52c2bc014351f67dd280c90b6fa4310b37",
     "tests/test_block_bridge.py": "351311b1d2a60c1841a93a027ccb5189d7db5cfe470e712e351b1d6e4145a927",
     "tests/test_case_parity.py": "bd31ed397a8e3c645cb067d7f0524c7086f3cb9acae4078c65e1ac403daf198f",
+    "tests/test_cdcl_audit.py": "3d82bc5b28c6057d21c620a5a1a9b0e30c2f4bc7d69b693a43298610aab3c51d",
+    "tests/test_circuit_extensions.py": "ccc28f57acd7e8f39514edb6e46d7e5326a0bb6ea5dfa9b90004e520fe9b4581",
     "tests/test_cmr_graphic.py": "46e7e607440f12a3cd2f2bde057e88ce69b4f81c0143896d2b3816f5ec28dc1d",
     "tests/test_conservation_gate.py": "293c6a7b9fd821b0eb9d047e85e7f4b517b0df3dfba0967441cf0c95632974c7",
     "tests/test_correlation.py": "8c78ba4013b4be67c8135e2b540f378bfb37b736f9caa687b38df1a79b122d7a",
+    "tests/test_cubic_phase_sat.py": "2c26decc46522f5d09de8a0b56d6bdeb97cb26ac42b17296f809771e4c3f3d40",
     "tests/test_cyclic_four.py": "9d077d34de161ff6833ba69d729e289107e17870e65b52947586178a9c1ab097",
     "tests/test_decision_labels.py": "8b28700f59dc0a78ab4283c27c0457b8a04bc92e7c4a16f665e09ee620a3a5d8",
     "tests/test_decision_pruning.py": "8c76ac38457c1db7e038cc6c3f08960d54ea6c9811ae12d1e5d627a0d02a0b27",
     "tests/test_derived_transport.py": "b7dabbae86f0f87493f59a289c895dd9348133c93bc42b6cbcdf726122e4b354",
+    "tests/test_eth_polynomial_repair.py": "107bfd9f33b4d9d403bb1cee2e4e2390d8f6248c9476c61419a3b9e0060a3f4b",
     "tests/test_event_projection.py": "2054d821ee68834bde632d7d8af9b26b584d6910c7a1501fec8b6360dae76f89",
     "tests/test_exact_affine_one_cover.py": "be1437a519fbf4e24035317d361f8bf5272ce810e19e3b29b970b5c970ee9789",
     "tests/test_expander_controls.py": "61c2d3085f547b061414e239c47bf0e1ebfba60f4417f42d41d7a09a04061874",
     "tests/test_expander_separation.py": "dc6e3db8cd7c10f829dbf0c187b163d4e0955feb26932ec7e4ec13425c5f0cc6",
+    "tests/test_extension_degree.py": "161322921157fd71306b6f852f2bd6e609d93a9d8fb11e84b5d5eb2bc494289d",
     "tests/test_fano_minor.py": "4b316341286766f0b56ce88dc4ea977d5374ac0a1dde9367b4de17887f847838",
     "tests/test_feedback_cli.py": "5262fbffd3c14d97d2d3e7d0ca44752e1c04c37d216b2c4c7541e3c04cd7717e",
     "tests/test_feedback_fixture.py": "06919069d9b2576c9b533cd2e9926ae5f9b3347ddb5d3673211a745d548a2253",
@@ -982,6 +2088,7 @@
     "tests/test_parity_shadow.py": "4daa255bf59ff462051faf4f25cd1af1321294a7a6bd237c034bfaf9bf52259c",
     "tests/test_pc_subspace.py": "1782424099cc2bacc5af55c4f4aaf8621c08ed97c552efadbabe706494c277fa",
     "tests/test_phase13_driver.py": "00f1919f4c5b9c5d12a83cc643defd69ca28ac8408bbaaca0533bc58ca0f18e5",
+    "tests/test_physical_sat.py": "0bf65b88c19b4b87b4113d2cdaabfeb226c6efff231a0d7910759ff24a4db84f",
     "tests/test_polynomial_proof.py": "1d7186244849bf6ec142207eadd55d561f2bec886134803c5bf15f92a165211d",
     "tests/test_port_antichain.py": "8003700e5919d670e3e39c0e561c905ce715be6fdea081847d1a0fa7a89879a7",
     "tests/test_prime_spectrum.py": "b227aeeed1691146bcd48d5085c8f6d125c87f48f090e9f36b6dcad7ebaf575f",
@@ -991,6 +2098,8 @@
     "tests/test_relations.py": "eface02cc894278df02b3ed5c3f4d5620762a7e6e5c0a582cd8686fe4fd0717e",
     "tests/test_residual_controls.py": "3dd4d85749c30d44cac19dae1ab5e2d8b67bcd9202517701f89c2b15ddb53ba0",
     "tests/test_resolution_closure.py": "3dcba57cbf4249e8b6f011b7f46373c66cccdd7a138b0ced431b3f063f6fd0e3",
+    "tests/test_sat_scaling.py": "85282c7e783c1cbe87ae8e8826a77b5f9279720b91e0b1a655cab3de7388c4de",
+    "tests/test_shared_dag_sat.py": "da2f2ca799132c626c23395eb89119a53984f3920a5c9e3936ba2d0bfa8cb33d",
     "tests/test_signatures.py": "9cd45fe73af3750f5b6f389beeb97277b81488a00e2e0a4e19b74f2cda7a0266",
     "tests/test_split_parity.py": "7354df01abdb4913e2f7b57eb9e033ccb16c236c0f9550957fabe07f038497ed",
     "tests/test_support_localization.py": "9d8472e928ea48f41e020455feb26cc5dfd066981b2c4dadcab81929e5d5a91f",
@@ -1003,8 +2112,12 @@
     "tests/test_transport_padding.py": "762346bca18ff5eaf4a65f3ad07b2d322bf21ef3172f7a1b4eca230f370d4806",
     "tests/test_trit_solver.py": "0ed6bcb580f7af78422162699f04e362592c5c25cf8c48719d44af3e58a7c89c",
     "tests/test_unit_matching.py": "4c452d9925ba2e11eed1f12613103d29416b8991a6902ad2a568f4b2c205398f",
+    "tests/test_violation_moments.py": "93f92df94bb7bababade863db677c6f7288468c46b8b04c4356b45429dda1ab4",
     "tests/test_width_transfer.py": "5c45705539330e8355840b63bd0253b4fffba47dc5638c6b6a7513c46be3bbe8",
     "tests/test_witness_transport.py": "491c07d2dbc3265f07fb7e1749b7aff2e0548d38eecfaf5e1968bc53f1223b55",
+    "third_party/drat_trim/LICENSE": "71ab2a9dc5a294ad8fba4ccb8c45aaa8a439596d314a2a046ac9b62266872a18",
+    "third_party/drat_trim/drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "third_party/drat_trim/manifest.json": "bffaab1c8b7275c0a7b5d67c04b83110ab4790c452c19e3306610d82ec686d7f",
     "third_party/openai_math/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
     "third_party/openai_math/README.upstream.md": "6cb7f0e387b67c051227c6ba27aca87ee82d9dd2530b6452b86b8681a2e2743a",
     "third_party/openai_math/lean/ComparatorChallenges/SubexponentialSAT.json": "debbfdc9c01104d2369be80da5180978275106df8b685f693fba7ce7da7c5b19",
@@ -1059,7 +2172,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 392,
+  "unit_tests_passed": 467,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",
@@ -1071,6 +2184,14 @@
     "nu": 19
   },
   "upstream_schedule_total_cutoff_computed": false,
+  "violation_moment_audit": {
+    "assignments_enumerated": 599168,
+    "decision": "Reject a universal truncated-aggregate shortcut; no fast full-moment construction obtained.",
+    "formula_count": 10,
+    "largest_matching_nonconstant_order": 11,
+    "scope": "Exact finite counterchecks of the all-size standard parity argument in this script. No new theorem of complexity theory, new Lean proof, or evidence distinguishing P from NP. The counterexample formulas themselves are solved by recovered Gaussian elimination.",
+    "subset_visits_executed": 205048
+  },
   "witness_transport_summaries": {
     "split_parity": {
       "forcing_models": [

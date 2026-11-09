@@ -1,11 +1,226 @@
 # Research objective and audited starting point
 
 **Goal:** a complete mathematical proof of P=NP or P≠NP. **Status:** open.
+On 2026-11-07 JST the user also accepted approximate empirical tendencies
+as a deliverable. This adds a separate experimental track; it does not
+weaken the requirements for a complete proof or supply probabilities of
+either complexity-class relation.
 The [solution criteria](solution_criteria.md) specify the quantifiers; Clay's
 [official listing](https://www.claymath.org/millennium/p-vs-np/) still marks
 the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
+
+## Current continuation: physical time evolution (2026-11-09 JST)
+
+The user requested implementing a physical approach. The
+[spin-energy model](../src/pnp_lab/physical_sat.py) maps arbitrary width-at-most-three
+CNF to degree-at-most-three spin interactions, with energy zero exactly at its
+models. It implements bounded classical lazy Metropolis trajectories with exact
+rational acceptance, plus uniform initialization and zero-temperature restarts.
+All returned witnesses are checked; exhausting time, precision or randomness
+budgets returns UNKNOWN. Preparation and local-minimum detection are charged.
+
+An easy unit-forced CNF family has energy `n-k+2k(n-k)` at weight `k`, and
+`2n^2-n` clause positions. Exact birth-death recurrences show strong ground-state
+equilibrium concentration together with extremely slow arrival from all zeros.
+The module also proves an all-size deadline bound for every fixed temperature:
+for even `n>=2`, success by tick `t` is at most
+`min(1,(t+1)*max(2^(2-n/2),(127/128)^n))`. The cold case uses reversibility and
+a middle-weight crossing; the warm case uses domination by independent bit
+resets. This probability bound avoids the invalid inference from a large mean
+alone to failure within polynomial time. The argument is not Lean-formalized.
+
+The same family is easy from its explicit unit clauses. Uniform zero-temperature
+restarts succeed with probability 1/2 per endpoint run and expected polynomial
+total work. The revised implementation returned checked witnesses in all 12
+bounded control runs. Thus the fixed-temperature, all-zero-initialized local
+solver branch is stopped, while random initialization is an effective repair
+for this family only. No general guarantee for the revised solver or UNSAT
+decision has been obtained. Time-varying temperatures, collective updates,
+quantum dynamics and all other physical methods are not excluded.
+The [report](../results/physical_sat.json) and [figure](../results/physical_sat.png)
+distinguish exact analysis, finite controls and evaluated all-size inequalities;
+none is a measurement of hardware seconds or new evidence for P versus NP.
+
+## Previous continuation: OpenAI ETH construction revisited (2026-11-09 JST)
+
+The user's [DataCamp article](https://www.datacamp.com/blog/ai-exponential-time-hypothesis)
+led back to the pinned OpenAI primary source, already covered by the
+[reuse audit](openai_math_reuse.md). The new
+[polynomial-repair experiment](../experiments/eth_polynomial_repair.py)
+optimizes over all rational polynomials of the stated small degree in the
+auxiliary swap construction. Across 51 parameter cases, one nonconsecutive
+quadratic improves the correction rank by about 3.4% against the best
+consecutive interpolation or constant choice. Its remaining defect exceeds
+37% of the ambient dimension: this is not a complete small-tail SAT design,
+an end-to-end speedup, or a novelty claim.
+
+The analysis also rules out polynomial time by retuning the overview's
+explicit coordinate/Taylor scans alone. Retaining its incidence-balancing
+hypotheses separately forces a group of size at least sqrt(2n), even if
+the spectral rank is calculated implicitly. These are bounds on named
+constructions and sufficient hypotheses, not on all designs or SAT algorithms.
+A complete-proof attempt needs a new balancing/evaluation mechanism that
+handles the actual formula-dependent measurements. Counting their spectral
+multiplicities does not provide that mechanism. No new complete-proof
+candidate or upstream Lean replay is claimed.
+
+## Previous continuation: two algebraic SAT mechanisms checked (2026-11-09 JST)
+
+The [moment audit](../results/violation_moments.json) rejects deciding from a
+short prefix of aggregate violation-count moments: opposite-status proper
+3-CNFs agree through an order linear in the number of variables. These examples
+are themselves Gaussian-solvable. This does not exclude computing more moments
+efficiently or using other formula structure; no such general algorithm was found.
+
+The [cubic-phase audit](../results/cubic_phase_sat.json) implements the standard
+character-orthogonality reduction of SAT to a sparse cubic sign-sum zero test.
+Its polynomial-time quadratic elimination control is correct; extending that
+step unchanged to cubic phases fails even on the reduction of a one-gate AND
+circuit, falsely returning zero. The required fast cubic zero test remains
+absent. The executable modules contain the standard arguments,
+budgeted reference evaluations and independent checks. No new mathematical-result
+note, general SAT algorithm, all-algorithm lower bound or Lean proof is added.
+This is a failed-shortcut check and a verified reduction, not a complete-proof
+mechanism or evidence assigning a probability to P versus NP.
+
+## Objective: return to P versus NP itself (2026-11-08 JST)
+
+The user redirected the work to P versus NP after completion of the
+[phase-20 F2 theorem](phase20_formalization.md). Preserve that checked theorem
+as a completed proof-system result. Further refinements of its constants,
+restricted-model formalizations and larger solver benchmarks are not the
+current main task.
+
+The return-to-goal audit found no established simulation taking an arbitrary
+polynomial-time SAT decider to polynomial-size original-variable affine-clause
+refutations. Circuit encodings describe computations, but the existing results
+do not eliminate their auxiliary variables with the resource bounds needed
+by phase 20. Nor does a refutation-length bound alone force a decider to output
+such a refutation. Thus the completed theorem does not presently supply the
+missing all-algorithm argument.
+
+Use the existing [solution criteria](solution_criteria.md) as the admission
+gate for subsequent candidates: a uniform, correct, polynomial-time algorithm
+on all general 3-SAT inputs, or a lower-bound argument quantified over all
+correct deterministic deciders and every polynomial time bound. Circuit-size
+existence is not a uniform construction; a finite trend is not either result.
+Candidate mechanisms must charge their actual bit costs, auxiliary variables,
+shared subcomputations, preprocessing and witness discovery. Reject a candidate
+when its essential lemma fails, without expanding its implementation merely to
+accumulate more restricted results.
+
+The matrix, shared-DAG rewrite and attempted MCSP streaming arguments remain
+stopped for the reasons already recorded. No new surviving core argument or
+P-versus-NP conclusion was obtained by this redirection audit. Choosing a target
+equivalent to the goal is not itself a proof mechanism. The entries below are
+historical work, rather than a claim that the experimental track remains active.
+
+## Previous continuation: practical CDCL and independent proofs (2026-11-07 JST)
+
+The [CDCL continuation](cdcl_audit.md) runs pinned Glucose 4.2.1 and
+CaDiCaL 1.9.5 via PySAT on all 416 previous formulas and 288 larger fresh
+formulas. Both solve every paired case, including all 22 previous DPLL
+budget interruptions. Across 1,408 measured runs there are 267 checked SAT
+models, 980 independently DRAT-checked refutations and 161 UNKNOWNs.
+Another 516 truth-table/parity controls and rejection of a false proof
+test the integration. All 224 graph-XOR inputs are also solved by the
+polynomial Gaussian route, with checked original-row contradictions.
+
+Larger random and XOR cases exhaust the requested conflict budget. Native
+budgets are soft: one backend can overshoot by a large amount, so completed
+fractions cannot rank speed at equal work. The report computes median
+intervals under variable right censoring; every extended series has an
+unresolved median, so the predefined complete-series curve comparison is
+withheld. No completed-only fit, exponential-rate assertion or P-vs-NP
+probability is reported.
+
+The result strengthens the operational control: even multiple practical
+CDCL solvers can struggle on a polynomial-time fragment. This does not
+isolate clause learning causally, since branching, propagation and
+preprocessing differ too. More finite solvers alone will not close the
+all-algorithm quantifier. No active complete-proof mechanism or new
+general lower bound follows. External runs/proof checking are optional,
+separate from the standard-library core reproduction, with pinned source
+and dependency manifests and saved native-binary provenance.
+
+## Initial strategy: calibrated finite-size trends (2026-11-07 JST)
+
+The [new experiment](sat_scaling.md) follows a [fixed protocol](sat_scaling_protocol.md)
+comparing two auditable DPLL algorithms on random proper 3-CNF at two
+densities and on a polynomial-time XOR control. Smaller sizes train
+polynomial, square-root-exponential and exponential curves; larger sizes
+compare their predictions. Work caps are retained as right-censored
+observations, and non-exact medians are never fitted. Returned witnesses
+and refutations are checked separately on original inputs.
+
+Across 416 formulas, 810 of 832 DPLL runs completed and 22 were censored.
+At density 4.25 the shortest-clause heuristic favored the exponential
+model on held-out sizes; at density 6 the primary fits favored the
+intermediate model, with changes under the predefined training-window
+sensitivity check. These are finite distribution-specific observations,
+not asymptotic rates or evidence quantifying the probability of P≠NP.
+
+The polynomial-time control also favored exponential DPLL growth. Its
+128 contradictions were all solved by reconstructing XOR rows from the
+original CNF and checking Gaussian row-sum certificates. Thus the chosen
+curve classifier cannot distinguish polynomial-time solvable fragments.
+This supplies a concrete calibration against the invalid inference from
+one solver's growth to all-algorithm hardness. No new complete-proof
+candidate, general SAT upper/lower bound, or Lean extension is claimed.
+
+Use measured failures to identify missing inference capabilities and
+candidate mechanisms. Clause learning/restarts and external competitive
+solvers were not tested here. Increasing the finite portfolio alone will
+not establish a universal lower bound. Previous failed matrix and MCSP
+branches remain parked.
+
+## Previous strategy: Boolean matrix evaluation (2026-11-06 JST)
+
+The user requested a new strategy. The [matrix evaluation attempt](boolean_matrix_sat.md)
+switches to the P=NP direction: preserve Boolean laws with commuting
+idempotent matrices and decide SAT by an ordinary matrix zero test.
+It does not reopen the parked MCSP branch.
+
+Standard orthogonal-idempotent decomposition classifies the method: a
+d-dimensional tuple represents at most d assignments. Completeness for
+all formulas with a tuple independent of the formula therefore forces
+d>=2^n, already using singleton CNFs. Both one satisfying assignment and
+the entire represented support can be recovered in polynomial time from
+the matrices. This removes any hidden assumption about efficient
+simultaneous diagonalization and shows that evaluation is equivalent
+to checking an explicitly recoverable list of at most d words.
+
+Formula-dependent complete polynomial-size tuples would suffice, but
+a uniform polynomial-time constructor for them is equivalent to P=NP;
+their dimension-one existence follows from having a satisfying assignment
+and is not an algorithm for finding one. No such constructor was found.
+The universal construction is rejected. The bounded matrix audit and
+extractors were executed; no general SAT solver or Lean extension was
+added. There is still no active complete-proof candidate.
+
+## State-reduction outcome (2026-11-06 UTC)
+
+There is no active complete-proof candidate. The current MCSP lower-bound
+attempts are parked after the [state-reduction audit](mcsp_state_reduction.md).
+This does not rule out hardness magnification as a field of research.
+
+The attempted extraction of a hard answer from a streaming state must
+charge the exponentially many reads needed to reach it. Exact iteration
+of a Boolean transition circuit for a binary-encoded duration is
+PSPACE-complete; a generic polynomial-time shortcut would imply P=PSPACE.
+A conditional wrapper can also add an irrelevant PSPACE-answer component
+to any putative fast MCSP solver while preserving its polynomial resource
+bounds. The encoding uses truth tables H followed by zeros, all with an
+explicit circuit below the n^2 budget. Hard state contents alone do not
+force a hard update or a hard MCSP answer.
+
+The note gives the complete configuration-simulation and gate-count
+arguments and checks the easy-input circuit construction on 30 headers.
+No new unconditional time lower bound follows. A new approach must supply
+an actual resource-valid proof mechanism; further representation counter-
+examples by themselves will not close the complete-proof objective.
 
 ## Starting audit for this cycle
 
@@ -34,6 +249,135 @@ This is neither rejection of the upstream theorem nor a successful local
 rebuild. Even the stated subexponential bound would not supply a polynomial
 one. We retained the pinned sources and their integrity checks, without
 restarting the expensive unfinished audit.
+
+## Direct attempt at the missing core (2026-11-06 UTC)
+
+The user asked to address the missing streaming lower bound itself. The
+[direct attempt](mcsp_update_core.md) tests actual proposed arguments:
+prescribed-witness hardness, unavoidable updates, and a minimum-circuit
+potential. A coNP-complete validation predicate can coexist with a trivial
+repair on the very same reachable zero prefixes. A known candidate can
+also be checked during the long input stream with polynomial work per bit.
+Neither observation proves that every algorithm incurs a slow update.
+
+For prefix p=00101 on three inputs, two explicit three-gate circuits
+give opposite next bits, while no circuit of two gates fits p. Thus
+mu(p)=mu(p0)=mu(p1)=3: a forced representative change need not increase
+minimum size. A point-indicator construction also proves
+mu(p) <= mu(pb) <= mu(p)+2n+3. An unavoidable first rejection therefore
+has its previous minimum size in (s-2n-3,s], but recognizing that boundary
+efficiently or proving it hard remains unresolved.
+
+These are elementary paper arguments with a bounded reproducible audit,
+not a new MCSP solver or a Lean extension. The audit checks the small
+counterexample exhaustively, 2,120 point repairs and 16 validation/search
+controls. None supplies the all-algorithm, all-polynomial lower bound.
+There is still no complete proof or surviving proved core mechanism.
+
+## Early-pruning continuation (2026-11-06 UTC)
+
+The user explicitly permits stopping unpromising branches early. Apply
+this before building another solver or formalizing a restricted result:
+state the exact implication to P=NP or P≠NP, its unresolved hypothesis,
+and what the proposed argument does beyond the already rejected approach.
+If the route fails that check, record the reason and stop it. A conditional
+bridge or a finite experiment is not itself a complete-proof candidate.
+
+The [MCSP streaming audit](mcsp_streaming_gate.md) checks a genuine route
+to P≠NP against McKay–Murray–Williams, STOC 2019, Theorem 1.3. It fixes
+ordinary circuits of size s(n)=n^2, lexicographic truth-table order, uniform
+one-pass search algorithms, and polynomial-in-s space **and** update and
+reporting time. The needed lower bound quantifies over every algorithm
+and every fixed polynomial. A self-contained prefix-repair argument
+reconstructs the P=NP implication underlying this known bridge.
+
+The memory-only attack fails immediately: even without P=NP, exhaustive
+repair maintains one prefix-consistent circuit in O(s log s+n) space.
+Only its update time is large. Ordinary polynomial identity testing also
+does not test Boolean-cube identities, and magnification with an endpoint
+such as NP not contained in NC1 alone does not give P≠NP. These branches
+were cut before adding experiments. A direct diagonal simulation did not
+respect the same size-s budget for arbitrary polynomial update exponents.
+
+No new all-algorithm lower bound or active proof candidate resulted. Stop
+phase-28 implementation work. Retain the sourced target as an open
+obligation; do not assume that all future streaming algorithms must use
+the particular repair routine. No new executable, formal theorem or test
+count is claimed in this continuation.
+
+## Phase 28: execute a shared-circuit SAT alternative (2026-11-06 UTC)
+
+The user requested a different method. The new [shared-DAG solver and
+audit](shared_dag_sat.md) pursue the P=NP direction without expanding
+nonlinear definitions into polynomials. The exact cofactoring procedure
+uses structural hashing, constants, XOR cancellation, whole-sum common
+factors and memoized decision results. It accepts circuits or CNF, checks
+SAT witnesses on the input, and distinguishes UNKNOWN on resource exhaustion.
+
+The proposed polynomial state bound is false: a linear-size circuit family
+requires at least 2^(k-2) nonterminal states with the stated a-first order.
+The paper proof counts actual UNSAT search states, not a full representation
+that a decision procedure need not construct. The same circuits need at
+most two states with selectors first, and a one-selector factoring control
+needs none. No all-order or all-algorithm hardness follows. The precise
+family is independently zero by Boolean algebra and by finite polynomial
+expansion; small truth tables and ten new tests check the implementation.
+
+Keep the executable and counterexample as regression artifacts. Reject the
+all-input sharing/local-rewrite hypothesis; further tuning this variable
+order does not answer the missing uniform complexity bound. General
+semantic circuit equivalence cannot be assumed as a free compression rule.
+This is a Python implementation and paper argument, with no additional Lean
+claim, no novel-algorithm priority claim, and no complete P-versus-NP proof.
+
+## Phase 27: degree-accounted extensions and the sharp limit (2026-11-06 JST)
+
+The [extension substitution theorem](extension_substitution.md) is now part
+of the ordinary-PC Lean package. A degree-B extended proof substitutes to
+an ordinary proof through degree DB when every coordinate polynomial has
+degree at most D, original Boolean axioms are present, and definitions hold
+on the entire original Boolean cube. The new gate lemmas discharge that
+semantic premise for the stated AND/XOR/NOT coordinate choices. The package
+build and all 142 transitive axiom audits passed, including 16 new endpoints.
+
+The formal obstruction is also explicit: AND of n variables has polynomial
+degree at least n under every representation of its Boolean function, even
+though it has n-1 binary gates. Substitution of the output Boolean axiom
+then produces an ordinary degree-2n polynomial. This makes the direct
+line-by-line transfer factor sharp; it is not a lower bound on all possible
+refutations or simulations. OR supplies a separate exponential sparse-size
+control, while XOR and the previous inner product have low coordinate degree.
+
+Five new independent tests and a deterministic report check the executable
+coordinate expansion, ordinary Boolean corrections, and explicit resource
+limits. Stop trying to infer bounded coordinate degree or polynomial sparse
+expansion from polynomial gate count. The theorem remains useful for its
+bounded-degree class. A general argument preserving auxiliary definitions
+and shared circuit/proof size is still missing; no complete P-versus-NP proof
+or candidate meeting the full goal has been obtained.
+
+## Phase 26: nonlinear extensions and the goal-level gate (2026-11-06 JST)
+
+Starting checkout was `68646aaf6af142a354d04c33c412e012900b9ebd`, including
+phase 25's exact `2^m-1` cover number. The user reaffirmed a complete proof
+of P=NP or P≠NP as the objective. We stopped further affine-cover sharpening
+as the primary route: it does not address general computation.
+
+The [new extension audit](circuit_extensions.md) implements unique-extension
+Tseitin CNF and an explicit ordinary-resolution proof generator for duplicate
+circuits with opposite outputs. For the inner-product family, the paper proof
+gives width three and exactly `32m-18` proof lines. Seven new independent
+tests and a deterministic report include replay through `m=1024`, as well as
+SAT controls and proof tampering. This tests the precise proposed simulation
+boundary; it neither refutes the earlier expander lower bound nor provides
+a general circuit-equivalence or SAT algorithm.
+
+The note also proves that uniform polynomial-time existential projection of
+arbitrary Boolean circuits is equivalent to P=NP. Retaining nonlinear gates
+avoids the chosen affine representation obstruction but leaves this global
+computational problem unresolved. No complete P-versus-NP proof or candidate
+meeting its quantifiers was obtained. The old expander and full restricted
+lower-bound formalizations remain separate work; do not claim them finished.
 
 ## Phase 24: the affine-cover/circuit boundary (2026-11-06 JST)
 
@@ -176,6 +520,23 @@ obtained.
 
 ## Phase 20: dated outcome (2026-11-05 UTC)
 
+**Formalization completion, 2026-11-08 JST:** the actual normal forms,
+ordinary-PC separation, connected-obstruction density, semantic distinct-flat
+count and source-DAG budget are now composed with a proved support-family
+existence theorem and the explicit exponential specialization. The final
+`Phase20.exists_unsat_exponential_lower_bound` has no family-existence,
+separation, density or asymptotic comparison premise. It quantifies over every
+`n ≥ 16 * 1024 * 12288^4 * 10^16`, constructs an UNSAT proper linear 3-CNF
+with `12n` clauses and occurrence at most 4096, and bounds both source-DAG nodes
+and distinct nonempty high-rank false flats by
+`(1/4) * exp(n / (81 * 2^65 * 10^32))` from below. The full package build and
+390 theorem axiom audits (70 new endpoints after the earlier 320) passed locally.
+See the [exact scope and proof map](phase20_formalization.md) and
+[source-bound record](../results/phase20_complete_formal_audit.json).
+This completes the specified F2 proof-system theorem. External review,
+priority assessment and an all-algorithm lower bound remain separate questions.
+The following paragraphs preserve the original paper-stage outcome.
+
 Starting main was `c6a2b2e758c618c355149b70fc24437c470db145`.
 Its 474 file blobs matched the local tree before editing. Recent history,
 open PRs (none), and successful head CI runs were checked. This cycle took
@@ -190,8 +551,9 @@ exponential node-count bound, and even an exponential count of distinct
 high-rank falsity flats, on an existential proper linear 3-CNF family.
 Arbitrary sharing, depth, and parity support are allowed. The source lines
 remain affine clauses on the original F2 variables. This paper argument
-was independently examined within the cycle; complete formalization,
-external review, and any priority assessment remain outstanding.
+was examined within the original cycle; at that checkpoint, complete
+formalization, external review, and priority assessment were outstanding.
+The completion note above updates the formalization status.
 
 The [upstream source audit](braun_generic_audit.md) read and hash-verified
 17 additional pinned Lean files. No upstream build was run. The new

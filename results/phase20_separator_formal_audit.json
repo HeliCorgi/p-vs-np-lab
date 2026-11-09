@@ -1,0 +1,1623 @@
+{
+  "all_endpoint_axioms": {
+    "BoundaryLab.AffineClauseDAG.affine_clause_dag_replay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_eq_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_one_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_eval_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_derived": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.nodePolynomial_of_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.polynomialDag_of_clauseDag": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineClauseDAG.retained_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.affine_span_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.eq_affinePolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.eq_zero_of_linearPart_zero_of_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.eval_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.eval_translate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.finrank_slopeSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.linearPartMap_span_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.linearPart_mem_slopeSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineCoefficients.mem_slopeSpace_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.affinePolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.cnfClause_falsityPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_derivable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.compressedPolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.eval_falsityPolynomial_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.exists_basis_subclause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.falsityPolynomial_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.literalForm_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineIndicators.ordinary_cnf_initial_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.finrank_restrictionOn_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.mem_ker_restrictionLinear_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.ordinarySubstitution_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.ordinarySubstitution_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionLinear_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionLinear_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.AffineRestriction.restrictionOn_range_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.booleanEval_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.card_lowSupports": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.eval_mem_lowDegreeFunctions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.finrank_lowDegreeFunctions_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.mem_lowSupports": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanFunctionSpace.supportMonomial_mem_lowDegreeFunctions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.booleanBase_subset_clauseIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.booleanIdeal_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.boolean_generator_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.boolean_generator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_ne_top_of_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_eq_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_supportMonomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_clause_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_multilinear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.rawClause_mem_clauseIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DAGDimension.dag_separated_dimension_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.family_kernel_budget_of_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.finiteDimensional_of_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.kernel_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.pc_separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DimensionBudget.separated_family_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.affine_clause_distinct_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.affine_clause_separated_distinct_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.affine_clause_separated_distinct_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.affine_clause_separated_line_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.booleanBudget_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.card_distinctFlats_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.mem_distinctFlats": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.representative_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.spanRank_eq_of_zeroSet_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DistinctAffineFlats.zeroSet_ncard": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.coordinateEquiv_annihilates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.existsUnique_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.finrank_add_finrank_commonKernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.finrank_commonKernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.finrank_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.DualKernelCoordinates.mem_commonKernel": [
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderDAGLowerBound.expander_goodSupports_le_distinct_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderDAGLowerBound.expander_goodSupports_le_line_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderLocalConsistency.exists_assignment_of_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderLocalConsistency.exists_assignment_of_private_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderLocalConsistency.exists_clause_polynomial_zeroes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderLocalConsistency.literalForm_mem_cnfClause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderLocalConsistency.signedClause_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.finrank_goodSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.goodSpace_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.goodSupports_le_distinct_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.mem_goodSupports": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.supportExponent_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.supportExponent_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.supportExponent_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.supportMonomial_eq_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderMonomials.supportMonomial_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.exists_private_outside_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.normalForm_support_enlarge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.normalForm_vars_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_of_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_of_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_remove_private": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_rawClause_of_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_rawClause_satisfied": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.rawClause_eq_prod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.boundary_singleton": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.goodSpace_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.rawClause_vars_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_boolean_generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_derives_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_eq_normalForm_of_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_fixes_goodSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_fixes_good_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_monomial_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_mul_term": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_mul_var": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_rawClause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.support_card_le_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.termReduction_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.boundary_biUnion_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.boundary_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.boundary_support_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.boundary_union_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.boundary_union_subset_sdiff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.card_biUnion_le_of_supported": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.card_le_of_supported": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.mem_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.mem_supportedSets": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.subset_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.support_absorbs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.support_card_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.support_eq_empty_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.support_mem_supportedSets": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderSupport.support_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.and_boolean_axiom_exact_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.and_boolean_axiom_replay_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.and_definition_vanishes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.and_representation_degree_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.coordinates_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.derives_substitution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.extension_derives_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.extension_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.extension_refutation_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.not_definition_vanishes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.original_substitution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.refutation_substitution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.substitution_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.supportMonomial_exact_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.supportMonomial_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExtensionSubstitution.xor_definition_vanishes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.eq_zero_of_standard_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.exists_normal_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_of_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_idempotent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_mem_standardSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_mul_normalForm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_totalDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normal_form_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.standard_of_ideal_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.standard_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.sub_normalForm_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.affine_clause_intrinsic_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.affine_clause_separated_intrinsic_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.finrank_optimalRestriction_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.mem_nonemptyDiscardedNodes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.optimalCoordinates_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.optimalRestriction_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IntrinsicAffineRestriction.parameterCount_le_of_high_rank": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.boolean_zero_pc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_mem_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.masked_dag_replay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.MaskedDAG.replay_low_nodes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.normalForm_eq_of_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.notMem_vars_normalForm_of_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.notMem_vars_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_C": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_X": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_eq_self_of_notMem_vars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_standard": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.clauseZero_add_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.clauseZero_iff_sub_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.coordinateMap_coordinatePolynomials": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.coordinateMap_eq_optimalAffineMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.coordinateMap_optimalCoordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.coordinatePolynomials_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.exists_optimal_affineMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.exists_optimal_parameterization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.finrank_direction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.optimalCoordinates_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.optimalCoordinates_existsUnique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.optimalCoordinates_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.optimalCoordinates_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.parameterLinearMap_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.spanRank_le_card_variables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.OptimalAffineParameters.spanRank_le_card_variables_of_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.affine_clause_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.affine_clause_separated_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.dag_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ParametrizedDAGDimension.dag_separated_restriction_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.card_point": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.cover_count_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.cover_parameter_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.exponential_cover_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.positiveSlice_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticAffineCover.quadratic_positiveSlice": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.constant_on_translate_isotropic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.finrank_le_of_constant_translate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.finrank_le_of_isotropic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.finrank_point": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.finrank_polarImage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.le_commonKernel_polarImage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.parameterCount_le_of_constant_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.polarDual_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.polarDual_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.polarDual_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.polarEquiv_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.polar_add_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.quadratic_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.QuadraticPolar.quadratic_second_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.Derives.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.Derives.mul_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.boolean_vanishing_ns_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.nsSpace_le_pcSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.polynomial_boolean_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eq_zero_of_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MathResearch.PolynomialCalculus.squarefreePart_ns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audit_command": "cd formal_pc && python3 audit.py",
+  "audited_endpoints": 245,
+  "base_commit": "68646aaf6af142a354d04c33c412e012900b9ebd",
+  "build_command": "cd formal_pc && lake build ProofLab",
+  "explicit_endpoint_hypotheses": [
+    "Finite clause and variable types, with a linear order on variables for degLex.",
+    "Strict half-boundary expansion for all nonempty clause subsets of size at most s.",
+    "B = k + 3 R, 1 <= B, 4 B <= s, and every raw source support has size at most B.",
+    "The actual Boolean generators and signed raw-clause polynomials are the source axiom set.",
+    "A sound source DAG with affine clauses, initial-clause width at most R, and an empty final clause."
+  ],
+  "full_phase20_lower_bound_verified": false,
+  "new_endpoints": {
+    "BoundaryLab.BooleanIdealNormalForm.booleanBase_subset_clauseIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.booleanIdeal_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.boolean_generator_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.boolean_generator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_eval_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.clauseIdeal_ne_top_of_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_eq_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_boolean_supportMonomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_clause_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.normalForm_multilinear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.BooleanIdealNormalForm.rawClause_mem_clauseIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderDAGLowerBound.expander_goodSupports_le_distinct_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderDAGLowerBound.expander_goodSupports_le_line_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.exists_private_outside_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.normalForm_support_enlarge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.normalForm_vars_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_of_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_of_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_clauseIdeal_remove_private": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_rawClause_of_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.pin_rawClause_satisfied": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderNormalForm.rawClause_eq_prod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.boundary_singleton": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.goodSpace_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.rawClause_vars_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_boolean_generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_derives_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_eq_normalForm_of_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_fixes_goodSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_fixes_good_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_monomial_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_mul_term": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_mul_var": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.reduction_rawClause": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.support_card_le_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.ExpanderReduction.termReduction_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.eq_zero_of_standard_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.exists_normal_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_of_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_idempotent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_mem_standardSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_mul_normalForm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normalForm_totalDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.normal_form_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.standard_of_ideal_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.standard_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.IdealNormalForm.sub_normalForm_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.normalForm_eq_of_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.notMem_vars_normalForm_of_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.notMem_vars_pin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_C": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_X": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_eq_self_of_notMem_vars": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BoundaryLab.NormalFormRestriction.pin_standard": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "ordinary_pc_separation_from_expansion_verified": true,
+  "package_build_passed": true,
+  "python_reproduction": {
+    "command": "python scripts/reproduce.py --out-dir reproduced --check",
+    "deterministic_reports_matched": 68,
+    "scope": "Existing Python checks and deterministic reproduction; not a proof of the asymptotic theorem and not the Lean audit.",
+    "status": "PASS",
+    "unit_tests_passed": 430
+  },
+  "raw_log_sha256": {
+    "phase20-separator-audit.log": "57bee0f82b5ffe884085867eab4bf59469c418f3eed78b830765fa973ba1e0aa",
+    "phase20-separator-build.log": "cd1d6c12a89b1ca213089f3e72f4c9675617fb97e90841019a804c0a34e7df14",
+    "phase20-separator-reproduction.log": "84e36a1c33df8b7e117125a97fa6a926bf7657f682270d45064cf085cd617f9d"
+  },
+  "remaining_obligations": [
+    "Prove the quantitative good-set density estimate.",
+    "Prove existence of the bounded-occurrence linear 3-CNF supports and an UNSAT signing.",
+    "Connect all estimates, floors and sufficiently-large-n quantifiers to the explicit exponential lower bound."
+  ],
+  "scope": "Actual ideal normal forms, Boolean and clause ideals, support-enlargement consistency, graph reduction with repeated-variable multiplication, ordinary-PC separation for every signing, and distinct-flat/source-line budgets with hsep discharged. Local build and transitive axiom audit; not a hosted CI run or independent replay of every cached Mathlib object. This is a formalization of known support-reduction machinery, not a novelty claim or a P vs NP resolution.",
+  "source_dag_budget_without_hsep_verified": true,
+  "source_sha256": {
+    "formal_pc/ProofLab.lean": "957c888b40b946667719586f219341def52789cfb2f0da5d0a7c2bce4e6e548f",
+    "formal_pc/ProofLab/AffineClauseDAG.lean": "69d2e600b3c84bdfa78a1db788011ec0a4e6f79d53d3d6abf897cc23f3247407",
+    "formal_pc/ProofLab/AffineCoefficients.lean": "199984b58f45154332fff8fe14d4d74a9002c286c6a32a17518cf2c33a2e9425",
+    "formal_pc/ProofLab/AffineIndicators.lean": "b9c6803274ea20b7415a535cf31bf83d624b04eedb49f9e5e327ea42ca740cf1",
+    "formal_pc/ProofLab/AffineRestriction.lean": "ffd3099d32a7713c33c7d5bf4e71277c7ac63a32057bac5f5d443d6656e0fc0d",
+    "formal_pc/ProofLab/BooleanFunctionSpace.lean": "57955b8624eff5fe2c02af5758085fb6bc2475bbab3bc3f1feced4625caada89",
+    "formal_pc/ProofLab/BooleanIdealNormalForm.lean": "9ea906ef8af7a5804a86f13cd2ba7c26821175dc7c9bee1cbc2d42bf16198205",
+    "formal_pc/ProofLab/DAGDimension.lean": "a92bb1c3434bb9b4cb6364e8a0a13b21b7aacbe02c22ba59c9eb7d9a24f65276",
+    "formal_pc/ProofLab/DimensionBudget.lean": "a322739e2fd3fa5579ca6fa040c037d0d56d517b9163cb770cf41ef799da303d",
+    "formal_pc/ProofLab/DistinctAffineFlats.lean": "4531c29053a75886525c84752708df3016ae9649bcbcbf53ef5ff06df929ac95",
+    "formal_pc/ProofLab/DualKernelCoordinates.lean": "aee7a22147a1fd6fb4db73f71fe2f5b45381ce58a6820777e9ba1d7c9c5537ba",
+    "formal_pc/ProofLab/ExpanderDAGLowerBound.lean": "9802a8674d2361655f3762876938024c22c03b832e54abb52b9d22b533526152",
+    "formal_pc/ProofLab/ExpanderLocalConsistency.lean": "145759a720ad803cf7771337fb247a03e6f4efe28bf61ebef0f99d56e984349b",
+    "formal_pc/ProofLab/ExpanderMonomials.lean": "b0c84e697ef8c776f3a0412184ec56082c262c047886e66a3ae3fbb58fab1f5f",
+    "formal_pc/ProofLab/ExpanderNormalForm.lean": "b1d2494f29d0f9588d054833966ee9dcfb8f0680ccaf0a0d3b2b0a49cc6e33f7",
+    "formal_pc/ProofLab/ExpanderReduction.lean": "32745f4fa976ec143a3369fa93f013a3c21e69712e341e419d63d63995f554b6",
+    "formal_pc/ProofLab/ExpanderSupport.lean": "ff48f1c30bd9f0b699e71df1b4f1f04e975fba91d15d597b5a61392a17e5b5fd",
+    "formal_pc/ProofLab/ExtensionSubstitution.lean": "7388db6926d7673fe07ff2397f783a952834b975dad275226ce530dc7690a1f7",
+    "formal_pc/ProofLab/IdealNormalForm.lean": "268ec3aaa2e8dd176b4e77e0dfaad924160cdbdec50a07eb08034a147d368311",
+    "formal_pc/ProofLab/IntrinsicAffineRestriction.lean": "3365a8220952e7e6e12c9586eda3bb9c9126ed88a8606ab611abe45ab453d5c1",
+    "formal_pc/ProofLab/MaskedDAG.lean": "8620a874591d32f8100d08fed2937e2e7bd6a7403df46e0126b3a439ebc88277",
+    "formal_pc/ProofLab/NormalFormRestriction.lean": "7a151a1f1c807eb08519788f9b060aec28de05fcaa92bc73382bd60a25e14733",
+    "formal_pc/ProofLab/OptimalAffineParameters.lean": "f935bef64fcb19666baee94da3634e3c4a0853fe444ea1dcb64409268c0b5d48",
+    "formal_pc/ProofLab/ParametrizedDAGDimension.lean": "6b1e5545fb13dcc85e9a5653fd7d857d36256947d2f3fdcfabcde491704475fc",
+    "formal_pc/ProofLab/QuadraticAffineCover.lean": "02c3f7f1156ffe823ee5f905c57a1a5b52ce31e80096be514061da6a6b799ea2",
+    "formal_pc/ProofLab/QuadraticPolar.lean": "85ef1f989ba02baf47d113f9de9b25ec1feb6f1c13c3e53f84ad21a1e68c6caa",
+    "formal_pc/audit.py": "ad1a87cda60807ca12ebf418baad637e6e681e64af61453a2be68545201800b9",
+    "formal_pc/audit_theorems.json": "46095c75a0f4cef8515f2155b67a593a123c647ac9ad49f16c4c99da81524b33",
+    "formal_pc/claims/BooleanReduction.lean": "4e5d93eb2510b5ae15056910087019da701f0250b59ac78421094e7ec885438f",
+    "formal_pc/claims/PolynomialCalculus.lean": "d4497f46ac69b42c808a710af8a5b8ffb82225abcb4888d15269d09a683a9e85",
+    "formal_pc/claims/PolynomialCalculusReuse.lean": "532576bb740b1b2f356e26a2929e054a8916e09bbd9d12e1318bf5ae856f7750",
+    "formal_pc/lake-manifest.json": "12a6a2c1930a552f180ff1620fcfb0d3d7cebedf100b1a1d1fe398acfd2fd696",
+    "formal_pc/lakefile.lean": "4153a6177f5c36d70b8ac77a01609923360dc3b088c8cfd16ef7dfec63bf19c7",
+    "formal_pc/lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+    "formal_pc/third_party/noemesis/manifest.json": "3e3d09b7a65f064c7d1694f60e428506d662de03d8715c17cb7007500c8d46f7"
+  },
+  "source_state": "uncommitted working tree",
+  "status": "PASS",
+  "verification_date_jst": "2026-11-08"
+}
