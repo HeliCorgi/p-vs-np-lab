@@ -11,7 +11,114 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: retain checked conflict information (2026-11-10 JST)
+## Current continuation: attempt a general-computation proof (2026-11-10 JST)
+
+The user explicitly returned the task to the complete P-versus-NP proof. We
+examined two hierarchy/circuit routes without extending the stopped physical or
+clause-learning benchmarks. Neither supplied a surviving complete-proof argument.
+The deductions below audit attempted uses of known theorems; they are not claims
+of new lower bounds or a new research result.
+
+**Attempt 1: use P=NP to compress exponential computations, then contradict a
+time hierarchy.** Let G be an explicitly encoded Boolean circuit that, given a
+clause address j, outputs three variable addresses and their negation bits for
+an exponentially long 3-CNF F_G. The encoding counts the circuit's input/output
+wires, so all address lengths are polynomial in N=|G|. A witness circuit W maps
+a variable address to its proposed Boolean value. Compose G with three copies
+of W to form B(G,W), which outputs one exactly on the clauses that W falsifies.
+Its size is polynomial in |G|+|W|, with no expansion of the full formula.
+Thus the assertion that a particular small W is valid is
+
+    for every clause address j, B(G,W)(j)=0.
+
+Under P=NP this particular circuit-UNSAT check is polynomial-time. The step
+that does NOT follow is the existence of polynomial-size W on every satisfiable
+input G. To expose the gap, consider the separate premise:
+
+    (EW) There is one polynomial p such that every satisfiable F_G has a
+         satisfying-assignment circuit W with |W| <= p(|G|).
+
+EW alone puts succinct 3-SAT in Sigma_2^P: existentially guess the polynomial
+description of W and universally quantify the clause address. Succinct 3-SAT
+is NEXP-complete; the locally accessible Cook-Levin reduction in Williams [W],
+Theorem 3.1 and Corollary 3.1, together with polynomial padding gives the needed
+small clause generators for any NEXP verifier. Consequently
+
+    EW => NEXP is contained in Sigma_2^P.
+    P=NP and EW => NEXP is contained in P.
+
+The latter contradicts P != EXP from the deterministic time hierarchy, since
+EXP is contained in NEXP. Equivalently, P=NP would force EW to fail. In fact,
+under P=NP, for every k,C,N0 there would be a satisfiable succinct input G of
+length N>=N0 with no assignment circuit of size <=C(N+1)^k. If all sufficiently
+large satisfiable inputs had that bound, the finitely many smaller exceptions
+could be absorbed into a larger constant, giving EW and the contradiction.
+This conditional statement is not an unconditional witness lower bound.
+
+The tempting invocation of an easy-witness theorem was invalid: [W], Lemma 3.1,
+assumes NEXP is contained in P/poly, not P=NP. We read this restatement and proof
+framework, not the separate original IKW paper. Indeed [W], Section 1.2, recalls
+the known implication P=NP => EXP is NOT contained in P/poly. Neither a short
+description of G nor a hypothetical polynomial SAT algorithm supplies EW.
+Explicit self-reduction of F_G would still operate on its exponential length.
+Repeatedly composing a transition circuit also lacks the required bound: the
+[previous composition-cost audit](mcsp_state_reduction.md#why-repeated-squaring-is-not-a-free-shortcut)
+already charges its growing circuit, rather than treating program reuse as
+free evaluation. No replacement construction of W was obtained. Stop here.
+
+**Attempt 2: upgrade algorithms-to-circuit-lower-bounds to P!=NP.** Murray and
+Williams [MW], Theorem 1.1, gives, for a typical circuit class C and fixed
+epsilon>0, the following implication: a nondeterministic O(2^((1-epsilon)n))
+algorithm for Gap-C-UNSAT on n-input circuits of size 2^(epsilon n) yields a
+constant c such that for every k,
+
+    NTIME[n^(c k^4/epsilon)] is not contained in SIZE_C[n^k].
+
+For unrestricted circuits this does not yet exhibit one language in NP outside
+P/poly: the hard language may depend on k. The quantifier distinction is
+
+    for every k, there exists L_k in NP outside SIZE[n^k],
+    versus there exists L in NP such that for every k, L is outside SIZE[n^k].
+
+Only the latter is a sufficient circuit route to P!=NP. This is a defect in
+our attempted inference, not in the cited theorem. To check the distinction,
+assume P=NP and let circuit UNSAT take time M^d on encoded inputs of length M.
+For s=2^(epsilon n) gates, M=O(s(n+log s)). Choose
+epsilon=1/(2(d+1)); then d*epsilon < 1-epsilon, including enough slack to
+absorb the polynomial factors in n. The hypothesis of [MW], Theorem 1.1,
+would hold, so its fixed-degree lower-bound conclusions also hold under that
+P=NP assumption. They therefore cannot supply the desired contradiction by
+themselves. P/poly permits the polynomial exponent to depend on the language.
+Similarly, mapping each L_k to SAT introduces a reduction-size exponent that
+can depend on k; we obtained no uniform bound that removes this dependence.
+
+[MW], Lemmas 1.2 and 4.1, also require a fixed circuit-size bound on the whole
+relevant nondeterministic class. P=NP merely supplies a potentially different
+polynomial for each language. Substituting it for that stronger hypothesis is
+not justified. Williams [W], Theorem 1.1, instead reaches NEXP outside P/poly;
+that larger-class conclusion alone does not separate P from NP either.
+
+**Decision and evidence.** No new candidate passes the repository's
+[complete-proof criterion](solution_criteria.md#reporting-a-possible-resolution).
+The missing compact-witness construction and the quantifier exchange are not
+accepted as interface lemmas. No new solver, finite benchmark or Lean theorem
+was added to make these failed bridges appear to advance the complete proof.
+Code and mathematical result files are unchanged. The previous executable
+commit `ec26f1c` passed its GitHub Python and both Lean workflows; that validates
+the previous scoped results, not the present paper argument or P versus NP.
+
+Primary papers read for this attempt:
+
+- [W] R. Ryan Williams, *Improving exhaustive search implies superpolynomial
+  lower bounds*, SIAM Journal on Computing 42(3), 1218-1244 (2013),
+  [author PDF](https://people.csail.mit.edu/rrw/improved-algs-lbs2.pdf).
+  Theorem 1.1; Section 1.2; Lemma 3.1; Theorem 3.1 and Corollary 3.1.
+- [MW] Cody D. Murray and R. Ryan Williams, *Circuit Lower Bounds for
+  Nondeterministic Quasi-Polytime: An Easy Witness Lemma for NP and NQP*,
+  STOC 2018, [author PDF](https://people.csail.mit.edu/rrw/easy-witness-nqp.pdf).
+  Lemmas 1.2 and 4.1; Theorem 1.1 and its proof in Section 5.
+
+## Previous continuation: retain checked conflict information (2026-11-10 JST)
 
 Pre-execution protocol for the user's requested repair: implement a small
 deterministic search with unit propagation, resolution-based conflict analysis,
