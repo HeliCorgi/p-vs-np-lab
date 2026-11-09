@@ -1,10 +1,70 @@
 {
   "cases": [
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "certificate_sha256": "74ef1cc7aeee8bd74e661574b2238c3109386f4c27baf6a63b4c4df5d76e9777",
+      "derived_resolution_lines": 6,
+      "input_clauses": 8,
+      "m": 1,
+      "maximum_clause_width": 3,
+      "positive_half_affine_cover": 1,
+      "semantic_control": {
+        "constructive_sibling_model": 15,
+        "enumerated_assignments": 16,
+        "miter_models": 0,
+        "same_output_sibling_models": 1
+      },
+      "total_proof_lines": 14,
+      "variables": 4
+    },
+    {
+      "certificate_sha256": "6c4c7f7728edaf9b2074bcb51ef4a4e12160dc4a90adef2dfed194fc92644b2a",
+      "derived_resolution_lines": 24,
+      "input_clauses": 22,
+      "m": 2,
+      "maximum_clause_width": 3,
+      "positive_half_affine_cover": 3,
+      "semantic_control": {
+        "constructive_sibling_model": 725,
+        "enumerated_assignments": 1024,
+        "miter_models": 0,
+        "same_output_sibling_models": 6
+      },
+      "total_proof_lines": 46,
+      "variables": 10
+    },
+    {
+      "certificate_sha256": "dcef4ab2fa0a2050489b7bd1c85dc210a6d16198a96577f500463178b488e81b",
+      "derived_resolution_lines": 42,
+      "input_clauses": 36,
+      "m": 3,
+      "maximum_clause_width": 3,
+      "positive_half_affine_cover": 7,
+      "semantic_control": null,
+      "total_proof_lines": 78,
+      "variables": 16
+    },
+    {
+      "certificate_sha256": "1ce88b06dd3af81066595665d29f8e475d1cf16194a2927960a0bd098db6480d",
+      "derived_resolution_lines": 114,
+      "input_clauses": 92,
+      "m": 7,
+      "maximum_clause_width": 3,
+      "positive_half_affine_cover": 127,
+      "semantic_control": null,
+      "total_proof_lines": 206,
+      "variables": 40
+    },
+    {
+      "certificate_sha256": "f2eeed41b6fc021586c915d9d4244f6b27f00e0a997aa721b7f9d551f8bca7d8",
+      "derived_resolution_lines": 276,
+      "input_clauses": 218,
+      "m": 16,
+      "maximum_clause_width": 3,
+      "positive_half_affine_cover": 65535,
+      "semantic_control": null,
+      "total_proof_lines": 494,
+      "variables": 94
+    }
   ],
   "finite_truth_table_cap_m": 2,
   "general_sat_lower_bound": false,
