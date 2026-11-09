@@ -44,7 +44,7 @@ NEW_REPORTS = (
     "coprime_marginals.json",
     "parity_localization.json", "parity_query.json", "parity_pc.json",
     "pc_subspace.json", "affine_dag_pc.json", "expander_separation.json",
-    "tseitin_obdd_boundary.json",
+    "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
