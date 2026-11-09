@@ -43,6 +43,54 @@ The finite run checks what this repair actually accomplishes; it does not
 re-prove those bounds or establish the sampled graphs' asymptotic expansion.
 Existing [CDCL experiments](cdcl_audit.md) remain the practical comparison.
 
+**Execution outcome.** The protocol was committed as `bb41803` before running
+the panel; its constants were unchanged. The
+[reference implementation](../src/pnp_lab/retained_learning.py),
+[paired experiment](../experiments/retained_learning.py) and
+[saved report](../results/retained_learning.json) record all 26 inputs and
+52 searches. Both modes returned 6 SAT, 10 UNSAT and 10 UNKNOWN. The same
+10 inputs were interrupted in both modes; none was silently retried. All
+physical cases were solved, including three for which the old bounded physical
+restart baseline returned UNKNOWN. Both logical modes succeeded there, so
+retention alone is not the cause of their recovery.
+
+Among the 16 pairs completed in both modes, retention used fewer charged work
+units in 3, more in 11, and the same in 2. The largest retained database in
+this panel contained 1,683 literal slots. This observation neither proves an
+asymptotic memory bound nor ranks practical CDCL solvers: the reference engine
+rescans clauses and has no watched literals, deletion or restart heuristics.
+All interrupted cases remain in the report. Their valid proof prefixes were
+replayed too, without treating UNKNOWN as UNSAT. The eight parity controls were
+also recognized from their raw CNFs and refuted by the existing Gaussian
+algorithm, with independently checked row-sum contradictions.
+
+**Narrow all-size explanation, derived after examining the traces.** The module
+docstring proves that the abstract uncapped algorithm handles the connected
+physical family in `b` decisions and at most `b` conflicts under arbitrary signed
+renamings and clause reordering. Equality propagation fixes a whole touched
+block. A wrong block value contradicts its positive triple and yields a unit
+consequence; the correct value never needs to be undone. The resulting work is
+polynomial on this family, even without retained clauses. The sampled runs
+check the counts; the all-size statement relies on the argument, not extrapolation.
+This replaces the obstructed physical trajectory with logical processing.
+
+**Decision:** the specific counterexample is repairable. The proposal to obtain
+a general polynomial SAT algorithm merely by preserving ordinary-resolution
+conflicts remains stopped, for the existing known proof-system reason above.
+Counting saved clauses is not a polynomial progress measure: there can be
+`3^n` non-tautological clauses, and retaining an entailed clause does not remove
+any genuine satisfying assignment. No new general inference mechanism, lower
+bound for every SAT algorithm, or P versus NP proof has been obtained. Existing
+literature limits are referenced here rather than presented as a new research note.
+
+Validation: 504 unit tests passed, including all 256 proper two-variable CNFs
+in both retention modes, independent small truth tables, proof corruptions,
+explicit budget failures, and the signed physical controls. All 76 deterministic
+reports, including the refreshed summary, match saved outputs; the previous
+mathematical report fields are unchanged. The source hashes of the 55 files in
+the earlier phase-20 Lean audit still match. This continuation adds Python
+checks and a paper argument, not new Lean theorems.
+
 ## Previous continuation: test the physical restart bridge (2026-11-10 JST)
 
 The user requested executing the bridge investigation and saving the accumulated
