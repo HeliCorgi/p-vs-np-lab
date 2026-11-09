@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "finite_truth_table_cap_m": 2,
+  "general_sat_lower_bound": false,
+  "new_lean_theorems": 0,
+  "proof_scope": "uniform mathematical template plus independently checkable finite generated certificates",
+  "scope": "ordinary resolution, specific opposite-output double-copy Tseitin miter"
+}
