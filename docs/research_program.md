@@ -11,7 +11,71 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: physical time evolution (2026-11-09 JST)
+## Current continuation: test the physical restart bridge (2026-11-10 JST)
+
+The user requested executing the bridge investigation and saving the accumulated
+work, including the physical model, to Git. The
+[new executable argument](../experiments/physical_restart_bridge.py) tests the
+previous uniform-initialization repair on two explicit families. These are
+elementary counterexamples to this search rule, with no claim of novelty.
+
+For disjoint three-variable blocks, six equality clauses and one positive
+triple give block energies `(1,2,2,0)` at Hamming weights zero through three.
+Exact absorption probabilities are `(0,2/5,3/5,1)`. A product harmonic function
+proves that `b` independent blocks have uniform-start success exactly `2^-b`
+when run to absorption, and no greater success under a finite cutoff. A
+separate full-kernel rational solver checks every state for one and two blocks.
+
+The stronger obstruction is connected: use four-variable equality blocks,
+one positive triple per block, and positive binary connectors between each
+block's fourth variable and the next. The resulting formula has `4b` variables,
+`14b-1` distinct clauses of width two or three, no units, and maximum occurrence
+eight. Its unique solution is all ones. A zero block cannot change under any
+one-bit nonincreasing-energy dynamics: the first three flips increase energy
+by two, while the fourth increases it by at least one, regardless of neighboring
+states. Uniform initialization avoids all zero blocks with probability
+`(15/16)^b`. Thus success in at most `K` fresh global attempts is bounded by
+`min(1,K(15/16)^b)`, even with adaptive coordinate selection or attempt duration.
+With an input encoding of `O(b log b)` bits, no polynomial total-work budget
+can maintain constant success probability on this family. At `b=1024`, even
+`K=4096^3` attempts have success probability at most about `1.366680e-18`.
+This is an evaluated consequence of the proof, not a simulated large instance.
+
+The [fixed report](../results/physical_restart_bridge.json) contains finite
+exhaustive checks of 4,368 connected assignments and 3,204 frozen-block flips,
+two exact disconnected kernels, and 24 bounded runs of the actual restart
+implementation. All returned witnesses are checked. Budget failures remain
+UNKNOWN. The probabilistic theorems use ideal independent bits; seeded traces
+do not establish those theorems. Independent tests also demonstrate that positive
+temperature and collective moves can escape the zero-block condition, keeping
+the scope of the obstruction explicit. No new Lean formalization was attempted.
+
+Integration validation: 494 Python tests passed and all 75 deterministic
+reports, including the summary, matched their saved outputs. Existing
+mathematical report fields were unchanged. All 55 source hashes in the prior
+complete phase-20 Lean audit still match; this integrity check is not a new
+Lean build. Upstream's affine-lift, OBDD-order and resolution-miter work is
+retained alongside the previously uncommitted formal and physical research.
+
+**Decision:** stop the claim that uniform global restarts repair the existing
+zero-temperature local solver into a polynomial general SAT solver. Component
+decomposition alone does not repair the connected example. The formulas are
+easy for other algorithms, so this supplies no lower bound for all SAT solvers
+and no evidence assigning a probability to P=NP or P≠NP.
+
+**Exact conditional bridge:** a uniform randomized algorithm with polynomial
+worst-case bit cost, only checked witnesses, and success at least 2/3 on every
+satisfiable input would put SAT in RP. NP-completeness and RP being contained in
+NP then give NP=RP. This does not by itself yield P=NP. If one can additionally
+construct, in polynomial time from each input, a polynomial list of polynomial
+length random tapes guaranteed to include a successful tape whenever that input
+is satisfiable, enumerating and checking that list decides SAT deterministically
+in polynomial time. That stronger condition would yield P=NP. Neither condition
+has been obtained here. A further physical proposal must change the obstructed
+dynamics and prove the global resource and success bounds; naming equilibrium,
+restarts, or a derandomization lemma does not supply them.
+
+## Previous continuation: physical time evolution (2026-11-09 JST)
 
 The user requested implementing a physical approach. The
 [spin-energy model](../src/pnp_lab/physical_sat.py) maps arbitrary width-at-most-three

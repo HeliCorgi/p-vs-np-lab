@@ -54,6 +54,8 @@ NEW_REPORTS = (
     "cubic_phase_sat.json",
     "eth_polynomial_repair.json",
     "physical_sat.json",
+    "physical_restart_bridge.json",
+    "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
     "RUN_SUMMARY.json", "hn_existing_checker.json", "boundary_compression.json",
@@ -264,6 +266,9 @@ def main() -> None:
     physical = read_json(out / "physical_sat.json")
     if not physical["all_checks_passed"]:
         raise RuntimeError("Physical SAT dynamics audit failed")
+    physical_restart = read_json(out / "physical_restart_bridge.json")
+    if not physical_restart["all_checks_passed"]:
+        raise RuntimeError("Physical SAT restart bridge audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
@@ -320,6 +325,15 @@ def main() -> None:
             "stopped_branch": physical["stopped_branch"],
             "remaining_core": physical["remaining_core"],
             "scope": physical["scope"],
+            "polynomial_general_sat_algorithm": False,
+        },
+        "physical_restart_bridge_audit": {
+            "exact_disjoint_kernels": len(physical_restart["disjoint_exact_kernels"]),
+            "connected_frozen_checks": len(physical_restart["connected_frozen_checks"]),
+            "bounded_restart_runs": len(physical_restart["bounded_restart_runs"]),
+            "stopped_branch": physical_restart["stopped_branch"],
+            "complexity_bridge": physical_restart["complexity_bridge"],
+            "scope": physical_restart["scope"],
             "polynomial_general_sat_algorithm": False,
         },
         "historical_package_files_hash_verified": snapshot_count,
