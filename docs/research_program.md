@@ -11,7 +11,45 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: construct backward from the missing requirement (2026-11-10 JST)
+## Current continuation: test the first existential amplification (2026-11-10 JST)
+
+The user asked to continue the backward proof attempt. The
+[continuation](solution_criteria.md#9-continuation-test-whether-existential-witnesses-amplify-the-lower-bound)
+first checks the converse of the previous implication: NP not contained in
+P/poly supplies the unbounded-ratio family simply by taking the same SAT
+language at every index. Thus that condition is equivalent to this stronger
+circuit separation target. It specifies the needed quantitative transfer;
+it has not reduced the difficult part to a separately proved theorem.
+
+We then tried to preserve a seed's circuit hardness in a verifier and transfer
+it through existential witnesses. For any f(x), the explicit relation
+`V(x,z,w) = z AND [w_1=f(x)] AND AND_{i=2}^q NOT w_i` retains f as a restriction,
+has exactly one witness on every YES input, and has witness density `2^(-q)`.
+Nevertheless its projected decision function is just z, with no gates. Both
+YES and NO ordinary inputs occur. For parity and q=n, the verifier uses at
+most 6n gates and linear time. The exponentially rare successful witness does
+not give a lower bound for deciding its existence.
+
+Pinning w_1 to one or to another cheaply computable function only produces
+an explicit small decision circuit. More generally a small successful-witness
+selector composes with the verifier to give a small decider, and q witness
+bits admit a `2^q`-copy decision circuit. These are proved upper bounds and a
+counterexample to the attempted transfer, not new general lower bounds or an
+impossibility result for all existential constructions.
+
+An independent bounded check covered every Boolean function on one, two or
+three input bits and witness lengths one through four: 1,104 relations,
+127,200 verifier rows, 16,960 fibers and 8,480 restriction checks. The
+reproducible snippet is in the existing solution-criteria document; it verifies
+the finite identities, not the all-size lower-bound claim. The all-size
+counterexample and resource bounds have separate paper proofs.
+
+Stop this mechanism and its two repairs. The missing result is still a lower
+bound on the projected decision function against unrestricted circuits. No
+such bound or complete-proof candidate was obtained. No solver, benchmark
+suite, result manifest or Lean source changed in this continuation.
+
+## Previous continuation: construct backward from the missing requirement (2026-11-10 JST)
 
 The user asked to identify what is needed and construct the argument from it.
 The [backward proof architecture](solution_criteria.md#8-backward-construction-make-the-hardness-exponent-outrun-the-verification-cost)
