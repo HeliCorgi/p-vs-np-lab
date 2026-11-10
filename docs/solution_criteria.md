@@ -1401,6 +1401,270 @@ analysis; do not assume that a suitable block always exists. Other shrinking
 methods remain unexamined by these arguments. This investigation supplies no
 complete P-versus-NP proof candidate in either direction.
 
+## 13. Alternative mechanisms: holographic algorithms and circuit magnification
+
+**Date:** 2026-11-10 JST. The user asked to find other methods after the
+clause-elimination attempt. We examined an exact counting route toward P=NP
+and an existing magnification route toward P≠NP. Neither supplies a complete
+proof. The literature results below are attributed, not claimed as new work;
+this section records the candidate we actually tested and its stopping point.
+
+### 13.1 Candidate: change the basis of a SAT tensor network
+
+A CNF can be represented by a network of equality tensors at variables and
+clause truth tensors at clauses. Summing over edge bits gives exactly #SAT.
+An invertible matrix T on one end of each edge and T^(-transpose) on the
+other preserves this scalar contraction. If we could uniformly turn every
+input into a polynomial-size planar weighted perfect-matching instance,
+with polynomial construction cost and exactly represented weights of
+polynomial bit length, Pfaffian evaluation would give #SAT in FP and hence
+P=NP. Rational weights are one concrete setting in which exact arithmetic
+and its bit cost can be controlled. An abstract tensor identity alone does
+not establish this algorithm.
+
+**Known constraint.** A planar matchgate signature has only even-parity
+support or only odd-parity support. Its entries also satisfy the matchgate
+identities. These are necessary conditions over the complex numbers;
+adding internal vertices or choosing negative weights does not remove them.
+See Cai–Gorenstein, *Matchgates Revisited*,
+[arXiv:1303.6729v2](https://arxiv.org/pdf/1303.6729v2), Theorems 1–2 and
+Section 5. We use their planar boundary-order convention.
+
+Here is a precise candidate that fails: use the **same invertible 2-by-2
+matrix on every variable-side edge**, and its inverse transpose on every
+clause-side edge, then replace each transformed tensor by a planar matchgate.
+It already fails for the two ternary tensors
+
+\[
+ E_{abc}=[a=b=c],\qquad O_{abc}=[a\lor b\lor c].
+\]
+
+For example, with H=((1,1),(1,-1)), H^(tensor 3) E is 2 on the even
+assignments and 0 on the odd ones. However, (H/2)^(tensor 3) O is 7/8
+at 000 and -1/8 everywhere else, so it has both parities. The factor 1/2
+on the clause side is required to preserve contraction.
+
+**Audit of every common basis, not just H.** Suppose both transformed
+tensors had pure parity. Set Z=diag(1,-1) and A=T^(-1) Z T. For signs
+epsilon, eta in {1,-1}, this would imply
+
+\[
+ A^{\otimes3}E=\epsilon E,\qquad
+ (A^{\mathsf T})^{\otimes3}O=\eta O.
+\]
+
+Write A=((a,b),(c,-a)). Since A²=I, a²+bc=1. The 001 and 011
+components of the first equation give
+
+\[
+ a(ac-b^2)=0,\qquad a(c^2+ab)=0.
+\]
+
+If a is nonzero and b,c are nonzero, these equations imply bc=-a²,
+contradicting a²+bc=1. If either b or c is zero, both are zero; then the
+000 and 111 components would require a³=-a³=epsilon, also impossible
+over the complex numbers. Thus a=0 and bc=1. But the 000 component of
+(A^transpose)^(tensor 3) O is then c³ O_111=c³, which is nonzero,
+whereas eta O_000=0. This is a contradiction.
+
+Consequently **no common invertible complex basis makes both of these
+tensors planar matchgate signatures under the dual transformation**.
+This is an application of the known parity condition. It excludes this
+particular local encoding, not distinct bases on different incidences, grouping
+several tensors before transformation, other tractable tensor families, or
+all holographic algorithms. It also imposes exact counting, which is stronger
+than the SAT decision goal.
+
+### 13.2 A separate check: ordinary crossings cannot be copied locally
+
+Even if a different encoding repaired the preceding obstruction, arbitrary
+SAT incidence graphs are not planar. With four boundary bits in cyclic
+order, an ordinary crossing would need
+
+\[
+ X_{abcd}=[a=c][b=d].
+\]
+
+Taking alpha=1000 and beta=0111 in the matchgate identity (and multiplying
+by -1) requires every such planar signature f to obey
+
+\[
+ f_{0000}f_{1111}-f_{1100}f_{0011}
+       +f_{1010}f_{0101}-f_{1001}f_{0110}=0.
+\]
+
+For X the left side is 2. Thus an exact planar matchgate replacement of
+this boundary relation is impossible over characteristic other than 2,
+regardless of the size of the replacement. The known **signed** crossover
+has entries 1 at 0000,0101,1010 and -1 at 1111; it satisfies the identities
+but changes the ordinary counting tensor. This is exactly the gadget in
+Cai–Gorenstein, Section 5, equations (43)–(46), not a newly found gadget.
+
+Working modulo 2 removes this particular sign obstruction, but the parity
+of #SAT does not decide SAT: (x OR y) AND (x OR NOT y) has two solutions,
+whereas an unsatisfiable formula has zero. Both counts vanish modulo 2.
+This example alone does not rule out reductions using isolation or multiple
+different queries; no deterministic polynomial construction of that kind
+was obtained here.
+
+**Decision.** Stop the common-basis/local-planarization candidate. A global
+transformation would need a new construction with its own exactness and
+total-cost proof. Do not spend a new solver implementation on either of the
+invalid local replacements.
+
+### 13.3 A different lower-bound target with the right endpoint
+
+For the next investigation, retain **circuit hardness magnification for
+search-MCSP**, rather than the previously stopped memory-only argument.
+The input is an explicit N=2^n-bit truth table. Fix s(n)=n². On every table
+having a circuit of at most s(n) gates, the search problem must output a
+description of such a circuit. A proposed output can be checked against all
+N bits in time polynomial in N. Rejecting an invalid output also supplies a
+failure flag on a table with no such circuit. No canonical hard table, or
+free access to an exponentially long implicit input, is assumed.
+
+The exact sufficient target is:
+
+> There is no family of general Boolean circuits solving search-MCSP[n²]
+> with size N·poly(n) and depth poly(n).
+
+Equivalently, for every fixed constant c there are infinitely many n for
+which no circuit of size at most N n^c and depth at most n^c solves all
+inputs of that length. Finite exceptions and constant factors can be
+absorbed by increasing c. Depth here is **polynomial in log N**, not constant
+depth or just O(log N). Circuits may reuse intermediate computations and
+have many output bits.
+
+McKay–Murray–Williams, *Weak Lower Bounds on Resource-Bounded Compression
+Imply Strong Separations of Complexity Classes* (STOC 2019),
+[author-hosted paper](https://people.csail.mit.edu/rrw/MCSP-MKTP-stoc19.pdf),
+**Theorem 1.4, third bullet**, gives the first implication below; the second
+uses P contained in P/poly:
+
+\[
+ \text{target}\quad\Longrightarrow\quad
+ \mathrm{NP}\not\subseteq\mathrm{P/poly}\quad\Longrightarrow\quad
+ \mathrm P\ne\mathrm{NP}.
+\]
+
+We specialized their oracle A to a trivial predicate and s(n) to n².
+Their proof is by contraposition: assuming NP is contained in P/poly,
+polynomial-hierarchy merging queries have polynomial-size circuits.
+Replacing the short oracle gates in their construction then gives the
+forbidden N·poly(n)-size, poly(n)-depth search circuit. We checked the
+statement and this replacement argument in Section 5 of the original paper.
+The adjacent **second** bullet, with O(log N) depth, only yields
+NP not contained in NC1; that conclusion alone does not resolve P vs NP.
+
+**First filter on techniques.** Their Theorem 1.1 already gives a small
+circuit for MCSP with short polynomial-hierarchy oracle gates; the underlying
+search construction is in Lemma 3.1. Setting s=n² and ell=s³ gives
+N·poly(n) size, poly(n) depth, and oracle arity poly(n), unconditionally.
+Thus a proposed lower-bound argument cannot remain valid unchanged when
+arbitrary poly(n)-input functions are allowed as unit-cost gates: this
+enlarged model already has a circuit within the target budget. The argument
+must charge the computation inside those gates. This rejects a method with
+that specific invariance, not every lower-bound technique.
+
+This is consistent with the broader locality barrier studied in
+Chen–Hirahara–Oliveira–Pich–Rajgopal–Santhanam,
+[*Beyond Natural Proofs: Hardness Magnification and Locality*,
+arXiv:1911.08297v1](https://arxiv.org/pdf/1911.08297v1), especially
+Sections 1.3 and 5. Its separate frontiers with endpoints NC1, NQP or EXP
+must not be substituted for the P-versus-NP endpoint above.
+
+**Remaining core:** prove the stated search-circuit lower bound with a
+technique that distinguishes actual gates from these short oracles. We
+have not done this, and have no evidence that it is easier than resolving
+P vs NP by a different route. Magnification is an established connection,
+not a new lower bound or a complete-proof candidate. The earlier streaming
+prefix-counting failure remains in force and is not reopened.
+
+### 13.4 Exact finite checks
+
+The reproduction below uses only Python's standard library. It checks all
+496 invertible integer matrices with entries in {-2,-1,0,1,2}; both the
+preservation of the scalar contraction and failure of simultaneous parity
+hold. The unsigned crossing violates 8 of the 256 ordered-pair identities;
+the signed crossing violates none. These tests check conventions and
+arithmetic. The arbitrary-complex-basis obstruction is the argument in
+13.1, not an extrapolation from these matrices. No Lean formalization or
+asymptotic circuit lower bound is claimed.
+
+```python
+from fractions import Fraction as Q
+from itertools import product
+
+
+def transform(tensor, matrix, arity):
+    bits = list(product((0, 1), repeat=arity))
+    result = []
+    for out in bits:
+        value = Q(0)
+        for coefficient, source in zip(tensor, bits):
+            term = Q(coefficient)
+            for i in range(arity):
+                term *= matrix[out[i]][source[i]]
+            value += term
+        result.append(value)
+    return result
+
+
+def dual(matrix):
+    (a, b), (c, d) = matrix
+    det = a * d - b * c
+    return ((Q(d, det), Q(-c, det)), (Q(-b, det), Q(a, det)))
+
+
+def has_parity(tensor):
+    return len({i.bit_count() % 2 for i, value in enumerate(tensor) if value}) <= 1
+
+
+def mgi_violations(tensor, arity):
+    bad = 0
+    for alpha, beta in product(range(1 << arity), repeat=2):
+        differing = [1 << (arity - 1 - i) for i in range(arity)
+                     if (alpha ^ beta) & (1 << (arity - 1 - i))]
+        residual = sum((-1) ** (i + 1) * tensor[alpha ^ bit] * tensor[beta ^ bit]
+                       for i, bit in enumerate(differing))
+        bad += residual != 0
+    return bad
+
+
+equality = [1, 0, 0, 0, 0, 0, 0, 1]
+clause_or = [0, 1, 1, 1, 1, 1, 1, 1]
+hadamard = ((1, 1), (1, -1))
+assert transform(equality, hadamard, 3) == [2, 0, 0, 2, 0, 2, 2, 0]
+assert transform(clause_or, dual(hadamard), 3) == [Q(7, 8)] + [Q(-1, 8)] * 7
+
+checked = 0
+for a, b, c, d in product(range(-2, 3), repeat=4):
+    if a * d == b * c:
+        continue
+    matrix = ((a, b), (c, d))
+    left = transform(equality, matrix, 3)
+    right = transform(clause_or, dual(matrix), 3)
+    # Independent semantic check: the scalar network contraction stays 1.
+    assert sum(x * y for x, y in zip(left, right)) == 1
+    assert not (has_parity(left) and has_parity(right))
+    checked += 1
+
+crossing = [int(a == c and b == d) for a, b, c, d in product((0, 1), repeat=4)]
+signed = crossing.copy()
+signed[15] = -1
+assert crossing[0] * crossing[15] - crossing[12] * crossing[3] + crossing[10] * crossing[5] - crossing[9] * crossing[6] == 2
+violations = mgi_violations(crossing, 4)
+assert violations > 0
+assert mgi_violations(signed, 4) == 0
+
+sat_count = sum((x or y) and (x or not y) for x, y in product((0, 1), repeat=2))
+unsat_count = sum(x and not x for x in (0, 1))
+assert sat_count == 2 and unsat_count == 0 and sat_count % 2 == unsat_count % 2
+print(f'invertible integer bases: {checked}; contraction and parity checks passed')
+print(f'unsigned crossing MGI violations: {violations}/256; signed crossing: 0/256')
+print('Hadamard dual factors and SAT parity counterexample: passed')
+```
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
