@@ -666,6 +666,271 @@ search procedure does not supply it. No such projected-function bound was
 obtained here. The generic amplification route remains an unfulfilled
 specification, and there is still no complete P-versus-NP proof candidate.
 
+## 10. Continuation: construct the hard decision function by counting
+
+2026-11-10 JST. The next attempt addresses the decision function directly:
+count small circuits, choose a truth table outside their range, and try to
+make its bits an NP language. This is an audit of elementary counting and
+canonical selection, not a new circuit lower bound. It does not reopen the
+stopped streaming-state argument.
+
+### Counting gives hard functions but an easy completion predicate
+
+Let m be the number of inputs to a Boolean function and N=2^m its truth-table
+length. Use the AND/OR/NOT basis and free constants of Section 9. For a gate
+budget s, put
+
+\[
+ w=\lceil\log_2(m+s+2)\rceil,\qquad
+ \ell=s(2+2w)+w.
+\]
+
+Every circuit of at most s gates has a description of length ell: pad to s
+gates, use two operation bits and two w-bit wire indices per gate, and a w-bit
+output index. A NOT gate ignores its second index; invalid descriptions are
+discarded. Therefore the set E of easy truth tables has size at most 2^ell.
+Whenever ell<N, some truth table has circuit complexity greater than s.
+
+For a prefix p of r<=N truth-table bits, consider the actual decision predicate
+
+\[
+ H_{m,s}(p)=[\exists T\in\{0,1\}^{N}:T\text{ extends }p
+                                      \text{ and }C(T)>s].
+\]
+
+There are exactly 2^(N-r) extensions of each p. Thus
+
+\[
+       2^{N-r}>|E|\ \Longrightarrow\ H_{m,s}(p)=1
+                        \text{ for every prefix of length }r.
+\]
+
+In particular, N-r>ell is a sufficient condition. For s=m^k and r polynomial
+in m, it holds at all sufficiently large m. The attempted predicate is then
+constant YES on the entire prefix domain, despite every accepted prefix
+having a hard completion. The same counting proof holds for prescribing r
+distinct positions instead of a prefix. Existence of a hard completion alone
+does not produce a hard decision about those prescriptions.
+
+At r=N the predicate instead asks whether the supplied table itself needs
+more than s gates. For 0<=s<=N, this is the complement of explicit-table MCSP
+and is in coNP: a circuit of at most s gates has polynomial description length
+in N and can be checked against all N entries in polynomial time. No
+coNP-completeness or NP membership is assumed for this predicate.
+
+### Repair: pick one table consistently, then charge its selection
+
+At lengths with ell<N, define T* to be the lexicographically first hard table,
+using inputs 00...0 through 11...1 as the table order. Define a language's
+length-m characteristic function by D_m(x)=T*[x]. Its circuit complexity is
+greater than s **by construction**. Unlike an arbitrary hard-completion
+witness, T* is the same table for every queried x. For the budget families
+below, ell<N eventually; define D_m to be zero at the other, finitely many
+lengths. The lower bounds for D and its short-tail representation below
+concern lengths with ell<N.
+
+There is a finite algorithm: enumerate tables in lexicographic order and
+test each against all circuits within the budget. No polynomial cost in m
+follows. Guessing the entire table already uses N=2^m bits on an m-bit input.
+Checking it against all circuits by enumeration is also not a polynomial-time
+verification in m. This does not exclude a shorter representation. We next
+construct one, rather than treating the full-table length as an unavoidable
+obstacle for every encoding.
+
+**A further repair succeeds in shortening the description.** Interpret a
+truth-table word as a binary integer, with its first entry most significant.
+Among the first |E|+1 words some word is hard. Therefore the lexicographically
+first hard table has numerical value at most |E|<=2^ell. It has the form
+
+\[
+                  T^*=0^{N-t}u,\qquad t=\ell+1,
+\]
+
+where u has t bits. For a fixed budget s=m^k, this is a polynomial-length
+description O(m^k log m), together with m. The longer zero prefix is implicit.
+Thus lack of a polynomial-length table description is **not** the remaining
+obstacle at any fixed polynomial gate budget.
+
+It also gives an explicit nonuniform circuit upper bound. Put q=ceil(log_2 t)
+and pad the tail to 2^q entries with leading zeros. On inputs whose first m-q
+bits are all one, look up the last q bits in that tail; return zero otherwise.
+A binary multiplexer tree uses at most 4(2^q-1) AND/OR/NOT gates. The prefix
+test and final conjunction cost at most m gates. Consequently
+
+\[
+             s<C(D_m)\le 8t+m=O(s\log(m+s)+m).
+\]
+
+The tail's values are hardwired, so this is a size upper bound without an
+efficient uniform constructor. In particular, each fixed-k language obtained
+this way is unconditionally in P/poly, despite exceeding the particular
+budget m^k. More generally, **any** explicit-tail encoding of a function with
+C(f)>s must have t>(s-m)/8 by the same circuit construction. For s>=2m this
+forces t>s/16. Guessing and processing such a complete tail in the bit model
+therefore costs Omega(s), even if its remaining validation were free. The
+explicit-tail verifier cannot turn a supplied m^k lower bound into an exponent
+ratio greater than one. This is a limitation of this representation, not of
+all possible certificates for individual bits.
+
+**What remains to verify is not an existential bit lookup.** Let T_u be the
+function described by the zero prefix and a proposed short tail u. Hardness
+requires
+
+\[
+       \forall\text{ circuits }C\text{ of size at most }s\quad
+       \exists x\in\{0,1\}^m:\ C(x)\ne T_u[x].
+\]
+
+For fixed k and s=m^k all descriptions in this formula have polynomial
+length in m, and a proposed mismatch is efficiently checkable. The formula
+has a universal circuit quantifier followed by an existential input
+quantifier: it supplies a Pi_2^P test for the tail, not an NP verification.
+No claim that this predicate lies outside NP is being made.
+
+There is an unconditional polynomial-hierarchy upper bound for selecting
+the canonical tail. Supply m and s in unary to an oracle query, and ask
+whether a specified tail prefix has an extension u satisfying the displayed
+hardness condition. Its quantifiers are `exists u, forall C, exists x`, so
+this one query language is in Sigma_3^P. Invalid circuit descriptions are
+ignored. Greedily query the zero extension at each tail position; this selects
+the first hard table in polynomially many calls for each fixed k. Therefore
+the resulting fixed-k bit language is in P^(Sigma_3^P), as well as P/poly.
+We have not reduced this algorithm or its certificates to NP. Under P=NP
+the hierarchy collapses and each such language is in P; its algorithm's
+polynomial degree may depend on k, consistently with its m^k circuit lower
+bound. This directly checks the quantifier issue from the previous turns.
+
+To make the missing cost particularly explicit, pad an H query to length
+Theta(N), and include m,s,p with 0<=s<=N. In this **padded** encoding H belongs
+to Sigma_2^P: existentially guess the N-bit T, universally quantify a circuit
+description of O(N log N) bits, and deterministically check that the circuit
+is invalid or disagrees somewhere with T. Scanning all N inputs is polynomial
+in the padded length. This does not establish Sigma_2^P membership in the
+compact encoding whose only data are m,s and a short p, and it does not put
+D in NP.
+
+**The superpolynomial-budget variant still exceeds NP's established resources.** Set
+s_m=2^floor(m/2). The description bound has ell=O(m*2^(m/2))<2^m for all
+sufficiently large m. Choose T* at those lengths and the zero table at the
+finitely many lengths where this inequality fails. If P=NP, the padded H
+predicate is in P. One way to see this is that explicit-table MCSP is in NP,
+so its complement is in P under the assumption; guessing T then gives an NP
+predicate, which is again in P under the same assumption.
+
+Construct T* one bit at a time. Given a prefix p that has a hard completion,
+choose zero next when H(p0) is true, and one otherwise. At least one child has
+a hard completion. Induction gives the lexicographically first hard table
+after N queries, each of padded length O(N). The whole construction therefore
+costs N^O(1)=2^O(m), including all padding and output bits. It supplies
+
+\[
+ \mathrm P=\mathrm{NP}\quad\Longrightarrow\quad
+ \text{this }D\in\mathrm E=\mathrm{DTIME}(2^{O(m)}),\qquad
+ C(D_m)>2^{\lfloor m/2\rfloor}\text{ eventually}.
+\]
+
+This is a standard kind of conditional counting construction, not a new
+separation claim. It shows that even this strong circuit lower bound for the
+constructed language would be compatible with P=NP: the proved membership
+under that assumption is in E, not NP. The earlier Williams source [W,
+Section 1.2] discusses the related implication P=NP => EXP not contained in
+P/poly; the particular costed construction above is proved here rather than
+attributed to a theorem number in that paper.
+
+Padding the m-bit input to N=2^m bits does not fix the Section 8 exponent
+budget: the displayed lower bound s_m becomes only Theta(sqrt(N)) in that new
+input length. Providing the full truth table as input also incurs N bits of
+representation and its explicit verification cost; it does not itself
+transfer a lower bound to the new decision problem. These observations concern
+these supplied bounds and encodings; they do not rule out a different short
+certificate or a stronger lower bound proved by another argument.
+
+### Exact finite control, and the decision on this attempt
+
+For m=3 we enumerated all general circuits with at most three gates, allowing
+sharing, constants and all outputs. The existing
+[semantic DAG enumerator](../experiments/mcsp_update_gate.py) was cross-checked
+against a separate direct enumeration of gate sequences without merging
+states. There are 35 one-gate sequences, 1,680 two-gate sequences and 105,840
+three-gate sequences when binary inputs are unordered. Their reachable
+function sets agree at every budget. All 2,044 budget/prefix pairs were then
+classified, including the empty and full prefixes.
+
+| Gate budget s | Easy tables | Hard tables | First prefix length with both YES and NO | First hard table |
+|---|---:|---:|---:|---|
+| 0 | 5 | 251 | 8 | `00000001` |
+| 1 | 14 | 242 | 8 | `00000001` |
+| 2 | 40 | 216 | 7 | `00000010` |
+| 3 | 84 | 172 | 6 | `00000110` |
+
+These finite counts check the distinction between a hard table and the
+predicate of extending a prefix to some hard table. They establish no
+asymptotic NP lower bound. The table and the counting inequality can be
+reproduced from the repository root with this Python snippet:
+
+```python
+from experiments.mcsp_update_gate import small_circuit_catalog
+costs, _ = small_circuit_catalog(3, 3)
+for s in range(4):
+    easy = {t for t, c in costs.items() if c <= s}
+    hard = set(range(256)) - easy
+    profile = []
+    for r in range(9):
+        yes = {t & ((1 << r) - 1) for t in hard}
+        profile.append(len(yes))
+        if (1 << (8-r)) > len(easy):
+            assert len(yes) == 1 << r
+    word = lambda t: ''.join(str((t >> i) & 1) for i in range(8))
+    first_mixed = next(r for r, count in enumerate(profile)
+                       if 0 < count < 1 << r)
+    print(s, len(easy), len(hard), first_mixed, word(min(hard, key=word)))
+```
+
+The short-tail circuit construction was also executed independently of the
+catalog: all 546 tails of lengths 1 through 2^m at m=1,2,3 were compiled and
+their 4,212 truth-table rows checked with the existing gate evaluator. Every
+circuit met the exact count `4(2^q-1)+max(0,m-q)` and hence the proved upper
+bound. This includes a one-entry tail, a full table and non-power-of-two tail
+lengths. The check is reproducible as follows; it is not a general SAT solver.
+
+```python
+from itertools import product
+from experiments.mcsp_update_gate import BooleanCircuit
+for m in range(1, 4):
+    for t in range(1, (1 << m)+1):
+        q = (t-1).bit_length()
+        for tail in product((0, 1), repeat=t):
+            c = BooleanCircuit(m)
+            def lookup(values, level=0):
+                if len(values) == 1:
+                    return values[0]
+                mid = len(values)//2
+                lo = lookup(values[:mid], level+1)
+                hi = lookup(values[mid:], level+1)
+                select = 2+m-q+level
+                return c.gate('OR', c.gate('AND', c.gate('NOT', select), lo),
+                              c.gate('AND', select, hi))
+            out = lookup((0,)*((1 << q)-t)+tail)
+            if m > q:
+                guard = 2
+                for j in range(1, m-q):
+                    guard = c.gate('AND', guard, j+2)
+                out = c.gate('AND', guard, out)
+            assert c.table(out) == [0]*((1 << m)-t)+list(tail)
+            assert len(c.gates) == 4*((1 << q)-1)+max(0, m-q)
+            assert len(c.gates) <= 8*t+m
+```
+
+Stop these constructions as claimed NP lower-bound proofs. The arbitrary
+completion predicate is constant on the intended short-input range. Canonical
+selection does define a hard function, and the short-tail repair succeeds for
+fixed polynomial budgets, but it supplies no NP verifier for the selected
+bits and no exponent amplification from reading the explicit tail. Raising
+the gate budget to superpolynomial raises that tail cost too. The unproved
+NP-membership step must not be treated as an available interface lemma.
+There is still no complete P-versus-NP proof or surviving complete-proof
+candidate; no new Lean verification is claimed.
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.

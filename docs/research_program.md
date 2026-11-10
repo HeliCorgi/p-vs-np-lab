@@ -11,7 +11,59 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: test the first existential amplification (2026-11-10 JST)
+## Current continuation: count hard decision tables and charge their selection (2026-11-10 JST)
+
+The user asked to continue. The [direct counting attempt](solution_criteria.md#10-continuation-construct-the-hard-decision-function-by-counting)
+defines the decision predicate that a partial truth table extends to a
+function requiring more than s gates. If a table has N=2^m entries and at
+most 2^ell easy tables exist, every r-bit prefix has a hard completion when
+N-r>ell. With polynomial s and r in m, the proposed predicate is therefore
+constant YES at large lengths. This explicitly tests the decision function,
+without inferring hardness from the complexity of a verifier.
+
+We repaired the consistency problem by selecting the lexicographically first
+hard table and asking for one of its bits. A second repair actually shortens
+its representation: among the first |E|+1 tables one is hard, so the canonical
+table consists of zeros followed by at most ell+1 bits. At a fixed budget
+s=m^k this is polynomial length. A multiplexer construction also proves
+`C(D_m) <= 8t+m` for a t-bit tail. Thus any hard tail at s>=2m needs more than
+s/16 bits, and processing the whole tail cannot supply the needed exponent
+ratio. Each fixed-k bit language is in P/poly unconditionally.
+
+The remaining hardness check has quantifiers `forall small circuits C,
+exists input x witnessing disagreement`. Tail-prefix search adds an outer
+existential quantifier; greedy canonical selection therefore gives a
+P^(Sigma_3^P) upper bound for fixed k. It gives no NP verifier for a selected
+bit. Under P=NP each fixed-k construction would be in P, with its polynomial
+degree allowed to depend on k. No impossibility of a different NP certificate
+is asserted. The short-tail repair removes one description-size obstruction,
+but does not prove the required membership or exponent amplification.
+
+The cost analysis also proves compatibility with the opposite assumption:
+under P=NP, padded hard-completion queries can be decided in polynomial time
+in N. Greedy selection then constructs, in time 2^O(m), a language whose
+length-m functions require more than 2^floor(m/2) gates eventually. This places
+the constructed language in E under that assumption, not NP, and gives no
+contradiction. Padding the original input to the truth-table length makes this
+particular lower bound only square-root in that new length. These are elementary
+counting/selection deductions with no novelty claim.
+
+The small control exhaustively classified all circuits on three inputs with
+budgets zero through three. Semantic DAG enumeration agreed with independent
+raw gate-sequence enumeration, and 2,044 budget/prefix pairs were classified.
+There are respectively 5, 14, 40 and 84 easy truth tables among 256. The
+complete counts and reproduction snippet are in the existing solution-criteria
+document. Independently, all 546 short-tail circuits at up to three inputs
+were constructed and their 4,212 truth-table rows and gate counts checked.
+No asymptotic conclusion is extrapolated from these counts; the tail bound
+has a separate all-size construction and proof.
+
+Stop these constructions as NP lower-bound proofs. Their specific missing
+step is an NP verification of the selected hard bit function with the required
+cost, not existence of a hard table. No executable source, result manifest or
+Lean source changed; no new complete-proof candidate was obtained.
+
+## Previous continuation: test the first existential amplification (2026-11-10 JST)
 
 The user asked to continue the backward proof attempt. The
 [continuation](solution_criteria.md#9-continuation-test-whether-existential-witnesses-amplify-the-lower-bound)
