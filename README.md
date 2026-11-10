@@ -22,7 +22,16 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 **現時点では、完全証明につながる新しい有効な核心は得られていません。**
 現在の判断と過去の成果は[研究記録](docs/research_program.md)で区別します。
 
-2026年11月10日（日本時間）、必要な条件から逆算して、[条件付きの論証](docs/solution_criteria.md#8-backward-construction-make-the-hardness-exponent-outrun-the-verification-cost)を組み立てました。
+2026年11月10日（日本時間）、[最初の増幅の検討](docs/solution_criteria.md#9-continuation-test-whether-existential-witnesses-amplify-the-lower-bound)を続けました。
+前回の「検証コストと下界の指数の比が非有界」という条件は、逆向きも成立し、
+実質的には `NP ⊄ P/poly` と同値です。条件の整理を核心の解決とは扱いません。
+具体的には、検証器に元の関数の下界を保ち、一意で指数的に希少な証人を付ける案を調べました。
+これらの性質を全て満たしても、**証人の存在判定は入力の1ビットを読むだけ**になる反例を構成しました。
+証人の一部を固定する二つの修正案も、明示的な小さい回路で判定でき、この増幅には使えません。
+全サイズの論証に加え、1,104個の関係・127,200行の有限検査で恒等式を確認しました。
+**存在判定そのものの一般回路下界は未獲得で、P vs NPの完全証明は未達です。**
+
+同日の前の続行では、必要な条件から逆算して、[条件付きの論証](docs/solution_criteria.md#8-backward-construction-make-the-hardness-exponent-outrun-the-verification-cost)を組み立てました。
 検証コスト `n^(b_k)` に対して一般回路の下界 `n^(a_k)` を持つ問題群があり、比 `a_k/b_k` を際限なく大きくできれば、
 一つのSAT問題の超多項式回路下界、したがってP≠NPへ移せることを、還元の費用も含めて証明しました。
 既知の線形下界を出発点に、この比を増やす操作を検討しましたが、パディング・独立な問題の反復・

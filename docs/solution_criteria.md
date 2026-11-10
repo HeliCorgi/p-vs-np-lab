@@ -508,6 +508,164 @@ Sources read, already used in the previous investigation:
   STOC 2018, Theorem 1.1. Its circuit-algorithm hypothesis remains a hypothesis;
   quoting its conclusion does not establish the required lower bounds here.
 
+## 9. Continuation: test whether existential witnesses amplify the lower bound
+
+2026-11-10 JST. The previous section did not construct the missing amplifier.
+We now test a concrete possible mechanism: attach witnesses to a function with
+a proved circuit lower bound, preserve that bound in the verifier, and try to
+transfer it to the language obtained by existentially hiding the witnesses.
+The transfer fails even with unique, exponentially sparse witnesses. The
+following arguments are elementary checks of this proposed mechanism, not
+novel circuit lower bounds.
+
+### The previous target is equivalent to a stronger separation problem
+
+Section 8 proves that its unbounded-ratio condition implies NP is not contained
+in P/poly. The converse holds too. If NP is not contained in P/poly, then SAT
+is not in P/poly, because every NP language reduces to SAT in polynomial time.
+Fix one SAT verifier with witness and time bound O(n^B), for a positive integer
+B. For every positive integer k there must be infinitely many lengths n with
+
+\[
+                     C(\mathrm{SAT}_n)\ge n^{kB}.
+\]
+
+Otherwise that degree would bound all sufficiently large lengths; finitely
+many exceptions could be absorbed in a constant, placing SAT in P/poly.
+Take L_k=SAT, b_k=B, a_k=kB and c_k=1. This supplies exactly the previous
+premises, with ratio k. Thus the condition is equivalent to NP not contained
+in P/poly, not a demonstrated easier intermediate problem. Its useful content
+is the accounting rule for proposed constructions. It is still only a
+sufficient route to P!=NP; no equivalence between P!=NP and NP not contained
+in P/poly is asserted.
+
+### A candidate that preserves verifier hardness but loses decision hardness
+
+Let f be any Boolean function on n bits, and let q>=1. Introduce an additional
+ordinary input bit z and witness bits w_1,...,w_q. Define
+
+\[
+ V_f(x,z,w)=z\land [w_1=f(x)]\land
+                  \bigwedge_{i=2}^{q}\neg w_i,
+ \qquad L_f(x,z)=\exists w\ V_f(x,z,w).
+\]
+
+Here C counts fan-in-two AND/OR and unary NOT gates, with input wires and
+constant wires free. Allowing free constants does not change P/poly or the
+exponent criterion. Encode z first if measuring sequential input access.
+
+This is a uniform construction when f is uniformly computable; it does not
+assume access to an oracle for a hard function. The attempt would use the
+following genuine facts as evidence for amplification:
+
+- Restricting z=1, w_1=1 and all other witness bits to zero recovers f.
+  Therefore C(V_f)>=C(f), by constant substitution and gate simplification.
+- Every YES input has exactly one witness, namely (f(x),0,...,0). Every NO
+  input has none. Half the ordinary inputs are YES and half are NO.
+- On every YES input, a uniformly random q-bit witness succeeds with
+  probability exactly 2^(-q).
+
+Nevertheless, the projected language is exactly
+
+\[
+                         L_f(x,z)=z.
+\]
+
+It has a zero-gate circuit consisting of an input wire. This proves that a
+lower bound for the verifier, uniqueness of witnesses, and exponentially
+small witness density together do not imply a lower bound for the existence
+decision. This rejects the proposed inference, not every existential
+construction or the unproved amplifier in Section 8.
+
+The counterexample has an explicit resource bound. Equality between w_1 and
+f(x) uses four AND/OR/NOT gates for XOR followed by NOT; conjunction with z
+uses one more. Each additional witness bit adds one NOT and one AND. Hence
+
+\[
+                       C(V_f)\le C(f)+2q+4.
+\]
+
+For the parity seed and q=n, this is at most 6n gates, since parity has a
+4(n-1)-gate construction. The verifier runs in O(n) bit time, has a lower
+bound of n-1 gates, and has exactly one successful witness among 2^n choices
+on each YES input. Yet deciding the language just reads z. These statements
+hold at every n>=1, not merely in the finite check below. The verifier cost
+is measured against n+1 ordinary input bits, which changes no exponent.
+
+**Attempted repair: constrain the first witness bit.** Setting w_1=1 makes
+the projection z AND f(x), which is computable with C(f)+1 gates. More
+generally, forcing w_1=g(x) makes it z AND [g(x)=f(x)], with at most
+C(f)+C(g)+6 gates. A linear-size g and the parity seed therefore still give
+a linear-size decision circuit. Neither repair creates the first exponent
+increase. Using a g with an unproved lower bound would import the missing
+hardness rather than derive it.
+
+### Two bounds that a replacement construction must respect
+
+**A cheap successful-witness selector gives a cheap decision circuit.** Let
+V_n(x,w) have s(n) gates. Suppose a multi-output circuit W_n(x) of t(n) gates
+has the property that whenever any witness is accepted, W_n(x) is accepted.
+Then
+
+\[
+       [\exists w\ V_n(x,w)] = V_n(x,W_n(x)),\qquad
+       C(L_n)\le s(n)+t(n).
+\]
+
+On NO inputs every witness is rejected; on YES inputs the selector's premise
+gives acceptance. Composition proves the size bound, allowing sharing and
+counting the whole selector. Even nonuniform selector circuits suffice for
+this upper bound. In the candidate above W_n(x,z)=(f(x),0,...,0), so the
+selector is already available from the seed. Conversely, a difficult selector
+would not by itself prove difficult decision: L_f=z for arbitrary f.
+
+**Short witnesses can be enumerated.** If there are q(n) witness bits, fix
+each possible witness in a copy of V_n and OR the results. This gives
+
+\[
+                  C(L_n)\le 2^{q(n)}s(n)+2^{q(n)}-1.
+\]
+
+For s(n)<=n^(b+o(1)) and q(n)<=c log_2(n)+O(1), the upper bound is
+n^(b+c+o(1)). It precludes an infinitely-often Omega(n^a) lower bound with
+a>b+c. A uniform polynomial-time verifier with O(log n) witness bits also
+gives a polynomial-time decider by this enumeration. This is a bound on the
+specified construction, not a ban on all polynomial-length witnesses;
+larger q merely removes this particular cheap enumeration and supplies no
+lower bound. The q=n counterexample demonstrates that distinction.
+
+### Bounded independent check and decision
+
+In addition to the all-size proofs, the following check was run over every
+Boolean function on n=1,2,3 inputs and q=1,2,3,4. It checked 276 functions,
+1,104 relations, 127,200 verifier rows, 16,960 fibers and 8,480 restrictions.
+All checks passed. This enumerates truth tables, not all circuits, and does
+not provide an asymptotic circuit lower bound or a Lean verification.
+
+```python
+from itertools import product
+for n in range(1, 4):
+    for values in product((0, 1), repeat=1 << n):
+        for q in range(1, 5):
+            def verify(x, z, w):
+                return z == 1 and w[0] == values[x] and not any(w[1:])
+            for x in range(1 << n):
+                for z in (0, 1):
+                    accepted = [w for w in product((0, 1), repeat=q)
+                                if verify(x, z, w)]
+                    assert len(accepted) == z
+                    if z:
+                        assert accepted == [(values[x],) + (0,) * (q-1)]
+                assert verify(x, 1, (1,) + (0,) * (q-1)) == bool(values[x])
+```
+
+Stop this proposed amplification mechanism and its two repairs. A replacement
+must establish a lower bound for the projected decision function itself;
+counting witnesses, lower-bounding the verifier, or lower-bounding a particular
+search procedure does not supply it. No such projected-function bound was
+obtained here. The generic amplification route remains an unfulfilled
+specification, and there is still no complete P-versus-NP proof candidate.
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
