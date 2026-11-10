@@ -11,7 +11,49 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: requested general lower bound remains unproved (2026-11-10 JST)
+## Current continuation: reconstruct one proof and test one alteration (2026-11-11 JST)
+
+The user approved a strategy change: pause direct general-lower-bound
+attacks, understand an existing proof thoroughly, and examine one change.
+We selected McKay–Murray–Williams (2019), Sections 2.1, 3 and 5. The
+[worked reconstruction](mcsp_merge_reconstruction.md) traces the interval
+merge invariant, coherent witness selection, the use of NP contained in
+P/poly, and the resulting coarse circuit bounds. A binary tree suffices
+for that endpoint; we do not claim the paper's sharper uniform bounds.
+
+The selected alteration uses standard hash isolation to replace canonical
+Sigma_3^P output-bit queries by two rounds of Sigma_2^P queries: parallel
+candidate bits, then coNP verification of the assembled candidates. For
+m-bit merge inputs and L-bit witnesses, a fixed family of
+16(L+1)(m+1) affine hashes exists that isolates a witness for every feasible
+input of that length. The isolation probability and the union bound over
+all inputs are proved explicitly; the advice is independent of the actual
+truth table.
+
+The tradeoff is essential: this family is fixed by a nonuniform existence
+argument, without a polynomial-time construction, and local overhead is
+only bounded polynomially. Sigma_2^P queries remain unsolved computations.
+The same coarse conditional N·poly(n)-size, poly(n)-depth upper bound
+follows under NP contained in P/poly, but no stronger lower bound or weaker
+fundamental assumption has been obtained. This is a proof-study result
+using standard tools, with no novelty claim.
+
+The finite audit checks exact isolation probabilities for all 273 nonempty
+witness sets on up to three bits. For the 14 functions computable by
+two-input circuits with at most two gates, it checks all 81 partial tables
+using a fixed 3,168-hash family and all 196 child-representative pairs.
+Postverification rejects 5,308 candidate strings, including 5,132 malformed
+circuits and 42 circuits with wrong constrained values. These finite
+checks validate the selection mechanism, not a general efficient merge
+algorithm. The script is embedded in the study note; solver, result-manifest
+and Lean sources are unchanged.
+
+Retain the explicit invariant and resource accounting as the baseline for
+further study of this same proof. Lowering the oracle alternation alone is
+not adopted as a new main route to P vs NP. There is still no new proof
+candidate for the full problem.
+
+## Previous continuation: requested general lower bound remains unproved (2026-11-10 JST)
 
 The user explicitly asked to prove the general search-MCSP circuit lower
 bound. **We have not proved it.** The target remains the exclusion, for
