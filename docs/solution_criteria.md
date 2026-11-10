@@ -323,6 +323,191 @@ forbidden.
 The next research obligations are recorded in
 [reverse_engineering.md](reverse_engineering.md).
 
+## 8. Backward construction: make the hardness exponent outrun the verification cost
+
+2026-11-10 JST. The user asked what is needed and requested constructing the
+argument backward from that requirement. We choose one **sufficient** route to
+P!=NP: a superpolynomial lower bound for general Boolean circuits computing a
+single NP-complete language. This is stronger than the required uniform time
+separation; it is not asserted to be necessary for P!=NP. The following is a
+proof architecture with one explicitly missing construction, not a complete
+proof, a new lower-bound theorem, or a novelty claim.
+
+### A proved transfer lemma that fixes the previous quantifier gap
+
+For each fixed positive integer k, suppose a language L_k has:
+
+1. A specified NP verifier whose witness length **and total verification time**
+   are O(n^(b_k)), with a fixed positive integer b_k. Here n is the original input bit length; time is
+   not measured only in the certificate length. Constants may depend on k.
+2. An unrestricted circuit lower bound: for infinitely many n, every circuit
+   deciding L_k on all n-bit inputs has at least c_k*n^(a_k) gates, for some
+   c_k>0 and a_k>0. Gates are fan-in-two AND/OR and fan-in-one NOT; fan-out and
+   sharing are allowed. The bound covers all such circuits, not a solver,
+   proof system, variable order, or particular circuit construction.
+3. An unbounded ratio: for every D there is a fixed k with a_k/b_k>D.
+
+Rounding any polynomial verification exponent b>=1 up to an integer multiplies
+it by at most two, so this convention does not destroy an unbounded ratio.
+
+**Transfer lemma.** These three premises imply SAT is not in P/poly, and hence
+P!=NP. The languages L_k may differ: a costed reduction, not a quantifier swap,
+transfers their bounds to one fixed SAT language.
+
+**Proof.** Use the locally constructible near-linear Cook-Levin reduction
+[W, Theorem 3.1]. Applied to the time-O(n^(b_k)) nondeterministic verifier, it
+constructs an equivalent 3-CNF of encoded length n^(b_k+o(1)) in
+n^(b_k+o(1)) deterministic time. The o(1) absorbs fixed polylogarithmic factors;
+k is fixed before letting n grow. A standard computation-to-circuit simulation
+gives reduction circuits of n^(b_k+o(1)) gates as well. This charges both writing
+the formula and constructing its contents; no succinct-input shortcut is used.
+
+For an exact fixed-length composition, use SAT_pad: a self-delimiting ordinary
+3-CNF encoding followed by ignored zero padding, with malformed encodings
+rejected. It is polynomially equivalent to ordinary SAT and NP-complete. Pad
+the reduction output to a length M_k(n)=n^(b_k+o(1)) depending only on n and k,
+not on x. Reading and producing this padding has the same charged bound.
+
+Suppose SAT_pad has circuits of size O(M^d), for one fixed d>=1. Compose its
+length-M_k(n) circuit with the reduction circuit. The resulting circuit for
+L_k on length n has size
+
+\[
+ O\bigl(n^{b_k+o(1)}+M_k(n)^d\bigr)
+       =n^{d b_k+o(1)}.
+\]
+
+Choose k so that a_k>d b_k. This k is a constant for the contradiction; it
+need not be part of any input. Let delta=(a_k-d b_k)/2>0. For all sufficiently
+large n, the composed size is O(n^(d b_k+delta))=o(n^(a_k)), contradicting
+the infinitely-often lower bound in premise 2. Thus SAT_pad is not in P/poly.
+Since SAT_pad reduces to ordinary SAT in polynomial time, polynomial-size
+circuits for SAT would give polynomial-size circuits for SAT_pad. Therefore
+SAT is not in P/poly. Finally P is contained in P/poly, so SAT is not in P
+and NP-completeness gives P!=NP. QED.
+
+This lemma does not establish any of its input lower bounds. For example,
+an effective family of verifiers all running in O(n^3), with general-circuit
+lower bounds Omega(n^k) for unbounded k, would meet it. Merely allowing the
+verification exponent to grow faster than the lower-bound exponent does not.
+
+### A concrete seed and the missing amplification lemma
+
+A seed is available without any conjecture. The n-input parity function has a
+linear-time verifier (just compute parity). Every fan-in-two circuit computing
+it has at least n-1 gates: all n inputs are essential, and the connected fan-in
+graph of the output with s gates has at least n+s-1 edges and at most 2s edges.
+Thus a_0=b_0=1 is a valid seed, with lower-bound constant 1/2 for n>=2.
+This familiar linear bound concerns general circuits, but its exponent ratio
+is only one. Parity is in P.
+
+There is an immediate constraint on any proposed operation: if its purported
+O(n^b) verifier actually decides the language without a witness, the standard
+time-to-circuit simulation already supplies n^(b+o(1))-size circuits. It cannot
+also have an infinitely-often Omega(n^a) lower bound with a>b. Merely processing
+easy functions in a more elaborate way cannot provide the first increase.
+
+One possible missing lemma would be an explicit transformation A with a fixed
+rho>1 that takes a specified verifier and a proved general-circuit lower bound,
+and produces another specified NP verifier plus a proved general-circuit bound
+with
+
+\[
+        \frac{a_{j+1}}{b_{j+1}}
+          \ge \rho\,\frac{a_j}{b_j}.
+\]
+
+The output must meet premises 1 and 2 above, including uniform verification,
+the complete circuit model and the infinitely-many-lengths quantifier. The
+transformation may incur a large constant description cost for each fixed j,
+but cannot hide superpolynomial witness processing behind an oracle. Iterating
+it from parity would give a_j/b_j>=rho^j. The transfer lemma would then give
+P!=NP. This closes the logical implication **if A exists with those proofs**.
+No such transformation or proof has been obtained here. Introducing its name
+is not progress on the missing lower bound, nor is this amplification mechanism
+claimed necessary for every possible solution of P versus NP.
+
+### Actual attempts to construct the amplification
+
+**Padding fails the required accounting.** Pad n-bit inputs to length
+N=Theta(n^p), for a fixed p>=1. Restricting a circuit for the padded language
+to the prescribed padding recovers a circuit for the original language, so the
+supplied lower bound becomes Omega(N^(a/p)). The available verifier checks the
+padding and the original witness in time O(N+n^b), with exponent max(1,b/p).
+The ratio supplied by this construction is therefore
+
+\[
+       \frac{a/p}{\max(1,b/p)}
+          =\frac{a}{\max(p,b)}\le\frac{a}{b}.
+\]
+
+Padding alone does not amplify this pair of bounds. A different improved
+verifier for the padded problem would require its own new argument.
+
+**Independent conjunction does not supply amplification either.** Take
+t=n^r independent n-bit instances, r>=0, and ask that all belong to L.
+The new input length is N=Theta(tn), and concatenating the witnesses costs
+t*n^b=N^((r+b)/(r+1)) up to encoding factors. Even if we *grant* the optimistic
+direct-sum lower bound t*n^a, the resulting ratio is
+
+\[
+ \frac{(r+a)/(r+1)}{(r+b)/(r+1)}
+   =\frac{r+a}{r+b}
+   =\frac{r}{r+b}\cdot1+\frac{b}{r+b}\cdot\frac{a}{b}.
+\]
+
+It lies between one and the old ratio, so cannot yield rho>1 from the parity
+seed. No general direct-sum lower bound is being asserted. For this seed the
+failure is unconditional: a two-bit XOR uses four AND/OR/NOT gates, so the
+conjunction of t independent n-bit parities has a circuit with
+4t(n-1)+(t-1)<4N gates. The actual candidate still has linear-size circuits.
+
+**Connecting parity constraints by expansion also fails for this candidate.**
+On a fixed connected graph G, assign an edge bit to each edge and require that
+the XOR of incident edge bits at each vertex equal its charge chi_v. Summing
+all equations proves that SAT requires XOR_v chi_v=0. For sufficiency, set
+non-tree edges to zero in a spanning tree and eliminate leaves, choosing each
+leaf's parent-edge value to satisfy its equation and updating the parent
+charge. The final root equation holds exactly when the total charge is even.
+Thus as a function of q charge bits, satisfiability is simply even parity,
+with at most 4(q-1)+1 gates, regardless of the graph's expansion. This does
+not address arbitrary CNFs; it rejects this explicit proposed amplification.
+Proof-system hardness on these inputs cannot replace premise 2.
+
+### Applying the criterion to the previous literature route
+
+The conditional conclusion of Murray-Williams [MW, Theorem 1.1] supplies
+a_k=k and a verifier-time exponent b_k=ceil(c k^4/epsilon). These stated bounds give
+
+\[
+          a_k/b_k\le\epsilon/(c k^3),
+\]
+
+which is bounded and tends to zero. They do not meet premise 3. This is not a
+claim that no sharper verifier or lower bound exists; it specifies what the
+quoted theorem does and does not supply. Padding the verifier time down to a
+fixed degree also scales down the lower bound, as calculated above.
+
+**Status.** The seed, the transfer implication, and the failures of these
+three attempted constructions are justified. The amplification lemma remains
+unproved, and no family meeting the unbounded-ratio condition has been
+constructed. This is a precise conditional proof architecture; it does not
+qualify as a provisional complete-proof candidate. No numerical experiments
+or new Lean verification are claimed for this argument.
+
+Sources read, already used in the previous investigation:
+
+- **[W]** R. Ryan Williams, [*Improving exhaustive search implies
+  superpolynomial lower bounds*](https://people.csail.mit.edu/rrw/improved-algs-lbs2.pdf),
+  SIAM Journal on Computing 42(3), 1218-1244 (2013), Theorem 3.1 for the
+  near-linear nondeterministic-time-to-3SAT reduction. The circuit composition
+  and exponent accounting above are elementary deductions, not a new theorem
+  attributed to that paper.
+- **[MW]** Cody D. Murray and R. Ryan Williams, [*Circuit Lower Bounds for
+  Nondeterministic Quasi-Polytime: An Easy Witness Lemma for NP and NQP*](https://people.csail.mit.edu/rrw/easy-witness-nqp.pdf),
+  STOC 2018, Theorem 1.1. Its circuit-algorithm hypothesis remains a hypothesis;
+  quoting its conclusion does not establish the required lower bounds here.
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
