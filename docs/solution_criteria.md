@@ -2038,6 +2038,222 @@ print({'singleton_cases': single_cases, 'sorting_cases': sort_cases,
        'dense_reconstructed_circuits': dense_reconstructed, 'all_checks_passed': True})
 ```
 
+## 15. Requested general search-MCSP lower bound: the rank attempt fails
+
+**Date:** 2026-11-10 JST. The user explicitly requested a proof of the
+general search-MCSP circuit lower bound. **The requested theorem remains
+unproved.** This continuation tested a direct algebraic argument; it did
+not establish a new circuit lower bound. The failure recorded here is
+not a proof that the target is false or that all algebraic methods fail.
+
+The target from 13.3 is: for every fixed c>=1 there are infinitely many n
+at which no general Boolean circuit of size at most 2^n n^c and depth at
+most n^c correctly solves search-MCSP[n²]. By the cited magnification
+theorem, this would imply NP not contained in P/poly, hence P≠NP.
+It is a sufficient condition, not an equivalence to P≠NP established here.
+The linear bound G>=N-r from 14.1, where N=2^n and r is the number of
+output bits, is valid but does not reach this target.
+
+### 15.1 The attempted rank contradiction
+
+Suppose an encoder S returns an r-bit description of a small circuit.
+Let D evaluate that description at all N input assignments, so D has N
+outputs. On every YES table T, correctness requires D(S(T))=T. In
+particular, this holds at the zero table and each unit table e_i, since
+all of these have circuits within the n² budget.
+
+For a Boolean function, take its unique multilinear real polynomial.
+Since P=D composed with S has P(0)=0 and P(e_i)=e_i, the linear part of
+that multilinear representation is the N-by-N identity. A tempting next
+step is to write J_P=J_D J_S and conclude N<=r. For large n this would
+contradict r=O(n² log n)<N.
+
+There is an immediate check on the scope of this argument: it has not
+used the size or depth of S at all. Exhaustive circuit enumeration gives
+a correct finite search function with short outputs at every n, although
+its computation is expensive. A contradiction to the existence of every
+such short-output function would therefore already be too strong.
+
+**That step is invalid.** Formal polynomial composition need not be
+multilinear in the original table bits. The chain rule applies before
+reducing powers using T_i²=T_i. This Boolean reduction preserves values
+on the cube but can change the linear coefficients and the Jacobian at
+zero. Agreement on the cube does not imply agreement in a neighborhood
+of zero over the real numbers.
+
+### 15.2 An explicit three-bit bottleneck with rank four
+
+Use four table bits t_0,t_1,t_2,t_3 and encode them as
+
+\[
+ a=t_0\lor t_1\lor t_2\lor t_3,\quad
+ b=t_2\lor t_3,\quad c=t_1\lor t_3.
+\]
+
+Decode with
+
+\[
+ D(a,b,c)=\big(a(1-b)(1-c),\ a(1-b)c,\ ab(1-c),\ abc\big).
+\]
+
+This reconstructs zero and every unit table exactly through three bits.
+It is a promise compressor, not a solver for arbitrary MCSP inputs.
+It suffices to refute the proposed inference from these correctness
+conditions and a short intermediate representation.
+
+Represent OR as u+v-uv and compose the ordinary polynomials. Before
+Boolean reduction the Jacobian at zero is
+
+\[
+ J_{D\circ S}(0)=
+ \begin{pmatrix}1&1&1&1\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix},
+\]
+
+of rank one, consistent with the chain rule. After multilinear reduction,
+the Jacobian is I_4, of rank four. Neither statement contradicts the
+other. The supplied exact-polynomial calculation checks both matrices
+and their values at all 16 Boolean inputs.
+
+There is also an all-size version: encode the active flag and the n-bit
+address of a singleton, as in 14.1, and decode its point indicator.
+The intermediate length is n+1, while the Boolean linear part of the
+reconstructed N-bit table has rank N. The formatter from 14.2 can turn
+this code into an actual short circuit description. The invalid rank
+argument cannot be repaired by replacing the toy code with that format.
+
+### 15.3 What a valid repair gives
+
+For forward differences from zero, the correct product rule is
+
+\[
+ \Delta_i(fg)=f(0)\Delta_i g+g(0)\Delta_i f
+                       +(\Delta_i f)(\Delta_i g).
+\]
+
+The last term is missing from the derivative argument. Keeping all
+products amounts to allowing the 2^r Boolean monomials in the code bits.
+Each decoded coordinate is a linear combination of these monomials.
+In differences between S(e_i) and S(0), the constant monomial vanishes.
+Thus the rank factorization legitimately gives only
+
+\[
+ N\le 2^r-1,\qquad r\ge\lceil\log_2(N+1)\rceil=n+1.
+\]
+
+Equivalently, the N+1 different tables need different codes. The singleton
+encoder attains this description-length bound. It is not a lower bound
+on the size of a circuit that computes the code, and it is compatible
+with the allowed output length of search-MCSP[n²].
+
+Working directly in the Boolean quotient ring does not retain the proposed
+ordinary derivatives either. In R=K[T_1,...,T_N]/(T_i²-T_i), any K-linear
+derivation partial satisfying the ordinary product rule has
+(1-2T_i) partial(T_i)=0. Since (1-2T_i)²=1 in R, partial(T_i)=0 for
+every generator, and the derivation is zero. This elementary observation
+concerns this derivative construction, not all algebraic lower-bound tools.
+
+**Conclusion of the attempt.** The first-order rank contradiction fails;
+the corrected feature argument gives only the usual information bound.
+The requested all-polynomial circuit exclusion remains open in this work.
+No asserted or assumed version of it is added to the Lean development,
+and no conditional statement is presented as its proof.
+
+### 15.4 Exact countercheck
+
+The following standard-library script expands the formal composition,
+performs Boolean reduction independently, computes both ranks over the
+rationals, and checks the finite-difference identity. Its 16 input checks
+verify the counterexample; they are not tests of the asymptotic target.
+
+```python
+from fractions import Fraction
+from itertools import product
+
+
+n = 4
+zero = (0,) * n
+one = {zero: 1}
+
+
+def add(a, b, scale=1):
+    out = dict(a)
+    for key, value in b.items():
+        out[key] = out.get(key, 0) + scale * value
+    return {key: value for key, value in out.items() if value}
+
+
+def mul(a, b):
+    out = {}
+    for ka, va in a.items():
+        for kb, vb in b.items():
+            key = tuple(x + y for x, y in zip(ka, kb))
+            out[key] = out.get(key, 0) + va * vb
+    return {key: value for key, value in out.items() if value}
+
+
+def bor(a, b):
+    return add(add(a, b), mul(a, b), -1)
+
+
+def reduce_boolean(poly):
+    out = {}
+    for key, value in poly.items():
+        support = tuple(int(e > 0) for e in key)
+        out[support] = out.get(support, 0) + value
+    return {key: value for key, value in out.items() if value}
+
+
+def evaluate(poly, point):
+    return sum(value * all(not power or point[i] for i, power in enumerate(key))
+               for key, value in poly.items())
+
+
+def rank(matrix):
+    a = [list(map(Fraction, row)) for row in matrix]
+    r = 0
+    for j in range(len(a[0])):
+        pivot = next((i for i in range(r, len(a)) if a[i][j]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        q = a[r][j]
+        a[r] = [x / q for x in a[r]]
+        for i in range(len(a)):
+            if i != r:
+                q = a[i][j]
+                a[i] = [x - q * y for x, y in zip(a[i], a[r])]
+        r += 1
+    return r
+
+
+unit = [tuple(int(i == j) for j in range(n)) for i in range(n)]
+t = [{key: 1} for key in unit]
+a = bor(bor(t[0], t[1]), bor(t[2], t[3]))
+b, c = bor(t[2], t[3]), bor(t[1], t[3])
+decoder = [mul(mul(a, b if i & 2 else add(one, b, -1)),
+               c if i & 1 else add(one, c, -1)) for i in range(4)]
+reduced = [reduce_boolean(p) for p in decoder]
+formal = [[p.get(key, 0) for key in unit] for p in decoder]
+boolean = [[p.get(key, 0) for key in unit] for p in reduced]
+assert formal == [[1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+assert boolean == [[int(i == j) for j in range(4)] for i in range(4)]
+assert rank(formal) == 1 and rank(boolean) == 4
+for point in product((0, 1), repeat=4):
+    active = int(any(point))
+    address = 2 * int(point[2] or point[3]) + int(point[1] or point[3])
+    expected = [int(active and i == address) for i in range(4)]
+    assert [evaluate(p, point) for p in decoder] == expected
+    assert [evaluate(p, point) for p in reduced] == expected
+    if sum(point) <= 1:
+        assert expected == list(point)
+for f0, f1, g0, g1 in product((0, 1), repeat=4):
+    df, dg = f1 - f0, g1 - g0
+    assert f1 * g1 - f0 * g0 == f0 * dg + g0 * df + df * dg
+print({'formal_jacobian_rank': rank(formal), 'boolean_linear_part_rank': rank(boolean),
+       'bottleneck_bits': 3, 'boolean_inputs_checked': 16,
+       'finite_difference_product_checks': 16, 'all_checks_passed': True})
+```
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
