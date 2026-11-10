@@ -1080,6 +1080,327 @@ certificates or all counting methods. Reopening this route requires a
 specified sound bit verifier and a resource argument that addresses these
 defects. No such verifier or new complete-proof candidate was obtained.
 
+## 12. A P=NP attempt: bounded-clause elimination and two-variable lookahead
+
+2026-11-10 JST. After parking canonical hard tables, we changed to an
+algorithmic route: repeatedly simplify a SAT instance while controlling the
+size of its explicit representation. We test ordinary Davis-Putnam variable
+elimination with a nonincreasing clause budget, including a two-variable
+repair that may temporarily increase the budget. These are established
+operations, not a new SAT algorithm. See the Davis-Putnam reference and the
+different earlier representation experiment in [event_projection.md](event_projection.md).
+
+### The exact operation and the sufficient progress claim
+
+Write a CNF as
+
+\[
+ F=F_0\land\bigwedge_i(x\lor A_i)\land\bigwedge_j(\neg x\lor B_j).
+\]
+
+Eliminating x replaces its parent clauses by all resolvents A_i OR B_j,
+retaining F_0. Delete tautologies, duplicates and clauses containing another
+clause as a subset. The result G satisfies G(y) iff some x satisfies F(x,y).
+Indeed a satisfying x makes every resolvent true. Conversely, if all A_i
+are true choose x=0; otherwise a false A_i forces all B_j true through the
+resolvents, and x=1 works. Empty parent families are handled by the same
+argument. The simplifications preserve the Boolean function exactly.
+
+The candidate accepts a block of one or two occurring variables only if,
+after eliminating the whole block and simplifying, the clause count does
+not increase. For a pair, temporary growth after the first elimination is
+allowed. Search all such blocks. No clauses means SAT; an empty clause means
+UNSAT; if neither occurs and no block is acceptable, the procedure is stuck,
+not UNSAT. A SAT assignment can be lifted by reversing the exact eliminations.
+
+**Conditional cost argument.** Renumber occurring variables densely first.
+Let n and M be the initial variable and clause counts. No new variable is
+introduced; accepted states have at most M clauses of width at most n.
+One trial elimination produces at most O(M^2) clauses, and two produce at
+most O(M^4), before simplification. Even pairwise subset checking on these
+explicit clauses has polynomial bit cost. Scanning O(n^2) blocks per round
+and accepting at most n rounds remains polynomial. Recording the accepted
+eliminations and reversing them also uses polynomial resources. Clause widths,
+wire-name bits and failed trials are charged; a decreasing variable count
+alone would not establish this bound.
+
+Thus the missing progress claim would suffice: **every nonterminal instance
+has an acceptable one- or two-variable block.** We do not assume it. The
+following connected SAT family refutes it for every choice of block.
+
+### An explicit family where every single elimination increases the budget
+
+For every integer p>=11, use 3p variables A_i,B_i,C_i, with i modulo p.
+For each i and t=0,...,5 include the clause on
+
+\[
+                         A_i,\ B_{i+t},\ C_{i+2t},
+\]
+
+with all three literals positive when t<3 and all three negative otherwise.
+Call the resulting formula F_p. It has 6p clauses and 18p literal occurrences.
+Setting every A_i true and every B_i false satisfies it, whatever the C_i
+values. This supplies an easily checked witness, not general SAT hardness.
+
+Each variable occurs positively three times and negatively three times.
+Any two distinct clauses share at most one variable: equality of an A/B pair
+fixes i,t; equality of a B/C pair fixes t and then i; equality of an A/C pair
+forces 2(t-t')=0 modulo p, and |2(t-t')|<=10<p. The incidence graph is
+connected: the t=0 clauses join the three variables at each index, while the
+t=1 clauses join successive indices. There are no units, pure variables,
+tautologies, duplicates or subsumable original clauses.
+
+For any variable x, its six incident clauses have pairwise disjoint remaining
+two-variable sets. Its three positive and three negative parents therefore
+produce nine distinct, nontautological four-literal resolvents, each with two
+positive and two negative literals. No original three-literal clause, whose
+literals all have the same sign, subsumes one. The new clauses do not subsume
+one another. Hence every single elimination has the exact changes
+
+\[
+          \Delta\#\text{clauses}=9-6=3,\qquad
+          \Delta\#\text{literal occurrences}=36-18=18.
+\]
+
+The conclusion is unchanged by any permutation of variables or consistent
+negation of selected variables, because these preserve resolution,
+tautology, duplication and subset relations.
+
+### The two-variable repair also fails, even with temporary growth
+
+**Nonadjacent pair.** If x,y occur in no common clause, their incident parent
+sets are disjoint and eliminating one creates no occurrence of the other.
+There are 18 four-literal resolvents replacing 12 clauses. Resolvents from
+the two eliminations cannot coincide: their two positive literals would
+then belong to two different original positive clauses, contradicting the
+one-shared-variable property. All have two positive and two negative literals,
+so original homogeneous clauses do not subsume them. The net increase is six.
+
+**Adjacent pair.** Suppose the shared clause is x OR y OR z. The negative
+shared-clause case follows by exchanging signs. Apart from this clause,
+each of x and y has two positive and three negative parents. Eliminating
+both variables yields:
+
+- Six resolvents from x's other positive parents and its negative parents.
+- Six from y's other positive parents and its negative parents.
+- Nine clauses formed from z and the two negative remainders, one from an
+  x-parent and one from a y-parent.
+
+The first twelve have two literals of each sign. The last nine have z as
+their only positive literal and three or four negative literals. They are
+nontautological: no negative parent can also contain z without sharing two
+variables with the original shared clause.
+
+For completeness, no simplification erases these counts. Within either
+negative-parent family the two-element remainder sets are disjoint; across
+families they intersect in at most one element. Their nine pairwise unions
+are distinct and form an antichain. To see this, an inclusion between unions
+with different first indices would force that first two-element set into a
+single opposite-family set, contradicting their intersection bound; if the
+first indices agree but the second differ, use disjointness of the second
+family to obtain the same contradiction. Thus the last nine clauses cannot
+subsume one another. Their sign counts also preclude subsumption with the
+first twelve. Those first twelve are distinct by the positive-parent
+intersection argument used above. A surviving original negative clause
+cannot be contained in a last-family clause: three negative literals from
+two two-element remainders would share two with one original parent. Original
+positive clauses cannot be contained in it either.
+
+All 21 derived clauses therefore survive, replacing 11 parents. The increase
+is ten. This is the final count after both eliminations, in either order;
+the argument is not merely a rejection of the intermediate step. In total,
+
+\[
+ \Delta\#\text{clauses}=
+ \begin{cases}
+  3,&\text{one variable},\\
+  6,&\text{two variables sharing no clause},\\
+ 10,&\text{two variables sharing a clause}.
+ \end{cases}
+\]
+
+Thus no accepted block exists on F_p, even though F_p is satisfiable. This
+refutes the candidate's universal progress claim. It does not rule out
+larger blocks, a different size budget, other preprocessing, a direct SAT
+witness search, or an equisatisfiable transformation beyond this operation.
+
+### Allowing growth does not remove the known proof-system limitation
+
+The increase by three above does **not** itself prove superpolynomial growth
+over subsequent rounds. A polynomial allowance for total growth would bypass
+that particular rejection rule on the first round. We therefore separately
+check the broader repair of retaining explicit resolution elimination while
+changing its budget or block size.
+
+Every nontrivial new clause in an accepted elimination is an ordinary binary
+resolvent of two previously available clauses. Keep those parent references
+in a derivation log, even after the working formula discards clauses.
+Removing a duplicate, tautology or subsumed clause adds no inference. If the
+algorithm eventually reports UNSAT because it has derived the empty clause,
+the logged ancestors of that clause are an ordinary resolution refutation.
+Its number of lines is at most the original clause count plus the total
+number of explicitly generated resolvents in the accepted eliminations.
+Consequently polynomial total running time for this mechanism on all UNSAT
+inputs would supply polynomial-size ordinary resolution refutations for all
+of them. Choosing an elimination order adaptively or grouping steps does not
+change this simulation. Small working memory alone does not bound the total
+number of generated lines.
+
+The known lower bound already used in [robust_ceiling.md](robust_ceiling.md)
+rules this out. We checked Ben-Sasson and Wigderson, *Short Proofs Are
+Narrow—Resolution Made Simple*, JACM 48(2), 149–169 (2001), in the
+[original paper](https://people.inf.ethz.ch/emo/SatSem05/Papers/BensassonWidgerson01.pdf):
+Section 2's ordinary DAG resolution definition, Theorem 3.5/Corollary 3.6,
+Theorem 4.4 and Corollary 4.5. Odd-charge Tseitin CNFs on connected cubic
+expanders with q vertices have initial width three and O(q) variables,
+require width Omega(q), and hence require exp(Omega(q)) resolution lines.
+With dense binary variable names the input length is L=Theta(q log q), so
+this is exp(Omega(L/log L)), still superpolynomial in L.
+
+This is an application of an established lower bound, not a new one. It
+stops a complete polynomial SAT proposal whose only UNSAT mechanism is the
+explicit resolution elimination just specified, even with a more permissive
+budget. A method using Gaussian elimination, extension axioms or a different
+semantic decision rule is outside this simulation. In fact parity reasoning
+decides these Tseitin contradictions efficiently. No lower bound for general
+SAT algorithms follows. The downloaded paper's SHA-256 was
+`a47025f36a47da2d39e490bdeaaa39b5618eb9f947cfe609f1833ea1511248f4`.
+
+### Executed checks and scope
+
+The exact elimination operation was independently compared with existential
+truth-table evaluation on all 256 two-variable CNFs over the eight nonempty
+nontautological clauses, plus three normalization/contradiction controls.
+All 1,295 projected assignments agreed. Empty CNFs and empty clauses were
+checked explicitly.
+
+For p=11,13,17, we then tested the base formula and two signed/permuted
+versions. Known witnesses were checked on the actual transformed clauses.
+All 369 single projections and 7,632 unordered pairs agreed with the counts
+above; each pair was checked in both orders, for 15,264 ordered projections.
+The base-formula pair counts are:
+
+| p | Variables | Clauses | Pairs increasing clauses by 6 | Pairs increasing clauses by 10 |
+|---|---:|---:|---:|---:|
+| 11 | 33 | 66 | 330 | 198 |
+| 13 | 39 | 78 | 507 | 234 |
+| 17 | 51 | 102 | 969 | 306 |
+
+Each clause contributes three distinct adjacent pairs, so the last column
+equals 18p; the other column is binomial(3p,2)-18p. These finite checks support
+the implementation and identities. The all-size conclusions use the proofs
+above, not extrapolation of the table. This is not a Lean verification or an
+all-algorithm SAT lower bound. After the progress claim failed, no new general
+solver or larger benchmark suite was built.
+
+The complete independent audit is reproducible with this Python block:
+
+```python
+from itertools import combinations, product
+from random import Random
+
+
+def normalize(clauses):
+    clauses = {frozenset(c) for c in clauses}
+    clauses = {c for c in clauses if not any(-lit in c for lit in c)}
+    return frozenset(c for c in clauses if not any(d < c for d in clauses))
+
+
+def eliminate(clauses, variable):
+    positive = [c - {variable} for c in clauses if variable in c]
+    negative = [c - {-variable} for c in clauses if -variable in c]
+    rest = [c for c in clauses if variable not in c and -variable not in c]
+    return normalize(rest + [a | b for a in positive for b in negative])
+
+
+def family(p):
+    return normalize([
+        tuple((1 if t < 3 else -1) * v for v in
+              (i + 1, p + (i+t) % p + 1, 2*p + (i+2*t) % p + 1))
+        for t in range(6) for i in range(p)
+    ])
+
+
+def holds(clauses, bits):
+    return all(any(bits[abs(lit)-1] == (lit > 0) for lit in c) for c in clauses)
+
+
+universe = ((1,), (-1,), (2,), (-2,), (1, 2), (1, -2), (-1, 2), (-1, -2))
+controls = [tuple(c for j, c in enumerate(universe) if mask >> j & 1)
+            for mask in range(256)]
+controls += [((),), ((1, -1), (2,), (2,)), ((1,), (-1,), (1, 2))]
+projection_checks = 0
+for source in controls:
+    reduced = normalize(source)
+    for bits in product((False, True), repeat=2):
+        assert holds(source, bits) == holds(reduced, bits)
+    for block in ((1,), (2,), (1, 2)):
+        projected = reduced
+        for variable in block:
+            projected = eliminate(projected, variable)
+        assert all(abs(lit) not in block for c in projected for lit in c)
+        remaining = tuple(v for v in (1, 2) if v not in block)
+        for values in product((False, True), repeat=len(remaining)):
+            fixed = dict(zip(remaining, values))
+            expected = any(holds(source, bits) for bits in product((False, True), repeat=2)
+                           if all(bits[v-1] == value for v, value in fixed.items()))
+            bits = tuple(fixed.get(v, False) for v in (1, 2))
+            assert holds(projected, bits) == expected
+            projection_checks += 1
+assert normalize(()) == frozenset()
+assert normalize(((),)) == frozenset({frozenset()})
+print({'small_formulas': len(controls), 'projection_checks': projection_checks})
+
+singles = pairs = 0
+for p in (11, 13, 17):
+    base = family(p)
+    for seed in (None, 0, 1):
+        labels = list(range(1, 3*p+1))
+        if seed is not None:
+            rng = Random(seed)
+            rng.shuffle(labels)
+            labels = [v if rng.getrandbits(1) else -v for v in labels]
+        clauses = normalize(tuple(labels[abs(lit)-1] if lit > 0 else
+                                  -labels[abs(lit)-1] for lit in c) for c in base)
+        witness = [False] * (3*p)
+        for old, label in enumerate(labels):
+            witness[abs(label)-1] = (old < p) == (label > 0)
+        assert holds(clauses, witness)
+        assert len(clauses) == 6*p and all(len(c) == 3 for c in clauses)
+        scopes = [frozenset(abs(lit) for lit in c) for c in clauses]
+        assert all(len(a & b) <= 1 for a, b in combinations(scopes, 2))
+        variables = range(1, 3*p+1)
+        assert all(sum(v in c for c in clauses) == 3 and
+                   sum(-v in c for c in clauses) == 3 for v in variables)
+        one = {v: eliminate(clauses, v) for v in variables}
+        for result in one.values():
+            assert len(result) - len(clauses) == 3
+            assert sum(map(len, result)) - 18*p == 18
+            singles += 1
+        histogram = {}
+        for x, y in combinations(variables, 2):
+            result = eliminate(one[x], y)
+            assert result == eliminate(one[y], x)
+            shared = any(x in scope and y in scope for scope in scopes)
+            delta = len(result) - len(clauses)
+            assert delta == (10 if shared else 6)
+            histogram[delta] = histogram.get(delta, 0) + 1
+            pairs += 1
+        assert histogram[10] == 18*p
+        print({'p': p, 'seed': seed, 'variables': 3*p, 'clauses': 6*p,
+               'single_clause_increase': 3, 'pair_clause_increase_counts': histogram})
+print({'single_projections': singles, 'unordered_pairs_both_orders': pairs,
+       'ordered_pair_projections': 2*pairs, 'all_checks_passed': True})
+```
+
+**Decision.** Reject the one- and two-variable nonincreasing-clause strategy
+by the explicit SAT family. Also stop a budget-only repair that still relies
+solely on explicit ordinary resolution to refute every UNSAT input, by the
+known lower bound and the trace simulation. Retain the projection and resource
+analysis; do not assume that a suitable block always exists. Other shrinking
+methods remain unexamined by these arguments. This investigation supplies no
+complete P-versus-NP proof candidate in either direction.
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
