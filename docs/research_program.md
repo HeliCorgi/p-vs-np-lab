@@ -11,7 +11,41 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: attempt a general-computation proof (2026-11-10 JST)
+## Current continuation: construct backward from the missing requirement (2026-11-10 JST)
+
+The user asked to identify what is needed and construct the argument from it.
+The [backward proof architecture](solution_criteria.md#8-backward-construction-make-the-hardness-exponent-outrun-the-verification-cost)
+now gives a complete conditional transfer argument, with the unresolved lower
+bound exposed rather than assumed as a working lemma. It is a sufficient route
+through general circuits, stronger than the required uniform separation.
+
+For a family L_k with verification cost O(n^(b_k)) and infinitely-often general
+circuit lower bounds Omega(n^(a_k)), an unbounded ratio a_k/b_k suffices to make
+one fixed SAT language require superpolynomial circuits. The proof constructs
+the near-linear Cook-Levin reductions, charges their circuit and output sizes,
+pads outputs to a fixed length, assumes a size-N^d SAT circuit and then chooses
+a fixed k with a_k>d b_k. Composition gives size n^(d b_k+o(1)), contradicting
+that L_k's bound. This repairs the previous quantifier transfer only under the
+additional quantitative condition; that condition has not been established.
+
+A concrete seed, parity, has a linear verifier and a general-circuit lower
+bound of n-1 gates. An effective operation that repeatedly increases the ratio
+by a fixed factor rho>1 would therefore finish the chosen route. We tried
+padding, independent conjunction and connected graph-parity constraints as
+candidate operations. Padding cannot improve the supplied ratio. Independent
+conjunction cannot improve it from one even under a granted direct-sum bound;
+for the actual parity seed there is an explicit linear-size circuit. Connected
+parity constraints have satisfiability equal to the parity of all vertex
+charges, regardless of expansion, by a spanning-tree construction.
+
+The missing amplification operation remains unproved. The Murray-Williams
+conditional bounds from the previous investigation give ratio at most epsilon/(c k^3),
+so the quoted bounds do not meet the requirement; no impossibility of improving
+those bounds is claimed. This is a derived proof specification and three tested
+mathematical constructions, not a new lower-bound result, implemented algorithm,
+or a P-versus-NP proof. No additional benchmark or Lean theorem was added.
+
+## Previous continuation: attempt a general-computation proof (2026-11-10 JST)
 
 The user explicitly returned the task to the complete P-versus-NP proof. We
 examined two hierarchy/circuit routes without extending the stopped physical or
