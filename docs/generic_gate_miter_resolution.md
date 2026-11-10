@@ -76,3 +76,8 @@ The saved report does not contain full proofs; the deterministic generator recon
 
 **Next distinct test:** define an asymmetric miter where two *different* circuit encodings are equivalent, and investigate whether a local equivalence correspondence is actually provable, or whether its absence invalidates gate-by-gate charging. Pre-register explicit structural assumptions and try a syntactically different but semantically equivalent pair first; do not enlarge the existing affine-flat or CNF truth-table caps. More generally, pursuing P≠NP requires hard UNSAT families and lower bounds that quantify over every correct algorithm, not over this provably easy equality special case. No P=NP or P≠NP proof was obtained.
 
+
+
+### Reproduction-gate failure and repair
+
+Intermediate branch CI before the fixed report was committed correctly failed because the new unit test could not find `results/generic_gate_miter_resolution.json`. After the report existed, the global reproduction gate still rejected `results/RUN_SUMMARY.json`: our first metadata edit had parsed and rewritten the **entire** JSON through JavaScript, silently rounding preexisting integer values above 2^53 (for example `18446744073709551551`). This was a *metadata serialization error*, not an invalid resolution step. The corrective commit starts from the exact main JSON **text**, changes the test count from 411 to 416 and inserts only two source hashes without parsing large integers. This preserves every prior numerical fact. The standalone five new tests had already passed independently, and all 416 unittest cases passed before the summary comparison. Only the final latest-head complete CI is an acceptable reproducibility verdict, not the earlier failing intermediary commits.
