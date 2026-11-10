@@ -11,7 +11,48 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: investigate different mechanisms (2026-11-10 JST)
+## Current continuation: test a circuit lower-bound mechanism (2026-11-10 JST)
+
+We continued the circuit search-MCSP target from the previous investigation.
+The [dependence and reconstruction audit](solution_criteria.md#14-continuing-the-circuit-target-essential-inputs-and-sparse-reconstruction)
+tests whether many forced changes of the output circuit imply the required
+search-circuit lower bound. They do not supply that inference.
+
+The zero table and its one-bit perturbations force every input bit to affect
+the output. For a fan-in-two circuit with N inputs, G gates, r output bits
+and depth d, this gives G>=N-r and r·2^d>=N. These are compatible with
+the N·poly(log N) size and poly(log N) depth that must be excluded. In fact,
+a shared tree encodes every singleton table with exactly 2N-log2(N)-2 OR
+gates. Charging all output dependencies separately would count shared work
+more than once.
+
+The stronger sparse-family attempt also fails: for n-variable tables with
+at most floor(n/2) ones, a fixed bitonic sorting network finds all active
+addresses with O(N n³) Boolean gates and O(n²) depth. A fixed template
+converts those addresses into a circuit with at most n² gates. This works
+for 2^(Omega(n²)) distinct functions, so the large number of outputs does
+not force the target bound. It extends to a small Hamming neighborhood of
+any **given** sufficiently small circuit, including dense functions.
+The cost of producing its reference truth table is included. Finding an
+unknown reference circuit is not assumed available.
+
+The finite audit checks 515 singleton cases and 68,674 sorting inputs,
+including all truth tables on 2, 3 and 4 variables. It checks record
+permutations and contents independently, then evaluates 2,889 reconstructed
+circuits and another 345 circuits from the dense-center extension on all
+original assignments. Exact gate-count and depth bounds pass. The general
+constructions and limited lower bound are mathematical arguments, not
+extrapolations from these checks.
+
+Stop this dependence/counting-based attempt at magnification. The sparse
+compressor is a promise algorithm: overflow does not establish that no
+small circuit exists. The general search-MCSP lower bound remains unproved,
+and this continuation produces no new complete-proof candidate or evidence
+favoring P=NP or P≠NP. It uses standard circuit and sorting constructions;
+no novelty is claimed. The reproduction is embedded in the existing
+solution-criteria document. No solver, result manifest or Lean source changed.
+
+## Previous continuation: investigate different mechanisms (2026-11-10 JST)
 
 The user asked for other methods. We checked original sources for two
 different connections: holographic algorithms toward P=NP, and circuit
