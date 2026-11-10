@@ -1665,6 +1665,379 @@ print(f'unsigned crossing MGI violations: {violations}/256; signed crossing: 0/2
 print('Hadamard dual factors and SAT parity counterexample: passed')
 ```
 
+## 14. Continuing the circuit target: essential inputs and sparse reconstruction
+
+**Date:** 2026-11-10 JST. We continued the search-MCSP[n²] circuit target
+from 13.3. The first attempted lower bound charges the need to distinguish
+many nearby truth tables and to choose different circuit descriptions.
+The dependence argument yields only a linear size bound. Explicit shared
+circuits show why the proposed sparse-input strengthening does not supply
+the missing bound. These are elementary applications of circuit counting
+and sorting networks, not a new general circuit lower bound.
+
+Throughout, N=2^n is the **explicit** truth-table input length, n>=2,
+and the counted basis is binary AND/OR and unary NOT. Constants, input
+wires and fanout are free. A search output is a standard fixed-length,
+padded circuit description with a status bit. Its length r is
+O(n² log n), since the permitted output circuit has at most n² gates.
+This description is distinct from the much larger circuit performing the
+search on N input bits.
+
+### 14.1 What full input dependence actually proves
+
+Consider the zero table and the N tables with a single 1. Every one has a
+size-n² circuit: a point indicator needs at most n NOT gates and n-1 AND
+gates. The search output for zero cannot equal its output for any of these
+point tables, since one described circuit cannot compute two different
+functions. Thus every truth-table input bit affects the output vector.
+
+This proves that a deterministic query algorithm must read all N bits on
+the zero table. For a general fan-in-two circuit with G gates, r output
+bits and depth d, however, it only gives
+
+\[
+ G\ge N-r,\qquad r\,2^d\ge N.
+\]
+
+For the first inequality, keep the ancestors of the outputs. All N inputs
+are present. Ignoring constants, the undirected graph has N+G vertices,
+at most 2G edges and at most r connected components: every component
+contains an output. Hence 2G>=N+G-r. The same reasoning applies if the
+original circuit had additional unused gates. For the second inequality,
+each output cone of depth d has at most 2^d input leaves. Overlap among
+these cones can only reduce their union.
+
+With r=poly(n), this yields G>=N-poly(n) and
+d>=n-O(log n). Both are compatible with size N·poly(n) and depth poly(n).
+Multiplying an input-dependence bound separately by the number of output
+bits would charge shared computations repeatedly.
+
+**Explicit check of that failure.** For tables promised to contain at
+most one 1, a balanced binary tree returns an active flag and the address
+of the 1 (address zero when inactive). At a node covering 2^h positions,
+OR the two active flags, take the right active flag as the high address
+bit, and OR each corresponding pair of the remaining h-1 address bits.
+Inactive children have zero address bits. The singleton promise ensures
+that no two active addresses are combined.
+
+The construction uses exactly
+
+\[
+ \sum_{h=1}^n h\,\frac{N}{2^h}=2N-n-2
+\]
+
+OR gates and depth at most n. Its output distinguishes zero from every
+one-bit perturbation; each address bit depends on N/2 different inputs.
+Yet the intermediate computations are shared, and the total size is
+linear in N. Formatting a point-indicator circuit from the address and
+active bit costs only poly(n), so it does not change this asymptotic
+conclusion. On tables outside the promise this is not an MCSP solver.
+
+### 14.2 Strengthening to many ones still permits small search circuits
+
+Set k=floor(n/2). For every table with at most k ones, we construct its
+small circuit using a search circuit of size O(N n³), depth O(n²),
+and a polynomial-time uniform construction in its explicit size.
+
+Make a record (T_i,i) for each input bit, with an n-bit address. A standard
+bitonic sorting network sorts the one-bit keys in descending order while
+carrying the addresses. It uses N n(n+1)/4 comparators in n(n+1)/2 layers.
+The first k records then contain all active addresses, padded with inactive
+records. The key of record k+1 reports overflow. **Overflow means that the
+sparsity promise failed, not that the table has no small circuit.** For
+example, the all-one table overflows but has a zero-gate constant circuit.
+
+No unit-cost operation on a long record is assumed. To compare two records,
+use two gates to compute whether they must swap and one to negate that
+control. Each pair of record bits takes two three-gate multiplexers.
+With n+1 bits per record this is 6n+9 gates per comparator and depth at
+most 5. Thus the extractor has the explicit bounds
+
+\[
+ G_{\rm extract}\le(6n+9)\frac{Nn(n+1)}4,\qquad
+ d_{\rm extract}\le\frac{5n(n+1)}2.
+\]
+
+The sorting construction is standard: sort the two halves in opposite
+directions, then merge a bitonic sequence recursively. For binary keys,
+the ones of a bitonic sequence form a cyclic interval. Comparing opposite
+positions leaves the lower half all zero if there are at most half ones,
+or the upper half all one otherwise; the residual half remains bitonic.
+Induction gives the merge and the layer count. Every compare-exchange
+preserves its two records, including when their keys are equal.
+
+From the first k records (a_j, p_j), output the description of
+
+\[
+ D_T(x)=\bigvee_{j=1}^k
+       \left(a_j\land\bigwedge_{i=1}^n[x_i=(p_j)_i]\right).
+\]
+
+In this output circuit, a_j and the address bits are **constants chosen
+by the extractor**, not extra inputs to the function being represented.
+Share the n negated input wires. Each term uses n-1 AND gates for its
+literals and one AND with its active constant. Joining the terms uses
+k-1 OR gates. Including inactive slots, its gate count is exactly
+
+\[
+ h(n,k)=n+kn+k-1\le n².
+\]
+
+The description formatter is also cheap: the wiring template is fixed;
+each literal source field selects between the known indices of x_i and
+NOT x_i using one extracted address bit. Each bit of such a field is a
+constant, that selection bit, or its negation. The active constant is
+encoded similarly. This needs O(kn) extra gates and at most one extra
+layer, not an oracle for circuit synthesis. All bounds above therefore
+remain O(N n³) size and O(n²) depth after formatting. A direct generator
+writes the network and template in time polynomial in N and n.
+
+There are already at least binomial(N,k)>=(N/k)^k=2^(Omega(n²)) distinct
+tables in this promise for growing n. Nevertheless this entire family has
+the preceding small search circuit. Counting its distinct answers or
+forcing changes of the represented function cannot by itself yield the
+target lower bound. This does not give a small compressor for arbitrary
+YES instances of MCSP.
+
+### 14.3 The same countercheck around a given dense function
+
+This is not limited to functions that themselves have few ones. Let B be
+a **given** circuit of size b<=floor(n²/4), let n>=4, and put
+k=floor(n/4). Consider tables differing from B's table on at most k bits.
+Generate B's table in O(N·poly(n)) time by evaluating the supplied circuit;
+this explicitly pays for all N entries. Feed T XOR tt(B) into the sparse
+extractor, then output B XOR D, sharing the two output subcircuits. XOR
+requires four AND/OR/NOT gates. The resulting circuit has at most
+
+\[
+ b+h(n,k)+4
+ \le \frac{n²}{2}+\frac{5n}{4}+3
+ \le n²
+\]
+
+gates. The first stage only complements those table-input bits where the
+known B is 1, costing at most N extra NOT gates. It still has
+N·poly(n) size and poly(n) depth. The circuit description of B is included
+in the output; it is not replaced by an uncharged semantic oracle.
+
+This is a construction given B, not a method for finding B from an
+arbitrary table. Choosing an unknown useful center cannot be assumed free.
+The example excludes a proposed lower bound based only on many small
+perturbations of an available model, including dense models.
+
+### 14.4 Decision and reproducible checks
+
+Stop the attempted amplification from essential inputs, many sparse tables,
+or small perturbations of a known circuit. The proven general lower bound
+here is only linear; the explicit promise compressors fit the budget that
+the magnification target must exclude. No superlinear general lower bound,
+new magnification theorem, Lean proof, or P-versus-NP resolution is claimed.
+The broad circuit-magnification target from 13.3 remains open. Any next
+argument must address arbitrary size-n² circuit functions without assuming
+their representation, their center, or their sparse exception set is known.
+
+The standalone check below constructs actual fan-in-two gate DAGs. It
+verifies 515 zero/singleton cases and checks the sorting construction on
+68,674 tables, including **every truth table on 2, 3 and 4 variables**.
+For 5 and 6 variables it includes every support of size at most two and
+fixed-seed additional cases. A separate oracle checks that output addresses
+are a permutation, carry their original bits, and are ordered by key.
+For 2,889 in-promise cases it builds the output circuit and evaluates it
+on every original input using a scalar evaluator, rather than the packed
+evaluator used for the extractor. Another 345 output circuits check the
+dense-center extension. These tests validate the construction and exact
+gate counts; the all-size bounds are the arguments above.
+
+```python
+from itertools import combinations
+from random import Random
+
+
+class DAG:
+    def __init__(self, inputs):
+        self.inputs, self.gates = inputs, []
+        self.depth = [0] * (inputs + 2)
+
+    def gate(self, op, *args):
+        assert len(args) == (1 if op == 'NOT' else 2)
+        assert all(0 <= a < len(self.depth) for a in args)
+        self.gates.append((op, args))
+        self.depth.append(1 + max(self.depth[a] for a in args))
+        return len(self.depth) - 1
+
+    def packed(self, cases):
+        width = (len(cases) + 7) // 8
+        columns = [bytearray(width) for _ in range(self.inputs)]
+        for j, case in enumerate(cases):
+            for i in range(self.inputs):
+                if case >> i & 1:
+                    columns[i][j // 8] |= 1 << (j % 8)
+        mask = (1 << len(cases)) - 1
+        values = [0, mask] + [int.from_bytes(c, 'little') for c in columns]
+        for op, args in self.gates:
+            a = values[args[0]]
+            values.append(mask ^ a if op == 'NOT' else
+                          a & values[args[1]] if op == 'AND' else a | values[args[1]])
+        return values
+
+
+def singleton_encoder(n):
+    dag = DAG(1 << n)
+    def tree(lo, h):
+        if h == 0:
+            return lo + 2, []
+        lf, la = tree(lo, h - 1)
+        rf, ra = tree(lo + (1 << (h - 1)), h - 1)
+        return dag.gate('OR', lf, rf), [rf] + [dag.gate('OR', a, b) for a, b in zip(la, ra)]
+    flag, address = tree(0, n)
+    return dag, [flag] + address
+
+
+def sparse_encoder(n):
+    count = 1 << n
+    dag = DAG(count)
+    records = [[i + 2] + [(i >> j) & 1 for j in range(n - 1, -1, -1)]
+               for i in range(count)]
+    block = 2
+    while block <= count:
+        stride = block // 2
+        while stride:
+            for i in range(count):
+                j = i ^ stride
+                if j <= i:
+                    continue
+                a, b = records[i], records[j]
+                high_first = (i & block) == 0
+                u, v = (a[0], b[0]) if high_first else (b[0], a[0])
+                swap = dag.gate('AND', dag.gate('NOT', u), v)
+                keep = dag.gate('NOT', swap)
+                left, right = [], []
+                for x, y in zip(a, b):
+                    left.append(dag.gate('OR', dag.gate('AND', x, keep), dag.gate('AND', y, swap)))
+                    right.append(dag.gate('OR', dag.gate('AND', y, keep), dag.gate('AND', x, swap)))
+                records[i], records[j] = left, right
+            stride //= 2
+        block *= 2
+    return dag, records
+
+
+def witness(n, records):
+    dag = DAG(n)
+    negated = [dag.gate('NOT', i + 2) for i in range(n)]
+    terms = []
+    for active, *address in records:
+        literals = [i + 2 if bit else negated[i] for i, bit in enumerate(address)]
+        term = literals[0]
+        for literal in literals[1:]:
+            term = dag.gate('AND', term, literal)
+        terms.append(dag.gate('AND', term, active))  # constants 0 and 1
+    result = terms[0]
+    for term in terms[1:]:
+        result = dag.gate('OR', result, term)
+    return dag, result
+
+
+def scalar_table(dag, output):
+    table = 0
+    for x in range(1 << dag.inputs):
+        values = [False, True] + [bool(x >> (dag.inputs - 1 - j) & 1) for j in range(dag.inputs)]
+        for op, args in dag.gates:
+            a = values[args[0]]
+            values.append(not a if op == 'NOT' else
+                          a and values[args[1]] if op == 'AND' else a or values[args[1]])
+        table |= int(values[output]) << x
+    return table
+
+
+def xor_gate(dag, a, b):
+    union = dag.gate('OR', a, b)
+    intersection = dag.gate('AND', a, b)
+    return dag.gate('AND', union, dag.gate('NOT', intersection))
+
+
+single_cases = 0
+for n in range(2, 9):
+    count = 1 << n
+    dag, outputs = singleton_encoder(n)
+    cases = [0] + [1 << i for i in range(count)]
+    values = dag.packed(cases)
+    assert len(dag.gates) == 2 * count - n - 2
+    assert max(dag.depth[o] for o in outputs) <= n
+    for j, case in enumerate(cases):
+        bits = [(values[o] >> j) & 1 for o in outputs]
+        address = sum(b << (n - 1 - i) for i, b in enumerate(bits[1:]))
+        assert bits[0] == bool(case)
+        assert not case or address == case.bit_length() - 1
+    single_cases += len(cases)
+
+sort_cases = reconstructed = dense_reconstructed = 0
+for n in range(2, 7):
+    count, k = 1 << n, n // 2
+    if n <= 4:
+        cases = list(range(1 << count))
+    else:
+        cases = [sum(1 << i for i in support)
+                 for r in range(3) for support in combinations(range(count), r)]
+        rng = Random(1700 + n)
+        cases += [sum(1 << i for i in rng.sample(range(count), k)) for _ in range(128)]
+        cases += [rng.getrandbits(count) for _ in range(64)]
+        cases = sorted(set(cases))
+    dag, records = sparse_encoder(n)
+    values = dag.packed(cases)
+    mask = (1 << len(cases)) - 1
+    comparisons = count * n * (n + 1) // 4
+    assert len(dag.gates) == (6 * n + 9) * comparisons
+    assert max(dag.depth[o] for record in records for o in record) <= 5 * n * (n + 1) // 2
+    packed = [[values[o] for o in record] for record in records]
+    for a, b in zip(packed, packed[1:]):
+        assert (mask ^ a[0]) & b[0] == 0
+    # Independent oracle: each address occurs exactly once, with its original bit.
+    for address in range(count):
+        seen = 0
+        for key, *bits in packed:
+            hit = mask
+            for j, bit in enumerate(bits):
+                hit &= bit if address >> (n - 1 - j) & 1 else mask ^ bit
+            assert seen & hit == 0
+            assert (key ^ values[address + 2]) & hit == 0
+            seen |= hit
+        assert seen == mask
+    for j, case in enumerate(cases):
+        overflow = (packed[k][0] >> j) & 1
+        assert overflow == (case.bit_count() > k)
+        if overflow:
+            continue
+        decoded = [[(v >> j) & 1 for v in record] for record in packed[:k]]
+        small, output = witness(n, decoded)
+        assert len(small.gates) == n + k * n + k - 1 <= n * n
+        assert scalar_table(small, output) == case
+        reconstructed += 1
+        if n >= 4 and case.bit_count() <= n // 4:
+            for center in ('input', 'and', 'xor'):
+                small, output = witness(n, decoded[:n // 4])
+                if center == 'input':
+                    base, r = 2, 0
+                elif center == 'and':
+                    base, r = small.gate('AND', 2, 3), 1
+                else:
+                    base, r = xor_gate(small, 2, 3), 4
+                corrected = xor_gate(small, base, output)
+                assert r <= n * n // 4 and len(small.gates) <= n * n
+                base_table = sum(int((x >> (n - 1) & 1) if center == 'input' else
+                                     ((x >> (n - 1) & 1) & (x >> (n - 2) & 1)) if center == 'and' else
+                                     ((x >> (n - 1) & 1) ^ (x >> (n - 2) & 1))) << x
+                                 for x in range(count))
+                assert scalar_table(small, corrected) == case ^ base_table
+                dense_reconstructed += 1
+    sort_cases += len(cases)
+    print({'n': n, 'cases': len(cases), 'encoder_gates': len(dag.gates),
+           'encoder_depth': max(dag.depth[o] for rec in records for o in rec)})
+
+print({'singleton_cases': single_cases, 'sorting_cases': sort_cases,
+       'reconstructed_circuits': reconstructed,
+       'dense_reconstructed_circuits': dense_reconstructed, 'all_checks_passed': True})
+```
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.
