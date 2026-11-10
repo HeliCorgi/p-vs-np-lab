@@ -931,6 +931,155 @@ NP-membership step must not be treated as an available interface lemma.
 There is still no complete P-versus-NP proof or surviving complete-proof
 candidate; no new Lean verification is claimed.
 
+## 11. Bit certificates: sample interpolation and canonical soundness
+
+2026-11-10 JST. We continued the missing bit-verification step from Section
+10. The concrete candidate supplies a small set of truth-table values as
+evidence of circuit hardness, together with the value of the requested bit.
+Two independent requirements must hold: the observations must exclude small
+circuits, and they must refer to the selected canonical function. Neither
+requirement can be dropped. The following interpolation argument and finite
+countercheck audit this candidate; they are not new NP lower bounds.
+
+### Any small collection of samples has an easy completion
+
+Let m>=1 and let r distinct m-bit inputs have consistent prescribed Boolean
+values. There is a circuit of at most 2mr gates agreeing with all of them.
+This holds for arbitrary sampled positions, not just the contiguous tail of
+Section 10. As before, use binary AND/OR, unary NOT and free constants.
+
+**Construction and proof.** For each prescribed one at an input a, form the
+point indicator
+
+\[
+             \delta_a(x)=\bigwedge_{j=1}^{m}
+                    \begin{cases}x_j,&a_j=1,\\\neg x_j,&a_j=0.\end{cases}
+\]
+
+It uses at most m NOT gates and m-1 AND gates. OR the p indicators for all
+prescribed ones. If p=0 use the zero circuit. Otherwise the gate count is at
+most p(2m-1)+(p-1)=2mp-1<=2mr. The result is one exactly at the prescribed
+positive points, so it also respects every distinct prescribed zero. This
+is a uniform construction in polynomial time in the explicit sample list;
+no SAT oracle, unavailable circuit or promised extension is used.
+
+Grant even that all reported values really come from the intended function.
+A certificate that concludes C(f)>s **solely by excluding every size-s
+circuit consistent with those samples** must therefore have
+
+\[
+                    r>\frac{s}{2m}.
+\]
+
+For a literal list containing each m-bit address and its one-bit value, its
+length is at least
+
+\[
+             r(m+1)>\frac{s(m+1)}{2m}>s/2.
+\]
+
+Thus this explicit-list mechanism already spends Omega(s) bits before any
+hardness validation. At a supplied lower-bound scale s=m^k, reading and
+processing this certificate cannot give the exponent ratio greater than one
+needed to amplify Section 8's seed. The inequality is independent of how
+the sampling positions are selected. The address-length bound is specific
+to the literal-list encoding; a compressed description or an unrelated
+mathematical proof is not ruled out. The interpolation statement itself
+also gives an r-query obstruction for a deterministic, always-correct test
+whose only information about the table is those r values, including
+adaptively chosen values.
+
+### Even correct hardness evidence need not prove the selected bit
+
+Suppose a proposed certificate for D_m(x)=1 instead supplies a table T with
+T[x]=1 and proves C(T)>s. This still omits why T is the lexicographically
+first hard table. Granting a perfect hardness check does not fix its
+soundness as a verifier for D.
+
+The counting inequality in Section 10 gives an all-size falsifier. When
+N-1>ell, there is a hard table with either value at **every** chosen input x:
+each prescribed value leaves 2^(N-1)>2^ell possible tables. The proposed
+existential test would therefore accept every x. But the canonical table's
+leading N-ell-1 entries are zero, including its first entry. It is not the
+all-one function. The witness is for the wrong table, even though its own
+hardness and reported bit may be correct.
+
+A concrete finite instance uses three inputs and a three-gate budget. Exact
+enumeration gives the first hard table `00000110`, while `10000001` is another
+hard table. The second table has the opposite first bit. A verifier accepting
+some hard table with the claimed first bit would therefore accept a false
+claim about the first table. This example concerns the finite canonical
+table whenever it exists; the arbitrary small-length exceptions in the
+asymptotic language definition do not enter the check.
+
+Replacing the sample list by one common representation with a fast decoder
+also has a cost constraint: if a representation is hardwired and all bits
+can be decoded in time T, with T at least the input and representation lengths,
+the standard simulation supplies circuits of O(T log T) gates. It cannot
+support a lower-bound exponent larger than the decoder-time exponent.
+This statement does **not** apply to arbitrary NP proofs that vary with the
+queried input; those need not form a common fast decoder. Such a sound
+bit-specific verifier for the selected function has not been constructed.
+
+### Executed checks and decision
+
+The interpolation construction was run for every partial truth table on
+m=1,2,3 inputs, using an unspecified/zero/one choice at each position. All
+6,651 partial tables were extended to circuits; all 35,220 specified values
+and all gate bounds passed. The empty sample, all-zero, all-one and mixed
+sample cases are included. The check uses the existing gate evaluator:
+
+```python
+from itertools import product
+from experiments.mcsp_update_gate import BooleanCircuit
+cases = specified = 0
+for m in range(1, 4):
+    for partial in product((-1, 0, 1), repeat=1 << m):
+        c = BooleanCircuit(m)
+        terms = [c.point_indicator(x) for x, value in enumerate(partial)
+                 if value == 1]
+        out = terms[0] if terms else 0
+        for term in terms[1:]:
+            out = c.gate('OR', out, term)
+        actual = c.table(out)
+        r = sum(value != -1 for value in partial)
+        assert all(value == -1 or actual[x] == value
+                   for x, value in enumerate(partial))
+        assert len(c.gates) <= 2*m*r
+        cases += 1
+        specified += r
+assert (cases, specified) == (6651, 35220)
+```
+
+The false-bit example is independently reproducible using the exact circuit
+catalog, whose agreement with raw gate-sequence enumeration was checked in
+Section 10:
+
+```python
+from experiments.mcsp_update_gate import small_circuit_catalog
+costs, _ = small_circuit_catalog(3, 3)
+hard = set(range(256)) - set(costs)
+word = lambda t: ''.join(str((t >> i) & 1) for i in range(8))
+canonical = min(hard, key=word)
+other = sum(int(bit) << i for i, bit in enumerate('10000001'))
+assert word(canonical) == '00000110'
+assert other in hard and (canonical & 1) == 0 and (other & 1) == 1
+```
+
+These finite checks validate constructions and the counterexample; they do
+not establish an asymptotic separation or replace the interpolation proof.
+No Lean verification is claimed.
+
+**Research decision.** Park the canonical-hard-table construction as a main
+P-versus-NP route. It supplies hard functions and some compact descriptions,
+but the full-tail and explicit-sample certificates lose the required cost
+advantage, while merely certifying some hard table gives unsound answers
+about the selected bits. This is a practical stopping decision under the
+user's early-pruning instruction, not an impossibility theorem for all NP
+certificates or all counting methods. Reopening this route requires a
+specified sound bit verifier and a resource argument that addresses these
+defects. No such verifier or new complete-proof candidate was obtained.
+
 ## Reporting a possible resolution
 
 Flag a provisional candidate before final verification when there is a concrete all-input algorithm and a substantive argument that every stage has fixed polynomial bit cost, or a concrete lower-bound argument covering every deterministic polynomial-time decider for a language in NP. Identify the central lemma, what is checked, what is still open, and the likeliest counterexample. A conditional statement that merely restates the missing P versus NP claim, passing finite tests, faster performance on a family, a restricted representation lower bound, or a successful ETH endpoint rebuild alone does not trigger this label.

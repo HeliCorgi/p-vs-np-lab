@@ -11,7 +11,41 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: count hard decision tables and charge their selection (2026-11-10 JST)
+## Current continuation: test bit certificates and park canonical selection (2026-11-10 JST)
+
+The user asked to continue the missing bit-verification step. We tested
+certificates consisting of a small collection of values of the selected
+function. The [interpolation argument](solution_criteria.md#11-bit-certificates-sample-interpolation-and-canonical-soundness)
+constructs a circuit of at most 2mr gates fitting any r consistently labeled
+m-bit points. Thus a sample-only certificate excluding all size-s circuits
+needs r>s/(2m). With literal m-bit addresses and labels, its length exceeds
+s/2. This mechanism therefore cannot amplify the lower-bound exponent
+relative to the cost of reading the certificate. The scope is explicit
+samples, not every possible NP proof or compressed certificate.
+
+We also tested the tempting replacement that certifies some hard table and
+its requested bit. Counting already implies that, in the intended range,
+hard tables exist with either value at every position. Such a verifier accepts
+every position, including zeros of the selected table. At three inputs and
+three gates, `00000110` is the first hard table but `10000001` is also hard
+and has the opposite first bit. Even a perfect hardness check on the latter
+does not certify a bit of the former. Canonical consistency cannot be omitted.
+
+The general interpolation construction was executed on all 6,651 partial
+truth tables up to three inputs, checking 35,220 prescribed values and the
+gate bounds. The false-bit example was checked against the exact circuit
+catalog. Reproduction code is in the existing solution-criteria document;
+these checks do not prove general NP hardness or a new asymptotic lower bound.
+
+Park the canonical-hard-table branch as a main route under the user's
+early-pruning instruction. It has produced no sound bit verifier with the
+needed cost advantage. This decision does not assert that all bit certificates
+are impossible. Retain the constructions and the exact stopping conditions;
+do not reopen the branch by assuming its missing verification step. No new
+complete-proof candidate, executable source, result manifest or Lean proof
+was added in this continuation.
+
+## Previous continuation: count hard decision tables and charge their selection (2026-11-10 JST)
 
 The user asked to continue. The [direct counting attempt](solution_criteria.md#10-continuation-construct-the-hard-decision-function-by-counting)
 defines the decision predicate that a partial truth table extends to a
