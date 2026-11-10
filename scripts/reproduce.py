@@ -44,6 +44,18 @@ NEW_REPORTS = (
     "coprime_marginals.json",
     "parity_localization.json", "parity_query.json", "parity_pc.json",
     "pc_subspace.json", "affine_dag_pc.json", "expander_separation.json",
+    "circuit_extensions.json",
+    "extension_degree.json",
+    "shared_dag_sat.json",
+    "mcsp_update_gate.json",
+    "boolean_matrix_sat.json",
+    "sat_scaling.json",
+    "violation_moments.json",
+    "cubic_phase_sat.json",
+    "eth_polynomial_repair.json",
+    "physical_sat.json",
+    "physical_restart_bridge.json",
+    "retained_learning.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -125,6 +137,9 @@ def source_hashes() -> dict[str, str]:
     ))
     sources.update((ROOT / "examples").glob("*.json"))
     sources.add(ROOT / "third_party/openai_math/manifest.json")
+    sources.add(ROOT / "requirements-cdcl.txt")
+    sources.update(ROOT / "third_party/drat_trim" / name
+                   for name in ("drat-trim.c", "LICENSE", "manifest.json"))
     manifest = read_json(ROOT / "third_party/openai_math/manifest.json")
     sources.update(ROOT / "third_party/openai_math" / item["path"] for item in manifest["files"])
     sources.update((ROOT / ".github/workflows").glob("*.yml"))
@@ -222,10 +237,119 @@ def main() -> None:
             or not all(r["all_checks_passed"] for r in (*phase7_8.values(), *phase9_10.values(), *phase11.values(), *phase12.values(), *phase13.values(), *phase14.values(), *phase15.values(), *phase16.values(), *phase17.values(), *phase18.values(), *phase19.values(), *phase20.values()))):
         raise RuntimeError("An experiment did not report success")
 
+    extensions = read_json(out / "circuit_extensions.json")
+    if not extensions["all_checks_passed"]:
+        raise RuntimeError("Circuit-extension audit failed")
+    extension_degree = read_json(out / "extension_degree.json")
+    if not extension_degree["all_checks_passed"]:
+        raise RuntimeError("Extension-degree audit failed")
+    shared_dag = read_json(out / "shared_dag_sat.json")
+    if not shared_dag["all_checks_passed"]:
+        raise RuntimeError("Shared-DAG SAT audit failed")
+    mcsp_update = read_json(out / "mcsp_update_gate.json")
+    if not mcsp_update["all_checks_passed"]:
+        raise RuntimeError("MCSP update argument audit failed")
+    boolean_matrix = read_json(out / "boolean_matrix_sat.json")
+    if not boolean_matrix["all_checks_passed"]:
+        raise RuntimeError("Boolean-matrix SAT audit failed")
+    sat_scaling = read_json(out / "sat_scaling.json")
+    if not sat_scaling["all_checks_passed"]:
+        raise RuntimeError("Finite-size SAT scaling audit failed")
+    violation_moments = read_json(out / "violation_moments.json")
+    if not violation_moments["all_checks_passed"]:
+        raise RuntimeError("Violation-moment counterexample audit failed")
+    cubic_phase = read_json(out / "cubic_phase_sat.json")
+    if not cubic_phase["all_checks_passed"]:
+        raise RuntimeError("SAT-to-cubic-phase bridge audit failed")
+    eth_repair = read_json(out / "eth_polynomial_repair.json")
+    if not eth_repair["all_checks_passed"]:
+        raise RuntimeError("ETH auxiliary polynomial repair audit failed")
+    physical = read_json(out / "physical_sat.json")
+    if not physical["all_checks_passed"]:
+        raise RuntimeError("Physical SAT dynamics audit failed")
+    physical_restart = read_json(out / "physical_restart_bridge.json")
+    if not physical_restart["all_checks_passed"]:
+        raise RuntimeError("Physical SAT restart bridge audit failed")
+    retained_learning = read_json(out / "retained_learning.json")
+    if not retained_learning["all_checks_passed"]:
+        raise RuntimeError("Retained conflict-learning audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "circuit_extension_audit": extensions,
+        "extension_degree_audit": extension_degree,
+        "shared_dag_sat_audit": shared_dag,
+        "mcsp_update_argument_audit": mcsp_update,
+        "boolean_matrix_sat_audit": boolean_matrix,
+        "sat_scaling_audit": {
+            "completed_dpll": sat_scaling["completed_dpll"],
+            "censored_dpll": sat_scaling["censored_dpll"],
+            "algebraic_controls": len(sat_scaling["algebraic_controls"]),
+            "p_vs_np_probability": None,
+            "scope": sat_scaling["scope"],
+        },
+        "violation_moment_audit": {
+            "formula_count": violation_moments["formula_count"],
+            "assignments_enumerated": violation_moments["assignments_enumerated"],
+            "subset_visits_executed": violation_moments["subset_visits_executed"],
+            "largest_matching_nonconstant_order": violation_moments["largest_matching_nonconstant_order"],
+            "decision": violation_moments["decision"],
+            "scope": violation_moments["scope"],
+        },
+        "cubic_phase_sat_audit": {
+            "circuit_cases": len(cubic_phase["circuit_cases"]),
+            "cnf_to_circuit_cases": cubic_phase["cnf_to_circuit_cases"],
+            "quadratic_cases": cubic_phase["quadratic_cases"],
+            "phase_assignments_enumerated": cubic_phase["phase_assignments_enumerated"],
+            "polynomial_cubic_zero_test_obtained": cubic_phase["polynomial_cubic_zero_test_obtained"],
+            "remaining_core": cubic_phase["remaining_core"],
+            "scope": cubic_phase["scope"],
+        },
+        "eth_polynomial_repair_audit": {
+            "upstream_commit": eth_repair["upstream_commit"],
+            "optimization_cases": eth_repair["optimization_cases"],
+            "interpolation_candidates_evaluated": eth_repair["interpolation_candidates_evaluated"],
+            "strict_improvements_over_consecutive_or_constant": eth_repair["strict_improvements_over_consecutive_or_constant"],
+            "finite_improvement_scope": eth_repair["finite_improvement_scope"],
+            "core_obligation": eth_repair["core_obligation"],
+            "upstream_kernel_replayed": False,
+            "general_polynomial_sat_algorithm_obtained": False,
+            "scope": eth_repair["scope"],
+        },
+        "physical_sat_audit": {
+            "encoding_cases": physical["encoding_cases"],
+            "encoding_assignments_checked": physical["encoding_assignments_checked"],
+            "reference_states_enumerated": physical["reference_states_enumerated"],
+            "general_kernel_cases": len(physical["general_kernel_cases"]),
+            "orbit_checks": len(physical["orbit_checks"]),
+            "thermal_cases": len(physical["thermal_cases"]),
+            "bounded_trajectories": len(physical["trajectories"]),
+            "restart_runs": len(physical["restart_runs"]),
+            "stopped_branch": physical["stopped_branch"],
+            "remaining_core": physical["remaining_core"],
+            "scope": physical["scope"],
+            "polynomial_general_sat_algorithm": False,
+        },
+        "physical_restart_bridge_audit": {
+            "exact_disjoint_kernels": len(physical_restart["disjoint_exact_kernels"]),
+            "connected_frozen_checks": len(physical_restart["connected_frozen_checks"]),
+            "bounded_restart_runs": len(physical_restart["bounded_restart_runs"]),
+            "stopped_branch": physical_restart["stopped_branch"],
+            "complexity_bridge": physical_restart["complexity_bridge"],
+            "scope": physical_restart["scope"],
+            "polynomial_general_sat_algorithm": False,
+        },
+        "retained_learning_audit": {
+            "cases": len(retained_learning["cases"]),
+            "physical_panel_rescued": retained_learning["physical_panel_rescued"],
+            "status_counts": retained_learning["status_counts"],
+            "completed_pair_comparison": retained_learning["completed_pair_comparison"],
+            "decision": retained_learning["decision"],
+            "physical_all_size_scope": retained_learning["physical_all_size_scope"],
+            "evidence_scope": retained_learning["evidence_scope"],
+            "polynomial_general_sat_algorithm": False,
+        },
         "historical_package_files_hash_verified": snapshot_count,
         "historical_reports_reproduced": len(BASELINE_REPORTS),
         "historical_result_scope": "Saved HN leaf tables remain trusted; no original SAT or geometry reproof.",
@@ -279,7 +403,7 @@ def main() -> None:
         "parity_query_summaries": {name: r["summary"] for name,r in phase19.items()},
         "parity_query_bounds_apply_to_all_sat_algorithms": False,
         "affine_dag_separation_summaries": {name: r["summary"] for name,r in phase20.items()},
-        "affine_dag_bound_evidence": "Paper proof using the published graph-reduction operator and a directly proved common-annihilator criterion; full theorem formalization and external review remain outstanding. Finite reports do not prove the asymptotic statement.",
+        "affine_dag_bound_evidence": "The specified F2 exponential theorem and its family-existence proof are in formal_pc/ProofLab/Phase20.lean; see results/phase20_complete_formal_audit.json for separate Lean build and axiom-audit evidence. This Python run checks finite reports only; it does not execute the formal proof or establish external review or novelty.",
         "affine_dag_bound_applies_to_all_sat_algorithms": False,
         "derived_transport_summaries": {name: r["summary"] for name,r in phase13.items()},
         "derived_transport_general_polynomial_solver": False,
