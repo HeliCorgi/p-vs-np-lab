@@ -1,16 +1,17 @@
-# Reconstructing one MCSP magnification proof and changing its witness selection
+# Reconstructing the MCSP merge proof and making witness selection uniform
 
 **Date:** 2026-11-11 JST. The user approved pausing direct attacks on the
 general lower bound, studying an existing proof, and testing one change.
 This note reconstructs the merging argument of McKay–Murray–Williams and
-examines one replacement for its canonical witness selection. It uses
-standard isolation and advice arguments; no novelty, new lower bound or
-P-versus-NP resolution is claimed.
+examines its coherent witness-selection step. The user then asked us to
+construct a way around the identified limit. Section 4 does so: grouped
+prefix queries remove the hash-advice requirement, with no random bits,
+while retaining polynomial size and depth in the oracle model.
 
-The change works with a tradeoff: two rounds of Sigma_2^P queries and
-polynomial nonuniform hash advice suffice for bounded merging. This does
-not preserve the original uniform construction or its sharp resource
-bounds, and it does not remove the hard oracle computation.
+The hash construction provides a two-round comparison; the uniform
+construction uses more query rounds. Both use standard tools, with no
+novelty claim. Neither removes the cost of solving the Sigma_2^P predicates
+or supplies a new ordinary-circuit lower bound or P-versus-NP resolution.
 
 ## Source and scope of reconstruction
 
@@ -176,7 +177,7 @@ polynomial-size circuits with two Sigma_2^P oracle rounds and logarithmic
 Boolean selection depth. It is an application of standard isolation,
 verification and advice fixing, not a newly claimed general complexity result.
 
-## 3. What this changes, and what it leaves unresolved
+## 3. Costs of the hash-based implementation
 
 | Resource or property | Original proof | Variant reconstructed here |
 |---|---|---|
@@ -200,13 +201,100 @@ and the Sigma_2^P queries were not solved unconditionally. This variant does
 not establish the original sharp uniform oracle theorem, a new shallow-circuit
 frontier, or a polynomial-time SAT algorithm.
 
-**Research decision.** Retain this as a completed study of one proof and one
-controlled alteration. The correctness invariant, witness coherence, query
-rounds and uniformity tradeoff are now explicit. This supplies no new main
-route to P vs NP. Do not promote lowering the oracle alternation alone into
-a claimed lower-bound breakthrough.
+The next section addresses the advice requirement constructively. The
+coarse P/poly endpoint permits polynomial depth, so retaining just two
+oracle rounds is not required for that endpoint.
 
-## 4. Finite audit
+## 4. Bypass the advice requirement with coherent prefix blocks
+
+Use the same feasible set W_y as in Section 2. Define the prefix predicate
+
+\[
+ E(y,p)\quad\Longleftrightarrow\quad
+ \exists w\ \forall u:\ V(y,w,u)\land[w\text{ starts with }p].
+\]
+
+This is one fixed Sigma_2^P language. The query includes the prefix length,
+and all witness bounds remain polynomial in the explicit query length.
+The following is a grouped version of standard search-to-decision
+self-reduction. It is a uniform construction, not a claim of a new technique.
+
+Set b=max(1,floor(log2 L)). First query E(y,empty). If false, return failure.
+Otherwise start with the empty prefix. At a stage with t bits already
+selected, put k=min(b,L-t), and query E(y,p a) for **every** k-bit suffix
+a in parallel. Select the first suffix whose query is true and append it
+to p. Repeat until L bits have been selected.
+
+**Correctness invariant.** E(y,p) is true at the start of every successful
+stage. A feasible completion has some next k bits, so at least one query
+in that block is true. The selected suffix therefore preserves the
+invariant. At length L the prefix is a complete feasible witness. On an
+empty witness set the initial query correctly reports failure.
+
+This selects bits jointly through their common prefix. It therefore does
+not mix unrelated witnesses, unlike independent marginal bit queries.
+There is no advice family to discover and no probability of selection
+failure. The fixed tie-breaking rule may select the lexicographically
+first feasible description, but neither the merge invariant nor correctness
+requires a minimum-size representative.
+
+### Resources, including sequential dependence
+
+There are at most 1+ceil(L/b) oracle rounds and
+
+\[
+ Q\le 1+2^b\lceil L/b\rceil
+       =O\!\left(\frac{L^2}{\log(L+1)}\right)
+\]
+
+queries. The last block can be smaller than b. A query has O(m+L) input
+bits when made to the fixed prefix language directly. Its description is
+formed by wiring the previous prefix bits and the constant proposed suffix;
+no unknown witness or hash family is supplied for free.
+
+For a block of k bits, a parallel prefix-OR network finds the first true
+flag among 2^k answers. Together with selecting its k-bit index, this takes
+O(k 2^k) Boolean gates and O(k) depth. Summing the block widths gives L,
+so ordinary selection logic uses O(L 2^b)=O(L²) gates and O(L) depth.
+Charging all query input ports adds O(Q(m+L)) description size, still
+polynomial. The circuit includes every stage; on a failure input, a zero
+status flag masks the arbitrary later bits rather than assuming physical
+early termination.
+
+The construction of this oracle circuit is deterministic and polynomial
+in its description size. It uses no random bits or nonuniform hash advice.
+For the binary merge tree, m,L are polynomial in s, and there are N-1 merges
+and n levels. Thus the resulting **uniform oracle circuit** still has
+N·poly(s) size and poly(s) depth for s>=n. At s=n² these are precisely the
+coarse N·poly(n)-size, poly(n)-depth budgets used in the reconstruction.
+
+For the finite 21-bit descriptions in the audit, b=4: there are five full
+four-bit blocks and one one-bit block. A successful selection takes
+1+5·16+2=83 predicate queries in 7 rounds, including the initial existence
+query. The empty case can stop after that first query in the sequential
+implementation; the fixed circuit's worst-case resource count does not
+rely on that shortcut.
+
+**What has been bypassed.** The nonuniform hash-family requirement has
+been removed while preserving the allowed coarse oracle-circuit budget.
+The price is more sequential oracle rounds, which polynomial depth permits.
+This does not claim a replacement for every sharper depth theorem in the
+original paper.
+
+**What must next be computed.** E is still an existential-universal circuit
+consistency predicate. Under NP contained in P/poly, replacing its queries
+by polynomial-size ordinary circuits again gives the conditional upper
+bound. That replacement is nonuniform because of the assumption; the
+selection construction adds no extra advice. Unconditionally, this note
+has not supplied a polynomial-time implementation of E. The finite audit
+implements it by explicit enumeration of a small circuit catalogue.
+
+Retain this successful structural repair as the current implementation of
+the witness-selection step. Further work should address the actual prefix
+predicate and keep its cost explicit, rather than treat the earlier advice
+requirement as a reason to stop.
+
+## 5. Finite audit
 
 The script below checks exact isolation probabilities for every nonempty
 witness set on 1, 2 and 3 bits: 273 sets in all. It counts every affine-hash
@@ -229,9 +317,22 @@ cannot simply be omitted in this test.
 All 196 possible pairs of feasible child representatives across the 16 full
 truth tables give exactly the correct parent feasible set.
 
+The uniform block construction is checked on all 65,812 witness sets,
+including empty sets, on code domains of 1 through 4 bits. It returns the
+first feasible code or failure and meets the query and round bounds.
+On the 81 circuit-merge instances it also returns a valid decoded circuit
+or failure, using 6,559 predicate queries in total, at most 83 queries and
+7 rounds per instance. These tests use no hash advice in the block method.
+The priority selector is separately constructed as an AND/OR/NOT gate DAG.
+For block widths one through four it is checked on all 65,812 possible
+answer-flag vectors, including the all-false vector. Its counted size is
+at most 3k 2^k gates and its output depth is at most 2k+1, consistent with
+the resource proof. This checks the ordinary selection circuit separately
+from the feasibility oracle.
+
 The universal claims rest on the proofs above. These finite checks do not
-implement a polynomial-time general merge oracle, establish efficient advice
-generation, or certify a new lower bound. No Lean formalization is claimed.
+implement a polynomial-time general merge oracle or certify a new lower
+bound. No Lean formalization is claimed.
 
 ```python
 from collections import Counter
@@ -243,6 +344,82 @@ from random import Random
 def zero_fiber(bits, rows):
     return sum(all(((a & w).bit_count() & 1) == b for a, b in rows) << w
                for w in range(1 << bits))
+
+
+def blocked_select(length, exists):
+    queries = rounds = 1
+    if not exists(0, 0):
+        return None, queries, rounds
+    block = max(1, length.bit_length() - 1)
+    prefix = used = 0
+    while used < length:
+        width = min(block, length - used)
+        flags = [exists((prefix << width) | extension, used + width)
+                 for extension in range(1 << width)]
+        queries += len(flags)
+        rounds += 1
+        assert any(flags)
+        prefix = (prefix << width) | flags.index(True)
+        used += width
+    return prefix, queries, rounds
+
+
+selector_cases = 0
+for width in range(1, 5):
+    count = 1 << width
+    cases = 1 << count
+    mask = (1 << cases) - 1
+    # Column i gives bit i of every possible answer-flag vector.
+    values = [mask // ((1 << (1 << i)) + 1) << (1 << i) for i in range(count)]
+    depths = [0] * count
+    gates = []
+    def gate(op, a, b=None):
+        gates.append((op, a, b))
+        values.append(mask ^ values[a] if op == 'NOT' else
+                      values[a] & values[b] if op == 'AND' else values[a] | values[b])
+        depths.append(1 + (depths[a] if b is None else max(depths[a], depths[b])))
+        return len(values) - 1
+    prefix = list(range(count))
+    stride = 1
+    while stride < count:
+        prefix = [prefix[i] if i < stride else gate('OR', prefix[i], prefix[i - stride])
+                  for i in range(count)]
+        stride *= 2
+    first = [0] + [gate('AND', i, gate('NOT', prefix[i - 1])) for i in range(1, count)]
+    outputs = []
+    for bit in range(width):
+        layer = [first[i] for i in range(count) if i >> bit & 1]
+        while len(layer) > 1:
+            layer = [gate('OR', layer[i], layer[i + 1]) for i in range(0, len(layer), 2)]
+        outputs.append(layer[0])
+    expected = [bytearray((cases + 7) // 8) for _ in range(width)]
+    for flags in range(cases):
+        index = (flags & -flags).bit_length() - 1 if flags else 0
+        for bit in range(width):
+            if index >> bit & 1:
+                expected[bit][flags // 8] |= 1 << (flags % 8)
+    assert [values[o] for o in outputs] == [int.from_bytes(c, 'little') for c in expected]
+    assert len(gates) <= 3 * width * count
+    assert max(depths[o] for o in outputs) <= 2 * width + 1
+    selector_cases += cases
+
+
+block_sets = 0
+for length in range(1, 5):
+    domain = 1 << length
+    for witnesses in range(1 << domain):
+        def exists(prefix, used):
+            start = prefix << (length - used)
+            width = 1 << (length - used)
+            interval = ((1 << width) - 1) << start
+            return bool(witnesses & interval)
+        result, queries, rounds = blocked_select(length, exists)
+        expected = (witnesses & -witnesses).bit_length() - 1 if witnesses else None
+        assert result == expected
+        block = max(1, length.bit_length() - 1)
+        assert queries <= 1 + (1 << block) * ((length + block - 1) // block)
+        assert rounds <= 1 + (length + block - 1) // block
+        block_sets += 1
 
 
 abstract_cases = 0
@@ -349,6 +526,7 @@ for _ in range(trials):
     hashes.append(fiber)
 
 partial_cases = bad_candidates = bad_syntax = bad_semantics = 0
+block_query_total = block_max_queries = block_max_rounds = 0
 for partial in product((-1, 0, 1), repeat=4):
     witnesses = sum(all(bit < 0 or (decode(code) >> x & 1) == bit
                         for x, bit in enumerate(partial)) << i
@@ -381,6 +559,18 @@ for partial in product((-1, 0, 1), repeat=4):
     if answer is not None:
         table = decode(answer)
         assert all(bit < 0 or (table >> x & 1) == bit for x, bit in enumerate(partial))
+    def prefix_exists(prefix, used):
+        return any((witnesses >> i & 1) and (code >> (length - used)) == prefix
+                   for i, code in enumerate(codes))
+    block_answer, queries, rounds = blocked_select(length, prefix_exists)
+    expected_codes = [code for i, code in enumerate(codes) if witnesses >> i & 1]
+    assert block_answer == (min(expected_codes) if expected_codes else None)
+    if block_answer is not None:
+        table = decode(block_answer)
+        assert all(bit < 0 or (table >> x & 1) == bit for x, bit in enumerate(partial))
+    block_query_total += queries
+    block_max_queries = max(block_max_queries, queries)
+    block_max_rounds = max(block_max_rounds, rounds)
     partial_cases += 1
 
 merge_pairs = 0
@@ -396,5 +586,8 @@ print({'abstract_nonempty_witness_sets': abstract_cases,
        'circuit_functions': len(catalog), 'fixed_hashes': trials,
        'partial_table_instances': partial_cases, 'merge_representative_pairs': merge_pairs,
        'rejected_candidates': bad_candidates, 'invalid_circuit_encodings': bad_syntax,
-       'wrong_partial_tables': bad_semantics, 'all_checks_passed': True})
+       'wrong_partial_tables': bad_semantics, 'block_witness_sets': block_sets,
+       'block_total_queries': block_query_total, 'block_max_queries': block_max_queries,
+       'block_max_rounds': block_max_rounds, 'selector_flag_vectors': selector_cases,
+       'all_checks_passed': True})
 ```
