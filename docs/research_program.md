@@ -11,7 +11,47 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: reconstruct the merge proof and build uniform witness selection (2026-11-11 JST)
+## Current continuation: execute synthesis with retained work and lazy generation (2026-11-11 JST)
+
+The user asked to continue toward resolving general execution cost. We
+implemented [direct circuit synthesis](mcsp_counterexample_execution.md)
+with an explicit syntactic candidate generator, retained counterexamples,
+and shared gate-value evaluation. Generation stops immediately on a YES
+witness; NO requires complete enumeration within the stated gate budget.
+The generator uses neither truth-table deduplication nor a synthesis oracle.
+This bypasses repeated subcircuit evaluation and unnecessary generation
+after success. It does not implement the earlier arbitrary-prefix predicate
+or inherit that construction's oracle-circuit size/depth bounds.
+
+For N input rows, M visited candidates and G generated shared gates, there
+are at most NM root/row checks, NG gate evaluations and N distinct saved
+counterexamples. Catalogue generation and frontier storage are charged
+separately. There is no polynomial bound on generation, M or G; the full
+construction retains an exhaustive upper bound of 2^{O(s log(n+s+2))}.
+The note proves correctness, completeness and these reuse guarantees for
+finite parameters, distinguishing them from the executable finite checks.
+
+All truth tables for (n,s)=(2,2),(2,4),(3,3) give 288 cases and 1,152 searches
+across four variants. Every result agrees with independent semantic
+enumeration; each exported circuit is independently interpreted. Lazy and
+eager shared-value search have identical witnesses and search counters.
+Their generation costs differ. The lazy variant reduces the aggregate
+generation-plus-search event index by about 58%, 86% and 42% against the
+specified eager, fresh-evaluation baseline. These are logical event counts,
+not elapsed time or exact bit operations. Memory tradeoffs and cases where
+retention increases the search-only index are included in the report.
+
+Validation: 510 unit tests passed and all 77 deterministic reports matched
+on replay. Previous report mathematics is unchanged; the summary records
+the new audit and updated source hashes. Lean sources are unchanged.
+
+The next useful repair must safely exclude whole regions of candidate
+generation, or construct a candidate directly from retained constraints,
+with its own cost accounted for. The current program is a checked baseline
+for that change, not a general polynomial solver or new lower bound.
+No P-versus-NP proof or empirical preference between its two answers follows.
+
+## Previous continuation: reconstruct the merge proof and build uniform witness selection (2026-11-11 JST)
 
 The user approved a strategy change: pause direct general-lower-bound
 attacks, understand an existing proof thoroughly, and examine one change.

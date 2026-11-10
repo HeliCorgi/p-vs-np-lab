@@ -289,6 +289,11 @@ selection construction adds no extra advice. Unconditionally, this note
 has not supplied a polynomial-time implementation of E. The finite audit
 implements it by explicit enumeration of a small circuit catalogue.
 
+The [execution continuation](mcsp_counterexample_execution.md) implements
+direct finite synthesis with retained examples, shared gate values and lazy
+candidate generation. It charges generation separately and does not claim
+to implement the arbitrary-prefix oracle with the size/depth bounds above.
+
 Retain this successful structural repair as the current implementation of
 the witness-selection step. Further work should address the actual prefix
 predicate and keep its cost explicit, rather than treat the earlier advice

@@ -56,6 +56,7 @@ NEW_REPORTS = (
     "physical_sat.json",
     "physical_restart_bridge.json",
     "retained_learning.json",
+    "mcsp_counterexample_search.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -273,10 +274,23 @@ def main() -> None:
     retained_learning = read_json(out / "retained_learning.json")
     if not retained_learning["all_checks_passed"]:
         raise RuntimeError("Retained conflict-learning audit failed")
+    mcsp_search = read_json(out / "mcsp_counterexample_search.json")
+    if not mcsp_search["all_checks_passed"]:
+        raise RuntimeError("Counterexample circuit synthesis audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "mcsp_counterexample_search_audit": {
+            "truth_tables": mcsp_search["truth_tables"],
+            "searches": mcsp_search["searches"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions",
+                "construction", "construction_event_units", "totals", "comparison_to_fresh")}
+                for group in mcsp_search["groups"]],
+            "scope": mcsp_search["scope"],
+            "general_polynomial_time_bound": False,
+        },
         "circuit_extension_audit": extensions,
         "extension_degree_audit": extension_degree,
         "shared_dag_sat_audit": shared_dag,
