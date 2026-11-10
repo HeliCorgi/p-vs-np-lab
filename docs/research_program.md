@@ -11,7 +11,58 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: test bit certificates and park canonical selection (2026-11-10 JST)
+## Current continuation: try a polynomial SAT shrinker (2026-11-10 JST)
+
+After parking canonical hard tables, the user asked to continue. We changed
+to the P=NP direction and tested exact Davis-Putnam elimination with a
+nonincreasing clause budget. Trial blocks contain one or two variables; a
+pair may grow after its first elimination as long as the final clause count
+does not increase. Tautologies, duplicates and subsumed clauses are removed.
+The [cost and progress audit](solution_criteria.md#12-a-pnp-attempt-bounded-clause-elimination-and-two-variable-lookahead)
+proves that these trials, intermediate representations and accepted rounds
+would have polynomial total bit cost if every nonterminal CNF had a suitable
+block. That progress claim is false.
+
+For every p>=11, the explicit connected family has variables A_i,B_i,C_i and
+the 6p clauses on A_i,B_(i+t),C_(i+2t), with t=0,...,5 modulo p. The first
+three layers are positive and the other three negative. Every variable has
+three occurrences of each sign and every pair of clauses shares at most one
+variable. Every single elimination adds exactly three clauses and eighteen
+literal occurrences. Eliminating any pair adds six clauses if the variables
+share no clause and ten if they do. These counts hold after full duplicate,
+tautology and subset simplification, in either elimination order. The proof
+accounts for possible overlap among the pair's final resolvents.
+
+The family is SAT: A=true and B=false works with any C. Thus it refutes this
+particular preprocessing progress claim on easy instances, not P=NP or all
+SAT algorithms. Other transformations, larger blocks and different resource
+budgets are not ruled out. This does not restart the earlier affine-union
+representation branch; the tested objects here are ordinary CNF clauses.
+
+The local increase alone does not imply superpolynomial total growth. We
+therefore checked a more permissive budget separately: any UNSAT run that
+only explicitly generates ordinary resolvents until obtaining the empty
+clause yields a resolution refutation of size at most its total generated
+lines plus the input clauses. The known expander-Tseitin resolution lower
+bound, rechecked against Ben-Sasson–Wigderson (2001), rules out a polynomial
+total-cost general SAT algorithm restricted to this mechanism, independent
+of elimination order or grouping. This closes a budget-only repair; it does
+not cover stronger inference systems or semantic decision rules. It is an
+application of an existing result already cited in the repository.
+
+Independent semantic checks passed on 259 small formulas and 1,295 projected
+assignments. At p=11,13,17, including two signed/permuted variants per size,
+369 single eliminations and 7,632 pairs checked in both orders matched the
+all-size formulas. The reproduction code is in the existing solution-criteria
+document. No asymptotic claim is inferred from finite growth curves.
+
+Stop this candidate, its two-variable repair and a budget-only repair within
+ordinary resolution before building a new general solver. No executable
+source, result manifest or Lean proof changed. Other shrinking methods are
+not excluded; the P=NP route has no surviving complete-proof candidate from
+this attempt.
+
+## Previous continuation: test bit certificates and park canonical selection (2026-11-10 JST)
 
 The user asked to continue the missing bit-verification step. We tested
 certificates consisting of a small collection of values of the selected
