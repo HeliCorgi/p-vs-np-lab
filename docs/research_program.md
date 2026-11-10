@@ -11,7 +11,56 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: try a polynomial SAT shrinker (2026-11-10 JST)
+## Current continuation: investigate different mechanisms (2026-11-10 JST)
+
+The user asked for other methods. We checked original sources for two
+different connections: holographic algorithms toward P=NP, and circuit
+hardness magnification toward P≠NP. The [candidate audit](solution_criteria.md#13-alternative-mechanisms-holographic-algorithms-and-circuit-magnification)
+records the exact transformations, literature endpoints and reproduction.
+These are known research directions; no novelty is claimed for them.
+
+For the algorithmic route, representing #SAT by a polynomial-size planar
+matchgate network with controlled construction and arithmetic costs would
+provide a polynomial SAT algorithm. We tried a common invertible basis on
+all variable edges and its dual on all clause edges. A direct calculation
+using the known matchgate parity condition proves that ternary equality
+and ternary OR cannot both become matchgate signatures under **any complex
+basis of this form**. An independent planarization check also fails: the
+unsigned crossing has residual 2 in a matchgate identity. The known signed
+crossing is a different counting tensor. Counting modulo 2 cannot by itself
+distinguish a satisfiable formula with two solutions from an unsatisfiable
+one. Stop these particular local constructions; global transformations and
+other exact algorithms are not excluded.
+
+Exact rational checks passed for all 496 invertible matrices with entries
+from -2 to 2, including contraction preservation. All 256 ordered-pair
+matchgate identities were checked for each of the unsigned and signed
+crossing tensors. The finite checks audit the conventions; the complex-basis
+claim rests on the symbolic argument, not the finite sample.
+
+Retain as a next research target the **circuit**, rather than memory-only,
+version of search-MCSP magnification. On an N=2^n-bit explicit truth table,
+find a circuit with at most n² gates when one exists. Showing that this
+search has no N·poly(n)-size, poly(n)-depth general Boolean circuit family
+would imply NP not contained in P/poly and hence P≠NP, by
+McKay–Murray–Williams (2019), Theorem 1.4, third bullet. We rechecked both
+the theorem and its oracle-replacement proof. A lower bound only against
+O(log N) depth gives a different, insufficient endpoint.
+
+The same paper's short-oracle construction supplies a useful first filter:
+a method that would prove the target even with arbitrary poly(n)-input
+functions as unit-cost gates cannot work. Such an oracle circuit already
+exists within the budget. This identifies a requirement on the missing
+technique, not a technique that meets it. The actual search-circuit lower
+bound is **unproved**, and we have no new complete-proof candidate. The
+previously pruned streaming prefix-counting argument is not revived.
+
+Only research documents changed. The check code is embedded in the existing
+solution-criteria document; no executable-source manifest, solver, result
+report or Lean theorem was changed. No numerical tendency between P=NP and
+P≠NP follows from the candidate's failure or from the literature survey.
+
+## Previous continuation: try a polynomial SAT shrinker (2026-11-10 JST)
 
 After parking canonical hard tables, the user asked to continue. We changed
 to the P=NP direction and tested exact Davis-Putnam elimination with a
