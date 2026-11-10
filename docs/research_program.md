@@ -11,7 +11,39 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: test a circuit lower-bound mechanism (2026-11-10 JST)
+## Current continuation: requested general lower bound remains unproved (2026-11-10 JST)
+
+The user explicitly asked to prove the general search-MCSP circuit lower
+bound. **We have not proved it.** The target remains the exclusion, for
+every fixed c, of size 2^n n^c and depth n^c circuits at infinitely many
+lengths. The previously checked magnification theorem would turn that
+result into NP not contained in P/poly and hence P≠NP. The linear bound
+from the previous continuation is not sufficient.
+
+We attempted an [algebraic rank argument](solution_criteria.md#15-requested-general-search-mcsp-lower-bound-the-rank-attempt-fails)
+using compression to a short circuit description followed by evaluation.
+Correctness at zero and every unit table makes the Boolean multilinear
+linear part of this composition have rank N. Applying the ordinary chain
+rule to factor that matrix through the short description is invalid:
+Boolean reduction T_i²=T_i need not preserve formal derivatives.
+
+An explicit four-bit example compresses zero and the unit tables into
+three bits and decodes them correctly. The formal composition has
+Jacobian rank one at zero; its multilinear reduction has rank four.
+Exact polynomial arithmetic checked both matrices and all 16 inputs.
+Retaining all nonlinear code features repairs the factorization but
+gives only N<=2^r-1, a description-length bound attained by the singleton
+encoder. It supplies no size lower bound for computing that code.
+
+The attempted contradiction did not use the encoder's size or depth;
+it would have excluded even the finite exhaustive-search function.
+This is a useful check on its failure, not progress past the general
+circuit barrier. Stop this rank argument. There is no new complete-proof
+candidate, general superlinear lower bound, or Lean theorem. The exact
+countercheck is embedded in the existing solution-criteria document;
+solver and result-manifest sources are unchanged.
+
+## Previous continuation: test a circuit lower-bound mechanism (2026-11-10 JST)
 
 We continued the circuit search-MCSP target from the previous investigation.
 The [dependence and reconstruction audit](solution_criteria.md#14-continuing-the-circuit-target-essential-inputs-and-sparse-reconstruction)

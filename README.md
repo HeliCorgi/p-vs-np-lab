@@ -22,7 +22,11 @@ P versus NPに関連する、再現可能な定理・反例・計算実験の研
 **現時点では、完全証明につながる新しい有効な核心は得られていません。**
 現在の判断と過去の成果は[研究記録](docs/research_program.md)で区別します。
 
-2026年11月10日（日本時間）、[search-MCSPの回路下界の検討](docs/solution_criteria.md#14-continuing-the-circuit-target-essential-inputs-and-sparse-reconstruction)を続けました。
+2026年11月10日（日本時間）、一般のsearch-MCSP回路下界を証明する依頼に対し、[短い記述を介した復元のランクを使う論証](docs/solution_criteria.md#15-requested-general-search-mcsp-lower-bound-the-rank-attempt-fails)を検査しました。
+**要求された強さの下界は証明できていません。** Boolean簡約の前後で通常の微分の連鎖律を使い回す推論は成立せず、3ビットの中間表現を通って簡約後のランクが4になる例を厳密計算で確認しました。
+正しく非線形項を含めると得られるのは記述長の情報量下界で、回路を発見する処理の規模の下界にはなりません。このランクの証明案は停止し、未証明の核心として記録しました。
+
+同日の前の続行では、[search-MCSPの回路下界の検討](docs/solution_criteria.md#14-continuing-the-circuit-target-essential-inputs-and-sparse-reconstruction)を続けました。
 全入力ビットへの依存から得られる下界は入力長程度で止まり、途中の計算を共有すると、1が一つだけある表の回路を線形規模で発見できます。
 さらに、1が少数の表や、既知の小さい回路から少数のビットだけ変えた表について、目標の予算内で回路を復元する構成を示しました。
 候補となる表や出力が多数あることだけでは、必要な下界は得られません。68,674個の表で抽出回路を検査し、復元した2,889個の回路と密な表への拡張345個も元の表と照合しました。
