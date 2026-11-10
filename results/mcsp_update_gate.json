@@ -1,0 +1,214 @@
+{
+  "all_checks_passed": true,
+  "core_lower_bound_proved": false,
+  "flat_minimum": {
+    "child_minimum_gates": [
+      3,
+      3
+    ],
+    "exhaustive_catalog": [
+      {
+        "functions": 14,
+        "gates": 1,
+        "semantic_dag_states": 9
+      },
+      {
+        "functions": 40,
+        "gates": 2,
+        "semantic_dag_states": 66
+      }
+    ],
+    "next_bits": [
+      0,
+      1
+    ],
+    "prefix": [
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "prefix_minimum_gates": 3,
+    "witness_tables": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "p_vs_np_resolved": false,
+  "point_repairs": [
+    {
+      "assignments_compared": 16,
+      "inputs": 1,
+      "maximum_added_gates": 5,
+      "patched_circuits": 8,
+      "proved_added_gate_bound": 5,
+      "source_functions": 4
+    },
+    {
+      "assignments_compared": 256,
+      "inputs": 2,
+      "maximum_added_gates": 7,
+      "patched_circuits": 64,
+      "proved_added_gate_bound": 7,
+      "source_functions": 16
+    },
+    {
+      "assignments_compared": 16384,
+      "inputs": 3,
+      "maximum_added_gates": 9,
+      "patched_circuits": 2048,
+      "proved_added_gate_bound": 9,
+      "source_functions": 256
+    }
+  ],
+  "prescribed_candidate_controls": [
+    {
+      "candidate_gates": 2,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": true,
+      "source_truth_table": 0,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 5,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 1,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 4,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 2,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 8,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 3,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 4,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 4,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 8,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 5,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 7,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 6,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 11,
+      "gate_budget": 16,
+      "inputs": 4,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 7,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 3,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 8,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 7,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 9,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 6,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 10,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 10,
+      "gate_budget": 16,
+      "inputs": 4,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 11,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 6,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 12,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 10,
+      "gate_budget": 16,
+      "inputs": 4,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 13,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 9,
+      "gate_budget": 9,
+      "inputs": 3,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 14,
+      "zero_circuit_is_valid_repair": true
+    },
+    {
+      "candidate_gates": 13,
+      "gate_budget": 16,
+      "inputs": 4,
+      "prescribed_candidate_valid": false,
+      "source_truth_table": 15,
+      "zero_circuit_is_valid_repair": true
+    }
+  ],
+  "proof_scope": "Finite checks of the paper lemmas in docs/mcsp_update_core.md; no Lean claim"
+}

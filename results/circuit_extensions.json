@@ -1,0 +1,103 @@
+{
+  "all_checks_passed": true,
+  "duplicate_circuit_refutations": [
+    {
+      "certificate_verified": true,
+      "clauses": 8,
+      "gate_pairs": 1,
+      "local_pairs_bound_sum": 36,
+      "local_rows_bound_sum": 15,
+      "m": 1,
+      "max_local_variables": 4,
+      "proof_nodes": 14,
+      "proof_width": 3,
+      "variables": 4
+    },
+    {
+      "certificate_verified": true,
+      "clauses": 22,
+      "gate_pairs": 3,
+      "local_pairs_bound_sum": 4923,
+      "local_rows_bound_sum": 438,
+      "m": 2,
+      "max_local_variables": 6,
+      "proof_nodes": 46,
+      "proof_width": 3,
+      "variables": 10
+    },
+    {
+      "certificate_verified": true,
+      "clauses": 36,
+      "gate_pairs": 5,
+      "local_pairs_bound_sum": 9810,
+      "local_rows_bound_sum": 861,
+      "m": 3,
+      "max_local_variables": 6,
+      "proof_nodes": 78,
+      "proof_width": 3,
+      "variables": 16
+    },
+    {
+      "certificate_verified": true,
+      "clauses": 106,
+      "gate_pairs": 15,
+      "local_pairs_bound_sum": 34245,
+      "local_rows_bound_sum": 2976,
+      "m": 8,
+      "max_local_variables": 6,
+      "proof_nodes": 238,
+      "proof_width": 3,
+      "variables": 46
+    },
+    {
+      "certificate_verified": true,
+      "clauses": 890,
+      "gate_pairs": 127,
+      "local_pairs_bound_sum": 307917,
+      "local_rows_bound_sum": 26664,
+      "m": 64,
+      "max_local_variables": 6,
+      "proof_nodes": 2030,
+      "proof_width": 3,
+      "variables": 382
+    },
+    {
+      "certificate_verified": true,
+      "clauses": 14330,
+      "gate_pairs": 2047,
+      "local_pairs_bound_sum": 4999437,
+      "local_rows_bound_sum": 432744,
+      "m": 1024,
+      "max_local_variables": 6,
+      "proof_nodes": 32750,
+      "proof_width": 3,
+      "variables": 6142
+    }
+  ],
+  "general_sat_solver": false,
+  "p_vs_np_resolved": false,
+  "projection": [
+    {
+      "assignments_checked": 8,
+      "clauses": 4,
+      "m": 1,
+      "variables": 3,
+      "witnesses": 1
+    },
+    {
+      "assignments_checked": 128,
+      "clauses": 11,
+      "m": 2,
+      "variables": 7,
+      "witnesses": 6
+    },
+    {
+      "assignments_checked": 2048,
+      "clauses": 18,
+      "m": 3,
+      "variables": 11,
+      "witnesses": 28
+    }
+  ],
+  "scope": "Finite verification of explicit circuit encodings and resolution proofs; all-size proof and complexity qualifications are in docs/circuit_extensions.md."
+}
