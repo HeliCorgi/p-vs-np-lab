@@ -11,47 +11,51 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: reconstruct one proof and test one alteration (2026-11-11 JST)
+## Current continuation: reconstruct the merge proof and build uniform witness selection (2026-11-11 JST)
 
 The user approved a strategy change: pause direct general-lower-bound
 attacks, understand an existing proof thoroughly, and examine one change.
-We selected McKay–Murray–Williams (2019), Sections 2.1, 3 and 5. The
+The user then clarified that the work should construct ways around the
+identified limits. We selected McKay–Murray–Williams (2019), Sections 2.1,
+3 and 5, and kept the focus on its witness-selection component. The
 [worked reconstruction](mcsp_merge_reconstruction.md) traces the interval
 merge invariant, coherent witness selection, the use of NP contained in
 P/poly, and the resulting coarse circuit bounds. A binary tree suffices
 for that endpoint; we do not claim the paper's sharper uniform bounds.
 
-The selected alteration uses standard hash isolation to replace canonical
-Sigma_3^P output-bit queries by two rounds of Sigma_2^P queries: parallel
-candidate bits, then coNP verification of the assembled candidates. For
-m-bit merge inputs and L-bit witnesses, a fixed family of
-16(L+1)(m+1) affine hashes exists that isolates a witness for every feasible
-input of that length. The isolation probability and the union bound over
-all inputs are proved explicitly; the advice is independent of the actual
-truth table.
+The successful repair is a uniform block-prefix construction. For an
+L-bit description it chooses b=max(1,floor(log2 L)) next bits jointly by
+querying every block extension in parallel and retaining the first feasible
+one. The invariant that the chosen prefix has a completion proves that
+the final description is one coherent valid circuit. It uses no random
+bits and no input-length-specific hash advice. This is a grouped standard
+self-reduction, not a claimed new technique.
 
-The tradeoff is essential: this family is fixed by a nonuniform existence
-argument, without a polynomial-time construction, and local overhead is
-only bounded polynomially. Sigma_2^P queries remain unsolved computations.
-The same coarse conditional N·poly(n)-size, poly(n)-depth upper bound
-follows under NP contained in P/poly, but no stronger lower bound or weaker
-fundamental assumption has been obtained. This is a proof-study result
-using standard tools, with no novelty claim.
+There are at most 1+ceil(L/b) Sigma_2^P query rounds and
+1+2^b ceil(L/b) queries, with O(L²) ordinary selection gates and O(L)
+selection depth. Query descriptions also have polynomial total size.
+Composing these merges preserves the coarse uniform oracle-circuit budget
+N·poly(n) size and poly(n) depth at s=n². Thus the advice requirement found
+in the hash-based variant is actually bypassed within the allowed budget.
+The note retains the two-round hash construction as a comparison, with
+its isolation and advice-existence proof fully spelled out.
 
-The finite audit checks exact isolation probabilities for all 273 nonempty
-witness sets on up to three bits. For the 14 functions computable by
-two-input circuits with at most two gates, it checks all 81 partial tables
-using a fixed 3,168-hash family and all 196 child-representative pairs.
-Postverification rejects 5,308 candidate strings, including 5,132 malformed
-circuits and 42 circuits with wrong constrained values. These finite
-checks validate the selection mechanism, not a general efficient merge
-algorithm. The script is embedded in the study note; solver, result-manifest
-and Lean sources are unchanged.
+The block construction passes all 65,812 witness sets on code domains of
+one through four bits, including empty sets. On all 81 two-input circuit
+partial tables, it returns a valid representative or failure, with at most
+83 queries and seven rounds for the 21-bit descriptions. The same audit
+checks the 196 possible child-representative pairs. The hash comparison
+separately checks exact isolation probabilities for 273 witness sets and
+a fixed 3,168-hash family. The script is embedded in the study note;
+solver, result-manifest and Lean sources are unchanged.
 
-Retain the explicit invariant and resource accounting as the baseline for
-further study of this same proof. Lowering the oracle alternation alone is
-not adopted as a new main route to P vs NP. There is still no new proof
-candidate for the full problem.
+The next computational issue is the prefix-feasibility predicate itself;
+its cost remains explicit. Under NP contained in P/poly, oracle substitution
+still gives the known conditional ordinary-circuit upper bound. No efficient
+unconditional implementation of that predicate or new lower bound has
+been obtained. Retain the uniform selection construction as a concrete
+repair and continue studying this same mechanism, without treating the
+oracle computation as free or claiming a P-versus-NP proof candidate.
 
 ## Previous continuation: requested general lower bound remains unproved (2026-11-10 JST)
 
