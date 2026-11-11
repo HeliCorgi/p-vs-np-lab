@@ -172,7 +172,7 @@ Run with Python >=3.10 and no third-party dependency:
 python research/asymmetric_demorgan_miter/asymmetric_demorgan_miter.py \
   --out /tmp/asymmetric_demorgan_miter.json
 python research/asymmetric_demorgan_miter/asymmetric_demorgan_audit.py \
-  --output /tmp/asymmetric_demorgan_miter_audit.json
+  --output /tmp/asymmetric_demorgan_miter_audit.json --check
 python -m json.tool /tmp/asymmetric_demorgan_miter.json >/dev/null
 \`\`\`
 
