@@ -194,6 +194,12 @@ python scripts/reproduce.py --out-dir /tmp/pnp-reproduced --check
 
 ## Remaining constructive task
 
+**Continuation:** [sample-state region pruning](mcsp_region_pruning.md) now
+implements equivalence-class reduction and sound completion-based exclusion
+before generating descendants. It includes the required refinement rebuilds,
+all pruning costs and independent checks of the discarded regions. The
+paragraphs below record the motivation at this earlier stage.
+
 The previous oracle call is no longer needed by this direct search. The
 unresolved expense is now located in actual code: generating and screening
 many structurally distinct candidates. Retaining the first counterexample
