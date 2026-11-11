@@ -12,7 +12,7 @@ from itertools import product
 import json
 from pathlib import Path
 
-from asymmetric_demorgan_miter import certificate, examples, report, summarize, validate
+from asymmetric_demorgan_miter import certificate, examples, summarize
 
 
 def prime_gate_clauses(inputs, output, op):
@@ -61,10 +61,17 @@ def expected_source(n, gates):
     return Counter(expected)
 
 
+def check_preconditions(n, gates):
+    assert n >= 2 and len(gates) >= 1
+    for i, gate in enumerate(gates):
+        op, a, b = gate
+        assert op in ('AND', 'OR') and 1 <= a <= n+i and 1 <= b <= n+i and a != b
+
+
 def independent_replay(proof):
     """Do not call generator helpers. Reject wrong source and every bad resolution."""
     n, gates, total = proof['n'], [tuple(x) for x in proof['gates']], proof['variables']
-    validate(n, gates)
+    check_preconditions(n, gates)
     g = len(gates)
     assert total == n + 5*g
     assert len(proof['axioms']) == 12*g+2
