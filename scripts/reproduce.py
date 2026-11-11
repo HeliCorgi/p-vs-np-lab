@@ -59,6 +59,7 @@ NEW_REPORTS = (
     "mcsp_counterexample_search.json",
     "mcsp_region_pruning.json",
     "mcsp_fixed_constraints.json",
+    "cnf_component_reuse.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -285,10 +286,25 @@ def main() -> None:
     mcsp_fixed = read_json(out / "mcsp_fixed_constraints.json")
     if not mcsp_fixed["all_checks_passed"]:
         raise RuntimeError("Fixed circuit-constraint audit failed")
+    component_reuse = read_json(out / "cnf_component_reuse.json")
+    if not component_reuse["all_checks_passed"]:
+        raise RuntimeError("Residual component-sharing audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "cnf_component_reuse_audit": {
+            "truth_tables": component_reuse["truth_tables"],
+            "searches": component_reuse["searches"],
+            "max_work_per_extract": component_reuse["max_work_per_extract"],
+            "max_cache_cells": component_reuse["max_cache_cells"],
+            "fixed_family": component_reuse["fixed_family"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "statuses", "totals", "comparison")}
+                for group in component_reuse["groups"]],
+            "scope": component_reuse["scope"],
+            "polynomial_general_time_bound": False,
+        },
         "mcsp_fixed_constraints_audit": {
             "truth_tables": mcsp_fixed["truth_tables"],
             "max_work_per_extract": mcsp_fixed["max_work_per_extract"],

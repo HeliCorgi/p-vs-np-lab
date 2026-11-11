@@ -233,3 +233,10 @@ with a conditional time bound and an executable exact search. It does not
 prove the remaining time bound, a general MCSP upper bound of N poly(n),
 a new circuit lower bound, or either direction of P versus NP. The arguments
 in this note are written proofs, not Lean formalizations.
+
+The [residual-sharing continuation](cnf_component_reuse.md) implements exact
+reuse across backtracking and counterexamples and proves a total-work bound
+in the number of distinct residuals. It records the cost of identifying and
+storing them, including cases where caching hurts. The default extractor
+above is retained; no general polynomial bound on the residual count is
+assumed.

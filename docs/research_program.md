@@ -11,7 +11,42 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: fixed candidate constraints and explicit extraction (2026-11-11 JST)
+## Current continuation: share exact residual subproblems (2026-11-11 JST)
+
+The user asked to continue from the distinction between monotone updates and
+backtracking. The [residual component cache](cnf_component_reuse.md) stores a
+completed answer for a whole residual CNF after deterministic dense variable
+renaming. The key includes all remaining conditions, so new counterexamples
+cannot reuse a stale answer without an exact residual match. Independent
+components are solved separately and their witnesses are transported and
+combined. UNKNOWN and incomplete parents are never stored as NO.
+
+With enough cache space and completed queries, each distinct residual is
+expanded once. If U is their number and J the number of queries, all
+construction, recognition, lookup and model-transfer work is bounded by
+(U+J) poly(V,L), for base formula size V,L. No general polynomial bound on U
+is obtained. For k independent copies of one fixed two-variable component,
+the shared solver completes three problems for every k>=2, versus 2k+1
+without retention. At k=64 the measured work indices are 4,090 and 5,511,
+including the table costs. This is a standard decomposition/memoization
+construction, not a claimed new SAT technique.
+
+The complete 288-case MCSP panel is run with both new variants: 576 searches,
+with all incomplete cases retained. At the common event-count cap, three-input
+completion drops from 31 to 27 cases with caching. The 57 jointly completed
+cases include 35 reductions and 22 increases in work; these are selected
+comparisons, not a general speedup. The prior circuit-aware extractor remains
+the default. Unrestricted full-residual normalization at every node is not
+adopted as a general acceleration. Tests also exhaust 2,304 two-variable
+CNF/assumption queries and check timeout, capacity and context boundaries.
+No new general polynomial-time guarantee, circuit lower bound or P-versus-NP
+conclusion follows. Lean sources are unchanged.
+
+Validation: 534 unit tests passed and all 80 deterministic reports matched
+on replay. Prior experiment results are unchanged. The sharing and amortized
+cost arguments are written proofs, not Lean formalizations.
+
+## Previous continuation: fixed candidate constraints and explicit extraction (2026-11-11 JST)
 
 The user requested a representation that does not grow under counterexamples,
 with efficient update and extraction. The [fixed universal-circuit encoding](mcsp_fixed_constraints.md)
