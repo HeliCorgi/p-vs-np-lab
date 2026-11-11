@@ -58,6 +58,7 @@ NEW_REPORTS = (
     "retained_learning.json",
     "mcsp_counterexample_search.json",
     "mcsp_region_pruning.json",
+    "mcsp_fixed_constraints.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -281,10 +282,23 @@ def main() -> None:
     mcsp_regions = read_json(out / "mcsp_region_pruning.json")
     if not mcsp_regions["all_checks_passed"]:
         raise RuntimeError("Circuit region-pruning audit failed")
+    mcsp_fixed = read_json(out / "mcsp_fixed_constraints.json")
+    if not mcsp_fixed["all_checks_passed"]:
+        raise RuntimeError("Fixed circuit-constraint audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "mcsp_fixed_constraints_audit": {
+            "truth_tables": mcsp_fixed["truth_tables"],
+            "max_work_per_extract": mcsp_fixed["max_work_per_extract"],
+            "encoding_audit": mcsp_fixed["encoding_audit"],
+            "guarantees": mcsp_fixed["guarantees"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "fixed_shape",
+                "status_counts", "totals")} for group in mcsp_fixed["groups"]],
+            "scope": mcsp_fixed["scope"],
+        },
         "mcsp_region_pruning_audit": {
             "truth_tables": mcsp_regions["truth_tables"],
             "searches": mcsp_regions["searches"],

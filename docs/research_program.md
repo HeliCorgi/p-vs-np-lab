@@ -11,7 +11,43 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: prune regions before generating descendants (2026-11-11 JST)
+## Current continuation: fixed candidate constraints and explicit extraction (2026-11-11 JST)
+
+The user requested a representation that does not grow under counterexamples,
+with efficient update and extraction. The [fixed universal-circuit encoding](mcsp_fixed_constraints.md)
+obtains polynomial representation and update guarantees, and implements exact
+finite extraction with polynomial working space. **A general polynomial-time
+extraction guarantee has not been obtained; the full request is not proved.**
+
+All circuit choices and all N truth-table rows are encoded before refinement.
+Evidence changes preallocated output slots; no clauses or variables are added.
+Each permanent root variable is assigned at most once. Across all updates,
+clause visits are bounded by the stored literal count and literal inspections
+by the sum of squared clause widths. This is an unconditional polynomial
+bound for the implemented update, not a claim that propagation decides
+feasibility. Construction and every row of the encoding are charged.
+
+The extractor branches only on the selected output's reachable gates and
+fills unused slots directly. It uses bounded trails and no growing learned
+clause database. R, the product of remaining selector-domain sizes, gives
+an explicit conditional polynomial-time criterion when R<=N^c for a fixed c.
+No such bound is known for general inputs. Timeouts are UNKNOWN, not NO.
+
+Of the unchanged 288-case panel, 286 cases finish at the initial 500,000-unit
+extraction cap. Both capped cases finish under the same algorithm at a
+5,000,000-unit cap; their original failures and both costs remain in the
+report. An independent scalar audit validates 5,223 circuit encodings and
+rejects 20,766 corrupted row-output models. This is a standard symbolic
+synthesis encoding and finite-search implementation, not a new synthesis
+technique or P-versus-NP result. The polynomial parameters are N,n,s, with
+s=n² the project's usual target; polynomial time in N is not time polynomial
+in n and would not by itself settle general SAT. Lean sources are unchanged.
+
+Validation: 526 unit tests passed and all 79 deterministic reports matched
+on replay. Existing experiment results are unchanged. The fixed formula,
+total propagation and space arguments are written proofs, not Lean proofs.
+
+## Previous continuation: prune regions before generating descendants (2026-11-11 JST)
 
 The user requested the previously identified constructive step. The new
 [sample-state search](mcsp_region_pruning.md) keeps one representative for
