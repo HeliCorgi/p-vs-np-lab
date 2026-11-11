@@ -57,6 +57,7 @@ NEW_REPORTS = (
     "physical_restart_bridge.json",
     "retained_learning.json",
     "mcsp_counterexample_search.json",
+    "mcsp_region_pruning.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -277,10 +278,25 @@ def main() -> None:
     mcsp_search = read_json(out / "mcsp_counterexample_search.json")
     if not mcsp_search["all_checks_passed"]:
         raise RuntimeError("Counterexample circuit synthesis audit failed")
+    mcsp_regions = read_json(out / "mcsp_region_pruning.json")
+    if not mcsp_regions["all_checks_passed"]:
+        raise RuntimeError("Circuit region-pruning audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "mcsp_region_pruning_audit": {
+            "truth_tables": mcsp_regions["truth_tables"],
+            "searches": mcsp_regions["searches"],
+            "candidate_witnesses_checked": mcsp_regions["candidate_witnesses_checked"],
+            "pruned_regions_independently_checked": mcsp_regions["pruned_regions_independently_checked"],
+            "root_exclusion_example": mcsp_regions["root_exclusion_example"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "previous_lazy_totals",
+                "totals", "comparison_within_new_cost_model")} for group in mcsp_regions["groups"]],
+            "scope": mcsp_regions["scope"],
+            "general_polynomial_time_bound": False,
+        },
         "mcsp_counterexample_search_audit": {
             "truth_tables": mcsp_search["truth_tables"],
             "searches": mcsp_search["searches"],

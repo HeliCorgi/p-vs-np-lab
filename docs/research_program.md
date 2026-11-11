@@ -11,7 +11,46 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: execute synthesis with retained work and lazy generation (2026-11-11 JST)
+## Current continuation: prune regions before generating descendants (2026-11-11 JST)
+
+The user requested the previously identified constructive step. The new
+[sample-state search](mcsp_region_pruning.md) keeps one representative for
+each set of available wire signatures on retained counterexamples. A
+continuation lemma preserves every feasible sample output and the gate
+budget, including sharing. A newly distinguishing counterexample triggers
+a fresh quotient construction so temporarily merged candidates can reappear.
+Rebuild costs are included, and a mismatching intermediate wire is not
+incorrectly treated as a forbidden output.
+
+An additional bounded depth relaxation overapproximates every completion
+within the remaining gate budget. A missing target signature excludes the
+whole continuation region before any child states are generated. Exceeding
+the 128-operation cap is UNKNOWN for this test and resumes ordinary search.
+For two-input XOR at budget two, 104 signature operations exclude the root
+and all 5,164 literal circuit descriptions, without generating children.
+
+The unchanged 288-case panel gives 576 runs with and without this extra
+lookahead. All final decisions match independent circuit enumeration;
+2,776 intermediate candidates satisfy their examples. Every one of the
+7,096 pruned regions is checked independently by literal suffix enumeration.
+On the three-input group, accumulated states fall from 6,648,091 in the
+previous syntactic search to 45,457 with the quotient and 15,213 with the
+extra region check. These states have different representations, so their
+counts are not runtime ratios. Compared to the quotient alone, lookahead
+reduces states on 224 cases but raises the work index on 273. Both variants
+remain available, with complete cost and memory-scope disclosures.
+
+This implements the requested pre-generation reductions. It uses standard
+sample equivalence, refinement and abstract reachability; no new synthesis
+technique is claimed. The quotient can still grow exponentially with the
+examples, so there is no general polynomial bound or P-versus-NP conclusion.
+No Lean source changes are made in this continuation.
+
+Validation: 518 unit tests passed and all 78 deterministic reports matched
+on replay. Existing experiment results are unchanged. The new completeness
+and pruning arguments are written proofs, not Lean formalizations.
+
+## Previous continuation: execute synthesis with retained work and lazy generation (2026-11-11 JST)
 
 The user asked to continue toward resolving general execution cost. We
 implemented [direct circuit synthesis](mcsp_counterexample_execution.md)
