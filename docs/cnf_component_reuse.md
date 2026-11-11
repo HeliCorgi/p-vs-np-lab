@@ -4,6 +4,11 @@ Date: 2026-11-11 JST. Status: an implemented exact sharing mechanism and an
 amortized cost bound in the number of distinct residual problems. That number
 is **not proved polynomial** on general MCSP or SAT inputs.
 
+Research decision, 2026-11-11: the user authorized stopping the broader
+extractor-optimization route as the main P-versus-NP proof route. This
+implementation and audit are retained as completed work; see the
+[current decision](research_program.md#current-decision-stop-the-extractor-optimization-route-2026-11-11).
+
 The [previous fixed constraint representation](mcsp_fixed_constraints.md)
 bounded formula size and monotone evidence updates. Extraction still revisited
 combinations under different temporary assignments. This continuation makes
