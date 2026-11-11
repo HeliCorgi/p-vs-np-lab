@@ -98,6 +98,786 @@
   },
   "boundary_minimum_additional_clauses": 4,
   "boundary_states_rechecked": 855,
+  "catalytic_extension_degree_audit": {
+    "all_checks_passed": true,
+    "all_size_argument": "For q=2^r and P=x^(q-1), P agrees with identity on Boolean inputs, but the orbit sum at x=1,v=0 equals 1 instead of P(0)=0.",
+    "decision": "Reject the automatic gatewise arithmetic replacement at the old degree budget. No general efficient low-degree extension construction is obtained. Do not treat the known space theorem as a P!=NP proof route by itself.",
+    "failed_gatewise_extension_checks": 1300,
+    "fields": [
+      {
+        "boolean_function": "identity",
+        "boolean_gates": 2,
+        "explicit_failure": {
+          "orbit_sum": 1,
+          "required_value": 0,
+          "v": 0,
+          "x": 1
+        },
+        "failed_high_degree_checks": 12,
+        "field_size": 4,
+        "gatewise_degree": 3,
+        "high_degree_zero_catalyst_checks": 4,
+        "low_degree_monomial_checks": 48,
+        "modulus": 7,
+        "r": 2,
+        "replacement_linear_extension_checks": 16,
+        "required_degree_strictly_below": 3
+      },
+      {
+        "boolean_function": "identity",
+        "boolean_gates": 4,
+        "explicit_failure": {
+          "orbit_sum": 1,
+          "required_value": 0,
+          "v": 0,
+          "x": 1
+        },
+        "failed_high_degree_checks": 56,
+        "field_size": 8,
+        "gatewise_degree": 7,
+        "high_degree_zero_catalyst_checks": 8,
+        "low_degree_monomial_checks": 448,
+        "modulus": 11,
+        "r": 3,
+        "replacement_linear_extension_checks": 64,
+        "required_degree_strictly_below": 7
+      },
+      {
+        "boolean_function": "identity",
+        "boolean_gates": 6,
+        "explicit_failure": {
+          "orbit_sum": 1,
+          "required_value": 0,
+          "v": 0,
+          "x": 1
+        },
+        "failed_high_degree_checks": 240,
+        "field_size": 16,
+        "gatewise_degree": 15,
+        "high_degree_zero_catalyst_checks": 16,
+        "low_degree_monomial_checks": 3840,
+        "modulus": 19,
+        "r": 4,
+        "replacement_linear_extension_checks": 256,
+        "required_degree_strictly_below": 15
+      },
+      {
+        "boolean_function": "identity",
+        "boolean_gates": 8,
+        "explicit_failure": {
+          "orbit_sum": 1,
+          "required_value": 0,
+          "v": 0,
+          "x": 1
+        },
+        "failed_high_degree_checks": 992,
+        "field_size": 32,
+        "gatewise_degree": 31,
+        "high_degree_zero_catalyst_checks": 32,
+        "low_degree_monomial_checks": 31744,
+        "modulus": 37,
+        "r": 5,
+        "replacement_linear_extension_checks": 1024,
+        "required_degree_strictly_below": 31
+      }
+    ],
+    "fresh_input_repairs": [
+      {
+        "boolean_assignments_checked": 512,
+        "conditioned_shared_inputs": 1,
+        "duplicate_binary_fanins": 0,
+        "duplicate_gate_records": 0,
+        "gatewise_orbit_sum": 1,
+        "gatewise_restriction_degree": 15,
+        "inputs": 9,
+        "ordinary_gates": 30,
+        "r": 4,
+        "repair_field_multiplication_bound": 202,
+        "repair_state_width": 4,
+        "repaired_degree_upper_bound": 9,
+        "repaired_orbit_sum": 0,
+        "repaired_vector_orbit_checks": [
+          {
+            "catalyst": [
+              3,
+              4,
+              7,
+              12,
+              3,
+              12,
+              7,
+              4,
+              3
+            ],
+            "result": 10,
+            "target": [
+              1,
+              6,
+              11,
+              0,
+              5,
+              10,
+              15,
+              4,
+              9
+            ]
+          },
+          {
+            "catalyst": [
+              4,
+              6,
+              10,
+              0,
+              8,
+              2,
+              14,
+              12,
+              12
+            ],
+            "result": 6,
+            "target": [
+              2,
+              7,
+              12,
+              1,
+              6,
+              11,
+              0,
+              5,
+              10
+            ]
+          },
+          {
+            "catalyst": [
+              5,
+              8,
+              13,
+              4,
+              13,
+              8,
+              5,
+              4,
+              5
+            ],
+            "result": 0,
+            "target": [
+              3,
+              8,
+              13,
+              2,
+              7,
+              12,
+              1,
+              6,
+              11
+            ]
+          },
+          {
+            "catalyst": [
+              6,
+              10,
+              0,
+              8,
+              2,
+              14,
+              12,
+              12,
+              14
+            ],
+            "result": 7,
+            "target": [
+              4,
+              9,
+              14,
+              3,
+              8,
+              13,
+              2,
+              7,
+              12
+            ]
+          },
+          {
+            "catalyst": [
+              7,
+              12,
+              3,
+              12,
+              7,
+              4,
+              3,
+              4,
+              7
+            ],
+            "result": 2,
+            "target": [
+              5,
+              10,
+              15,
+              4,
+              9,
+              14,
+              3,
+              8,
+              13
+            ]
+          },
+          {
+            "catalyst": [
+              8,
+              14,
+              6,
+              0,
+              12,
+              10,
+              10,
+              12,
+              0
+            ],
+            "result": 8,
+            "target": [
+              6,
+              11,
+              0,
+              5,
+              10,
+              15,
+              4,
+              9,
+              14
+            ]
+          },
+          {
+            "catalyst": [
+              9,
+              0,
+              9,
+              4,
+              1,
+              0,
+              1,
+              4,
+              9
+            ],
+            "result": 10,
+            "target": [
+              7,
+              12,
+              1,
+              6,
+              11,
+              0,
+              5,
+              10,
+              15
+            ]
+          },
+          {
+            "catalyst": [
+              10,
+              2,
+              12,
+              8,
+              6,
+              6,
+              8,
+              12,
+              2
+            ],
+            "result": 6,
+            "target": [
+              8,
+              13,
+              2,
+              7,
+              12,
+              1,
+              6,
+              11,
+              0
+            ]
+          },
+          {
+            "catalyst": [
+              11,
+              4,
+              15,
+              12,
+              11,
+              12,
+              15,
+              4,
+              11
+            ],
+            "result": 7,
+            "target": [
+              9,
+              14,
+              3,
+              8,
+              13,
+              2,
+              7,
+              12,
+              1
+            ]
+          },
+          {
+            "catalyst": [
+              12,
+              6,
+              2,
+              0,
+              0,
+              2,
+              6,
+              12,
+              4
+            ],
+            "result": 9,
+            "target": [
+              10,
+              15,
+              4,
+              9,
+              14,
+              3,
+              8,
+              13,
+              2
+            ]
+          },
+          {
+            "catalyst": [
+              13,
+              8,
+              5,
+              4,
+              5,
+              8,
+              13,
+              4,
+              13
+            ],
+            "result": 8,
+            "target": [
+              11,
+              0,
+              5,
+              10,
+              15,
+              4,
+              9,
+              14,
+              3
+            ]
+          },
+          {
+            "catalyst": [
+              14,
+              10,
+              8,
+              8,
+              10,
+              14,
+              4,
+              12,
+              6
+            ],
+            "result": 8,
+            "target": [
+              12,
+              1,
+              6,
+              11,
+              0,
+              5,
+              10,
+              15,
+              4
+            ]
+          }
+        ],
+        "required_value": 0,
+        "scope": "Linear-operation repair for this fixed-state family only; no general extension compiler or new lower bound."
+      },
+      {
+        "boolean_assignments_checked": 2048,
+        "conditioned_shared_inputs": 1,
+        "duplicate_binary_fanins": 0,
+        "duplicate_gate_records": 0,
+        "gatewise_orbit_sum": 1,
+        "gatewise_restriction_degree": 31,
+        "inputs": 11,
+        "ordinary_gates": 40,
+        "r": 5,
+        "repair_field_multiplication_bound": 266,
+        "repair_state_width": 4,
+        "repaired_degree_upper_bound": 11,
+        "repaired_orbit_sum": 0,
+        "repaired_vector_orbit_checks": [
+          {
+            "catalyst": [
+              3,
+              4,
+              7,
+              12,
+              19,
+              28,
+              7,
+              20,
+              3,
+              20,
+              7
+            ],
+            "result": 13,
+            "target": [
+              1,
+              6,
+              11,
+              16,
+              21,
+              26,
+              31,
+              4,
+              9,
+              14,
+              19
+            ]
+          },
+          {
+            "catalyst": [
+              4,
+              6,
+              10,
+              16,
+              24,
+              2,
+              14,
+              28,
+              12,
+              30,
+              18
+            ],
+            "result": 25,
+            "target": [
+              2,
+              7,
+              12,
+              17,
+              22,
+              27,
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          },
+          {
+            "catalyst": [
+              5,
+              8,
+              13,
+              20,
+              29,
+              8,
+              21,
+              4,
+              21,
+              8,
+              29
+            ],
+            "result": 1,
+            "target": [
+              3,
+              8,
+              13,
+              18,
+              23,
+              28,
+              1,
+              6,
+              11,
+              16,
+              21
+            ]
+          },
+          {
+            "catalyst": [
+              6,
+              10,
+              16,
+              24,
+              2,
+              14,
+              28,
+              12,
+              30,
+              18,
+              8
+            ],
+            "result": 4,
+            "target": [
+              4,
+              9,
+              14,
+              19,
+              24,
+              29,
+              2,
+              7,
+              12,
+              17,
+              22
+            ]
+          },
+          {
+            "catalyst": [
+              7,
+              12,
+              19,
+              28,
+              7,
+              20,
+              3,
+              20,
+              7,
+              28,
+              19
+            ],
+            "result": 6,
+            "target": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30,
+              3,
+              8,
+              13,
+              18,
+              23
+            ]
+          },
+          {
+            "catalyst": [
+              8,
+              14,
+              22,
+              0,
+              12,
+              26,
+              10,
+              28,
+              16,
+              6,
+              30
+            ],
+            "result": 9,
+            "target": [
+              6,
+              11,
+              16,
+              21,
+              26,
+              31,
+              4,
+              9,
+              14,
+              19,
+              24
+            ]
+          },
+          {
+            "catalyst": [
+              9,
+              16,
+              25,
+              4,
+              17,
+              0,
+              17,
+              4,
+              25,
+              16,
+              9
+            ],
+            "result": 16,
+            "target": [
+              7,
+              12,
+              17,
+              22,
+              27,
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          {
+            "catalyst": [
+              10,
+              18,
+              28,
+              8,
+              22,
+              6,
+              24,
+              12,
+              2,
+              26,
+              20
+            ],
+            "result": 13,
+            "target": [
+              8,
+              13,
+              18,
+              23,
+              28,
+              1,
+              6,
+              11,
+              16,
+              21,
+              26
+            ]
+          },
+          {
+            "catalyst": [
+              11,
+              20,
+              31,
+              12,
+              27,
+              12,
+              31,
+              20,
+              11,
+              4,
+              31
+            ],
+            "result": 0,
+            "target": [
+              9,
+              14,
+              19,
+              24,
+              29,
+              2,
+              7,
+              12,
+              17,
+              22,
+              27
+            ]
+          },
+          {
+            "catalyst": [
+              12,
+              22,
+              2,
+              16,
+              0,
+              18,
+              6,
+              28,
+              20,
+              14,
+              10
+            ],
+            "result": 7,
+            "target": [
+              10,
+              15,
+              20,
+              25,
+              30,
+              3,
+              8,
+              13,
+              18,
+              23,
+              28
+            ]
+          },
+          {
+            "catalyst": [
+              13,
+              24,
+              5,
+              20,
+              5,
+              24,
+              13,
+              4,
+              29,
+              24,
+              21
+            ],
+            "result": 25,
+            "target": [
+              11,
+              16,
+              21,
+              26,
+              31,
+              4,
+              9,
+              14,
+              19,
+              24,
+              29
+            ]
+          },
+          {
+            "catalyst": [
+              14,
+              26,
+              8,
+              24,
+              10,
+              30,
+              20,
+              12,
+              6,
+              2,
+              0
+            ],
+            "result": 18,
+            "target": [
+              12,
+              17,
+              22,
+              27,
+              0,
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          }
+        ],
+        "required_value": 0,
+        "scope": "Linear-operation repair for this fixed-state family only; no general extension compiler or new lower bound."
+      }
+    ],
+    "known_theorem_scope": "Multitape deterministic time to deterministic space; not a simultaneous time guarantee or NP lower bound.",
+    "low_degree_monomial_checks": 36080,
+    "new_general_time_lower_bound": false,
+    "np_membership_bridge_proved": false,
+    "p_vs_np_resolved": false,
+    "primary_source": "https://arxiv.org/abs/2502.17779v1",
+    "replacement_linear_extension_checks": 1360,
+    "scope": "Exact finite checks and an elementary all-size countercheck of a proposed repair. The same function has an easy linear extension. No new complexity lower bound or Lean formalization is claimed."
+  },
   "circuit_extension_audit": {
     "all_checks_passed": true,
     "duplicate_circuit_refutations": [
@@ -3984,6 +4764,7 @@
     "experiments/branch_interface.py": "760cf1371a43b32830fcf2c210d16106a89d02504a7e3e89d580af9ef54dc7c2",
     "experiments/branch_localization.py": "bac9b7bf685f344f5f2edc948c811d30db36a7cbf38bf97a3cd024533c821dd2",
     "experiments/case_parity.py": "e1fb4ba37bc4eb59e08e7b9dacb688efa54cbed319e18cdb0072c30eef42d0d8",
+    "experiments/catalytic_extension_degree.py": "ae55f3315555a3985c1771574f50aa6f5bda43623700ebcb17d3f70bdd55fe6a",
     "experiments/circuit_extensions.py": "23ea2c4e9a220d3e288041e68a6631767f1369f5b1e17bc9868026d48ecccbfb",
     "experiments/cnf_component_reuse.py": "7201e3e3902f45c929061eda9801ce35d66046bdf4bf852f2ce13dbbb0a7a523",
     "experiments/constant_block_bridge.py": "02b7d76de53308e5473c657f78a08a71d5d8b18826aabf4c0a2bb1893e15213c",
@@ -4126,7 +4907,7 @@
     "scripts/plot_physical_sat.py": "5a2ff1af3176af682f6ae3cbdc3f94a008d42b85fcf4e7090b0546a3d2cc6c57",
     "scripts/plot_sat_scaling.py": "9f6337439db53ebe2cbf5e92a9cc022e9ca249561d5edec21132e482d38ce2df",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "c43d509313be43396574f3f52af5e4a28e6457d60fd7993c66326fd257b7aa00",
+    "scripts/reproduce.py": "4c47a354383f4b933fd576990514a27774c9ea854a95aa2a96d578116f81cf3c",
     "scripts/run_cdcl_audit.py": "e373c38abfb6ff0a59fa6b8570d3179b711229fe1147396c7dfa82aa8f870896",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
@@ -4235,6 +5016,7 @@
     "tests/test_blind_recovery.py": "2fdcb0e74fd436f8a21be2ca55425d52c2bc014351f67dd280c90b6fa4310b37",
     "tests/test_block_bridge.py": "351311b1d2a60c1841a93a027ccb5189d7db5cfe470e712e351b1d6e4145a927",
     "tests/test_case_parity.py": "bd31ed397a8e3c645cb067d7f0524c7086f3cb9acae4078c65e1ac403daf198f",
+    "tests/test_catalytic_extension_degree.py": "b41bfde738ef9ec0bfcff32eea3369cffc8e41f547321620225b69ab3bb6f5d9",
     "tests/test_cdcl_audit.py": "3d82bc5b28c6057d21c620a5a1a9b0e30c2f4bc7d69b693a43298610aab3c51d",
     "tests/test_circuit_extensions.py": "ccc28f57acd7e8f39514edb6e46d7e5326a0bb6ea5dfa9b90004e520fe9b4581",
     "tests/test_cmr_graphic.py": "46e7e607440f12a3cd2f2bde057e88ce69b4f81c0143896d2b3816f5ec28dc1d",
@@ -4387,7 +5169,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 541,
+  "unit_tests_passed": 546,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",

@@ -61,6 +61,7 @@ NEW_REPORTS = (
     "mcsp_fixed_constraints.json",
     "cnf_component_reuse.json",
     "soft_partition_path.json",
+    "catalytic_extension_degree.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -293,10 +294,14 @@ def main() -> None:
     soft_path = read_json(out / "soft_partition_path.json")
     if not soft_path["all_checks_passed"]:
         raise RuntimeError("Soft partition path audit failed")
+    catalytic = read_json(out / "catalytic_extension_degree.json")
+    if not catalytic["all_checks_passed"]:
+        raise RuntimeError("Catalytic extension degree audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "catalytic_extension_degree_audit": catalytic,
         "soft_partition_path_audit": {
             key: soft_path[key] for key in (
                 "case_count", "status_counts", "reference_assignments_enumerated",
