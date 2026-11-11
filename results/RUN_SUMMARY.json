@@ -1227,6 +1227,96 @@
     "searches": 1152,
     "truth_tables": 288
   },
+  "mcsp_fixed_constraints_audit": {
+    "encoding_audit": {
+      "literal_circuit_models_checked": 5223,
+      "wrong_output_models_rejected": 20766
+    },
+    "groups": [
+      {
+        "feasible_functions": 14,
+        "fixed_shape": [
+          58,
+          270,
+          700,
+          4
+        ],
+        "gate_budget": 2,
+        "n": 2,
+        "status_counts": {
+          "NO": 2,
+          "YES": 14
+        },
+        "totals": {
+          "accounted_work_units": 225430,
+          "compile_work_units": 54544,
+          "examples": 43,
+          "extraction_calls": 59,
+          "extraction_work_units": 168238,
+          "update_work_units": 1360
+        },
+        "truth_tables": 16
+      },
+      {
+        "feasible_functions": 16,
+        "fixed_shape": [
+          116,
+          665,
+          1760,
+          4
+        ],
+        "gate_budget": 4,
+        "n": 2,
+        "status_counts": {
+          "UNKNOWN": 2,
+          "YES": 14
+        },
+        "totals": {
+          "accounted_work_units": 1415590,
+          "compile_work_units": 131072,
+          "examples": 43,
+          "extraction_calls": 59,
+          "extraction_work_units": 1281106,
+          "update_work_units": 1818
+        },
+        "truth_tables": 16
+      },
+      {
+        "feasible_functions": 84,
+        "fixed_shape": [
+          133,
+          850,
+          2209,
+          8
+        ],
+        "gate_budget": 3,
+        "n": 3,
+        "status_counts": {
+          "NO": 172,
+          "YES": 84
+        },
+        "totals": {
+          "accounted_work_units": 90727487,
+          "compile_work_units": 2759936,
+          "examples": 1188,
+          "extraction_calls": 1444,
+          "extraction_work_units": 87872094,
+          "update_work_units": 42679
+        },
+        "truth_tables": 256
+      }
+    ],
+    "guarantees": {
+      "formula_shape_independent_of_examples": true,
+      "general_polynomial_extraction_time": false,
+      "polynomial_formula_size_in_explicit_N_n_s": true,
+      "polynomial_total_monotone_unit_updates": true,
+      "polynomial_working_space_for_extraction": true
+    },
+    "max_work_per_extract": 500000,
+    "scope": "Fixed symbolic candidate representation and implemented finite extraction; no general polynomial MCSP or SAT algorithm or P vs NP conclusion.",
+    "truth_tables": 288
+  },
   "mcsp_region_pruning_audit": {
     "candidate_witnesses_checked": 2776,
     "general_polynomial_time_bound": false,
@@ -2574,6 +2664,7 @@
     "experiments/joint_reasoning.py": "91fdda05557f6197128275e391783d431d472b2c205da4ab86c3d023d38627eb",
     "experiments/local_torsion.py": "9d0703cac386620a0f7e9e8e026d1302c4c3b0b72a52e60140ba7d44dbb55282",
     "experiments/mcsp_counterexample_search.py": "721c481925bc95bb29d0e5c38ea585cdd7a1ca45617fc10ea1213401f27ad0de",
+    "experiments/mcsp_fixed_constraints.py": "db6bcd01396751000f8ef3a8868541e29983bec526b36aad4e24e6f6206ce311",
     "experiments/mcsp_region_pruning.py": "18e2217ca6126168de620f7eaf3613cd983afe6b29efa7abe2e7d3f7881722bc",
     "experiments/mcsp_update_gate.py": "e9d6c977a9747e2c6a6e93e0eabb2167e32460989a04b997b00bd0ccdf3db88a",
     "experiments/mixed_constraints.py": "06405c753dd7d5d158912fb0e8004e93f6aeafe861e9ebfb8c659f41266e91de",
@@ -2685,7 +2776,7 @@
     "scripts/plot_physical_sat.py": "5a2ff1af3176af682f6ae3cbdc3f94a008d42b85fcf4e7090b0546a3d2cc6c57",
     "scripts/plot_sat_scaling.py": "9f6337439db53ebe2cbf5e92a9cc022e9ca249561d5edec21132e482d38ce2df",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "95a609548aa235ede0e5b3671364db2c3832b12756b7ad8506a00e81050c7165",
+    "scripts/reproduce.py": "2262fd0ff8cb91d1fc74b23d8f349ddea1bfb6586dfc919193cfa71e59e25d86",
     "scripts/run_cdcl_audit.py": "e373c38abfb6ff0a59fa6b8570d3179b711229fe1147396c7dfa82aa8f870896",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
@@ -2740,6 +2831,7 @@
     "src/pnp_lab/local_marginals.py": "c68962ac9d5ae3ae4127701dd5831b522fda0fa31d8b14042c60e53b58075c08",
     "src/pnp_lab/local_torsion.py": "73bdd16a6b0fa19564d5e7290994b8757dd8fdf614e528fe457e411fbf48d10a",
     "src/pnp_lab/mcsp_counterexample.py": "52464a450afdc24246acce5614367b43e043f754b55a7f4364e5820dd3b96caa",
+    "src/pnp_lab/mcsp_fixed_constraints.py": "cce259f74a444ec8bf3eb6cb4f3405fc5625a883542a9a6ccd1866d5d91aa0cf",
     "src/pnp_lab/mcsp_region_search.py": "dd5fa26d511edd4723ae7e4c42c9fae87d6acfbc85a8ec15298dd6a3c90bb0df",
     "src/pnp_lab/minor_universality.py": "004c736ab314835d5fccd9251251e2ef3b92dde00138f118cef91b9ce180ecaa",
     "src/pnp_lab/mixed.py": "553857d25b279ab4ad66b2e036e128b759b52d5266795956664bcd89ec73e6e7",
@@ -2831,6 +2923,7 @@
     "tests/test_local_marginals.py": "7238e638d1700e0c16365f12ad82a812c8f405035419bad8495ef122bc9fac91",
     "tests/test_local_torsion.py": "29a88516e1601d36459c8b3ae15757a305aace7900ba968ded0e946075f438d7",
     "tests/test_mcsp_counterexample.py": "c5fce8d70d5f5d9d43d9d23989cf55409ae0ee7095467b4f956ff440e8566148",
+    "tests/test_mcsp_fixed_constraints.py": "1b6765c331e08382a37fcb43af56a5ca6f45a92bf693e72dc242e9ba104f768c",
     "tests/test_mcsp_region_search.py": "d2381636093610d739dc8c5cc8c9ad01b814c6a0c8d1d596855579f488e1030d",
     "tests/test_minor_universality.py": "8e75d4c70040cf0aace5a4e99211ebf6f17e050a08d5056ce872222aa203f53c",
     "tests/test_mixed.py": "b3f81a5af11651a4a2845622342a3c44cee4c01612e7298f660f8e5598b666b0",
@@ -2941,7 +3034,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 518,
+  "unit_tests_passed": 526,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",

@@ -221,3 +221,9 @@ argument. Remaining work on execution cost must control the growth of the
 sample-state space or make its exclusion cheaper. This investigation does
 not establish a universal lower bound against future algorithms, a general
 polynomial synthesis algorithm, or either answer to P versus NP.
+
+The [fixed-constraint continuation](mcsp_fixed_constraints.md) removes formula
+growth and proves polynomial total evidence propagation using a universal
+circuit encoding. Extraction is implemented with polynomial space and
+explicitly measured search cost; its general polynomial-time bound remains
+unproved.
