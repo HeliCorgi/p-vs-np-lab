@@ -197,8 +197,14 @@ def audit():
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--check',action='store_true',help='Compare both reports to committed snapshots')
     args=parser.parse_args()
     value=audit()
+    if args.check:
+        from asymmetric_demorgan_miter import report
+        base = Path(__file__).resolve().parents[2] / 'results'
+        assert json.loads((base / 'asymmetric_demorgan_miter.json').read_text()) == report()
+        assert json.loads((base / 'asymmetric_demorgan_miter_audit.json').read_text()) == value
     content=json.dumps(value,sort_keys=True,indent=2,ensure_ascii=False)+'\n'
     if args.output:
         args.output.write_text(content,encoding='utf-8')
