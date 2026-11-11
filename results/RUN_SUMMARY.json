@@ -3865,6 +3865,60 @@
     "oracle_sat": 110,
     "oracle_unsat": 34
   },
+  "soft_partition_path_audit": {
+    "case_count": 324,
+    "decision": "The geometric path is polynomial; fresh weighted moments remain unimplemented in polynomial time. Do not adopt this as a complete-proof route or optimize the enumerating reference provider.",
+    "general_polynomial_sat_algorithm": false,
+    "matched_jet_control": {
+      "clauses": 32,
+      "first_weighted_moment_at_half": [
+        "8744/3281",
+        "547/205"
+      ],
+      "initial_unnormalized_moments": [
+        4096,
+        16384,
+        28672,
+        28672,
+        17920,
+        7168,
+        1792,
+        256
+      ],
+      "later_moment_gap_exceeds_twice_tolerance": true,
+      "matching_initial_orders": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "n": 12,
+      "reference_assignments_enumerated": 8192,
+      "required_additive_error": "1/25690112",
+      "required_initial_order": 6,
+      "satisfying_assignments": [
+        32,
+        0
+      ],
+      "scope": "Finite check of the previously proved parity family. A low-order initial jet alone does not supply fresh weighted moments; algorithms using other formula information are not excluded."
+    },
+    "maximum_order": 4,
+    "maximum_steps": 221,
+    "polynomial_path_constructed": true,
+    "polynomial_weighted_moment_provider_constructed": false,
+    "reference_assignments_enumerated": 10510,
+    "scope": "Exact rational verification of a conditional evaluation construction. All reference assignment enumeration is charged; no new Lean proof or novelty claim.",
+    "status_counts": {
+      "SAT": 288,
+      "UNKNOWN": 0,
+      "UNSAT": 36
+    },
+    "weighted_moment_calls": 32431
+  },
   "source_sha256": {
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
@@ -3985,6 +4039,7 @@
     "experiments/selector_overlap.py": "10c8125f0d630fa764258011da2535924ece61c53f2ff0fc0c3e4790054e1a48",
     "experiments/shared_dag_sat.py": "ba8eb326f6eb8e6502e8876223be2db3fa6b73dccaad4a2d8be29862f6e6483f",
     "experiments/signature_counting.py": "6f0326ed2b9d59cd90b517055eb37f489286626c29084730df11c7bd0963fa65",
+    "experiments/soft_partition_path.py": "046918318394f743fec941c668a5af8b61b585e823e5ea468d9b258a6c866127",
     "experiments/split_parity.py": "269e8edf8f3340e0175633db4c5d557bb371d6b85d0bf111976c49eef37ef598",
     "experiments/support_localization.py": "3a0ecafe93eecce1b2f09f166d4953f569abee434d5e2856c90652f6b76891f4",
     "experiments/ternary_flow.py": "d83eec2ea448dbe53b02721cb1de70b507db29bb9f445a07369889f3faa52e28",
@@ -4071,7 +4126,7 @@
     "scripts/plot_physical_sat.py": "5a2ff1af3176af682f6ae3cbdc3f94a008d42b85fcf4e7090b0546a3d2cc6c57",
     "scripts/plot_sat_scaling.py": "9f6337439db53ebe2cbf5e92a9cc022e9ca249561d5edec21132e482d38ce2df",
     "scripts/prepare_upstream_audit.py": "87b01d416022cf93434c567cb5d696702ddad6045b7676cb1d3f4796ea5b14dd",
-    "scripts/reproduce.py": "5ac395a9131e85e923cddb0a65a8c41616c66703cf40499bd7abb1e6b786cc46",
+    "scripts/reproduce.py": "c43d509313be43396574f3f52af5e4a28e6457d60fd7993c66326fd257b7aa00",
     "scripts/run_cdcl_audit.py": "e373c38abfb6ff0a59fa6b8570d3179b711229fe1147396c7dfa82aa8f870896",
     "scripts/solve_conservation.py": "4cb3d665b1a740f3a58bfe84a0d82949760b915dba579473126b582ed6af7553",
     "scripts/solve_correlations.py": "0292ec851101c25251c8d574c99b7c27d9756bc9362ae14305194b2bf21686f0",
@@ -4257,6 +4312,7 @@
     "tests/test_sat_scaling.py": "85282c7e783c1cbe87ae8e8826a77b5f9279720b91e0b1a655cab3de7388c4de",
     "tests/test_shared_dag_sat.py": "da2f2ca799132c626c23395eb89119a53984f3920a5c9e3936ba2d0bfa8cb33d",
     "tests/test_signatures.py": "9cd45fe73af3750f5b6f389beeb97277b81488a00e2e0a4e19b74f2cda7a0266",
+    "tests/test_soft_partition_path.py": "b9d8e1742a37fed500eea49f8c5ecc9cdefd64d60f39fc3d30ed8a19c2f7c190",
     "tests/test_split_parity.py": "7354df01abdb4913e2f7b57eb9e033ccb16c236c0f9550957fabe07f038497ed",
     "tests/test_support_localization.py": "9d8472e928ea48f41e020455feb26cc5dfd066981b2c4dadcab81929e5d5a91f",
     "tests/test_support_solver.py": "9420c8ebe1281e2140aa5ab853f87fc0f178612d81fc2de1b075350022c9df06",
@@ -4331,7 +4387,7 @@
     "replicated_cases": 4,
     "two_cluster_unsat_checked": true
   },
-  "unit_tests_passed": 534,
+  "unit_tests_passed": 541,
   "upstream_commit": "c38a11a0b724856eec035483c8d391f08bc29ca8",
   "upstream_composition_checks": 19,
   "upstream_proof_scope": "This command checks copied-source integrity and one finite parameter gate. It does not rebuild or certify the external ETH theorem; see the separate upstream audit record/workflow.",

@@ -11,6 +11,60 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
+## Current investigation: adaptive soft counting, not adopted as a proof route (2026-11-11)
+
+After stopping extractor optimization, investigate a different construction:
+evaluate a positive counting polynomial by small changes of its argument.
+The [executable audit](../experiments/soft_partition_path.py) contains the
+all-size argument, explicit error bounds and a capped reference evaluator.
+This uses standard positive-polynomial and approximation ideas; see
+Patel--Regts, [SIAM J. Comput. 46 (2017)](https://doi.org/10.1137/16M1101003),
+[public version](https://arxiv.org/abs/1607.01167), Introduction and Theorem 3.1,
+for related zero-free/efficient-coefficient methods. Their structural
+hypotheses must not be assumed for general SAT. No separate novelty note or
+new Lean theorem is added.
+
+For an n-variable CNF, let E(x) count false clauses and H(q)=sum_x q^E(x).
+At q*=2^(-n-2), SAT gives H(q*)>=1 and UNSAT gives H(q*)<=1/4. We construct
+a path of at most 8m(n+2) steps from 1 to q*, each within a proved zero-free
+disk. Consecutive binomial truncations and outward rational rounding give
+a certified final interval separating those two cases, **provided fresh
+weighted binomial moments are available at every center**. The required order
+is O(log(m(n+2))), and the requested additive precision and all downstream
+bit costs are polynomial. This removes a geometric obstacle, but does not
+implement the required moment computation.
+
+A further check prevents treating that condition as an easier breakthrough.
+The first weighted moment is B_1(q)=sum_x E(x)q^E(x)/H(q). For 0<q<=1/2 and
+integer e>=1, e*q^e<=q. Thus at q*, SAT implies B_1(q*)<=1/4, while UNSAT
+implies B_1(q*)>=1. Even an additive-1/8 approximation to this one quantity
+would decide SAT by threshold 1/2. At the last queried center, which is at
+most (8/7)q*, the SAT upper bound is at most 2/7, so the same threshold still
+works with that precision. We have relocated the missing computation;
+we have not supplied an independent polynomial-time construction for it.
+
+The implemented provider explicitly enumerates assignments. All 324 finite
+cases pass the interval checks (288 SAT, 36 UNSAT), including perturbed
+moment estimates. They use 32,431 fresh-moment calls and at most 221 steps
+per case. Preparation and the separate control enumerate 10,510 assignments;
+these counts are not a speedup or a general complexity bound. A reused parity
+control has two 12-variable, 32-clause formulas with matching initial moments
+through order 7, covering the requested initial order 6. They have 32 versus
+zero solutions, and their later first moments differ by more than twice the
+requested error. Low-order initial data alone cannot supply the fresh data;
+this does not exclude methods using additional formula structure.
+
+**Decision:** keep the verified conditional construction and checks; do not
+adopt this as a promising complete-proof route or tune its enumerating
+provider. A concrete efficient weighted-moment construction is absent.
+The previous extractor route remains stopped. P versus NP is unresolved;
+no probability favoring either answer follows from this investigation.
+
+Validation: all 541 unit tests passed, 79 existing mathematical reports matched
+their committed versions, and the new report matched an independent replay.
+The 81 saved reports, including the updated run summary, match the completed
+run; its 429 source hashes match the checked sources. Lean was not rerun.
+
 ## Current decision: stop the extractor optimization route (2026-11-11)
 
 The user explicitly authorized abandoning the current route. Stop the sequence
