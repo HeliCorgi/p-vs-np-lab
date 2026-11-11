@@ -60,6 +60,7 @@ NEW_REPORTS = (
     "mcsp_region_pruning.json",
     "mcsp_fixed_constraints.json",
     "cnf_component_reuse.json",
+    "soft_partition_path.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -289,10 +290,21 @@ def main() -> None:
     component_reuse = read_json(out / "cnf_component_reuse.json")
     if not component_reuse["all_checks_passed"]:
         raise RuntimeError("Residual component-sharing audit failed")
+    soft_path = read_json(out / "soft_partition_path.json")
+    if not soft_path["all_checks_passed"]:
+        raise RuntimeError("Soft partition path audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "soft_partition_path_audit": {
+            key: soft_path[key] for key in (
+                "case_count", "status_counts", "reference_assignments_enumerated",
+                "weighted_moment_calls", "maximum_steps", "maximum_order",
+                "matched_jet_control", "polynomial_path_constructed",
+                "polynomial_weighted_moment_provider_constructed",
+                "general_polynomial_sat_algorithm", "decision", "scope")
+        },
         "cnf_component_reuse_audit": {
             "truth_tables": component_reuse["truth_tables"],
             "searches": component_reuse["searches"],
