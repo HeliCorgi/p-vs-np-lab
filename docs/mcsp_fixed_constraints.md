@@ -6,6 +6,11 @@ bounds. A complete finite extraction algorithm is implemented, with polynomial
 working space, but **its general running time is not proved polynomial**.
 This is not a complete solution of the user's requested general guarantee.
 
+Research decision, 2026-11-11: the user authorized stopping the broader
+extractor-optimization route as the main P-versus-NP proof route. The checked
+construction is preserved; see the
+[current decision](research_program.md#current-decision-stop-the-extractor-optimization-route-2026-11-11).
+
 The [previous representation](mcsp_region_pruning.md) rebuilt sets of sample
 signatures after each new counterexample. Here the entire circuit candidate
 space is represented once by an immutable constraint formula. Adding a row

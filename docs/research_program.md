@@ -11,7 +11,59 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: share exact residual subproblems (2026-11-11 JST)
+## Current decision: stop the extractor optimization route (2026-11-11)
+
+The user explicitly authorized abandoning the current route. Stop the sequence
+of MCSP candidate generation, counterexample pruning, fixed-constraint
+extraction and residual-cache improvements **as the main route to a complete
+P-versus-NP proof**. Preserve its checked code, results and cost arguments.
+The earlier continuations below are historical, not instructions to resume
+the next solver improvement. This decision does not discard the independent
+phase-20 formalization or assert that general SAT or MCSP algorithms are
+impossible.
+
+The work established polynomial bounds for representation and permanent
+updates, but not for total extraction. The remaining bounds depend on an
+uncontrolled number of choices or distinct residual problems. Finite speedups
+and successful small cases do not control that number on all inputs. Moreover,
+polynomial time in an explicit truth table's length N=2^n does not establish
+polynomial time in n, and an MCSP upper bound alone is not a P=NP proof. No new mechanism
+closing either gap was obtained. More tuning, larger panels or a different
+cache policy are therefore not the next complete-proof task.
+
+**Replacement status: no promising replacement proof route has been
+identified.** The earlier investigations of physical dynamics, SAT elimination,
+holographic transformations, counting and circuit magnification remain in
+the record with their specific unresolved steps. Calling one of those routes
+symbolic or machine-generated does not resolve its missing step.
+
+The user also asked whether exploration could dispense with human language.
+Candidate generation may operate directly on equations, algorithms or formal
+proof terms; a readable explanation can come later. A result still needs a
+precise statement and a checkable derivation. For a fixed sound formal system
+with decidable proof checking, enumerating finite proof strings would find a
+proof of either answer **if that answer is provable in that system**. This
+conditional observation supplies neither a feasible search bound nor a
+guarantee of such provability. No independence result for P versus NP in the
+chosen foundations is asserted here. A generic proof enumerator has not been
+implemented or adopted as a practical solution strategy.
+
+For future machine-assisted exploration, fix the target statement before
+generating candidates: either an all-input SAT algorithm with a complete
+uniform polynomial bit-cost proof, or a lower-bound construction with a
+proved implication to P!=NP. A superpolynomial lower bound for unrestricted
+Boolean circuits deciding a fixed NP language would be one sufficient,
+stronger target. The proof must cover
+unbounded input lengths and the required quantifiers; finite tests can reject
+candidates but cannot discharge those obligations. Formal checking must not
+leave the missing core as an assumption or unchecked axiom. These are selection
+conditions, not a new construction or a claimed advance toward either answer.
+
+This update changes research status and documentation only. It introduces no
+new experiment or theorem; the previous validation results below describe the
+preserved implementation.
+
+## Previous continuation: share exact residual subproblems (2026-11-11 JST)
 
 The user asked to continue from the distinction between monotone updates and
 backtracking. The [residual component cache](cnf_component_reuse.md) stores a
