@@ -1,6 +1,9 @@
 # Research objective and audited starting point
 
-**Goal:** a complete mathematical proof of P=NP or P≠NP. **Status:** open.
+**Primary goal:** a complete mathematical proof of P≠NP. **Status:** open.
+On 2026-11-11 JST the user selected the separation direction as the main
+research hypothesis. This is a choice of direction, not a conclusion or an
+empirical probability inferred from the earlier failed attempts.
 On 2026-11-07 JST the user also accepted approximate empirical tendencies
 as a deliverable. This adds a separate experimental track; it does not
 weaken the requirements for a complete proof or supply probabilities of
@@ -11,7 +14,85 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current investigation: adaptive soft counting, not adopted as a proof route (2026-11-11)
+## Current direction: uniform time lower bounds (2026-11-11)
+
+The primary target is now SAT not in P: exclude every fixed polynomial time
+bound for every correct deterministic SAT decider, measured in full encoded
+input length. This does not require first proving the stronger nonuniform
+circuit separation. The stopped MCSP extractor and soft-counting construction
+are not resumed.
+
+We investigated an actual construction that escapes a restricted model's
+limitation: the Cook--Mertz tree-evaluation procedure and its use in Ryan
+Williams, [*Simulating Time With Square-Root Space*](https://arxiv.org/abs/2502.17779v1)
+(2025). Theorem 1.1 converts multitape TIME[t] into SPACE[O(sqrt(t log t))].
+Section 5 explains how the algebraic procedure avoids ordinary pebbling
+restrictions, so such restrictions must not be mistaken for a general lower
+bound. We read the theorem, the discussion and Appendix A, and attempted a
+specific modification of the construction.
+
+The known theorem cannot itself be inserted into the existing SAT
+[alternation-trading argument](alternation_trade.md). It gives a space bound,
+not the same time bound on the simulator; the extension-evaluation procedure
+discussed in Section 5 enumerates 2^Theta(b) inputs for a b-step block.
+For t=N^c, the guaranteed space also remains N^(c/2) up to logarithms, not
+the subpolynomial workspace required by our old rules. The source's
+near-quadratic lower bound is for linear-space languages; it supplies neither
+NP membership for those languages nor exclusion of every polynomial degree.
+Fine exponent statements also need the stated machine model; arbitrary
+random-access machines are not covered by Theorem 1.1 as written.
+
+**Concrete repair attempted:** replace truth-table enumeration in extension
+evaluation by the arithmetic circuit obtained directly from the Boolean
+gates. This is cheap to evaluate, but it need not meet the degree condition
+of the catalytic identity. The [executable check](../experiments/catalytic_extension_degree.py)
+gives a counterexample for every GF(2^r), r>=2: a 2(r-1)-gate Boolean circuit
+computes x, while its gatewise polynomial is x^(2^r-1). Summing that extension
+over all nonzero field elements at catalyst x=1 and target v=0 yields 1,
+where the required value is 0. The averaging identity is only licensed for
+degree strictly below 2^r-1. The same Boolean function has the easy extension
+P(x)=x, so this does not rule out a different extension construction.
+
+Exact checks over GF(4), GF(8), GF(16), GF(32) confirm 36,080 valid
+low-degree monomial identities, 1,300 failures of the attempted replacement,
+and 1,360 successes of the linear replacement. Field multiplication is
+checked independently by polynomial multiplication and reduction. The
+all-size countercheck is an elementary algebraic argument in the executable;
+this is not a new complexity lower bound or a novelty claim about known work.
+No separate mathematical-result note is added.
+
+We also checked the obvious objection that duplicate AND inputs can simply be
+removed. A second family uses fresh inputs and distinct intermediate functions,
+with no duplicate binary fan-ins or duplicate gate records. Its gatewise
+extension still fails the identity. For this family we then **constructed a
+working replacement**: condition on its one repeatedly used input, propagate
+weights on four Boolean states, and finally interpolate the conditioned input.
+Every fresh input is used once in this computation. For every r>=4, the
+extension has degree at most 2r+1<2^r-1 and uses 64(r-1)+10 field
+multiplications; other field operations are also linear in r. The corrected
+extension therefore satisfies the averaging identity. This is a standard
+finite-state transfer construction, not a new general compilation technique.
+For r=4,5, all 2,560 Boolean inputs and 24 non-Boolean vector averaging
+checks pass. An independent full Boolean interpolation check tests the repair
+on a smaller instance. The four-state bound is a property of these circuits;
+we do not supply it for arbitrary circuits or resume the stopped general
+state-compression route.
+
+**Decision:** reject the automatic gatewise replacement with the old degree budget;
+do not promote the space simulation alone to a P≠NP strategy. A general
+efficient extension repair and an NP time-lower-bound connection are both
+absent; the controlled repair above is retained with its proved scope.
+The separation remains the primary goal, but this investigation has
+not supplied a surviving new proof mechanism. In particular, it is not
+evidence that P≠NP became more probable.
+
+Validation: all 546 unit tests passed; 80 existing mathematical reports matched
+their committed versions and the new report matched an independent replay.
+All 82 saved reports, including the updated run summary, match the completed
+run, and all 431 source hashes match the checked files. Lean sources were
+unchanged and Lean was not rerun.
+
+## Previous investigation: adaptive soft counting, not adopted as a proof route (2026-11-11)
 
 After stopping extractor optimization, investigate a different construction:
 evaluate a positive counting polynomial by small changes of its argument.
