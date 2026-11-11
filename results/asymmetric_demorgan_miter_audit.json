@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "checked_derived_lines": 13,
+      "full_assignments": 128,
+      "input_assignments": 4,
+      "name": "and",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 12,
+      "full_assignments": 128,
+      "input_assignments": 4,
+      "name": "or",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 25,
+      "full_assignments": 0,
+      "input_assignments": 8,
+      "name": "and_or",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 25,
+      "full_assignments": 0,
+      "input_assignments": 8,
+      "name": "or_and",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 52,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "fanout",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 64,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "mixed",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 123,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "seed_31",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 132,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "seed_37",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 131,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "seed_41",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 127,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "seed_43",
+      "width": 3
+    },
+    {
+      "checked_derived_lines": 128,
+      "full_assignments": 0,
+      "input_assignments": 16,
+      "name": "seed_47",
+      "width": 3
+    }
+  ],
+  "corruptions_rejected": [
+    "pivot",
+    "parent",
+    "clause",
+    "axiom"
+  ],
+  "date": "2026-11-11",
+  "full_miter_assignments_checked": 256,
+  "new_lean_theorems": 0,
+  "p_vs_np_proved": false,
+  "primary_truth_assignments_checked": 136,
+  "status": "PASS",
+  "total_independently_replayed_derived_lines": 832
+}
