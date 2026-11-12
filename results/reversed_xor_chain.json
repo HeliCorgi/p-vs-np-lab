@@ -6,6 +6,7 @@
       "checked_lines": 20,
       "derived_lines": 8,
       "m": 1,
+      "regular": true,
       "source_clauses": 12,
       "variables": 5,
       "width": 3
@@ -16,6 +17,7 @@
       "checked_lines": 38,
       "derived_lines": 18,
       "m": 2,
+      "regular": true,
       "source_clauses": 20,
       "variables": 8,
       "width": 3
@@ -26,6 +28,7 @@
       "checked_lines": 56,
       "derived_lines": 28,
       "m": 3,
+      "regular": true,
       "source_clauses": 28,
       "variables": 11,
       "width": 3
@@ -36,6 +39,7 @@
       "checked_lines": 92,
       "derived_lines": 48,
       "m": 5,
+      "regular": true,
       "source_clauses": 44,
       "variables": 17,
       "width": 3
@@ -46,6 +50,7 @@
       "checked_lines": 146,
       "derived_lines": 78,
       "m": 8,
+      "regular": true,
       "source_clauses": 68,
       "variables": 26,
       "width": 3
@@ -56,6 +61,7 @@
   "general_P_vs_NP_result": false,
   "new_Lean_formalization": false,
   "paper_theorem": "For every m>=1, reversed XOR parity chain miter has a width<=3 strict ordinary resolution refutation with exactly 10m-2 derived lines.",
+  "regularity_audited": true,
   "rejected_corruptions": 4,
   "schema_version": 1
 }
