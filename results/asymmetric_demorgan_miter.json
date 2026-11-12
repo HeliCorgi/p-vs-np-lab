@@ -1,0 +1,142 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "and_gates": 1,
+      "certificate_sha256": "18b46f5e600db9a986f37c5ee0b3de7d7e984a1041a93c74897e42fc025a0d25",
+      "derived_lines": 13,
+      "gates": 1,
+      "inputs": 2,
+      "name": "and",
+      "or_gates": 0,
+      "source_clauses": 14,
+      "upper_bound": 17,
+      "variables": 7
+    },
+    {
+      "and_gates": 0,
+      "certificate_sha256": "ae9d34521bc5268aac174648b5e47c523af35f082c1b929f966a3bcbfaa08426",
+      "derived_lines": 12,
+      "gates": 1,
+      "inputs": 2,
+      "name": "or",
+      "or_gates": 1,
+      "source_clauses": 14,
+      "upper_bound": 16,
+      "variables": 7
+    },
+    {
+      "and_gates": 1,
+      "certificate_sha256": "cab6283244c31e42312998f5d49d078be7fcf613d62269b9197d2b2eb5772698",
+      "derived_lines": 25,
+      "gates": 2,
+      "inputs": 3,
+      "name": "and_or",
+      "or_gates": 1,
+      "source_clauses": 26,
+      "upper_bound": 31,
+      "variables": 13
+    },
+    {
+      "and_gates": 1,
+      "certificate_sha256": "41939ef072d8fcde85d67db4c321424eef12be78f1e1f264c9ab2da74c57ecca",
+      "derived_lines": 25,
+      "gates": 2,
+      "inputs": 3,
+      "name": "or_and",
+      "or_gates": 1,
+      "source_clauses": 26,
+      "upper_bound": 31,
+      "variables": 13
+    },
+    {
+      "and_gates": 2,
+      "certificate_sha256": "ecbf12fa218f223ab872a5ba624ea171fa5e33b49c3dc4bd315d850b42484d36",
+      "derived_lines": 52,
+      "gates": 4,
+      "inputs": 4,
+      "name": "fanout",
+      "or_gates": 2,
+      "source_clauses": 50,
+      "upper_bound": 60,
+      "variables": 24
+    },
+    {
+      "and_gates": 2,
+      "certificate_sha256": "df5c42d34fe3097ca393213e9ed058fa10c0e607347c331c855c5810a210a911",
+      "derived_lines": 64,
+      "gates": 5,
+      "inputs": 4,
+      "name": "mixed",
+      "or_gates": 3,
+      "source_clauses": 62,
+      "upper_bound": 74,
+      "variables": 29
+    },
+    {
+      "and_gates": 7,
+      "certificate_sha256": "a892fb9530de7cc6d85671a21f91b12d34d1a387aadb1980d5a533fc91757270",
+      "derived_lines": 123,
+      "gates": 10,
+      "inputs": 4,
+      "name": "seed_31",
+      "or_gates": 3,
+      "source_clauses": 122,
+      "upper_bound": 149,
+      "variables": 54
+    },
+    {
+      "and_gates": 6,
+      "certificate_sha256": "05049bf908651f0e45a256480588a5fb21b5f08524a1464e6ea95cba50a35cca",
+      "derived_lines": 132,
+      "gates": 10,
+      "inputs": 4,
+      "name": "seed_37",
+      "or_gates": 4,
+      "source_clauses": 122,
+      "upper_bound": 148,
+      "variables": 54
+    },
+    {
+      "and_gates": 7,
+      "certificate_sha256": "4a1b936f95ee0278934b83f72760a6ae855f3b243e17fe4f4c158755acf8fcb4",
+      "derived_lines": 131,
+      "gates": 10,
+      "inputs": 4,
+      "name": "seed_41",
+      "or_gates": 3,
+      "source_clauses": 122,
+      "upper_bound": 149,
+      "variables": 54
+    },
+    {
+      "and_gates": 5,
+      "certificate_sha256": "7e4c8b659630767614e954d7ea259b9b79c8ebc28036bbbf0743ae75173fd8ab",
+      "derived_lines": 127,
+      "gates": 10,
+      "inputs": 4,
+      "name": "seed_43",
+      "or_gates": 5,
+      "source_clauses": 122,
+      "upper_bound": 147,
+      "variables": 54
+    },
+    {
+      "and_gates": 4,
+      "certificate_sha256": "8ecbac2f0a6b4821d58c28ddd19f4b5bc4479ccf1cb7e0110a6ec099fc0cb2ab",
+      "derived_lines": 128,
+      "gates": 10,
+      "inputs": 4,
+      "name": "seed_47",
+      "or_gates": 6,
+      "source_clauses": 122,
+      "upper_bound": 146,
+      "variables": 54
+    }
+  ],
+  "date": "2026-11-11",
+  "hypothesis": "bounded asymmetric monotone De Morgan miter",
+  "mathematical_scope": "all admissible AND/OR DAGs",
+  "new_lean_theorems": 0,
+  "p_vs_np_proved": false
+}

@@ -4700,6 +4700,7 @@
     "weighted_moment_calls": 32431
   },
   "source_sha256": {
+    ".github/workflows/asymmetric-demorgan.yml": "c2020afd33627138e13b59d33643c473edfff751e33f2194ba29607817f85cb3",
     ".github/workflows/ci.yml": "34bcb5dc4a023086c4a338a3dc6f16c787d36ba621eedcdadc289bf7cd65ee22",
     ".github/workflows/cmr-graphic.yml": "f42135c5d71f7505985581f9b49e935ef1de61bf6d531528e910c20d21fce6bc",
     ".github/workflows/ordinary-pc.yml": "3bc42d717bc9a97c6efaee2a81325e8af3292127342c97aca7a83ad53379d50d",
