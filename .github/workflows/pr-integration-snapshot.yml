@@ -1,38 +1,40 @@
-name: PR integration review snapshot
+name: PR integration preparation
 
 on:
   push:
     branches: [maintenance/pr-integration-review-20261112]
-    paths: [.github/workflows/pr-integration-snapshot.yml]
+    paths:
+      - '.github/workflows/pr-integration-snapshot.yml'
+      - '.github/prepare_pr_integration.py'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  snapshot:
+  prepare:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Export only repository Git objects for offline integration review
-        run: |
-          set -euo pipefail
-          git cat-file -e 3f575faccfcf11b6c25c334c0c7e46aedc946d00^{commit}
-          git cat-file -e bb2d6bb2cdac15953db0ba18116b8e1353047a30^{commit}
-          git cat-file -e 5bc7b0a75a482b33be5d0e209c919bcc77af4f22^{commit}
-          git cat-file -e 3165460df8658f66d7e73b5a8da2c064e1460b74^{commit}
-          git cat-file -e c5710c788181019642958729dfac7a26427ae30a^{commit}
-          git bundle create pr-integration-review.bundle --all
-          git bundle verify pr-integration-review.bundle
-          sha256sum pr-integration-review.bundle > pr-integration-review.bundle.sha256
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
-          name: pr-integration-review
-          path: |
-            pr-integration-review.bundle
-            pr-integration-review.bundle.sha256
+          python-version: '3.12'
+      - name: Prepare and verify pinned integration trees without updating any branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python .github/prepare_pr_integration.py
+      - name: Publish verified Git objects only; no reference updates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python .github/prepare_pr_integration.py --publish
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: verified-pr-integration
+          path: integration-review/
           retention-days: 3
           if-no-files-found: error
