@@ -1,0 +1,448 @@
+{
+  "algorithm": "fixed-order structural DAG cofactoring",
+  "all_checks_passed": true,
+  "all_variable_orders_lower_bound": false,
+  "budget_control": {
+    "assignment": null,
+    "reason": "expanded state budget",
+    "stats": {
+      "cofactor_node_visits": 1260,
+      "expanded_states": 100,
+      "input_nodes": 99,
+      "interned_nodes": 417,
+      "memo_hits": 91,
+      "states_by_variable": {
+        "1": 1,
+        "10": 5,
+        "11": 9,
+        "12": 17,
+        "13": 29,
+        "14": 28,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 2,
+        "9": 3
+      },
+      "work_units": 9703
+    },
+    "status": "UNKNOWN"
+  },
+  "families": [
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 48,
+          "expanded_states": 4,
+          "input_nodes": 19,
+          "interned_nodes": 34,
+          "memo_hits": 5,
+          "states_by_variable": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "work_units": 339
+        },
+        "status": "UNSAT"
+      },
+      "gates": 13,
+      "independent_polynomial_zero": true,
+      "inputs": 6,
+      "k": 2,
+      "nonconstant_residuals_after_k_minus_2": 1,
+      "proved_state_lower_bound": 1,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 22,
+          "expanded_states": 2,
+          "input_nodes": 19,
+          "interned_nodes": 23,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "3": 1,
+            "4": 1
+          },
+          "work_units": 219
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 11,
+          "interned_nodes": 11,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 57
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 64
+    },
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 460,
+          "expanded_states": 36,
+          "input_nodes": 35,
+          "interned_nodes": 152,
+          "memo_hits": 37,
+          "states_by_variable": {
+            "1": 1,
+            "2": 2,
+            "3": 4,
+            "4": 7,
+            "5": 11,
+            "6": 11
+          },
+          "work_units": 2802
+        },
+        "status": "UNSAT"
+      },
+      "gates": 25,
+      "independent_polynomial_zero": true,
+      "inputs": 10,
+      "k": 4,
+      "nonconstant_residuals_after_k_minus_2": 4,
+      "proved_state_lower_bound": 4,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 30,
+          "expanded_states": 2,
+          "input_nodes": 35,
+          "interned_nodes": 39,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "5": 1,
+            "6": 1
+          },
+          "work_units": 462
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 23,
+          "interned_nodes": 23,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 155
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 1024
+    },
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 2408,
+          "expanded_states": 176,
+          "input_nodes": 51,
+          "interned_nodes": 594,
+          "memo_hits": 177,
+          "states_by_variable": {
+            "1": 1,
+            "2": 2,
+            "3": 4,
+            "4": 8,
+            "5": 16,
+            "6": 31,
+            "7": 57,
+            "8": 57
+          },
+          "work_units": 14899
+        },
+        "status": "UNSAT"
+      },
+      "gates": 37,
+      "independent_polynomial_zero": true,
+      "inputs": 14,
+      "k": 6,
+      "nonconstant_residuals_after_k_minus_2": 16,
+      "proved_state_lower_bound": 16,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 38,
+          "expanded_states": 2,
+          "input_nodes": 51,
+          "interned_nodes": 55,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "7": 1,
+            "8": 1
+          },
+          "work_units": 781
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 35,
+          "interned_nodes": 35,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 277
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 0
+    },
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 11076,
+          "expanded_states": 748,
+          "input_nodes": 67,
+          "interned_nodes": 2332,
+          "memo_hits": 749,
+          "states_by_variable": {
+            "1": 1,
+            "10": 247,
+            "2": 2,
+            "3": 4,
+            "4": 8,
+            "5": 16,
+            "6": 32,
+            "7": 64,
+            "8": 127,
+            "9": 247
+          },
+          "work_units": 71784
+        },
+        "status": "UNSAT"
+      },
+      "gates": 49,
+      "independent_polynomial_zero": true,
+      "inputs": 18,
+      "k": 8,
+      "nonconstant_residuals_after_k_minus_2": 64,
+      "proved_state_lower_bound": 64,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 46,
+          "expanded_states": 2,
+          "input_nodes": 67,
+          "interned_nodes": 71,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "10": 1,
+            "9": 1
+          },
+          "work_units": 1176
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 47,
+          "interned_nodes": 47,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 423
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 0
+    },
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 48928,
+          "expanded_states": 3048,
+          "input_nodes": 83,
+          "interned_nodes": 9254,
+          "memo_hits": 3049,
+          "states_by_variable": {
+            "1": 1,
+            "10": 511,
+            "11": 1013,
+            "12": 1013,
+            "2": 2,
+            "3": 4,
+            "4": 8,
+            "5": 16,
+            "6": 32,
+            "7": 64,
+            "8": 128,
+            "9": 256
+          },
+          "work_units": 333513
+        },
+        "status": "UNSAT"
+      },
+      "gates": 61,
+      "independent_polynomial_zero": true,
+      "inputs": 22,
+      "k": 10,
+      "nonconstant_residuals_after_k_minus_2": 256,
+      "proved_state_lower_bound": 256,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 54,
+          "expanded_states": 2,
+          "input_nodes": 83,
+          "interned_nodes": 87,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "11": 1,
+            "12": 1
+          },
+          "work_units": 1647
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 59,
+          "interned_nodes": 59,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 593
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 0
+    },
+    {
+      "default_order": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 212732,
+          "expanded_states": 12260,
+          "input_nodes": 99,
+          "interned_nodes": 36912,
+          "memo_hits": 12261,
+          "states_by_variable": {
+            "1": 1,
+            "10": 512,
+            "11": 1024,
+            "12": 2047,
+            "13": 4083,
+            "14": 4083,
+            "2": 2,
+            "3": 4,
+            "4": 8,
+            "5": 16,
+            "6": 32,
+            "7": 64,
+            "8": 128,
+            "9": 256
+          },
+          "work_units": 1518070
+        },
+        "status": "UNSAT"
+      },
+      "gates": 73,
+      "independent_polynomial_zero": true,
+      "inputs": 26,
+      "k": 12,
+      "nonconstant_residuals_after_k_minus_2": 1024,
+      "proved_state_lower_bound": 1024,
+      "selector_first": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 62,
+          "expanded_states": 2,
+          "input_nodes": 99,
+          "interned_nodes": 103,
+          "memo_hits": 3,
+          "states_by_variable": {
+            "13": 1,
+            "14": 1
+          },
+          "work_units": 2194
+        },
+        "status": "UNSAT"
+      },
+      "single_selector": {
+        "assignment": null,
+        "reason": null,
+        "stats": {
+          "cofactor_node_visits": 0,
+          "expanded_states": 0,
+          "input_nodes": 71,
+          "interned_nodes": 71,
+          "memo_hits": 1,
+          "states_by_variable": {},
+          "work_units": 787
+        },
+        "status": "UNSAT"
+      },
+      "truth_assignments_checked": 0
+    }
+  ],
+  "general_sat_polynomial_time": false,
+  "normalizer": "AND/XOR flattening, constants, complements, all-term common factors",
+  "p_vs_np_resolved": false,
+  "polynomial_state_bound_refuted": true,
+  "sat_control": {
+    "assignment": {
+      "1": false,
+      "2": true,
+      "3": true
+    },
+    "reason": null,
+    "stats": {
+      "cofactor_node_visits": 12,
+      "expanded_states": 3,
+      "input_nodes": 7,
+      "interned_nodes": 8,
+      "memo_hits": 3,
+      "states_by_variable": {
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "work_units": 41
+    },
+    "status": "SAT"
+  },
+  "state_bound_scope": "this implementation and a-first order; paper proof, not Lean",
+  "work_units_are_bit_operations": false
+}

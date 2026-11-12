@@ -1,0 +1,3526 @@
+{
+  "all_checks_passed": true,
+  "bounded_restart_runs": [
+    {
+      "blocks": 1,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 6,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 0,
+              "final_word": 7,
+              "flip_proposals": 3,
+              "literal_inspections": 75,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 21,
+              "random_integer_trials": 14,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 7,
+              "witness": 7
+            }
+          }
+        ],
+        "initialization_bit_writes": 3,
+        "initialization_random_bits": 67,
+        "literal_inspections": 75,
+        "random_bits": 88,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 7,
+        "witness": 7
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 1,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 1,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 1,
+              "literal_inspections": 67,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 15,
+              "random_integer_trials": 10,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 5,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 6,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 8,
+              "literal_inspections": 213,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 60,
+              "random_integer_trials": 38,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 16,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 3,
+              "literal_inspections": 109,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 23,
+              "random_integer_trials": 15,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 7,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 6,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 0,
+              "final_word": 7,
+              "flip_proposals": 1,
+              "literal_inspections": 31,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 3,
+              "random_integer_trials": 2,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 1,
+              "witness": 7
+            }
+          }
+        ],
+        "initialization_bit_writes": 12,
+        "initialization_random_bits": 268,
+        "literal_inspections": 420,
+        "random_bits": 369,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 29,
+        "witness": 7
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 1,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 7,
+            "result": {
+              "accepted_flips": 0,
+              "final_energy": 0,
+              "final_word": 7,
+              "flip_proposals": 0,
+              "literal_inspections": 10,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 0,
+              "random_bits": 0,
+              "random_integer_trials": 0,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 0,
+              "witness": 7
+            }
+          }
+        ],
+        "initialization_bit_writes": 3,
+        "initialization_random_bits": 67,
+        "literal_inspections": 10,
+        "random_bits": 67,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 0,
+        "witness": 7
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 1,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 1,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 0,
+              "final_word": 7,
+              "flip_proposals": 4,
+              "literal_inspections": 97,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 28,
+              "random_integer_trials": 18,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 8,
+              "witness": 7
+            }
+          }
+        ],
+        "initialization_bit_writes": 3,
+        "initialization_random_bits": 67,
+        "literal_inspections": 97,
+        "random_bits": 95,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 8,
+        "witness": 7
+      },
+      "seed": 3
+    },
+    {
+      "blocks": 4,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 3458,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 3,
+              "final_word": 448,
+              "flip_proposals": 14,
+              "literal_inspections": 2185,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 131,
+              "random_integer_trials": 50,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 23,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3646,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 1,
+              "final_word": 3647,
+              "flip_proposals": 1,
+              "literal_inspections": 631,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 14,
+              "random_integer_trials": 5,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 2,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1060,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 4,
+              "final_word": 0,
+              "flip_proposals": 7,
+              "literal_inspections": 1222,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 63,
+              "random_integer_trials": 24,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 11,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1990,
+            "result": {
+              "accepted_flips": 10,
+              "final_energy": 1,
+              "final_word": 4039,
+              "flip_proposals": 17,
+              "literal_inspections": 1714,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 199,
+              "random_integer_trials": 76,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 35,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3210,
+            "result": {
+              "accepted_flips": 11,
+              "final_energy": 2,
+              "final_word": 63,
+              "flip_proposals": 24,
+              "literal_inspections": 2461,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 225,
+              "random_integer_trials": 84,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 37,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3964,
+            "result": {
+              "accepted_flips": 2,
+              "final_energy": 1,
+              "final_word": 4088,
+              "flip_proposals": 3,
+              "literal_inspections": 1007,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 44,
+              "random_integer_trials": 17,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 8,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2389,
+            "result": {
+              "accepted_flips": 19,
+              "final_energy": 3,
+              "final_word": 7,
+              "flip_proposals": 31,
+              "literal_inspections": 2855,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 462,
+              "random_integer_trials": 171,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 74,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 894,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 1,
+              "final_word": 4088,
+              "flip_proposals": 7,
+              "literal_inspections": 1290,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 88,
+              "random_integer_trials": 31,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 12,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 96,
+        "initialization_random_bits": 608,
+        "literal_inspections": 13365,
+        "random_bits": 1834,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 202,
+        "witness": null
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 4,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 550,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 2,
+              "final_word": 3591,
+              "flip_proposals": 7,
+              "literal_inspections": 1445,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 69,
+              "random_integer_trials": 27,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 13,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3286,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 4088,
+              "flip_proposals": 9,
+              "literal_inspections": 2164,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 123,
+              "random_integer_trials": 45,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 19,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1044,
+            "result": {
+              "accepted_flips": 15,
+              "final_energy": 4,
+              "final_word": 0,
+              "flip_proposals": 37,
+              "literal_inspections": 5653,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 504,
+              "random_integer_trials": 186,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 80,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3116,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 3,
+              "final_word": 56,
+              "flip_proposals": 22,
+              "literal_inspections": 2807,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 249,
+              "random_integer_trials": 87,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 33,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2668,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 2,
+              "final_word": 3640,
+              "flip_proposals": 4,
+              "literal_inspections": 900,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 76,
+              "random_integer_trials": 28,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 12,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 859,
+            "result": {
+              "accepted_flips": 9,
+              "final_energy": 2,
+              "final_word": 3591,
+              "flip_proposals": 10,
+              "literal_inspections": 2271,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 153,
+              "random_integer_trials": 57,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 25,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 116,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 3,
+              "final_word": 56,
+              "flip_proposals": 13,
+              "literal_inspections": 2804,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 164,
+              "random_integer_trials": 62,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 28,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1596,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 3,
+              "final_word": 56,
+              "flip_proposals": 22,
+              "literal_inspections": 3387,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 195,
+              "random_integer_trials": 72,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 31,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 96,
+        "initialization_random_bits": 608,
+        "literal_inspections": 21431,
+        "random_bits": 2141,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 241,
+        "witness": null
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 4,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 3915,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 1,
+              "final_word": 4039,
+              "flip_proposals": 8,
+              "literal_inspections": 1003,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 115,
+              "random_integer_trials": 43,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 19,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3477,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 2,
+              "final_word": 455,
+              "flip_proposals": 7,
+              "literal_inspections": 1478,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 89,
+              "random_integer_trials": 32,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 13,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 347,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 1,
+              "final_word": 511,
+              "flip_proposals": 34,
+              "literal_inspections": 2275,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 387,
+              "random_integer_trials": 144,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 63,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 692,
+            "result": {
+              "accepted_flips": 14,
+              "final_energy": 3,
+              "final_word": 448,
+              "flip_proposals": 35,
+              "literal_inspections": 2781,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 375,
+              "random_integer_trials": 141,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 63,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2743,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 1,
+              "final_word": 3647,
+              "flip_proposals": 9,
+              "literal_inspections": 1664,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 129,
+              "random_integer_trials": 51,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 25,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1030,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 3,
+              "final_word": 7,
+              "flip_proposals": 29,
+              "literal_inspections": 4159,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 367,
+              "random_integer_trials": 136,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 59,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2485,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 4039,
+              "flip_proposals": 12,
+              "literal_inspections": 1908,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 119,
+              "random_integer_trials": 44,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 19,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2790,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 1,
+              "final_word": 4039,
+              "flip_proposals": 17,
+              "literal_inspections": 3049,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 235,
+              "random_integer_trials": 88,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 39,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 96,
+        "initialization_random_bits": 608,
+        "literal_inspections": 18317,
+        "random_bits": 2424,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 300,
+        "witness": null
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 4,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 974,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 2,
+              "final_word": 504,
+              "flip_proposals": 18,
+              "literal_inspections": 1630,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 203,
+              "random_integer_trials": 77,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 35,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 534,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 3,
+              "final_word": 7,
+              "flip_proposals": 10,
+              "literal_inspections": 1513,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 104,
+              "random_integer_trials": 38,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 16,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2473,
+            "result": {
+              "accepted_flips": 13,
+              "final_energy": 1,
+              "final_word": 4088,
+              "flip_proposals": 17,
+              "literal_inspections": 3871,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 173,
+              "random_integer_trials": 62,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 25,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2379,
+            "result": {
+              "accepted_flips": 17,
+              "final_energy": 1,
+              "final_word": 4088,
+              "flip_proposals": 25,
+              "literal_inspections": 4623,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 399,
+              "random_integer_trials": 144,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 59,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 53,
+            "result": {
+              "accepted_flips": 9,
+              "final_energy": 3,
+              "final_word": 56,
+              "flip_proposals": 31,
+              "literal_inspections": 2537,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 373,
+              "random_integer_trials": 139,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 61,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1921,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 3,
+              "final_word": 3584,
+              "flip_proposals": 17,
+              "literal_inspections": 3241,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 238,
+              "random_integer_trials": 88,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 38,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 959,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 0,
+              "final_word": 4095,
+              "flip_proposals": 14,
+              "literal_inspections": 2394,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 151,
+              "random_integer_trials": 55,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 23,
+              "witness": 4095
+            }
+          }
+        ],
+        "initialization_bit_writes": 84,
+        "initialization_random_bits": 532,
+        "literal_inspections": 19809,
+        "random_bits": 2173,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 257,
+        "witness": 4095
+      },
+      "seed": 3
+    },
+    {
+      "blocks": 16,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 108438666086349,
+            "result": {
+              "accepted_flips": 17,
+              "final_energy": 9,
+              "final_word": 246358252195783,
+              "flip_proposals": 104,
+              "literal_inspections": 64478,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 1699,
+              "random_integer_trials": 444,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 193,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 11396354577493,
+            "result": {
+              "accepted_flips": 44,
+              "final_energy": 9,
+              "final_word": 3916878020664,
+              "flip_proposals": 190,
+              "literal_inspections": 67587,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 3547,
+              "random_integer_trials": 912,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 385,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 136775429449314,
+            "result": {
+              "accepted_flips": 17,
+              "final_energy": 8,
+              "final_word": 277557981249087,
+              "flip_proposals": 85,
+              "literal_inspections": 26547,
+              "minimum_energy_seen": 8,
+              "probability_bits_peak": 1,
+              "random_bits": 1397,
+              "random_integer_trials": 362,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 155,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 233585162782265,
+            "result": {
+              "accepted_flips": 31,
+              "final_energy": 9,
+              "final_word": 246780111359544,
+              "flip_proposals": 187,
+              "literal_inspections": 157184,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 3540,
+              "random_integer_trials": 910,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 384,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 100783454568964,
+            "result": {
+              "accepted_flips": 39,
+              "final_energy": 9,
+              "final_word": 34635673472519,
+              "flip_proposals": 160,
+              "literal_inspections": 93101,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 2968,
+              "random_integer_trials": 773,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 334,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 61486357157395,
+            "result": {
+              "accepted_flips": 47,
+              "final_energy": 5,
+              "final_word": 35183315123768,
+              "flip_proposals": 193,
+              "literal_inspections": 48535,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 3261,
+              "random_integer_trials": 851,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 369,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 39334520981107,
+            "result": {
+              "accepted_flips": 32,
+              "final_energy": 6,
+              "final_word": 4397929041415,
+              "flip_proposals": 68,
+              "literal_inspections": 52302,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 1037,
+              "random_integer_trials": 267,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 113,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 225011697544764,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 7,
+              "final_word": 8589704767,
+              "flip_proposals": 78,
+              "literal_inspections": 61914,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 1379,
+              "random_integer_trials": 354,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 149,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 384,
+        "initialization_random_bits": 896,
+        "literal_inspections": 571648,
+        "random_bits": 19724,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 2082,
+        "witness": null
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 16,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 160215742132725,
+            "result": {
+              "accepted_flips": 54,
+              "final_energy": 7,
+              "final_word": 482108240383,
+              "flip_proposals": 219,
+              "literal_inspections": 170592,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 3842,
+              "random_integer_trials": 1002,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 434,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 17762970155972,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 10,
+              "final_word": 67647828416,
+              "flip_proposals": 80,
+              "literal_inspections": 43553,
+              "minimum_energy_seen": 10,
+              "probability_bits_peak": 1,
+              "random_bits": 1271,
+              "random_integer_trials": 326,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 137,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 214192146929019,
+            "result": {
+              "accepted_flips": 38,
+              "final_energy": 7,
+              "final_word": 250681132846648,
+              "flip_proposals": 168,
+              "literal_inspections": 78639,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 3137,
+              "random_integer_trials": 807,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 341,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 106852994960411,
+            "result": {
+              "accepted_flips": 33,
+              "final_energy": 9,
+              "final_word": 246350853697543,
+              "flip_proposals": 119,
+              "literal_inspections": 46532,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 2029,
+              "random_integer_trials": 529,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 229,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 137319097511564,
+            "result": {
+              "accepted_flips": 35,
+              "final_energy": 10,
+              "final_word": 31267362176519,
+              "flip_proposals": 209,
+              "literal_inspections": 121978,
+              "minimum_energy_seen": 10,
+              "probability_bits_peak": 1,
+              "random_bits": 3622,
+              "random_integer_trials": 942,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 406,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 109722824127410,
+            "result": {
+              "accepted_flips": 27,
+              "final_energy": 10,
+              "final_word": 3856762929600,
+              "flip_proposals": 59,
+              "literal_inspections": 36266,
+              "minimum_energy_seen": 10,
+              "probability_bits_peak": 1,
+              "random_bits": 923,
+              "random_integer_trials": 238,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 101,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 215937049741701,
+            "result": {
+              "accepted_flips": 40,
+              "final_energy": 9,
+              "final_word": 246298238517184,
+              "flip_proposals": 138,
+              "literal_inspections": 39924,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 2515,
+              "random_integer_trials": 650,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 277,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 74966272107821,
+            "result": {
+              "accepted_flips": 63,
+              "final_energy": 7,
+              "final_word": 30846574657087,
+              "flip_proposals": 159,
+              "literal_inspections": 97957,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 2524,
+              "random_integer_trials": 659,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 286,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 384,
+        "initialization_random_bits": 896,
+        "literal_inspections": 635441,
+        "random_bits": 20759,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 2211,
+        "witness": null
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 16,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 242944636266867,
+            "result": {
+              "accepted_flips": 40,
+              "final_energy": 4,
+              "final_word": 35184254415359,
+              "flip_proposals": 311,
+              "literal_inspections": 142311,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 5609,
+              "random_integer_trials": 1469,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 641,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 25778636596895,
+            "result": {
+              "accepted_flips": 39,
+              "final_energy": 6,
+              "final_word": 4329461223423,
+              "flip_proposals": 252,
+              "literal_inspections": 98262,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 4897,
+              "random_integer_trials": 1267,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 541,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 47596121047332,
+            "result": {
+              "accepted_flips": 40,
+              "final_energy": 7,
+              "final_word": 277085518295047,
+              "flip_proposals": 108,
+              "literal_inspections": 92675,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 1879,
+              "random_integer_trials": 494,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 217,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 240332066485135,
+            "result": {
+              "accepted_flips": 24,
+              "final_energy": 8,
+              "final_word": 34634733974015,
+              "flip_proposals": 81,
+              "literal_inspections": 39374,
+              "minimum_energy_seen": 8,
+              "probability_bits_peak": 1,
+              "random_bits": 1575,
+              "random_integer_trials": 410,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 177,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 59732712695854,
+            "result": {
+              "accepted_flips": 32,
+              "final_energy": 6,
+              "final_word": 35176840982591,
+              "flip_proposals": 175,
+              "literal_inspections": 93552,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 3302,
+              "random_integer_trials": 847,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 356,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 191755606149456,
+            "result": {
+              "accepted_flips": 60,
+              "final_energy": 12,
+              "final_word": 31275817631744,
+              "flip_proposals": 217,
+              "literal_inspections": 132490,
+              "minimum_energy_seen": 12,
+              "probability_bits_peak": 1,
+              "random_bits": 4295,
+              "random_integer_trials": 1110,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 473,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 179711871311251,
+            "result": {
+              "accepted_flips": 29,
+              "final_energy": 10,
+              "final_word": 481168486904,
+              "flip_proposals": 77,
+              "literal_inspections": 52597,
+              "minimum_energy_seen": 10,
+              "probability_bits_peak": 1,
+              "random_bits": 1201,
+              "random_integer_trials": 316,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 139,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 242136181592538,
+            "result": {
+              "accepted_flips": 37,
+              "final_energy": 8,
+              "final_word": 277077988999679,
+              "flip_proposals": 204,
+              "literal_inspections": 68384,
+              "minimum_energy_seen": 8,
+              "probability_bits_peak": 1,
+              "random_bits": 4018,
+              "random_integer_trials": 1028,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 430,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 384,
+        "initialization_random_bits": 896,
+        "literal_inspections": 719645,
+        "random_bits": 27672,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 2974,
+        "witness": null
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 16,
+      "connected": false,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 166813256859645,
+            "result": {
+              "accepted_flips": 23,
+              "final_energy": 5,
+              "final_word": 4390412877816,
+              "flip_proposals": 97,
+              "literal_inspections": 44046,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 1831,
+              "random_integer_trials": 481,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 211,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 257815590822308,
+            "result": {
+              "accepted_flips": 42,
+              "final_energy": 3,
+              "final_word": 281474976449023,
+              "flip_proposals": 155,
+              "literal_inspections": 62271,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 2521,
+              "random_integer_trials": 656,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 283,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 163494912537766,
+            "result": {
+              "accepted_flips": 52,
+              "final_energy": 11,
+              "final_word": 246290606485567,
+              "flip_proposals": 168,
+              "literal_inspections": 145789,
+              "minimum_energy_seen": 11,
+              "probability_bits_peak": 1,
+              "random_bits": 3143,
+              "random_integer_trials": 808,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 341,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 255808308705829,
+            "result": {
+              "accepted_flips": 30,
+              "final_energy": 9,
+              "final_word": 277137179049472,
+              "flip_proposals": 121,
+              "literal_inspections": 51274,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 2101,
+              "random_integer_trials": 546,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 235,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 155032253433412,
+            "result": {
+              "accepted_flips": 45,
+              "final_energy": 11,
+              "final_word": 7532937223,
+              "flip_proposals": 170,
+              "literal_inspections": 113403,
+              "minimum_energy_seen": 11,
+              "probability_bits_peak": 1,
+              "random_bits": 2844,
+              "random_integer_trials": 739,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 318,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 201863444206710,
+            "result": {
+              "accepted_flips": 47,
+              "final_energy": 9,
+              "final_word": 34703216214072,
+              "flip_proposals": 131,
+              "literal_inspections": 39435,
+              "minimum_energy_seen": 9,
+              "probability_bits_peak": 1,
+              "random_bits": 2392,
+              "random_integer_trials": 617,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 262,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 154708314576501,
+            "result": {
+              "accepted_flips": 30,
+              "final_energy": 7,
+              "final_word": 250628519525888,
+              "flip_proposals": 86,
+              "literal_inspections": 46823,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 1659,
+              "random_integer_trials": 424,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 177,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 242354864388138,
+            "result": {
+              "accepted_flips": 41,
+              "final_energy": 5,
+              "final_word": 277625629048376,
+              "flip_proposals": 107,
+              "literal_inspections": 92753,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 1907,
+              "random_integer_trials": 492,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 209,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 384,
+        "initialization_random_bits": 896,
+        "literal_inspections": 595794,
+        "random_bits": 19294,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 2036,
+        "witness": null
+      },
+      "seed": 3
+    },
+    {
+      "blocks": 1,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 13,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 0,
+              "final_word": 15,
+              "flip_proposals": 1,
+              "literal_inspections": 78,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 3,
+              "random_integer_trials": 2,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 1,
+              "witness": 15
+            }
+          }
+        ],
+        "initialization_bit_writes": 4,
+        "initialization_random_bits": 68,
+        "literal_inspections": 78,
+        "random_bits": 71,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 1,
+        "witness": 15
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 1,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 2,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 4,
+              "literal_inspections": 221,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 30,
+              "random_integer_trials": 20,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 10,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 12,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 4,
+              "literal_inspections": 262,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 24,
+              "random_integer_trials": 16,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 8,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 4,
+            "result": {
+              "accepted_flips": 1,
+              "final_energy": 1,
+              "final_word": 0,
+              "flip_proposals": 3,
+              "literal_inspections": 223,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 24,
+              "random_integer_trials": 16,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 8,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 12,
+            "result": {
+              "accepted_flips": 2,
+              "final_energy": 0,
+              "final_word": 15,
+              "flip_proposals": 14,
+              "literal_inspections": 350,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 63,
+              "random_integer_trials": 42,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 21,
+              "witness": 15
+            }
+          }
+        ],
+        "initialization_bit_writes": 16,
+        "initialization_random_bits": 272,
+        "literal_inspections": 1056,
+        "random_bits": 413,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 47,
+        "witness": 15
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 1,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 15,
+            "result": {
+              "accepted_flips": 0,
+              "final_energy": 0,
+              "final_word": 15,
+              "flip_proposals": 0,
+              "literal_inspections": 19,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 0,
+              "random_bits": 0,
+              "random_integer_trials": 0,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 0,
+              "witness": 15
+            }
+          }
+        ],
+        "initialization_bit_writes": 4,
+        "initialization_random_bits": 68,
+        "literal_inspections": 19,
+        "random_bits": 68,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 0,
+        "witness": 15
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 1,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 3,
+            "result": {
+              "accepted_flips": 2,
+              "final_energy": 0,
+              "final_word": 15,
+              "flip_proposals": 4,
+              "literal_inspections": 175,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 24,
+              "random_integer_trials": 16,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 8,
+              "witness": 15
+            }
+          }
+        ],
+        "initialization_bit_writes": 4,
+        "initialization_random_bits": 68,
+        "literal_inspections": 175,
+        "random_bits": 92,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 8,
+        "witness": 15
+      },
+      "seed": 3
+    },
+    {
+      "blocks": 4,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 55340,
+            "result": {
+              "accepted_flips": 9,
+              "final_energy": 1,
+              "final_word": 65295,
+              "flip_proposals": 35,
+              "literal_inspections": 6333,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 360,
+              "random_integer_trials": 144,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 72,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 58343,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 1,
+              "final_word": 61695,
+              "flip_proposals": 28,
+              "literal_inspections": 5512,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 240,
+              "random_integer_trials": 96,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 48,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 16968,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 3,
+              "final_word": 65280,
+              "flip_proposals": 39,
+              "literal_inspections": 10298,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 490,
+              "random_integer_trials": 196,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 98,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 31845,
+            "result": {
+              "accepted_flips": 11,
+              "final_energy": 1,
+              "final_word": 65295,
+              "flip_proposals": 67,
+              "literal_inspections": 9502,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 635,
+              "random_integer_trials": 254,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 127,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 51367,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 3,
+              "final_word": 255,
+              "flip_proposals": 13,
+              "literal_inspections": 4582,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 105,
+              "random_integer_trials": 42,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 21,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 63425,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 65295,
+              "flip_proposals": 51,
+              "literal_inspections": 6442,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 560,
+              "random_integer_trials": 224,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 112,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 38232,
+            "result": {
+              "accepted_flips": 9,
+              "final_energy": 2,
+              "final_word": 4080,
+              "flip_proposals": 32,
+              "literal_inspections": 5770,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 400,
+              "random_integer_trials": 160,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 80,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 14315,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 1,
+              "final_word": 4095,
+              "flip_proposals": 15,
+              "literal_inspections": 3844,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 115,
+              "random_integer_trials": 46,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 23,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 128,
+        "initialization_random_bits": 640,
+        "literal_inspections": 52283,
+        "random_bits": 3545,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 581,
+        "witness": null
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 4,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 8805,
+            "result": {
+              "accepted_flips": 14,
+              "final_energy": 3,
+              "final_word": 61455,
+              "flip_proposals": 54,
+              "literal_inspections": 9004,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 500,
+              "random_integer_trials": 200,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 100,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 52577,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 2,
+              "final_word": 4080,
+              "flip_proposals": 20,
+              "literal_inspections": 4991,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 160,
+              "random_integer_trials": 64,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 32,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 16716,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 3,
+              "final_word": 255,
+              "flip_proposals": 30,
+              "literal_inspections": 5665,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 310,
+              "random_integer_trials": 124,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 62,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 49870,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 3,
+              "final_word": 61455,
+              "flip_proposals": 89,
+              "literal_inspections": 9747,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 910,
+              "random_integer_trials": 364,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 182,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 42702,
+            "result": {
+              "accepted_flips": 13,
+              "final_energy": 1,
+              "final_word": 61695,
+              "flip_proposals": 43,
+              "literal_inspections": 7080,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 430,
+              "random_integer_trials": 172,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 86,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 13759,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 1,
+              "final_word": 61695,
+              "flip_proposals": 20,
+              "literal_inspections": 9081,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 185,
+              "random_integer_trials": 74,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 37,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1857,
+            "result": {
+              "accepted_flips": 9,
+              "final_energy": 2,
+              "final_word": 3855,
+              "flip_proposals": 57,
+              "literal_inspections": 7108,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 695,
+              "random_integer_trials": 278,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 139,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 25546,
+            "result": {
+              "accepted_flips": 14,
+              "final_energy": 1,
+              "final_word": 65520,
+              "flip_proposals": 66,
+              "literal_inspections": 11828,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 600,
+              "random_integer_trials": 240,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 120,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 128,
+        "initialization_random_bits": 640,
+        "literal_inspections": 64504,
+        "random_bits": 4430,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 758,
+        "witness": null
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 4,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 62654,
+            "result": {
+              "accepted_flips": 3,
+              "final_energy": 1,
+              "final_word": 61695,
+              "flip_proposals": 32,
+              "literal_inspections": 5595,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 350,
+              "random_integer_trials": 140,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 70,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 55643,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 65295,
+              "flip_proposals": 32,
+              "literal_inspections": 6946,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 355,
+              "random_integer_trials": 142,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 71,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 5562,
+            "result": {
+              "accepted_flips": 14,
+              "final_energy": 3,
+              "final_word": 255,
+              "flip_proposals": 67,
+              "literal_inspections": 13976,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 660,
+              "random_integer_trials": 264,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 132,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 11081,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 2,
+              "final_word": 3855,
+              "flip_proposals": 86,
+              "literal_inspections": 10054,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 860,
+              "random_integer_trials": 344,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 172,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 43891,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 0,
+              "final_word": 65535,
+              "flip_proposals": 159,
+              "literal_inspections": 15287,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 1585,
+              "random_integer_trials": 634,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 317,
+              "witness": 65535
+            }
+          }
+        ],
+        "initialization_bit_writes": 80,
+        "initialization_random_bits": 400,
+        "literal_inspections": 51858,
+        "random_bits": 4210,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 762,
+        "witness": 65535
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 4,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 15595,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 1,
+              "final_word": 4095,
+              "flip_proposals": 43,
+              "literal_inspections": 8259,
+              "minimum_energy_seen": 1,
+              "probability_bits_peak": 1,
+              "random_bits": 430,
+              "random_integer_trials": 172,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 86,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 8547,
+            "result": {
+              "accepted_flips": 6,
+              "final_energy": 3,
+              "final_word": 255,
+              "flip_proposals": 13,
+              "literal_inspections": 5133,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 125,
+              "random_integer_trials": 50,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 25,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 39578,
+            "result": {
+              "accepted_flips": 8,
+              "final_energy": 4,
+              "final_word": 240,
+              "flip_proposals": 38,
+              "literal_inspections": 6317,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 340,
+              "random_integer_trials": 136,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 68,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 38066,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 2,
+              "final_word": 61680,
+              "flip_proposals": 14,
+              "literal_inspections": 4983,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 110,
+              "random_integer_trials": 44,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 22,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 862,
+            "result": {
+              "accepted_flips": 5,
+              "final_energy": 2,
+              "final_word": 3855,
+              "flip_proposals": 21,
+              "literal_inspections": 5547,
+              "minimum_energy_seen": 2,
+              "probability_bits_peak": 1,
+              "random_bits": 210,
+              "random_integer_trials": 84,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 42,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 30751,
+            "result": {
+              "accepted_flips": 7,
+              "final_energy": 3,
+              "final_word": 61455,
+              "flip_proposals": 35,
+              "literal_inspections": 9430,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 375,
+              "random_integer_trials": 150,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 75,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 15357,
+            "result": {
+              "accepted_flips": 4,
+              "final_energy": 0,
+              "final_word": 65535,
+              "flip_proposals": 11,
+              "literal_inspections": 1591,
+              "minimum_energy_seen": 0,
+              "probability_bits_peak": 1,
+              "random_bits": 85,
+              "random_integer_trials": 34,
+              "reason": "checked_zero_energy",
+              "status": "SAT",
+              "ticks": 17,
+              "witness": 65535
+            }
+          }
+        ],
+        "initialization_bit_writes": 112,
+        "initialization_random_bits": 560,
+        "literal_inspections": 41260,
+        "random_bits": 2235,
+        "reason": "checked_zero_energy",
+        "status": "SAT",
+        "ticks": 335,
+        "witness": 65535
+      },
+      "seed": 3
+    },
+    {
+      "blocks": 16,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 7106521602475165645,
+            "result": {
+              "accepted_flips": 28,
+              "final_energy": 5,
+              "final_word": 17365880162873184255,
+              "flip_proposals": 220,
+              "literal_inspections": 277901,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 3045,
+              "random_integer_trials": 870,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 435,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 746805015404516437,
+            "result": {
+              "accepted_flips": 33,
+              "final_energy": 7,
+              "final_word": 1085103562965381360,
+              "flip_proposals": 302,
+              "literal_inspections": 177206,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 3920,
+              "random_integer_trials": 1120,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 560,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 8963783824838420066,
+            "result": {
+              "accepted_flips": 41,
+              "final_energy": 5,
+              "final_word": 18378926196255686415,
+              "flip_proposals": 310,
+              "literal_inspections": 177812,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 4368,
+              "random_integer_trials": 1248,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 624,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 15308084094301570617,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 6,
+              "final_word": 17361657970038870015,
+              "flip_proposals": 162,
+              "literal_inspections": 111846,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 2163,
+              "random_integer_trials": 618,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 309,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 6604845167042249220,
+            "result": {
+              "accepted_flips": 31,
+              "final_energy": 12,
+              "final_word": 1080881502738247695,
+              "flip_proposals": 250,
+              "literal_inspections": 212551,
+              "minimum_energy_seen": 12,
+              "probability_bits_peak": 1,
+              "random_bits": 3374,
+              "random_integer_trials": 964,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 482,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 4029557120079369747,
+            "result": {
+              "accepted_flips": 34,
+              "final_energy": 3,
+              "final_word": 1152921504355127295,
+              "flip_proposals": 205,
+              "literal_inspections": 134257,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 2947,
+              "random_integer_trials": 842,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 421,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 2577854692418029171,
+            "result": {
+              "accepted_flips": 28,
+              "final_energy": 10,
+              "final_word": 1152903977097953520,
+              "flip_proposals": 179,
+              "literal_inspections": 117560,
+              "minimum_energy_seen": 10,
+              "probability_bits_peak": 1,
+              "random_bits": 2345,
+              "random_integer_trials": 670,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 335,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 14746374668458749500,
+            "result": {
+              "accepted_flips": 27,
+              "final_energy": 8,
+              "final_word": 1085102532173234160,
+              "flip_proposals": 151,
+              "literal_inspections": 118913,
+              "minimum_energy_seen": 8,
+              "probability_bits_peak": 1,
+              "random_bits": 2205,
+              "random_integer_trials": 630,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 315,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 512,
+        "initialization_random_bits": 1024,
+        "literal_inspections": 1328046,
+        "random_bits": 25391,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 3481,
+        "witness": null
+      },
+      "seed": 0
+    },
+    {
+      "blocks": 16,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 10499958131665514997,
+            "result": {
+              "accepted_flips": 29,
+              "final_energy": 11,
+              "final_word": 71776183738429695,
+              "flip_proposals": 353,
+              "literal_inspections": 221837,
+              "minimum_energy_seen": 11,
+              "probability_bits_peak": 1,
+              "random_bits": 4984,
+              "random_integer_trials": 1424,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 712,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1164115433906158532,
+            "result": {
+              "accepted_flips": 28,
+              "final_energy": 8,
+              "final_word": 72041036686360560,
+              "flip_proposals": 235,
+              "literal_inspections": 151475,
+              "minimum_energy_seen": 8,
+              "probability_bits_peak": 1,
+              "random_bits": 3115,
+              "random_integer_trials": 890,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 445,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 14037279428536751483,
+            "result": {
+              "accepted_flips": 19,
+              "final_energy": 6,
+              "final_word": 17365615185132322815,
+              "flip_proposals": 291,
+              "literal_inspections": 146103,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 4109,
+              "random_integer_trials": 1174,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 587,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 7002664860023442459,
+            "result": {
+              "accepted_flips": 27,
+              "final_energy": 12,
+              "final_word": 4503534935408895,
+              "flip_proposals": 338,
+              "literal_inspections": 181280,
+              "minimum_energy_seen": 12,
+              "probability_bits_peak": 1,
+              "random_bits": 4557,
+              "random_integer_trials": 1302,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 651,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 8999366892653588108,
+            "result": {
+              "accepted_flips": 22,
+              "final_energy": 13,
+              "final_word": 17361377658730909455,
+              "flip_proposals": 116,
+              "literal_inspections": 142203,
+              "minimum_energy_seen": 13,
+              "probability_bits_peak": 1,
+              "random_bits": 1554,
+              "random_integer_trials": 444,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 222,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 7190703300742001586,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 5,
+              "final_word": 17365863670465229040,
+              "flip_proposals": 184,
+              "literal_inspections": 149844,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 2590,
+              "random_integer_trials": 740,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 370,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 14151560559444937093,
+            "result": {
+              "accepted_flips": 33,
+              "final_energy": 7,
+              "final_word": 17361641481138405360,
+              "flip_proposals": 327,
+              "literal_inspections": 179661,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 4424,
+              "random_integer_trials": 1264,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 632,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 4912931603392816429,
+            "result": {
+              "accepted_flips": 30,
+              "final_energy": 7,
+              "final_word": 1152656591007317775,
+              "flip_proposals": 373,
+              "literal_inspections": 203908,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 5005,
+              "random_integer_trials": 1430,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 715,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 512,
+        "initialization_random_bits": 1024,
+        "literal_inspections": 1376311,
+        "random_bits": 31362,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 4334,
+        "witness": null
+      },
+      "seed": 1
+    },
+    {
+      "blocks": 16,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 15921556852572072307,
+            "result": {
+              "accepted_flips": 22,
+              "final_energy": 3,
+              "final_word": 17361658038238314495,
+              "flip_proposals": 223,
+              "literal_inspections": 151496,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 3066,
+              "random_integer_trials": 876,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 438,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 1689441204489037471,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 5,
+              "final_word": 1148682883255234815,
+              "flip_proposals": 396,
+              "literal_inspections": 206021,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 5859,
+              "random_integer_trials": 1674,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 837,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3119042104763040036,
+            "result": {
+              "accepted_flips": 24,
+              "final_energy": 14,
+              "final_word": 1085086039262826240,
+              "flip_proposals": 287,
+              "literal_inspections": 172286,
+              "minimum_energy_seen": 14,
+              "probability_bits_peak": 1,
+              "random_bits": 3878,
+              "random_integer_trials": 1108,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 554,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 15750464385269855119,
+            "result": {
+              "accepted_flips": 29,
+              "final_energy": 3,
+              "final_word": 18442521945031376895,
+              "flip_proposals": 280,
+              "literal_inspections": 180410,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 3759,
+              "random_integer_trials": 1074,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 537,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 3914746131789064238,
+            "result": {
+              "accepted_flips": 23,
+              "final_energy": 6,
+              "final_word": 18442521945016627215,
+              "flip_proposals": 223,
+              "literal_inspections": 164828,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 3094,
+              "random_integer_trials": 884,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 442,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 12566774096673229136,
+            "result": {
+              "accepted_flips": 40,
+              "final_energy": 7,
+              "final_word": 18446480190650515440,
+              "flip_proposals": 227,
+              "literal_inspections": 166641,
+              "minimum_energy_seen": 7,
+              "probability_bits_peak": 1,
+              "random_bits": 3206,
+              "random_integer_trials": 916,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 458,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 11777717384603786643,
+            "result": {
+              "accepted_flips": 30,
+              "final_energy": 4,
+              "final_word": 18446743038889885680,
+              "flip_proposals": 158,
+              "literal_inspections": 169862,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 2163,
+              "random_integer_trials": 618,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 309,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 15868702777868243418,
+            "result": {
+              "accepted_flips": 30,
+              "final_energy": 6,
+              "final_word": 17365879132332687615,
+              "flip_proposals": 166,
+              "literal_inspections": 169491,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 2023,
+              "random_integer_trials": 578,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 289,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 512,
+        "initialization_random_bits": 1024,
+        "literal_inspections": 1381035,
+        "random_bits": 28072,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 3864,
+        "witness": null
+      },
+      "seed": 2
+    },
+    {
+      "blocks": 16,
+      "connected": true,
+      "result": {
+        "attempts": [
+          {
+            "initial_word": 10932295209482665981,
+            "result": {
+              "accepted_flips": 25,
+              "final_energy": 3,
+              "final_word": 18446727516358967295,
+              "flip_proposals": 176,
+              "literal_inspections": 140678,
+              "minimum_energy_seen": 3,
+              "probability_bits_peak": 1,
+              "random_bits": 2513,
+              "random_integer_trials": 718,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 359,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 16896199536424608164,
+            "result": {
+              "accepted_flips": 26,
+              "final_energy": 5,
+              "final_word": 17365616215925395440,
+              "flip_proposals": 176,
+              "literal_inspections": 136754,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 2373,
+              "random_integer_trials": 678,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 339,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 10714829862921516198,
+            "result": {
+              "accepted_flips": 28,
+              "final_energy": 6,
+              "final_word": 17361658038222582015,
+              "flip_proposals": 91,
+              "literal_inspections": 105532,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 1127,
+              "random_integer_trials": 322,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 161,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 16764740455796505125,
+            "result": {
+              "accepted_flips": 24,
+              "final_energy": 6,
+              "final_word": 18442258062225964815,
+              "flip_proposals": 119,
+              "literal_inspections": 79982,
+              "minimum_energy_seen": 6,
+              "probability_bits_peak": 1,
+              "random_bits": 1652,
+              "random_integer_trials": 472,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 236,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 10160183346725193284,
+            "result": {
+              "accepted_flips": 24,
+              "final_energy": 14,
+              "final_word": 1080865006053949455,
+              "flip_proposals": 127,
+              "literal_inspections": 96589,
+              "minimum_energy_seen": 14,
+              "probability_bits_peak": 1,
+              "random_bits": 1813,
+              "random_integer_trials": 518,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 259,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 13229046308760884342,
+            "result": {
+              "accepted_flips": 19,
+              "final_energy": 5,
+              "final_word": 18446479160125747440,
+              "flip_proposals": 114,
+              "literal_inspections": 137339,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 1596,
+              "random_integer_trials": 456,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 228,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 10138905509988816501,
+            "result": {
+              "accepted_flips": 31,
+              "final_energy": 4,
+              "final_word": 17361641545799827455,
+              "flip_proposals": 190,
+              "literal_inspections": 147697,
+              "minimum_energy_seen": 4,
+              "probability_bits_peak": 1,
+              "random_bits": 2590,
+              "random_integer_trials": 740,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 370,
+              "witness": null
+            }
+          },
+          {
+            "initial_word": 15883054462266898474,
+            "result": {
+              "accepted_flips": 29,
+              "final_energy": 5,
+              "final_word": 18379173521948409615,
+              "flip_proposals": 145,
+              "literal_inspections": 91842,
+              "minimum_energy_seen": 5,
+              "probability_bits_peak": 1,
+              "random_bits": 1995,
+              "random_integer_trials": 570,
+              "reason": "strict_local_minimum",
+              "status": "UNKNOWN",
+              "ticks": 285,
+              "witness": null
+            }
+          }
+        ],
+        "initialization_bit_writes": 512,
+        "initialization_random_bits": 1024,
+        "literal_inspections": 936413,
+        "random_bits": 16683,
+        "reason": "attempt_budget",
+        "status": "UNKNOWN",
+        "ticks": 2237,
+        "witness": null
+      },
+      "seed": 3
+    }
+  ],
+  "complexity_bridge": "Verified polynomial bounded-time success on every satisfiable input would give NP=RP; an effective polynomial deterministic covering of successful random tapes would give P=NP. Neither premise is obtained.",
+  "connected_frozen_checks": [
+    {
+      "all_ones_witness_checked": true,
+      "assignments": 16,
+      "blocks": 1,
+      "clauses": 13,
+      "components": 1,
+      "distinct_clauses": true,
+      "frozen_block_flips_checked": 4,
+      "initial_states_without_zero_block": 15,
+      "maximum_occurrence": 7,
+      "minimum_delta": 2,
+      "variables": 4,
+      "widths": [
+        2,
+        3
+      ]
+    },
+    {
+      "all_ones_witness_checked": true,
+      "assignments": 256,
+      "blocks": 2,
+      "clauses": 27,
+      "components": 1,
+      "distinct_clauses": true,
+      "frozen_block_flips_checked": 128,
+      "initial_states_without_zero_block": 225,
+      "maximum_occurrence": 7,
+      "minimum_delta": 2,
+      "variables": 8,
+      "widths": [
+        2,
+        3
+      ]
+    },
+    {
+      "all_ones_witness_checked": true,
+      "assignments": 4096,
+      "blocks": 3,
+      "clauses": 41,
+      "components": 1,
+      "distinct_clauses": true,
+      "frozen_block_flips_checked": 3072,
+      "initial_states_without_zero_block": 3375,
+      "maximum_occurrence": 8,
+      "minimum_delta": 1,
+      "variables": 12,
+      "widths": [
+        2,
+        3
+      ]
+    }
+  ],
+  "disjoint_exact_kernels": [
+    {
+      "all_ones_witness_checked": true,
+      "blocks": 1,
+      "clauses": 7,
+      "components": 1,
+      "distinct_clauses": true,
+      "eventual_uniform_success": {
+        "approximate_decimal": "5.000000E-1",
+        "denominator_hex": "0x2",
+        "floor_log2": -1,
+        "numerator_hex": "0x1"
+      },
+      "maximum_occurrence": 5,
+      "state_success_probabilities": [
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "1.000000E+0",
+          "denominator_hex": "0x1",
+          "floor_log2": 0,
+          "numerator_hex": "0x1"
+        }
+      ],
+      "states": 8,
+      "variables": 3,
+      "widths": [
+        2,
+        3
+      ]
+    },
+    {
+      "all_ones_witness_checked": true,
+      "blocks": 2,
+      "clauses": 14,
+      "components": 2,
+      "distinct_clauses": true,
+      "eventual_uniform_success": {
+        "approximate_decimal": "2.500000E-1",
+        "denominator_hex": "0x4",
+        "floor_log2": -2,
+        "numerator_hex": "0x1"
+      },
+      "maximum_occurrence": 5,
+      "state_success_probabilities": [
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "1.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x4"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "2.400000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -3,
+          "numerator_hex": "0x6"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "3.600000E-1",
+          "denominator_hex": "0x19",
+          "floor_log2": -2,
+          "numerator_hex": "0x9"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "0.000000E+6",
+          "denominator_hex": "0x1",
+          "floor_log2": null,
+          "numerator_hex": "0x0"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "4.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -2,
+          "numerator_hex": "0x2"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "6.000000E-1",
+          "denominator_hex": "0x5",
+          "floor_log2": -1,
+          "numerator_hex": "0x3"
+        },
+        {
+          "approximate_decimal": "1.000000E+0",
+          "denominator_hex": "0x1",
+          "floor_log2": 0,
+          "numerator_hex": "0x1"
+        }
+      ],
+      "states": 64,
+      "variables": 6,
+      "widths": [
+        2,
+        3
+      ]
+    }
+  ],
+  "evaluated_all_size_bounds": [
+    {
+      "attempt_budget": 110592,
+      "blocks": 16,
+      "connected": false,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.000000E+0",
+        "denominator_hex": "0x1",
+        "floor_log2": 0,
+        "numerator_hex": "0x1"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "1.525879E-5",
+        "denominator_hex": "0x10000",
+        "floor_log2": -16,
+        "numerator_hex": "0x1"
+      },
+      "variables": 48
+    },
+    {
+      "attempt_budget": 56623104,
+      "blocks": 128,
+      "connected": false,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.664004E-31",
+        "denominator_hex": "0x800000000000000000000000000",
+        "floor_log2": -103,
+        "numerator_hex": "0x1b"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "2.938736E-39",
+        "denominator_hex": "0x100000000000000000000000000000000",
+        "floor_log2": -128,
+        "numerator_hex": "0x1"
+      },
+      "variables": 384
+    },
+    {
+      "attempt_budget": 28991029248,
+      "blocks": 1024,
+      "connected": false,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.612680E-298",
+        "denominator_hex": "0x400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "floor_log2": -990,
+        "numerator_hex": "0x1b"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "5.562685E-309",
+        "denominator_hex": "0x10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "floor_log2": -1024,
+        "numerator_hex": "0x1"
+      },
+      "variables": 3072
+    },
+    {
+      "attempt_budget": 262144,
+      "blocks": 16,
+      "connected": true,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.000000E+0",
+        "denominator_hex": "0x1",
+        "floor_log2": 0,
+        "numerator_hex": "0x1"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "3.560741E-1",
+        "denominator_hex": "0x10000000000000000",
+        "floor_log2": -2,
+        "numerator_hex": "0x5b27ac993df97701"
+      },
+      "variables": 64
+    },
+    {
+      "attempt_budget": 134217728,
+      "blocks": 128,
+      "connected": true,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.000000E+0",
+        "denominator_hex": "0x1",
+        "floor_log2": 0,
+        "numerator_hex": "0x1"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "2.584184E-4",
+        "denominator_hex": "0x100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "floor_log2": -12,
+        "numerator_hex": "0x10ef8a70456e96e5d20ac502fce83ab3218dff7522c2d02088a667bc00eb467c18c5c9117bedaf7d79b09357862f8a8eac280a29cfee813f0721484ca7b801"
+      },
+      "variables": 512
+    },
+    {
+      "attempt_budget": 68719476736,
+      "blocks": 1024,
+      "connected": true,
+      "overall_success_upper_bound": {
+        "approximate_decimal": "1.366680E-18",
+        "denominator_hex": "0x10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "floor_log2": -60,
+        "numerator_hex": "0x1935f6e27ae41bc37e5952a6eb2f02874f51b685db14030f4eda03a00af813552b3cc6bf4c6e7c200382895cb97ca1e94e3b7bf06ebcc9742315b422ffe957fd574d94b5b117456f0e82b45f21bb71f8fecdb20814ba6ccff6d7f6b52924396de132baa4ee02800bd120ea7a086e1b227b7a20e5176ae3523ce5852480443fedecd66a9ab1c4697839ae698a27d88c326cf07c0b0538618e07b32efd072ed9d8daca1f267b6e7fca6be8bbc2dd1538f811e6ba6a359369c996ec98ef1ae7ab2140cd148bfb464eee0b0a31b00ebdd0484e64231ad548e296cc1b17f868fd686227e104b525dd2707d9c4ebd83cbf3aec2f94edaebfe85c9ed545d38a23b7c9c2fa40a31417f22e18033fef0c0b9e190e477cdc5bfa0f610556f153c97d8f8bd7f0a547615ef1470ccafb29e8dfb0284e357374625df9d836bc8eeb234acdf4f7148ca98506084ec4a442ece7811406b3ea88d9bbac040bd50904950bc1430a828b49a4ac3457ef5a33d83f845cdffd05e3b843144765005f796cc5c7ca5dfdddd0b32912544a3b8d885e6459e69768aa215be471eb6f0a258d6983d6901ffe2fa7386803b18faee9ca9f0ce3597492ad70e39dea8d0803805619085a53af9d1836d14df77c927808ac2034de1b971aea3978ad9ec24a99fec49f52e55977050d7884d7094597f5ba6f14c7c10a6bb12fe9c3dc001"
+      },
+      "per_attempt_success_upper_bound": {
+        "approximate_decimal": "1.988781E-29",
+        "denominator_hex": "0x10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "floor_log2": -96,
+        "numerator_hex": "0x1935f6e27ae41bc37e5952a6eb2f02874f51b685db14030f4eda03a00af813552b3cc6bf4c6e7c200382895cb97ca1e94e3b7bf06ebcc9742315b422ffe957fd574d94b5b117456f0e82b45f21bb71f8fecdb20814ba6ccff6d7f6b52924396de132baa4ee02800bd120ea7a086e1b227b7a20e5176ae3523ce5852480443fedecd66a9ab1c4697839ae698a27d88c326cf07c0b0538618e07b32efd072ed9d8daca1f267b6e7fca6be8bbc2dd1538f811e6ba6a359369c996ec98ef1ae7ab2140cd148bfb464eee0b0a31b00ebdd0484e64231ad548e296cc1b17f868fd686227e104b525dd2707d9c4ebd83cbf3aec2f94edaebfe85c9ed545d38a23b7c9c2fa40a31417f22e18033fef0c0b9e190e477cdc5bfa0f610556f153c97d8f8bd7f0a547615ef1470ccafb29e8dfb0284e357374625df9d836bc8eeb234acdf4f7148ca98506084ec4a442ece7811406b3ea88d9bbac040bd50904950bc1430a828b49a4ac3457ef5a33d83f845cdffd05e3b843144765005f796cc5c7ca5dfdddd0b32912544a3b8d885e6459e69768aa215be471eb6f0a258d6983d6901ffe2fa7386803b18faee9ca9f0ce3597492ad70e39dea8d0803805619085a53af9d1836d14df77c927808ac2034de1b971aea3978ad9ec24a99fec49f52e55977050d7884d7094597f5ba6f14c7c10a6bb12fe9c3dc001"
+      },
+      "variables": 4096
+    }
+  ],
+  "p_vs_np_resolved": false,
+  "polynomial_general_sat_algorithm": false,
+  "remaining_core": "A different mechanism with a proved polynomial total-cost and success bound for every satisfiable input, including these families.",
+  "scope": "All-size elementary proofs in the module docstring plus finite exact checks; no novelty, Lean formalization, hardware timing, general physical impossibility, or P versus NP separation claim.",
+  "stopped_branch": "Polynomial success from uniform global resets of zero-temperature one-bit search."
+}

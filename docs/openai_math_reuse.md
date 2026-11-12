@@ -1,5 +1,35 @@
 # Reusing and auditing openai/math
 
+## Follow-up prompted by the ETH article (2026-11-09 JST)
+
+The [DataCamp article](https://www.datacamp.com/blog/ai-exponential-time-hypothesis)
+was read and checked against the primary source below. The current upstream
+family-378 scope still distinguishes the sharper manuscript bound from the
+squared-loglog Lean bound. Neither statement is a polynomial-time SAT bound.
+The historical incomplete local kernel-replay record remains unchanged.
+
+This continuation executes a new [finite repair audit](../results/eth_polynomial_repair.json),
+with its all-size arguments and source attribution in the
+[implementation](../experiments/eth_polynomial_repair.py). It optimizes the
+auxiliary matrix `V*f(W)` over all degree-bounded rational polynomials in
+51 small parameter cases, using 4,591 interpolation candidates. For `r=4`,
+`Q=12`, degree two, `f(j)=5/3-(2/3)*(j-5)^2` matches levels `3,4,6,7`.
+The correction rank is `104521901510656`, compared with `108217056710656`
+for the best consecutive interpolation or constant: about 3.4% smaller.
+This finite optimum follows from exhaustive interpolation, with independent
+rational and dense-matrix checks. It does not optimize every possible matrix,
+establish novelty, or meet the complete SAT construction's small-tail target.
+
+Computing the rank through `Q+1` spectral multiplicities avoids a dense matrix
+but does not evaluate an input CNF. The audit shows that keeping both explicit
+coordinate/Taylor enumerations has superpolynomial cost for every parameter
+choice in its stated domain. Moreover, retaining Step 4's sufficient balancing
+conditions forces a variable group of size at least `sqrt(2n)` and the overview's
+scheduled Taylor order `Omega(n/log n)`, even with implicit rank computation. These conditions could
+be replaced by a new construction; no impossibility for all constructions,
+the sharper appendix, or all SAT algorithms follows. No general polynomial
+algorithm or new Lean theorem has been obtained.
+
 ## 1. What was actually inspected
 
 This investigation is pinned to OpenAI's public repository at commit
