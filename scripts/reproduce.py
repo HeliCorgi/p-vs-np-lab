@@ -56,6 +56,12 @@ NEW_REPORTS = (
     "physical_sat.json",
     "physical_restart_bridge.json",
     "retained_learning.json",
+    "mcsp_counterexample_search.json",
+    "mcsp_region_pruning.json",
+    "mcsp_fixed_constraints.json",
+    "cnf_component_reuse.json",
+    "soft_partition_path.json",
+    "catalytic_extension_degree.json",
     "tseitin_obdd_boundary.json", "tseitin_resolution_miter.json",
 )
 BASELINE_REPORTS = (
@@ -273,10 +279,81 @@ def main() -> None:
     retained_learning = read_json(out / "retained_learning.json")
     if not retained_learning["all_checks_passed"]:
         raise RuntimeError("Retained conflict-learning audit failed")
+    mcsp_search = read_json(out / "mcsp_counterexample_search.json")
+    if not mcsp_search["all_checks_passed"]:
+        raise RuntimeError("Counterexample circuit synthesis audit failed")
+    mcsp_regions = read_json(out / "mcsp_region_pruning.json")
+    if not mcsp_regions["all_checks_passed"]:
+        raise RuntimeError("Circuit region-pruning audit failed")
+    mcsp_fixed = read_json(out / "mcsp_fixed_constraints.json")
+    if not mcsp_fixed["all_checks_passed"]:
+        raise RuntimeError("Fixed circuit-constraint audit failed")
+    component_reuse = read_json(out / "cnf_component_reuse.json")
+    if not component_reuse["all_checks_passed"]:
+        raise RuntimeError("Residual component-sharing audit failed")
+    soft_path = read_json(out / "soft_partition_path.json")
+    if not soft_path["all_checks_passed"]:
+        raise RuntimeError("Soft partition path audit failed")
+    catalytic = read_json(out / "catalytic_extension_degree.json")
+    if not catalytic["all_checks_passed"]:
+        raise RuntimeError("Catalytic extension degree audit failed")
     summary = {
         "schema_version": 1,
         "status": "PASS",
         "unit_tests_passed": tests.testsRun,
+        "catalytic_extension_degree_audit": catalytic,
+        "soft_partition_path_audit": {
+            key: soft_path[key] for key in (
+                "case_count", "status_counts", "reference_assignments_enumerated",
+                "weighted_moment_calls", "maximum_steps", "maximum_order",
+                "matched_jet_control", "polynomial_path_constructed",
+                "polynomial_weighted_moment_provider_constructed",
+                "general_polynomial_sat_algorithm", "decision", "scope")
+        },
+        "cnf_component_reuse_audit": {
+            "truth_tables": component_reuse["truth_tables"],
+            "searches": component_reuse["searches"],
+            "max_work_per_extract": component_reuse["max_work_per_extract"],
+            "max_cache_cells": component_reuse["max_cache_cells"],
+            "fixed_family": component_reuse["fixed_family"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "statuses", "totals", "comparison")}
+                for group in component_reuse["groups"]],
+            "scope": component_reuse["scope"],
+            "polynomial_general_time_bound": False,
+        },
+        "mcsp_fixed_constraints_audit": {
+            "truth_tables": mcsp_fixed["truth_tables"],
+            "max_work_per_extract": mcsp_fixed["max_work_per_extract"],
+            "encoding_audit": mcsp_fixed["encoding_audit"],
+            "guarantees": mcsp_fixed["guarantees"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "fixed_shape",
+                "status_counts", "totals")} for group in mcsp_fixed["groups"]],
+            "scope": mcsp_fixed["scope"],
+        },
+        "mcsp_region_pruning_audit": {
+            "truth_tables": mcsp_regions["truth_tables"],
+            "searches": mcsp_regions["searches"],
+            "candidate_witnesses_checked": mcsp_regions["candidate_witnesses_checked"],
+            "pruned_regions_independently_checked": mcsp_regions["pruned_regions_independently_checked"],
+            "root_exclusion_example": mcsp_regions["root_exclusion_example"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions", "previous_lazy_totals",
+                "totals", "comparison_within_new_cost_model")} for group in mcsp_regions["groups"]],
+            "scope": mcsp_regions["scope"],
+            "general_polynomial_time_bound": False,
+        },
+        "mcsp_counterexample_search_audit": {
+            "truth_tables": mcsp_search["truth_tables"],
+            "searches": mcsp_search["searches"],
+            "groups": [{key: group[key] for key in (
+                "n", "gate_budget", "truth_tables", "feasible_functions",
+                "construction", "construction_event_units", "totals", "comparison_to_fresh")}
+                for group in mcsp_search["groups"]],
+            "scope": mcsp_search["scope"],
+            "general_polynomial_time_bound": False,
+        },
         "circuit_extension_audit": extensions,
         "extension_degree_audit": extension_degree,
         "shared_dag_sat_audit": shared_dag,

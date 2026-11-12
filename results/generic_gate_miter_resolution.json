@@ -1,0 +1,98 @@
+{
+  "cases": [
+    {
+      "axioms": 8,
+      "bound": 10,
+      "case": "small_1",
+      "derived": 6,
+      "gates": 1,
+      "max_width": 3,
+      "n_inputs": 2,
+      "sha256": "e6bb9e751c56a90b3ee1c0aa5c642486b90629a7e703001215fb91118f5cca47"
+    },
+    {
+      "axioms": 14,
+      "bound": 18,
+      "case": "small_2",
+      "derived": 12,
+      "gates": 2,
+      "max_width": 3,
+      "n_inputs": 2,
+      "sha256": "9162713b67cff6f3da33a7167c65031e95328422159bcca56b21a958250e8ffb"
+    },
+    {
+      "axioms": 20,
+      "bound": 28,
+      "case": "small_3",
+      "derived": 20,
+      "gates": 3,
+      "max_width": 3,
+      "n_inputs": 2,
+      "sha256": "2c11200b425f1119f7e82cf6f832c78a2900d54ef78463a41d376b8aabf2ae5e"
+    },
+    {
+      "axioms": 26,
+      "bound": 36,
+      "case": "small_4",
+      "derived": 30,
+      "gates": 4,
+      "max_width": 3,
+      "n_inputs": 2,
+      "sha256": "910746c2f5578458dba86dbf3b6e6212255c9d1fbdd9fce0707345082390b637"
+    },
+    {
+      "axioms": 68,
+      "bound": 88,
+      "case": "seed_29",
+      "derived": 70,
+      "gates": 12,
+      "max_width": 3,
+      "n_inputs": 3,
+      "sha256": "ed1bde78de447f6052936de3dbcd0f8dd5ac5e8bb01b3c7621cf5cd5b4681795"
+    },
+    {
+      "axioms": 64,
+      "bound": 78,
+      "case": "seed_31",
+      "derived": 56,
+      "gates": 12,
+      "max_width": 3,
+      "n_inputs": 3,
+      "sha256": "1f3b8158a07a55b92c45a6b186eb209c5b575e11ed3d59f4b1e9f70f0ec6659a"
+    },
+    {
+      "axioms": 74,
+      "bound": 104,
+      "case": "seed_37",
+      "derived": 88,
+      "gates": 12,
+      "max_width": 3,
+      "n_inputs": 3,
+      "sha256": "1ff7586954cf883fc609200f14cfb7414c21693a5906d1901199e88cac00adcf"
+    },
+    {
+      "axioms": 74,
+      "bound": 104,
+      "case": "seed_41",
+      "derived": 82,
+      "gates": 12,
+      "max_width": 3,
+      "n_inputs": 3,
+      "sha256": "5f69bc6c170b22a551313e8ca0f7a15d0a90f7a1353749b6d8c69b7c6ac4d73d"
+    },
+    {
+      "axioms": 70,
+      "bound": 94,
+      "case": "seed_43",
+      "derived": 74,
+      "gates": 12,
+      "max_width": 3,
+      "n_inputs": 3,
+      "sha256": "a7be99212696979a7b26dfb82a786aaa8af7e7d6eb9caee10b6520d2028b3685"
+    }
+  ],
+  "claimed_p_vs_np_proof": false,
+  "max_truth_table_assignments_per_case": 1024,
+  "new_lean_theorems": 0,
+  "scope": "Two identical mixed Boolean circuits with shared primary inputs, and opposed outputs; ordinary DAG resolution only"
+}
