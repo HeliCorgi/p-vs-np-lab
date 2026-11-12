@@ -57,6 +57,7 @@ def independent_check(m, lines):
         raise BadProof("duplicated expected source")
     actual_source = []
     previous = []
+    pivot_histories = []  # union of all pivot variables on any ancestor path
     for index, item in enumerate(lines):
         clause = item.get("clause")
         if not isinstance(clause, list) or any(
@@ -85,6 +86,9 @@ def independent_check(m, lines):
             if any(not isinstance(j, int) or isinstance(j, bool) or j < 0 or j >= index for j in parents):
                 raise BadProof("forward or invalid parent reference")
             left, right = (previous[j] for j in parents)
+            used_on_ancestor_path = set(pivot_histories[parents[0]]) | set(pivot_histories[parents[1]])
+            if pivot in used_on_ancestor_path:
+                raise BadProof("nonregular resolution: pivot was already used on an ancestor path")
             if pivot in left and -pivot in right:
                 pass
             elif -pivot in left and pivot in right:
@@ -96,6 +100,10 @@ def independent_check(m, lines):
             if current != outcome:
                 raise BadProof("incorrect exact resolvent")
         previous.append(current)
+        if index < boundary:
+            pivot_histories.append(frozenset())
+        else:
+            pivot_histories.append(frozenset(used_on_ancestor_path | {pivot}))
     if set(actual_source) != set(expected):
         raise BadProof("input clauses do not match fresh truth-table encoding")
     if previous[-1] != frozenset():
@@ -179,7 +187,8 @@ def result():
             "width": 3,
             "certificate_sha256": hashlib.sha256(serialized).hexdigest(),
             "checked_lines": len(lines),
-            "aligned_output_sat": True
+            "aligned_output_sat": True,
+            "regular": True
         })
     return {
         "schema_version": 1,
@@ -189,6 +198,7 @@ def result():
         "full_assignment_cutoff_m": 3,
         "full_assignments_checked": total_full,
         "rejected_corruptions": corruption_checks(),
+        "regularity_audited": True,
         "cases": cases
     }
 
