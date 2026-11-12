@@ -1,6 +1,9 @@
 # Research objective and audited starting point
 
-**Goal:** a complete mathematical proof of P=NP or P≠NP. **Status:** open.
+**Primary goal:** a complete mathematical proof of P≠NP. **Status:** open.
+On 2026-11-11 JST the user selected the separation direction as the main
+research hypothesis. This is a choice of direction, not a conclusion or an
+empirical probability inferred from the earlier failed attempts.
 On 2026-11-07 JST the user also accepted approximate empirical tendencies
 as a deliverable. This adds a separate experimental track; it does not
 weaken the requirements for a complete proof or supply probabilities of
@@ -11,7 +14,387 @@ the problem unsolved (checked 2026-11-05 JST). The repository is a research
 record. Its phase numbers measure completed investigations, not proximity
 to a Millennium Prize solution.
 
-## Current continuation: requested general lower bound remains unproved (2026-11-10 JST)
+## Current direction: uniform time lower bounds (2026-11-11)
+
+The primary target is now SAT not in P: exclude every fixed polynomial time
+bound for every correct deterministic SAT decider, measured in full encoded
+input length. This does not require first proving the stronger nonuniform
+circuit separation. The stopped MCSP extractor and soft-counting construction
+are not resumed.
+
+We investigated an actual construction that escapes a restricted model's
+limitation: the Cook--Mertz tree-evaluation procedure and its use in Ryan
+Williams, [*Simulating Time With Square-Root Space*](https://arxiv.org/abs/2502.17779v1)
+(2025). Theorem 1.1 converts multitape TIME[t] into SPACE[O(sqrt(t log t))].
+Section 5 explains how the algebraic procedure avoids ordinary pebbling
+restrictions, so such restrictions must not be mistaken for a general lower
+bound. We read the theorem, the discussion and Appendix A, and attempted a
+specific modification of the construction.
+
+The known theorem cannot itself be inserted into the existing SAT
+[alternation-trading argument](alternation_trade.md). It gives a space bound,
+not the same time bound on the simulator; the extension-evaluation procedure
+discussed in Section 5 enumerates 2^Theta(b) inputs for a b-step block.
+For t=N^c, the guaranteed space also remains N^(c/2) up to logarithms, not
+the subpolynomial workspace required by our old rules. The source's
+near-quadratic lower bound is for linear-space languages; it supplies neither
+NP membership for those languages nor exclusion of every polynomial degree.
+Fine exponent statements also need the stated machine model; arbitrary
+random-access machines are not covered by Theorem 1.1 as written.
+
+**Concrete repair attempted:** replace truth-table enumeration in extension
+evaluation by the arithmetic circuit obtained directly from the Boolean
+gates. This is cheap to evaluate, but it need not meet the degree condition
+of the catalytic identity. The [executable check](../experiments/catalytic_extension_degree.py)
+gives a counterexample for every GF(2^r), r>=2: a 2(r-1)-gate Boolean circuit
+computes x, while its gatewise polynomial is x^(2^r-1). Summing that extension
+over all nonzero field elements at catalyst x=1 and target v=0 yields 1,
+where the required value is 0. The averaging identity is only licensed for
+degree strictly below 2^r-1. The same Boolean function has the easy extension
+P(x)=x, so this does not rule out a different extension construction.
+
+Exact checks over GF(4), GF(8), GF(16), GF(32) confirm 36,080 valid
+low-degree monomial identities, 1,300 failures of the attempted replacement,
+and 1,360 successes of the linear replacement. Field multiplication is
+checked independently by polynomial multiplication and reduction. The
+all-size countercheck is an elementary algebraic argument in the executable;
+this is not a new complexity lower bound or a novelty claim about known work.
+No separate mathematical-result note is added.
+
+We also checked the obvious objection that duplicate AND inputs can simply be
+removed. A second family uses fresh inputs and distinct intermediate functions,
+with no duplicate binary fan-ins or duplicate gate records. Its gatewise
+extension still fails the identity. For this family we then **constructed a
+working replacement**: condition on its one repeatedly used input, propagate
+weights on four Boolean states, and finally interpolate the conditioned input.
+Every fresh input is used once in this computation. For every r>=4, the
+extension has degree at most 2r+1<2^r-1 and uses 64(r-1)+10 field
+multiplications; other field operations are also linear in r. The corrected
+extension therefore satisfies the averaging identity. This is a standard
+finite-state transfer construction, not a new general compilation technique.
+For r=4,5, all 2,560 Boolean inputs and 24 non-Boolean vector averaging
+checks pass. An independent full Boolean interpolation check tests the repair
+on a smaller instance. The four-state bound is a property of these circuits;
+we do not supply it for arbitrary circuits or resume the stopped general
+state-compression route.
+
+**Decision:** reject the automatic gatewise replacement with the old degree budget;
+do not promote the space simulation alone to a P≠NP strategy. A general
+efficient extension repair and an NP time-lower-bound connection are both
+absent; the controlled repair above is retained with its proved scope.
+The separation remains the primary goal, but this investigation has
+not supplied a surviving new proof mechanism. In particular, it is not
+evidence that P≠NP became more probable.
+
+Validation: all 546 unit tests passed; 80 existing mathematical reports matched
+their committed versions and the new report matched an independent replay.
+All 82 saved reports, including the updated run summary, match the completed
+run, and all 431 source hashes match the checked files. Lean sources were
+unchanged and Lean was not rerun.
+
+## Previous investigation: adaptive soft counting, not adopted as a proof route (2026-11-11)
+
+After stopping extractor optimization, investigate a different construction:
+evaluate a positive counting polynomial by small changes of its argument.
+The [executable audit](../experiments/soft_partition_path.py) contains the
+all-size argument, explicit error bounds and a capped reference evaluator.
+This uses standard positive-polynomial and approximation ideas; see
+Patel--Regts, [SIAM J. Comput. 46 (2017)](https://doi.org/10.1137/16M1101003),
+[public version](https://arxiv.org/abs/1607.01167), Introduction and Theorem 3.1,
+for related zero-free/efficient-coefficient methods. Their structural
+hypotheses must not be assumed for general SAT. No separate novelty note or
+new Lean theorem is added.
+
+For an n-variable CNF, let E(x) count false clauses and H(q)=sum_x q^E(x).
+At q*=2^(-n-2), SAT gives H(q*)>=1 and UNSAT gives H(q*)<=1/4. We construct
+a path of at most 8m(n+2) steps from 1 to q*, each within a proved zero-free
+disk. Consecutive binomial truncations and outward rational rounding give
+a certified final interval separating those two cases, **provided fresh
+weighted binomial moments are available at every center**. The required order
+is O(log(m(n+2))), and the requested additive precision and all downstream
+bit costs are polynomial. This removes a geometric obstacle, but does not
+implement the required moment computation.
+
+A further check prevents treating that condition as an easier breakthrough.
+The first weighted moment is B_1(q)=sum_x E(x)q^E(x)/H(q). For 0<q<=1/2 and
+integer e>=1, e*q^e<=q. Thus at q*, SAT implies B_1(q*)<=1/4, while UNSAT
+implies B_1(q*)>=1. Even an additive-1/8 approximation to this one quantity
+would decide SAT by threshold 1/2. At the last queried center, which is at
+most (8/7)q*, the SAT upper bound is at most 2/7, so the same threshold still
+works with that precision. We have relocated the missing computation;
+we have not supplied an independent polynomial-time construction for it.
+
+The implemented provider explicitly enumerates assignments. All 324 finite
+cases pass the interval checks (288 SAT, 36 UNSAT), including perturbed
+moment estimates. They use 32,431 fresh-moment calls and at most 221 steps
+per case. Preparation and the separate control enumerate 10,510 assignments;
+these counts are not a speedup or a general complexity bound. A reused parity
+control has two 12-variable, 32-clause formulas with matching initial moments
+through order 7, covering the requested initial order 6. They have 32 versus
+zero solutions, and their later first moments differ by more than twice the
+requested error. Low-order initial data alone cannot supply the fresh data;
+this does not exclude methods using additional formula structure.
+
+**Decision:** keep the verified conditional construction and checks; do not
+adopt this as a promising complete-proof route or tune its enumerating
+provider. A concrete efficient weighted-moment construction is absent.
+The previous extractor route remains stopped. P versus NP is unresolved;
+no probability favoring either answer follows from this investigation.
+
+Validation: all 541 unit tests passed, 79 existing mathematical reports matched
+their committed versions, and the new report matched an independent replay.
+The 81 saved reports, including the updated run summary, match the completed
+run; its 429 source hashes match the checked sources. Lean was not rerun.
+
+## Current decision: stop the extractor optimization route (2026-11-11)
+
+The user explicitly authorized abandoning the current route. Stop the sequence
+of MCSP candidate generation, counterexample pruning, fixed-constraint
+extraction and residual-cache improvements **as the main route to a complete
+P-versus-NP proof**. Preserve its checked code, results and cost arguments.
+The earlier continuations below are historical, not instructions to resume
+the next solver improvement. This decision does not discard the independent
+phase-20 formalization or assert that general SAT or MCSP algorithms are
+impossible.
+
+The work established polynomial bounds for representation and permanent
+updates, but not for total extraction. The remaining bounds depend on an
+uncontrolled number of choices or distinct residual problems. Finite speedups
+and successful small cases do not control that number on all inputs. Moreover,
+polynomial time in an explicit truth table's length N=2^n does not establish
+polynomial time in n, and an MCSP upper bound alone is not a P=NP proof. No new mechanism
+closing either gap was obtained. More tuning, larger panels or a different
+cache policy are therefore not the next complete-proof task.
+
+**Replacement status: no promising replacement proof route has been
+identified.** The earlier investigations of physical dynamics, SAT elimination,
+holographic transformations, counting and circuit magnification remain in
+the record with their specific unresolved steps. Calling one of those routes
+symbolic or machine-generated does not resolve its missing step.
+
+The user also asked whether exploration could dispense with human language.
+Candidate generation may operate directly on equations, algorithms or formal
+proof terms; a readable explanation can come later. A result still needs a
+precise statement and a checkable derivation. For a fixed sound formal system
+with decidable proof checking, enumerating finite proof strings would find a
+proof of either answer **if that answer is provable in that system**. This
+conditional observation supplies neither a feasible search bound nor a
+guarantee of such provability. No independence result for P versus NP in the
+chosen foundations is asserted here. A generic proof enumerator has not been
+implemented or adopted as a practical solution strategy.
+
+For future machine-assisted exploration, fix the target statement before
+generating candidates: either an all-input SAT algorithm with a complete
+uniform polynomial bit-cost proof, or a lower-bound construction with a
+proved implication to P!=NP. A superpolynomial lower bound for unrestricted
+Boolean circuits deciding a fixed NP language would be one sufficient,
+stronger target. The proof must cover
+unbounded input lengths and the required quantifiers; finite tests can reject
+candidates but cannot discharge those obligations. Formal checking must not
+leave the missing core as an assumption or unchecked axiom. These are selection
+conditions, not a new construction or a claimed advance toward either answer.
+
+This update changes research status and documentation only. It introduces no
+new experiment or theorem; the previous validation results below describe the
+preserved implementation.
+
+## Previous continuation: share exact residual subproblems (2026-11-11 JST)
+
+The user asked to continue from the distinction between monotone updates and
+backtracking. The [residual component cache](cnf_component_reuse.md) stores a
+completed answer for a whole residual CNF after deterministic dense variable
+renaming. The key includes all remaining conditions, so new counterexamples
+cannot reuse a stale answer without an exact residual match. Independent
+components are solved separately and their witnesses are transported and
+combined. UNKNOWN and incomplete parents are never stored as NO.
+
+With enough cache space and completed queries, each distinct residual is
+expanded once. If U is their number and J the number of queries, all
+construction, recognition, lookup and model-transfer work is bounded by
+(U+J) poly(V,L), for base formula size V,L. No general polynomial bound on U
+is obtained. For k independent copies of one fixed two-variable component,
+the shared solver completes three problems for every k>=2, versus 2k+1
+without retention. At k=64 the measured work indices are 4,090 and 5,511,
+including the table costs. This is a standard decomposition/memoization
+construction, not a claimed new SAT technique.
+
+The complete 288-case MCSP panel is run with both new variants: 576 searches,
+with all incomplete cases retained. At the common event-count cap, three-input
+completion drops from 31 to 27 cases with caching. The 57 jointly completed
+cases include 35 reductions and 22 increases in work; these are selected
+comparisons, not a general speedup. The prior circuit-aware extractor remains
+the default. Unrestricted full-residual normalization at every node is not
+adopted as a general acceleration. Tests also exhaust 2,304 two-variable
+CNF/assumption queries and check timeout, capacity and context boundaries.
+No new general polynomial-time guarantee, circuit lower bound or P-versus-NP
+conclusion follows. Lean sources are unchanged.
+
+Validation: 534 unit tests passed and all 80 deterministic reports matched
+on replay. Prior experiment results are unchanged. The sharing and amortized
+cost arguments are written proofs, not Lean formalizations.
+
+## Previous continuation: fixed candidate constraints and explicit extraction (2026-11-11 JST)
+
+The user requested a representation that does not grow under counterexamples,
+with efficient update and extraction. The [fixed universal-circuit encoding](mcsp_fixed_constraints.md)
+obtains polynomial representation and update guarantees, and implements exact
+finite extraction with polynomial working space. **A general polynomial-time
+extraction guarantee has not been obtained; the full request is not proved.**
+
+All circuit choices and all N truth-table rows are encoded before refinement.
+Evidence changes preallocated output slots; no clauses or variables are added.
+Each permanent root variable is assigned at most once. Across all updates,
+clause visits are bounded by the stored literal count and literal inspections
+by the sum of squared clause widths. This is an unconditional polynomial
+bound for the implemented update, not a claim that propagation decides
+feasibility. Construction and every row of the encoding are charged.
+
+The extractor branches only on the selected output's reachable gates and
+fills unused slots directly. It uses bounded trails and no growing learned
+clause database. R, the product of remaining selector-domain sizes, gives
+an explicit conditional polynomial-time criterion when R<=N^c for a fixed c.
+No such bound is known for general inputs. Timeouts are UNKNOWN, not NO.
+
+Of the unchanged 288-case panel, 286 cases finish at the initial 500,000-unit
+extraction cap. Both capped cases finish under the same algorithm at a
+5,000,000-unit cap; their original failures and both costs remain in the
+report. An independent scalar audit validates 5,223 circuit encodings and
+rejects 20,766 corrupted row-output models. This is a standard symbolic
+synthesis encoding and finite-search implementation, not a new synthesis
+technique or P-versus-NP result. The polynomial parameters are N,n,s, with
+s=n² the project's usual target; polynomial time in N is not time polynomial
+in n and would not by itself settle general SAT. Lean sources are unchanged.
+
+Validation: 526 unit tests passed and all 79 deterministic reports matched
+on replay. Existing experiment results are unchanged. The fixed formula,
+total propagation and space arguments are written proofs, not Lean proofs.
+
+## Previous continuation: prune regions before generating descendants (2026-11-11 JST)
+
+The user requested the previously identified constructive step. The new
+[sample-state search](mcsp_region_pruning.md) keeps one representative for
+each set of available wire signatures on retained counterexamples. A
+continuation lemma preserves every feasible sample output and the gate
+budget, including sharing. A newly distinguishing counterexample triggers
+a fresh quotient construction so temporarily merged candidates can reappear.
+Rebuild costs are included, and a mismatching intermediate wire is not
+incorrectly treated as a forbidden output.
+
+An additional bounded depth relaxation overapproximates every completion
+within the remaining gate budget. A missing target signature excludes the
+whole continuation region before any child states are generated. Exceeding
+the 128-operation cap is UNKNOWN for this test and resumes ordinary search.
+For two-input XOR at budget two, 104 signature operations exclude the root
+and all 5,164 literal circuit descriptions, without generating children.
+
+The unchanged 288-case panel gives 576 runs with and without this extra
+lookahead. All final decisions match independent circuit enumeration;
+2,776 intermediate candidates satisfy their examples. Every one of the
+7,096 pruned regions is checked independently by literal suffix enumeration.
+On the three-input group, accumulated states fall from 6,648,091 in the
+previous syntactic search to 45,457 with the quotient and 15,213 with the
+extra region check. These states have different representations, so their
+counts are not runtime ratios. Compared to the quotient alone, lookahead
+reduces states on 224 cases but raises the work index on 273. Both variants
+remain available, with complete cost and memory-scope disclosures.
+
+This implements the requested pre-generation reductions. It uses standard
+sample equivalence, refinement and abstract reachability; no new synthesis
+technique is claimed. The quotient can still grow exponentially with the
+examples, so there is no general polynomial bound or P-versus-NP conclusion.
+No Lean source changes are made in this continuation.
+
+Validation: 518 unit tests passed and all 78 deterministic reports matched
+on replay. Existing experiment results are unchanged. The new completeness
+and pruning arguments are written proofs, not Lean formalizations.
+
+## Previous continuation: execute synthesis with retained work and lazy generation (2026-11-11 JST)
+
+The user asked to continue toward resolving general execution cost. We
+implemented [direct circuit synthesis](mcsp_counterexample_execution.md)
+with an explicit syntactic candidate generator, retained counterexamples,
+and shared gate-value evaluation. Generation stops immediately on a YES
+witness; NO requires complete enumeration within the stated gate budget.
+The generator uses neither truth-table deduplication nor a synthesis oracle.
+This bypasses repeated subcircuit evaluation and unnecessary generation
+after success. It does not implement the earlier arbitrary-prefix predicate
+or inherit that construction's oracle-circuit size/depth bounds.
+
+For N input rows, M visited candidates and G generated shared gates, there
+are at most NM root/row checks, NG gate evaluations and N distinct saved
+counterexamples. Catalogue generation and frontier storage are charged
+separately. There is no polynomial bound on generation, M or G; the full
+construction retains an exhaustive upper bound of 2^{O(s log(n+s+2))}.
+The note proves correctness, completeness and these reuse guarantees for
+finite parameters, distinguishing them from the executable finite checks.
+
+All truth tables for (n,s)=(2,2),(2,4),(3,3) give 288 cases and 1,152 searches
+across four variants. Every result agrees with independent semantic
+enumeration; each exported circuit is independently interpreted. Lazy and
+eager shared-value search have identical witnesses and search counters.
+Their generation costs differ. The lazy variant reduces the aggregate
+generation-plus-search event index by about 58%, 86% and 42% against the
+specified eager, fresh-evaluation baseline. These are logical event counts,
+not elapsed time or exact bit operations. Memory tradeoffs and cases where
+retention increases the search-only index are included in the report.
+
+Validation: 510 unit tests passed and all 77 deterministic reports matched
+on replay. Previous report mathematics is unchanged; the summary records
+the new audit and updated source hashes. Lean sources are unchanged.
+
+The next useful repair must safely exclude whole regions of candidate
+generation, or construct a candidate directly from retained constraints,
+with its own cost accounted for. The current program is a checked baseline
+for that change, not a general polynomial solver or new lower bound.
+No P-versus-NP proof or empirical preference between its two answers follows.
+
+## Previous continuation: reconstruct the merge proof and build uniform witness selection (2026-11-11 JST)
+
+The user approved a strategy change: pause direct general-lower-bound
+attacks, understand an existing proof thoroughly, and examine one change.
+The user then clarified that the work should construct ways around the
+identified limits. We selected McKay–Murray–Williams (2019), Sections 2.1,
+3 and 5, and kept the focus on its witness-selection component. The
+[worked reconstruction](mcsp_merge_reconstruction.md) traces the interval
+merge invariant, coherent witness selection, the use of NP contained in
+P/poly, and the resulting coarse circuit bounds. A binary tree suffices
+for that endpoint; we do not claim the paper's sharper uniform bounds.
+
+The successful repair is a uniform block-prefix construction. For an
+L-bit description it chooses b=max(1,floor(log2 L)) next bits jointly by
+querying every block extension in parallel and retaining the first feasible
+one. The invariant that the chosen prefix has a completion proves that
+the final description is one coherent valid circuit. It uses no random
+bits and no input-length-specific hash advice. This is a grouped standard
+self-reduction, not a claimed new technique.
+
+There are at most 1+ceil(L/b) Sigma_2^P query rounds and
+1+2^b ceil(L/b) queries, with O(L²) ordinary selection gates and O(L)
+selection depth. Query descriptions also have polynomial total size.
+Composing these merges preserves the coarse uniform oracle-circuit budget
+N·poly(n) size and poly(n) depth at s=n². Thus the advice requirement found
+in the hash-based variant is actually bypassed within the allowed budget.
+The note retains the two-round hash construction as a comparison, with
+its isolation and advice-existence proof fully spelled out.
+
+The block construction passes all 65,812 witness sets on code domains of
+one through four bits, including empty sets. On all 81 two-input circuit
+partial tables, it returns a valid representative or failure, with at most
+83 queries and seven rounds for the 21-bit descriptions. The same audit
+checks the 196 possible child-representative pairs. The hash comparison
+separately checks exact isolation probabilities for 273 witness sets and
+a fixed 3,168-hash family. The script is embedded in the study note;
+solver, result-manifest and Lean sources are unchanged.
+
+The next computational issue is the prefix-feasibility predicate itself;
+its cost remains explicit. Under NP contained in P/poly, oracle substitution
+still gives the known conditional ordinary-circuit upper bound. No efficient
+unconditional implementation of that predicate or new lower bound has
+been obtained. Retain the uniform selection construction as a concrete
+repair and continue studying this same mechanism, without treating the
+oracle computation as free or claiming a P-versus-NP proof candidate.
+
+## Previous continuation: requested general lower bound remains unproved (2026-11-10 JST)
 
 The user explicitly asked to prove the general search-MCSP circuit lower
 bound. **We have not proved it.** The target remains the exclusion, for
