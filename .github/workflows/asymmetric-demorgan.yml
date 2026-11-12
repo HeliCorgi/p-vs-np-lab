@@ -1,0 +1,28 @@
+name: Asymmetric De Morgan certificate audit
+
+on:
+  push:
+    paths:
+      - 'research/asymmetric_demorgan_miter/**'
+      - 'results/asymmetric_demorgan_miter*.json'
+      - '.github/workflows/asymmetric-demorgan.yml'
+  pull_request:
+    paths:
+      - 'research/asymmetric_demorgan_miter/**'
+      - 'results/asymmetric_demorgan_miter*.json'
+      - '.github/workflows/asymmetric-demorgan.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Independently replay proofs and compare both committed reports
+        run: python research/asymmetric_demorgan_miter/asymmetric_demorgan_audit.py --check

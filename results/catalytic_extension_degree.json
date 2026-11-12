@@ -1,0 +1,780 @@
+{
+  "all_checks_passed": true,
+  "all_size_argument": "For q=2^r and P=x^(q-1), P agrees with identity on Boolean inputs, but the orbit sum at x=1,v=0 equals 1 instead of P(0)=0.",
+  "decision": "Reject the automatic gatewise arithmetic replacement at the old degree budget. No general efficient low-degree extension construction is obtained. Do not treat the known space theorem as a P!=NP proof route by itself.",
+  "failed_gatewise_extension_checks": 1300,
+  "fields": [
+    {
+      "boolean_function": "identity",
+      "boolean_gates": 2,
+      "explicit_failure": {
+        "orbit_sum": 1,
+        "required_value": 0,
+        "v": 0,
+        "x": 1
+      },
+      "failed_high_degree_checks": 12,
+      "field_size": 4,
+      "gatewise_degree": 3,
+      "high_degree_zero_catalyst_checks": 4,
+      "low_degree_monomial_checks": 48,
+      "modulus": 7,
+      "r": 2,
+      "replacement_linear_extension_checks": 16,
+      "required_degree_strictly_below": 3
+    },
+    {
+      "boolean_function": "identity",
+      "boolean_gates": 4,
+      "explicit_failure": {
+        "orbit_sum": 1,
+        "required_value": 0,
+        "v": 0,
+        "x": 1
+      },
+      "failed_high_degree_checks": 56,
+      "field_size": 8,
+      "gatewise_degree": 7,
+      "high_degree_zero_catalyst_checks": 8,
+      "low_degree_monomial_checks": 448,
+      "modulus": 11,
+      "r": 3,
+      "replacement_linear_extension_checks": 64,
+      "required_degree_strictly_below": 7
+    },
+    {
+      "boolean_function": "identity",
+      "boolean_gates": 6,
+      "explicit_failure": {
+        "orbit_sum": 1,
+        "required_value": 0,
+        "v": 0,
+        "x": 1
+      },
+      "failed_high_degree_checks": 240,
+      "field_size": 16,
+      "gatewise_degree": 15,
+      "high_degree_zero_catalyst_checks": 16,
+      "low_degree_monomial_checks": 3840,
+      "modulus": 19,
+      "r": 4,
+      "replacement_linear_extension_checks": 256,
+      "required_degree_strictly_below": 15
+    },
+    {
+      "boolean_function": "identity",
+      "boolean_gates": 8,
+      "explicit_failure": {
+        "orbit_sum": 1,
+        "required_value": 0,
+        "v": 0,
+        "x": 1
+      },
+      "failed_high_degree_checks": 992,
+      "field_size": 32,
+      "gatewise_degree": 31,
+      "high_degree_zero_catalyst_checks": 32,
+      "low_degree_monomial_checks": 31744,
+      "modulus": 37,
+      "r": 5,
+      "replacement_linear_extension_checks": 1024,
+      "required_degree_strictly_below": 31
+    }
+  ],
+  "fresh_input_repairs": [
+    {
+      "boolean_assignments_checked": 512,
+      "conditioned_shared_inputs": 1,
+      "duplicate_binary_fanins": 0,
+      "duplicate_gate_records": 0,
+      "gatewise_orbit_sum": 1,
+      "gatewise_restriction_degree": 15,
+      "inputs": 9,
+      "ordinary_gates": 30,
+      "r": 4,
+      "repair_field_multiplication_bound": 202,
+      "repair_state_width": 4,
+      "repaired_degree_upper_bound": 9,
+      "repaired_orbit_sum": 0,
+      "repaired_vector_orbit_checks": [
+        {
+          "catalyst": [
+            3,
+            4,
+            7,
+            12,
+            3,
+            12,
+            7,
+            4,
+            3
+          ],
+          "result": 10,
+          "target": [
+            1,
+            6,
+            11,
+            0,
+            5,
+            10,
+            15,
+            4,
+            9
+          ]
+        },
+        {
+          "catalyst": [
+            4,
+            6,
+            10,
+            0,
+            8,
+            2,
+            14,
+            12,
+            12
+          ],
+          "result": 6,
+          "target": [
+            2,
+            7,
+            12,
+            1,
+            6,
+            11,
+            0,
+            5,
+            10
+          ]
+        },
+        {
+          "catalyst": [
+            5,
+            8,
+            13,
+            4,
+            13,
+            8,
+            5,
+            4,
+            5
+          ],
+          "result": 0,
+          "target": [
+            3,
+            8,
+            13,
+            2,
+            7,
+            12,
+            1,
+            6,
+            11
+          ]
+        },
+        {
+          "catalyst": [
+            6,
+            10,
+            0,
+            8,
+            2,
+            14,
+            12,
+            12,
+            14
+          ],
+          "result": 7,
+          "target": [
+            4,
+            9,
+            14,
+            3,
+            8,
+            13,
+            2,
+            7,
+            12
+          ]
+        },
+        {
+          "catalyst": [
+            7,
+            12,
+            3,
+            12,
+            7,
+            4,
+            3,
+            4,
+            7
+          ],
+          "result": 2,
+          "target": [
+            5,
+            10,
+            15,
+            4,
+            9,
+            14,
+            3,
+            8,
+            13
+          ]
+        },
+        {
+          "catalyst": [
+            8,
+            14,
+            6,
+            0,
+            12,
+            10,
+            10,
+            12,
+            0
+          ],
+          "result": 8,
+          "target": [
+            6,
+            11,
+            0,
+            5,
+            10,
+            15,
+            4,
+            9,
+            14
+          ]
+        },
+        {
+          "catalyst": [
+            9,
+            0,
+            9,
+            4,
+            1,
+            0,
+            1,
+            4,
+            9
+          ],
+          "result": 10,
+          "target": [
+            7,
+            12,
+            1,
+            6,
+            11,
+            0,
+            5,
+            10,
+            15
+          ]
+        },
+        {
+          "catalyst": [
+            10,
+            2,
+            12,
+            8,
+            6,
+            6,
+            8,
+            12,
+            2
+          ],
+          "result": 6,
+          "target": [
+            8,
+            13,
+            2,
+            7,
+            12,
+            1,
+            6,
+            11,
+            0
+          ]
+        },
+        {
+          "catalyst": [
+            11,
+            4,
+            15,
+            12,
+            11,
+            12,
+            15,
+            4,
+            11
+          ],
+          "result": 7,
+          "target": [
+            9,
+            14,
+            3,
+            8,
+            13,
+            2,
+            7,
+            12,
+            1
+          ]
+        },
+        {
+          "catalyst": [
+            12,
+            6,
+            2,
+            0,
+            0,
+            2,
+            6,
+            12,
+            4
+          ],
+          "result": 9,
+          "target": [
+            10,
+            15,
+            4,
+            9,
+            14,
+            3,
+            8,
+            13,
+            2
+          ]
+        },
+        {
+          "catalyst": [
+            13,
+            8,
+            5,
+            4,
+            5,
+            8,
+            13,
+            4,
+            13
+          ],
+          "result": 8,
+          "target": [
+            11,
+            0,
+            5,
+            10,
+            15,
+            4,
+            9,
+            14,
+            3
+          ]
+        },
+        {
+          "catalyst": [
+            14,
+            10,
+            8,
+            8,
+            10,
+            14,
+            4,
+            12,
+            6
+          ],
+          "result": 8,
+          "target": [
+            12,
+            1,
+            6,
+            11,
+            0,
+            5,
+            10,
+            15,
+            4
+          ]
+        }
+      ],
+      "required_value": 0,
+      "scope": "Linear-operation repair for this fixed-state family only; no general extension compiler or new lower bound."
+    },
+    {
+      "boolean_assignments_checked": 2048,
+      "conditioned_shared_inputs": 1,
+      "duplicate_binary_fanins": 0,
+      "duplicate_gate_records": 0,
+      "gatewise_orbit_sum": 1,
+      "gatewise_restriction_degree": 31,
+      "inputs": 11,
+      "ordinary_gates": 40,
+      "r": 5,
+      "repair_field_multiplication_bound": 266,
+      "repair_state_width": 4,
+      "repaired_degree_upper_bound": 11,
+      "repaired_orbit_sum": 0,
+      "repaired_vector_orbit_checks": [
+        {
+          "catalyst": [
+            3,
+            4,
+            7,
+            12,
+            19,
+            28,
+            7,
+            20,
+            3,
+            20,
+            7
+          ],
+          "result": 13,
+          "target": [
+            1,
+            6,
+            11,
+            16,
+            21,
+            26,
+            31,
+            4,
+            9,
+            14,
+            19
+          ]
+        },
+        {
+          "catalyst": [
+            4,
+            6,
+            10,
+            16,
+            24,
+            2,
+            14,
+            28,
+            12,
+            30,
+            18
+          ],
+          "result": 25,
+          "target": [
+            2,
+            7,
+            12,
+            17,
+            22,
+            27,
+            0,
+            5,
+            10,
+            15,
+            20
+          ]
+        },
+        {
+          "catalyst": [
+            5,
+            8,
+            13,
+            20,
+            29,
+            8,
+            21,
+            4,
+            21,
+            8,
+            29
+          ],
+          "result": 1,
+          "target": [
+            3,
+            8,
+            13,
+            18,
+            23,
+            28,
+            1,
+            6,
+            11,
+            16,
+            21
+          ]
+        },
+        {
+          "catalyst": [
+            6,
+            10,
+            16,
+            24,
+            2,
+            14,
+            28,
+            12,
+            30,
+            18,
+            8
+          ],
+          "result": 4,
+          "target": [
+            4,
+            9,
+            14,
+            19,
+            24,
+            29,
+            2,
+            7,
+            12,
+            17,
+            22
+          ]
+        },
+        {
+          "catalyst": [
+            7,
+            12,
+            19,
+            28,
+            7,
+            20,
+            3,
+            20,
+            7,
+            28,
+            19
+          ],
+          "result": 6,
+          "target": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            3,
+            8,
+            13,
+            18,
+            23
+          ]
+        },
+        {
+          "catalyst": [
+            8,
+            14,
+            22,
+            0,
+            12,
+            26,
+            10,
+            28,
+            16,
+            6,
+            30
+          ],
+          "result": 9,
+          "target": [
+            6,
+            11,
+            16,
+            21,
+            26,
+            31,
+            4,
+            9,
+            14,
+            19,
+            24
+          ]
+        },
+        {
+          "catalyst": [
+            9,
+            16,
+            25,
+            4,
+            17,
+            0,
+            17,
+            4,
+            25,
+            16,
+            9
+          ],
+          "result": 16,
+          "target": [
+            7,
+            12,
+            17,
+            22,
+            27,
+            0,
+            5,
+            10,
+            15,
+            20,
+            25
+          ]
+        },
+        {
+          "catalyst": [
+            10,
+            18,
+            28,
+            8,
+            22,
+            6,
+            24,
+            12,
+            2,
+            26,
+            20
+          ],
+          "result": 13,
+          "target": [
+            8,
+            13,
+            18,
+            23,
+            28,
+            1,
+            6,
+            11,
+            16,
+            21,
+            26
+          ]
+        },
+        {
+          "catalyst": [
+            11,
+            20,
+            31,
+            12,
+            27,
+            12,
+            31,
+            20,
+            11,
+            4,
+            31
+          ],
+          "result": 0,
+          "target": [
+            9,
+            14,
+            19,
+            24,
+            29,
+            2,
+            7,
+            12,
+            17,
+            22,
+            27
+          ]
+        },
+        {
+          "catalyst": [
+            12,
+            22,
+            2,
+            16,
+            0,
+            18,
+            6,
+            28,
+            20,
+            14,
+            10
+          ],
+          "result": 7,
+          "target": [
+            10,
+            15,
+            20,
+            25,
+            30,
+            3,
+            8,
+            13,
+            18,
+            23,
+            28
+          ]
+        },
+        {
+          "catalyst": [
+            13,
+            24,
+            5,
+            20,
+            5,
+            24,
+            13,
+            4,
+            29,
+            24,
+            21
+          ],
+          "result": 25,
+          "target": [
+            11,
+            16,
+            21,
+            26,
+            31,
+            4,
+            9,
+            14,
+            19,
+            24,
+            29
+          ]
+        },
+        {
+          "catalyst": [
+            14,
+            26,
+            8,
+            24,
+            10,
+            30,
+            20,
+            12,
+            6,
+            2,
+            0
+          ],
+          "result": 18,
+          "target": [
+            12,
+            17,
+            22,
+            27,
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        }
+      ],
+      "required_value": 0,
+      "scope": "Linear-operation repair for this fixed-state family only; no general extension compiler or new lower bound."
+    }
+  ],
+  "known_theorem_scope": "Multitape deterministic time to deterministic space; not a simultaneous time guarantee or NP lower bound.",
+  "low_degree_monomial_checks": 36080,
+  "new_general_time_lower_bound": false,
+  "np_membership_bridge_proved": false,
+  "p_vs_np_resolved": false,
+  "primary_source": "https://arxiv.org/abs/2502.17779v1",
+  "replacement_linear_extension_checks": 1360,
+  "scope": "Exact finite checks and an elementary all-size countercheck of a proposed repair. The same function has an easy linear extension. No new complexity lower bound or Lean formalization is claimed."
+}

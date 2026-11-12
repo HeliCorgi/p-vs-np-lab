@@ -161,24 +161,24 @@ not just a finite-experiment extrapolation.
 
 ## Reproducible experiment and *independent* check
 
-New code is isolated under \`research/asymmetric_demorgan_miter/\`, to avoid
+New code is isolated under `research/asymmetric_demorgan_miter/`, to avoid
 conflicting with the **open** PRs #8 and #9 and the shared
-\`results/RUN_SUMMARY.json\`. No existing experiment bounds, Lean files or
+`results/RUN_SUMMARY.json`. No existing experiment bounds, Lean files or
 baseline source hashes were changed.
 
 Run with Python >=3.10 and no third-party dependency:
 
-\`\`\`bash
+```bash
 python research/asymmetric_demorgan_miter/asymmetric_demorgan_miter.py \
   --out /tmp/asymmetric_demorgan_miter.json
 python research/asymmetric_demorgan_miter/asymmetric_demorgan_audit.py \
   --output /tmp/asymmetric_demorgan_miter_audit.json --check
 python -m json.tool /tmp/asymmetric_demorgan_miter.json >/dev/null
-\`\`\`
+```
 
 Compare the two generated JSON files with
-\`results/asymmetric_demorgan_miter.json\` and
-\`results/asymmetric_demorgan_miter_audit.json\`.
+`results/asymmetric_demorgan_miter.json` and
+`results/asymmetric_demorgan_miter_audit.json`.
 The generator emits SHA-256 digests of the *entire regenerated proof sequence*
 (not of a mere status flag). The checker uses its own signed-literal-set
 resolution replay, derives the expected Tseitin source clause **multiset**
@@ -198,11 +198,10 @@ above symbolic templates and induction; finite checks audit the
 implementation, not the general theorem.
 
 **Verification boundary.** This cycle adds no Lean endpoint and makes no
-claim of new Lean formalization. Repository-level existing CI does not
-automatically discover this deliberately isolated experiment directory;
-successful pre-existing workflows are *not* presented as independent
-verification of this new result. Independent verification of the new
-certificate is the separately runnable \`asymmetric_demorgan_audit.py\`,
+claim of new Lean formalization. The dedicated `.github/workflows/asymmetric-demorgan.yml` runs the
+independent audit with `--check` and compares both committed reports.
+The pre-existing Python and Lean workflows remain separate checks. Independent verification of the new
+certificate is the separately runnable `asymmetric_demorgan_audit.py`,
 whose finite pass counts are recorded. No external specialist review or
 priority claim is made.
 
