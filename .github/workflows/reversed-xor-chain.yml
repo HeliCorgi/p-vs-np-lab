@@ -1,0 +1,25 @@
+name: Reversed XOR-chain certificate audit
+
+on:
+  push:
+    paths:
+      - 'research/reversed_xor_chain/**'
+      - 'results/reversed_xor_chain.json'
+      - 'docs/reversed_xor_chain_resolution.md'
+      - '.github/workflows/reversed-xor-chain.yml'
+  pull_request:
+    paths:
+      - 'research/reversed_xor_chain/**'
+      - 'results/reversed_xor_chain.json'
+      - 'docs/reversed_xor_chain_resolution.md'
+      - '.github/workflows/reversed-xor-chain.yml'
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Independently replay strict resolution proofs and check fixed semantic controls
+        run: python3 research/reversed_xor_chain/audit.py --check

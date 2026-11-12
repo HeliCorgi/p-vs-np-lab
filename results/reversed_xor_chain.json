@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "aligned_output_sat": true,
+      "certificate_sha256": "663350f8c7e8d8ecae2c6073da6eb177cfaeb5e8cab3f6191f24012e86e12abb",
+      "checked_lines": 20,
+      "derived_lines": 8,
+      "m": 1,
+      "regular": true,
+      "source_clauses": 12,
+      "variables": 5,
+      "width": 3
+    },
+    {
+      "aligned_output_sat": true,
+      "certificate_sha256": "d7571653656145276722d4a542263ddcf69896f686774ec24433b8c4c85e3e89",
+      "checked_lines": 38,
+      "derived_lines": 18,
+      "m": 2,
+      "regular": true,
+      "source_clauses": 20,
+      "variables": 8,
+      "width": 3
+    },
+    {
+      "aligned_output_sat": true,
+      "certificate_sha256": "00cd6f30a8cf95ee61df6d7e90f299f1b6a3f2792d45ce914cba6e95883312df",
+      "checked_lines": 56,
+      "derived_lines": 28,
+      "m": 3,
+      "regular": true,
+      "source_clauses": 28,
+      "variables": 11,
+      "width": 3
+    },
+    {
+      "aligned_output_sat": true,
+      "certificate_sha256": "925ddcfa4b86b575d2ce378d8068c143ab9b12c880ffbe98ac87cbf63babf863",
+      "checked_lines": 92,
+      "derived_lines": 48,
+      "m": 5,
+      "regular": true,
+      "source_clauses": 44,
+      "variables": 17,
+      "width": 3
+    },
+    {
+      "aligned_output_sat": true,
+      "certificate_sha256": "f915412851ed4805b9ca4644087cb0b8a99a93e8e720e379754cdb816f025dfb",
+      "checked_lines": 146,
+      "derived_lines": 78,
+      "m": 8,
+      "regular": true,
+      "source_clauses": 68,
+      "variables": 26,
+      "width": 3
+    }
+  ],
+  "full_assignment_cutoff_m": 3,
+  "full_assignments_checked": 2336,
+  "general_P_vs_NP_result": false,
+  "new_Lean_formalization": false,
+  "paper_theorem": "For every m>=1, reversed XOR parity chain miter has a width<=3 strict ordinary resolution refutation with exactly 10m-2 derived lines.",
+  "regularity_audited": true,
+  "rejected_corruptions": 4,
+  "schema_version": 1
+}
