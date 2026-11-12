@@ -8,9 +8,11 @@ parameters. They do not assume the recent Braun preprint or its Lean code.
 
 The final section combines this space with the
 [companion common-annihilator DAG criterion](affine_dag_annihilator.md).
-Both pieces are paper proofs subjected to internal mathematical review; the
-full combined argument has not been formalized or independently reviewed
-outside this project. An exponential bound for this proof system is not a
+Both pieces were subjected to internal mathematical review. The specified F2
+existential exponential conclusion is now connected end to end in
+[`Phase20.lean`](../formal_pc/ProofLab/Phase20.lean), including family existence;
+see the [formalization record and exact scope](phase20_formalization.md).
+External specialist review remains outstanding. An exponential bound for this proof system is not a
 lower bound for every SAT algorithm and does not resolve P versus NP. No
 claim of historical priority is made.
 
@@ -339,6 +341,20 @@ signs give a satisfiable sibling on exactly the same bounded-occurrence
 supports. The proof of (4) and the counts (11)–(15) hold for either signing.
 The family remains existential; this is not a practical finite generator.
 
+**Formalization update (2026-11-08 JST).** The Lean construction keeps the
+same sampling probability and family constants, but makes the simultaneous
+event finite and explicit for every \(n\ge10^6\). It bounds expansion failure
+by \(1/4\), the lower edge-count tail by \(1/16\), the degree-square expectation
+by \(2352n\), and the expected number of **ordered** bad pairs by 4608.
+One averaging argument supplies a sample with at least \(15n\) triples,
+degree-square sum at most \(8192n\), at most \(n\) ordered bad pairs, and all
+required neighborhood inequalities. Deleting all high-degree incidences costs
+at most \(2n\) triples; deleting all bad-pair endpoints costs at most \(n\),
+because each deleted endpoint is the first coordinate of an ordered bad pair.
+Exactly \(12n\) triples can then be retained. The
+[detailed proof map](phase20_formalization.md) records the counting and signing
+theorems; no asymptotic probability assertion is assumed by the Lean endpoint.
+
 ## 5. Exponential bound on distinct high-rank false flats
 
 This section applies the [common-annihilator criterion](affine_dag_annihilator.md)
@@ -424,8 +440,10 @@ then using \(R+1>s/16\ge\varepsilon n/32\) and \(k\ge pn/2\), yields
 \]
 
 Thus both the number of distinct high-rank false flats and the number of
-proof nodes are exponential in \(n\). This is a paper theorem for the stated
-proof system, with the evidence level described at the start of this note.
+proof nodes are exponential in \(n\). The concrete F2 specialization below,
+including support-family existence, is now a Lean theorem for the stated
+proof system. The general-field statements elsewhere in this note retain
+their paper-proof scope unless separately identified as formalized.
 
 For the bounded-occurrence phase-16 refinement one may take
 \(\Delta=4096\), \(q=12288\), \(C=12288^2\), and

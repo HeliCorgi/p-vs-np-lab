@@ -1,5 +1,34 @@
 # Working backward from the solution criterion: XOR plus nonlinear constraints
 
+## Current gate: general computation after phase-20 completion (2026-11-08 JST)
+
+The user has returned the main task to P versus NP. The
+[phase-20 existence and exponential theorem](phase20_formalization.md) is now
+complete for its stated F2 affine-clause source-DAG model. The older requests
+for its formalization below describe historical checkpoints.
+
+The next candidate must provide an actual mechanism meeting the
+[general solution criteria](solution_criteria.md). An algorithmic candidate
+must retain a uniform polynomial bit-cost bound on every general 3-SAT input;
+a separation candidate must address every correct decider, or provide a proved
+simulation into the model it lower-bounds. Do not assume the desired simulation,
+efficient semantic compression, witness selection or extension elimination as
+an interface lemma. There is currently no new surviving proof candidate; see
+the [current research decision](research_program.md).
+
+The 2026-11-09 algebraic continuation checked a sparse cubic sign-sum reduction.
+The reduction is standard and supplies no fast zero test; the quadratic
+elimination control does not extend unchanged. Treat that zero test as the
+unsolved algorithmic obligation, not as an available interface lemma.
+
+The 2026-11-10 physical continuation also stops uniform global restarts of
+zero-temperature one-bit dynamics as a general polynomial SAT candidate.
+Even on an easy connected CNF with bounded occurrence, a frozen-block argument
+bounds success after K attempts by `min(1,K(15/16)^b)`. See the
+[all-size argument and finite checks](../experiments/physical_restart_bridge.py)
+and [current research decision](research_program.md). Positive-temperature,
+collective, preprocessing and other mechanisms are outside this counterexample.
+
 ## Phase 28: width-three resolution miter versus affine one-covers (2026-11-09 JST)
 
 Preselected falsifier: does the exact 2^m-1 affine one-cover of the positive

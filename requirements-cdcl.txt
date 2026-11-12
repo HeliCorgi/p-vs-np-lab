@@ -1,0 +1,3 @@
+# Optional external experiment; the default research checks remain stdlib-only.
+python-sat==1.9.dev21
+six==1.17.0
